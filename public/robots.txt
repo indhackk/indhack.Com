@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/*
+Disallow: /keystatic/*
+
+# Host
+Host: https://indhack.com
+
+# Sitemaps
+Sitemap: https://indhack.com/sitemap.xml
