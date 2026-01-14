@@ -20,8 +20,8 @@ export function CityPageTemplate({ city, zipCode, description, customContent }: 
 
     const FAQ_ITEMS = [
         {
-            question: `Pourquoi un consultant SEO à ${city} plutôt qu'une agence parisienne ?`,
-            answer: `La connaissance du marché local est clé. En étant basée dans la région, je comprends les spécificités économiques de ${city} et je peux vous rencontrer physiquement. De plus, vous évitez les frais de structure d'une grosse agence.`
+            question: `Pourquoi un consultant SEO local à ${city} ?`,
+            answer: `La connaissance du marché local est clé. En étant basée dans la région, je comprends les spécificités économiques de ${city} et je peux vous rencontrer physiquement. Un accompagnement de proximité est souvent plus efficace pour comprendre vos enjeux.`
         },
         {
             question: `Combien de temps pour être visible sur "SEO ${city}" ?`,

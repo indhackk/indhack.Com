@@ -65,7 +65,7 @@ export function AboutSection() {
                             </Link>
                             <Link href="/contact">
                                 <Button variant="outline" className="border-2 border-ink text-ink hover:bg-ink hover:text-white rounded-full px-10 py-7 font-bold tracking-wider transition-all uppercase">
-                                    CONTACTER L'AGENCE
+                                    ME CONTACTER
                                 </Button>
                             </Link>
                         </div>
