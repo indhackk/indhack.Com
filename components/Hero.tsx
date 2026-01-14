@@ -136,8 +136,8 @@ export function Hero() {
             const animate = () => {
                 if (!run) { frameId = requestAnimationFrame(animate); return; }
                 if (auto) {
-                    points.rotation.y += 0.001;
-                    lines.rotation.y += 0.001;
+                    points.rotation.y += 0.003;
+                    lines.rotation.y += 0.003;
                 }
                 points.rotation.x += (tx - points.rotation.x) * 0.05;
                 points.rotation.y += (ty - points.rotation.y) * 0.05;

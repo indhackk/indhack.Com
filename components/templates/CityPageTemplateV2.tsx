@@ -82,7 +82,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
         },
         {
             question: `Quel budget prévoir pour du SEO local à ${city} ?`,
-            answer: `Audit SEO complet à partir de 690€. Accompagnement mensuel (optimisations techniques, contenu, netlinking local) dès 790€/mois. Chaque projet est unique : diagnostic gratuit de 15 minutes pour évaluer votre potentiel et proposer une offre sur-mesure.`
+            answer: `L'audit SEO initial est 100% gratuit et sans engagement. Il permet de définir votre potentiel. Ensuite, si vous souhaitez un accompagnement pour booster vos résultats (optimisations, contenu, netlinking), mes forfaits démarrent à 790€/mois. Chaque projet est unique : commençons par l'audit offert pour voir ce qu'il est possible de faire.`
         },
         {
             question: `Comment fonctionne le référencement local sur Google à ${city} ?`,
