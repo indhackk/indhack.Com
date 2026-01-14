@@ -1,4 +1,5 @@
 import { config, fields, collection } from '@keystatic/core';
+import React from 'react';
 
 export default config({
     storage: {
@@ -52,19 +53,22 @@ export default config({
                                 buttonText: fields.text({ label: 'Texte du bouton' }),
                                 buttonLink: fields.text({ label: 'Lien du bouton' }),
                             },
-                            preview: (props) => (
-                                <div style= {{ padding: '20px', background: '#111', color: 'white', borderRadius: '10px', textAlign: 'center' }} >
-                <h3 style={{ margin: '0 0 10px 0', color: 'white' }} > { props.fields.title.value } </h3>
-        < p style={{ color: '#ccc' }}> { props.fields.description.value } </p>
-< button style = {{ background: '#7C9082', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px' }}>
-{ props.fields.buttonText.value }
-</button>
-</div>
-),
+                            // On utilise une fonction simple qui retourne du JSX valide
+                            preview: (props) => {
+                                return (
+                                    <div style={{ padding: '20px', background: '#111', color: 'white', borderRadius: '10px', textAlign: 'center' }}>
+                                        <h3 style={{ margin: '0 0 10px 0', color: 'white' }}>{props.fields.title.value}</h3>
+                                        <p style={{ color: '#ccc' }}>{props.fields.description.value}</p>
+                                        <button style={{ background: '#7C9082', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px' }}>
+                                            {props.fields.buttonText.value}
+                                        </button>
+                                    </div>
+                                );
+                            },
+                        },
+                    },
+                }),
             },
-          },
         }),
-      },
-    }),
-  },
+    },
 });
