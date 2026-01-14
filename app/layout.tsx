@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { MegaFooter } from "@/components/MegaFooter";
 import { ModalProvider } from "@/components/providers/ModalProvider";
 
 const spaceGrotesk = Space_Grotesk({
@@ -20,12 +20,13 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://indhack.com'),
     title: {
-        template: "%s | IndHack",
-        default: "IndHack | Expertise SEO, GEO & Acquisition Digitale",
+        template: "%s | INDHACK",
+        default: "Consultante SEO Freelance & Experte Référencement | INDHACK",
     },
-    description: "IndHack par Indiana Aflalo. Stratégies de référencement naturel d'élite, audit SEO chirurgical et visibilité IA (GEO). Propulsez votre acquisition digitale. ✆ 06 61 13 97 48",
-    keywords: ["SEO", "GEO", "Acquisition Digitale", "Referencement naturel", "Audit SEO", "Visibilité IA", "Next.js SEO"],
+    description: "Boostez votre visibilité Google avec une experte SEO. Audit gratuit, +200% de trafic organique en 6 mois. Résultats garantis. ✆ 06 61 13 97 48",
+    keywords: ["SEO", "GEO", "Acquisition Digitale", "Referencement naturel", "Audit SEO", "Visibilité IA", "Next.js SEO", "Consultant SEO", "SEO Local", "Référencement Local"],
     authors: [{ name: "Indiana Aflalo" }],
     creator: "Indiana Aflalo",
     icons: {
@@ -68,7 +69,7 @@ export default function RootLayout({
                     <main className="min-h-screen">
                         {children}
                     </main>
-                    <Footer />
+                    <MegaFooter />
                 </ModalProvider>
             </body>
         </html>

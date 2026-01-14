@@ -10,7 +10,7 @@ export function CTASection() {
     const { openAuditModal } = useModal();
 
     return (
-        <section className="py-24 bg-ink text-white overflow-hidden relative">
+        <section className="py-16 bg-ink text-white overflow-hidden relative">
             {/* Minimalist Grid Pattern */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                 style={{ backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)', backgroundSize: '40px 40px' }} />

@@ -42,9 +42,9 @@ export function FAQ({ items = defaultFaqs, title = "Questions Fréquentes" }: FA
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-24 bg-white" id="faq">
+        <section className="py-14 bg-white" id="faq">
             <div className="container mx-auto px-4 max-w-4xl">
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 px-4">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 px-4">
                     <div className="max-w-xl">
 
                         <h2 className="text-4xl md:text-5xl font-heading font-bold text-ink uppercase tracking-tighter leading-none">

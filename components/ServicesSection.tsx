@@ -33,11 +33,11 @@ const SERVICES = [
 
 export function ServicesSection() {
     return (
-        <section className="py-32 bg-white" id="services">
+        <section className="py-20 bg-white" id="services">
             <div className="container mx-auto px-4">
 
                 {/* Header */}
-                <div className="text-center mb-20 max-w-3xl mx-auto">
+                <div className="text-center mb-12 max-w-3xl mx-auto">
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}

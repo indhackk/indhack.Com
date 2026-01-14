@@ -1,256 +1,224 @@
-"use client";
-
-import { HeroServices } from "@/components/services/HeroServices";
-import { FAQ } from "@/components/FAQ";
-import { motion } from "framer-motion";
-import { MapPin, Star, TrendingUp, Users, ArrowRight, CheckCircle2, BadgeCheck } from "lucide-react";
-import Image from "next/image";
+import { Metadata } from "next";
 import Link from "next/link";
+import { FRENCH_CITIES } from "@/lib/cities-data";
+import { MapPin, ArrowRight, Search, Users, TrendingUp, CheckCircle2, Phone, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useModal } from "@/components/providers/ModalProvider";
 
-const LOCAL_SEO_BENEFITS = [
-    {
-        icon: <MapPin className="w-8 h-8 text-sauge" />,
-        title: "Visibilité Géolocalisée",
-        desc: "Apparaissez dans le Pack Local de Google pour toutes les recherches 'près de moi'."
+export const metadata: Metadata = {
+    title: "SEO Local France | Consultant Référencement par Ville",
+    description: "Consultante SEO locale experte sur toutes les grandes villes françaises. Nice, Cannes, Marseille, Paris, Lyon, Bordeaux, Toulouse, Rennes, Nantes, Lille... Référencement géolocalisé pour PME. ✆ 06 61 13 97 48",
+    alternates: {
+        canonical: "https://indhack.com/seo-local"
     },
-    {
-        icon: <Star className="w-8 h-8 text-sauge" />,
-        title: "Avis et Réputation",
-        desc: "Stratégie d'acquisition d'avis Google pour renforcer votre crédibilité."
-    },
-    {
-        icon: <TrendingUp className="w-8 h-8 text-sauge" />,
-        title: "Trafic Qualifié",
-        desc: "78% des recherches locales aboutissent à un achat dans les 24h."
-    },
-    {
-        icon: <Users className="w-8 h-8 text-sauge" />,
-        title: "Dominez votre Zone",
-        desc: "Devenez la référence locale incontournable de votre secteur."
+    openGraph: {
+        title: "SEO Local France | Indiana Aflalo - IndHack",
+        description: "Expertise en référencement local sur toute la France. Boostez votre visibilité Google dans votre ville.",
+        url: "https://indhack.com/seo-local",
     }
-];
+};
 
-const SEO_LOCAL_PROCESS = [
-    {
-        step: "01",
-        title: "Audit Local",
-        desc: "Analyse de votre fiche Google Business Profile, citations locales et concurrence géolocalisée."
-    },
-    {
-        step: "02",
-        title: "Optimisation Profil",
-        desc: "Configuration experte : catégories, horaires, attributs, photos optimisées, posts réguliers."
-    },
-    {
-        step: "03",
-        title: "Citations Locales",
-        desc: "Inscription dans les annuaires pertinents avec cohérence des informations partout."
-    },
-    {
-        step: "04",
-        title: "Contenu Géolocalisé",
-        desc: "Création de pages optimisées pour chaque ville ou quartier que vous ciblez."
-    },
-    {
-        step: "05",
-        title: "Stratégie Avis",
-        desc: "Mise en place d'un système d'acquisition d'avis clients authentiques."
-    },
-    {
-        step: "06",
-        title: "Suivi Mensuel",
-        desc: "Tableau de bord : positions locales, visibilité, appels générés, retour sur investissement."
-    }
-];
-
-// FAQ sans gras dans les questions
-const LOCAL_SEO_FAQ = [
-    {
-        question: "Pourquoi investir dans le référencement local ?",
-        answer: "Parce que 46% de toutes les recherches Google ont une intention locale. Si vous avez un point de vente ou une zone d'intervention précise, le SEO local est le levier le plus rentable pour générer du trafic qualifié."
-    },
-    {
-        question: "Quelle différence entre SEO classique et SEO local ?",
-        answer: "Le SEO local cible des requêtes géolocalisées comme 'restaurant Paris 11' ou 'plombier Lyon'. Il s'appuie sur votre fiche Google Business Profile, les avis clients et les annuaires locaux."
-    },
-    {
-        question: "Combien de temps pour voir des résultats ?",
-        answer: "Les premiers résultats apparaissent entre 2 et 6 semaines après l'optimisation de votre profil Google. C'est beaucoup plus rapide que le SEO classique car la concurrence locale est moins intense."
-    },
-    {
-        question: "Comment améliorer mon classement dans le Pack Local ?",
-        answer: "Trois facteurs clés : optimisation complète de Google Business Profile, avis clients réguliers (minimum 5 nouveaux par mois), et citations cohérentes dans les annuaires locaux."
-    },
-    {
-        question: "Le SEO local fonctionne-t-il sans point de vente ?",
-        answer: "Oui ! Si vous intervenez dans une zone géographique précise (plombier, coach, consultant...), vous pouvez masquer votre adresse tout en ciblant votre zone de service."
-    },
-    {
-        question: "Combien coûte une prestation de référencement local ?",
-        answer: "Les prestations démarrent à 790€ pour un audit local complet + optimisation initiale. Accompagnement mensuel à partir de 490€/mois. Retour sur investissement moyen constaté : x5 à x10."
-    }
-];
+// Grouper les villes par région
+const citiesByRegion = FRENCH_CITIES.reduce((acc, city) => {
+    const region = city.region;
+    if (!acc[region]) acc[region] = [];
+    acc[region].push(city);
+    return acc;
+}, {} as Record<string, typeof FRENCH_CITIES>);
 
 export default function SeoLocalPage() {
-    const { openAuditModal } = useModal();
-
     return (
         <main className="bg-white min-h-screen">
-
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "ProfessionalService",
-                        "name": "IndHack - Référencement Local",
-                        "description": "Experte en référencement local Google pour PME et commerces.",
-                        "url": "https://indhack.com/seo-local",
-                        "telephone": "+33661139748",
-                        "priceRange": "€€",
-                        "areaServed": { "@type": "Country", "name": "France" },
-                        "serviceType": ["Référencement Local", "SEO Local", "Google Business Profile"]
-                    })
-                }}
-            />
-
-            <HeroServices
-                title="Référencement Local : Optimisez votre visibilité de proximité"
-                subtitle="Ciblez les recherches locales stratégiques. Une approche complète pour capter le trafic qualifié dans votre zone géographique."
-                image="seo-dashboard"
-                category="SEO Géolocalisé"
-            />
-
-            {/* Section Bénéfices */}
-            <section className="py-24 bg-gray-50">
+            {/* Hero */}
+            <section className="bg-ink text-white pt-32 pb-20">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-4">
-                            La recherche locale est <span className="text-sauge">décisive</span>
-                        </h2>
-                        <p className="text-lg text-soft">
-                            Une grande partie de vos clients potentiels effectuent une recherche locale avant de se déplacer ou de contacter un professionnel.
-                            Être visible à ce moment précis est essentiel.
+                    <div className="max-w-4xl mx-auto text-center">
+                        <div className="inline-flex items-center gap-2 bg-sauge/20 text-sauge px-4 py-2 rounded-full text-sm font-bold mb-6">
+                            <MapPin className="w-4 h-4" />
+                            Référencement Géolocalisé
+                        </div>
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
+                            Consultant <span className="text-sauge">SEO Local</span>
+                            <br />partout en France
+                        </h1>
+                        <p className="text-xl text-white/60 mb-10 max-w-2xl mx-auto">
+                            Dominez les résultats Google dans votre ville. Expertise locale, stratégie sur-mesure et résultats mesurables pour votre entreprise.
                         </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                        {LOCAL_SEO_BENEFITS.map((benefit, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="p-8 bg-white rounded-3xl border border-gray-100 hover:shadow-xl hover:border-sauge/30 transition-all group text-center h-full flex flex-col items-center"
-                            >
-                                <div className="mb-6 p-4 bg-gray-50 rounded-2xl w-fit mx-auto transition-transform duration-300 group-hover:scale-110">
-                                    <div className="text-sauge">
-                                        {benefit.icon}
-                                    </div>
-                                </div>
-                                <h3 className="text-lg font-bold text-ink mb-3">{benefit.title}</h3>
-                                <p className="text-soft text-sm leading-relaxed">{benefit.desc}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Section Processus */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <p className="text-sauge font-bold tracking-[0.2em] uppercase mb-4 text-sm">Méthodologie</p>
-                        <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink">
-                            Ma méthode en <span className="text-sauge">6 étapes</span>
-                        </h2>
-                    </div>
-
-                    <div className="max-w-4xl mx-auto space-y-4">
-                        {SEO_LOCAL_PROCESS.map((item, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all flex gap-6 items-start group"
-                            >
-                                <div className="w-14 h-14 rounded-xl bg-white flex items-center justify-center text-sauge font-bold text-xl shadow-sm group-hover:bg-sauge group-hover:text-white transition-all">
-                                    {item.step}
-                                </div>
-                                <div className="flex-1">
-                                    <h3 className="text-xl font-bold text-ink mb-2">{item.title}</h3>
-                                    <p className="text-soft">{item.desc}</p>
-                                </div>
-                            </motion.div>
-                        ))}
+                        <div className="flex flex-wrap justify-center gap-4">
+                            <Link href="/contact">
+                                <Button className="bg-sauge text-white hover:bg-white hover:text-ink rounded-full px-8 py-6 font-bold">
+                                    Demander un Audit
+                                    <ArrowRight className="ml-2 w-4 h-4" />
+                                </Button>
+                            </Link>
+                            <a href="tel:0661139748">
+                                <Button variant="outline" className="border-2 border-white/20 text-white hover:bg-white/10 rounded-full px-8 py-6 font-bold">
+                                    <Phone className="mr-2 w-4 h-4" />
+                                    06 61 13 97 48
+                                </Button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Stats */}
-            <section className="py-24 bg-ink text-white">
+            <section className="py-12 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-                            Le référencement local <span className="text-sauge">en chiffres</span>
-                        </h2>
-                    </div>
-
-                    <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                        <div className="text-center p-8 bg-white/5 rounded-3xl border border-white/10">
-                            <p className="text-4xl font-bold text-sauge mb-2">46%</p>
-                            <p className="text-sm text-white/60">Des recherches sont locales</p>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                        <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
+                            <p className="text-3xl font-bold text-sauge mb-1">46%</p>
+                            <p className="text-xs text-soft">Recherches locales</p>
                         </div>
-                        <div className="text-center p-8 bg-white/5 rounded-3xl border border-white/10">
-                            <p className="text-4xl font-bold text-sauge mb-2">78%</p>
-                            <p className="text-sm text-white/60">Aboutissent à un achat en 24h</p>
+                        <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
+                            <p className="text-3xl font-bold text-sauge mb-1">78%</p>
+                            <p className="text-xs text-soft">Achat sous 24h</p>
                         </div>
-                        <div className="text-center p-8 bg-white/5 rounded-3xl border border-white/10">
-                            <p className="text-4xl font-bold text-sauge mb-2">88%</p>
-                            <p className="text-sm text-white/60">Font confiance aux avis</p>
+                        <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
+                            <p className="text-3xl font-bold text-sauge mb-1">18+</p>
+                            <p className="text-xs text-soft">Villes couvertes</p>
                         </div>
-                        <div className="text-center p-8 bg-white/5 rounded-3xl border border-white/10">
-                            <p className="text-4xl font-bold text-sauge mb-2">x5</p>
-                            <p className="text-sm text-white/60">Retour sur investissement moyen</p>
+                        <div className="text-center p-6 bg-white rounded-2xl shadow-sm">
+                            <p className="text-3xl font-bold text-sauge mb-1">x5</p>
+                            <p className="text-xs text-soft">ROI moyen</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <FAQ items={LOCAL_SEO_FAQ} title="Questions sur le Référencement Local" />
+            {/* Piliers SEO Local */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-heading font-bold text-ink mb-4">
+                            Les <span className="text-sauge">3 piliers</span> du SEO Local
+                        </h2>
+                        <p className="text-soft max-w-2xl mx-auto">
+                            Une méthodologie éprouvée pour dominer les recherches géolocalisées et attirer des clients de votre zone de chalandise.
+                        </p>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                        <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
+                            <MapPin className="w-10 h-10 text-sauge mb-4" />
+                            <h3 className="text-xl font-bold mb-2">Google Business Profile</h3>
+                            <p className="text-soft text-sm">
+                                Optimisation complète de votre fiche établissement : catégories, attributs, photos, posts et gestion des avis pour apparaître dans le Pack Local.
+                            </p>
+                        </div>
+                        <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
+                            <Search className="w-10 h-10 text-sauge mb-4" />
+                            <h3 className="text-xl font-bold mb-2">Mots-clés Géolocalisés</h3>
+                            <p className="text-soft text-sm">
+                                Ciblage des requêtes "métier + ville" à fort potentiel de conversion. Focus sur les quartiers et zones de chalandise spécifiques.
+                            </p>
+                        </div>
+                        <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
+                            <Users className="w-10 h-10 text-sauge mb-4" />
+                            <h3 className="text-xl font-bold mb-2">Autorité Locale</h3>
+                            <p className="text-soft text-sm">
+                                Acquisition de liens depuis partenaires locaux, annuaires professionnels et presse régionale pour renforcer votre crédibilité Google.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Villes par région */}
+            <section className="py-16 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-heading font-bold text-ink mb-4">
+                            Mes zones d'<span className="text-sauge">intervention</span>
+                        </h2>
+                        <p className="text-soft max-w-2xl mx-auto">
+                            J'accompagne les entreprises de toutes les grandes métropoles françaises dans leur stratégie de référencement local.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                        {Object.entries(citiesByRegion).map(([region, cities]) => (
+                            <div key={region} className="bg-white p-6 rounded-2xl shadow-sm">
+                                <h3 className="font-bold text-sauge text-sm uppercase tracking-wider mb-4">
+                                    {region}
+                                </h3>
+                                <ul className="space-y-2">
+                                    {cities.map(city => (
+                                        <li key={city.slug}>
+                                            <Link
+                                                href={`/${city.slug}`}
+                                                className="flex items-center justify-between text-ink hover:text-sauge transition-colors group py-1"
+                                            >
+                                                <span className="flex items-center gap-2">
+                                                    <CheckCircle2 className="w-4 h-4 text-sauge/50 group-hover:text-sauge" />
+                                                    Consultant SEO {city.name}
+                                                </span>
+                                                <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Avantages */}
+            <section className="py-16 bg-ink text-white">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-heading font-bold mb-4">
+                            Pourquoi me <span className="text-sauge">choisir</span> ?
+                        </h2>
+                    </div>
+                    <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                        <div className="text-center">
+                            <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-white/10 flex items-center justify-center text-sauge">
+                                <Zap className="w-6 h-6" />
+                            </div>
+                            <h4 className="font-bold mb-1">Expertise Technique</h4>
+                            <p className="text-xs text-white/60">Next.js, Core Web Vitals, IA</p>
+                        </div>
+                        <div className="text-center">
+                            <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-white/10 flex items-center justify-center text-sauge">
+                                <TrendingUp className="w-6 h-6" />
+                            </div>
+                            <h4 className="font-bold mb-1">Approche ROI</h4>
+                            <p className="text-xs text-white/60">KPIs business mesurables</p>
+                        </div>
+                        <div className="text-center">
+                            <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-white/10 flex items-center justify-center text-sauge">
+                                <MapPin className="w-6 h-6" />
+                            </div>
+                            <h4 className="font-bold mb-1">Proximité Locale</h4>
+                            <p className="text-xs text-white/60">Connaissance du terrain</p>
+                        </div>
+                        <div className="text-center">
+                            <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-white/10 flex items-center justify-center text-sauge">
+                                <Users className="w-6 h-6" />
+                            </div>
+                            <h4 className="font-bold mb-1">Sans Engagement Long</h4>
+                            <p className="text-xs text-white/60">3 mois minimum, puis liberté</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* CTA */}
-            <section className="py-24 bg-white">
-                <div className="container mx-auto px-4 max-w-4xl text-center">
-                    <div className="bg-ink p-12 md:p-16 rounded-3xl text-white">
-                        <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
-                            Prêt à dominer <span className="text-sauge">votre ville</span> ?
-                        </h2>
-                        <p className="text-lg text-white/50 mb-10 max-w-xl mx-auto">
-                            Audit local gratuit : découvrez comment vos concurrents vous dépassent et comment les rattraper.
-                        </p>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            <Button
-                                onClick={openAuditModal}
-                                className="bg-sauge text-white hover:bg-white hover:text-ink rounded-full px-10 py-7 text-lg font-bold"
-                            >
-                                Audit gratuit
-                                <ArrowRight className="ml-2 w-5 h-5" />
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4 max-w-3xl text-center">
+                    <h2 className="text-3xl font-heading font-bold text-ink mb-4">
+                        Prêt à <span className="text-sauge">dominer</span> votre marché local ?
+                    </h2>
+                    <p className="text-soft mb-8">
+                        Audit SEO local offert. Découvrez votre potentiel de croissance en 15 minutes.
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4">
+                        <Link href="/contact">
+                            <Button className="bg-sauge text-white hover:bg-ink rounded-full px-10 py-6 font-bold">
+                                Demander un Audit Gratuit
+                                <ArrowRight className="ml-2 w-4 h-4" />
                             </Button>
-                            <Link href="/contact">
-                                <Button
-                                    variant="outline"
-                                    className="border-2 border-white text-white hover:bg-white hover:text-ink rounded-full px-10 py-7 text-lg font-bold"
-                                >
-                                    Me contacter
-                                </Button>
-                            </Link>
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </section>

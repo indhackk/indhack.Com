@@ -1,25 +1,22 @@
-import { CityPageTemplate } from "@/components/templates/CityPageTemplate";
+import { CityPageTemplateV2 } from "@/components/templates/CityPageTemplateV2";
+import { getCityBySlug } from "@/lib/cities-data";
 import { Metadata } from "next";
 
+const cityData = getCityBySlug("seo-sophia-antipolis")!;
+
 export const metadata: Metadata = {
-    title: "Consultante SEO Sophia-Antipolis | Experte Startups & Tech",
-    description: "Référencement naturel pour startups et entreprises tech de Sophia-Antipolis. Stratégies SEO B2B, SaaS et deeptech. Audit gratuit pour la technopole.",
+    title: `Consultant SEO Sophia Antipolis | Référencement Tech & Startups`,
+    description: `Boostez votre visibilité B2B sur Google à Sophia Antipolis. Consultante SEO freelance experte du marché tech. Audit gratuit pour startups et ESN. ✆ 06 61 13 97 48`,
     alternates: {
-        canonical: "https://indhack.com/seo-sophia-antipolis"
+        canonical: `https://indhack.com/${cityData.slug}`
     },
     openGraph: {
-        title: "Consultante SEO Sophia-Antipolis | Indiana Aflalo - IndHack",
-        description: "Dominez Google sur la technopole. SEO technique pour startups, SaaS et entreprises innovantes de Sophia-Antipolis.",
-        url: "https://indhack.com/seo-sophia-antipolis",
+        title: `Consultant SEO Sophia Antipolis | Indiana Aflalo - IndHack`,
+        description: `Dominez les résultats Google à Sophia Antipolis. Référencement B2B, audit SEO tech et stratégie digitale pour la technopole.`,
+        url: `https://indhack.com/${cityData.slug}`,
     }
 };
 
-export default function SeoSophiaAntipolisPage() {
-    return (
-        <CityPageTemplate
-            city="Sophia-Antipolis"
-            zipCode="06560"
-            description="Première technopole d'Europe, Sophia-Antipolis concentre plus de 2 500 entreprises et 40 000 emplois dans les secteurs de l'innovation : IA, IoT, biotech, greentech, fintech. Dans cet écosystème ultra-compétitif, la visibilité Google est un levier de croissance stratégique. Que vous soyez une startup early-stage cherchant vos premiers clients B2B, une scale-up en hypercroissance ou un grand compte tech, une stratégie SEO adaptée à votre cycle de maturité est essentielle pour générer des leads qualifiés."
-        />
-    );
+export default function SeoSophiaPage() {
+    return <CityPageTemplateV2 cityData={cityData} />;
 }

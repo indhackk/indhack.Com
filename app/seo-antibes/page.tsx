@@ -1,27 +1,22 @@
-import { CityPageTemplate } from "@/components/templates/CityPageTemplate";
+import { CityPageTemplateV2 } from "@/components/templates/CityPageTemplateV2";
+import { getCityBySlug } from "@/lib/cities-data";
 import { Metadata } from "next";
 
+const cityData = getCityBySlug("seo-antibes")!;
+
 export const metadata: Metadata = {
-    title: "Consultante SEO Antibes | Experte Référencement Juan-les-Pins",
-    description: "Référencement naturel à Antibes et Juan-les-Pins. Stratégies SEO pour commerces, restaurants, hôtels et professions libérales. Audit gratuit.",
+    title: `Consultant SEO Antibes Juan-les-Pins (${cityData.zipCode}) | Référencement Local`,
+    description: `Boostez votre visibilité sur Google à Antibes et Juan-les-Pins. Consultante SEO freelance experte. Audit gratuit pour PME, commerces et artisans. ✆ 06 61 13 97 48`,
     alternates: {
-        canonical: "https://indhack.com/seo-antibes"
+        canonical: `https://indhack.com/${cityData.slug}`
     },
     openGraph: {
-        title: "Consultante SEO Antibes | Indiana Aflalo - IndHack",
-        description: "Dominez Google à Antibes et Juan-les-Pins. SEO local pour commerces, hôtellerie et services de proximité.",
-        url: "https://indhack.com/seo-antibes",
+        title: `Consultant SEO Antibes | Indiana Aflalo - IndHack`,
+        description: `Dominez les résultats Google à Antibes. Référencement local, audit SEO et stratégie digitale pour entreprises antiboises.`,
+        url: `https://indhack.com/${cityData.slug}`,
     }
 };
 
 export default function SeoAntibesPage() {
-    return (
-        <CityPageTemplate
-            city="Antibes"
-            zipCode="06600"
-            description="Entre le prestigieux port Vauban et les plages de Juan-les-Pins, Antibes est une destination prisée qui attire touristes fortunés et résidents permanents. Pour les restaurateurs du vieil Antibes, les hôteliers de Juan-les-Pins, les agents immobiliers ou les professions libérales, la visibilité Google est cruciale pour capter cette clientèle locale et touristique à fort pouvoir d'achat."
-        />
-    );
+    return <CityPageTemplateV2 cityData={cityData} />;
 }
-
-

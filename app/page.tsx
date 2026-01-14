@@ -3,6 +3,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { AboutSection } from "@/components/AboutSection";
 import { FAQ } from "@/components/FAQ";
 import { CTASection } from "@/components/CTASection";
+import { SEOScoreChecker } from "@/components/SEOScoreChecker";
 
 // Homepage FAQ optimisée - SANS gras dans les questions
 const HOMEPAGE_FAQ = [
@@ -68,6 +69,7 @@ export default function Home() {
             <div className="flex flex-col">
                 <Hero />
                 <ServicesSection />
+                <SEOScoreChecker />
                 <AboutSection />
                 <CTASection />
                 <FAQ items={HOMEPAGE_FAQ} title="Questions Fréquentes" />

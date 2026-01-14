@@ -1,26 +1,22 @@
-import { CityPageTemplate } from "@/components/templates/CityPageTemplate";
+import { CityPageTemplateV2 } from "@/components/templates/CityPageTemplateV2";
+import { getCityBySlug } from "@/lib/cities-data";
 import { Metadata } from "next";
 
+const cityData = getCityBySlug("seo-cannes")!;
+
 export const metadata: Metadata = {
-    title: "Consultante SEO Cannes | Référencement Luxe & Prestige",
-    description: "Expertise SEO à Cannes pour entreprises exigeantes. Positionnez-vous sur les mots-clés premium de la Croisette. Référencement local et multilingue. Audit offert.",
+    title: `Consultant SEO Cannes (${cityData.zipCode}) | Référencement Local`,
+    description: `Boostez votre visibilité sur Google à Cannes. Consultante SEO freelance experte de la Côte d'Azur. Audit gratuit pour PME, commerces et professions libérales. ✆ 06 61 13 97 48`,
     alternates: {
-        canonical: "https://indhack.com/seo-cannes"
+        canonical: `https://indhack.com/${cityData.slug}`
     },
     openGraph: {
-        title: "Consultante SEO Cannes | Indiana Aflalo - IndHack",
-        description: "Dominez Google à Cannes. SEO haut de gamme pour hôtels, commerces de luxe et entreprises événementielles de la Côte d'Azur.",
-        url: "https://indhack.com/seo-cannes",
+        title: `Consultant SEO Cannes | Indiana Aflalo - IndHack`,
+        description: `Dominez les résultats Google à Cannes. Référencement local, audit SEO et stratégie digitale pour entreprises cannoises.`,
+        url: `https://indhack.com/${cityData.slug}`,
     }
 };
 
 export default function SeoCannesPage() {
-    return (
-        <CityPageTemplate
-            city="Cannes"
-            zipCode="06400"
-            description="Cannes n'est pas qu'une ville de cinéma, c'est un hub business international. Pour capter une clientèle locale ou internationale lors des congrès (MIPIM, Festival, MAPIC), votre visibilité Google doit être irréprochable et multilingue. Le SEO local à Cannes exige une approche premium, adaptée aux attentes d'une clientèle exigeante."
-        />
-    );
+    return <CityPageTemplateV2 cityData={cityData} />;
 }
-
