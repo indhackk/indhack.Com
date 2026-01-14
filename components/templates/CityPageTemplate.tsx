@@ -21,6 +21,7 @@ const CITY_DATA: Record<string, { lat: string; lng: string; region: string; depa
     "Cannes": { lat: "43.5528", lng: "7.0174", region: "Provence-Alpes-Côte d'Azur", department: "Alpes-Maritimes" },
     "Antibes": { lat: "43.5804", lng: "7.1251", region: "Provence-Alpes-Côte d'Azur", department: "Alpes-Maritimes" },
     "Monaco": { lat: "43.7384", lng: "7.4246", region: "Principauté de Monaco", department: "Monaco" },
+    "Sophia-Antipolis": { lat: "43.6163", lng: "7.0557", region: "Provence-Alpes-Côte d'Azur", department: "Alpes-Maritimes" },
 };
 
 export function CityPageTemplate({ city, zipCode, description, customContent }: CityPageProps) {
@@ -135,7 +136,28 @@ export function CityPageTemplate({ city, zipCode, description, customContent }: 
         { name: "Cannes", href: "/seo-cannes" },
         { name: "Antibes", href: "/seo-antibes" },
         { name: "Monaco", href: "/seo-monaco" },
+        { name: "Sophia-Antipolis", href: "/seo-sophia-antipolis" },
     ].filter(c => c.name !== city);
+
+    // Points forts différenciants
+    const WHY_CHOOSE_ME = [
+        {
+            title: "Expertise Technique",
+            desc: "Maîtrise de Next.js, Core Web Vitals, et des dernières pratiques d'indexation Google."
+        },
+        {
+            title: "Approche ROI",
+            desc: "Chaque action est mesurée. Reporting transparent avec KPIs business, pas juste des positions."
+        },
+        {
+            title: "Proximité Locale",
+            desc: `Basée dans la région, je comprends le marché de ${city} et peux vous rencontrer physiquement.`
+        },
+        {
+            title: "Pas de Contrat Long",
+            desc: "Engagement minimum de 3 mois pour voir des résultats, puis en toute liberté."
+        }
+    ];
 
     return (
         <main className="bg-white min-h-screen">
