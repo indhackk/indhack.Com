@@ -20,7 +20,10 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-    title: "IndHack | Expertise SEO, GEO & Acquisition Digitale Haute Performance",
+    title: {
+        template: "%s | IndHack",
+        default: "IndHack | Expertise SEO, GEO & Acquisition Digitale",
+    },
     description: "IndHack par Indiana Aflalo. Stratégies de référencement naturel d'élite, audit SEO chirurgical et visibilité IA (GEO). Propulsez votre acquisition digitale. ✆ 06 61 13 97 48",
     keywords: ["SEO", "GEO", "Acquisition Digitale", "Referencement naturel", "Audit SEO", "Visibilité IA", "Next.js SEO"],
     authors: [{ name: "Indiana Aflalo" }],

@@ -42,7 +42,7 @@ const SEO_FAQ = [
     },
     {
         question: "Quelle différence avec une agence classique ?",
-        answer: "Un interlocuteur unique spécialisé au lieu d'un compte partagé entre juniors. Plus de réactivité, plus de transparence et une vraie compréhension de vos enjeux business."
+        answer: "Je suis votre unique interlocutrice. Pas de junior qui apprend sur votre dossier comme en agence. Juste une expertise Senior, de la réactivité directe et une implication personnelle dans votre réussite."
     }
 ];
 

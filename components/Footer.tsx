@@ -28,8 +28,8 @@ export function Footer() {
     return (
         <footer className="bg-ink text-white">
             <div className="container mx-auto px-4 py-24">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
-                    <div className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+                    <div className="space-y-8 lg:col-span-1">
                         <Link href="/" className="inline-flex items-center gap-4 group">
                             <Image
                                 src="/images/logo-indhack.png"
@@ -38,12 +38,17 @@ export function Footer() {
                                 height={48}
                                 className="group-hover:rotate-12 transition-transform"
                             />
-                            <span className="font-heading font-bold text-2xl tracking-tighter uppercase">IndHack</span>
                         </Link>
-                        <p className="text-white/50 text-base leading-relaxed max-w-xs">
-                            Expertise en <strong>référencement naturel</strong> et <strong>visibilité IA</strong>.
-                            J'accompagne les entreprises dans leur conquête organique et leur transformation digitale.
-                        </p>
+                        <div className="space-y-4">
+                            <Link href="/" className="inline-block">
+                                <span className="text-2xl font-heading font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">
+                                    IndHack
+                                </span>
+                            </Link>
+                            <p className="text-white/60 text-sm leading-relaxed">
+                                Consultante SEO & Growth à Nice. Stratégies d'acquisition haute performance.
+                            </p>
+                        </div>
                     </div>
 
                     <div>
@@ -58,7 +63,7 @@ export function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-sauge mb-10">Agence</h4>
+                        <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-sauge mb-10">Navigation</h4>
                         <ul className="space-y-4">
                             {FOOTER_LINKS.menu.map(link => (
                                 <li key={link.href}>
@@ -69,7 +74,17 @@ export function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-sauge mb-10">Restons connectés</h4>
+                        <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-sauge mb-10">Zones</h4>
+                        <ul className="space-y-4">
+                            <li><FooterLink href="/seo-nice">Consultant SEO Nice</FooterLink></li>
+                            <li><FooterLink href="/seo-cannes">Consultant SEO Cannes</FooterLink></li>
+                            <li><FooterLink href="/seo-antibes">SEO Antibes / Sophia</FooterLink></li>
+                            <li><FooterLink href="/seo-monaco">Consultant SEO Monaco</FooterLink></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-sauge mb-10">Contact</h4>
                         <div className="space-y-6">
                             <a
                                 href="tel:0661139748"

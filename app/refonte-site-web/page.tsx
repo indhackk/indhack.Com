@@ -91,7 +91,7 @@ export default function RefonteSitePage() {
                         </motion.h2>
                         <p className="text-xl text-soft leading-relaxed">
                             Une refonte graphique c'est bien. Une refonte qui conserve vos <strong>positions SEO</strong>, c'est vital.
-                            J'interviens comme garde-fou technique entre votre agence web et vos résultats.
+                            J'interviens comme garde-fou technique entre votre prestataire web et vos résultats.
                         </p>
                     </div>
 
