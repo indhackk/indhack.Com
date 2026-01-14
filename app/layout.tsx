@@ -28,6 +28,10 @@ export const metadata: Metadata = {
     keywords: ["SEO", "GEO", "Acquisition Digitale", "Referencement naturel", "Audit SEO", "Visibilité IA", "Next.js SEO"],
     authors: [{ name: "Indiana Aflalo" }],
     creator: "Indiana Aflalo",
+    icons: {
+        icon: "/images/logo-indhack.png",
+        apple: "/images/logo-indhack.png",
+    },
     openGraph: {
         type: "website",
         locale: "fr_FR",
@@ -35,6 +39,7 @@ export const metadata: Metadata = {
         siteName: "IndHack",
         title: "IndHack | Expertise SEO, GEO & Acquisition Digitale",
         description: "Dominez les résultats Google et les moteurs de réponse IA. Audit, stratégie et accompagnement SEO haute performance.",
+        images: [{ url: "/images/logo-indhack.png", width: 512, height: 512, alt: "IndHack Logo" }],
     },
     twitter: {
         card: "summary_large_image",
