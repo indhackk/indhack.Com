@@ -60,9 +60,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="fr" className="scroll-smooth">
-            <head>
-                <link rel="canonical" href="https://indhack.com" />
-            </head>
+
             <body className={`${spaceGrotesk.variable} ${ibmPlexSans.variable} font-body antialiased text-ink bg-white`}>
                 <ModalProvider>
                     <Navbar />

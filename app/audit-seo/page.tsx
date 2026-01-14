@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import AuditSeoClient from "./AuditSeoClient";
 
 export const metadata: Metadata = {
     title: "Audit SEO Complet & Technique",
@@ -13,4 +14,6 @@ export const metadata: Metadata = {
     }
 };
 
-export { default } from "./AuditSeoClient";
+export default function AuditSeoPage() {
+    return <AuditSeoClient />;
+}
