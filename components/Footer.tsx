@@ -1,15 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { Linkedin, Mail, Phone, ArrowUpRight } from "lucide-react";
+import { Linkedin, Mail, Phone, ArrowUpRight, MapPin } from "lucide-react";
 import Image from "next/image";
+import { FRENCH_CITIES } from "@/lib/cities-data";
 
 const FOOTER_LINKS = {
     expertises: [
         { title: "Audit SEO", href: "/audit-seo" },
         { title: "Référencement naturel", href: "/referencement-naturel" },
+        { title: "SEO Local", href: "/seo-local" },
         { title: "Création de site SEO", href: "/creation-site-web" },
         { title: "Refonte de site", href: "/refonte-site-web" },
+        { title: "Community Manager", href: "/community-manager" },
     ],
     menu: [
         { title: "Accueil", href: "/" },
@@ -22,6 +25,13 @@ const FOOTER_LINKS = {
         { title: "Confidentialité", href: "/confidentialite" },
         { title: "CGV", href: "/cgv" },
     ]
+};
+
+// Villes principales par région pour le footer
+const FEATURED_CITIES = {
+    "Côte d'Azur": FRENCH_CITIES.filter(c => ["Nice", "Cannes", "Monaco", "Antibes"].includes(c.name)),
+    "Sud": FRENCH_CITIES.filter(c => ["Marseille", "Toulouse", "Montpellier"].includes(c.name)),
+    "Grandes Villes": FRENCH_CITIES.filter(c => ["Paris", "Lyon", "Bordeaux", "Lille"].includes(c.name)),
 };
 
 export function Footer() {
@@ -52,7 +62,7 @@ export function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-sauge mb-10">Expertises</h4>
+                        <p className="font-heading font-bold text-xs uppercase tracking-widest text-sauge mb-10">Expertises</p>
                         <ul className="space-y-4">
                             {FOOTER_LINKS.expertises.map(link => (
                                 <li key={link.href}>
@@ -63,7 +73,7 @@ export function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-sauge mb-10">Navigation</h4>
+                        <p className="font-heading font-bold text-xs uppercase tracking-widest text-sauge mb-10">Navigation</p>
                         <ul className="space-y-4">
                             {FOOTER_LINKS.menu.map(link => (
                                 <li key={link.href}>
@@ -73,21 +83,40 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    <div>
-                        <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-sauge mb-10">Zones</h4>
-                        <ul className="space-y-4">
-                            <li><FooterLink href="/seo-nice">Consultant SEO Nice</FooterLink></li>
-                            <li><FooterLink href="/seo-cannes">Consultant SEO Cannes</FooterLink></li>
-                            <li><FooterLink href="/seo-antibes">SEO Antibes / Sophia</FooterLink></li>
-                            <li><FooterLink href="/seo-monaco">Consultant SEO Monaco</FooterLink></li>
-                        </ul>
+                    <div className="lg:col-span-1">
+                        <p className="font-heading font-bold text-xs uppercase tracking-widest text-sauge mb-10">
+                            <MapPin className="w-3 h-3 inline mr-1" />
+                            Zones d'intervention
+                        </p>
+                        <div className="space-y-6">
+                            {Object.entries(FEATURED_CITIES).map(([region, cities]) => (
+                                <div key={region}>
+                                    <p className="text-white/40 text-[10px] uppercase tracking-wider mb-2">{region}</p>
+                                    <ul className="space-y-2">
+                                        {cities.map(city => (
+                                            <li key={city.slug}>
+                                                <FooterLink href={`/${city.slug}`}>SEO {city.name}</FooterLink>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                            <Link
+                                href="/seo-local"
+                                className="inline-flex items-center gap-2 text-sauge text-sm font-bold hover:text-white transition-colors mt-4"
+                            >
+                                Voir toutes les villes
+                                <ArrowUpRight className="w-3 h-3" />
+                            </Link>
+                        </div>
                     </div>
 
                     <div>
-                        <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-sauge mb-10">Contact</h4>
+                        <p className="font-heading font-bold text-xs uppercase tracking-widest text-sauge mb-10">Contact</p>
                         <div className="space-y-6">
                             <a
                                 href="tel:0661139748"
+                                aria-label="Appeler le 06 61 13 97 48"
                                 className="flex items-center gap-4 text-white hover:text-sauge transition-colors group"
                             >
                                 <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-sauge group-hover:text-white transition-all">
@@ -101,12 +130,14 @@ export function Footer() {
                                     href="https://www.linkedin.com/in/indianaaflalo"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label="Voir le profil LinkedIn"
                                     className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-[#0077B5] transition-all"
                                 >
                                     <Linkedin className="w-5 h-5" />
                                 </a>
                                 <a
                                     href="mailto:contact@indhack.com"
+                                    aria-label="Envoyer un email à contact@indhack.com"
                                     className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-sauge transition-all"
                                 >
                                     <Mail className="w-5 h-5" />

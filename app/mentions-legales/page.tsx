@@ -1,3 +1,17 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Mentions Légales | IndHack",
+    description: "Mentions légales du site indhack.com édité par Indiana Aflalo, consultante SEO et experte en acquisition digitale.",
+    alternates: {
+        canonical: "https://indhack.com/mentions-legales"
+    },
+    robots: {
+        index: false,
+        follow: true
+    }
+};
+
 export default function MentionsLegales() {
     return (
         <div className="container mx-auto px-4 py-24 max-w-3xl">

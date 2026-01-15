@@ -1,3 +1,17 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Conditions Générales de Vente | IndHack",
+    description: "Conditions générales de vente des prestations de consulting SEO et création de sites web par Indiana Aflalo - IndHack.",
+    alternates: {
+        canonical: "https://indhack.com/cgv"
+    },
+    robots: {
+        index: false,
+        follow: true
+    }
+};
+
 export default function CGV() {
     return (
         <div className="container mx-auto px-4 py-24 max-w-3xl">

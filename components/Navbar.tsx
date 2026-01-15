@@ -77,7 +77,11 @@ export function Navbar() {
                             onMouseEnter={() => setIsServicesOpen(true)}
                             onMouseLeave={() => setIsServicesOpen(false)}
                         >
-                            <button className={`flex items-center gap-1.5 py-4 text-sm font-bold tracking-wide transition-colors ${useDarkMenu ? 'text-ink' : 'text-white'} hover:text-sauge`}>
+                            <button
+                                className={`flex items-center gap-1.5 py-4 text-sm font-bold tracking-wide transition-colors ${useDarkMenu ? 'text-ink' : 'text-white'} hover:text-sauge`}
+                                aria-expanded={isServicesOpen}
+                                aria-haspopup="true"
+                            >
                                 Expertises <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
                             </button>
 
@@ -121,7 +125,7 @@ export function Navbar() {
                         </a>
                         <Button
                             onClick={openAuditModal}
-                            className="bg-sauge text-white hover:bg-ink rounded-full px-8 py-6 font-bold tracking-wide shadow-lg shadow-sauge/20 group overflow-hidden relative"
+                            className="bg-sauge text-ink hover:bg-ink hover:text-white rounded-full px-8 py-6 font-bold tracking-wide shadow-lg shadow-sauge/20 group overflow-hidden relative"
                         >
                             <span className="relative z-10 flex items-center gap-2 font-bold group-hover:text-white transition-colors">
                                 Audit Offert ✨
@@ -137,6 +141,8 @@ export function Navbar() {
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className={`lg:hidden p-2 rounded-xl transition-colors ${useDarkMenu ? 'text-ink hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
+                        aria-label="Ouvrir le menu"
+                        aria-expanded={isMobileMenuOpen}
                     >
                         {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
@@ -156,7 +162,7 @@ export function Navbar() {
                         <div className="flex flex-col h-full">
                             <div className="flex items-center justify-between p-6 border-b border-line">
                                 <span className="font-heading font-bold text-2xl tracking-tighter text-ink">INDHACK</span>
-                                <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-ink">
+                                <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-ink" aria-label="Fermer le menu">
                                     <X size={32} />
                                 </button>
                             </div>
@@ -193,7 +199,7 @@ export function Navbar() {
                                     06 61 13 97 48
                                 </a>
                                 <Button
-                                    className="w-full bg-sauge hover:bg-ink py-7 rounded-2xl text-lg font-bold shadow-xl shadow-sauge/20"
+                                    className="w-full bg-sauge text-ink hover:bg-ink hover:text-white py-7 rounded-2xl text-lg font-bold shadow-xl shadow-sauge/20"
                                     onClick={() => { setIsMobileMenuOpen(false); openAuditModal(); }}
                                 >
                                     Audit gratuit

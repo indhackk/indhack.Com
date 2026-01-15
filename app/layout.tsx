@@ -53,6 +53,51 @@ export const metadata: Metadata = {
     },
 };
 
+// Organization Schema global
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://indhack.com/#organization",
+    "name": "IndHack",
+    "alternateName": "Indiana Aflalo - Consultante SEO",
+    "url": "https://indhack.com",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://indhack.com/images/logo-indhack.png",
+        "width": 512,
+        "height": 512
+    },
+    "image": "https://indhack.com/images/logo-indhack.png",
+    "description": "Consultante SEO et experte en acquisition digitale. Accompagnement personnalisé pour PME et startups : audit SEO, référencement naturel, création de sites web optimisés.",
+    "founder": {
+        "@type": "Person",
+        "name": "Indiana Aflalo",
+        "jobTitle": "Consultante SEO & Experte Acquisition Digitale"
+    },
+    "sameAs": [
+        "https://www.linkedin.com/in/indianaaflalo"
+    ],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33661139748",
+        "email": "contact@indhack.com",
+        "contactType": "customer service",
+        "availableLanguage": ["French", "English"]
+    },
+    "areaServed": {
+        "@type": "Country",
+        "name": "France"
+    },
+    "serviceType": [
+        "Référencement Naturel SEO",
+        "Audit SEO",
+        "SEO Local",
+        "Création de Site Web",
+        "Refonte de Site Web",
+        "Community Management"
+    ]
+};
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -60,7 +105,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="fr" className="scroll-smooth">
-
+            <head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+                />
+            </head>
             <body className={`${spaceGrotesk.variable} ${ibmPlexSans.variable} font-body antialiased text-ink bg-white`}>
                 <ModalProvider>
                     <Navbar />

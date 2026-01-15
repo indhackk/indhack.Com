@@ -9,6 +9,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Button } from "@/components/ui/button";
 import { AuditCTA } from "@/components/blog/AuditCTA";
+import { BlogServiceCTA } from "@/components/BlogServiceCTA";
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
     const post = getPostBySlug(params.slug);
@@ -189,6 +190,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                                 </span>
                             ))}
                         </div>
+
+                        {/* Service CTA contextuel */}
+                        <BlogServiceCTA category={post.category} />
                     </article>
 
                 </div>

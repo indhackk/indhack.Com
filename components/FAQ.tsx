@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown, Search, Target, Sparkles, Clock, Euro, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FAQSchema } from "@/components/FAQSchema";
 
 interface FAQItem {
     question: string;
@@ -43,6 +44,8 @@ export function FAQ({ items = defaultFaqs, title = "Questions Fréquentes" }: FA
 
     return (
         <section className="py-14 bg-white" id="faq">
+            {/* Schema JSON-LD pour Google Rich Results */}
+            <FAQSchema items={items} />
             <div className="container mx-auto px-4 max-w-4xl">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 px-4">
                     <div className="max-w-xl">

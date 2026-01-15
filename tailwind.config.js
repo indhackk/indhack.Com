@@ -23,7 +23,7 @@ module.exports = {
                 'texte-clair': '#F5F7F6',
                 'texte-moyen': '#C8D0CC',
                 'accent-clair': '#9DADA4',
-                'sauge': '#8FA89A',         // Sauge principal
+                'sauge': '#93C5AC',         // Sauge plus vibrant et frais
                 'ink': '#2A3830',           // Texte principal, moins noir
                 'soft': '#6B7D74',          // Texte secondaire
                 'line': '#E4EBE7',          // Bordures

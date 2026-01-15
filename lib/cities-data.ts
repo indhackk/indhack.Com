@@ -26,10 +26,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Provence-Alpes-Côte d'Azur",
         department: "Alpes-Maritimes",
         population: "340 000",
-        description: "Capitale de la Côte d'Azur, Nice est un marché ultra-dynamique où la concurrence digitale est féroce. Restaurants, hôtels, commerces de luxe, professions libérales : tous se battent pour la visibilité locale.",
-        keyPoints: ["Tourisme international", "Économie tertiaire forte", "French Tech Côte d'Azur"],
+        description: "À Nice, la Promenade des Anglais n'est pas le seul endroit où il faut être vu. Google est la nouvelle rue piétonne. Si votre entreprise n'est pas dans le Top 3, vous êtes invisible pour 340 000 clients locaux. IndHack transforme votre site en machine à capturer ce trafic.",
+        keyPoints: ["Capturez le trafic local", "Dominez vos concurrents niçois", "Augmentez votre CA instantanément"],
         nearbyAreas: ["Villefranche-sur-Mer", "Saint-Laurent-du-Var", "Cagnes-sur-Mer", "Beaulieu-sur-Mer"],
-        landmarks: ["Promenade des Anglais", "Vieux-Nice", "Port de Nice", "Cimiez"]
+        landmarks: ["Promenade des Anglais", "Vieux-Nice", "Port de Nice", "Place Masséna"]
     },
     {
         name: "Cannes",
@@ -40,10 +40,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Provence-Alpes-Côte d'Azur",
         department: "Alpes-Maritimes",
         population: "74 000",
-        description: "Ville du Festival, Cannes attire une clientèle internationale haut de gamme. Immobilier de luxe, événementiel, yachting : le SEO local est stratégique pour capter cette audience premium.",
-        keyPoints: ["Événementiel international", "Luxe et prestige", "Tourisme d'affaires"],
+        description: "Immobilier, Luxe, Événementiel : À Cannes, chaque clic vaut de l'or. Vos concurrents internationaux investissent massivement. Ne laissez pas les agences parisiennes voler vos clients locaux. IndHack déploie une stratégie SEO d'élite pour le marché cannois.",
+        keyPoints: ["Ciblez une clientèle VIP", "SEO Immobilier & Luxe", "Visibilité internationale"],
         nearbyAreas: ["Le Cannet", "Mougins", "Mandelieu-la-Napoule", "Théoule-sur-Mer"],
-        landmarks: ["La Croisette", "Palais des Festivals", "Vieux Port", "Suquet"]
+        landmarks: ["La Croisette", "Palais des Festivals", "Vieux Port", "Le Suquet"]
     },
     {
         name: "Antibes",
@@ -54,10 +54,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Provence-Alpes-Côte d'Azur",
         department: "Alpes-Maritimes",
         population: "73 000",
-        description: "Entre Nice et Cannes, Antibes Juan-les-Pins combine patrimoine historique et yachting de luxe. Une ville où les artisans, restaurateurs et commerces locaux ont tout à gagner à être visibles sur Google.",
-        keyPoints: ["Port Vauban (plus grand port de plaisance)", "Patrimoine culturel", "Tourisme balnéaire"],
+        description: "Entre les remparts et le yachting, le business à Antibes est féroce. Les artisans et commerçants locaux qui ignorent Google Maps perdent 40% de leur CA potentiel. IndHack vous remet au centre de la carte.",
+        keyPoints: ["Optimisation Google Maps", "SEO Yachting & Services", "Acquisition de leads locaux"],
         nearbyAreas: ["Juan-les-Pins", "Vallauris", "Biot", "Villeneuve-Loubet"],
-        landmarks: ["Remparts", "Musée Picasso", "Cap d'Antibes", "Marineland"]
+        landmarks: ["Port Vauban", "Vieille Ville", "Cap d'Antibes", "Marché Provençal"]
     },
     {
         name: "Monaco",
@@ -68,10 +68,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Principauté de Monaco",
         department: "Monaco",
         population: "39 000",
-        description: "La Principauté attire une clientèle ultra-fortunée du monde entier. Banques, joailliers, immobilier de prestige : être visible sur Google Monaco, c'est accéder à un marché premium unique.",
-        keyPoints: ["Finance et banque privée", "Luxe absolu", "Événements exclusifs (F1, Yacht Show)"],
-        nearbyAreas: ["Monte-Carlo", "La Condamine", "Fontvieille", "Moneghetti"],
-        landmarks: ["Casino de Monte-Carlo", "Palais Princier", "Port Hercule", "Rocher"]
+        description: "Le m² digital le plus cher du monde. À Monaco, l'approximatif ne fonctionne pas. Vous devez être visible auprès des Family Offices, Banques et Services de Luxe. IndHack vous positionne là où l'argent circule : en haut de la page 1.",
+        keyPoints: ["Stratégie Ultra-Premium", "E-réputation Monaco", "SEO Multilingue (EN/FR/IT/RU)"],
+        nearbyAreas: ["Monte-Carlo", "La Condamine", "Fontvieille", "Beausoleil"],
+        landmarks: ["Place du Casino", "Port Hercule", "Carré d'Or", "Rocher"]
     },
     {
         name: "Sophia-Antipolis",
@@ -82,10 +82,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Provence-Alpes-Côte d'Azur",
         department: "Alpes-Maritimes",
         population: "2 500 entreprises",
-        description: "Première technopole d'Europe, Sophia Antipolis concentre +2500 entreprises tech, startups et multinationales. Un écosystème B2B où le SEO génère des leads qualifiés à forte valeur.",
-        keyPoints: ["Tech & Innovation", "B2B et services aux entreprises", "Startups et scale-ups"],
+        description: "La Silicon Valley de l'Europe ne pardonne pas l'incompétence technique. Startups, SaaS, ESN : votre SEO doit être aussi performant que votre code. Audit technique pointu et acquisition B2B par IndHack.",
+        keyPoints: ["SEO Technique B2B", "Génération de Leads SaaS", "Visibilité Tech & Innovation"],
         nearbyAreas: ["Valbonne", "Mougins", "Biot", "Antibes"],
-        landmarks: ["Business Pôle", "INRIA", "Amadeus", "Campus SKEMA"]
+        landmarks: ["Place Sophie Laffitte", "Skema", "Amadeus", "Carrefour des Entreprises"]
     },
     // Marseille et environs
     {
@@ -97,10 +97,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Provence-Alpes-Côte d'Azur",
         department: "Bouches-du-Rhône",
         population: "870 000",
-        description: "Deuxième ville de France, Marseille bouillonne d'activité économique. Port international, industrie, services : le potentiel SEO est immense pour dominer ce marché concurrentiel.",
-        keyPoints: ["Port international stratégique", "Économie diversifiée", "Capitale culturelle"],
+        description: "Marseille est un chaos organisé où seuls les plus visibles survivent. Dans cette jungle digitale, IndHack est votre machette. Nous coupons court à la concurrence pour placer votre business tout en haut.",
+        keyPoints: ["Volume de recherche massif", "Concurrence agressive", "Stratégie de guérilla SEO"],
         nearbyAreas: ["Aix-en-Provence", "Aubagne", "Cassis", "La Ciotat"],
-        landmarks: ["Vieux Port", "Notre-Dame de la Garde", "Mucem", "Calanques"]
+        landmarks: ["Vieux Port", "Vélodrome", "La Major", "Prado"]
     },
     {
         name: "Aix-en-Provence",
@@ -111,10 +111,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Provence-Alpes-Côte d'Azur",
         department: "Bouches-du-Rhône",
         population: "145 000",
-        description: "Ville d'art, d'histoire et de thermalisme, Aix-en-Provence attire touristes et étudiants. Commerces, restaurants, services : un SEO local solide vous démarque de la concurrence.",
-        keyPoints: ["Ville universitaire", "Tourisme culturel", "Art de vivre provençal"],
-        nearbyAreas: ["Marseille", "Gardanne", "Pertuis", "Salon-de-Provence"],
-        landmarks: ["Cours Mirabeau", "Montagne Sainte-Victoire", "Thermes Sextius"]
+        description: "Ville bourgeoise, clientèle exigeante. À Aix, l'image de marque est tout. Votre site doit refléter votre prestige. IndHack allie esthétique UX et puissance SEO pour séduire la clientèle aixoise.",
+        keyPoints: ["SEO Image de Marque", "Ciblage CSP+", "Conversion haut de gamme"],
+        nearbyAreas: ["Marseille", "Gardanne", "Venelles", "Les Milles"],
+        landmarks: ["Cours Mirabeau", "Rotonde", "Quartier Mazarin", "Sainte-Victoire"]
     },
     // Paris et Île-de-France
     {
@@ -126,10 +126,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Île-de-France",
         department: "Paris",
         population: "2 200 000",
-        description: "Capitale économique et culturelle, Paris concentre les sièges sociaux et une concurrence digitale féroce. Être visible sur Google Paris demande une stratégie SEO pointue et différenciante.",
-        keyPoints: ["Capitale économique française", "Concurrence maximale", "Clientèle internationale"],
-        nearbyAreas: ["Boulogne-Billancourt", "Neuilly-sur-Seine", "Levallois-Perret", "Issy-les-Moulineaux"],
-        landmarks: ["Champs-Élysées", "Marais", "Saint-Germain", "La Défense"]
+        description: "Paris est l'arène finale. Ici, on ne joue pas, on se bat. Chaque mot-clé est une guerre de tranchées. IndHack vous donne les armes lourdes : Netlinking, Contenu, Technique. Prêt à détrôner les géants ?",
+        keyPoints: ["Guerre des mots-clés", "Netlinking Puissant", "Audit Technique Avancé"],
+        nearbyAreas: ["Boulogne", "Neuilly", "La Défense", "Levallois"],
+        landmarks: ["Tour Eiffel", "Louvre", "Champs-Élysées", "La Défense"]
     },
     {
         name: "Boulogne-Billancourt",
@@ -140,10 +140,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Île-de-France",
         department: "Hauts-de-Seine",
         population: "120 000",
-        description: "Première ville d'Île-de-France hors Paris, Boulogne-Billancourt est un pôle média et tech majeur. TF1, studios de production, agences : le référencement local y est capital.",
-        keyPoints: ["Pôle média et audiovisuel", "Sièges sociaux", "Cadre de vie premium"],
-        nearbyAreas: ["Issy-les-Moulineaux", "Sèvres", "Meudon", "Paris 16e"],
-        landmarks: ["Île Seguin", "Parc de Saint-Cloud", "Studios Boulogne"]
+        description: "QG des médias et grands groupes. Pour exister à Boulogne, il faut être irréprochable. IndHack optimise votre présence corporate pour rassurer les décideurs et partenaires.",
+        keyPoints: ["SEO Corporate", "Gestion E-Réputation", "Visibilité B2B"],
+        nearbyAreas: ["Paris 16", "Issy-les-Moulineaux", "Saint-Cloud", "Sèvres"],
+        landmarks: ["La Seine Musicale", "Siège TF1", "Hôtel de Ville", "Longchamp"]
     },
     // Bretagne
     {
@@ -155,10 +155,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Bretagne",
         department: "Ille-et-Vilaine",
         population: "220 000",
-        description: "Capitale bretonne dynamique, Rennes est un hub numérique et universitaire. Startups, ESN, agences : le référencement local permet de capter une clientèle tech et jeune.",
-        keyPoints: ["Pôle numérique Rennes Atalante", "Ville étudiante", "French Tech Rennes"],
-        nearbyAreas: ["Saint-Malo", "Cesson-Sévigné", "Bruz", "Vitré"],
-        landmarks: ["Parlement de Bretagne", "Place des Lices", "Thabor"]
+        description: "Terre de tech et d'innovation. À Rennes, si vous n'êtes pas digital, vous êtes mort. IndHack vous propulse au cœur de la French Tech bretonne avec un SEO propre, rapide et efficace.",
+        keyPoints: ["SEO Startup & Tech", "Acquisition Lead Gen", "Performance Web"],
+        nearbyAreas: ["Cesson-Sévigné", "Saint-Grégoire", "Chantepie", "Bruz"],
+        landmarks: ["Parlement", "Gare EuroRennes", "Le Mabilay", "Roazhon Park"]
     },
     {
         name: "Nantes",
@@ -169,10 +169,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Pays de la Loire",
         department: "Loire-Atlantique",
         population: "320 000",
-        description: "Métropole créative et innovante, Nantes attire entrepreneurs et familles. Commerce, industrie agroalimentaire, numérique : le SEO local génère un trafic qualifié durable.",
-        keyPoints: ["Économie créative", "Industrie navale", "French Tech Nantes"],
-        nearbyAreas: ["Saint-Nazaire", "La Baule", "Rezé", "Saint-Herblain"],
-        landmarks: ["Machines de l'île", "Château des ducs", "Île de Nantes"]
+        description: "L'effervescence nantaise demande de l'agilité. Votre site doit être aussi créatif et dynamique que la ville. IndHack booste votre trafic avec des stratégies SEO qui sortent du lot.",
+        keyPoints: ["SEO Créatif", "Visibilité locale forte", "Trafic qualifié"],
+        nearbyAreas: ["Saint-Herblain", "Rezé", "Orvault", "Carquefou"],
+        landmarks: ["Les Machines", "Château des Ducs", "Tour Bretagne", "Passage Pommeraye"]
     },
     // Lyon et Rhône-Alpes
     {
@@ -184,10 +184,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Auvergne-Rhône-Alpes",
         department: "Rhône",
         population: "520 000",
-        description: "Deuxième pôle économique français, Lyon combine industrie, gastronomie et innovation. Dans un marché aussi concurrentiel, le SEO local est un levier de croissance incontournable.",
-        keyPoints: ["Capitale de la gastronomie", "Pôle chimie-pharma", "French Tech Lyon"],
-        nearbyAreas: ["Villeurbanne", "Vénissieux", "Écully", "Caluire"],
-        landmarks: ["Vieux Lyon", "Presqu'île", "Part-Dieu", "Confluence"]
+        description: "De la Part-Dieu à Confluence, le business ne s'arrête jamais. Pour capter les lyonnais, fini le bricolage. IndHack met en place une infrastructure SEO solide pour sécuriser votre croissance.",
+        keyPoints: ["SEO E-commerce et Services", "Maillage local puissant", "Conversion"],
+        nearbyAreas: ["Villeurbanne", "Bron", "Vénissieux", "Caluire"],
+        landmarks: ["Fourvière", "Place Bellecour", "Parc de la Tête d'Or", "Les Halles"]
     },
     {
         name: "Grenoble",
@@ -198,10 +198,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Auvergne-Rhône-Alpes",
         department: "Isère",
         population: "160 000",
-        description: "Capitale des Alpes françaises, Grenoble est un pôle scientifique et tech de premier plan. Startups, labos de recherche, tourisme montagne : le SEO génère des opportunités business uniques.",
-        keyPoints: ["Recherche et innovation", "Sports d'hiver", "CEA, CNRS, INRIA"],
-        nearbyAreas: ["Meylan", "Saint-Martin-d'Hères", "Échirolles", "Voiron"],
-        landmarks: ["Bastille", "Polygone Scientifique", "Minatec"]
+        description: "Au pied des montagnes, l'excellence scientifique impose ses règles. Votre SEO doit être chirurgical. IndHack analyse, optimise et positionne votre site avec la précision d'un ingénieur.",
+        keyPoints: ["SEO Technique", "Audit de structure", "Contenu Expert"],
+        nearbyAreas: ["Meylan", "Echirolles", "Saint-Martin-d'Hères", "Sassenage"],
+        landmarks: ["La Bastille", "Téléphérique", "Caserne de Bonne", "Europole"]
     },
     // Sud-Ouest
     {
@@ -213,10 +213,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Occitanie",
         department: "Haute-Garonne",
         population: "490 000",
-        description: "Capitale européenne de l'aéronautique, Toulouse est une ville dynamique où cohabitent industrie high-tech et art de vivre. Le SEO local cible efficacement cette population active.",
-        keyPoints: ["Airbus et aérospatial", "Ville étudiante", "French Tech Toulouse"],
-        nearbyAreas: ["Blagnac", "Colomiers", "Tournefeuille", "Muret"],
-        landmarks: ["Capitole", "Cité de l'espace", "Saint-Sernin", "Canal du Midi"]
+        description: "La Ville Rose est un géant économique. Ne restez pas dans l'ombre d'Airbus. IndHack fait décoller votre visibilité avec des techniques de référencement propulsées par la data.",
+        keyPoints: ["Décollage trafic", "Visibilité régionale", "Data-Driven SEO"],
+        nearbyAreas: ["Blagnac", "Colomiers", "Balma", "L'Union"],
+        landmarks: ["Capitole", "Quais de Garonne", "Cité de l'Espace", "Airbus"]
     },
     {
         name: "Bordeaux",
@@ -227,10 +227,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Nouvelle-Aquitaine",
         department: "Gironde",
         population: "260 000",
-        description: "Métropole du vin et de l'art de vivre, Bordeaux attire entrepreneurs et touristes du monde entier. Le référencement local vous positionne sur ce marché premium en pleine expansion.",
-        keyPoints: ["Patrimoine UNESCO", "Œnotourisme", "Économie créative"],
-        nearbyAreas: ["Mérignac", "Pessac", "Talence", "Le Bouscat"],
-        landmarks: ["Place de la Bourse", "Cité du Vin", "Saint-Pierre", "Darwin"]
+        description: "Élégance et Business. À Bordeaux, on achète ce qui inspire confiance. IndHack polit votre autorité digitale pour que Google (et vos clients) vous voient comme le Grand Cru de votre secteur.",
+        keyPoints: ["Autorité de domaine", "Confiance et Preuve Sociale", "SEO Local Premium"],
+        nearbyAreas: ["Mérignac", "Pessac", "Talence", "Bègles"],
+        landmarks: ["Place de la Bourse", "Miroir d'eau", "Pont de Pierre", "Cité du Vin"]
     },
     {
         name: "Montpellier",
@@ -241,10 +241,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Occitanie",
         department: "Hérault",
         population: "290 000",
-        description: "Ville la plus dynamique démographiquement de France, Montpellier attire jeunes actifs et startups. Un terreau fertile pour le SEO local et l'acquisition de nouveaux clients.",
-        keyPoints: ["Croissance démographique record", "Ville étudiante", "Santé et biotech"],
-        nearbyAreas: ["Castelnau-le-Lez", "Lattes", "Pérols", "Palavas-les-Flots"],
-        landmarks: ["Place de la Comédie", "Antigone", "Faculté de médecine"]
+        description: "Jeune, rapide, digitale. Montpellier va vite. Si votre site est lent ou mal référencé, vous êtes déjà oublié. IndHack optimise la vitesse et la pertinence pour capturer cette audience volatile.",
+        keyPoints: ["Optimisation Mobile First", "Vitesse de chargement", "SEO Local Jeune"],
+        nearbyAreas: ["Lattes", "Castelnau", "Juvignac", "Mauguio"],
+        landmarks: ["L'Écusson", "Place de la Comédie", "Antigone", "Port Marianne"]
     },
     // Nord et Est
     {
@@ -256,10 +256,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Hauts-de-France",
         department: "Nord",
         population: "235 000",
-        description: "Carrefour européen entre Paris, Londres et Bruxelles, Lille est un hub commercial et logistique majeur. Le SEO local capte une clientèle transfrontalière stratégique.",
-        keyPoints: ["Carrefour européen", "Commerce et distribution", "EuraTechnologies"],
-        nearbyAreas: ["Roubaix", "Tourcoing", "Villeneuve-d'Ascq", "Marcq-en-Barœul"],
-        landmarks: ["Grand Place", "Vieux-Lille", "Euralille", "Citadelle"]
+        description: "Carrefour de l'Europe. La concurrence vient de partout (Paris, Bruxelles, Londres). Votre SEO doit être international et local à la fois. IndHack construit votre forteresse digitale.",
+        keyPoints: ["SEO Cross-border", "Commerce & Retail", "Visibilité Européenne"],
+        nearbyAreas: ["Roubaix", "Tourcoing", "Marcq-en-Barœul", "La Madeleine"],
+        landmarks: ["Grand Place", "Beffroi", "Citadelle", "Euralille"]
     },
     {
         name: "Strasbourg",
@@ -270,10 +270,10 @@ export const FRENCH_CITIES: CityData[] = [
         region: "Grand Est",
         department: "Bas-Rhin",
         population: "285 000",
-        description: "Capitale européenne et alsacienne, Strasbourg mêle institutions internationales et PME locales. Le référencement local permet de toucher aussi bien les décideurs que les particuliers.",
-        keyPoints: ["Parlement européen", "Carrefour France-Allemagne", "Tourisme culturel"],
-        nearbyAreas: ["Schiltigheim", "Illkirch-Graffenstaden", "Lingolsheim", "Kehl (DE)"],
-        landmarks: ["Cathédrale", "Petite France", "Quartier européen"]
+        description: "Rigueur et efficacité. Strasbourg ne tolère pas l'amateurisme. IndHack audite, corrige et propulse votre site avec une méthodologie carrée. Résultats mesurables, croissance durable.",
+        keyPoints: ["SEO Structuré", "Reporting précis", "Croissance long terme"],
+        nearbyAreas: ["Schiltigheim", "Illkirch", "Bischheim", "Kehl"],
+        landmarks: ["Cathédrale", "Petite France", "Parlement Européen", "Neustadt"]
     }
 ];
 

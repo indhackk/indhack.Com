@@ -1,0 +1,107 @@
+import Link from "next/link";
+import { ArrowRight, Search, FileSearch, Globe, RefreshCw, Users, MapPin } from "lucide-react";
+
+interface Service {
+    title: string;
+    href: string;
+    description: string;
+    icon: React.ReactNode;
+}
+
+const ALL_SERVICES: Record<string, Service> = {
+    "audit-seo": {
+        title: "Audit SEO",
+        href: "/audit-seo",
+        description: "Diagnostic complet de votre site",
+        icon: <FileSearch className="w-5 h-5" />
+    },
+    "referencement-naturel": {
+        title: "Référencement Naturel",
+        href: "/referencement-naturel",
+        description: "Stratégie SEO complète",
+        icon: <Search className="w-5 h-5" />
+    },
+    "creation-site-web": {
+        title: "Création de Site",
+        href: "/creation-site-web",
+        description: "Sites optimisés SEO",
+        icon: <Globe className="w-5 h-5" />
+    },
+    "refonte-site-web": {
+        title: "Refonte de Site",
+        href: "/refonte-site-web",
+        description: "Migration sans perte de trafic",
+        icon: <RefreshCw className="w-5 h-5" />
+    },
+    "community-manager": {
+        title: "Community Manager",
+        href: "/community-manager",
+        description: "Gestion réseaux sociaux",
+        icon: <Users className="w-5 h-5" />
+    },
+    "seo-local": {
+        title: "SEO Local",
+        href: "/seo-local",
+        description: "Visibilité dans votre ville",
+        icon: <MapPin className="w-5 h-5" />
+    }
+};
+
+// Mapping des services liés par page
+const RELATED_MAPPING: Record<string, string[]> = {
+    "audit-seo": ["referencement-naturel", "creation-site-web", "seo-local"],
+    "referencement-naturel": ["audit-seo", "seo-local", "creation-site-web"],
+    "creation-site-web": ["referencement-naturel", "refonte-site-web", "audit-seo"],
+    "refonte-site-web": ["creation-site-web", "audit-seo", "referencement-naturel"],
+    "community-manager": ["creation-site-web", "seo-local", "referencement-naturel"],
+    "seo-local": ["audit-seo", "referencement-naturel", "creation-site-web"]
+};
+
+interface RelatedServicesProps {
+    currentService: string;
+    title?: string;
+}
+
+export function RelatedServices({ currentService, title = "Services complémentaires" }: RelatedServicesProps) {
+    const relatedKeys = RELATED_MAPPING[currentService] || [];
+    const relatedServices = relatedKeys.map(key => ALL_SERVICES[key]).filter(Boolean);
+
+    if (relatedServices.length === 0) return null;
+
+    return (
+        <section className="py-16 bg-gray-50">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-10">
+                    <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink">
+                        {title}
+                    </h2>
+                    <p className="text-soft mt-2">
+                        Optimisez votre présence digitale avec nos autres expertises
+                    </p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    {relatedServices.map((service) => (
+                        <Link key={service.href} href={service.href}>
+                            <div className="bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all group h-full">
+                                <div className="w-12 h-12 bg-sauge/10 rounded-xl flex items-center justify-center text-sauge mb-4 group-hover:bg-sauge group-hover:text-white transition-all">
+                                    {service.icon}
+                                </div>
+                                <h3 className="font-bold text-ink mb-2 group-hover:text-sauge transition-colors">
+                                    {service.title}
+                                </h3>
+                                <p className="text-soft text-sm mb-4">
+                                    {service.description}
+                                </p>
+                                <span className="inline-flex items-center text-sauge text-sm font-medium">
+                                    Découvrir
+                                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                                </span>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}

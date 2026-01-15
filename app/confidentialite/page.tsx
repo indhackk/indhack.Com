@@ -1,3 +1,17 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Politique de Confidentialité | IndHack",
+    description: "Politique de confidentialité et gestion des données personnelles du site indhack.com - Consultante SEO Indiana Aflalo.",
+    alternates: {
+        canonical: "https://indhack.com/confidentialite"
+    },
+    robots: {
+        index: false,
+        follow: true
+    }
+};
+
 export default function Confidentialite() {
     return (
         <div className="container mx-auto px-4 py-24 max-w-3xl">
