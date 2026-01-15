@@ -36,7 +36,7 @@ export default config({
                 ),
                 author: fields.text({ label: 'Auteur', defaultValue: 'Indiana Aflalo' }),
                 content: fields.document({
-                    label: 'Contenu de l\'article',
+                    label: 'RÉDACTION DE L\'ARTICLE (TEXTE)',
                     formatting: true,
                     dividers: true,
                     links: true,

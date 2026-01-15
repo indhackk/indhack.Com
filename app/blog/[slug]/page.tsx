@@ -91,25 +91,40 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 {/* Post Content */}
                 <div className="grid lg:grid-cols-4 gap-12">
 
-                    {/* Main Content */}
-                    <article className="lg:col-span-3 prose prose-lg prose-headings:font-heading prose-headings:font-bold prose-headings:text-ink prose-p:text-soft prose-li:text-soft prose-strong:text-ink prose-a:text-sauge prose-blockquote:border-sauge prose-blockquote:bg-gray-50 prose-blockquote:p-6 prose-blockquote:rounded-xl max-w-none">
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                            {post.content}
-                        </ReactMarkdown>
+                    {/* Sidebar with Table of Contents */}
+                    <aside className="lg:col-span-1 order-last lg:order-first">
+                        <div className="sticky top-32 space-y-8">
 
-                        {/* Tags */}
-                        <div className="mt-12 pt-8 border-t border-gray-100 flex flex-wrap gap-2">
-                            {post.keywords.map((kw, i) => (
-                                <span key={i} className="text-xs font-medium text-soft bg-gray-50 px-3 py-1 rounded-full">
-                                    #{kw}
-                                </span>
-                            ))}
-                        </div>
-                    </article>
+                            {/* Table des matières */}
+                            <div className="hidden lg:block">
+                                <h3 className="text-xs font-bold text-ink uppercase tracking-wider mb-4 border-b border-gray-100 pb-2">
+                                    Sommaire
+                                </h3>
+                                <nav className="space-y-1">
+                                    {post.content.split('\n').filter(line => line.startsWith('##')).map((line, i) => {
+                                        // Nettoyage basique des titres markdown pour l'affichage
+                                        const cleanTitle = line.replace(/^#+\s+/, '').replace(/\*\*/g, '');
+                                        // Création d'un ID basique (dans un vrai cas il faut slugifier comme remark)
+                                        const slug = cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
-                    {/* Sidebar CTA */}
-                    <aside className="lg:col-span-1">
-                        <div className="sticky top-32 space-y-6">
+                                        const isH3 = line.startsWith('###');
+
+                                        return (
+                                            <a
+                                                key={i}
+                                                href={`#${slug}`}
+                                                className={`block text-sm py-1 border-l-2 pl-3 transition-colors ${isH3
+                                                    ? 'text-soft/80 border-transparent hover:text-sauge hover:border-sauge ml-2 text-xs'
+                                                    : 'text-soft border-transparent hover:text-sauge hover:border-sauge font-medium'
+                                                    }`}
+                                            >
+                                                {cleanTitle}
+                                            </a>
+                                        );
+                                    })}
+                                </nav>
+                            </div>
+
                             <div className="bg-ink p-6 rounded-2xl text-white">
                                 <h3 className="font-heading font-bold text-lg mb-4">Besoin d'aide ?</h3>
                                 <p className="text-white/70 text-sm mb-6">
@@ -146,6 +161,36 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                             </div>
                         </div>
                     </aside>
+
+                    {/* Main Content */}
+                    <article className="lg:col-span-3 prose prose-lg prose-headings:font-heading prose-headings:font-bold prose-headings:text-ink prose-headings:scroll-mt-32 prose-p:text-soft prose-li:text-soft prose-strong:text-ink prose-a:text-sauge prose-blockquote:border-sauge prose-blockquote:bg-gray-50 prose-blockquote:p-6 prose-blockquote:rounded-xl max-w-none">
+                        <ReactMarkdown
+                            remarkPlugins={[remarkGfm]}
+                            components={{
+                                h2: ({ node, children, ...props }) => {
+                                    // Génération d'ID pour l'ancrage
+                                    const text = String(children).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+                                    return <h2 id={text} {...props}>{children}</h2>
+                                },
+                                h3: ({ node, children, ...props }) => {
+                                    const text = String(children).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+                                    return <h3 id={text} {...props}>{children}</h3>
+                                }
+                            }}
+                        >
+                            {post.content}
+                        </ReactMarkdown>
+
+                        {/* Tags */}
+                        <div className="mt-12 pt-8 border-t border-gray-100 flex flex-wrap gap-2">
+                            {post.keywords.map((kw, i) => (
+                                <span key={i} className="text-xs font-medium text-soft bg-gray-50 px-3 py-1 rounded-full">
+                                    #{kw}
+                                </span>
+                            ))}
+                        </div>
+                    </article>
+
                 </div>
 
                 {/* Final CTA Area */}
