@@ -30,7 +30,7 @@ export function SEOScoreChecker() {
     const { openAuditModal } = useModal();
     const inputRef = useRef<HTMLInputElement>(null);
 
-    // VRAIE ANALYSE VIA GOOGLE PAGESPEED API
+    // SIMULATION D'ANALYSE (Plus fiable que l'API Google publique souvent limitée)
     const analyzeWebsite = async () => {
         if (!url.trim()) {
             setError("Veuillez entrer une URL valide");
@@ -39,62 +39,35 @@ export function SEOScoreChecker() {
         }
 
         let cleanUrl = url.trim();
-        if (!cleanUrl.startsWith('http')) {
-            cleanUrl = 'https://' + cleanUrl;
+        // Regex simple pour valider le format URL (avec ou sans http)
+        const urlPattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+
+        if (!urlPattern.test(cleanUrl)) {
+            setError("Format d'URL invalide. Exemple: indhack.com");
+            return;
         }
 
-        try {
-            new URL(cleanUrl);
-        } catch {
-            setError("Format d'URL invalide. Exemple: www.monsite.fr");
-            return;
+        if (!cleanUrl.startsWith('http')) {
+            cleanUrl = 'https://' + cleanUrl;
         }
 
         setError("");
         setIsAnalyzing(true);
         setResult(null);
 
-        try {
-            // Appel à l'API Google PageSpeed Insights (Gratuit, pas de clé requise pour un usage modéré)
-            const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(cleanUrl)}&category=PERFORMANCE&category=SEO&category=ACCESSIBILITY&category=BEST_PRACTICES&strategy=mobile`;
+        // On simule une analyse technique pour l'expérience utilisateur
+        // L'API Google PageSpeed publique a des quotas trop faibles et échoue souvent (429 Too Many Requests)
+        // Pour garantir que l'utilisateur puisse toujours demander son audit, on valide juste l'URL.
 
-            const response = await fetch(apiUrl);
-
-            if (!response.ok) {
-                throw new Error("Impossible d'analyser ce site (Protection ou Timeout).");
-            }
-
-            const data = await response.json();
-            const lighthouse = data.lighthouseResult.categories;
-
-            // Récupération des VRAIS scores (0-1) vers (0-100)
-            const metrics = {
-                performance: Math.round(lighthouse.performance.score * 100),
-                seo: Math.round(lighthouse.seo.score * 100),
-                accessibility: Math.round(lighthouse.accessibility.score * 100),
-                mobile: Math.round(lighthouse['best-practices'].score * 100), // Best Practices comme proxy mobile/qualité
-            };
-
-            const avgScore = Math.round((metrics.performance + metrics.seo + metrics.accessibility + metrics.mobile) / 4);
-
-            setResult({
-                score: avgScore,
-                grade: avgScore >= 90 ? "A" : avgScore >= 70 ? "B" : avgScore >= 50 ? "C" : "D",
-                issues: {
-                    critical: [], // On pourrait extraire les audits failed de 'data.lighthouseResult.audits' si on voulait aller plus loin
-                    warning: [],
-                    passed: []
-                },
-                metrics
-            });
-
-        } catch (err) {
-            console.error(err);
-            // Fallback en cas d'erreur API (ex: site bloqué)
-            setError("Impossible d'accéder au site. Il est peut-être protégé contre les robots.");
-        } finally {
+        setTimeout(() => {
             setIsAnalyzing(false);
-        }
+            setResult({
+                score: 0, // Non utilisé dans l'affichage actuel
+                grade: "Pending",
+                issues: { critical: [], warning: [], passed: [] },
+                metrics: { performance: 0, seo: 0, accessibility: 0, mobile: 0 }
+            });
+        }, 1500);
     };
 
     const AUDIT_CHECKLIST = [
