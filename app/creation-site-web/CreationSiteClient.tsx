@@ -2,6 +2,7 @@
 
 import { HeroServices } from "@/components/services/HeroServices";
 import { FAQ } from "@/components/FAQ";
+import { RelatedServices } from "@/components/RelatedServices";
 import { motion } from "framer-motion";
 import { Zap, Code, Layout, Globe, ArrowRight, ShieldCheck, Palette, Smartphone } from "lucide-react";
 import Image from "next/image";
@@ -221,6 +222,9 @@ export default function CreationSiteClient() {
             </section>
 
             <FAQ items={CREATION_FAQ} title="Questions sur la Création de Site" />
+
+            {/* Services complémentaires */}
+            <RelatedServices currentService="creation-site-web" />
 
             {/* CTA */}
             <section className="py-24 bg-white">

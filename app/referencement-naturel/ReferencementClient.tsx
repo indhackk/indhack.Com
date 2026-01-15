@@ -2,6 +2,7 @@
 
 import { HeroServices } from "@/components/services/HeroServices";
 import { FAQ } from "@/components/FAQ";
+import { RelatedServices } from "@/components/RelatedServices";
 import { motion } from "framer-motion";
 import { Search, FileText, Link2, BarChart3, ArrowRight, TrendingUp, Target } from "lucide-react";
 import Link from "next/link";
@@ -86,10 +87,10 @@ export default function ReferencementClient() {
             />
 
             <HeroServices
-                title="Référencement Naturel : Performance et Visibilité"
-                subtitle="Stratégies sur-mesure pour capturer le trafic qualifié et transformer votre visibilité en croissance durable."
+                title="Arrêtez de payer pour chaque clic. Dominez Google."
+                subtitle="Vos concurrents captent vos clients sur Google pendant que vous payez la publicité. Le référencement naturel vous fait passer devant eux, définitivement."
                 image="seo-dashboard"
-                category="Acquisition Organique"
+                category="Croissance Organique"
             />
 
             {/* Section Introduction */}
@@ -196,6 +197,9 @@ export default function ReferencementClient() {
             </section>
 
             <FAQ items={SEO_FAQ} title="Questions sur le Référencement Naturel" />
+
+            {/* Services complémentaires */}
+            <RelatedServices currentService="referencement-naturel" />
 
             {/* CTA */}
             <section className="py-24 bg-white">

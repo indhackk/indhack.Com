@@ -2,9 +2,11 @@
 
 import { HeroServices } from "@/components/services/HeroServices";
 import { FAQ } from "@/components/FAQ";
+import { RelatedServices } from "@/components/RelatedServices";
 import { motion } from "framer-motion";
-import { Search, BarChart4, ClipboardList, Target, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Search, BarChart4, ClipboardList, Target, ArrowRight, CheckCircle2, AlertTriangle } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
 
@@ -78,11 +80,26 @@ export default function AuditSeoClient() {
             />
 
             <HeroServices
-                title="Audit SEO : Analysez vos leviers de croissance"
-                subtitle="Identifiez précisément les freins techniques et sémantiques qui limitent votre visibilité. Un diagnostic complet pour prioriser vos actions."
+                title="Votre site a un problème. L'audit SEO le révèle."
+                subtitle="Vous investissez du temps et de l'argent dans votre site, mais les résultats ne suivent pas ? Des blocages invisibles freinent votre croissance. Je les trouve."
                 image="audit-seo"
-                category="Stratégie & Diagnostic"
+                category="Diagnostic & Stratégie"
             />
+
+            {/* Hook - Problème */}
+            <section className="py-12 bg-amber-50 border-y border-amber-200">
+                <div className="container mx-auto px-4">
+                    <div className="flex items-start gap-4 max-w-3xl mx-auto">
+                        <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+                        <div>
+                            <p className="text-amber-900 font-medium">
+                                <strong>72% des sites</strong> ont des erreurs techniques qui les empêchent de ranker.
+                                Sans audit, vous optimisez peut-être des pages qui ne pourront jamais atteindre la première page.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section className="py-24 bg-white relative overflow-hidden">
                 <div className="container mx-auto px-4">
@@ -138,6 +155,9 @@ export default function AuditSeoClient() {
             </section>
 
             <FAQ items={AUDIT_FAQ} title="Questions sur l'audit SEO" />
+
+            {/* Services complémentaires */}
+            <RelatedServices currentService="audit-seo" />
 
             {/* Final CTA */}
             <section className="py-24 bg-white text-center">

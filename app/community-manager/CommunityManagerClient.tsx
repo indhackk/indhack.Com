@@ -2,6 +2,7 @@
 
 import { HeroServices } from "@/components/services/HeroServices";
 import { FAQ } from "@/components/FAQ";
+import { RelatedServices } from "@/components/RelatedServices";
 import { motion } from "framer-motion";
 import { Instagram, Linkedin, TrendingUp, MessageCircle, ArrowRight, BarChart3 } from "lucide-react";
 import Link from "next/link";
@@ -209,6 +210,9 @@ export default function CommunityManagerClient() {
             </section>
 
             <FAQ items={CommunityManagerFAQ} title="Questions sur la Gestion de Réseaux Sociaux" />
+
+            {/* Services complémentaires */}
+            <RelatedServices currentService="community-manager" />
 
             {/* CTA */}
             <section className="py-24 bg-white">

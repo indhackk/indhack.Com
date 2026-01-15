@@ -2,6 +2,7 @@
 
 import { HeroServices } from "@/components/services/HeroServices";
 import { FAQ } from "@/components/FAQ";
+import { RelatedServices } from "@/components/RelatedServices";
 import { motion } from "framer-motion";
 import { RefreshCw, ShieldCheck, Zap, BarChart3, ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -150,6 +151,9 @@ export default function RefonteSiteClient() {
             </section>
 
             <FAQ items={REFONTE_FAQ} title="Questions sur la refonte SEO" />
+
+            {/* Services complémentaires */}
+            <RelatedServices currentService="refonte-site-web" />
 
             {/* Final CTA */}
             <section className="py-24 bg-white text-center">

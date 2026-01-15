@@ -128,7 +128,7 @@ export function Navbar() {
                             className="bg-sauge text-ink hover:bg-ink hover:text-white rounded-full px-8 py-6 font-bold tracking-wide shadow-lg shadow-sauge/20 group overflow-hidden relative"
                         >
                             <span className="relative z-10 flex items-center gap-2 font-bold group-hover:text-white transition-colors">
-                                Audit Offert ✨
+                                Audit gratuit
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </span>
                             <motion.div
