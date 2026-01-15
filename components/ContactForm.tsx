@@ -18,25 +18,34 @@ export function ContactForm() {
         budget: ""
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState("");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsLoading(true);
+        setError("");
 
-        const subject = encodeURIComponent(`Demande de contact - ${formData.company || formData.name}`);
-        const body = encodeURIComponent(`
-Nom: ${formData.name}
-Email: ${formData.email}
-Téléphone: ${formData.phone}
-Entreprise: ${formData.company || 'Non renseigné'}
-Site web: ${formData.website || 'Non renseigné'}
-Budget: ${formData.budget || 'Non renseigné'}
+        try {
+            const response = await fetch('/api/send-contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
 
-Message:
-${formData.message}
-    `);
+            const result = await response.json();
 
-        window.location.href = `mailto:contact@indhack.com?subject=${subject}&body=${body}`;
-        setIsSubmitted(true);
+            if (result.success) {
+                setIsSubmitted(true);
+                setFormData({ name: "", email: "", phone: "", company: "", website: "", message: "", budget: "" });
+            } else {
+                setError(result.error || "Une erreur est survenue. Réessayez ou appelez-moi directement.");
+            }
+        } catch {
+            setError("Erreur de connexion. Appelez-moi au 06 61 13 97 48.");
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -174,9 +183,9 @@ ${formData.message}
                                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <CheckCircle2 className="w-8 h-8 text-green-600" />
                                     </div>
-                                    <h3 className="text-xl font-heading font-bold text-ink mb-3">Message envoyé !</h3>
+                                    <h3 className="text-xl font-heading font-bold text-ink mb-3">Message bien reçu !</h3>
                                     <p className="text-soft mb-6">
-                                        Votre client mail s'est ouvert. Je vous réponds sous 24h maximum.
+                                        Je reviens vers vous sous 24h maximum. À très vite !
                                     </p>
                                     <Button onClick={() => setIsSubmitted(false)} variant="outline" className="rounded-full">
                                         Envoyer un autre message
@@ -273,13 +282,29 @@ ${formData.message}
                                         />
                                     </div>
 
+                                    {error && (
+                                        <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                                            {error}
+                                        </div>
+                                    )}
+
                                     <Button
                                         type="submit"
                                         size="lg"
-                                        className="w-full bg-sauge hover:bg-ink text-white py-6 rounded-lg text-lg font-semibold transition-all group"
+                                        disabled={isLoading}
+                                        className="w-full bg-sauge hover:bg-ink text-white py-6 rounded-lg text-lg font-semibold transition-all group disabled:opacity-50"
                                     >
-                                        <Send className="mr-2 w-5 h-5" />
-                                        Envoyer ma demande
+                                        {isLoading ? (
+                                            <>
+                                                <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
+                                                Envoi en cours...
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Send className="mr-2 w-5 h-5" />
+                                                Envoyer ma demande
+                                            </>
+                                        )}
                                     </Button>
                                 </form>
                             )}

@@ -38,27 +38,14 @@ export function Hero() {
                     transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                     className="text-center lg:text-left space-y-8"
                 >
-                    {/* Badge de crédibilité */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2, duration: 0.6 }}
-                        className="flex items-center gap-3 justify-center lg:justify-start"
-                    >
-                        <span className="bg-sauge/20 text-sauge px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
-                            Consultante SEO Indépendante
-                        </span>
-                    </motion.div>
-
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.8 }}
                         className="font-heading font-bold text-4xl md:text-5xl lg:text-7xl leading-[1.05] tracking-tight text-white"
                     >
-                        Vos concurrents sont<br />
-                        <span className="text-sauge">en première page.</span><br />
-                        <span className="text-white/60 text-3xl md:text-4xl lg:text-5xl">Pas vous ?</span>
+                        Dominez Google.<br />
+                        <span className="text-sauge">Devenez le N°1.</span>
                     </motion.h1>
 
                     <motion.p
@@ -67,13 +54,13 @@ export function Hero() {
                         transition={{ delay: 0.5, duration: 0.8 }}
                         className="font-body text-lg lg:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto lg:mx-0"
                     >
-                        Chaque jour, des clients cherchent vos services sur Google. S'ils ne vous trouvent pas, <strong className="text-white">ils trouvent vos concurrents</strong>. Je transforme votre invisibilité en flux de prospects qualifiés.
+                        Chaque jour, vos clients cherchent vos services sur Google. Ne les laissez plus à vos concurrents. Je transforme votre site en une <strong className="text-white">Machine d'Acquisition</strong> qui capture vos prospects au moment où ils en ont besoin.
                     </motion.p>
 
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.7, duration: 0.8 }}
+                        transition={{ delay: 0.6, duration: 0.8 }}
                         className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start pt-6"
                     >
                         <Button
