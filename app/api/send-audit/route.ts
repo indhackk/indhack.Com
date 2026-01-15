@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// API Route pour envoyer les demandes d'audit via Web3Forms (gratuit, sans serveur SMTP)
-// Documentation: https://web3forms.com/
+// API Route pour envoyer les demandes d'audit
+// Utilise FormSubmit.co (pas d'inscription requise, juste confirmer le premier email)
 
 export async function POST(request: NextRequest) {
     try {
@@ -16,42 +16,67 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // Web3Forms API - Clé publique (à remplacer par votre clé)
-        // Créez votre clé gratuitement sur https://web3forms.com/
-        const WEB3FORMS_ACCESS_KEY = process.env.WEB3FORMS_ACCESS_KEY || 'YOUR_ACCESS_KEY_HERE';
+        // FormSubmit.co - Envoie directement à contact@indhack.com
+        // Au premier envoi, vous recevrez un email de confirmation à activer
+        const FORMSUBMIT_EMAIL = 'contact@indhack.com';
 
-        const response = await fetch('https://api.web3forms.com/submit', {
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('phone', phone || 'Non renseigné');
+        formData.append('website', website || 'Non renseigné');
+        formData.append('message', message || 'Demande d\'audit SEO');
+        formData.append('_subject', `🎯 Nouvelle demande d'Audit SEO - ${name}`);
+        formData.append('_template', 'table'); // Format tableau
+        formData.append('_captcha', 'false'); // Pas de captcha
+
+        const response = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_EMAIL}`, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                access_key: WEB3FORMS_ACCESS_KEY,
-                subject: `🎯 Nouvelle demande d'Audit SEO - ${name}`,
-                from_name: 'IndHack.com',
-                to: 'contact@indhack.com',
-                name: name,
-                email: email,
-                phone: phone || 'Non renseigné',
-                website: website || 'Non renseigné',
-                message: message || 'Demande d\'audit sans message',
-                // Formatage du message
-                botcheck: false,
-            })
+            body: formData
         });
 
         const result = await response.json();
 
-        if (result.success) {
+        console.log('FormSubmit response:', result);
+
+        if (result.success === 'true' || result.success === true) {
             return NextResponse.json({
                 success: true,
                 message: 'Demande envoyée avec succès !'
             });
         } else {
-            console.error('Web3Forms error:', result);
+            // Si FormSubmit échoue, essayer Web3Forms comme backup
+            const web3Key = process.env.WEB3FORMS_ACCESS_KEY;
+            if (web3Key && web3Key !== 'YOUR_ACCESS_KEY_HERE') {
+                const web3Response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        access_key: web3Key,
+                        subject: `🎯 Audit SEO - ${name}`,
+                        from_name: name,
+                        replyto: email,
+                        Nom: name,
+                        Email: email,
+                        Téléphone: phone || 'Non renseigné',
+                        Site_Web: website || 'Non renseigné',
+                        Message: message || 'Demande d\'audit',
+                    })
+                });
+
+                try {
+                    const web3Result = await web3Response.json();
+                    if (web3Result.success) {
+                        return NextResponse.json({ success: true, message: 'Envoyé via Web3Forms' });
+                    }
+                } catch {
+                    // Web3Forms a échoué aussi
+                }
+            }
+
+            console.error('FormSubmit error:', result);
             return NextResponse.json(
-                { success: false, error: 'Erreur lors de l\'envoi' },
+                { success: false, error: 'Erreur d\'envoi' },
                 { status: 500 }
             );
         }

@@ -11,6 +11,9 @@ interface AuditModalProps {
     onClose: () => void;
 }
 
+// Clé Web3Forms (publique, peut être exposée côté client)
+const WEB3FORMS_KEY = "dbf0dae2-86ac-495e-a670-c4fc028ce036";
+
 export function AuditModal({ isOpen, onClose }: AuditModalProps) {
     const [formData, setFormData] = useState({
         name: "",
@@ -28,26 +31,43 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
         setSubmitStatus('idle');
 
         try {
-            const response = await fetch('/api/send-audit', {
+            // Envoi direct à Web3Forms (côté client)
+            const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_KEY,
+                    subject: `🎯 Nouvelle demande d'Audit SEO - ${formData.name}`,
+                    from_name: formData.name,
+                    replyto: formData.email,
+                    // Champs du formulaire
+                    Nom: formData.name,
+                    Email: formData.email,
+                    Téléphone: formData.phone || 'Non renseigné',
+                    "Site Web": formData.website || 'Non renseigné',
+                    Message: formData.message || 'Demande d\'audit SEO depuis IndHack.com',
+                })
             });
 
             const result = await response.json();
+            console.log('Web3Forms response:', result);
 
             if (result.success) {
                 setSubmitStatus('success');
-                // Reset form after 2 seconds and close
                 setTimeout(() => {
                     setFormData({ name: "", email: "", phone: "", website: "", message: "" });
                     setSubmitStatus('idle');
                     onClose();
                 }, 2500);
             } else {
+                console.error('Web3Forms error:', result);
                 setSubmitStatus('error');
             }
-        } catch {
+        } catch (error) {
+            console.error('Fetch error:', error);
             setSubmitStatus('error');
         } finally {
             setIsSubmitting(false);
