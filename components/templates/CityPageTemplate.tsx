@@ -35,7 +35,7 @@ export function CityPageTemplate({ city, zipCode, description, customContent }: 
         "@id": `https://indhack.com/seo-${city.toLowerCase()}#business`,
         "name": `IndHack - Consultant SEO ${city}`,
         "alternateName": "Indiana Aflalo - Experte SEO",
-        "description": `Consultante SEO freelance à ${city}. Référencement naturel, audit technique et stratégie de visibilité Google pour PME et entrepreneurs de ${city} et sa région.`,
+        "description": `Consultante SEO experte à ${city}. Référencement naturel, audit technique et stratégie de visibilité Google pour PME et entrepreneurs de ${city} et sa région.`,
         "url": `https://indhack.com/seo-${city.toLowerCase()}`,
         "telephone": "+33661139748",
         "email": "contact@indhack.com",
@@ -82,7 +82,7 @@ export function CityPageTemplate({ city, zipCode, description, customContent }: 
         },
         {
             question: `Quel est le coût d'un accompagnement SEO à ${city} ?`,
-            answer: `Un audit SEO complet démarre à 690€. Pour un accompagnement mensuel incluant optimisations techniques, création de contenu et netlinking local, les prestations débutent à 790€/mois. Chaque projet est unique : je vous propose un devis personnalisé après un audit gratuit de 15 minutes pour évaluer vos besoins et votre potentiel de croissance.`
+            answer: `Chaque projet est unique et les tarifs sont adaptés à vos objectifs et à votre marché. Je vous propose un audit gratuit de 15 minutes pour évaluer vos besoins et votre potentiel de croissance, suivi d'un devis personnalisé sans engagement.`
         },
         {
             question: "Comment fonctionne le référencement local Google ?",
@@ -205,7 +205,7 @@ export function CityPageTemplate({ city, zipCode, description, customContent }: 
                             <strong className="text-ink">Le référencement local à {city}</strong> est devenu un enjeu stratégique majeur pour toutes les entreprises qui souhaitent capter une clientèle de proximité. Avec plus de 46% des recherches Google ayant une intention locale, ne pas apparaître dans les premiers résultats quand un habitant de {city} cherche vos services, c'est offrir ce client à vos concurrents.
                         </p>
                         <p>
-                            En tant que <strong className="text-ink">consultante SEO freelance spécialisée sur la région {cityData.department}</strong>, j'accompagne les PME, artisans, professions libérales et commerces de {city} dans leur conquête de visibilité Google. Mon approche combine expertise technique, connaissance du marché local et méthodologie éprouvée pour des résultats mesurables.
+                            En tant que <strong className="text-ink">consultante SEO spécialisée sur la région {cityData.department}</strong>, j'accompagne les PME, artisans, professions libérales et commerces de {city} dans leur conquête de visibilité Google. Mon approche combine expertise technique, connaissance du marché local et méthodologie éprouvée pour des résultats mesurables.
                         </p>
                         <p>
                             Contrairement aux grandes agences parisiennes, je vous offre un <strong className="text-ink">accompagnement personnalisé et de proximité</strong>. Je peux vous rencontrer physiquement, visiter votre établissement, comprendre votre clientèle et adapter ma stratégie à vos contraintes réelles. Cette approche sur-mesure fait toute la différence.

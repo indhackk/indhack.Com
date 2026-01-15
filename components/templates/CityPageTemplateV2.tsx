@@ -32,7 +32,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
         "@id": `https://indhack.com/${cityData.slug}#business`,
         "name": `IndHack - Consultant SEO ${city}`,
         "alternateName": "Indiana Aflalo - Experte SEO",
-        "description": `Consultante SEO freelance à ${city}. Référencement naturel, audit technique et stratégie de visibilité Google pour PME et entrepreneurs de ${city} et sa région.`,
+        "description": `Consultante SEO experte à ${city}. Référencement naturel, audit technique et stratégie de visibilité Google pour PME et entrepreneurs de ${city} et sa région.`,
         "url": `https://indhack.com/${cityData.slug}`,
         "telephone": "+33661139748",
         "email": "contact@indhack.com",
@@ -167,7 +167,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                         <strong className="text-ink">46% des recherches Google ont une intention locale.</strong> Si votre entreprise n'apparaît pas quand un habitant de {city} ou des zones {cityData.nearbyAreas.slice(0, 2).join(", ")} cherche vos services, vous laissez ces clients à vos concurrents.
                                     </p>
                                     <p>
-                                        En tant que <strong className="text-ink">consultante SEO freelance</strong> experte du marché {cityData.region}, je vous accompagne pour conquérir les premières positions Google et Google Maps. Une approche personnalisée, des résultats mesurables.
+                                        En tant que <strong className="text-ink">consultante SEO spécialisée</strong> sur le marché {cityData.region}, je vous accompagne pour conquérir les premières positions Google et Google Maps. Une approche personnalisée, des résultats mesurables.
                                     </p>
                                 </div>
 

@@ -29,7 +29,7 @@ const HOMEPAGE_FAQ = [
     },
     {
         question: "Combien coûte une prestation de référencement ?",
-        answer: "Les prestations démarrent à 690€ pour un audit SEO complet. Les accompagnements mensuels sont à partir de 1 290€/mois. Chaque projet est unique : une offre personnalisée vous sera proposée après un audit gratuit de vos besoins."
+        answer: "Chaque projet est unique et les tarifs sont adaptés à vos objectifs spécifiques. Un audit gratuit de 15 minutes permet d'évaluer vos besoins et de vous proposer un devis sur-mesure, sans engagement. L'investissement dépend de la complexité du projet et des résultats visés."
     }
 ];
 
