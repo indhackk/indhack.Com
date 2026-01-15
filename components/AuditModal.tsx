@@ -52,7 +52,10 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                 })
             });
 
-            const result = await response.json();
+            const result = response.headers.get("content-type")?.includes("application/json")
+                ? await response.json()
+                : { success: response.ok };
+
             console.log('Web3Forms response:', result);
 
             if (result.success) {
@@ -63,7 +66,7 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                     onClose();
                 }, 2500);
             } else {
-                console.error('Web3Forms error:', result);
+                console.error('Submission error:', result);
                 setSubmitStatus('error');
             }
         } catch (error) {

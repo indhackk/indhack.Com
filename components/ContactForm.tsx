@@ -33,6 +33,14 @@ export function ContactForm() {
                 body: JSON.stringify(formData)
             });
 
+            // SAFETY: Handle non-JSON responses (like HTML error pages)
+            const contentType = response.headers.get("content-type");
+            if (!response.ok || !contentType || !contentType.includes("application/json")) {
+                const text = await response.text();
+                console.error('Server error response:', text);
+                throw new Error("Erreur serveur (HTML reçu au lieu de JSON)");
+            }
+
             const result = await response.json();
 
             if (result.success) {
@@ -41,7 +49,8 @@ export function ContactForm() {
             } else {
                 setError(result.error || "Une erreur est survenue. Réessayez ou appelez-moi directement.");
             }
-        } catch {
+        } catch (err: any) {
+            console.error('Fetch error:', err);
             setError("Erreur de connexion. Appelez-moi au 06 61 13 97 48.");
         } finally {
             setIsLoading(false);
