@@ -83,7 +83,7 @@ const CREATION_FAQ = [
     },
     {
         question: "Quels sont vos tarifs ?",
-        answer: "Les sites vitrines démarrent à partir de 2 500€. Les sites e-commerce et projets complexes sont devisés sur-mesure. Un audit gratuit permet de définir précisément vos besoins et le budget adapté."
+        answer: `Chaque projet est unique. L'investissement dépend de la complexité technique et du design souhaité. Un audit gratuit nous permet de définir précisément vos besoins et de construire une offre adaptée à votre budget.`
     }
 ];
 

@@ -30,7 +30,7 @@ export function SEOScoreChecker() {
     const { openAuditModal } = useModal();
     const inputRef = useRef<HTMLInputElement>(null);
 
-    // Simulation d'analyse (Check de format URL seulement)
+    // VRAIE ANALYSE VIA GOOGLE PAGESPEED API
     const analyzeWebsite = async () => {
         if (!url.trim()) {
             setError("Veuillez entrer une URL valide");
@@ -54,27 +54,47 @@ export function SEOScoreChecker() {
         setIsAnalyzing(true);
         setResult(null);
 
-        // Simulation d'analyse (2 secondes)
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        try {
+            // Appel à l'API Google PageSpeed Insights (Gratuit, pas de clé requise pour un usage modéré)
+            const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(cleanUrl)}&category=PERFORMANCE&category=SEO&category=ACCESSIBILITY&category=BEST_PRACTICES&strategy=mobile`;
 
-        // On ne donne pas un score "fake", mais un score de "Potentiel Digital"
-        // Ici on affiche toujours un résultat qui invite à l'audit.
-        setResult({
-            score: 0, // Non utilisé affiché directement
-            grade: "?",
-            issues: {
-                critical: [],
-                warning: [],
-                passed: []
-            },
-            metrics: {
-                performance: 0,
-                seo: 0,
-                accessibility: 0,
-                mobile: 0
+            const response = await fetch(apiUrl);
+
+            if (!response.ok) {
+                throw new Error("Impossible d'analyser ce site (Protection ou Timeout).");
             }
-        });
-        setIsAnalyzing(false);
+
+            const data = await response.json();
+            const lighthouse = data.lighthouseResult.categories;
+
+            // Récupération des VRAIS scores (0-1) vers (0-100)
+            const metrics = {
+                performance: Math.round(lighthouse.performance.score * 100),
+                seo: Math.round(lighthouse.seo.score * 100),
+                accessibility: Math.round(lighthouse.accessibility.score * 100),
+                mobile: Math.round(lighthouse['best-practices'].score * 100), // Best Practices comme proxy mobile/qualité
+            };
+
+            const avgScore = Math.round((metrics.performance + metrics.seo + metrics.accessibility + metrics.mobile) / 4);
+
+            setResult({
+                score: avgScore,
+                grade: avgScore >= 90 ? "A" : avgScore >= 70 ? "B" : avgScore >= 50 ? "C" : "D",
+                issues: {
+                    critical: [], // On pourrait extraire les audits failed de 'data.lighthouseResult.audits' si on voulait aller plus loin
+                    warning: [],
+                    passed: []
+                },
+                metrics
+            });
+
+        } catch (err) {
+            console.error(err);
+            // Fallback en cas d'erreur API (ex: site bloqué)
+            setError("Impossible d'accéder au site. Il est peut-être protégé contre les robots.");
+        } finally {
+            setIsAnalyzing(false);
+        }
     };
 
     const AUDIT_CHECKLIST = [
@@ -99,13 +119,13 @@ export function SEOScoreChecker() {
                     >
                         <div className="inline-flex items-center gap-2 bg-sauge/20 text-sauge px-4 py-2 rounded-full text-sm font-bold mb-4">
                             <Zap className="w-4 h-4" />
-                            Pré-Audit Gratuit
+                            Analyse Live (Google Data)
                         </div>
                         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-                            Votre site est-il optimisé pour <span className="text-sauge">Google</span> ?
+                            Testez votre <span className="text-sauge">Performance SEO</span>
                         </h2>
                         <p className="text-white/60 max-w-xl mx-auto">
-                            Vérifiez en un clic si votre site respecte les fondamentaux du référencement naturel.
+                            Interrogation en temps réel des serveurs Google (Lighthouse) pour un diagnostic technique immédiat et réel.
                         </p>
                     </motion.div>
 

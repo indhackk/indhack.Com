@@ -77,7 +77,7 @@ const CommunityManagerFAQ = [
     },
     {
         question: "Quels sont vos tarifs ?",
-        answer: "Formules à partir de 890€/mois pour une gestion complète d'une plateforme (création + animation + reporting). Tarifs dégressifs pour plusieurs plateformes. Audit offert lors du premier rendez-vous."
+        answer: "Les tarifs sont adaptés selon le nombre de réseaux, la fréquence de publication et le niveau de création requis (vidéo, photo). Audit offert lors du premier rendez-vous pour établir un devis sur-mesure."
     }
 ];
 

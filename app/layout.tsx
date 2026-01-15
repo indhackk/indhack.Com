@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     metadataBase: new URL('https://indhack.com'),
     title: {
         template: "%s | INDHACK",
-        default: "Consultante SEO Freelance & Experte Référencement | INDHACK",
+        default: "Consultante SEO & Experte Référencement | INDHACK",
     },
     description: "Boostez votre visibilité Google avec une experte SEO. Audit gratuit, +200% de trafic organique en 6 mois. Résultats garantis. ✆ 06 61 13 97 48",
     keywords: ["SEO", "GEO", "Acquisition Digitale", "Referencement naturel", "Audit SEO", "Visibilité IA", "Next.js SEO", "Consultant SEO", "SEO Local", "Référencement Local"],
