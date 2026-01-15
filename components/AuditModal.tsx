@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Send } from "lucide-react";
+import { X, Send, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -19,21 +19,39 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
         website: "",
         message: "",
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus('idle');
 
-        // Simulate email sending logic
-        // In a real functionality, this would call an API route (e.g. /api/send-email)
-        console.log("Sending email to contact@indhack.com with data:", formData);
+        try {
+            const response = await fetch('/api/send-audit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
 
-        // Construct mailto link as fallback for static site without backend
-        const subject = `Demande d'Audit de ${formData.name}`;
-        const body = `Nom: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ATéléphone: ${formData.phone}%0D%0ASite Web: ${formData.website}%0D%0AMessage: ${formData.message}`;
-        window.location.href = `mailto:contact@indhack.com?subject=${subject}&body=${body}`;
+            const result = await response.json();
 
-        alert("Votre client de messagerie va s'ouvrir pour envoyer la demande à contact@indhack.com");
-        onClose();
+            if (result.success) {
+                setSubmitStatus('success');
+                // Reset form after 2 seconds and close
+                setTimeout(() => {
+                    setFormData({ name: "", email: "", phone: "", website: "", message: "" });
+                    setSubmitStatus('idle');
+                    onClose();
+                }, 2500);
+            } else {
+                setSubmitStatus('error');
+            }
+        } catch {
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -129,10 +147,40 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                                     />
                                 </div>
 
-                                <div className="pt-4">
-                                    <Button type="submit" className="w-full bg-sauge hover:bg-soft text-white transition-colors">
-                                        <Send className="w-4 h-4 mr-2" />
-                                        Envoyer ma demande
+                                <div className="pt-4 space-y-3">
+                                    {submitStatus === 'success' && (
+                                        <div className="flex items-center gap-2 p-3 bg-green-50 text-green-700 rounded-lg text-sm">
+                                            <CheckCircle className="w-5 h-5" />
+                                            <span>Demande envoyée ! Nous vous recontactons sous 24h.</span>
+                                        </div>
+                                    )}
+                                    {submitStatus === 'error' && (
+                                        <div className="flex items-center gap-2 p-3 bg-red-50 text-red-700 rounded-lg text-sm">
+                                            <AlertCircle className="w-5 h-5" />
+                                            <span>Erreur d'envoi. Appelez-nous au 06 61 13 97 48</span>
+                                        </div>
+                                    )}
+                                    <Button
+                                        type="submit"
+                                        disabled={isSubmitting || submitStatus === 'success'}
+                                        className="w-full bg-sauge hover:bg-soft text-white transition-colors disabled:opacity-70"
+                                    >
+                                        {isSubmitting ? (
+                                            <>
+                                                <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                                                Envoi en cours...
+                                            </>
+                                        ) : submitStatus === 'success' ? (
+                                            <>
+                                                <CheckCircle className="w-4 h-4 mr-2" />
+                                                Envoyé !
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Send className="w-4 h-4 mr-2" />
+                                                Envoyer ma demande
+                                            </>
+                                        )}
                                     </Button>
                                 </div>
                             </form>
