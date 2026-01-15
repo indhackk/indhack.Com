@@ -31,25 +31,51 @@ export async function POST(request: NextRequest) {
             body: formData
         });
 
-        const result = await response.json();
-
-        if (result.success === 'true' || result.success === true) {
-            return NextResponse.json({
-                success: true,
-                message: 'Message envoyé !'
-            });
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error('FormSubmit HTTP Error:', response.status, errorText);
+            // Don't throw yet, try fallback
         } else {
-            console.error('FormSubmit error:', result);
-            return NextResponse.json(
-                { success: false, error: 'Erreur d\'envoi' },
-                { status: 500 }
-            );
+            const result = await response.json();
+            if (result.success === 'true' || result.success === true) {
+                return NextResponse.json({ success: true, message: 'Message envoyé !' });
+            }
+            console.error('FormSubmit Logic Error:', result);
         }
 
-    } catch (error) {
-        console.error('API Error:', error);
+        // FALLBACK TO WEB3FORMS (Reliable)
+        const WEB3FORMS_KEY = "dbf0dae2-86ac-495e-a670-c4fc028ce036";
+        const web3Response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                access_key: WEB3FORMS_KEY,
+                subject: `📩 Nouveau contact - ${name}`,
+                from_name: name,
+                replyto: email,
+                Nom: name,
+                Email: email,
+                Téléphone: phone || 'Non renseigné',
+                Entreprise: company || 'Non renseigné',
+                Budget: budget || 'Non renseigné',
+                Message: message,
+            })
+        });
+
+        const web3Result = await web3Response.json();
+        if (web3Result.success) {
+            return NextResponse.json({ success: true, message: 'Message envoyé via backup' });
+        }
+
         return NextResponse.json(
-            { success: false, error: 'Erreur serveur' },
+            { success: false, error: 'Erreur d\'envoi' },
+            { status: 500 }
+        );
+
+    } catch (error: any) {
+        console.error('API Send-Contact Error:', error);
+        return NextResponse.json(
+            { success: false, error: error.message || 'Erreur serveur' },
             { status: 500 }
         );
     }

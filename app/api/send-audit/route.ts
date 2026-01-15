@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
             });
         } else {
             // Si FormSubmit échoue, essayer Web3Forms comme backup
-            const web3Key = process.env.WEB3FORMS_ACCESS_KEY;
+            const web3Key = process.env.WEB3FORMS_ACCESS_KEY || "dbf0dae2-86ac-495e-a670-c4fc028ce036";
             if (web3Key && web3Key !== 'YOUR_ACCESS_KEY_HERE') {
                 const web3Response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
