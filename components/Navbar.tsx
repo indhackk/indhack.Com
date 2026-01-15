@@ -123,11 +123,13 @@ export function Navbar() {
                             onClick={openAuditModal}
                             className="bg-sauge text-white hover:bg-ink rounded-full px-8 py-6 font-bold tracking-wide shadow-lg shadow-sauge/20 group overflow-hidden relative"
                         >
-                            <span className="relative z-10">AUDIT GRATUIT</span>
+                            <span className="relative z-10 flex items-center gap-2 font-bold group-hover:text-white transition-colors">
+                                Audit Offert ✨
+                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </span>
                             <motion.div
                                 className="absolute inset-0 bg-ink translate-y-full group-hover:translate-y-0 transition-transform duration-300"
                             />
-                            <ArrowRight className="ml-2 w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
                         </Button>
                     </div>
 
