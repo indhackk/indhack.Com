@@ -53,6 +53,9 @@ export const metadata: Metadata = {
         index: true,
         follow: true,
     },
+    verification: {
+        google: "CndayCCG9MoFrkFui_QiTyKHtQQwofVzclhsB357vBc",
+    },
 };
 
 // Organization Schema global
