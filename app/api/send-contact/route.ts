@@ -43,10 +43,8 @@ export async function POST(request: NextRequest) {
                 message: 'Message envoyé !'
             });
         } else {
-            console.error('FormSubmit Error:', result || 'Non-JSON response');
-
             // FALLBACK TO WEB3FORMS (Reliable)
-            const WEB3FORMS_KEY = "dbf0dae2-86ac-495e-a670-c4fc028ce036";
+            const WEB3FORMS_KEY = process.env.WEB3FORMS_ACCESS_KEY;
             const web3Response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -75,10 +73,10 @@ export async function POST(request: NextRequest) {
             );
         }
 
-    } catch (error: any) {
-        console.error('API Send-Contact Error:', error);
+    } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : 'Erreur serveur';
         return NextResponse.json(
-            { success: false, error: error.message || 'Erreur serveur' },
+            { success: false, error: message },
             { status: 500 }
         );
     }

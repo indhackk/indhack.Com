@@ -11,8 +11,6 @@ interface AuditModalProps {
     onClose: () => void;
 }
 
-// Clé Web3Forms (publique, peut être exposée côté client)
-const WEB3FORMS_KEY = "dbf0dae2-86ac-495e-a670-c4fc028ce036";
 
 export function AuditModal({ isOpen, onClose }: AuditModalProps) {
     const [formData, setFormData] = useState({
@@ -31,32 +29,22 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
         setSubmitStatus('idle');
 
         try {
-            // Envoi direct à Web3Forms (côté client)
-            const response = await fetch('https://api.web3forms.com/submit', {
+            // Envoi via API sécurisée côté serveur
+            const response = await fetch('/api/send-audit', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Accept': 'application/json'
                 },
                 body: JSON.stringify({
-                    access_key: WEB3FORMS_KEY,
-                    subject: `🎯 Nouvelle demande d'Audit SEO - ${formData.name}`,
-                    from_name: formData.name,
-                    replyto: formData.email,
-                    // Champs du formulaire
-                    Nom: formData.name,
-                    Email: formData.email,
-                    Téléphone: formData.phone || 'Non renseigné',
-                    "Site Web": formData.website || 'Non renseigné',
-                    Message: formData.message || 'Demande d\'audit SEO depuis IndHack.com',
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    website: formData.website,
+                    message: formData.message || 'Demande d\'audit SEO depuis IndHack.com',
                 })
             });
 
-            const result = response.headers.get("content-type")?.includes("application/json")
-                ? await response.json()
-                : { success: response.ok };
-
-            console.log('Web3Forms response:', result);
+            const result = await response.json();
 
             if (result.success) {
                 setSubmitStatus('success');
@@ -66,11 +54,9 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                     onClose();
                 }, 2500);
             } else {
-                console.error('Submission error:', result);
                 setSubmitStatus('error');
             }
-        } catch (error) {
-            console.error('Fetch error:', error);
+        } catch {
             setSubmitStatus('error');
         } finally {
             setIsSubmitting(false);

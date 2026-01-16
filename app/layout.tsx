@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { MegaFooter } from "@/components/MegaFooter";
 import { ModalProvider } from "@/components/providers/ModalProvider";
+import { CookieConsent } from "@/components/CookieConsent";
 
 import Script from "next/script";
 
@@ -120,7 +121,7 @@ export default function RootLayout({
                 />
             </head>
             <body className={`${spaceGrotesk.variable} ${ibmPlexSans.variable} font-body antialiased text-ink bg-white`}>
-                {/* Google Analytics GA4 */}
+                {/* Google Analytics GA4 avec Consent Mode */}
                 <Script
                     src="https://www.googletagmanager.com/gtag/js?id=G-SXXS2G2753"
                     strategy="afterInteractive"
@@ -129,9 +130,21 @@ export default function RootLayout({
                     {`
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
 
-                        gtag('config', 'G-SXXS2G2753');
+                        // Consent Mode v2 - Refus par défaut (RGPD)
+                        gtag('consent', 'default', {
+                            'analytics_storage': 'denied',
+                            'ad_storage': 'denied',
+                            'ad_user_data': 'denied',
+                            'ad_personalization': 'denied',
+                            'wait_for_update': 500
+                        });
+
+                        gtag('js', new Date());
+                        gtag('config', 'G-SXXS2G2753', {
+                            'anonymize_ip': true,
+                            'cookie_flags': 'SameSite=None;Secure'
+                        });
                     `}
                 </Script>
 
