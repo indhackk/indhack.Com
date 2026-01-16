@@ -1,0 +1,35 @@
+{
+  "title": "Consultant SEO Nice - Espace de travail Vieux Nice",
+  "description": "Expertise SEO freelance à Nice - Stratégie de référencement naturel et audit technique",
+  "keywords": [
+    "consultant seo nice",
+    "seo freelance nice",
+    "expert seo nice",
+    "agence seo nice",
+    "référencement naturel nice"
+  ],
+  "location": {
+    "city": "Nice",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "country": "France",
+    "lat": 43.6961,
+    "lng": 7.2756
+  },
+  "fileName": "nice-workspace.png",
+  "filePath": "/images/nice-workspace.png",
+  "generatedAt": "2026-01-16T17:03:10.394Z",
+  "seo": {
+    "alt": "Consultant SEO Nice - Espace de travail Vieux Nice",
+    "title": "Consultant SEO Nice - Espace de travail Vieux Nice",
+    "caption": "Expertise SEO freelance à Nice - Stratégie de référencement naturel et audit technique",
+    "keywords": "consultant seo nice, seo freelance nice, expert seo nice, agence seo nice, référencement naturel nice"
+  },
+  "geo": {
+    "latitude": 43.6961,
+    "longitude": 7.2756,
+    "city": "Nice",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "country": "France",
+    "googleMapsUrl": "https://www.google.com/maps?q=43.6961,7.2756"
+  }
+}

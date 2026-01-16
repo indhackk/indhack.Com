@@ -125,14 +125,14 @@ export function Navbar() {
                         </a>
                         <Button
                             onClick={openAuditModal}
-                            className="bg-sauge text-ink hover:bg-ink hover:text-white rounded-full px-8 py-6 font-bold tracking-wide shadow-lg shadow-sauge/20 group overflow-hidden relative"
+                            className="bg-white text-sauge hover:bg-sauge hover:text-white border-2 border-transparent hover:border-white/20 rounded-full px-8 py-6 font-bold tracking-wide shadow-lg shadow-black/5 group overflow-hidden relative transition-all"
                         >
-                            <span className="relative z-10 flex items-center gap-2 font-bold group-hover:text-white transition-colors">
+                            <span className="relative z-10 flex items-center gap-2 font-bold transition-colors">
                                 Audit gratuit
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </span>
                             <motion.div
-                                className="absolute inset-0 bg-ink translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+                                className="absolute inset-0 bg-sauge translate-y-full group-hover:translate-y-0 transition-transform duration-300"
                             />
                         </Button>
                     </div>
@@ -226,14 +226,3 @@ function NavLink({ href, children, isScrolled }: { href: string; children: React
     );
 }
 
-function MobileNavLink({ href, children, onClick }: { href: string; children: React.ReactNode; onClick: () => void }) {
-    return (
-        <Link
-            href={href}
-            className="block py-4 text-3xl font-bold text-ink hover:text-sauge transition-colors"
-            onClick={onClick}
-        >
-            {children}
-        </Link>
-    );
-}

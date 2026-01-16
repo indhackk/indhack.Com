@@ -1,0 +1,35 @@
+{
+  "title": "Audit SEO Nice - Vue aérienne Promenade des Anglais",
+  "description": "Consultante SEO freelance à Nice - Audit technique et référencement naturel sur la Côte d'Azur",
+  "keywords": [
+    "audit seo nice",
+    "consultant seo nice",
+    "audit gratuit seo nice",
+    "référencement nice",
+    "seo nice 06"
+  ],
+  "location": {
+    "city": "Nice",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "country": "France",
+    "lat": 43.7102,
+    "lng": 7.262
+  },
+  "fileName": "nice-seo-hero.png",
+  "filePath": "/images/nice-seo-hero.png",
+  "generatedAt": "2026-01-16T17:03:10.393Z",
+  "seo": {
+    "alt": "Audit SEO Nice - Vue aérienne Promenade des Anglais",
+    "title": "Audit SEO Nice - Vue aérienne Promenade des Anglais",
+    "caption": "Consultante SEO freelance à Nice - Audit technique et référencement naturel sur la Côte d'Azur",
+    "keywords": "audit seo nice, consultant seo nice, audit gratuit seo nice, référencement nice, seo nice 06"
+  },
+  "geo": {
+    "latitude": 43.7102,
+    "longitude": 7.262,
+    "city": "Nice",
+    "region": "Provence-Alpes-Côte d'Azur",
+    "country": "France",
+    "googleMapsUrl": "https://www.google.com/maps?q=43.7102,7.262"
+  }
+}

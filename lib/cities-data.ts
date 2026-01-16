@@ -308,3 +308,124 @@ export const SERVICES_FOR_CITIES = [
     { name: "Refonte de Site Web", slug: "refonte-site-web" },
     { name: "Référencement Local", slug: "seo-local" }
 ];
+
+// Sub-services for semantic cocoon (Fille Tier 2)
+export interface CityServiceData {
+    slug: string;
+    title: string;
+    metaTitle: string;
+    metaDescription: string;
+    heroTitle: string;
+    heroSubtitle: string;
+    category: string;
+    parentService: string;
+    h2Sections: {
+        title: string;
+        content: string;
+        bullets?: string[];
+    }[];
+    methodology: {
+        step: string;
+        title: string;
+        desc: string;
+    }[];
+    faq: {
+        question: string;
+        answer: string;
+    }[];
+    semanticKeywords: string[];
+}
+
+export const CITY_SERVICES: Record<string, CityServiceData> = {
+    "audit-technique": {
+        slug: "audit-technique",
+        title: "Audit Technique SEO",
+        metaTitle: "Audit Technique SEO {city} {deptCode} - INDHACK - Consultante SEO",
+        metaDescription: "Consultante SEO freelance à {city}. Mon audit technique révèle ce qui bloque votre visibilité Google : indexation, vitesse, maillage. Diagnostic gratuit.",
+        heroTitle: "Audit Technique SEO à {city}",
+        heroSubtitle: "En tant que consultante SEO indépendante, j'analyse l'infrastructure technique de votre site pour identifier précisément ce qui freine votre visibilité sur Google.",
+        category: "Audit Technique",
+        parentService: "/audit-seo",
+        h2Sections: [
+            {
+                title: "Qu'est-ce qu'un audit technique SEO ?",
+                content: "En tant que <a href=\"/{citySlug}\" class=\"text-sauge font-bold hover:underline\">consultante SEO à {city}</a>, je réalise des <strong>audits techniques</strong> qui vont bien au-delà des rapports automatisés.<br/><br/>L'<strong>audit technique SEO</strong> est la radiographie de votre site web. Il révèle tout ce qui empêche <strong>Google</strong> de crawler, indexer et positionner vos pages correctement. Sans fondations techniques solides, même le meilleur contenu reste invisible.<br/><br/>Ma méthode combine analyse automatisée et expertise humaine. Je ne me contente pas de lister des erreurs : je les priorise par <strong>impact business réel</strong> pour que vous sachiez exactement où investir vos efforts.",
+                bullets: [
+                    "Analyse approfondie de l'<strong>indexation</strong> via <strong>Google Search Console</strong> : pages indexées, exclues, erreurs de couverture",
+                    "<strong>Crawl complet</strong> avec <strong>Screaming Frog</strong> pour cartographier le <strong>budget crawl</strong>, les erreurs 4xx/5xx et les redirections en chaîne",
+                    "Mesure précise des <strong>Core Web Vitals</strong> : <strong>LCP</strong> (chargement), <strong>FID</strong> (interactivité), <strong>CLS</strong> (stabilité visuelle)",
+                    "Audit du <strong>maillage interne</strong> : structure d'URL, profondeur de page, distribution du <strong>PageRank</strong> interne",
+                    "Vérification des <strong>balises meta</strong> : title, description, hiérarchie des <strong>balises Hn</strong>, données structurées <strong>schema.org</strong>",
+                    "Analyse du fichier <strong>robots.txt</strong>, <strong>sitemap XML</strong> et configuration du <strong>canonical</strong>"
+                ]
+            },
+            {
+                title: "Ma méthode : les 6 piliers de l'audit technique",
+                content: "Mon approche d'<strong>audit technique SEO</strong> est structurée autour de 6 piliers essentiels. Je ne me contente pas de générer une liste d'erreurs automatique — je priorise chaque recommandation selon son <strong>impact réel</strong> sur votre visibilité et votre business.<br/><br/>Mon expertise de consultante freelance me permet d'aller au-delà des outils : je comprends comment Google évalue techniquement un site, et je traduis cette connaissance en actions concrètes pour votre équipe.",
+                bullets: [
+                    "<strong>Indexation Google</strong> : Vos pages sont-elles dans l'index ? Combien sont exclues et pourquoi ? J'identifie les problèmes de <strong>noindex</strong>, <strong>canonical</strong> et <strong>crawl budget</strong> gaspillé.",
+                    "<strong>Crawlabilité</strong> : Google peut-il accéder facilement à tout votre contenu stratégique ? Je détecte les blocages dans le <strong>robots.txt</strong>, les erreurs de navigation JavaScript et les <strong>pages orphelines</strong>.",
+                    "<strong>Vitesse de chargement</strong> : Les <strong>Core Web Vitals</strong> sont un facteur de ranking direct. J'analyse le temps de chargement, l'optimisation des images, la minification du code et les ressources bloquantes.",
+                    "<strong>Architecture du site</strong> : <strong>Profondeur de page</strong>, <strong>maillage interne</strong>, <strong>cocon sémantique</strong>. Une bonne architecture aide Google à comprendre la hiérarchie de votre contenu.",
+                    "<strong>Balisage HTML</strong> : <strong>Balises title</strong> uniques et optimisées, <strong>meta descriptions</strong> incitatives, structure <strong>Hn</strong> cohérente, <strong>données structurées</strong> pour les rich snippets.",
+                    "<strong>Mobile-First</strong> : Google indexe en priorité la version mobile. Je vérifie le <strong>responsive design</strong>, l'<strong>UX mobile</strong> et l'absence de contenu masqué."
+                ]
+            },
+            {
+                title: "Pourquoi me confier votre audit technique ?",
+                content: "Contrairement aux agences qui délèguent à des juniors, <strong>je réalise personnellement chaque audit</strong>. Vous travaillez directement avec moi, sans intermédiaire.<br/><br/>Les outils automatisés génèrent des centaines d'alertes, mais toutes ne sont pas égales. Mon expertise me permet de distinguer les <strong>erreurs critiques</strong> qui bloquent vraiment votre référencement des faux positifs sans impact.<br/><br/>À {city}, j'accompagne des entreprises de toutes tailles avec une approche sur-mesure. Je ne vends pas de packages standardisés : je construis une <strong>stratégie adaptée</strong> à votre contexte, vos ressources et vos objectifs.",
+            },
+            {
+                title: "Les erreurs que je détecte le plus souvent",
+                content: "Au fil de mes missions de <strong>consultante SEO</strong> à {city} et partout en France, j'ai identifié les problèmes techniques récurrents qui sabotent la visibilité de la majorité des sites :",
+                bullets: [
+                    "<strong>Pages zombies</strong> : des centaines de pages à faible valeur ajoutée qui diluent votre <strong>crawl budget</strong> et votre autorité de domaine",
+                    "<strong>Contenu dupliqué</strong> : balises <strong>canonical</strong> mal configurées, versions HTTP/HTTPS ou www/non-www accessibles",
+                    "<strong>Vitesse catastrophique</strong> : images non optimisées, JavaScript render-blocking, absence de cache navigateur, hébergement sous-dimensionné",
+                    "<strong>Maillage interne anarchique</strong> : pages importantes à 4+ clics de la homepage, liens cassés internes, <strong>ancres</strong> non optimisées",
+                    "<strong>Mobile non optimisé</strong> : texte trop petit, éléments cliquables trop proches, contenu plus large que l'écran",
+                    "<strong>Données structurées absentes</strong> : pas de <strong>schema.org</strong> pour les FAQ, avis, produits, LocalBusiness..."
+                ]
+            }
+        ],
+        methodology: [
+            { step: "01", title: "Crawl Complet", desc: "J'analyse l'intégralité de votre site avec <strong>Screaming Frog</strong> pour identifier les erreurs techniques, pages orphelines, redirections en chaîne et problèmes de structure." },
+            { step: "02", title: "Analyse Search Console", desc: "Je plonge dans vos données <strong>Google Search Console</strong> : couverture d'indexation, erreurs signalées, performances réelles sur Google, requêtes et CTR." },
+            { step: "03", title: "Core Web Vitals", desc: "Je mesure <strong>LCP</strong>, <strong>FID</strong> et <strong>CLS</strong> sur vos pages clés avec <strong>PageSpeed Insights</strong> et <strong>Lighthouse</strong> pour identifier les freins à l'UX et au ranking." },
+            { step: "04", title: "Rapport & Roadmap", desc: "Je livre un <strong>rapport de 20+ pages</strong> avec recommandations priorisées par impact SEO. Vous savez exactement quoi corriger en premier pour des résultats rapides." }
+        ],
+        faq: [
+            {
+                question: "Comment se déroule un audit technique SEO ?",
+                answer: "L'<strong>audit technique</strong> commence par un <strong>crawl complet</strong> de votre site avec des outils professionnels comme <strong>Screaming Frog</strong>. J'analyse ensuite vos données <strong>Google Search Console</strong>, je mesure les <strong>Core Web Vitals</strong>, et j'examine votre <strong>maillage interne</strong>. Le livrable est un rapport détaillé avec des <strong>recommandations priorisées</strong> par impact sur votre visibilité. Je propose un premier diagnostic gratuit pour évaluer vos besoins spécifiques."
+            },
+            {
+                question: "Quels outils utilisez-vous pour l'audit technique ?",
+                answer: "J'utilise une <strong>stack professionnelle</strong> complète : <strong>Screaming Frog</strong> pour le crawl technique, <strong>Google Search Console</strong> pour les données d'indexation, <strong>PageSpeed Insights</strong> et <strong>Lighthouse</strong> pour les <strong>Core Web Vitals</strong>, <strong>Ahrefs</strong> pour l'analyse du profil de liens, et si nécessaire des outils d'<strong>analyse de logs serveur</strong> pour comprendre comment Googlebot crawle réellement votre site."
+            },
+            {
+                question: "Combien de temps dure un audit technique complet ?",
+                answer: "Comptez <strong>5 à 10 jours ouvrés</strong> selon la taille et la complexité de votre site. Un <strong>audit technique SEO</strong> sérieux demande une analyse minutieuse pour ne rien manquer. Je préfère prendre le temps de faire un travail exhaustif plutôt que de livrer un rapport superficiel généré automatiquement. La qualité de l'analyse est directement proportionnelle aux résultats que vous obtiendrez."
+            },
+            {
+                question: "L'audit technique suffit-il pour améliorer mon SEO ?",
+                answer: "L'<strong>audit technique</strong> est la <strong>fondation indispensable</strong>, mais le <strong>SEO</strong> repose sur <strong>3 piliers</strong> : technique, contenu et popularité (<strong>backlinks</strong>). Je recommande généralement de commencer par corriger les erreurs techniques majeures qui bloquent l'indexation, puis de travailler sur l'<strong>optimisation sémantique</strong> du contenu et enfin sur l'<strong>acquisition de liens</strong>. C'est un travail progressif et complémentaire."
+            },
+            {
+                question: "Pouvez-vous implémenter les corrections après l'audit ?",
+                answer: "Absolument. Je propose un <strong>accompagnement à la mise en œuvre</strong> des recommandations, soit en formant votre équipe technique aux bonnes pratiques <strong>SEO</strong>, soit en pilotant directement les corrections avec vos développeurs. L'<strong>audit</strong> n'est utile que s'il est suivi d'<strong>actions concrètes</strong>. Je peux également assurer un suivi mensuel pour mesurer l'impact des corrections."
+            },
+            {
+                question: "Mon site est petit, ai-je vraiment besoin d'un audit technique ?",
+                answer: "Même un <strong>site vitrine</strong> de quelques pages peut avoir des problèmes techniques critiques : <strong>vitesse de chargement</strong> catastrophique, <strong>balises meta</strong> dupliquées, <strong>mobile</strong> non optimisé, absence de <strong>données structurées</strong>. Ces erreurs peuvent vous coûter des positions précieuses sur <strong>Google</strong>. Un audit rapide permet d'identifier les quick wins qui auront un impact immédiat sur votre <strong>référencement local</strong> à {city}."
+            }
+        ],
+        semanticKeywords: [
+            "Screaming Frog", "Google Search Console", "Core Web Vitals", "LCP", "FID", "CLS",
+            "budget crawl", "indexation Google", "maillage interne", "balises meta", "robots.txt",
+            "sitemap XML", "erreurs 404", "redirections 301", "vitesse de chargement", "mobile-first",
+            "données structurées", "schema.org", "profondeur de page", "cocon sémantique", "audit de logs",
+            "PageSpeed Insights", "Lighthouse", "crawlabilité", "pages orphelines", "canonical"
+        ]
+    }
+};

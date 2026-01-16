@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-01-16T17:03:10.395Z",
+  "images": [
+    {
+      "file": "nice-seo-hero.png",
+      "path": "/images/nice-seo-hero.png",
+      "metadataPath": "/images/metadata/nice-seo-hero.json",
+      "keywords": [
+        "audit seo nice",
+        "consultant seo nice",
+        "audit gratuit seo nice",
+        "référencement nice",
+        "seo nice 06"
+      ],
+      "location": "Nice"
+    },
+    {
+      "file": "nice-workspace.png",
+      "path": "/images/nice-workspace.png",
+      "metadataPath": "/images/metadata/nice-workspace.json",
+      "keywords": [
+        "consultant seo nice",
+        "seo freelance nice",
+        "expert seo nice",
+        "agence seo nice",
+        "référencement naturel nice"
+      ],
+      "location": "Nice"
+    },
+    {
+      "file": "nice-data-flow.png",
+      "path": "/images/nice-data-flow.png",
+      "metadataPath": "/images/metadata/nice-data-flow.json",
+      "keywords": [
+        "audit gratuit seo nice",
+        "audit seo nice",
+        "analyse seo nice",
+        "diagnostic seo nice",
+        "audit technique nice"
+      ],
+      "location": "Nice"
+    }
+  ]
+}

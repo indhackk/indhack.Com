@@ -11,9 +11,10 @@ interface HeroServicesProps {
     subtitle: string;
     category: string;
     image: string;
+    customVisual?: React.ReactNode;
 }
 
-export function HeroServices({ title, subtitle, category, image }: HeroServicesProps) {
+export function HeroServices({ title, subtitle, category, image, customVisual }: HeroServicesProps) {
     const { openAuditModal } = useModal();
 
     return (
@@ -61,16 +62,20 @@ export function HeroServices({ title, subtitle, category, image }: HeroServicesP
                         transition={{ duration: 1, delay: 0.2 }}
                         className="relative"
                     >
-                        <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 group">
-                            <Image
-                                src={image.startsWith('/') ? image : `/images/${image}.png`}
-                                alt={title}
-                                width={800}
-                                height={600}
-                                className="w-full h-auto object-cover transition-all duration-1000"
-                            />
-                            <div className="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors duration-700" />
-                        </div>
+                        {customVisual ? (
+                            customVisual
+                        ) : (
+                            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 group">
+                                <Image
+                                    src={image.startsWith('/') ? image : `/images/${image}.png`}
+                                    alt={title}
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-auto object-cover transition-all duration-1000"
+                                />
+                                <div className="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors duration-700" />
+                            </div>
+                        )}
                     </motion.div>
                 </div>
             </div>
