@@ -5,6 +5,8 @@ import { Navbar } from "@/components/Navbar";
 import { MegaFooter } from "@/components/MegaFooter";
 import { ModalProvider } from "@/components/providers/ModalProvider";
 
+import Script from "next/script";
+
 const spaceGrotesk = Space_Grotesk({
     subsets: ["latin"],
     variable: "--font-space-grotesk",
@@ -112,6 +114,21 @@ export default function RootLayout({
                 />
             </head>
             <body className={`${spaceGrotesk.variable} ${ibmPlexSans.variable} font-body antialiased text-ink bg-white`}>
+                {/* Google Analytics GA4 */}
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-SXXS2G2753"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+
+                        gtag('config', 'G-SXXS2G2753');
+                    `}
+                </Script>
+
                 <ModalProvider>
                     <Navbar />
                     <main className="min-h-screen">
