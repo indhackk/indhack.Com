@@ -1,5 +1,18 @@
 // Données centralisées des villes pour le SEO Local
 
+export interface CityImage {
+    src: string;
+    alt: string;
+    title: string;
+    keywords: string[];
+}
+
+export interface CityImages {
+    hero: CityImage;      // Image principale de la ville
+    workspace: CityImage; // Ambiance locale / bureau
+    landmark: CityImage;  // Monument emblématique
+}
+
 export interface CityData {
     name: string;
     slug: string;
@@ -13,6 +26,7 @@ export interface CityData {
     keyPoints: string[];
     nearbyAreas: string[];
     landmarks: string[];
+    images: CityImages;
 }
 
 export const FRENCH_CITIES: CityData[] = [
@@ -29,7 +43,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "À Nice, la Promenade des Anglais n'est pas le seul endroit où il faut être vu. Google est la nouvelle rue piétonne. Si votre entreprise n'est pas dans le Top 3, vous êtes invisible pour 340 000 clients locaux. IndHack transforme votre site en machine à capturer ce trafic.",
         keyPoints: ["Capturez le trafic local", "Dominez vos concurrents niçois", "Augmentez votre CA instantanément"],
         nearbyAreas: ["Villefranche-sur-Mer", "Saint-Laurent-du-Var", "Cagnes-sur-Mer", "Beaulieu-sur-Mer"],
-        landmarks: ["Promenade des Anglais", "Vieux-Nice", "Port de Nice", "Place Masséna"]
+        landmarks: ["Promenade des Anglais", "Vieux-Nice", "Port de Nice", "Place Masséna"],
+        images: {
+            hero: { src: "/images/cities/nice-promenade-anglais.webp", alt: "Promenade des Anglais Nice - Consultante SEO Nice", title: "Audit SEO Nice Côte d'Azur", keywords: ["SEO Nice", "référencement Nice", "consultant SEO Nice 06", "Promenade des Anglais"] },
+            workspace: { src: "/images/cities/nice-vieux-nice.webp", alt: "Vieux-Nice ruelles - Expert SEO Nice", title: "Référencement naturel Nice", keywords: ["audit SEO Nice", "agence SEO Nice", "Vieux Nice"] },
+            landmark: { src: "/images/cities/nice-place-massena.webp", alt: "Place Masséna Nice - SEO local Nice", title: "SEO local Nice 06", keywords: ["SEO local Nice", "Google My Business Nice", "Place Masséna"] }
+        }
     },
     {
         name: "Cannes",
@@ -43,7 +62,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "Immobilier, Luxe, Événementiel : À Cannes, chaque clic vaut de l'or. Vos concurrents internationaux investissent massivement. Ne laissez pas les agences parisiennes voler vos clients locaux. IndHack déploie une stratégie SEO d'élite pour le marché cannois.",
         keyPoints: ["Ciblez une clientèle VIP", "SEO Immobilier & Luxe", "Visibilité internationale"],
         nearbyAreas: ["Le Cannet", "Mougins", "Mandelieu-la-Napoule", "Théoule-sur-Mer"],
-        landmarks: ["La Croisette", "Palais des Festivals", "Vieux Port", "Le Suquet"]
+        landmarks: ["La Croisette", "Palais des Festivals", "Vieux Port", "Le Suquet"],
+        images: {
+            hero: { src: "/images/cities/cannes-croisette.webp", alt: "La Croisette Cannes - Consultante SEO Cannes", title: "Audit SEO Cannes 06", keywords: ["SEO Cannes", "référencement Cannes", "consultant SEO Cannes", "La Croisette"] },
+            workspace: { src: "/images/cities/cannes-palais-festivals.webp", alt: "Palais des Festivals Cannes - Expert SEO Cannes", title: "Référencement naturel Cannes", keywords: ["audit SEO Cannes", "Palais des Festivals", "SEO luxe Cannes"] },
+            landmark: { src: "/images/cities/cannes-vieux-port.webp", alt: "Vieux Port Cannes - SEO local Cannes", title: "SEO local Cannes 06", keywords: ["SEO local Cannes", "Vieux Port Cannes", "Le Suquet"] }
+        }
     },
     {
         name: "Antibes",
@@ -57,7 +81,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "Entre les remparts et le yachting, le business à Antibes est féroce. Les artisans et commerçants locaux qui ignorent Google Maps perdent 40% de leur CA potentiel. IndHack vous remet au centre de la carte.",
         keyPoints: ["Optimisation Google Maps", "SEO Yachting & Services", "Acquisition de leads locaux"],
         nearbyAreas: ["Juan-les-Pins", "Vallauris", "Biot", "Villeneuve-Loubet"],
-        landmarks: ["Port Vauban", "Vieille Ville", "Cap d'Antibes", "Marché Provençal"]
+        landmarks: ["Port Vauban", "Vieille Ville", "Cap d'Antibes", "Marché Provençal"],
+        images: {
+            hero: { src: "/images/cities/antibes-port-vauban.webp", alt: "Port Vauban Antibes - Consultante SEO Antibes", title: "Audit SEO Antibes 06", keywords: ["SEO Antibes", "référencement Antibes", "consultant SEO Antibes", "Port Vauban"] },
+            workspace: { src: "/images/cities/antibes-vieille-ville.webp", alt: "Vieille Ville Antibes - Expert SEO Antibes", title: "Référencement naturel Antibes", keywords: ["audit SEO Antibes", "Vieille Ville Antibes", "Juan-les-Pins"] },
+            landmark: { src: "/images/cities/antibes-cap.webp", alt: "Cap d'Antibes - SEO local Antibes", title: "SEO local Antibes 06", keywords: ["SEO local Antibes", "Cap d'Antibes", "yachting Antibes"] }
+        }
     },
     {
         name: "Monaco",
@@ -71,7 +100,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "Le m² digital le plus cher du monde. À Monaco, l'approximatif ne fonctionne pas. Vous devez être visible auprès des Family Offices, Banques et Services de Luxe. IndHack vous positionne là où l'argent circule : en haut de la page 1.",
         keyPoints: ["Stratégie Ultra-Premium", "E-réputation Monaco", "SEO Multilingue (EN/FR/IT/RU)"],
         nearbyAreas: ["Monte-Carlo", "La Condamine", "Fontvieille", "Beausoleil"],
-        landmarks: ["Place du Casino", "Port Hercule", "Carré d'Or", "Rocher"]
+        landmarks: ["Place du Casino", "Port Hercule", "Carré d'Or", "Rocher"],
+        images: {
+            hero: { src: "/images/cities/monaco-casino.webp", alt: "Casino Monte-Carlo Monaco - Consultante SEO Monaco", title: "Audit SEO Monaco 98", keywords: ["SEO Monaco", "référencement Monaco", "consultant SEO Monaco", "Monte-Carlo"] },
+            workspace: { src: "/images/cities/monaco-port-hercule.webp", alt: "Port Hercule Monaco - Expert SEO Monaco", title: "Référencement naturel Monaco", keywords: ["audit SEO Monaco", "Port Hercule", "SEO luxe Monaco"] },
+            landmark: { src: "/images/cities/monaco-rocher.webp", alt: "Rocher de Monaco - SEO local Monaco", title: "SEO local Monaco 98", keywords: ["SEO local Monaco", "Rocher Monaco", "Palais Princier"] }
+        }
     },
     {
         name: "Sophia-Antipolis",
@@ -85,7 +119,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "La Silicon Valley de l'Europe ne pardonne pas l'incompétence technique. Startups, SaaS, ESN : votre SEO doit être aussi performant que votre code. Audit technique pointu et acquisition B2B par IndHack.",
         keyPoints: ["SEO Technique B2B", "Génération de Leads SaaS", "Visibilité Tech & Innovation"],
         nearbyAreas: ["Valbonne", "Mougins", "Biot", "Antibes"],
-        landmarks: ["Place Sophie Laffitte", "Skema", "Amadeus", "Carrefour des Entreprises"]
+        landmarks: ["Place Sophie Laffitte", "Skema", "Amadeus", "Carrefour des Entreprises"],
+        images: {
+            hero: { src: "/images/cities/sophia-antipolis-technopole.webp", alt: "Technopole Sophia Antipolis - Consultante SEO Sophia Antipolis", title: "Audit SEO Sophia Antipolis 06", keywords: ["SEO Sophia Antipolis", "référencement technopole", "consultant SEO startup", "Silicon Valley Europe"] },
+            workspace: { src: "/images/cities/sophia-antipolis-bureaux.webp", alt: "Bureaux tech Sophia Antipolis - Expert SEO B2B", title: "Référencement SaaS Sophia Antipolis", keywords: ["audit SEO B2B", "SEO startup", "Sophia Antipolis tech"] },
+            landmark: { src: "/images/cities/sophia-antipolis-campus.webp", alt: "Campus Sophia Antipolis - SEO local tech", title: "SEO local Sophia Antipolis 06", keywords: ["SEO local tech", "Skema", "Amadeus SEO"] }
+        }
     },
     // Marseille et environs
     {
@@ -100,7 +139,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "Marseille est un chaos organisé où seuls les plus visibles survivent. Dans cette jungle digitale, IndHack est votre machette. Nous coupons court à la concurrence pour placer votre business tout en haut.",
         keyPoints: ["Volume de recherche massif", "Concurrence agressive", "Stratégie de guérilla SEO"],
         nearbyAreas: ["Aix-en-Provence", "Aubagne", "Cassis", "La Ciotat"],
-        landmarks: ["Vieux Port", "Vélodrome", "La Major", "Prado"]
+        landmarks: ["Vieux Port", "Vélodrome", "La Major", "Prado"],
+        images: {
+            hero: { src: "/images/cities/marseille-vieux-port.webp", alt: "Vieux Port Marseille - Consultante SEO Marseille", title: "Audit SEO Marseille 13", keywords: ["SEO Marseille", "référencement Marseille", "consultant SEO Marseille", "Vieux Port"] },
+            workspace: { src: "/images/cities/marseille-mucem.webp", alt: "MuCEM Marseille - Expert SEO Marseille", title: "Référencement naturel Marseille", keywords: ["audit SEO Marseille", "MuCEM", "SEO Bouches-du-Rhône"] },
+            landmark: { src: "/images/cities/marseille-notre-dame-garde.webp", alt: "Notre-Dame de la Garde Marseille - SEO local Marseille", title: "SEO local Marseille 13", keywords: ["SEO local Marseille", "Notre-Dame de la Garde", "Bonne Mère"] }
+        }
     },
     {
         name: "Aix-en-Provence",
@@ -114,7 +158,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "Ville bourgeoise, clientèle exigeante. À Aix, l'image de marque est tout. Votre site doit refléter votre prestige. IndHack allie esthétique UX et puissance SEO pour séduire la clientèle aixoise.",
         keyPoints: ["SEO Image de Marque", "Ciblage CSP+", "Conversion haut de gamme"],
         nearbyAreas: ["Marseille", "Gardanne", "Venelles", "Les Milles"],
-        landmarks: ["Cours Mirabeau", "Rotonde", "Quartier Mazarin", "Sainte-Victoire"]
+        landmarks: ["Cours Mirabeau", "Rotonde", "Quartier Mazarin", "Sainte-Victoire"],
+        images: {
+            hero: { src: "/images/cities/aix-cours-mirabeau.webp", alt: "Cours Mirabeau Aix-en-Provence - Consultante SEO Aix", title: "Audit SEO Aix-en-Provence 13", keywords: ["SEO Aix-en-Provence", "référencement Aix", "consultant SEO Aix", "Cours Mirabeau"] },
+            workspace: { src: "/images/cities/aix-rotonde.webp", alt: "La Rotonde Aix-en-Provence - Expert SEO Aix", title: "Référencement naturel Aix-en-Provence", keywords: ["audit SEO Aix", "La Rotonde", "SEO premium Aix"] },
+            landmark: { src: "/images/cities/aix-sainte-victoire.webp", alt: "Montagne Sainte-Victoire - SEO local Aix-en-Provence", title: "SEO local Aix-en-Provence 13", keywords: ["SEO local Aix", "Sainte-Victoire", "Cézanne"] }
+        }
     },
     // Paris et Île-de-France
     {
@@ -129,7 +178,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "Paris est l'arène finale. Ici, on ne joue pas, on se bat. Chaque mot-clé est une guerre de tranchées. IndHack vous donne les armes lourdes : Netlinking, Contenu, Technique. Prêt à détrôner les géants ?",
         keyPoints: ["Guerre des mots-clés", "Netlinking Puissant", "Audit Technique Avancé"],
         nearbyAreas: ["Boulogne", "Neuilly", "La Défense", "Levallois"],
-        landmarks: ["Tour Eiffel", "Louvre", "Champs-Élysées", "La Défense"]
+        landmarks: ["Tour Eiffel", "Louvre", "Champs-Élysées", "La Défense"],
+        images: {
+            hero: { src: "/images/cities/paris-tour-eiffel.webp", alt: "Tour Eiffel Paris - Consultante SEO Paris", title: "Audit SEO Paris 75", keywords: ["SEO Paris", "référencement Paris", "consultant SEO Paris", "Tour Eiffel"] },
+            workspace: { src: "/images/cities/paris-marais.webp", alt: "Le Marais Paris - Expert SEO Paris", title: "Référencement naturel Paris", keywords: ["audit SEO Paris", "Le Marais", "SEO Île-de-France"] },
+            landmark: { src: "/images/cities/paris-sacre-coeur.webp", alt: "Sacré-Coeur Montmartre - SEO local Paris", title: "SEO local Paris 75", keywords: ["SEO local Paris", "Sacré-Coeur", "Montmartre"] }
+        }
     },
     {
         name: "Boulogne-Billancourt",
@@ -143,7 +197,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "QG des médias et grands groupes. Pour exister à Boulogne, il faut être irréprochable. IndHack optimise votre présence corporate pour rassurer les décideurs et partenaires.",
         keyPoints: ["SEO Corporate", "Gestion E-Réputation", "Visibilité B2B"],
         nearbyAreas: ["Paris 16", "Issy-les-Moulineaux", "Saint-Cloud", "Sèvres"],
-        landmarks: ["La Seine Musicale", "Siège TF1", "Hôtel de Ville", "Longchamp"]
+        landmarks: ["La Seine Musicale", "Siège TF1", "Hôtel de Ville", "Longchamp"],
+        images: {
+            hero: { src: "/images/cities/boulogne-seine-musicale.webp", alt: "Seine Musicale Boulogne-Billancourt - Consultante SEO Boulogne", title: "Audit SEO Boulogne-Billancourt 92", keywords: ["SEO Boulogne-Billancourt", "référencement Boulogne", "consultant SEO 92", "Seine Musicale"] },
+            workspace: { src: "/images/cities/boulogne-bureaux.webp", alt: "Quartier d'affaires Boulogne - Expert SEO corporate", title: "Référencement B2B Boulogne-Billancourt", keywords: ["audit SEO corporate", "SEO B2B Boulogne", "Hauts-de-Seine"] },
+            landmark: { src: "/images/cities/boulogne-ile-seguin.webp", alt: "Île Seguin Boulogne - SEO local Boulogne-Billancourt", title: "SEO local Boulogne-Billancourt 92", keywords: ["SEO local Boulogne", "Île Seguin", "médias TF1"] }
+        }
     },
     // Bretagne
     {
@@ -158,7 +217,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "Terre de tech et d'innovation. À Rennes, si vous n'êtes pas digital, vous êtes mort. IndHack vous propulse au cœur de la French Tech bretonne avec un SEO propre, rapide et efficace.",
         keyPoints: ["SEO Startup & Tech", "Acquisition Lead Gen", "Performance Web"],
         nearbyAreas: ["Cesson-Sévigné", "Saint-Grégoire", "Chantepie", "Bruz"],
-        landmarks: ["Parlement", "Gare EuroRennes", "Le Mabilay", "Roazhon Park"]
+        landmarks: ["Parlement", "Gare EuroRennes", "Le Mabilay", "Roazhon Park"],
+        images: {
+            hero: { src: "/images/cities/rennes-parlement.webp", alt: "Parlement de Bretagne Rennes - Consultante SEO Rennes", title: "Audit SEO Rennes 35", keywords: ["SEO Rennes", "référencement Rennes", "consultant SEO Rennes", "Parlement Bretagne"] },
+            workspace: { src: "/images/cities/rennes-republique.webp", alt: "Place de la République Rennes - Expert SEO Rennes", title: "Référencement naturel Rennes", keywords: ["audit SEO Rennes", "French Tech Rennes", "SEO Bretagne"] },
+            landmark: { src: "/images/cities/rennes-thabor.webp", alt: "Parc du Thabor Rennes - SEO local Rennes", title: "SEO local Rennes 35", keywords: ["SEO local Rennes", "Thabor", "EuroRennes"] }
+        }
     },
     {
         name: "Nantes",
@@ -172,7 +236,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "L'effervescence nantaise demande de l'agilité. Votre site doit être aussi créatif et dynamique que la ville. IndHack booste votre trafic avec des stratégies SEO qui sortent du lot.",
         keyPoints: ["SEO Créatif", "Visibilité locale forte", "Trafic qualifié"],
         nearbyAreas: ["Saint-Herblain", "Rezé", "Orvault", "Carquefou"],
-        landmarks: ["Les Machines", "Château des Ducs", "Tour Bretagne", "Passage Pommeraye"]
+        landmarks: ["Les Machines", "Château des Ducs", "Tour Bretagne", "Passage Pommeraye"],
+        images: {
+            hero: { src: "/images/cities/nantes-machines.webp", alt: "Les Machines de l'île Nantes - Consultante SEO Nantes", title: "Audit SEO Nantes 44", keywords: ["SEO Nantes", "référencement Nantes", "consultant SEO Nantes", "Machines de l'île"] },
+            workspace: { src: "/images/cities/nantes-chateau.webp", alt: "Château des Ducs Nantes - Expert SEO Nantes", title: "Référencement naturel Nantes", keywords: ["audit SEO Nantes", "Château des Ducs", "SEO Loire-Atlantique"] },
+            landmark: { src: "/images/cities/nantes-passage-pommeraye.webp", alt: "Passage Pommeraye Nantes - SEO local Nantes", title: "SEO local Nantes 44", keywords: ["SEO local Nantes", "Passage Pommeraye", "centre-ville Nantes"] }
+        }
     },
     // Lyon et Rhône-Alpes
     {
@@ -187,7 +256,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "De la Part-Dieu à Confluence, le business ne s'arrête jamais. Pour capter les lyonnais, fini le bricolage. IndHack met en place une infrastructure SEO solide pour sécuriser votre croissance.",
         keyPoints: ["SEO E-commerce et Services", "Maillage local puissant", "Conversion"],
         nearbyAreas: ["Villeurbanne", "Bron", "Vénissieux", "Caluire"],
-        landmarks: ["Fourvière", "Place Bellecour", "Parc de la Tête d'Or", "Les Halles"]
+        landmarks: ["Fourvière", "Place Bellecour", "Parc de la Tête d'Or", "Les Halles"],
+        images: {
+            hero: { src: "/images/cities/lyon-fourviere.webp", alt: "Basilique Fourvière Lyon - Consultante SEO Lyon", title: "Audit SEO Lyon 69", keywords: ["SEO Lyon", "référencement Lyon", "consultant SEO Lyon", "Fourvière"] },
+            workspace: { src: "/images/cities/lyon-bellecour.webp", alt: "Place Bellecour Lyon - Expert SEO Lyon", title: "Référencement naturel Lyon", keywords: ["audit SEO Lyon", "Place Bellecour", "SEO Rhône-Alpes"] },
+            landmark: { src: "/images/cities/lyon-confluence.webp", alt: "Confluence Lyon - SEO local Lyon", title: "SEO local Lyon 69", keywords: ["SEO local Lyon", "Confluence", "Part-Dieu"] }
+        }
     },
     {
         name: "Grenoble",
@@ -201,7 +275,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "Au pied des montagnes, l'excellence scientifique impose ses règles. Votre SEO doit être chirurgical. IndHack analyse, optimise et positionne votre site avec la précision d'un ingénieur.",
         keyPoints: ["SEO Technique", "Audit de structure", "Contenu Expert"],
         nearbyAreas: ["Meylan", "Echirolles", "Saint-Martin-d'Hères", "Sassenage"],
-        landmarks: ["La Bastille", "Téléphérique", "Caserne de Bonne", "Europole"]
+        landmarks: ["La Bastille", "Téléphérique", "Caserne de Bonne", "Europole"],
+        images: {
+            hero: { src: "/images/cities/grenoble-bastille.webp", alt: "La Bastille Grenoble - Consultante SEO Grenoble", title: "Audit SEO Grenoble 38", keywords: ["SEO Grenoble", "référencement Grenoble", "consultant SEO Grenoble", "La Bastille"] },
+            workspace: { src: "/images/cities/grenoble-alpes.webp", alt: "Vue Alpes Grenoble - Expert SEO Grenoble", title: "Référencement naturel Grenoble", keywords: ["audit SEO Grenoble", "Alpes", "SEO Isère"] },
+            landmark: { src: "/images/cities/grenoble-telepherique.webp", alt: "Téléphérique Grenoble - SEO local Grenoble", title: "SEO local Grenoble 38", keywords: ["SEO local Grenoble", "Téléphérique", "Europole"] }
+        }
     },
     // Sud-Ouest
     {
@@ -216,7 +295,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "La Ville Rose est un géant économique. Ne restez pas dans l'ombre d'Airbus. IndHack fait décoller votre visibilité avec des techniques de référencement propulsées par la data.",
         keyPoints: ["Décollage trafic", "Visibilité régionale", "Data-Driven SEO"],
         nearbyAreas: ["Blagnac", "Colomiers", "Balma", "L'Union"],
-        landmarks: ["Capitole", "Quais de Garonne", "Cité de l'Espace", "Airbus"]
+        landmarks: ["Capitole", "Quais de Garonne", "Cité de l'Espace", "Airbus"],
+        images: {
+            hero: { src: "/images/cities/toulouse-capitole.webp", alt: "Place du Capitole Toulouse - Consultante SEO Toulouse", title: "Audit SEO Toulouse 31", keywords: ["SEO Toulouse", "référencement Toulouse", "consultant SEO Toulouse", "Capitole"] },
+            workspace: { src: "/images/cities/toulouse-garonne.webp", alt: "Quais de Garonne Toulouse - Expert SEO Toulouse", title: "Référencement naturel Toulouse", keywords: ["audit SEO Toulouse", "Garonne", "SEO Occitanie"] },
+            landmark: { src: "/images/cities/toulouse-cite-espace.webp", alt: "Cité de l'Espace Toulouse - SEO local Toulouse", title: "SEO local Toulouse 31", keywords: ["SEO local Toulouse", "Cité de l'Espace", "Airbus"] }
+        }
     },
     {
         name: "Bordeaux",
@@ -230,7 +314,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "Élégance et Business. À Bordeaux, on achète ce qui inspire confiance. IndHack polit votre autorité digitale pour que Google (et vos clients) vous voient comme le Grand Cru de votre secteur.",
         keyPoints: ["Autorité de domaine", "Confiance et Preuve Sociale", "SEO Local Premium"],
         nearbyAreas: ["Mérignac", "Pessac", "Talence", "Bègles"],
-        landmarks: ["Place de la Bourse", "Miroir d'eau", "Pont de Pierre", "Cité du Vin"]
+        landmarks: ["Place de la Bourse", "Miroir d'eau", "Pont de Pierre", "Cité du Vin"],
+        images: {
+            hero: { src: "/images/cities/bordeaux-place-bourse.webp", alt: "Place de la Bourse Bordeaux - Consultante SEO Bordeaux", title: "Audit SEO Bordeaux 33", keywords: ["SEO Bordeaux", "référencement Bordeaux", "consultant SEO Bordeaux", "Place de la Bourse"] },
+            workspace: { src: "/images/cities/bordeaux-miroir-eau.webp", alt: "Miroir d'eau Bordeaux - Expert SEO Bordeaux", title: "Référencement naturel Bordeaux", keywords: ["audit SEO Bordeaux", "Miroir d'eau", "SEO Gironde"] },
+            landmark: { src: "/images/cities/bordeaux-cite-vin.webp", alt: "Cité du Vin Bordeaux - SEO local Bordeaux", title: "SEO local Bordeaux 33", keywords: ["SEO local Bordeaux", "Cité du Vin", "Pont de Pierre"] }
+        }
     },
     {
         name: "Montpellier",
@@ -244,7 +333,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "Jeune, rapide, digitale. Montpellier va vite. Si votre site est lent ou mal référencé, vous êtes déjà oublié. IndHack optimise la vitesse et la pertinence pour capturer cette audience volatile.",
         keyPoints: ["Optimisation Mobile First", "Vitesse de chargement", "SEO Local Jeune"],
         nearbyAreas: ["Lattes", "Castelnau", "Juvignac", "Mauguio"],
-        landmarks: ["L'Écusson", "Place de la Comédie", "Antigone", "Port Marianne"]
+        landmarks: ["L'Écusson", "Place de la Comédie", "Antigone", "Port Marianne"],
+        images: {
+            hero: { src: "/images/cities/montpellier-comedie.webp", alt: "Place de la Comédie Montpellier - Consultante SEO Montpellier", title: "Audit SEO Montpellier 34", keywords: ["SEO Montpellier", "référencement Montpellier", "consultant SEO Montpellier", "Place de la Comédie"] },
+            workspace: { src: "/images/cities/montpellier-antigone.webp", alt: "Quartier Antigone Montpellier - Expert SEO Montpellier", title: "Référencement naturel Montpellier", keywords: ["audit SEO Montpellier", "Antigone", "SEO Hérault"] },
+            landmark: { src: "/images/cities/montpellier-ecusson.webp", alt: "L'Écusson Montpellier - SEO local Montpellier", title: "SEO local Montpellier 34", keywords: ["SEO local Montpellier", "Écusson", "Port Marianne"] }
+        }
     },
     // Nord et Est
     {
@@ -259,7 +353,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "Carrefour de l'Europe. La concurrence vient de partout (Paris, Bruxelles, Londres). Votre SEO doit être international et local à la fois. IndHack construit votre forteresse digitale.",
         keyPoints: ["SEO Cross-border", "Commerce & Retail", "Visibilité Européenne"],
         nearbyAreas: ["Roubaix", "Tourcoing", "Marcq-en-Barœul", "La Madeleine"],
-        landmarks: ["Grand Place", "Beffroi", "Citadelle", "Euralille"]
+        landmarks: ["Grand Place", "Beffroi", "Citadelle", "Euralille"],
+        images: {
+            hero: { src: "/images/cities/lille-grand-place.webp", alt: "Grand Place Lille - Consultante SEO Lille", title: "Audit SEO Lille 59", keywords: ["SEO Lille", "référencement Lille", "consultant SEO Lille", "Grand Place"] },
+            workspace: { src: "/images/cities/lille-vieux-lille.webp", alt: "Vieux Lille - Expert SEO Lille", title: "Référencement naturel Lille", keywords: ["audit SEO Lille", "Vieux Lille", "SEO Nord"] },
+            landmark: { src: "/images/cities/lille-beffroi.webp", alt: "Beffroi Lille - SEO local Lille", title: "SEO local Lille 59", keywords: ["SEO local Lille", "Beffroi", "Euralille"] }
+        }
     },
     {
         name: "Strasbourg",
@@ -273,7 +372,12 @@ export const FRENCH_CITIES: CityData[] = [
         description: "Rigueur et efficacité. Strasbourg ne tolère pas l'amateurisme. IndHack audite, corrige et propulse votre site avec une méthodologie carrée. Résultats mesurables, croissance durable.",
         keyPoints: ["SEO Structuré", "Reporting précis", "Croissance long terme"],
         nearbyAreas: ["Schiltigheim", "Illkirch", "Bischheim", "Kehl"],
-        landmarks: ["Cathédrale", "Petite France", "Parlement Européen", "Neustadt"]
+        landmarks: ["Cathédrale", "Petite France", "Parlement Européen", "Neustadt"],
+        images: {
+            hero: { src: "/images/cities/strasbourg-cathedrale.webp", alt: "Cathédrale Strasbourg - Consultante SEO Strasbourg", title: "Audit SEO Strasbourg 67", keywords: ["SEO Strasbourg", "référencement Strasbourg", "consultant SEO Strasbourg", "Cathédrale"] },
+            workspace: { src: "/images/cities/strasbourg-petite-france.webp", alt: "Petite France Strasbourg - Expert SEO Strasbourg", title: "Référencement naturel Strasbourg", keywords: ["audit SEO Strasbourg", "Petite France", "SEO Grand Est"] },
+            landmark: { src: "/images/cities/strasbourg-parlement.webp", alt: "Parlement Européen Strasbourg - SEO local Strasbourg", title: "SEO local Strasbourg 67", keywords: ["SEO local Strasbourg", "Parlement Européen", "Neustadt"] }
+        }
     }
 ];
 

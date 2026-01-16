@@ -35,7 +35,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
             .replace(/\{region\}/g, cityData.region);
     };
 
-    // JSON-LD Service Schema
+    // JSON-LD Service Schema avec images géolocalisées
     const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
@@ -46,13 +46,52 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
             "@type": "LocalBusiness",
             "name": "IndHack - Indiana Aflalo",
             "url": "https://indhack.com",
-            "telephone": "+33661139748"
+            "telephone": "+33661139748",
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": cityData.lat,
+                "longitude": cityData.lng
+            }
         },
         "areaServed": {
             "@type": "City",
-            "name": city
+            "name": city,
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": cityData.lat,
+                "longitude": cityData.lng
+            }
         },
-        "serviceType": serviceData.title
+        "serviceType": serviceData.title,
+        "image": cityData.images ? [
+            {
+                "@type": "ImageObject",
+                "url": `https://indhack.com${cityData.images.hero.src}`,
+                "name": cityData.images.hero.title,
+                "description": cityData.images.hero.alt,
+                "contentLocation": {
+                    "@type": "Place",
+                    "name": city,
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": cityData.lat,
+                        "longitude": cityData.lng
+                    }
+                }
+            },
+            {
+                "@type": "ImageObject",
+                "url": `https://indhack.com${cityData.images.workspace.src}`,
+                "name": cityData.images.workspace.title,
+                "description": cityData.images.workspace.alt
+            },
+            {
+                "@type": "ImageObject",
+                "url": `https://indhack.com${cityData.images.landmark.src}`,
+                "name": cityData.images.landmark.title,
+                "description": cityData.images.landmark.alt
+            }
+        ] : []
     };
 
     // Breadcrumb items
@@ -263,8 +302,8 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                 )}
                             </motion.div>
 
-                            {/* Elegant Side Image */}
-                            {index < 3 && (
+                            {/* Elegant Side Image - Dynamique par ville avec métadonnées EXIF géolocalisées */}
+                            {index < 3 && cityData.images && (
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
@@ -274,13 +313,19 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                 >
                                     <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
                                         <Image
-                                            src={index === 0 ? "/images/nice-seo-hero.png" :
-                                                index === 1 ? "/images/nice-workspace.png" :
-                                                    "/images/nice-data-flow.png"}
-                                            alt={`${index === 0 ? "Audit SEO Nice" : index === 1 ? "Consultant SEO Nice" : "Audit gratuit SEO Nice"} - ${city}`}
+                                            src={index === 0 ? cityData.images.hero.src :
+                                                index === 1 ? cityData.images.workspace.src :
+                                                    cityData.images.landmark.src}
+                                            alt={index === 0 ? cityData.images.hero.alt :
+                                                index === 1 ? cityData.images.workspace.alt :
+                                                    cityData.images.landmark.alt}
+                                            title={index === 0 ? cityData.images.hero.title :
+                                                index === 1 ? cityData.images.workspace.title :
+                                                    cityData.images.landmark.title}
                                             width={380}
                                             height={285}
                                             className="w-full h-auto object-cover"
+                                            loading={index === 0 ? "eager" : "lazy"}
                                         />
                                     </div>
                                     {/* Decorative accent */}
