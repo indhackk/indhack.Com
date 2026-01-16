@@ -108,7 +108,7 @@ export function Navbar() {
                             </AnimatePresence>
                         </div>
 
-                        <NavLink href="/about" isScrolled={useDarkMenu}>À Propos</NavLink>
+                        <NavLink href="/a-propos" isScrolled={useDarkMenu}>À Propos</NavLink>
                         <NavLink href="/blog" isScrolled={useDarkMenu}>Blog</NavLink>
                         <NavLink href="/contact" isScrolled={useDarkMenu}>Contact</NavLink>
                     </div>
@@ -184,7 +184,7 @@ export function Navbar() {
 
                                 <div className="space-y-4">
                                     <p className="text-xs font-bold text-soft tracking-widest uppercase">Menu</p>
-                                    <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="block text-2xl font-bold text-ink">À propos</Link>
+                                    <Link href="/a-propos" onClick={() => setIsMobileMenuOpen(false)} className="block text-2xl font-bold text-ink">À propos</Link>
                                     <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="block text-2xl font-bold text-ink">Blog</Link>
                                     <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-2xl font-bold text-ink">Contact</Link>
                                 </div>

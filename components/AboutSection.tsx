@@ -57,7 +57,7 @@ export function AboutSection() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Link href="/about">
+                            <Link href="/a-propos">
                                 <Button className="bg-ink text-white hover:bg-sauge shadow-xl transition-all rounded-full px-10 py-7 font-bold tracking-wider group uppercase">
                                     DÉCOUVRIR LE PARCOURS
                                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

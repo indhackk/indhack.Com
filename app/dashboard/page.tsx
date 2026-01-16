@@ -10,7 +10,7 @@ export default function DashboardPage() {
     // Liste manuelle de tes pages pour avoir une vue d'ensemble propre
     const pages = [
         { name: "Accueil", path: "/", type: "main" },
-        { name: "À Propos", path: "/about", type: "main" },
+        { name: "À Propos", path: "/a-propos", type: "main" },
         { name: "Contact", path: "/contact", type: "main" },
         { name: "Services", path: "/services", type: "main" },
         { name: "Blog", path: "/blog", type: "content" },
@@ -90,7 +90,7 @@ export default function DashboardPage() {
                     <div className="p-4 bg-gray-50 rounded-lg font-mono text-sm text-gray-600">
                         indhack.com<br />
                         ├── / (Home)<br />
-                        ├── /about<br />
+                        ├── /a-propos<br />
                         ├── /blog (Liste des articles)<br />
                         │   └── /blog/[slug] (Article individuel)<br />
                         └── /contact

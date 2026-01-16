@@ -156,7 +156,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                                         <div className="text-xs text-soft">Consultante SEO</div>
                                     </div>
                                 </div>
-                                <Link href="/about" className="text-xs font-medium text-sauge hover:text-ink transition-colors flex items-center gap-1">
+                                <Link href="/a-propos" className="text-xs font-medium text-sauge hover:text-ink transition-colors flex items-center gap-1">
                                     Voir mon profil <ArrowRight className="w-3 h-3" />
                                 </Link>
                             </div>
