@@ -6,10 +6,10 @@ const cityData = getCityBySlug("seo-monaco")!;
 const serviceData = CITY_SERVICES["audit-technique"];
 
 export const metadata: Metadata = {
-    title: "Audit Technique SEO Monaco 98 - INDHACK - Consultante SEO",
+    title: "Audit Technique SEO Monaco 98 | INDHACK, Consultante SEO",
     description: "Consultant SEO Monaco. Audit technique premium pour entreprises exigeantes. Analyse complète indexation, vitesse, Core Web Vitals.",
     openGraph: {
-        title: "Audit Technique SEO Monaco 98 - INDHACK - Consultante SEO",
+        title: "Audit Technique SEO Monaco 98 | INDHACK, Consultante SEO",
         description: "Expert référencement Monaco. Diagnostic technique haut de gamme pour votre site.",
         url: "https://indhack.com/seo-monaco/audit-technique",
         type: "website",

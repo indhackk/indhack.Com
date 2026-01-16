@@ -6,10 +6,10 @@ const cityData = getCityBySlug("seo-aix-en-provence")!;
 const serviceData = CITY_SERVICES["audit-technique"];
 
 export const metadata: Metadata = {
-    title: "Audit Technique SEO Aix-en-Provence 13 - INDHACK - Consultante SEO",
+    title: "Audit Technique SEO Aix-en-Provence 13 | INDHACK, Consultante SEO",
     description: "Audit SEO Aix-en-Provence. Analyse technique approfondie par une consultante indépendante. Indexation, vitesse, maillage interne.",
     openGraph: {
-        title: "Audit Technique SEO Aix-en-Provence 13 - INDHACK - Consultante SEO",
+        title: "Audit Technique SEO Aix-en-Provence 13 | INDHACK, Consultante SEO",
         description: "Spécialiste SEO Aix. Diagnostic technique pour optimiser votre référencement naturel.",
         url: "https://indhack.com/seo-aix-en-provence/audit-technique",
         type: "website",

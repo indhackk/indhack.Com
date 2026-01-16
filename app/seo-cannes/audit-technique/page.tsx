@@ -6,10 +6,10 @@ const cityData = getCityBySlug("seo-cannes")!;
 const serviceData = CITY_SERVICES["audit-technique"];
 
 export const metadata: Metadata = {
-    title: "Audit Technique SEO Cannes 06 - INDHACK - Consultante SEO",
+    title: "Audit Technique SEO Cannes 06 | INDHACK, Consultante SEO",
     description: "Consultante SEO freelance à Cannes. Mon audit technique identifie les blocages qui freinent votre visibilité Google. Diagnostic gratuit sans engagement.",
     openGraph: {
-        title: "Audit Technique SEO Cannes 06 - INDHACK - Consultante SEO",
+        title: "Audit Technique SEO Cannes 06 | INDHACK, Consultante SEO",
         description: "Expert SEO à Cannes. Audit technique complet pour débloquer votre référencement naturel.",
         url: "https://indhack.com/seo-cannes/audit-technique",
         type: "website",

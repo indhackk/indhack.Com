@@ -6,10 +6,10 @@ const cityData = getCityBySlug("seo-marseille")!;
 const serviceData = CITY_SERVICES["audit-technique"];
 
 export const metadata: Metadata = {
-    title: "Audit Technique SEO Marseille 13 - INDHACK - Consultante SEO",
+    title: "Audit Technique SEO Marseille 13 | INDHACK, Consultante SEO",
     description: "Référencement naturel Marseille. Mon audit technique révèle ce qui bloque votre visibilité sur Google. Diagnostic gratuit.",
     openGraph: {
-        title: "Audit Technique SEO Marseille 13 - INDHACK - Consultante SEO",
+        title: "Audit Technique SEO Marseille 13 | INDHACK, Consultante SEO",
         description: "Expert SEO Marseille. Analyse technique complète pour booster votre référencement.",
         url: "https://indhack.com/seo-marseille/audit-technique",
         type: "website",

@@ -7,7 +7,7 @@ const cityData = getCityBySlug("seo-nice")!;
 const serviceData = CITY_SERVICES["audit-technique"];
 
 export const metadata: Metadata = {
-    title: "Audit Technique SEO Nice 06 - INDHACK - Consultante SEO",
+    title: "Audit Technique SEO Nice 06 | INDHACK, Consultante SEO",
     description: "Consultante SEO freelance à Nice. Mon audit technique révèle ce qui bloque votre visibilité Google : indexation, vitesse, maillage interne. Diagnostic gratuit.",
     keywords: [
         "audit technique SEO Nice",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         "maillage interne"
     ],
     openGraph: {
-        title: "Audit Technique SEO Nice 06 - INDHACK - Consultante SEO",
+        title: "Audit Technique SEO Nice 06 | INDHACK, Consultante SEO",
         description: "Consultante SEO freelance à Nice. Mon audit technique identifie les blocages qui freinent votre visibilité sur Google.",
         url: "https://indhack.com/seo-nice/audit-technique",
         type: "website",
