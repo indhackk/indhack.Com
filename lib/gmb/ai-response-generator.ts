@@ -166,7 +166,7 @@ function adjustTone(response: string, tone: 'professional' | 'friendly' | 'enthu
             }
             const emojis = ['✨', '🌟', '💫', '🙏', '❤️', '👏'];
             const emoji = emojis[Math.floor(Math.random() * emojis.length)];
-            if (!response.match(/[\u{1F300}-\u{1F9FF}]/u)) {
+            if (!/[^\x00-\x7F]/.test(response)) {
                 response += ' ' + emoji;
             }
             break;
@@ -180,7 +180,7 @@ function adjustTone(response: string, tone: 'professional' | 'friendly' | 'enthu
 
         case 'professional':
             // Retirer les emojis si présents, ton formel
-            response = response.replace(/[\u{1F300}-\u{1F9FF}]/gu, '').trim();
+            response = response.replace(/[^\x00-\x7F]/g, '').trim();
             response = response.replace(/!+/g, '.');
             break;
     }
