@@ -8,6 +8,7 @@ import { Search, FileText, Link2, BarChart3, ArrowRight, TrendingUp, Target } fr
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
+import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
 const SEO_PILLARS = [
     {
@@ -200,6 +201,9 @@ export default function ReferencementClient() {
 
             {/* Services complémentaires */}
             <RelatedServices currentService="referencement-naturel" />
+
+            {/* Lien vers la page d'accueil - Maillage interne SEO */}
+            <HomepageBacklink variant="default" />
 
             {/* CTA */}
             <section className="py-24 bg-white">

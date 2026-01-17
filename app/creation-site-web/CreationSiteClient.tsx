@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
+import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
 const CREATION_FEATURES = [
     {
@@ -225,6 +226,9 @@ export default function CreationSiteClient() {
 
             {/* Services complémentaires */}
             <RelatedServices currentService="creation-site-web" />
+
+            {/* Lien vers la page d'accueil - Maillage interne SEO */}
+            <HomepageBacklink variant="default" />
 
             {/* CTA */}
             <section className="py-24 bg-white">

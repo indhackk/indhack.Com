@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
+import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
 const AUDIT_FEATURES = [
     {
@@ -158,6 +159,9 @@ export default function AuditSeoClient() {
 
             {/* Services complémentaires */}
             <RelatedServices currentService="audit-seo" />
+
+            {/* Lien vers la page d'accueil - Maillage interne SEO */}
+            <HomepageBacklink variant="default" />
 
             {/* Final CTA */}
             <section className="py-24 bg-white text-center">

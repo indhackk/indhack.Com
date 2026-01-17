@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { MegaFooter } from "@/components/MegaFooter";
 import { ModalProvider } from "@/components/providers/ModalProvider";
 import { CookieConsent } from "@/components/CookieConsent";
+import { FloatingCTA } from "@/components/ui/FloatingCTA";
 
 import Script from "next/script";
 
@@ -155,6 +156,7 @@ export default function RootLayout({
                     </main>
                     <MegaFooter />
                     <CookieConsent />
+                    <FloatingCTA />
                 </ModalProvider>
             </body>
         </html>

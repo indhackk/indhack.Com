@@ -8,6 +8,7 @@ import { Instagram, Linkedin, TrendingUp, MessageCircle, ArrowRight, BarChart3 }
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
+import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
 const SOCIAL_SERVICES = [
     {
@@ -213,6 +214,9 @@ export default function CommunityManagerClient() {
 
             {/* Services complémentaires */}
             <RelatedServices currentService="community-manager" />
+
+            {/* Lien vers la page d'accueil - Maillage interne SEO */}
+            <HomepageBacklink variant="default" />
 
             {/* CTA */}
             <section className="py-24 bg-white">

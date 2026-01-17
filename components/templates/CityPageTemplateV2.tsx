@@ -10,6 +10,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
 import { CityData, FRENCH_CITIES, SERVICES_FOR_CITIES } from "@/lib/cities-data";
+import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
 interface CityPageProps {
     cityData: CityData;
@@ -385,6 +386,9 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             </section>
 
             {customContent}
+
+            {/* Lien vers la page d'accueil - Maillage interne SEO */}
+            <HomepageBacklink variant="card" className="max-w-md mx-auto my-12" />
 
             {/* FAQ */}
             <FAQ items={FAQ_ITEMS} title={`Questions Fréquentes - SEO ${city}`} />

@@ -8,6 +8,7 @@ import { RefreshCw, ShieldCheck, Zap, BarChart3, ArrowRight } from "lucide-react
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
+import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
 const REFONTE_FEATURES = [
     {
@@ -154,6 +155,9 @@ export default function RefonteSiteClient() {
 
             {/* Services complémentaires */}
             <RelatedServices currentService="refonte-site-web" />
+
+            {/* Lien vers la page d'accueil - Maillage interne SEO */}
+            <HomepageBacklink variant="default" />
 
             {/* Final CTA */}
             <section className="py-24 bg-white text-center">

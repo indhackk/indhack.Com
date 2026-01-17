@@ -4,6 +4,9 @@ import { AboutSection } from "@/components/AboutSection";
 import { FAQ } from "@/components/FAQ";
 import { CTASection } from "@/components/CTASection";
 import { SEOScoreChecker } from "@/components/SEOScoreChecker";
+import { AnimatedStats } from "@/components/sections/AnimatedStats";
+import { CityCarousel } from "@/components/sections/CityCarousel";
+import { TrustSignals } from "@/components/sections/TrustSignals";
 
 // Homepage FAQ optimisée - SANS gras dans les questions
 const HOMEPAGE_FAQ = [
@@ -68,8 +71,18 @@ export default function Home() {
 
             <div className="flex flex-col">
                 <Hero />
+                <TrustSignals variant="compact" />
                 <ServicesSection />
+                <AnimatedStats
+                    title="Des résultats qui parlent"
+                    subtitle="Une expertise prouvée"
+                    variant="dark"
+                />
                 <SEOScoreChecker />
+                <CityCarousel
+                    title="J'interviens partout en France"
+                    subtitle="Consultante SEO à votre service"
+                />
                 <AboutSection />
                 <CTASection />
                 <FAQ items={HOMEPAGE_FAQ} title="Questions Fréquentes" />
