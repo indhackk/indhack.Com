@@ -27,11 +27,11 @@ function isRateLimited(ip: string): boolean {
 // Nettoyage périodique du rate limit map
 setInterval(() => {
     const now = Date.now();
-    for (const [ip, record] of rateLimitMap) {
+    rateLimitMap.forEach((record, ip) => {
         if (now - record.timestamp > RATE_LIMIT_WINDOW) {
             rateLimitMap.delete(ip);
         }
-    }
+    });
 }, 60 * 1000);
 
 export function middleware(request: NextRequest) {

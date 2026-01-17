@@ -154,6 +154,7 @@ export default function RootLayout({
                         {children}
                     </main>
                     <MegaFooter />
+                    <CookieConsent />
                 </ModalProvider>
             </body>
         </html>
