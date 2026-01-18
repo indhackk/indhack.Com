@@ -12,9 +12,13 @@ interface BusinessCardProps {
 }
 
 export function BusinessCard({ business, isSelected, onSelect, onToggleAutoReply }: BusinessCardProps) {
-    const formatLastSync = (date: Date) => {
+    const formatLastSync = (date: Date | string) => {
         const now = new Date();
-        const diff = now.getTime() - date.getTime();
+        const dateObj = date instanceof Date ? date : new Date(date);
+
+        if (isNaN(dateObj.getTime())) return "Récemment";
+
+        const diff = now.getTime() - dateObj.getTime();
         const minutes = Math.floor(diff / (1000 * 60));
 
         if (minutes < 1) return "À l'instant";

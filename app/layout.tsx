@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
-import { MegaFooter } from "@/components/MegaFooter";
 import { ModalProvider } from "@/components/providers/ModalProvider";
-import { CookieConsent } from "@/components/CookieConsent";
-import { FloatingCTA } from "@/components/ui/FloatingCTA";
+import { ConditionalLayout } from "@/components/ConditionalLayout";
 
 import Script from "next/script";
 
@@ -150,13 +147,9 @@ export default function RootLayout({
                 </Script>
 
                 <ModalProvider>
-                    <Navbar />
-                    <main className="min-h-screen">
+                    <ConditionalLayout>
                         {children}
-                    </main>
-                    <MegaFooter />
-                    <CookieConsent />
-                    <FloatingCTA />
+                    </ConditionalLayout>
                 </ModalProvider>
             </body>
         </html>

@@ -1,240 +1,371 @@
-import { AIResponseConfig } from './types';
-import { RESPONSE_TEMPLATES } from './mock-data';
+/**
+ * GMB AutoPilot - Advanced AI Response Generator
+ * Génération de réponses avec Geo-SEO, Sentiment Analysis, et Natural Language Integration
+ */
 
-// Générateur de réponses IA simulé (en production, utiliserait OpenAI/Claude API)
-export async function generateAIResponse(config: AIResponseConfig): Promise<string> {
-    // Simuler un délai de traitement IA
-    await new Promise(resolve => setTimeout(resolve, 800 + Math.random() * 1200));
+import { AIResponseConfig, AIResponse, AIResponseMetadata, GeoKeyword, SentimentAnalysis } from './types';
+import { RESPONSE_TEMPLATES, EMPATHY_PHRASES } from './mock-data';
+import { analyzeSentiment, requiresHumanValidation } from './sentiment-engine';
+import { generateGeoKeywords, integrateKeywordsNaturally, getCategoryData } from './geo-seo-engine';
+import { calculateSEOScore } from './seo-score-engine';
 
-    const { businessName, keywords, tone, reviewText, reviewRating, authorName, includeCallToAction, maxLength } = config;
+// ═══════════════════════════════════════════════════════════════
+// MAIN GENERATOR
+// ═══════════════════════════════════════════════════════════════
 
-    // Déterminer le type de réponse basé sur la note
-    let templateCategory: 'positive' | 'neutral' | 'negative';
-    if (reviewRating >= 4) {
-        templateCategory = 'positive';
-    } else if (reviewRating === 3) {
-        templateCategory = 'neutral';
-    } else {
-        templateCategory = 'negative';
+/**
+ * Génère une réponse IA complète avec analyse et optimisation
+ */
+export async function generateAIResponse(config: AIResponseConfig): Promise<AIResponse> {
+    const startTime = Date.now();
+
+    // Simuler un délai de traitement IA réaliste
+    await new Promise(resolve => setTimeout(resolve, 600 + Math.random() * 800));
+
+    // 1. Analyser le sentiment de l'avis
+    const sentiment = analyzeSentiment(config.reviewText, config.reviewRating);
+
+    // 2. Générer les mots-clés géolocalisés
+    const geoKeywords = config.geoKeywords || generateGeoKeywords(
+        config.businessCategory,
+        `${config.businessCity}`,
+        config.keywords
+    );
+
+    // 3. Sélectionner et personnaliser le template de base
+    let baseResponse = selectTemplate(sentiment, config);
+
+    // 4. Enrichir avec le contexte de l'avis
+    baseResponse = enrichWithContext(baseResponse, config, sentiment);
+
+    // 5. Intégrer les mots-clés de manière naturelle
+    const { response: enhancedResponse, usedKeywords, naturalScore } = integrateKeywordsNaturally(
+        baseResponse,
+        geoKeywords,
+        3
+    );
+
+    // 6. Ajouter l'empathie si nécessaire
+    let finalResponse = sentiment.requiresEmpathy
+        ? addEmpathy(enhancedResponse, sentiment)
+        : enhancedResponse;
+
+    // 7. Ajouter le call-to-action si demandé
+    if (config.includeCallToAction) {
+        finalResponse = addCallToAction(finalResponse, sentiment, config.businessName);
     }
 
-    // Sélectionner un template aléatoire
-    const templates = RESPONSE_TEMPLATES[templateCategory];
-    let response = templates[Math.floor(Math.random() * templates.length)];
+    // 8. Ajuster la tonalité finale
+    finalResponse = adjustTone(finalResponse, config.tone, sentiment);
 
-    // Remplacer les placeholders
-    response = response.replace(/{author}/g, authorName);
-    response = response.replace(/{business}/g, businessName);
-
-    // Ajouter des éléments personnalisés basés sur le contenu de l'avis
-    response = enhanceResponseWithContext(response, reviewText, tone);
-
-    // Intégrer les mots-clés stratégiques
-    if (keywords.length > 0) {
-        response = integrateKeywords(response, keywords, templateCategory);
+    // 9. Respecter la limite de longueur
+    if (config.maxLength && config.maxLength > 0 && finalResponse.length > config.maxLength) {
+        finalResponse = truncateGracefully(finalResponse, config.maxLength);
     }
 
-    // Ajouter un call-to-action si demandé
-    if (includeCallToAction) {
-        response = addCallToAction(response, templateCategory, businessName);
-    }
+    // 10. Calculer le score SEO
+    const seoImpact = calculateSEOScore(
+        finalResponse,
+        geoKeywords,
+        usedKeywords,
+        config.businessCity
+    );
 
-    // Ajuster la tonalité
-    response = adjustTone(response, tone);
+    // 11. Déterminer si validation humaine requise
+    const validationCheck = requiresHumanValidation(sentiment);
 
-    // Limiter la longueur si nécessaire
-    if (maxLength > 0 && response.length > maxLength) {
-        response = response.substring(0, maxLength - 3) + '...';
-    }
+    // 12. Générer des versions alternatives
+    const alternativeVersions = await generateAlternatives(config, sentiment, geoKeywords);
 
-    return response;
-}
+    const processingTimeMs = Date.now() - startTime;
 
-function enhanceResponseWithContext(response: string, reviewText: string, tone: string): string {
-    const lowerText = reviewText.toLowerCase();
-
-    // Détecter des éléments mentionnés dans l'avis pour personnaliser
-    const contextualAdditions: string[] = [];
-
-    if (lowerText.includes('service') || lowerText.includes('équipe') || lowerText.includes('personnel')) {
-        contextualAdditions.push('Notre équipe sera ravie de vous accueillir à nouveau.');
-    }
-
-    if (lowerText.includes('qualité') || lowerText.includes('produit') || lowerText.includes('frais')) {
-        contextualAdditions.push('La qualité est au cœur de notre engagement.');
-    }
-
-    if (lowerText.includes('prix') || lowerText.includes('rapport qualité')) {
-        contextualAdditions.push('Nous veillons à offrir le meilleur rapport qualité-prix.');
-    }
-
-    if (lowerText.includes('recommande') || lowerText.includes('reviendrai')) {
-        contextualAdditions.push('Votre recommandation est notre plus belle récompense !');
-    }
-
-    if (lowerText.includes('attente') || lowerText.includes('temps')) {
-        contextualAdditions.push('Nous travaillons à optimiser nos délais.');
-    }
-
-    // Ajouter une addition contextuelle aléatoire si disponible
-    if (contextualAdditions.length > 0) {
-        const addition = contextualAdditions[Math.floor(Math.random() * contextualAdditions.length)];
-        response = response.replace(/\.$/, '. ' + addition);
-    }
-
-    return response;
-}
-
-function integrateKeywords(response: string, keywords: string[], category: 'positive' | 'neutral' | 'negative'): string {
-    // Intégrer 1-2 mots-clés de manière naturelle
-    const keywordsToUse = keywords.slice(0, 2);
-
-    const keywordPhrases: Record<string, string[]> = {
-        'restaurant': ['notre restaurant', 'à notre table'],
-        'cuisine': ['notre cuisine', 'nos plats'],
-        'coiffeur': ['notre salon', 'nos coiffeurs'],
-        'garage': ['notre garage', 'notre atelier'],
-        'lyon': ['à Lyon', 'lyonnais'],
-        'marseille': ['à Marseille', 'marseillais'],
-        'nice': ['à Nice', 'niçois'],
-        'paris': ['à Paris', 'parisien'],
-        'strasbourg': ['à Strasbourg', 'strasbourgeois'],
-        'qualité': ['notre engagement qualité', 'la qualité de nos services'],
-        'service': ['notre service', 'notre équipe'],
-        'professionnel': ['notre professionnalisme', 'notre équipe professionnelle']
+    // Construire les métadonnées
+    const metadata: AIResponseMetadata = {
+        sentiment,
+        seoImpact,
+        usedKeywords,
+        naturalLanguageScore: naturalScore,
+        requiresValidation: validationCheck.required,
+        validationReason: validationCheck.reason || undefined,
+        generatedAt: new Date(),
+        processingTimeMs
     };
 
-    for (const keyword of keywordsToUse) {
-        const keywordLower = keyword.toLowerCase();
-        for (const [key, phrases] of Object.entries(keywordPhrases)) {
-            if (keywordLower.includes(key)) {
-                const phrase = phrases[Math.floor(Math.random() * phrases.length)];
-                // Ajouter la phrase naturellement si pas déjà présente
-                if (!response.toLowerCase().includes(key)) {
-                    response = response.replace(/\.$/, `. Nous sommes fiers de ${phrase}.`);
-                    break;
-                }
-            }
+    return {
+        text: finalResponse,
+        metadata,
+        alternativeVersions
+    };
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TEMPLATE SELECTION
+// ═══════════════════════════════════════════════════════════════
+
+function selectTemplate(sentiment: SentimentAnalysis, config: AIResponseConfig): string {
+    const { label } = sentiment;
+
+    // Sélectionner la catégorie de template appropriée
+    let templates: string[];
+    if (label === 'critical') {
+        templates = RESPONSE_TEMPLATES.critical;
+    } else if (label === 'negative') {
+        templates = RESPONSE_TEMPLATES.negative;
+    } else if (label === 'neutral') {
+        templates = RESPONSE_TEMPLATES.neutral;
+    } else {
+        templates = RESPONSE_TEMPLATES.positive;
+    }
+
+    // Sélectionner aléatoirement un template
+    const template = templates[Math.floor(Math.random() * templates.length)];
+
+    // Remplacer les placeholders de base
+    return template
+        .replace(/{author}/g, config.authorName)
+        .replace(/{business}/g, config.businessName);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// CONTEXT ENRICHMENT
+// ═══════════════════════════════════════════════════════════════
+
+function enrichWithContext(
+    response: string,
+    config: AIResponseConfig,
+    sentiment: SentimentAnalysis
+): string {
+    const lowerText = config.reviewText.toLowerCase();
+    const categoryData = getCategoryData(config.businessCategory);
+
+    // Détecter les éléments mentionnés pour personnaliser
+    const contextualEnhancements: string[] = [];
+
+    // Détecter les mentions de service/équipe
+    if (lowerText.match(/service|équipe|personnel|accueil|staff/)) {
+        if (sentiment.label === 'positive' || sentiment.label === 'neutral') {
+            contextualEnhancements.push('Notre équipe sera ravie de vous accueillir à nouveau.');
         }
     }
 
+    // Détecter les mentions de qualité
+    if (lowerText.match(/qualité|produit|frais|excellent|parfait/)) {
+        contextualEnhancements.push(`La qualité ${categoryData.qualities[0]} est au cœur de notre engagement.`);
+    }
+
+    // Détecter les mentions de prix
+    if (lowerText.match(/prix|tarif|cher|abordable|rapport/)) {
+        if (sentiment.label === 'negative' || sentiment.label === 'neutral') {
+            contextualEnhancements.push('Nous veillons à maintenir un rapport qualité-prix transparent.');
+        }
+    }
+
+    // Détecter les recommandations
+    if (lowerText.match(/recommande|conseille|reviendrai|retournerai/)) {
+        contextualEnhancements.push('Votre recommandation est notre plus belle récompense.');
+    }
+
+    // Détecter les problèmes d'attente
+    if (lowerText.match(/attente|temps|long|lent|rapide/)) {
+        if (sentiment.label === 'negative' || sentiment.label === 'neutral') {
+            contextualEnhancements.push('Nous travaillons à optimiser nos délais de service.');
+        }
+    }
+
+    // Ajouter une amélioration contextuelle si disponible
+    if (contextualEnhancements.length > 0) {
+        const enhancement = contextualEnhancements[Math.floor(Math.random() * contextualEnhancements.length)];
+        response = response.replace(/\.$/, '. ' + enhancement);
+    }
+
     return response;
 }
 
-function addCallToAction(response: string, category: 'positive' | 'neutral' | 'negative', businessName: string): string {
-    const ctaPositive = [
-        `N'hésitez pas à revenir nous voir bientôt !`,
-        `Au plaisir de vous revoir chez ${businessName} !`,
-        `Retrouvez-nous sur nos réseaux sociaux pour ne rien manquer !`
-    ];
+// ═══════════════════════════════════════════════════════════════
+// EMPATHY ADDITION
+// ═══════════════════════════════════════════════════════════════
 
-    const ctaNeutral = [
-        `Contactez-nous pour toute question.`,
-        `Notre équipe reste à votre disposition.`,
-        `N'hésitez pas à nous faire part de vos suggestions.`
-    ];
-
-    const ctaNegative = [
-        `Contactez-nous directement pour en discuter.`,
-        `Notre responsable serait ravi d'échanger avec vous.`,
-        `Nous aimerions avoir l'opportunité de nous rattraper.`
-    ];
-
-    let ctas: string[];
-    switch (category) {
-        case 'positive':
-            ctas = ctaPositive;
-            break;
-        case 'neutral':
-            ctas = ctaNeutral;
-            break;
-        case 'negative':
-            ctas = ctaNegative;
-            break;
+function addEmpathy(response: string, sentiment: SentimentAnalysis): string {
+    if (sentiment.label !== 'negative' && sentiment.label !== 'critical') {
+        return response;
     }
 
-    const cta = ctas[Math.floor(Math.random() * ctas.length)];
-    return response + ' ' + cta;
+    // Sélectionner des phrases empathiques appropriées
+    const acknowledgment = EMPATHY_PHRASES.acknowledgment[
+        Math.floor(Math.random() * EMPATHY_PHRASES.acknowledgment.length)
+    ];
+
+    // Pour les cas critiques, ajouter une prise de responsabilité
+    if (sentiment.label === 'critical' || sentiment.emotions.anger > 40) {
+        const responsibility = EMPATHY_PHRASES.responsibility[
+            Math.floor(Math.random() * EMPATHY_PHRASES.responsibility.length)
+        ];
+        return `${acknowledgment}. ${responsibility}. ${response}`;
+    }
+
+    return `${acknowledgment}. ${response}`;
 }
 
-function adjustTone(response: string, tone: 'professional' | 'friendly' | 'enthusiastic'): string {
+// ═══════════════════════════════════════════════════════════════
+// CALL TO ACTION
+// ═══════════════════════════════════════════════════════════════
+
+function addCallToAction(
+    response: string,
+    sentiment: SentimentAnalysis,
+    businessName: string
+): string {
+    const ctaByLabel = {
+        positive: [
+            `N'hésitez pas à revenir nous voir bientôt !`,
+            `Au plaisir de vous retrouver chez ${businessName} !`,
+            `Retrouvez-nous sur Google pour ne rien manquer !`
+        ],
+        neutral: [
+            `Notre équipe reste à votre disposition.`,
+            `Contactez-nous pour toute question.`,
+            `N'hésitez pas à nous faire part de vos suggestions.`
+        ],
+        negative: [
+            `Contactez-nous directement pour en discuter.`,
+            `Notre responsable serait ravi d'échanger avec vous.`,
+            `Nous aimerions avoir l'opportunité de nous rattraper.`
+        ],
+        critical: [
+            `Nous vous invitons à nous contacter au plus vite.`,
+            `Notre direction souhaite vous joindre personnellement.`,
+            `Merci de nous contacter pour résoudre cette situation.`
+        ]
+    };
+
+    const ctas = ctaByLabel[sentiment.label];
+    const cta = ctas[Math.floor(Math.random() * ctas.length)];
+
+    return response.trim() + ' ' + cta;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TONE ADJUSTMENT
+// ═══════════════════════════════════════════════════════════════
+
+function adjustTone(
+    response: string,
+    tone: AIResponseConfig['tone'],
+    sentiment: SentimentAnalysis
+): string {
+    // Ne pas modifier le ton pour les avis critiques - rester professionnel
+    if (sentiment.label === 'critical') {
+        // S'assurer qu'il n'y a pas d'emojis pour les cas critiques
+        response = removeEmojis(response);
+        return response;
+    }
+
     switch (tone) {
         case 'enthusiastic':
-            // Ajouter des emojis et de l'enthousiasme
-            if (!response.includes('!')) {
-                response = response.replace(/\./g, '!');
-            }
-            const emojis = ['✨', '🌟', '💫', '🙏', '❤️', '👏'];
-            const emoji = emojis[Math.floor(Math.random() * emojis.length)];
-            if (!/[^\x00-\x7F]/.test(response)) {
-                response += ' ' + emoji;
+            // Ajouter de l'enthousiasme uniquement pour les avis positifs
+            if (sentiment.label === 'positive') {
+                if (!response.includes('!')) {
+                    response = response.replace(/\.(\s|$)/g, '! ');
+                }
+                // Ajouter un emoji subtil
+                const emojis = ['✨', '🙏', '💫'];
+                const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+                if (!hasEmoji(response)) {
+                    response = response.trim() + ' ' + emoji;
+                }
             }
             break;
 
         case 'friendly':
-            // Ton chaleureux mais sans excès
-            if (!response.includes('🙏') && Math.random() > 0.5) {
-                response += ' 🙏';
+            // Ton chaleureux mais mesuré
+            if (sentiment.label === 'positive' && !hasEmoji(response) && Math.random() > 0.5) {
+                response = response.trim() + ' 🙏';
             }
             break;
 
         case 'professional':
-            // Retirer les emojis si présents, ton formel
-            response = response.replace(/[^\x00-\x7F]/g, '').trim();
+            // Retirer tous les emojis et uniformiser la ponctuation
+            response = removeEmojis(response);
             response = response.replace(/!+/g, '.');
             break;
     }
 
-    return response;
+    return response.trim();
 }
 
-// Analyser le sentiment d'un avis
-export function analyzeSentiment(text: string): { score: number; label: 'positive' | 'neutral' | 'negative' } {
-    const positiveWords = ['excellent', 'parfait', 'super', 'génial', 'top', 'magnifique', 'recommande', 'merci', 'bravo', 'qualité', 'satisfait', 'agréable', 'professionnel'];
-    const negativeWords = ['déçu', 'mauvais', 'nul', 'horrible', 'cher', 'lent', 'attente', 'problème', 'jamais', 'erreur', 'arnaque', 'éviter'];
+// ═══════════════════════════════════════════════════════════════
+// ALTERNATIVES GENERATION
+// ═══════════════════════════════════════════════════════════════
 
-    const lowerText = text.toLowerCase();
-    let score = 0;
+async function generateAlternatives(
+    config: AIResponseConfig,
+    sentiment: SentimentAnalysis,
+    geoKeywords: GeoKeyword[]
+): Promise<string[]> {
+    const alternatives: string[] = [];
 
-    for (const word of positiveWords) {
-        if (lowerText.includes(word)) score += 1;
-    }
+    // Générer 2 versions alternatives
+    for (let i = 0; i < 2; i++) {
+        let altResponse = selectTemplate(sentiment, config);
+        altResponse = enrichWithContext(altResponse, config, sentiment);
 
-    for (const word of negativeWords) {
-        if (lowerText.includes(word)) score -= 1;
-    }
+        // Utiliser des mots-clés différents
+        const shuffledKeywords = [...geoKeywords].sort(() => Math.random() - 0.5);
+        const { response } = integrateKeywordsNaturally(altResponse, shuffledKeywords, 2);
 
-    // Normaliser entre -1 et 1
-    const normalizedScore = Math.max(-1, Math.min(1, score / 3));
-
-    let label: 'positive' | 'neutral' | 'negative';
-    if (normalizedScore > 0.2) label = 'positive';
-    else if (normalizedScore < -0.2) label = 'negative';
-    else label = 'neutral';
-
-    return { score: normalizedScore, label };
-}
-
-// Suggérer des mots-clés à intégrer basé sur l'activité
-export function suggestKeywords(businessCategory: string, location: string): string[] {
-    const categoryKeywords: Record<string, string[]> = {
-        'Restaurant': ['restaurant', 'cuisine', 'menu', 'terrasse', 'repas', 'gastronomie', 'chef'],
-        'Garage automobile': ['garage', 'mécanique', 'réparation', 'entretien', 'voiture', 'auto'],
-        'Salon de coiffure': ['coiffeur', 'salon', 'coupe', 'coloration', 'beauté', 'styliste'],
-        'Boulangerie': ['boulangerie', 'pain', 'viennoiseries', 'pâtisserie', 'artisan'],
-        'Hôtel': ['hôtel', 'séjour', 'chambre', 'accueil', 'confort', 'réservation'],
-        'default': ['service', 'qualité', 'professionnel', 'expérience']
-    };
-
-    const keywords = categoryKeywords[businessCategory] || categoryKeywords['default'];
-
-    // Ajouter le mot-clé de localisation
-    if (location) {
-        const cityMatch = location.match(/\d{5}\s+(\w+)/);
-        if (cityMatch) {
-            keywords.push(cityMatch[1].toLowerCase());
+        if (sentiment.requiresEmpathy) {
+            alternatives.push(addEmpathy(response, sentiment));
+        } else {
+            alternatives.push(response);
         }
     }
 
-    return keywords;
+    return alternatives;
 }
+
+// ═══════════════════════════════════════════════════════════════
+// UTILITY FUNCTIONS
+// ═══════════════════════════════════════════════════════════════
+
+function hasEmoji(text: string): boolean {
+    // Détection basique des emojis courants (sans regex unicode)
+    const commonEmojis = ['✨', '💫', '🙏', '❤️', '👏', '🌟', '😊', '🎉', '💪', '🔥'];
+    return commonEmojis.some(emoji => text.includes(emoji));
+}
+
+function removeEmojis(text: string): string {
+    // Supprimer les emojis courants
+    const emojisToRemove = ['✨', '💫', '🙏', '❤️', '👏', '🌟', '😊', '🎉', '💪', '🔥', '⭐', '💯'];
+    let result = text;
+    for (const emoji of emojisToRemove) {
+        result = result.split(emoji).join('');
+    }
+    return result.replace(/\s+/g, ' ').trim();
+}
+
+function truncateGracefully(text: string, maxLength: number): string {
+    if (text.length <= maxLength) return text;
+
+    // Chercher la dernière phrase complète
+    const truncated = text.substring(0, maxLength - 3);
+    const lastPeriod = truncated.lastIndexOf('.');
+    const lastExclamation = truncated.lastIndexOf('!');
+    const lastQuestion = truncated.lastIndexOf('?');
+
+    const lastSentenceEnd = Math.max(lastPeriod, lastExclamation, lastQuestion);
+
+    if (lastSentenceEnd > maxLength * 0.6) {
+        return text.substring(0, lastSentenceEnd + 1);
+    }
+
+    return truncated + '...';
+}
+
+// ═══════════════════════════════════════════════════════════════
+// QUICK ANALYSIS EXPORTS
+// ═══════════════════════════════════════════════════════════════
+
+export { analyzeSentiment } from './sentiment-engine';
+export { generateGeoKeywords, generateKeywordSuggestions } from './geo-seo-engine';
+export { calculateSEOScore, generateSEOReport } from './seo-score-engine';
+export { requiresHumanValidation } from './sentiment-engine';
