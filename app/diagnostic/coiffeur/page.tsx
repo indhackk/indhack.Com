@@ -91,8 +91,8 @@ function DiagnosticContent() {
           <div className="text-center mb-16">
             <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Chaque mois à {ville}</p>
             <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
-              Des femmes cherchent une coiffeuse.<br />
-              <span className="font-semibold">Elles ne vous trouvent pas.</span>
+              Des clients cherchent un coiffeur.<br />
+              <span className="font-semibold">Ils ne vous trouvent pas.</span>
             </h2>
           </div>
 
@@ -362,52 +362,48 @@ function DiagnosticContent() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
 
-            <div>
-              <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Qui suis-je</p>
+            <div className="order-2 md:order-1">
+              <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Votre interlocutrice</p>
               <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26] mb-6">
-                Je suis Indiana,<br />
-                <span className="font-semibold">consultante à {ville}</span>
+                Indiana Aflalo<br />
+                <span className="font-semibold">Consultante digitale</span>
               </h2>
               <div className="space-y-4 text-[#5C5650] leading-relaxed">
                 <p>
-                  J'aide les <strong className="text-[#2D2A26]">indépendants et petites entreprises</strong> à être
-                  visibles sur internet. Pas de jargon technique, pas de promesses irréalistes.
+                  Diplômée d'un <strong className="text-[#2D2A26]">double master en stratégie digitale</strong>,
+                  j'accompagne les commerces locaux dans leur visibilité en ligne.
                 </p>
                 <p>
-                  Je vous explique simplement ce qu'on peut faire ensemble,
-                  et on avance à votre rythme.
+                  Mon approche : des <strong className="text-[#2D2A26]">explications simples</strong>,
+                  des actions concrètes, et des résultats mesurables.
+                  Chaque euro investi doit vous rapporter des clients.
                 </p>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <span className="bg-white px-4 py-2 rounded-full text-sm text-[#5C5650] shadow-sm">SEO Local</span>
+                <span className="bg-white px-4 py-2 rounded-full text-sm text-[#5C5650] shadow-sm">Création de sites</span>
+                <span className="bg-white px-4 py-2 rounded-full text-sm text-[#5C5650] shadow-sm">Google Business</span>
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl p-8 shadow-sm">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#D4A574] to-[#8B7355] rounded-2xl flex items-center justify-center">
-                  <span className="text-white font-semibold text-xl">IA</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-[#2D2A26]">Indiana Aflalo</p>
-                  <p className="text-[#8B7355] text-sm">Consultante · {ville}</p>
-                </div>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 text-[#5C5650]">
-                  <svg className="w-5 h-5 text-[#6B9B8A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
-                  </svg>
-                  <span>Spécialisée commerces locaux</span>
-                </div>
-                <div className="flex items-center gap-3 text-[#5C5650]">
-                  <svg className="w-5 h-5 text-[#6B9B8A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
-                  </svg>
-                  <span>Sites rapides et modernes</span>
-                </div>
-                <div className="flex items-center gap-3 text-[#5C5650]">
-                  <svg className="w-5 h-5 text-[#6B9B8A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
-                  </svg>
-                  <span>Accompagnement personnalisé</span>
+            <div className="order-1 md:order-2">
+              <div className="relative">
+                <img
+                  src="/images/indiana-aflalo.jpg"
+                  alt="Indiana Aflalo - Consultante digitale"
+                  className="w-full max-w-xs mx-auto rounded-3xl shadow-xl"
+                />
+                <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-4 shadow-lg">
+                  <div className="flex items-center gap-2">
+                    <div className="flex -space-x-1">
+                      <div className="w-6 h-6 bg-[#D4A574] rounded-full flex items-center justify-center">
+                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <span className="text-sm text-[#2D2A26] font-medium">Basée à {ville}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -488,9 +484,9 @@ function DiagnosticContent() {
               <p className="text-[#A89F94] text-sm mb-6">Être trouvée sur Google</p>
 
               <div className="mb-8">
-                <p className="text-sm text-[#A89F94]">Site</p>
-                <p className="text-4xl font-light">690€</p>
-                <p className="text-sm text-[#A89F94]">+ SEO à partir de <span className="text-white">180€</span>/mois</p>
+                <p className="text-sm text-[#A89F94]">à partir de</p>
+                <p className="text-4xl font-light">180€<span className="text-xl">/mois</span></p>
+                <p className="text-sm text-[#A89F94]">Site (690€) inclus</p>
               </div>
 
               <ul className="space-y-3 text-[#D4D0CB] text-sm">
@@ -535,9 +531,9 @@ function DiagnosticContent() {
               <p className="text-[#8B7355] text-sm mb-6">Visibilité maximale</p>
 
               <div className="mb-8">
-                <p className="text-sm text-[#8B7355]">Site</p>
-                <p className="text-4xl font-light text-[#2D2A26]">690€</p>
-                <p className="text-sm text-[#8B7355]">+ SEO à partir de <span className="text-[#2D2A26]">290€</span>/mois</p>
+                <p className="text-sm text-[#8B7355]">à partir de</p>
+                <p className="text-4xl font-light text-[#2D2A26]">290€<span className="text-xl">/mois</span></p>
+                <p className="text-sm text-[#8B7355]">Site (690€) inclus</p>
               </div>
 
               <ul className="space-y-3 text-[#5C5650] text-sm">
