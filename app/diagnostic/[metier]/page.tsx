@@ -6,6 +6,7 @@ import { Search, MapPin, Check, Globe, Calendar, Star, TrendingUp, Phone, Messag
 
 // ══════════════════════════════════════════════════════════════════════════════
 // DIAGNOSTIC PAGE - Version Propre & Pédagogique
+// Dernière mise à jour: 2026-02-03
 // ══════════════════════════════════════════════════════════════════════════════
 
 function DiagnosticContent({ metier }: { metier: string }) {
