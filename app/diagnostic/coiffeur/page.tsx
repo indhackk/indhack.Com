@@ -45,7 +45,7 @@ function DiagnosticContent() {
             </p>
             <p>
               Le problème ? Quand un internaute cherche <strong className="text-[#2D2A26]">"balayage {ville}"</strong>,
-              <strong className="text-[#2D2A26]"> "coloriste {ville}"</strong> ou <strong className="text-[#2D2A26]">"coiffeur visagiste"</strong> sur Google,
+              <strong className="text-[#2D2A26]"> "coloriste {ville}"</strong> ou <strong className="text-[#2D2A26]">"lissage brésilien {ville}"</strong> sur Google,
               il ne tombe pas sur vous.
             </p>
             <p>
@@ -155,7 +155,7 @@ function DiagnosticContent() {
               </h3>
               <p className="text-[#5C5650] leading-relaxed">
                 Quand un internaute cherche <strong className="text-[#2D2A26]">"balayage {ville}"</strong> ou
-                <strong className="text-[#2D2A26]"> "meilleur coiffeur {ville}"</strong>,
+                <strong className="text-[#2D2A26]"> "coloriste {ville}"</strong>,
                 un site web vous permet d'apparaître dans les résultats.
               </p>
             </div>
@@ -415,7 +415,7 @@ function DiagnosticContent() {
                 <h3 className="text-lg font-semibold text-[#2D2A26] mb-2">Je vous rends visible sur Google</h3>
                 <p className="text-[#5C5650]">
                   J'optimise votre site pour que vous apparaissiez quand quelqu'un cherche
-                  <strong className="text-[#2D2A26]"> "balayage {ville}"</strong>, <strong className="text-[#2D2A26]">"coloriste {ville}"</strong>, <strong className="text-[#2D2A26]">"coiffeur visagiste"</strong>, etc.
+                  <strong className="text-[#2D2A26]"> "balayage {ville}"</strong>, <strong className="text-[#2D2A26]">"coloriste {ville}"</strong>, <strong className="text-[#2D2A26]">"lissage brésilien"</strong>, etc.
                 </p>
               </div>
             </div>
