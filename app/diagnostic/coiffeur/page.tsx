@@ -49,7 +49,7 @@ function DiagnosticContent() {
               il ne tombe pas sur vous.
             </p>
             <p>
-              Elle tombe sur vos concurrents. Ceux qui ont un site internet.
+              Il tombe sur vos concurrents. Ceux qui ont un site internet.
             </p>
           </div>
 
@@ -579,15 +579,8 @@ function DiagnosticContent() {
               <p className="text-[#A89F94] text-sm mb-6">Être trouvé sur Google</p>
 
               <div className="mb-8">
-                <div className="flex items-baseline gap-2 mb-1">
-                  <p className="text-2xl font-light">690€</p>
-                  <p className="text-sm text-[#A89F94]">site</p>
-                </div>
-                <div className="flex items-baseline gap-2">
-                  <p className="text-sm text-[#A89F94]">+</p>
-                  <p className="text-3xl font-light">180€</p>
-                  <p className="text-sm text-[#A89F94]">/mois SEO</p>
-                </div>
+                <p className="text-sm text-[#A89F94] mb-1">Tarif site +</p>
+                <p className="text-4xl font-light">180€<span className="text-lg text-[#A89F94]">/mois</span></p>
               </div>
 
               <ul className="space-y-3 text-[#D4D0CB] text-sm">
@@ -601,13 +594,13 @@ function DiagnosticContent() {
                   <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Pages d'atterrissage SEO
+                  1 mot-clé principal + longues traînes
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  5-10 mots-clés ciblés
+                  Contenu validé avant publication
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -632,15 +625,8 @@ function DiagnosticContent() {
               <p className="text-[#8B7355] text-sm mb-6">Visibilité maximale</p>
 
               <div className="mb-8">
-                <div className="flex items-baseline gap-2 mb-1">
-                  <p className="text-2xl font-light text-[#2D2A26]">690€</p>
-                  <p className="text-sm text-[#8B7355]">site</p>
-                </div>
-                <div className="flex items-baseline gap-2">
-                  <p className="text-sm text-[#8B7355]">+</p>
-                  <p className="text-3xl font-light text-[#2D2A26]">290€</p>
-                  <p className="text-sm text-[#8B7355]">/mois SEO</p>
-                </div>
+                <p className="text-sm text-[#8B7355] mb-1">Tarif site +</p>
+                <p className="text-4xl font-light text-[#2D2A26]">290€<span className="text-lg text-[#8B7355]">/mois</span></p>
               </div>
 
               <ul className="space-y-3 text-[#5C5650] text-sm">
@@ -654,25 +640,25 @@ function DiagnosticContent() {
                   <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  10-20 mots-clés ciblés
+                  2-3 mots-clés + longues traînes
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Gestion complète fiche Google
+                  Gestion fiche Google optimisée SEO
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Réponses aux avis
+                  Réponses aux avis optimisées SEO
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Posts Google hebdomadaires
+                  Posts Google avec mots-clés
                 </li>
               </ul>
 
