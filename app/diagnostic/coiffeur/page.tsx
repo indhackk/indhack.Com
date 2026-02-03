@@ -2,11 +2,10 @@
 
 import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
-import { Search, MapPin, Check, Globe, Calendar, Star, TrendingUp, Phone, MessageCircle, ChevronDown, Users, BarChart3, Bot, AlertTriangle, Sparkles, Zap, Code, Rocket, Heart, Shield } from 'lucide-react'
+import Image from 'next/image'
 
 // ══════════════════════════════════════════════════════════════════════════════
-// DIAGNOSTIC COIFFEUR - Version Clean & Vendeuse
-// Template réutilisable pour tous les salons de coiffure sans site
+// PAGE DIAGNOSTIC COIFFEUR - Version Simple & Élégante
 // ══════════════════════════════════════════════════════════════════════════════
 
 function DiagnosticContent() {
@@ -16,565 +15,394 @@ function DiagnosticContent() {
   const note = searchParams.get('note') || '4.6'
   const avis = searchParams.get('avis') || '155'
 
-  // Calculs pour personnalisation
-  const noteNum = parseFloat(note)
-  const avisNum = parseInt(avis)
-  const isExcellent = noteNum >= 4.5
-  const hasLotsOfReviews = avisNum >= 100
-
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#FDFCFB]">
 
-      {/* ════════ HERO IMMERSIF ════════ */}
-      <section className="relative min-h-screen flex items-center">
-        {/* Background */}
-        <div className="absolute inset-0">
+      {/* ════════ HERO - Texte gauche / Image droite ════════ */}
+      <section className="min-h-screen grid lg:grid-cols-2">
+
+        {/* Colonne gauche - Texte */}
+        <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-16 lg:py-0">
+
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-[#F5F0EB] rounded-full px-4 py-2 w-fit mb-8">
+            <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
+            <span className="text-[#8B7355] text-sm font-medium">Analyse pour {nom}</span>
+          </div>
+
+          {/* Titre */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-[#2D2A26] leading-[1.1] mb-8">
+            Vos clientes<br />
+            vous adorent.<br />
+            <span className="font-semibold text-[#8B7355]">Google ne le sait pas.</span>
+          </h1>
+
+          {/* Texte */}
+          <div className="space-y-6 text-[#5C5650] text-lg leading-relaxed mb-10 max-w-lg">
+            <p>
+              <strong className="text-[#2D2A26]">{note} étoiles</strong> et <strong className="text-[#2D2A26]">{avis} avis</strong> sur votre fiche Google.
+              C'est la preuve que vous faites du bon travail.
+            </p>
+            <p>
+              Le problème ? Quand une femme cherche <strong className="text-[#2D2A26]">"coiffeur {ville}"</strong> ou
+              <strong className="text-[#2D2A26]"> "coloriste {ville}"</strong> sur Google,
+              elle ne tombe pas sur vous.
+            </p>
+            <p>
+              Elle tombe sur vos concurrents. Ceux qui ont un site internet.
+            </p>
+          </div>
+
+          {/* Stats */}
+          <div className="flex items-center gap-8 text-sm text-[#8B7355]">
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+              <span>{note}/5 sur Google</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <span>{ville}</span>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Colonne droite - Image */}
+        <div className="relative h-[50vh] lg:h-auto">
           <img
-            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80"
-            alt="Salon de coiffure"
+            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=85"
+            alt={`Salon ${nom}`}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:bg-gradient-to-r lg:from-[#FDFCFB] lg:via-transparent lg:to-transparent"></div>
         </div>
 
-        {/* Contenu */}
-        <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12 py-24">
-          <div className="max-w-2xl">
-
-            {/* Badge discret */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-10">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-              <span className="text-white/80 text-sm">Analyse personnalisée pour {nom}</span>
-            </div>
-
-            {/* Accroche principale */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-8">
-              <span className="font-light">Et si vos futures clientes</span>
-              <br />
-              <span className="font-semibold">vous trouvaient sur Google ?</span>
-            </h1>
-
-            {/* Contexte flatteur */}
-            <div className="space-y-6 mb-12">
-              <p className="text-xl text-white/90 leading-relaxed">
-                {isExcellent && hasLotsOfReviews ? (
-                  <>
-                    <strong className="text-white">{note}/5 étoiles</strong> et <strong className="text-white">{avis} avis</strong> sur Google —
-                    vos clientes ne tarissent pas d'éloges. Ce niveau de satisfaction, c'est rare.
-                    C'est le signe d'un vrai savoir-faire.
-                  </>
-                ) : (
-                  <>
-                    <strong className="text-white">{note}/5 étoiles</strong> sur Google —
-                    vos clientes apprécient votre travail, et ça se voit.
-                  </>
-                )}
-              </p>
-              <p className="text-lg text-white/70 leading-relaxed">
-                Le problème ? Cette réputation reste invisible pour toutes celles qui ne vous connaissent pas encore.
-                <br /><br />
-                Chaque mois, <strong className="text-white">2 800 personnes</strong> tapent "coiffeur {ville}" dans Google.
-                <br />
-                <span className="text-amber-300">Elles ne vous trouvent pas.</span>
-              </p>
-            </div>
-
-            {/* Infos salon */}
-            <div className="flex flex-wrap items-center gap-6 text-white/60 text-sm">
-              <div className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
-                <span>{note}/5 sur Google</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Heart className="w-4 h-4 text-rose-400" />
-                <span>{avis} avis clients</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                <span>{ville}</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-          <span className="text-white/40 text-xs uppercase tracking-wider">Découvrir</span>
-          <ChevronDown className="w-5 h-5 text-white/40 animate-bounce" />
-        </div>
       </section>
 
-      {/* ════════ LE PROBLÈME ════════ */}
-      <section className="py-24 md:py-32 px-6 md:px-12">
+      {/* ════════ LE CONSTAT EN CHIFFRES ════════ */}
+      <section className="py-24 px-8 md:px-16 bg-white">
         <div className="max-w-4xl mx-auto">
 
-          <div className="text-center mb-20">
-            <span className="text-rose-500 text-sm font-medium uppercase tracking-wider">Le constat</span>
-            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mt-4 mb-6">
-              Sans site web, vous êtes
-              <span className="font-semibold"> invisible</span>
-            </h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
-              Une fiche Google et un compte Instagram, c'est bien. Mais ce n'est plus suffisant en 2025.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-
-            <div className="group bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-14 h-14 bg-rose-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Search className="w-7 h-7 text-rose-500" />
-              </div>
-              <h3 className="text-xl font-medium text-gray-900 mb-3">
-                Introuvable sur Google
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quand quelqu'un cherche "coloriste {ville}" ou "lissage brésilien {ville}",
-                vous n'apparaissez nulle part. Vos concurrents avec un site prennent toute la place.
-              </p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-14 h-14 bg-violet-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Bot className="w-7 h-7 text-violet-500" />
-              </div>
-              <h3 className="text-xl font-medium text-gray-900 mb-3">
-                Inexistante pour les IA
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                ChatGPT, Gemini, Perplexity... De plus en plus de gens demandent des recommandations aux IA.
-                Sans site structuré, elles ne peuvent pas parler de vous.
-              </p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Globe className="w-7 h-7 text-amber-500" />
-              </div>
-              <h3 className="text-xl font-medium text-gray-900 mb-3">
-                Pas de vitrine à vous
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Instagram peut fermer votre compte. Google peut modifier sa fiche.
-                Un site web, c'est VOTRE espace, que personne ne peut vous enlever.
-              </p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <TrendingUp className="w-7 h-7 text-emerald-500" />
-              </div>
-              <h3 className="text-xl font-medium text-gray-900 mb-3">
-                Des clientes qui vont ailleurs
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Ces 2 800 recherches mensuelles, ce sont des femmes prêtes à prendre RDV.
-                Aujourd'hui, elles atterrissent chez vos concurrents.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* ════════ APERÇU DU FUTUR SITE ════════ */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-5xl mx-auto">
-
           <div className="text-center mb-16">
-            <span className="text-blue-500 text-sm font-medium uppercase tracking-wider">Projection</span>
-            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mt-4 mb-6">
-              Votre site pourrait ressembler
-              <span className="font-semibold"> à ça</span>
+            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Chaque mois à {ville}</p>
+            <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
+              Des femmes cherchent une coiffeuse.<br />
+              <span className="font-semibold">Elles ne vous trouvent pas.</span>
             </h2>
-            <p className="text-gray-500 text-lg">
-              Un aperçu de ce que je peux créer pour {nom}
-            </p>
           </div>
 
-          {/* Browser Mockup */}
-          <div className="relative">
-            {/* Ombre décorative */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-blue-100 via-violet-100 to-rose-100 rounded-[2rem] blur-2xl opacity-40" />
+          {/* Grille de stats */}
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
 
-            {/* Browser frame */}
-            <div className="relative bg-gray-100 rounded-t-2xl px-4 py-3 flex items-center gap-3">
-              <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-rose-400" />
-                <div className="w-3 h-3 rounded-full bg-amber-400" />
-                <div className="w-3 h-3 rounded-full bg-emerald-400" />
-              </div>
-              <div className="flex-1 bg-white rounded-lg px-4 py-1.5 text-sm text-gray-400 text-center">
-                {nom.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9]/g, '')}.fr
-              </div>
+            <div className="bg-[#FDFCFB] rounded-2xl p-8 text-center">
+              <p className="text-5xl font-light text-[#2D2A26] mb-2">2 800</p>
+              <p className="text-[#8B7355]">recherches <strong>"coiffeur {ville}"</strong></p>
             </div>
 
-            {/* Site preview */}
-            <div className="relative bg-white rounded-b-2xl shadow-2xl overflow-hidden border border-gray-200">
-
-              {/* Hero du site fictif */}
-              <div className="relative h-[450px] md:h-[550px]">
-                <img
-                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80"
-                  alt={nom}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-
-                {/* Header fictif */}
-                <div className="absolute top-0 left-0 right-0 p-6 md:p-8 flex items-center justify-between">
-                  <div className="text-white font-medium text-xl tracking-tight">
-                    {nom}
-                  </div>
-                  <nav className="hidden md:flex items-center gap-8 text-white/70 text-sm">
-                    <span className="hover:text-white transition-colors cursor-pointer">Prestations</span>
-                    <span className="hover:text-white transition-colors cursor-pointer">Galerie</span>
-                    <span className="hover:text-white transition-colors cursor-pointer">Tarifs</span>
-                    <span className="bg-white text-gray-900 px-5 py-2.5 rounded-full font-medium hover:bg-gray-100 transition-colors cursor-pointer">
-                      Réserver
-                    </span>
-                  </nav>
-                </div>
-
-                {/* Contenu hero */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-                  <p className="text-white/60 text-sm uppercase tracking-widest mb-4">Salon de coiffure · {ville}</p>
-                  <h3 className="text-3xl md:text-5xl text-white font-light mb-6 leading-tight">
-                    L'expertise coloration
-                    <br />
-                    <span className="font-medium">au cœur de {ville}</span>
-                  </h3>
-                  <div className="flex flex-wrap items-center gap-6 text-white/70 text-sm mb-8">
-                    <span className="flex items-center gap-2">
-                      <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
-                      {note}/5 · {avis} avis
-                    </span>
-                    <span className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4" />
-                      {ville} Centre
-                    </span>
-                  </div>
-                  <div className="flex flex-wrap gap-4">
-                    <span className="bg-white text-gray-900 px-8 py-4 rounded-full font-medium cursor-pointer hover:bg-gray-100 transition-colors">
-                      Prendre rendez-vous
-                    </span>
-                    <span className="border border-white/30 text-white px-8 py-4 rounded-full cursor-pointer hover:bg-white/10 transition-colors">
-                      Découvrir le salon
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Services */}
-              <div className="p-8 md:p-12">
-                <h4 className="text-xl font-medium text-gray-900 mb-8">Nos expertises</h4>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {['Coloration', 'Lissage brésilien', 'Balayage', 'Soins Tokio'].map((service) => (
-                    <div key={service} className="bg-gray-50 hover:bg-gray-100 rounded-2xl p-5 text-center transition-colors cursor-pointer">
-                      <p className="text-gray-900 font-medium">{service}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
+            <div className="bg-[#FDFCFB] rounded-2xl p-8 text-center">
+              <p className="text-5xl font-light text-[#2D2A26] mb-2">320</p>
+              <p className="text-[#8B7355]">recherches <strong>"lissage brésilien"</strong></p>
             </div>
+
+            <div className="bg-[#FDFCFB] rounded-2xl p-8 text-center">
+              <p className="text-5xl font-light text-[#2D2A26] mb-2">260</p>
+              <p className="text-[#8B7355]">recherches <strong>"coloriste {ville}"</strong></p>
+            </div>
+
           </div>
 
-          <p className="text-center text-gray-400 text-sm mt-8">
-            Aperçu indicatif — le design final sera créé sur-mesure selon vos envies
+          <p className="text-center text-[#5C5650] text-lg max-w-2xl mx-auto">
+            Ces chiffres sont réels. Ce sont des femmes qui tapent ces mots dans Google,
+            prêtes à prendre rendez-vous. <strong className="text-[#2D2A26]">Sans site internet, vous êtes invisible pour elles.</strong>
           </p>
 
         </div>
       </section>
 
-      {/* ════════ POURQUOI MOI ════════ */}
-      <section className="py-24 md:py-32 px-6 md:px-12">
-        <div className="max-w-4xl mx-auto">
+      {/* ════════ POURQUOI UN SITE ════════ */}
+      <section className="py-24 px-8 md:px-16">
+        <div className="max-w-5xl mx-auto">
 
-          <div className="text-center mb-20">
-            <span className="text-emerald-500 text-sm font-medium uppercase tracking-wider">Ma différence</span>
-            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mt-4 mb-6">
-              Pas un site Wix.
-              <span className="font-semibold"> Un vrai site.</span>
+          <div className="text-center mb-16">
+            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Pourquoi c'est important</p>
+            <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
+              Un site internet, c'est votre<br />
+              <span className="font-semibold">vitrine ouverte 24h/24</span>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 gap-8">
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-violet-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Code className="w-8 h-8 text-white" />
+            {/* Carte 1 */}
+            <div className="bg-white rounded-3xl p-10 shadow-sm">
+              <div className="w-16 h-16 bg-[#FEF3E7] rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#D4A574]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-3">Développé en code</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Pas de constructeur type Wix ou WordPress. Du vrai code, optimisé, léger.
-                Résultat : un site ultra-rapide (100/100 sur Google PageSpeed).
+              <h3 className="text-xl font-semibold text-[#2D2A26] mb-4">
+                Être trouvée sur Google
+              </h3>
+              <p className="text-[#5C5650] leading-relaxed">
+                Quand quelqu'un cherche <strong className="text-[#2D2A26]">"balayage {ville}"</strong> ou
+                <strong className="text-[#2D2A26]"> "meilleur coiffeur {ville}"</strong>,
+                un site web vous permet d'apparaître dans les résultats.
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-white" />
+            {/* Carte 2 */}
+            <div className="bg-white rounded-3xl p-10 shadow-sm">
+              <div className="w-16 h-16 bg-[#E8F5F0] rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#6B9B8A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-3">Le site est à vous</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Contrairement aux solutions en location (Simplebo, Wix...), vous êtes propriétaire.
-                Si on arrête de travailler ensemble, vous gardez tout.
+              <h3 className="text-xl font-semibold text-[#2D2A26] mb-4">
+                Inspirer confiance
+              </h3>
+              <p className="text-[#5C5650] leading-relaxed">
+                Une nouvelle cliente qui découvre votre travail veut en savoir plus.
+                Un site pro avec vos <strong className="text-[#2D2A26]">photos, tarifs et avis</strong> la rassure et l'incite à réserver.
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Rocket className="w-8 h-8 text-white" />
+            {/* Carte 3 */}
+            <div className="bg-white rounded-3xl p-10 shadow-sm">
+              <div className="w-16 h-16 bg-[#F0E8F5] rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#9B6BA3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
               </div>
-              <h3 className="text-lg font-medium text-gray-900 mb-3">Optimisé SEO & IA</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Structure technique pensée pour Google ET pour les IA (ChatGPT, Gemini).
-                Vous êtes visible partout où vos clientes cherchent.
+              <h3 className="text-xl font-semibold text-[#2D2A26] mb-4">
+                Travailler pour vous H24
+              </h3>
+              <p className="text-[#5C5650] leading-relaxed">
+                Votre site attire des visiteurs même quand vous êtes fermée.
+                Le dimanche soir, une cliente peut découvrir votre salon et
+                <strong className="text-[#2D2A26]"> réserver pour la semaine</strong>.
               </p>
             </div>
 
-          </div>
-
-          {/* Comparatif rapide */}
-          <div className="bg-gray-50 rounded-3xl p-8 md:p-10">
-            <h4 className="font-medium text-gray-900 mb-6 text-center">En résumé</h4>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <p className="text-sm font-medium text-gray-400 uppercase tracking-wider mb-4">Wix / Simplebo</p>
-                <ul className="space-y-3">
-                  {[
-                    'Site loué (jamais vraiment à vous)',
-                    'Templates génériques',
-                    'Lent à charger',
-                    '50-100€/mois à vie',
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-gray-500 text-sm">
-                      <span className="w-1.5 h-1.5 bg-gray-300 rounded-full" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+            {/* Carte 4 */}
+            <div className="bg-white rounded-3xl p-10 shadow-sm">
+              <div className="w-16 h-16 bg-[#E7F0FE] rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-[#5B7FC3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
               </div>
-              <div>
-                <p className="text-sm font-medium text-emerald-500 uppercase tracking-wider mb-4">Avec moi</p>
-                <ul className="space-y-3">
-                  {[
-                    'Site 100% à vous (code + hébergement)',
-                    'Design sur-mesure unique',
-                    'Ultra-rapide (code optimisé)',
-                    'Paiement unique + accompagnement optionnel',
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-gray-700 text-sm">
-                      <Check className="w-4 h-4 text-emerald-500" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <h3 className="text-xl font-semibold text-[#2D2A26] mb-4">
+                Posséder votre espace
+              </h3>
+              <p className="text-[#5C5650] leading-relaxed">
+                Instagram peut changer ses règles demain. Votre site, c'est <strong className="text-[#2D2A26]">votre propriété</strong>.
+                Personne ne peut vous l'enlever ou vous faire payer des commissions.
+              </p>
             </div>
+
           </div>
 
         </div>
       </section>
 
-      {/* ════════ SEO EXPLIQUÉ ════════ */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-gray-900 text-white">
+      {/* ════════ APERÇU DU SITE ════════ */}
+      <section className="py-24 px-8 md:px-16 bg-[#F5F0EB]">
+        <div className="max-w-5xl mx-auto">
+
+          <div className="text-center mb-12">
+            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Aperçu</p>
+            <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
+              Votre futur site pourrait<br />
+              <span className="font-semibold">ressembler à ça</span>
+            </h2>
+          </div>
+
+          {/* Mockup navigateur */}
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+
+            {/* Barre navigateur */}
+            <div className="bg-[#F5F5F5] px-4 py-3 flex items-center gap-3 border-b border-gray-200">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-[#FF5F57]"></div>
+                <div className="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
+                <div className="w-3 h-3 rounded-full bg-[#28CA41]"></div>
+              </div>
+              <div className="flex-1 bg-white rounded-md px-4 py-1 text-sm text-gray-400 text-center mx-8">
+                {nom.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}.fr
+              </div>
+            </div>
+
+            {/* Contenu site */}
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1400&q=85"
+                alt="Aperçu site"
+                className="w-full h-[400px] md:h-[500px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+
+              {/* Header fictif */}
+              <div className="absolute top-0 left-0 right-0 p-6 flex items-center justify-between">
+                <span className="text-white font-medium text-lg">{nom}</span>
+                <div className="hidden md:flex items-center gap-6 text-white/80 text-sm">
+                  <span>Prestations</span>
+                  <span>Galerie</span>
+                  <span>Tarifs</span>
+                  <span className="bg-white text-[#2D2A26] px-4 py-2 rounded-full font-medium">Réserver</span>
+                </div>
+              </div>
+
+              {/* Contenu fictif */}
+              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                <p className="text-white/70 text-sm uppercase tracking-wider mb-3">Salon de coiffure · {ville}</p>
+                <h3 className="text-3xl md:text-4xl text-white font-light mb-6">
+                  Votre experte coloration<br />
+                  <span className="font-semibold">au cœur de {ville}</span>
+                </h3>
+                <div className="flex items-center gap-4">
+                  <span className="bg-white text-[#2D2A26] px-6 py-3 rounded-full font-medium">
+                    Prendre rendez-vous
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <p className="text-center text-[#8B7355] text-sm mt-6">
+            Design créé sur-mesure selon vos envies
+          </p>
+
+        </div>
+      </section>
+
+      {/* ════════ CE QUE JE FAIS POUR VOUS ════════ */}
+      <section className="py-24 px-8 md:px-16 bg-white">
         <div className="max-w-4xl mx-auto">
 
-          <div className="text-center mb-20">
-            <span className="text-blue-400 text-sm font-medium uppercase tracking-wider">Le SEO expliqué</span>
-            <h2 className="text-3xl md:text-4xl font-light mt-4 mb-6">
-              Comment on fait pour apparaître
-              <span className="font-semibold"> sur Google ?</span>
+          <div className="text-center mb-16">
+            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Mon accompagnement</p>
+            <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
+              Je m'occupe de tout.<br />
+              <span className="font-semibold">Vous vous concentrez sur vos clientes.</span>
             </h2>
           </div>
 
           <div className="space-y-6">
 
-            <div className="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10">
-              <div className="flex items-start gap-6">
-                <span className="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">1</span>
-                <div>
-                  <h3 className="text-xl font-medium mb-3">Un site avec les bons mots-clés</h3>
-                  <p className="text-white/70 leading-relaxed mb-4">
-                    Google analyse le contenu de votre site. Si quelqu'un tape "lissage brésilien {ville}"
-                    et que vous avez une page dédiée à ce service, vous avez des chances d'apparaître.
-                  </p>
-                  <div className="grid grid-cols-2 gap-3">
-                    {[
-                      { kw: `coiffeur ${ville.toLowerCase()}`, vol: '2 800' },
-                      { kw: `lissage brésilien ${ville.toLowerCase()}`, vol: '320' },
-                      { kw: `coloriste ${ville.toLowerCase()}`, vol: '260' },
-                      { kw: `balayage ${ville.toLowerCase()}`, vol: '210' },
-                    ].map((item) => (
-                      <div key={item.kw} className="flex items-center justify-between bg-white/5 rounded-lg px-4 py-2">
-                        <span className="text-white/80 text-sm">"{item.kw}"</span>
-                        <span className="text-blue-400 text-xs">{item.vol}/mois</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+            <div className="flex items-start gap-6 p-6 bg-[#FDFCFB] rounded-2xl">
+              <div className="w-12 h-12 bg-[#D4A574] rounded-xl flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-semibold">1</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-[#2D2A26] mb-2">Je crée votre site sur-mesure</h3>
+                <p className="text-[#5C5650]">
+                  Un site <strong className="text-[#2D2A26]">rapide et élégant</strong>, avec vos photos,
+                  vos services, vos tarifs. Prêt à l'emploi, vous n'avez rien à faire.
+                </p>
               </div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10">
-              <div className="flex items-start gap-6">
-                <span className="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">2</span>
-                <div>
-                  <h3 className="text-xl font-medium mb-3">Du contenu régulier</h3>
-                  <p className="text-white/70 leading-relaxed">
-                    Google privilégie les sites qui publient régulièrement. Des articles de blog répondant
-                    aux questions que se posent vos clientes ("Quelle différence entre balayage et mèches ?")
-                    vous font remonter dans les résultats.
-                  </p>
-                </div>
+            <div className="flex items-start gap-6 p-6 bg-[#FDFCFB] rounded-2xl">
+              <div className="w-12 h-12 bg-[#D4A574] rounded-xl flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-semibold">2</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-[#2D2A26] mb-2">Je vous rends visible sur Google</h3>
+                <p className="text-[#5C5650]">
+                  J'optimise votre site pour que vous apparaissiez quand quelqu'un cherche
+                  <strong className="text-[#2D2A26]"> "coiffeur {ville}"</strong>, <strong className="text-[#2D2A26]">"coloriste {ville}"</strong>, etc.
+                </p>
               </div>
             </div>
 
-            <div className="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10">
-              <div className="flex items-start gap-6">
-                <span className="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">3</span>
-                <div>
-                  <h3 className="text-xl font-medium mb-3">Une fiche Google optimisée</h3>
-                  <p className="text-white/70 leading-relaxed">
-                    Vous avez déjà une fiche Google avec {note}★. C'est un excellent point de départ.
-                    En l'optimisant (description, posts réguliers, réponses aux avis), on peut viser
-                    le "Pack Local" — ces 3 résultats avec la carte qui apparaissent en haut de Google.
-                  </p>
-                </div>
+            <div className="flex items-start gap-6 p-6 bg-[#FDFCFB] rounded-2xl">
+              <div className="w-12 h-12 bg-[#D4A574] rounded-xl flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-semibold">3</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-[#2D2A26] mb-2">J'optimise votre fiche Google</h3>
+                <p className="text-[#5C5650]">
+                  Votre fiche avec <strong className="text-[#2D2A26]">{note}★ et {avis} avis</strong> est un atout.
+                  Je l'optimise pour qu'elle ressorte encore mieux dans les résultats.
+                </p>
               </div>
             </div>
 
-          </div>
-
-        </div>
-      </section>
-
-      {/* ════════ L'URGENCE ════════ */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-gradient-to-br from-rose-50 to-amber-50">
-        <div className="max-w-3xl mx-auto text-center">
-
-          <div className="w-20 h-20 bg-rose-100 rounded-3xl flex items-center justify-center mx-auto mb-8">
-            <AlertTriangle className="w-10 h-10 text-rose-500" />
-          </div>
-
-          <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-6">
-            Plus vous attendez,
-            <span className="font-semibold"> plus vos concurrents avancent</span>
-          </h2>
-
-          <div className="text-gray-600 text-lg leading-relaxed space-y-4 mb-12">
-            <p>
-              Le référencement prend du temps — généralement 3 à 6 mois pour voir des résultats significatifs.
-            </p>
-            <p>
-              Pendant ce temps, les salons qui ont déjà un site continuent de capter
-              les clientes qui vous cherchent.
-            </p>
-            <p className="font-medium text-gray-900">
-              Chaque mois sans site, ce sont des dizaines de clientes potentielles
-              qui atterrissent ailleurs.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 max-w-xl mx-auto">
-            <div className="bg-white rounded-2xl p-6 text-left shadow-sm">
-              <p className="text-rose-500 font-medium mb-3">Aujourd'hui</p>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-rose-400 rounded-full" />
-                  Invisible sur Google
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-rose-400 rounded-full" />
-                  Inexistante pour ChatGPT
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-rose-400 rounded-full" />
-                  Dépendante des plateformes
-                </li>
-              </ul>
+            <div className="flex items-start gap-6 p-6 bg-[#FDFCFB] rounded-2xl">
+              <div className="w-12 h-12 bg-[#D4A574] rounded-xl flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-semibold">4</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-[#2D2A26] mb-2">Le site est à vous</h3>
+                <p className="text-[#5C5650]">
+                  Contrairement aux solutions où vous louez votre site, ici <strong className="text-[#2D2A26]">vous êtes propriétaire</strong>.
+                  Si on arrête de travailler ensemble, vous gardez tout.
+                </p>
+              </div>
             </div>
-            <div className="bg-white rounded-2xl p-6 text-left shadow-sm">
-              <p className="text-emerald-500 font-medium mb-3">Dans 6 mois</p>
-              <ul className="space-y-2 text-gray-600 text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
-                  Visible sur les recherches locales
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
-                  Recommandée par les IA
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
-                  Propriétaire de votre vitrine
-                </li>
-              </ul>
-            </div>
+
           </div>
 
         </div>
       </section>
 
       {/* ════════ QUI SUIS-JE ════════ */}
-      <section className="py-24 md:py-32 px-6 md:px-12">
+      <section className="py-24 px-8 md:px-16 bg-[#FDFCFB]">
         <div className="max-w-4xl mx-auto">
 
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
 
             <div>
-              <span className="text-gray-400 text-sm font-medium uppercase tracking-wider">Qui suis-je</span>
-              <h2 className="text-3xl md:text-4xl font-light text-gray-900 mt-4 mb-8">
-                Je suis Indiana,
-                <br />
-                <span className="font-semibold">consultante SEO à {ville}</span>
+              <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Qui suis-je</p>
+              <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26] mb-6">
+                Je suis Indiana,<br />
+                <span className="font-semibold">consultante à {ville}</span>
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-[#5C5650] leading-relaxed">
                 <p>
-                  Double master en stratégie digitale et expérience utilisateur.
-                  Après quelques années en agence, j'ai choisi l'indépendance pour
-                  accompagner les entrepreneurs de la Côte d'Azur.
+                  J'aide les <strong className="text-[#2D2A26]">indépendants et petites entreprises</strong> à être
+                  visibles sur internet. Pas de jargon technique, pas de promesses irréalistes.
                 </p>
                 <p>
-                  Mon approche : pas de jargon, pas de promesses en l'air.
-                  Je vous explique ce qui est réaliste, ce qui prend du temps,
-                  et on construit ensemble.
-                </p>
-                <p className="font-medium text-gray-900">
-                  Mon objectif : que vous soyez autonome, avec un site qui vous appartient vraiment.
+                  Je vous explique simplement ce qu'on peut faire ensemble,
+                  et on avance à votre rythme.
                 </p>
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-blue-100 via-violet-100 to-rose-100 rounded-3xl blur-2xl opacity-50" />
-              <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center">
-                    <span className="text-white font-semibold text-xl">IA</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Indiana Aflalo</h3>
-                    <p className="text-gray-500 text-sm">Consultante SEO · {ville}</p>
-                  </div>
+            <div className="bg-white rounded-3xl p-8 shadow-sm">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#D4A574] to-[#8B7355] rounded-2xl flex items-center justify-center">
+                  <span className="text-white font-semibold text-xl">IA</span>
                 </div>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-gray-600">
-                    <Check className="w-5 h-5 text-emerald-500 flex-shrink-0" />
-                    <span>Double master digital & UX</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-600">
-                    <Check className="w-5 h-5 text-emerald-500 flex-shrink-0" />
-                    <span>Développement en code (Next.js)</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-600">
-                    <Check className="w-5 h-5 text-emerald-500 flex-shrink-0" />
-                    <span>Spécialisée SEO local Côte d'Azur</span>
-                  </div>
+                <div>
+                  <p className="font-semibold text-[#2D2A26]">Indiana Aflalo</p>
+                  <p className="text-[#8B7355] text-sm">Consultante · {ville}</p>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 text-[#5C5650]">
+                  <svg className="w-5 h-5 text-[#6B9B8A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Spécialisée commerces locaux</span>
+                </div>
+                <div className="flex items-center gap-3 text-[#5C5650]">
+                  <svg className="w-5 h-5 text-[#6B9B8A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Sites rapides et modernes</span>
+                </div>
+                <div className="flex items-center gap-3 text-[#5C5650]">
+                  <svg className="w-5 h-5 text-[#6B9B8A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  <span>Accompagnement personnalisé</span>
                 </div>
               </div>
             </div>
@@ -585,128 +413,162 @@ function DiagnosticContent() {
       </section>
 
       {/* ════════ TARIFS ════════ */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-gray-50" id="tarifs">
+      <section className="py-24 px-8 md:px-16 bg-white" id="tarifs">
         <div className="max-w-5xl mx-auto">
 
           <div className="text-center mb-16">
-            <span className="text-gray-400 text-sm font-medium uppercase tracking-wider">Investissement</span>
-            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mt-4 mb-6">
-              Des formules
-              <span className="font-semibold"> adaptées à vos besoins</span>
+            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Tarifs</p>
+            <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
+              Des formules claires,<br />
+              <span className="font-semibold">sans surprise</span>
             </h2>
-            <p className="text-gray-500 text-lg">
-              Vous êtes propriétaire du site. Sans engagement sur les accompagnements.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
 
             {/* Formule 1 */}
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Site Vitrine</h3>
-                <p className="text-gray-500 text-sm">Votre présence en ligne professionnelle</p>
-              </div>
+            <div className="bg-[#FDFCFB] rounded-3xl p-8">
+              <h3 className="text-xl font-semibold text-[#2D2A26] mb-2">Site Vitrine</h3>
+              <p className="text-[#8B7355] text-sm mb-6">Votre présence en ligne</p>
 
               <div className="mb-8">
-                <p className="text-sm text-gray-400 mb-1">à partir de</p>
-                <p className="text-4xl font-light text-gray-900">690<span className="text-lg">€</span></p>
-                <p className="text-sm text-gray-400 mt-1">paiement unique</p>
+                <p className="text-sm text-[#8B7355]">à partir de</p>
+                <p className="text-4xl font-light text-[#2D2A26]">690€</p>
+                <p className="text-sm text-[#8B7355]">paiement unique</p>
               </div>
 
-              <ul className="space-y-4 mb-8">
-                {[
-                  'Site 5-7 pages sur-mesure',
-                  'Design unique à votre image',
-                  'Développé en code (ultra-rapide)',
-                  'Responsive mobile & tablette',
-                  'Bouton réservation intégré',
-                  'Vous êtes propriétaire du site',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-gray-600 text-sm">
-                    <Check className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" />
-                    {item}
-                  </li>
-                ))}
+              <ul className="space-y-3 text-[#5C5650] text-sm">
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Site 5-7 pages sur-mesure
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Design à votre image
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Adapté mobile et tablette
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Bouton de réservation
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Vous êtes propriétaire
+                </li>
               </ul>
-
-              <p className="text-xs text-gray-400">
-                Hébergement à votre charge (~5€/mois sur Vercel ou autre)
-              </p>
             </div>
 
             {/* Formule 2 - Recommandée */}
-            <div className="relative bg-gray-900 text-white rounded-3xl p-8 shadow-xl">
+            <div className="bg-[#2D2A26] text-white rounded-3xl p-8 relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <span className="bg-gradient-to-r from-amber-400 to-orange-400 text-gray-900 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
+                <span className="bg-[#D4A574] text-white text-xs font-semibold px-4 py-1.5 rounded-full">
                   Recommandé
                 </span>
               </div>
 
-              <div className="mb-8 pt-2">
-                <h3 className="text-xl font-semibold mb-2">Site + Visibilité</h3>
-                <p className="text-gray-400 text-sm">Être trouvée sur Google</p>
-              </div>
+              <h3 className="text-xl font-semibold mb-2 pt-2">Site + Visibilité</h3>
+              <p className="text-[#A89F94] text-sm mb-6">Être trouvée sur Google</p>
 
               <div className="mb-8">
-                <p className="text-sm text-gray-500 mb-1">à partir de</p>
-                <p className="text-4xl font-light">990<span className="text-lg">€</span></p>
-                <p className="text-sm text-gray-400 mt-1">puis <span className="text-white font-medium">190€</span>/mois</p>
+                <p className="text-sm text-[#A89F94]">à partir de</p>
+                <p className="text-4xl font-light">990€</p>
+                <p className="text-sm text-[#A89F94]">puis <span className="text-white">190€</span>/mois</p>
               </div>
 
-              <ul className="space-y-4 mb-8">
-                {[
-                  'Tout le pack Site Vitrine',
-                  '10 articles SEO/mois',
-                  'Pages services optimisées',
-                  'Optimisation fiche Google',
-                  'Suivi des positions Google',
-                  'Rapport mensuel clair',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-gray-300 text-sm">
-                    <Check className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
-                    {item}
-                  </li>
-                ))}
+              <ul className="space-y-3 text-[#D4D0CB] text-sm">
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Tout le Site Vitrine
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Optimisation pour Google
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  10 articles par mois
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Optimisation fiche Google
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Rapport mensuel
+                </li>
               </ul>
 
-              <p className="text-xs text-gray-500">
-                Sans engagement — arrêtez quand vous voulez
-              </p>
+              <p className="text-xs text-[#A89F94] mt-6">Sans engagement</p>
             </div>
 
             {/* Formule 3 */}
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Accompagnement Complet</h3>
-                <p className="text-gray-500 text-sm">SEO + Google My Business + IA</p>
-              </div>
+            <div className="bg-[#FDFCFB] rounded-3xl p-8">
+              <h3 className="text-xl font-semibold text-[#2D2A26] mb-2">Accompagnement Complet</h3>
+              <p className="text-[#8B7355] text-sm mb-6">Visibilité maximale</p>
 
               <div className="mb-8">
-                <p className="text-sm text-gray-400 mb-1">à partir de</p>
-                <p className="text-4xl font-light text-gray-900">1 290<span className="text-lg">€</span></p>
-                <p className="text-sm text-gray-400 mt-1">puis <span className="text-gray-900 font-medium">290€</span>/mois</p>
+                <p className="text-sm text-[#8B7355]">à partir de</p>
+                <p className="text-4xl font-light text-[#2D2A26]">1 290€</p>
+                <p className="text-sm text-[#8B7355]">puis <span className="text-[#2D2A26]">290€</span>/mois</p>
               </div>
 
-              <ul className="space-y-4 mb-8">
-                {[
-                  'Tout le pack Site + Visibilité',
-                  '20 articles SEO/mois',
-                  'Gestion complète Google My Business',
-                  'Posts GMB hebdomadaires',
-                  'Réponses aux avis Google',
-                  'Optimisation pour ChatGPT/Gemini',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-gray-600 text-sm">
-                    <Check className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" />
-                    {item}
-                  </li>
-                ))}
+              <ul className="space-y-3 text-[#5C5650] text-sm">
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Tout Site + Visibilité
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  20 articles par mois
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Gestion complète fiche Google
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Réponses aux avis
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Posts Google hebdomadaires
+                </li>
               </ul>
 
-              <p className="text-xs text-gray-400">
-                Sans engagement — arrêtez quand vous voulez
-              </p>
+              <p className="text-xs text-[#8B7355] mt-6">Sans engagement</p>
             </div>
 
           </div>
@@ -715,36 +577,40 @@ function DiagnosticContent() {
       </section>
 
       {/* ════════ CTA FINAL ════════ */}
-      <section className="py-24 md:py-32 px-6 md:px-12 bg-gray-900 text-white">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="py-24 px-8 md:px-16 bg-[#2D2A26]">
+        <div className="max-w-2xl mx-auto text-center">
 
-          <h2 className="text-3xl md:text-4xl font-light mb-6">
-            Envie d'en discuter ?
+          <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
+            On en discute ?
           </h2>
-          <p className="text-gray-400 text-lg mb-12 leading-relaxed">
-            30 minutes pour vous expliquer concrètement ce qu'on peut faire
-            pour <span className="text-white font-medium">{nom}</span>.
-            <br />
-            <span className="text-gray-500">Sans engagement, sans pression commerciale.</span>
+          <p className="text-[#A89F94] text-lg mb-10">
+            30 minutes pour parler de <span className="text-white">{nom}</span> et voir
+            ce qu'on peut faire ensemble. Sans engagement.
           </p>
 
           <a
             href="https://calendly.com/contact-indhack/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-gray-900 px-10 py-5 rounded-full font-medium hover:bg-gray-100 transition-colors text-lg"
+            className="inline-flex items-center gap-3 bg-[#D4A574] text-white px-8 py-4 rounded-full font-medium hover:bg-[#C49664] transition-colors text-lg"
           >
-            <Calendar className="w-5 h-5" />
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
             Réserver un appel gratuit
           </a>
 
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-gray-500">
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-[#A89F94]">
             <a href="tel:0661139748" className="flex items-center gap-2 hover:text-white transition-colors">
-              <Phone className="w-4 h-4" />
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
               06 61 13 97 48
             </a>
             <a href="mailto:contact@indhack.com" className="flex items-center gap-2 hover:text-white transition-colors">
-              <MessageCircle className="w-4 h-4" />
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
               contact@indhack.com
             </a>
           </div>
@@ -752,20 +618,13 @@ function DiagnosticContent() {
         </div>
       </section>
 
-      {/* ════════ MINI FOOTER ════════ */}
-      <div className="py-6 px-6 bg-gray-950 text-center">
-        <p className="text-gray-600 text-sm">
-          IndHack · Consultante SEO · {ville} · {new Date().getFullYear()}
-        </p>
-      </div>
-
     </main>
   )
 }
 
 export default function CoiffeurDiagnosticPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+    <Suspense fallback={<div className="min-h-screen bg-[#FDFCFB]" />}>
       <DiagnosticContent />
     </Suspense>
   )
