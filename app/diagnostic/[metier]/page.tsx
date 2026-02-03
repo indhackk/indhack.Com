@@ -174,7 +174,7 @@ function DiagnosticContent({ metier }: { metier: string }) {
   const monthlyLoss = Math.round((searchVolume * 0.75 * (conversionRate / 100) * avgTicket) / 12)
 
   return (
-    <main className="min-h-screen bg-[#0A0A0A]">
+    <main className="min-h-screen bg-white text-gray-900">
       {/* Hero personnalisé */}
       <ProspectHero
         nom={nom}
