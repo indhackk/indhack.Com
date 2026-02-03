@@ -1,22 +1,20 @@
 'use client'
 
 import { useSearchParams } from 'next/navigation'
-import { Suspense, useState, useEffect } from 'react'
+import { Suspense } from 'react'
 import { motion } from 'framer-motion'
-import { Star, MapPin, Smartphone, Check, ArrowRight, Sparkles, Heart, Crown, MessageCircle, Menu, User } from 'lucide-react'
+import { Star, MapPin, Check, ArrowRight, Sparkles, Heart, Crown, MessageCircle, Menu } from 'lucide-react'
 
-// --- DESIGN SYSTEM V6 (WARMTH & EMPATHY) ---
+// --- DESIGN SYSTEM V7 (SILK & LUXURY) ---
+// Concept : "Digital Spa" - Douceur, Fluidité, Profondeur.
 // Couleurs : 
-// - Fond Principal : #FDFCF8 (Ivoire chaud)
-// - Texte Principal : #2D2A26 (Charbon doux, moins dur que le noir)
-// - Accent Luxe : #C6A87C (Or Antique)
-// - Accent Doux : #F2EBE3 (Lin)
-
-// --- COMPOSANTS UI ---
+// - Fond : #FDFCF8 avec nuances de #F4EFE9
+// - Accent : #C6A87C (Or) -> Degradés subtils
+// - Texte : #2D2A26 (Charbon)
 
 function Badge({ children, icon: Icon }: { children: React.ReactNode, icon?: any }) {
   return (
-    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F2EBE3] border border-[#E6DCD3] text-[#5A5243] text-xs font-medium tracking-wide font-sans uppercase">
+    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-[#E6DCD3] text-[#5A5243] text-xs font-medium tracking-wide font-sans uppercase shadow-sm backdrop-blur-sm">
       {Icon && <Icon className="w-3 h-3 text-[#C6A87C]" />}
       {children}
     </div>
@@ -25,7 +23,7 @@ function Badge({ children, icon: Icon }: { children: React.ReactNode, icon?: any
 
 function SectionTitle({ title, subtitle, centered = true }: { title: string, subtitle?: string, centered?: boolean }) {
   return (
-    <div className={`mb-16 ${centered ? 'text-center' : 'text-left'} max-w-3xl mx-auto`}>
+    <div className={`mb-16 ${centered ? 'text-center' : 'text-left'} max-w-3xl mx-auto relative z-10`}>
       <h2 className="text-3xl md:text-5xl font-serif font-medium text-[#2D2A26] mb-6 leading-tight">
         {title}
       </h2>
@@ -40,9 +38,9 @@ function SectionTitle({ title, subtitle, centered = true }: { title: string, sub
 
 function WarmCard({ title, children, icon: Icon, highlight = false }: { title: string, children: React.ReactNode, icon: any, highlight?: boolean }) {
   return (
-    <div className={`p-8 rounded-2xl border transition-all duration-300 h-full flex flex-col ${highlight ? 'bg-[#2D2A26] text-[#FDFCF8] border-[#2D2A26] shadow-xl' : 'bg-white border-[#F2EBE3] text-[#2D2A26] hover:border-[#C6A87C]/30 shadow-sm'}`}>
-      <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-6 text-xl shadow-inner ${highlight ? 'bg-white/10 text-[#FDFCF8]' : 'bg-[#F9F5F0] text-[#C6A87C]'}`}>
-        <Icon className="w-5 h-5" />
+    <div className={`p-8 rounded-2xl border transition-all duration-300 h-full flex flex-col group ${highlight ? 'bg-[#2D2A26] text-[#FDFCF8] border-[#2D2A26] shadow-2xl scale-105' : 'bg-white/60 backdrop-blur-md border-[#F2EBE3] text-[#2D2A26] hover:border-[#C6A87C]/30 hover:bg-white hover:shadow-lg'}`}>
+      <div className={`w-14 h-14 rounded-full flex items-center justify-center mb-6 text-xl shadow-inner transition-transform group-hover:scale-110 ${highlight ? 'bg-white/10 text-[#FDFCF8]' : 'bg-[#F9F5F0] text-[#C6A87C]'}`}>
+        <Icon className="w-6 h-6" />
       </div>
       <h3 className={`text-xl font-serif font-medium mb-4 ${highlight ? 'text-[#C6A87C]' : 'text-[#2D2A26]'}`}>{title}</h3>
       <div className={`text-sm leading-relaxed font-light ${highlight ? 'text-[#E6DCD3]' : 'text-[#6B6358]'}`}>
@@ -60,62 +58,67 @@ function DiagnosticContent({ metier }: { metier: string }) {
   const ville = searchParams.get('ville')?.replace(/\+/g, ' ') || 'Nice'
 
   return (
-    <main className="min-h-screen bg-[#FDFCF8] text-[#2D2A26] font-sans selection:bg-[#C6A87C] selection:text-white">
+    <main className="min-h-screen bg-[#FDFCF8] text-[#2D2A26] font-sans selection:bg-[#C6A87C] selection:text-white overflow-x-hidden">
+
+      {/* Texture de fond subtile "Grain Soie" */}
+      <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-0" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}></div>
 
       {/* SECTION 1: HERO (VALORISATION) */}
       <section className="relative min-h-[90vh] flex items-center pt-20 pb-20 px-6 overflow-hidden">
-        {/* Background doux focalisé */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F2EBE3]/30 rounded-l-[100px] hidden lg:block -z-10" />
+        {/* Formes organiques d'arrière-plan */}
+        <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[80%] bg-gradient-to-b from-[#F2EBE3] to-transparent rounded-full blur-[100px] -z-10 opacity-60" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[60%] bg-gradient-to-t from-[#F9F5F0] to-transparent rounded-full blur-[80px] -z-10 opacity-60" />
 
-        <div className="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-16 items-center">
+        <div className="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-16 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="mb-8">
+            <div className="mb-0">
               <Badge icon={Crown}>Analyse pour {nom}</Badge>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-serif font-medium text-[#2D2A26] mb-8 leading-[1.1]">
+            <h1 className="text-5xl md:text-7xl font-serif font-medium text-[#2D2A26] mb-8 mt-8 leading-[1.1]">
               4.6/5 sur Google...<br />
-              <span className="text-[#C6A87C] italic">Vous avez déjà fait le plus dur.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C6A87C] to-[#A88B60] italic">Le plus dur est fait.</span>
             </h1>
 
             <p className="text-xl text-[#6B6358] font-light leading-relaxed mb-10 max-w-lg">
-              Vos clientes vous adorent, et ça se voit. C'est Google qui ne vous rend pas justice.
-              <br /><br />
-              Aujourd'hui, quand on cherche "Coiffeur {ville}", <strong>ce sont des salons moins bien notés que vous qui apparaissent en premier.</strong> C'est dommage, non ?
+              Vos clientes vous adorent, et ça se voit.
+              <br />
+              Pourtant, quand on cherche "Coiffeur {ville}", <strong>ce sont des salons moins bien notés qui vous passent devant.</strong>
             </p>
 
-            <button onClick={() => document.getElementById('solution')?.scrollIntoView({ behavior: 'smooth' })} className="group bg-[#2D2A26] text-[#FDFCF8] px-8 py-4 rounded-full font-medium text-lg flex items-center gap-3 hover:bg-[#403B35] transition-all shadow-xl shadow-[#2D2A26]/10">
+            <button onClick={() => document.getElementById('solution')?.scrollIntoView({ behavior: 'smooth' })} className="group bg-[#2D2A26] text-[#FDFCF8] px-8 py-4 rounded-full font-medium text-lg flex items-center gap-3 hover:bg-[#403B35] transition-all shadow-xl shadow-[#2D2A26]/10 transform hover:scale-105">
               Voir comment reprendre votre place
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </motion.div>
 
-          {/* Image Chaleureuse */}
+          {/* Image Chaleureuse avec Effet "Portail" */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="relative h-[550px] w-full hidden lg:block"
+            className="relative h-[600px] w-full hidden lg:block"
           >
-            <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl rotate-3">
+            <div className="absolute inset-0 bg-[#C6A87C]/10 rounded-[2rem] transform rotate-3 scale-95 blur-sm" />
+            <div className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl border border-white/50">
               <img
                 src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=1200"
                 alt="Salon Ambiance"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-[2s]"
               />
             </div>
-            {/* Note Flottante */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-[#F2EBE3] flex gap-4 items-center animate-bounce-slow">
+            {/* Note Flottante givrée */}
+            <div className="absolute -bottom-8 -left-8 bg-white/90 backdrop-blur-xl p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white flex gap-4 items-center animate-bounce-slow">
               <div className="bg-[#F9F5F0] p-3 rounded-full text-[#C6A87C]">
                 <Heart className="w-6 h-6 fill-current" />
               </div>
               <div>
-                <p className="font-serif text-[#2D2A26] font-medium">Vos clients vous cherchent.</p>
-                <p className="text-xs text-[#999] mt-1">~2 800 recherches/mois à {ville}</p>
+                <p className="font-serif text-[#2D2A26] font-medium text-lg">Vos clients vous cherchent.</p>
+                <p className="text-sm text-[#999] mt-0.5">~2 800 recherches/mois à {ville}</p>
               </div>
             </div>
           </motion.div>
@@ -123,7 +126,7 @@ function DiagnosticContent({ metier }: { metier: string }) {
       </section>
 
       {/* SECTION 2: LA TRADUCTION (PÉDAGOGIE) */}
-      <section id="solution" className="py-24 px-6 bg-white">
+      <section id="solution" className="py-24 px-6 relative z-10">
         <div className="container mx-auto max-w-6xl">
           <SectionTitle
             title="Pourquoi votre site actuel est muet"
@@ -154,59 +157,66 @@ function DiagnosticContent({ metier }: { metier: string }) {
       </section>
 
       {/* SECTION 3: MOCKUP "WHAOU" */}
-      <section className="py-24 px-6 bg-[#F9F5F0] overflow-hidden">
-        <div className="container mx-auto max-w-6xl text-center">
+      <section className="py-32 px-6 bg-[#F4EFE9]/50 relative overflow-hidden">
+        {/* Decorative elements behind phone */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white rounded-full blur-[120px] -z-10" />
+
+        <div className="container mx-auto max-w-6xl text-center relative z-10">
           <SectionTitle
             title="Votre nouvelle vitrine"
             subtitle="Imaginez un site qui reflète enfin la qualité de votre travail."
             centered={true}
           />
 
-          <div className="relative mx-auto w-[320px] md:w-[380px] h-[750px] bg-[#2D2A26] rounded-[50px] p-3 shadow-2xl border-[4px] border-[#403B35]">
-            {/* Notch */}
-            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-32 h-7 bg-black rounded-full z-20"></div>
+          <div className="relative mx-auto w-[320px] md:w-[360px] h-[720px] bg-[#1a1a1a] rounded-[55px] p-[10px] shadow-[0_50px_100px_-20px_rgba(50,50,93,0.25),0_30px_60px_-30px_rgba(0,0,0,0.3)] border border-[#333]">
+            {/* Notch Area */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-[#1a1a1a] rounded-b-3xl z-30"></div>
 
             {/* Screen Content */}
-            <div className="w-full h-full bg-white rounded-[40px] overflow-hidden flex flex-col relative text-left">
-              {/* Navbar */}
-              <div className="pt-14 px-6 pb-4 flex justify-between items-center bg-white sticky top-0 z-10 border-b border-[#F2EBE3]">
-                <span className="font-serif font-bold text-lg tracking-tight">{nom}</span>
+            <div className="w-full h-full bg-white rounded-[45px] overflow-hidden flex flex-col relative text-left">
+
+              {/* Navbar Clean - Non Sticky pour éviter superposition */}
+              <div className="pt-12 px-6 pb-4 flex justify-between items-center bg-white z-20">
+                <span className="font-serif font-bold text-lg tracking-tight text-[#2D2A26]">{nom}</span>
                 <Menu className="w-6 h-6 text-[#2D2A26]" />
               </div>
 
-              {/* Hero Mobile */}
-              <div className="flex-1 overflow-y-auto no-scrollbar">
-                <div className="px-6 py-8 bg-[#FDFCF8]">
-                  <p className="text-[10px] font-bold text-[#C6A87C] uppercase tracking-[0.2em] mb-4">L'Excellence à {ville}</p>
-                  <h2 className="text-3xl font-serif text-[#2D2A26] leading-tight mb-6">Sublimez vos cheveux, simplement.</h2>
+              {/* Content Scrolling */}
+              <div className="flex-1 overflow-y-auto no-scrollbar bg-[#FDFCF8]">
+                <div className="px-6 py-6">
+                  <p className="text-[10px] font-bold text-[#C6A87C] uppercase tracking-[0.25em] mb-4">L'Excellence à {ville}</p>
+                  <h2 className="text-4xl font-serif text-[#2D2A26] leading-tight mb-8">Révélez votre beauté.</h2>
 
-                  <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden mb-6 shadow-md relative">
+                  <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden mb-8 shadow-lg relative group">
                     <img
                       src="https://images.unsplash.com/photo-1595476103518-3c182ffe0948?q=80&w=600"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                       alt="Coiffure"
                     />
-                    <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-medium text-[#2D2A26]">
-                      Coloration & Soin
+                    <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-xl shadow-lg border border-white/20">
+                      <div className="text-xs font-medium text-[#2D2A26] flex justify-between items-center">
+                        <span>Coloration & Soin</span>
+                        <ArrowRight className="w-3 h-3 text-[#C6A87C]" />
+                      </div>
                     </div>
                   </div>
 
-                  <div className="bg-[#2D2A26] text-[#FDFCF8] text-center py-4 rounded-xl font-medium shadow-lg mb-8">
+                  <button className="w-full bg-[#2D2A26] text-[#FDFCF8] py-4 rounded-xl font-medium shadow-lg mb-10 transform active:scale-95 transition-all">
                     Prendre Rendez-vous
-                  </div>
+                  </button>
 
-                  <div className="border-t border-[#F2EBE3] pt-8">
-                    <div className="flex gap-1 text-[#C6A87C] mb-3 justify-center">
+                  <div className="border-t border-[#F2EBE3] pt-8 pb-8">
+                    <div className="flex gap-1 text-[#C6A87C] mb-4 justify-center">
                       <Star className="w-4 h-4 fill-current" />
                       <Star className="w-4 h-4 fill-current" />
                       <Star className="w-4 h-4 fill-current" />
                       <Star className="w-4 h-4 fill-current" />
                       <Star className="w-4 h-4 fill-current" />
                     </div>
-                    <p className="text-sm font-serif italic text-center text-[#6B6358] mb-2">
-                      "J'ai enfin trouvé ma coiffeuse. Lucie écoute vraiment."
+                    <p className="text-lg font-serif italic text-center text-[#6B6358] mb-3 leading-relaxed">
+                      "Lucie a des doigts de fée. Je ne confierais mes cheveux à personne d'autre."
                     </p>
-                    <p className="text-xs text-center font-bold text-[#2D2A26] uppercase tracking-wide">Sophie, Cliente depuis 2023</p>
+                    <p className="text-xs text-center font-bold text-[#2D2A26] uppercase tracking-widest opacity-60">Sophie • Cliente Vérifiée</p>
                   </div>
                 </div>
               </div>
@@ -216,17 +226,17 @@ function DiagnosticContent({ metier }: { metier: string }) {
       </section>
 
       {/* SECTION 4: OFFRES (INVESTISSEMENT) */}
-      <section className="py-24 px-6 bg-white" id="offres">
+      <section className="py-24 px-6 bg-white relative z-10" id="offres">
         <div className="container mx-auto max-w-6xl">
           <SectionTitle
-            title="Investir dans votre propre fonds de commerce"
+            title="Investir dans votre fonds de commerce"
             subtitle="Fini de payer pour des pubs éphémères. Ici, vous construisez quelque chose qui vous appartient."
           />
 
           <div className="grid md:grid-cols-3 gap-8 items-stretch">
 
             {/* OFFRE 1 */}
-            <div className="p-8 border border-[#F2EBE3] rounded-2xl bg-[#FDFCF8] flex flex-col">
+            <div className="p-8 border border-[#F2EBE3] rounded-2xl bg-[#FDFCF8] flex flex-col hover:shadow-xl transition-shadow duration-300">
               <h3 className="text-xl font-serif font-medium text-[#2D2A26] mb-2">Le Socle Propre</h3>
               <div className="text-3xl font-medium mb-1 font-serif text-[#2D2A26]">890€</div>
               <p className="text-xs text-[#999] mb-8 font-sans">une seule fois</p>
@@ -240,16 +250,16 @@ function DiagnosticContent({ metier }: { metier: string }) {
             </div>
 
             {/* OFFRE 2 (STAR) */}
-            <div className="p-8 border border-[#C6A87C] rounded-2xl bg-[#FDFCF8] relative shadow-2xl flex flex-col transform md:-translate-y-4">
-              <div className="absolute top-0 right-0 bg-[#C6A87C] text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl tracking-wider uppercase">Le plus malin</div>
+            <div className="p-8 border border-[#C6A87C] rounded-2xl bg-[#FDFCF8] relative shadow-2xl flex flex-col transform md:-translate-y-4 ring-1 ring-[#C6A87C]/20">
+              <div className="absolute top-0 right-0 bg-[#C6A87C] text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl tracking-wider uppercase">Recommandé</div>
 
               <h3 className="text-xl font-serif font-medium text-[#C6A87C] mb-2">L'Expansion</h3>
               <div className="text-3xl font-medium mb-1 font-serif text-[#2D2A26]">1 490€</div>
               <p className="text-xs text-[#C6A87C] mb-8 font-sans">+ 149€/mois (Votre croissance)</p>
 
               <p className="text-sm text-[#6B6358] mb-6 italic border-b border-[#F2EBE3] pb-4">
-                Ce n'est pas une "charge". C'est de l'acquisition.
-                Chaque mois, on crée des nouvelles pages pour aller chercher des clients qui ne vous connaissent pas encore.
+                Ce n'est pas une charge. C'est de l'acquisition.
+                Chaque mois, on va chercher des clients qui ne vous connaissent pas encore.
               </p>
 
               <ul className="space-y-4 mb-8">
@@ -264,7 +274,7 @@ function DiagnosticContent({ metier }: { metier: string }) {
             </div>
 
             {/* OFFRE 3 */}
-            <div className="p-8 border border-[#F2EBE3] rounded-2xl bg-[#FDFCF8] flex flex-col">
+            <div className="p-8 border border-[#F2EBE3] rounded-2xl bg-[#FDFCF8] flex flex-col hover:shadow-xl transition-shadow duration-300">
               <h3 className="text-xl font-serif font-medium text-[#2D2A26] mb-2">L'Autorité</h3>
               <div className="text-3xl font-medium mb-1 font-serif text-[#2D2A26]">Sur Devis</div>
               <p className="text-xs text-[#999] mb-8 font-sans">Pour aller plus loin</p>
@@ -282,9 +292,9 @@ function DiagnosticContent({ metier }: { metier: string }) {
       </section>
 
       {/* FOOTER & CTA FLOTTANT HUMAIN */}
-      <footer className="py-12 bg-white text-center border-t border-[#F2EBE3]">
+      <footer className="py-12 bg-white text-center border-t border-[#F2EBE3] relative z-10">
         <div className="flex justify-center mb-4">
-          <div className="w-12 h-12 rounded-full bg-[#F2EBE3] overflow-hidden">
+          <div className="w-12 h-12 rounded-full bg-[#F2EBE3] overflow-hidden border-2 border-white shadow-md">
             <img src="https://ui-avatars.com/api/?name=Indiana&background=C6A87C&color=fff" alt="Indiana" />
           </div>
         </div>
@@ -300,7 +310,7 @@ function DiagnosticContent({ metier }: { metier: string }) {
             <div className="w-10 h-10 rounded-full bg-[#C6A87C] overflow-hidden border-2 border-white">
               <img src="https://ui-avatars.com/api/?name=Indiana&background=C6A87C&color=fff" alt="Indiana" />
             </div>
-            <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+            <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full animate-pulse"></div>
           </div>
           <div className="text-left">
             <span className="block text-[10px] text-[#C6A87C] uppercase tracking-wider font-bold">Un doute ?</span>
