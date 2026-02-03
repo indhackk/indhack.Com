@@ -5,16 +5,16 @@ import { Suspense } from 'react'
 import ProspectLandingTemplate from '@/components/diagnostic/ProspectLandingTemplate'
 import { getMetierData } from '@/lib/diagnostic-data'
 
-function CoiffeurContent() {
+function BoutiqueContent() {
   const searchParams = useSearchParams()
 
-  const nom = searchParams.get('nom')?.replace(/\+/g, ' ') || 'Votre Salon'
+  const nom = searchParams.get('nom')?.replace(/\+/g, ' ') || 'Votre Boutique'
   const ville = searchParams.get('ville')?.replace(/\+/g, ' ') || 'Nice'
   const quartier = searchParams.get('quartier')?.replace(/\+/g, ' ') || undefined
-  const avis = searchParams.get('avis') ? parseInt(searchParams.get('avis')!) : 155
-  const note = searchParams.get('note') ? parseFloat(searchParams.get('note')!) : 4.6
+  const avis = searchParams.get('avis') ? parseInt(searchParams.get('avis')!) : undefined
+  const note = searchParams.get('note') ? parseFloat(searchParams.get('note')!) : undefined
 
-  const metier = getMetierData('coiffeur')
+  const metier = getMetierData('boutique')
 
   if (!metier) {
     return <div>Métier non trouvé</div>
@@ -35,10 +35,10 @@ function CoiffeurContent() {
   )
 }
 
-export default function CoiffeurPage() {
+export default function BoutiquePage() {
   return (
     <Suspense fallback={<div className="min-h-screen bg-[#FDFCF8]" />}>
-      <CoiffeurContent />
+      <BoutiqueContent />
     </Suspense>
   )
 }
