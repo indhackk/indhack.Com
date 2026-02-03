@@ -5,16 +5,12 @@ import { Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { Star, MapPin, Check, ArrowRight, Sparkles, Heart, Crown, MessageCircle, Menu } from 'lucide-react'
 
-// --- DESIGN SYSTEM V7 (SILK & LUXURY) ---
-// Concept : "Digital Spa" - Douceur, Fluidité, Profondeur.
-// Couleurs : 
-// - Fond : #FDFCF8 avec nuances de #F4EFE9
-// - Accent : #C6A87C (Or) -> Degradés subtils
-// - Texte : #2D2A26 (Charbon)
+// --- DESIGN SYSTEM V8 (VISIBLE UPDATE) ---
+// Fond plus marqué #F5F2EB pour voir le changement.
 
 function Badge({ children, icon: Icon }: { children: React.ReactNode, icon?: any }) {
   return (
-    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-[#E6DCD3] text-[#5A5243] text-xs font-medium tracking-wide font-sans uppercase shadow-sm backdrop-blur-sm">
+    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#D4B996] text-[#5A5243] text-xs font-bold tracking-wide font-sans uppercase shadow-sm">
       {Icon && <Icon className="w-3 h-3 text-[#C6A87C]" />}
       {children}
     </div>
@@ -38,7 +34,7 @@ function SectionTitle({ title, subtitle, centered = true }: { title: string, sub
 
 function WarmCard({ title, children, icon: Icon, highlight = false }: { title: string, children: React.ReactNode, icon: any, highlight?: boolean }) {
   return (
-    <div className={`p-8 rounded-2xl border transition-all duration-300 h-full flex flex-col group ${highlight ? 'bg-[#2D2A26] text-[#FDFCF8] border-[#2D2A26] shadow-2xl scale-105' : 'bg-white/60 backdrop-blur-md border-[#F2EBE3] text-[#2D2A26] hover:border-[#C6A87C]/30 hover:bg-white hover:shadow-lg'}`}>
+    <div className={`p-8 rounded-2xl border transition-all duration-300 h-full flex flex-col group ${highlight ? 'bg-[#2D2A26] text-[#FDFCF8] border-[#2D2A26] shadow-2xl scale-105' : 'bg-white border-[#E6DCD3] text-[#2D2A26] hover:border-[#C6A87C] hover:shadow-lg'}`}>
       <div className={`w-14 h-14 rounded-full flex items-center justify-center mb-6 text-xl shadow-inner transition-transform group-hover:scale-110 ${highlight ? 'bg-white/10 text-[#FDFCF8]' : 'bg-[#F9F5F0] text-[#C6A87C]'}`}>
         <Icon className="w-6 h-6" />
       </div>
@@ -58,30 +54,54 @@ function DiagnosticContent({ metier }: { metier: string }) {
   const ville = searchParams.get('ville')?.replace(/\+/g, ' ') || 'Nice'
 
   return (
-    <main className="min-h-screen bg-[#FDFCF8] text-[#2D2A26] font-sans selection:bg-[#C6A87C] selection:text-white overflow-x-hidden">
+    <main className="min-h-screen bg-[#F5F2EB] text-[#2D2A26] font-sans selection:bg-[#C6A87C] selection:text-white overflow-x-hidden">
 
-      {/* Texture de fond subtile "Grain Soie" */}
-      <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-0" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}></div>
-
-      {/* SECTION 1: HERO (VALORISATION) */}
+      {/* SECTION 1: HERO INVERSÉ (POUR VOIR LE CHANGEMENT) */}
       <section className="relative min-h-[90vh] flex items-center pt-20 pb-20 px-6 overflow-hidden">
-        {/* Formes organiques d'arrière-plan */}
-        <div className="absolute top-[-10%] right-[-5%] w-[60%] h-[80%] bg-gradient-to-b from-[#F2EBE3] to-transparent rounded-full blur-[100px] -z-10 opacity-60" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[60%] bg-gradient-to-t from-[#F9F5F0] to-transparent rounded-full blur-[80px] -z-10 opacity-60" />
 
-        <div className="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-16 items-center relative z-10">
+        <div className="container mx-auto max-w-7xl grid lg:grid-cols-2 gap-16 items-center relative z-10">
+
+          {/* IMAGE A GAUCHE MAINTENANT */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="relative h-[600px] w-full hidden lg:block order-2 lg:order-1"
+          >
+            <div className="absolute inset-0 bg-[#C6A87C] rounded-[2rem] transform -rotate-3 blur-sm opacity-20" />
+            <div className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl border-2 border-white">
+              <img
+                src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=1200"
+                alt="Salon Ambiance"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Note Flottante */}
+            <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl flex gap-4 items-center border border-[#E6DCD3]">
+              <div className="bg-[#F9F5F0] p-3 rounded-full text-[#C6A87C]">
+                <Heart className="w-6 h-6 fill-current" />
+              </div>
+              <div>
+                <p className="font-serif text-[#2D2A26] font-medium text-lg">Vos clients vous cherchent.</p>
+                <p className="text-sm text-[#999] mt-0.5">~2 800 recherches/mois</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* TEXTE A DROITE MAINTENANT */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="order-1 lg:order-2"
           >
-            <div className="mb-0">
+            <div className="mb-6">
               <Badge icon={Crown}>Analyse pour {nom}</Badge>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-serif font-medium text-[#2D2A26] mb-8 mt-8 leading-[1.1]">
+            <h1 className="text-5xl md:text-7xl font-serif font-medium text-[#2D2A26] mb-8 leading-[1.1]">
               4.6/5 sur Google...<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C6A87C] to-[#A88B60] italic">Le plus dur est fait.</span>
+              <span className="text-[#C6A87C] italic">Le plus dur est fait.</span>
             </h1>
 
             <p className="text-xl text-[#6B6358] font-light leading-relaxed mb-10 max-w-lg">
@@ -90,43 +110,17 @@ function DiagnosticContent({ metier }: { metier: string }) {
               Pourtant, quand on cherche "Coiffeur {ville}", <strong>ce sont des salons moins bien notés qui vous passent devant.</strong>
             </p>
 
-            <button onClick={() => document.getElementById('solution')?.scrollIntoView({ behavior: 'smooth' })} className="group bg-[#2D2A26] text-[#FDFCF8] px-8 py-4 rounded-full font-medium text-lg flex items-center gap-3 hover:bg-[#403B35] transition-all shadow-xl shadow-[#2D2A26]/10 transform hover:scale-105">
+            <button onClick={() => document.getElementById('solution')?.scrollIntoView({ behavior: 'smooth' })} className="group bg-[#2D2A26] text-[#FDFCF8] px-8 py-4 rounded-full font-medium text-lg flex items-center gap-3 hover:bg-[#403B35] transition-all shadow-xl hover:scale-105">
               Voir comment reprendre votre place
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </motion.div>
 
-          {/* Image Chaleureuse avec Effet "Portail" */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="relative h-[600px] w-full hidden lg:block"
-          >
-            <div className="absolute inset-0 bg-[#C6A87C]/10 rounded-[2rem] transform rotate-3 scale-95 blur-sm" />
-            <div className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl border border-white/50">
-              <img
-                src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=1200"
-                alt="Salon Ambiance"
-                className="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-[2s]"
-              />
-            </div>
-            {/* Note Flottante givrée */}
-            <div className="absolute -bottom-8 -left-8 bg-white/90 backdrop-blur-xl p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white flex gap-4 items-center animate-bounce-slow">
-              <div className="bg-[#F9F5F0] p-3 rounded-full text-[#C6A87C]">
-                <Heart className="w-6 h-6 fill-current" />
-              </div>
-              <div>
-                <p className="font-serif text-[#2D2A26] font-medium text-lg">Vos clients vous cherchent.</p>
-                <p className="text-sm text-[#999] mt-0.5">~2 800 recherches/mois à {ville}</p>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
-      {/* SECTION 2: LA TRADUCTION (PÉDAGOGIE) */}
-      <section id="solution" className="py-24 px-6 relative z-10">
+      {/* SECTION 2: LA TRADUCTION */}
+      <section id="solution" className="py-24 px-6 bg-white relative z-10">
         <div className="container mx-auto max-w-6xl">
           <SectionTitle
             title="Pourquoi votre site actuel est muet"
@@ -156,10 +150,8 @@ function DiagnosticContent({ metier }: { metier: string }) {
         </div>
       </section>
 
-      {/* SECTION 3: MOCKUP "WHAOU" */}
-      <section className="py-32 px-6 bg-[#F4EFE9]/50 relative overflow-hidden">
-        {/* Decorative elements behind phone */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white rounded-full blur-[120px] -z-10" />
+      {/* SECTION 3: MOCKUP A L'HONNEUR */}
+      <section className="py-32 px-6 bg-[#EBE5D9] relative overflow-hidden">
 
         <div className="container mx-auto max-w-6xl text-center relative z-10">
           <SectionTitle
@@ -168,15 +160,15 @@ function DiagnosticContent({ metier }: { metier: string }) {
             centered={true}
           />
 
-          <div className="relative mx-auto w-[320px] md:w-[360px] h-[720px] bg-[#1a1a1a] rounded-[55px] p-[10px] shadow-[0_50px_100px_-20px_rgba(50,50,93,0.25),0_30px_60px_-30px_rgba(0,0,0,0.3)] border border-[#333]">
+          <div className="relative mx-auto w-[320px] md:w-[360px] h-[720px] bg-[#222] rounded-[55px] p-[10px] shadow-2xl border-[4px] border-[#C6A87C]">
             {/* Notch Area */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-[#1a1a1a] rounded-b-3xl z-30"></div>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-[#222] rounded-b-3xl z-30"></div>
 
             {/* Screen Content */}
             <div className="w-full h-full bg-white rounded-[45px] overflow-hidden flex flex-col relative text-left">
 
-              {/* Navbar Clean - Non Sticky pour éviter superposition */}
-              <div className="pt-12 px-6 pb-4 flex justify-between items-center bg-white z-20">
+              {/* Navbar Clean */}
+              <div className="pt-12 px-6 pb-4 flex justify-between items-center bg-white z-20 shadow-sm">
                 <span className="font-serif font-bold text-lg tracking-tight text-[#2D2A26]">{nom}</span>
                 <Menu className="w-6 h-6 text-[#2D2A26]" />
               </div>
@@ -190,7 +182,7 @@ function DiagnosticContent({ metier }: { metier: string }) {
                   <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden mb-8 shadow-lg relative group">
                     <img
                       src="https://images.unsplash.com/photo-1595476103518-3c182ffe0948?q=80&w=600"
-                      className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover"
                       alt="Coiffure"
                     />
                     <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-3 rounded-xl shadow-lg border border-white/20">
@@ -201,7 +193,7 @@ function DiagnosticContent({ metier }: { metier: string }) {
                     </div>
                   </div>
 
-                  <button className="w-full bg-[#2D2A26] text-[#FDFCF8] py-4 rounded-xl font-medium shadow-lg mb-10 transform active:scale-95 transition-all">
+                  <button className="w-full bg-[#2D2A26] text-[#FDFCF8] py-4 rounded-xl font-medium shadow-lg mb-10">
                     Prendre Rendez-vous
                   </button>
 
@@ -225,7 +217,7 @@ function DiagnosticContent({ metier }: { metier: string }) {
         </div>
       </section>
 
-      {/* SECTION 4: OFFRES (INVESTISSEMENT) */}
+      {/* SECTION 4: OFFRES */}
       <section className="py-24 px-6 bg-white relative z-10" id="offres">
         <div className="container mx-auto max-w-6xl">
           <SectionTitle
