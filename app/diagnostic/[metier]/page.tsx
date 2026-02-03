@@ -113,10 +113,10 @@ function DiagnosticContent({ metier }: { metier: string }) {
               </div>
               <div className="text-gray-400">
                 <span className="text-blue-400">const</span> <span className="text-yellow-400">analyzeSite</span> = <span className="text-blue-400">async</span> (url) ={'>'} {'{'}<br />
-                &nbsp;&nbsp;<span className="text-green-400">// ANALYSE ACTUELLE</span><br />
+                &nbsp;&nbsp;<span className="text-green-400">{'// ANALYSE ACTUELLE'}</span><br />
                 &nbsp;&nbsp;<span className="text-purple-400">if</span> (!structuredData) <span className="text-blue-400">return</span> <span className="text-red-400">"INCONNU"</span>;<br />
                 <br />
-                &nbsp;&nbsp;<span className="text-green-400">// OBJECTIF INDHACK</span><br />
+                &nbsp;&nbsp;<span className="text-green-400">{'// OBJECTIF INDHACK'}</span><br />
                 &nbsp;&nbsp;<span className="text-blue-400">return</span> {'{'}<br />
                 &nbsp;&nbsp;&nbsp;&nbsp;entity: <span className="text-orange-400">"Coiffeur Premium"</span>,<br />
                 &nbsp;&nbsp;&nbsp;&nbsp;location: <span className="text-orange-400">"{ville}"</span>,<br />
