@@ -19,36 +19,8 @@ bun run postbuild    # Auto-generate sitemaps (runs automatically after build)
 - **Styling**: Tailwind CSS with custom color palette (sage green theme)
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
-- **CMS**: Keystatic (headless, file-based)
+- **CMS**: Keystatic (headless, file-based at `/keystatic`)
 - **3D**: Three.js (BrainCanvas component)
-
-### Directory Structure
-
-```
-/app                          # Next.js App Router pages
-├── api/                      # API routes (contact, audit, auth)
-├── diagnostic/[metier]/      # Dynamic prospect landing pages
-├── seo-[city]/               # 20+ geographic service pages
-│   └── audit-technique/      # Sub-service pages (fille level)
-├── blog/                     # Blog with dynamic slugs
-└── keystatic/                # CMS admin panel
-
-/components
-├── diagnostic/               # Prospect/sales page components
-├── ui/                       # Base UI primitives
-├── sections/                 # Large reusable sections
-├── templates/                # Page templates (CityPageTemplateV2)
-└── gmb-autopilot/            # Google My Business dashboard
-
-/lib
-├── cities-data.ts            # French cities data (coordinates, zip codes)
-├── gmb/                      # GMB automation engine
-└── validation.ts             # Form validation schemas
-
-/content                      # Keystatic-managed content
-├── blog/                     # Blog posts (MDX)
-└── services/                 # Service descriptions
-```
 
 ### Key Patterns
 
@@ -58,49 +30,52 @@ bun run postbuild    # Auto-generate sitemaps (runs automatically after build)
 - Separate client components (e.g., `ReferencementClient.tsx`) imported by server pages
 
 **SEO Structure (Semantic Cocoon)**:
-- **Mère (Mother)**: Service hubs → `/seo-strasbourg/`
-- **Fille (Daughter)**: Sub-services → `/seo-strasbourg/audit-technique/`
+- **Mère (Mother)**: City hubs → `/seo-strasbourg/` (use `CityPageTemplateV2`)
+- **Fille (Daughter)**: Sub-services → `/seo-strasbourg/audit-technique/` (use `CityServiceTemplate`)
 - **Petite-fille (Granddaughter)**: Blog posts linking upward with optimized anchors
 
-**Data Flow**:
-- City data centralized in `/lib/cities-data.ts`
-- Geographic pages use `CityPageTemplateV2` for consistency
-- JSON-LD schemas (LocalBusiness, Organization) embedded per page
+**City Pages**:
+- All city data in `/lib/cities-data.ts` (FRENCH_CITIES array with coordinates, images, descriptions)
+- Service data for sub-pages in CITY_SERVICES object (same file)
+- Helper functions: `getCityBySlug()`, `getAllCitySlugs()`, `getCitiesByRegion()`
+- JSON-LD LocalBusiness schema embedded per page
 
-### Styling Conventions
+**Keystatic CMS** (`keystatic.config.ts`):
+- Collections: posts, pages, cities, cityServices, services
+- Singletons: settings, homepage, navigation
+- Content stored in `/content/` directory
+
+### Styling
 
 ```
-Colors:
-- fond-sombre, fond-clair (background)
-- texte-clair (text)
-- sauge (primary green accent)
-- ink (dark text)
+Custom colors (tailwind.config.js):
+- fond-sombre (#394843), fond-clair (#FAFBFA) - backgrounds
+- sauge (#638576) - primary green accent
+- ink (#2A3830) - dark text
 
 Fonts:
-- Space Grotesk (headings)
-- IBM Plex Sans (body)
+- Space Grotesk (font-heading)
+- IBM Plex Sans (font-body, font-sans)
 ```
 
-Design: "Dark Premium", "Glassmorphism", "Dynamic"
+### Security
 
-### Security & Middleware
-
-- Rate limiting: 100 req/min per IP (middleware.ts)
-- Admin routes protected: `/keystatic/*`, `/dashboard/*`, `/api/*`
-- CSP headers, HSTS, X-Frame-Options configured in next.config.mjs
+- Rate limiting: 100 req/min per IP (`middleware.ts`)
+- Admin routes protected via ADMIN_PASSWORD env var: `/keystatic/*`, `/dashboard/*`
+- CSP, HSTS, X-Frame-Options in `next.config.mjs`
+- WordPress redirect cleanup (301s for legacy URLs)
 
 ## Strategic Objectives
 
-### CRITICAL: Semantic Domination (The "Cocoon")
-- Structure content using Cluster strategy (Mère > Fille > Petite-fille)
-- Mère: High-volume service hubs (e.g., `/services/seo-strasbourg`)
-- Fille: Specific sub-niches (e.g., `/services/seo-strasbourg/audit-technique`)
-- Petite-fille: Blog posts linking upwards with optimized anchor text
-- **BENCHMARKS**: Outperform Eskimoz (structure) and Primelis (technical SEO)
+### CRITICAL: Semantic Cocoon
+- Mère > Fille > Petite-fille hierarchy for SEO siloing
+- Mère: `/seo-[city]/` (19 French cities)
+- Fille: `/seo-[city]/audit-technique/` (sub-services per city)
+- Internal links must flow upward with optimized anchors
 
 ### HIGH: Technical Supremacy
-- Target: 100/100 Lighthouse scores everywhere
-- Aggressively refactor hydration errors, unused imports, heavy client-side bundles
+- Target: 100/100 Lighthouse scores
+- Fix hydration errors, unused imports, heavy client bundles
 
 ## Custom Commands
 

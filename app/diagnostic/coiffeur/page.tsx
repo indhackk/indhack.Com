@@ -242,42 +242,40 @@ function DiagnosticContent() {
 
           <div className="grid md:grid-cols-3 gap-8 items-stretch">
 
-            {/* OFFRE 1 */}
+            {/* OFFRE 1: L'ESSENTIEL (EXISTER) */}
             <div className="p-8 border border-[#E8E2D9] rounded-2xl bg-[#F9F7F5] flex flex-col hover:border-[#B08D55]/50 transition-colors">
               <h3 className="text-xl font-serif font-medium text-[#3C3633] mb-2">L'Essentiel</h3>
-              <div className="text-3xl font-medium mb-1 font-serif text-[#3C3633]">1 290€</div>
-              <p className="text-xs text-[#8A7A70] mb-6 font-sans">Payable en 3x sans frais</p>
+              <div className="text-3xl font-medium mb-1 font-serif text-[#3C3633]">690€</div>
+              <p className="text-xs text-[#8A7A70] mb-6 font-sans">Paiement unique</p>
 
               <div className="border-t border-[#E8E2D9] py-6 space-y-3">
-                <p className="font-bold text-sm text-[#3C3633]">Ce que vous achetez :</p>
-                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Site Vitrine Premium (5 pages)</li>
-                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Design Sur-mesure (Pas de template)</li>
-                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Code Google-Ready (SEO Technique)</li>
-                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Hébergement Rapide INCLUS à vie</li>
-                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Connexion à votre Agenda actuel</li>
+                <p className="font-bold text-sm text-[#3C3633]">Votre socle digital :</p>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Site Vitrine Premium (3 pages)</li>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Design Moderne & Mobile-First</li>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Optimisation Fiche Google (GMB)</li>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Hébergement & SSL INCLUS</li>
               </div>
 
               <div className="mt-auto">
-                <a href="https://calendly.com/contact-indhack/30min" target="_blank" className="block w-full text-center py-3 border border-[#E8E2D9] bg-white text-[#3C3633] rounded-lg text-sm font-medium hover:bg-[#F4F1ED] transition-colors">Réserver L'Essentiel</a>
-                <p className="text-[10px] text-center mt-2 text-[#999]">Rentabilisé avec 10 nouveaux clients.</p>
+                <a href="https://calendly.com/contact-indhack/30min" target="_blank" className="block w-full text-center py-3 border border-[#E8E2D9] bg-white text-[#3C3633] rounded-lg text-sm font-medium hover:bg-[#F4F1ED] transition-colors">Choisir L'Essentiel</a>
               </div>
             </div>
 
-            {/* OFFRE 2 (STAR) */}
+            {/* OFFRE 2: L'ÉCOSYSTÈME (GRANDIR) */}
             <div className="p-8 border border-[#B08D55] rounded-2xl bg-white relative shadow-2xl flex flex-col transform md:-translate-y-4">
-              <div className="absolute top-0 right-0 bg-[#B08D55] text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl tracking-wider uppercase">Recommandé</div>
+              <div className="absolute top-0 right-0 bg-[#B08D55] text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl tracking-wider uppercase">Best Seller</div>
 
               <h3 className="text-xl font-serif font-medium text-[#B08D55] mb-2">L'Écosystème</h3>
-              <div className="text-3xl font-medium mb-1 font-serif text-[#3C3633]">1 890€</div>
-              <p className="text-xs text-[#B08D55] mb-6 font-sans">+ 190€/mois (Votre machine à clients)</p>
+              <div className="text-3xl font-medium mb-1 font-serif text-[#3C3633]">990€</div>
+              <p className="text-xs text-[#B08D55] mb-6 font-sans">+ 149€/mois (Maintenance & SEO)</p>
 
               <div className="border-t border-[#F4F1ED] py-6 space-y-3">
                 <p className="font-bold text-sm text-[#3C3633]">Tout L'Essentiel, PLUS :</p>
-                <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> <strong>Stratégie de Contenu Mensuelle</strong></li>
+                <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> <strong>Stratégie SEO Locale Active</strong></li>
                 <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> 1 Article de Blog SEO / mois</li>
-                <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> Pages "Quartiers" (Maillage local)</li>
-                <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> Optimisation fiche Google My Business</li>
-                <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> Mises à jour illimitées (Tarifs, Photos)</li>
+                <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> Pages Quantiers & Maillage Local</li>
+                <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> Gestion & Réponses aux Avis</li>
+                <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> Mises à jour illimitées</li>
               </div>
 
               <div className="mt-auto">
@@ -285,22 +283,22 @@ function DiagnosticContent() {
               </div>
             </div>
 
-            {/* OFFRE 3 */}
+            {/* OFFRE 3: LE PACK DOMINANT (DOMINER) */}
             <div className="p-8 border border-[#E8E2D9] rounded-2xl bg-[#F9F7F5] flex flex-col hover:border-[#B08D55]/50 transition-colors">
-              <h3 className="text-xl font-serif font-medium text-[#3C3633] mb-2">Sur-Mesure</h3>
-              <div className="text-3xl font-medium mb-1 font-serif text-[#3C3633]">Devis</div>
-              <p className="text-xs text-[#8A7A70] mb-6 font-sans">L'excellence absolue</p>
+              <h3 className="text-xl font-serif font-medium text-[#3C3633] mb-2">Le Pack Dominant</h3>
+              <div className="text-3xl font-medium mb-1 font-serif text-[#3C3633]">1 290€</div>
+              <p className="text-xs text-[#8A7A70] mb-6 font-sans">+ 199€/mois (Direction Artistique)</p>
 
               <div className="border-t border-[#E8E2D9] py-6 space-y-3">
-                <p className="font-bold text-sm text-[#3C3633]">Direction Artistique Totale :</p>
-                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Shooting Photo Pro au salon</li>
-                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Vidéo de présentation (Drone/Intérieur)</li>
-                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Gestion des Réseaux Sociaux (1 mois)</li>
-                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Branding Complet (Logo, Cartes)</li>
+                <p className="font-bold text-sm text-[#3C3633]">L'Excellence Totale :</p>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> shooting Photo Pro (Salon)</li>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Vidéo Short/Reel Mensuel</li>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Gestion Réseaux Sociaux</li>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Dominance Totale sur {ville}</li>
               </div>
 
               <div className="mt-auto">
-                <a href="https://calendly.com/contact-indhack/30min" target="_blank" className="block w-full text-center py-3 border border-[#E8E2D9] bg-white text-[#3C3633] rounded-lg text-sm font-medium hover:bg-[#F4F1ED] transition-colors">En discuter</a>
+                <a href="https://calendly.com/contact-indhack/30min" target="_blank" className="block w-full text-center py-3 border border-[#E8E2D9] bg-white text-[#3C3633] rounded-lg text-sm font-medium hover:bg-[#F4F1ED] transition-colors">Choisir L'Excellence</a>
               </div>
             </div>
 
