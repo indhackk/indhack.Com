@@ -1,0 +1,286 @@
+[
+  {
+    "name": "Barber House Port",
+    "rating": 4.6,
+    "reviewCount": 390,
+    "address": "7 Bd Franck Pilatte, 06300 Nice, France",
+    "phone": "07 61 73 84 72",
+    "placeId": "ChIJaX3BK7jazRIRbgmlHMIL_iw",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Barber%20House%20Port&ville=Nice&note=4.6&avis=390"
+  },
+  {
+    "name": "One Love Barbershop",
+    "rating": 4.6,
+    "reviewCount": 341,
+    "address": "5 Rue du Lycée, 06000 Nice, France",
+    "phone": "04 93 88 80 12",
+    "placeId": "ChIJQWA166TazRIRlh8o-VmS-wQ",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=One%20Love%20Barbershop&ville=Nice&note=4.6&avis=341"
+  },
+  {
+    "name": "MY BARBER SHOP ( Avec / Sans RDV)",
+    "rating": 4.6,
+    "reviewCount": 168,
+    "address": "50 Rue Arson, 06300 Nice, France",
+    "placeId": "ChIJ8fXdQMjazRIRZxQXpGP0JXg",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=MY%20BARBER%20SHOP%20(%20Avec%20%2F%20Sans%20RDV)&ville=Nice&note=4.6&avis=168"
+  },
+  {
+    "name": "Comptoir des Barbiers",
+    "rating": 4.7,
+    "reviewCount": 141,
+    "address": "48 Bd Jean Jaurès, 06000 Nice, France",
+    "phone": "06 16 77 68 99",
+    "placeId": "ChIJNeUTL7razRIRLZasD2Q2tf0",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Comptoir%20des%20Barbiers&ville=Nice&note=4.7&avis=141"
+  },
+  {
+    "name": "Moostach' Barber",
+    "rating": 4.3,
+    "reviewCount": 125,
+    "address": "100 Bd Gambetta, 06000 Nice, France",
+    "phone": "09 51 86 06 92",
+    "placeId": "ChIJn5v_0HrRzRIREW0ML5fV-mA",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Moostach'%20Barber&ville=Nice&note=4.3&avis=125"
+  },
+  {
+    "name": "Le local_barbershop",
+    "rating": 4.9,
+    "reviewCount": 120,
+    "address": "25 rue tonduti de l'escarene, 25 Rue Tonduti de l'Escarène, 06000 Nice, France",
+    "phone": "09 52 08 41 96",
+    "placeId": "ChIJzXSXIgrbzRIRJKQJ2T3ECcg",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Le%20local_barbershop&ville=Nice&note=4.9&avis=120"
+  },
+  {
+    "name": "Barber Chic Nice",
+    "rating": 4.8,
+    "reviewCount": 120,
+    "address": "30 Rue Georges Ville, 06300 Nice, France",
+    "phone": "06 74 98 16 69",
+    "placeId": "ChIJSyCXhwvbzRIRCpWth2DZm2Q",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Barber%20Chic%20Nice&ville=Nice&note=4.8&avis=120"
+  },
+  {
+    "name": "Barber shop split hair",
+    "rating": 4.8,
+    "reviewCount": 117,
+    "address": "19 Rue de Russie, 06000 Nice, France",
+    "phone": "04 93 16 92 52",
+    "placeId": "ChIJ5QgB96fazRIRa9dLDlNuEAE",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Barber%20shop%20split%20hair&ville=Nice&note=4.8&avis=117"
+  },
+  {
+    "name": "Absalon",
+    "rating": 4.6,
+    "reviewCount": 109,
+    "address": "8 Rue Meyerbeer, 06000 Nice, France",
+    "phone": "04 93 88 53 05",
+    "placeId": "ChIJicX-cQvQzRIR64LkiKLhZag",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Absalon&ville=Nice&note=4.6&avis=109"
+  },
+  {
+    "name": "Barber Style - Barber shop Nice",
+    "rating": 4.6,
+    "reviewCount": 106,
+    "address": "33 Av. Alfred Borriglione, 06100 Nice, France",
+    "phone": "07 68 52 61 02",
+    "placeId": "ChIJZbj0DsLPzRIRlrx6rSiJIrE",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Barber%20Style%20-%20Barber%20shop%20Nice&ville=Nice&note=4.6&avis=106"
+  },
+  {
+    "name": "Barber studio",
+    "rating": 4.5,
+    "reviewCount": 102,
+    "address": "105 bis Rue de Roquebillière, 06300 Nice, France",
+    "phone": "04 23 13 58 24",
+    "placeId": "ChIJWZWeArfazRIRPURbtTBq23I",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Barber%20studio&ville=Nice&note=4.5&avis=102"
+  },
+  {
+    "name": "Le barbier de nice",
+    "rating": 5,
+    "reviewCount": 101,
+    "address": "12 Av. Malaussena, 06000 Nice, France",
+    "phone": "09 87 56 05 13",
+    "placeId": "ChIJz8KPNADRzRIRkk8lyiZgn3Y",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Le%20barbier%20de%20nice&ville=Nice&note=5&avis=101"
+  },
+  {
+    "name": "Succès Coiffure - Barber shop Nice",
+    "rating": 4.7,
+    "reviewCount": 92,
+    "address": "35 Rue Barla, 06300 Nice, France",
+    "phone": "09 53 31 03 71",
+    "placeId": "ChIJA5s1UWLbzRIRV4Kmb1W61ac",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Succ%C3%A8s%20Coiffure%20-%20Barber%20shop%20Nice&ville=Nice&note=4.7&avis=92"
+  },
+  {
+    "name": "My Barberhood",
+    "rating": 4.5,
+    "reviewCount": 84,
+    "address": "17 Rue Frédéric Passy, 06000 Nice, France",
+    "phone": "06 88 44 60 24",
+    "placeId": "ChIJd9j-HxLQzRIRMh28pX3Yk28",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=My%20Barberhood&ville=Nice&note=4.5&avis=84"
+  },
+  {
+    "name": "Street barber",
+    "rating": 4.4,
+    "reviewCount": 74,
+    "address": "15 Rue Châteauneuf, 06000 Nice, France",
+    "phone": "06 65 98 57 73",
+    "placeId": "ChIJIz4a3xHQzRIRDqRPkMX1jLg",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Street%20barber&ville=Nice&note=4.4&avis=74"
+  },
+  {
+    "name": "45th Barber Street",
+    "rating": 4.7,
+    "reviewCount": 66,
+    "address": "45 Av. Georges Clemenceau, 06000 Nice, France",
+    "phone": "07 81 01 73 57",
+    "placeId": "ChIJRYFJHUfRzRIRGcckpO3Qdgg",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=45th%20Barber%20Street&ville=Nice&note=4.7&avis=66"
+  },
+  {
+    "name": "GABRIEL.B",
+    "rating": 4.9,
+    "reviewCount": 65,
+    "address": "48 Bd Jean Jaurès, 06300 Nice, France",
+    "phone": "04 23 13 00 51",
+    "placeId": "ChIJQdYzxjvbzRIRtHIRahiS-M4",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=GABRIEL.B&ville=Nice&note=4.9&avis=65"
+  },
+  {
+    "name": "Barber Dream Coiffure",
+    "rating": 3.6,
+    "reviewCount": 61,
+    "address": "29 Bd Raimbaldi, 8 Rue Trachel, 06000 Nice, France",
+    "placeId": "ChIJ097h0anazRIRthSV6P_lw_I",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Barber%20Dream%20Coiffure&ville=Nice&note=3.6&avis=61"
+  },
+  {
+    "name": "MS BARBER",
+    "rating": 4.8,
+    "reviewCount": 60,
+    "address": "52 Bd Jean Jaurès, 06300 Nice, France",
+    "phone": "06 16 29 30 16",
+    "placeId": "ChIJQX9J1hDbzRIRSqz7QH1a5sw",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=MS%20BARBER&ville=Nice&note=4.8&avis=60"
+  },
+  {
+    "name": "Les Barbiers",
+    "rating": 4.8,
+    "reviewCount": 41,
+    "address": "6 Bd Lech Walesa, 06300 Nice, France",
+    "phone": "06 03 44 73 68",
+    "placeId": "ChIJ9xGFg8fazRIR9ADN2LIDg_4",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Les%20Barbiers&ville=Nice&note=4.8&avis=41"
+  },
+  {
+    "name": "BARBER 24",
+    "rating": 4.6,
+    "reviewCount": 32,
+    "address": "24 Rue Trachel, 06000 Nice, France",
+    "phone": "07 62 36 65 97",
+    "placeId": "ChIJmW5riwbQzRIRJ3Anz2LCxEg",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=BARBER%2024&ville=Nice&note=4.6&avis=32"
+  },
+  {
+    "name": "Barber Shop 06",
+    "rating": 4.7,
+    "reviewCount": 26,
+    "address": "22 Av. des Orangers, 06000 Nice, France",
+    "phone": "07 53 42 52 12",
+    "placeId": "ChIJh1zU1yHRzRIRCE4OzC1y0WM",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Barber%20Shop%2006&ville=Nice&note=4.7&avis=26"
+  },
+  {
+    "name": "Men’s Barber",
+    "rating": 4.8,
+    "reviewCount": 23,
+    "address": "26 Rue d'Angleterre, 06000 Nice, France",
+    "placeId": "ChIJD3s-8gfQzRIRL-4TlF2yZ58",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Men%E2%80%99s%20Barber&ville=Nice&note=4.8&avis=23"
+  },
+  {
+    "name": "BARBER HOUSE",
+    "rating": 4.7,
+    "reviewCount": 14,
+    "address": "2 Rue Auguste Gal, 06300 Nice, France",
+    "phone": "07 69 03 68 02",
+    "placeId": "ChIJPx6Sd3jbzRIRA7ttvGViB3Y",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=BARBER%20HOUSE&ville=Nice&note=4.7&avis=14"
+  },
+  {
+    "name": "The Barber",
+    "rating": 4.8,
+    "reviewCount": 13,
+    "address": "6 Rue d'Alsace-Lorraine, 06000 Nice, France",
+    "placeId": "ChIJV6Zk2YvRzRIRAKrsD-C-Ji8",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=The%20Barber&ville=Nice&note=4.8&avis=13"
+  },
+  {
+    "name": "Coiffeur Barbier",
+    "rating": 5,
+    "reviewCount": 7,
+    "address": "8 Rue Meyerbeer, 06000 Nice, France",
+    "phone": "04 93 88 53 05",
+    "placeId": "ChIJgynwcQvQzRIRubF-t5um0Io",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Coiffeur%20Barbier&ville=Nice&note=5&avis=7"
+  },
+  {
+    "name": "As barber",
+    "rating": 5,
+    "reviewCount": 6,
+    "address": "21 Rue Marceau, 06000 Nice, France",
+    "phone": "07 75 74 12 54",
+    "placeId": "ChIJhZIFQ_3bzRIRthIXUlcURuQ",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=As%20barber&ville=Nice&note=5&avis=6"
+  },
+  {
+    "name": "BARBER STYLE ARSON 💈",
+    "rating": 5,
+    "reviewCount": 6,
+    "address": "24 Rue Arson, 06300 Nice, France",
+    "placeId": "ChIJG1c2dgDbzRIRQDUzR3EXVQY",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=BARBER%20STYLE%20ARSON%20%F0%9F%92%88&ville=Nice&note=5&avis=6"
+  },
+  {
+    "name": "Gentleman barber",
+    "rating": 3.7,
+    "reviewCount": 3,
+    "address": "33 Rue de Lépante, 06000 Nice, France",
+    "placeId": "ChIJ7a6ltRfbzRIR3Shww0-2SOo",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/barbier?nom=Gentleman%20barber&ville=Nice&note=3.7&avis=3"
+  }
+]
