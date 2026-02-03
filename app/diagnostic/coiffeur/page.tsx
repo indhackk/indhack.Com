@@ -1,921 +1,809 @@
 'use client'
-// V12 - Expert Tone + Premium Design + Real Haloscan Data
 
 import { useSearchParams } from 'next/navigation'
 import { Suspense, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Star, MapPin, Check, ArrowRight, Sparkles, Crown, Menu,
-  Globe, TrendingUp, Search, Users, Target, Zap,
-  BarChart3, Eye, MessageCircle, Calendar, Phone,
-  AlertTriangle, Award, ShieldCheck, Lightbulb, ChevronDown,
-  ExternalLink, Scissors, Heart, X, Clock, Shield,
-  ArrowUpRight, BadgeCheck, Flame, Lock
-} from 'lucide-react'
+import { Search, MapPin, Check, Globe, Calendar, Star, TrendingUp, Phone, MessageCircle, ChevronDown, Users, BarChart3, Bot, AlertTriangle, Sparkles } from 'lucide-react'
 
-// ═══════════════════════════════════════════════════════════════════════════════
-// HALOSCAN DATA - Coiffeur Nice (Source: Haloscan Janvier 2026)
-// ═══════════════════════════════════════════════════════════════════════════════
-const MARKET_DATA = {
-  mainKeyword: { term: 'coiffeur nice', volume: 2800 },
-  address: "22 Rue de l'Hôtel des Postes, Nice",
-  uniqueSellingPoint: "Sièges massants & Ambiance Relaxation",
-  quartiers: [
-    { term: 'coiffeur nice centre', volume: 1100 },
-    { term: 'coiffeur rue hotel des postes', volume: 140 },
-    { term: 'coiffeur nice etoile', volume: 890 },
-    { term: 'coiffeur jean medecin', volume: 720 },
-    { term: 'meilleur coiffeur nice', volume: 1200 },
-  ],
-  services: [
-    { term: 'balayage nice', volume: 480 },
-    { term: 'coloration cheveux nice', volume: 390 },
-    { term: 'coiffeur visagiste nice', volume: 320 },
-    { term: 'soin cheveux nice', volume: 210 },
-  ],
-  competitors: [
-    { rank: 1, name: 'Planity', type: 'Annuaire', threat: 'Vole votre marque sur Google' },
-    { rank: 2, name: 'Fresha', type: 'Annuaire', threat: 'Clientèle volatile' },
-    { rank: 3, name: 'Le Fil de l\'Âme', type: 'Concurrent', threat: 'Top 3 (a un site)' },
-    { rank: 4, name: 'Salon Carré d\'Or', type: 'Concurrent', threat: 'Top 4 (a un site)' },
-  ],
-}
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// DESIGN SYSTEM
-// ═══════════════════════════════════════════════════════════════════════════════
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
-}
-
-function Badge({ children, variant = 'default' }: { children: React.ReactNode, variant?: 'default' | 'gold' | 'danger' | 'success' }) {
-  const styles = {
-    default: 'bg-white/80 backdrop-blur border-white/50 text-[#3C3633]',
-    gold: 'bg-gradient-to-r from-[#B08D55] to-[#D4AF37] border-[#B08D55]/50 text-white',
-    danger: 'bg-red-500/10 border-red-500/30 text-red-600',
-    success: 'bg-emerald-500/10 border-emerald-500/30 text-emerald-600',
-  }
-  return (
-    <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-semibold tracking-wide ${styles[variant]}`}>
-      {children}
-    </span>
-  )
-}
-
-function Section({ children, className = '', dark = false }: { children: React.ReactNode, className?: string, dark?: boolean }) {
-  return (
-    <section className={`py-20 md:py-28 px-5 md:px-8 ${dark ? 'bg-[#1C1917] text-white' : 'bg-white'} ${className}`}>
-      <div className="max-w-6xl mx-auto">
-        {children}
-      </div>
-    </section>
-  )
-}
-
-function SectionHeader({ badge, title, subtitle }: { badge?: string, title: string, subtitle?: string }) {
-  return (
-    <div className="text-center mb-16 max-w-3xl mx-auto">
-      {badge && (
-        <motion.div {...fadeInUp} className="mb-4">
-          <span className="text-[11px] font-bold text-[#B08D55] uppercase tracking-[0.25em]">{badge}</span>
-        </motion.div>
-      )}
-      <motion.h2 {...fadeInUp} className="text-3xl md:text-5xl font-serif font-medium leading-tight mb-5">
-        {title}
-      </motion.h2>
-      {subtitle && (
-        <motion.p {...fadeInUp} className="text-lg text-[#8A8A8A] font-light leading-relaxed">
-          {subtitle}
-        </motion.p>
-      )}
-    </div>
-  )
-}
-
-function MetricCard({ value, label, trend, icon: Icon }: { value: string, label: string, trend?: string, icon: any }) {
-  return (
-    <div className="bg-gradient-to-br from-white to-[#FAFAFA] p-6 rounded-2xl border border-[#E5E5E5] hover:border-[#B08D55]/30 hover:shadow-lg transition-all group">
-      <div className="flex items-start justify-between mb-4">
-        <div className="w-11 h-11 rounded-xl bg-[#B08D55]/10 flex items-center justify-center group-hover:bg-[#B08D55]/20 transition-colors">
-          <Icon className="w-5 h-5 text-[#B08D55]" />
-        </div>
-        {trend && (
-          <span className="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full flex items-center gap-1">
-            <TrendingUp className="w-3 h-3" />
-            {trend}
-          </span>
-        )}
-      </div>
-      <div className="text-3xl font-serif font-medium text-[#1C1917] mb-1">{value}</div>
-      <div className="text-sm text-[#8A8A8A]">{label}</div>
-    </div>
-  )
-}
-
-function Accordion({ title, children, icon }: { title: string, children: React.ReactNode, icon?: string }) {
-  const [open, setOpen] = useState(false)
-  return (
-    <div className="border border-[#E5E5E5] rounded-xl overflow-hidden bg-white hover:border-[#B08D55]/30 transition-colors">
-      <button onClick={() => setOpen(!open)} className="w-full flex items-center gap-4 p-5 text-left">
-        {icon && <span className="text-xl">{icon}</span>}
-        <span className="flex-1 font-medium text-[#1C1917]">{title}</span>
-        <ChevronDown className={`w-5 h-5 text-[#B08D55] transition-transform ${open ? 'rotate-180' : ''}`} />
-      </button>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden"
-          >
-            <div className="px-5 pb-5 text-[#6B6B6B] leading-relaxed border-t border-[#F5F5F5] pt-4">
-              {children}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  )
-}
-
-// ═══════════════════════════════════════════════════════════════════════════════
-// MAIN PAGE
-// ═══════════════════════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════════════════
+// DIAGNOSTIC COIFFEUR - Version Propre & Pédagogique
+// ══════════════════════════════════════════════════════════════════════════════
 
 function DiagnosticContent() {
   const searchParams = useSearchParams()
-
   const nom = searchParams.get('nom')?.replace(/\+/g, ' ') || 'Votre Salon'
   const ville = searchParams.get('ville')?.replace(/\+/g, ' ') || 'Nice'
-  const avis = parseInt(searchParams.get('avis') || '155')
-  const note = parseFloat(searchParams.get('note') || '4.6')
-
-  // Calculs ROI
-  const avgTicket = 65
-  const clickRate = 0.05
-  const convRate = 0.10
-  const monthlyVisitors = Math.round(MARKET_DATA.mainKeyword.volume * clickRate)
-  const monthlyClients = Math.round(monthlyVisitors * convRate)
-  const yearlyRevenue = monthlyClients * avgTicket * 12
+  const note = searchParams.get('note') || '4.6'
+  const avis = searchParams.get('avis') || '155'
 
   return (
-    <main className="min-h-screen bg-[#FAFAFA] text-[#1C1917] font-sans antialiased">
+    <main className="min-h-screen bg-white">
 
-      {/* ═══════════════════════════════════════════════════════════════════════
-          BANNER EXCLUSIVITÉ
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <div className="bg-[#B08D55] text-white py-2 px-5 text-center text-xs font-bold uppercase tracking-[0.2em] relative z-50">
-        Attention : 1 seule place disponible pour le secteur "Nice Hôtel des Postes / Jean Médecin" en Février
-      </div>
-
-      {/* ═══════════════════════════════════════════════════════════════════════
-          HERO — L'accroche qui fait mal
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex items-center py-20 px-5 md:px-8 overflow-hidden bg-gradient-to-b from-[#F5F3F0] to-[#FAFAFA]">
-        {/* Background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#B08D55]/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#B08D55]/3 rounded-full blur-3xl" />
+      {/* ════════ HEADER HERO AVEC PHOTO SALON ════════ */}
+      <section className="relative min-h-[85vh] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80"
+            alt="Salon de coiffure"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         </div>
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
-          {/* Left — Content */}
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="flex flex-wrap gap-2 mb-6">
-              <Badge variant="gold">
-                <Star className="w-3 h-3 fill-current" /> {note}/5 — {avis} avis
-              </Badge>
-              <Badge variant="danger">
-                <AlertTriangle className="w-3 h-3" /> Invisible sur Google
-              </Badge>
+        {/* Contenu */}
+        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 py-20">
+          <div className="max-w-2xl">
+
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
+              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+              <span className="text-white/90 text-sm">Analyse personnalisée</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.05] mb-6">
-              {nom},<br />
-              <span className="text-[#B08D55]">{MARKET_DATA.mainKeyword.volume.toLocaleString()}</span> clientes<br />
-              vous cherchent.<br />
-              <span className="text-[#8A8A8A] text-[0.7em]">Sur Nice.</span>
+            {/* Titre */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-6">
+              Et si <span className="font-medium">{nom}</span><br />
+              était visible sur Google ?
             </h1>
 
-            <p className="text-lg md:text-xl text-[#6B6B6B] leading-relaxed mb-8 max-w-xl">
-              Votre réputation rue de l'Hôtel des Postes est solide. Vos <span className="text-[#B08D55] font-semibold">{MARKET_DATA.uniqueSellingPoint}</span> sont un atout majeur.
-              Mais <strong className="text-[#1C1917]">sans site propre</strong>, vous êtes invisible face à l'IA et aux annuaires qui captent vos marges.
+            {/* Sous-titre */}
+            <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-xl">
+              Aujourd'hui, vos {avis} clientes satisfaites vous trouvent par le bouche-à-oreille.
+              Mais chaque mois, <strong className="text-white">2 800 personnes</strong> cherchent un coiffeur à {ville} sur Google.
+              <br /><br />
+              Elles ne vous trouvent pas.
             </p>
 
-            {/* Mini SERP */}
-            <div className="bg-white rounded-2xl border border-[#E5E5E5] p-5 mb-8 shadow-sm">
-              <div className="flex items-center gap-2 text-xs text-[#8A8A8A] mb-4 pb-3 border-b border-[#F5F5F5]">
-                <Search className="w-4 h-4" />
-                <span>Résultats Google pour "coiffeur nice"</span>
+            {/* Infos salon */}
+            <div className="flex flex-wrap items-center gap-6 text-white/70">
+              <div className="flex items-center gap-2">
+                <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
+                <span>{note}/5 sur Google</span>
               </div>
-              <div className="space-y-2">
-                {MARKET_DATA.competitors.slice(0, 3).map((c, i) => (
-                  <div key={i} className="flex items-center gap-3 text-sm">
-                    <span className={`w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center ${c.type === 'Annuaire' ? 'bg-orange-100 text-orange-600' : 'bg-emerald-100 text-emerald-600'}`}>
-                      {c.rank}
-                    </span>
-                    <span className="flex-1 font-medium">{c.name}</span>
-                    <span className="text-xs text-[#8A8A8A]">{c.threat}</span>
-                  </div>
-                ))}
-                <div className="flex items-center gap-3 text-sm bg-red-50 -mx-3 px-3 py-2 rounded-lg border border-red-100">
-                  <span className="w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center bg-red-500 text-white">?</span>
-                  <span className="flex-1 font-medium text-red-700">{nom}</span>
-                  <span className="text-xs text-red-500 font-medium">Introuvable</span>
-                </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-5 h-5" />
+                <span>{avis} avis clients</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5" />
+                <span>22 rue Hôtel des Postes, {ville}</span>
               </div>
             </div>
 
-            {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="https://calendly.com/contact-indhack/30min"
-                target="_blank"
-                rel="noopener"
-                className="inline-flex items-center justify-center gap-2 bg-[#1C1917] text-white px-7 py-4 rounded-full font-medium hover:bg-[#B08D55] transition-all hover:scale-[1.02] shadow-lg shadow-black/10"
-              >
-                <Calendar className="w-5 h-5" />
-                Réserver un audit gratuit
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="tel:0661139748"
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full border border-[#E5E5E5] text-[#1C1917] hover:bg-white transition-colors"
-              >
-                <Phone className="w-4 h-4 text-[#B08D55]" />
-                06 61 13 97 48
-              </a>
-            </div>
-          </motion.div>
+          </div>
+        </div>
 
-          {/* Right — Visual */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative hidden lg:block"
-          >
-            <div className="relative">
-              {/* Phone mockup */}
-              <div className="relative mx-auto w-[300px] h-[620px] bg-[#1C1917] rounded-[3rem] p-2 shadow-2xl shadow-black/20 border border-[#333]">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-[#1C1917] rounded-b-2xl z-10" />
-                <div className="w-full h-full bg-[#F9F7F5] rounded-[2.5rem] overflow-hidden">
-                  {/* Screen content */}
-                  <div className="relative h-full">
-                    <img
-                      src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800"
-                      alt="Salon"
-                      className="w-full h-[55%] object-cover"
-                    />
-                    <div className="absolute top-[50%] left-0 right-0 h-20 bg-gradient-to-t from-[#F9F7F5] to-transparent" />
-                    <div className="absolute top-4 left-4 right-4 flex justify-between">
-                      <div className="bg-white/90 backdrop-blur px-3 py-1.5 rounded-full flex items-center gap-1.5 text-sm font-medium shadow">
-                        <Star className="w-3.5 h-3.5 text-[#B08D55] fill-[#B08D55]" />
-                        {note}
-                      </div>
-                      <div className="bg-[#B08D55] text-white px-3 py-1.5 rounded-full text-sm font-medium shadow">
-                        {avis} avis
-                      </div>
-                    </div>
-                    <div className="p-5">
-                      <h3 className="font-serif text-xl font-medium mb-2">{nom}</h3>
-                      <p className="text-sm text-[#8A8A8A] mb-4">Votre coiffeuse experte à {ville}</p>
-                      <button className="w-full bg-[#1C1917] text-white py-3.5 rounded-xl font-medium">
-                        Prendre RDV
-                      </button>
-                      <p className="text-[10px] text-center text-[#8A8A8A] mt-2">Sans commission</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating cards */}
-              <div className="absolute -left-16 top-1/4 bg-white rounded-xl shadow-xl p-4 border border-[#E5E5E5] animate-float">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-emerald-600" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-emerald-600">+{monthlyClients}</div>
-                    <div className="text-xs text-[#8A8A8A]">clients/mois</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute -right-10 bottom-1/4 bg-white rounded-xl shadow-xl p-4 border border-[#E5E5E5] animate-float-delayed">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#B08D55]/10 flex items-center justify-center">
-                    <BarChart3 className="w-5 h-5 text-[#B08D55]" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-[#B08D55]">+{(yearlyRevenue / 1000).toFixed(0)}k€</div>
-                    <div className="text-xs text-[#8A8A8A]">CA/an potentiel</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+          <ChevronDown className="w-6 h-6" />
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 2 — Le problème (sans site)
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <Section className="bg-[#FAFAFA]">
-        <SectionHeader
-          badge="Le constat"
-          title="Sans site web, vous perdez sur tous les fronts"
-          subtitle="Une fiche Google et Instagram ne suffisent plus. Voici ce que vous laissez sur la table."
-        />
+      {/* ════════ SECTION : POURQUOI UN SITE INTERNET ? ════════ */}
+      <section className="py-24 px-6 md:px-12">
+        <div className="max-w-4xl mx-auto">
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            {
-              icon: Lock,
-              title: "Prisonnier des plateformes",
-              desc: "Planity, Treatwell... Ils prennent 2-5% sur chaque RDV. Sur 100 clientes/mois à 65€, ça fait 130-325€ de commissions perdues.",
-              color: "red"
-            },
-            {
-              icon: Eye,
-              title: "Invisible sur Google",
-              desc: `${MARKET_DATA.mainKeyword.volume.toLocaleString()} recherches/mois pour "coiffeur nice". Sans site, vous n'apparaissez dans aucun résultat organique.`,
-              color: "orange"
-            },
-            {
-              icon: MessageCircle,
-              title: "Invisible pour l'IA",
-              desc: "ChatGPT et Perplexity recommandent les salons qui ont un site structuré. Sans site, pour l'IA de 2026, vous n'existez pas.",
-              color: "purple"
-            },
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-white p-6 rounded-2xl border border-[#E5E5E5] hover:border-red-200 hover:bg-red-50/30 transition-all group"
-            >
-              <div className={`w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center mb-5 group-hover:bg-red-200 transition-colors`}>
-                <item.icon className="w-6 h-6 text-red-600" />
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Pourquoi créer un site internet<br />
+              <span className="font-medium">pour {nom} ?</span>
+            </h2>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+              Vous avez une excellente réputation. Mais sans site web, vous passez à côté d'une partie importante de votre clientèle potentielle.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <div className="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center mb-6">
+                <Search className="w-6 h-6 text-rose-600" />
               </div>
-              <h3 className="text-lg font-semibold mb-3">{item.title}</h3>
-              <p className="text-[#6B6B6B] text-sm leading-relaxed">{item.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Comparaison visuelle */}
-        <div className="mt-16 grid md:grid-cols-2 gap-6">
-          <div className="bg-red-50 border border-red-200 rounded-2xl p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <X className="w-8 h-8 text-red-500" />
-              <h3 className="text-xl font-semibold text-red-800">Aujourd'hui</h3>
+              <h3 className="text-xl font-medium text-gray-900 mb-3">
+                Être trouvée sur Google
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Quand quelqu'un tape "coloriste Nice" ou "lissage brésilien Nice" sur Google,
+                il voit une liste de résultats. Sans site web, vous n'apparaissez pas dans cette liste.
+                Vous êtes invisible pour tous ces clients potentiels.
+              </p>
             </div>
-            <ul className="space-y-3">
-              {[
-                "Dépendance aux annuaires (commissions)",
-                "Google vous classe après vos concurrents",
-                "Pas de vitrine pour montrer votre travail",
-                "Les IA ne vous connaissent pas",
-                "Vos avis Google ne suffisent pas à ranker",
-              ].map((item, i) => (
-                <li key={i} className="flex gap-3 text-red-700">
-                  <X className="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span className="text-sm">{item}</span>
-                </li>
-              ))}
-            </ul>
+
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                <Globe className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-medium text-gray-900 mb-3">
+                Posséder votre vitrine digitale
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Instagram et les fiches Google, c'est bien. Mais ce sont des plateformes qui ne vous appartiennent pas.
+                Un site web, c'est votre espace. Vous y présentez vos services, vos tarifs,
+                vos réalisations — comme vous le voulez.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                <TrendingUp className="w-6 h-6 text-emerald-600" />
+              </div>
+              <h3 className="text-xl font-medium text-gray-900 mb-3">
+                Attirer de nouvelles clientes
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Un site bien fait attire des visiteurs en continu, 24h/24. Ces visiteurs découvrent
+                votre travail, lisent vos avis, et prennent rendez-vous. C'est un commercial
+                qui travaille pour vous sans jamais s'arrêter.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+                <Star className="w-6 h-6 text-amber-600" />
+              </div>
+              <h3 className="text-xl font-medium text-gray-900 mb-3">
+                Inspirer confiance
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                En 2025, un professionnel sans site web paraît moins crédible. Un site soigné
+                rassure les nouvelles clientes. Ça montre que vous prenez votre métier au sérieux,
+                que vous êtes établie, professionnelle.
+              </p>
+            </div>
+
           </div>
 
-          <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <Check className="w-8 h-8 text-emerald-500" />
-              <h3 className="text-xl font-semibold text-emerald-800">Avec votre site</h3>
-            </div>
-            <ul className="space-y-3">
-              {[
-                "RDV directs, 0% de commission",
-                "Présence sur Google + Local Pack",
-                "Galerie, avis, tarifs : tout centralisé",
-                "ChatGPT et Perplexity vous recommandent",
-                "Un actif digital qui vous appartient",
-              ].map((item, i) => (
-                <li key={i} className="flex gap-3 text-emerald-700">
-                  <Check className="w-4 h-4 mt-1 flex-shrink-0" />
-                  <span className="text-sm">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
-      </Section>
+      </section>
 
-      {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 3 — Analyse concurrentielle
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <Section dark>
-        <SectionHeader
-          badge="Données Haloscan 2026"
-          title="Vos concurrents ont compris"
-          subtitle="Le Fil de l'Âme et Salon Carré d'Or sont en top 5. Leur secret ? Un site web."
-        />
+      {/* ════════ SECTION : APERÇU DE VOTRE FUTUR SITE ════════ */}
+      <section className="py-24 px-6 md:px-12 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
 
-        <div className="grid lg:grid-cols-2 gap-10">
-          {/* SERP Analysis */}
-          <div>
-            <h3 className="text-sm font-bold text-[#B08D55] uppercase tracking-wider mb-6">Classement Google "coiffeur nice"</h3>
-            <div className="space-y-3">
-              {MARKET_DATA.competitors.map((c, i) => (
-                <div
-                  key={i}
-                  className={`flex items-center gap-4 p-4 rounded-xl border ${c.type === 'Annuaire'
-                    ? 'bg-orange-500/10 border-orange-500/20'
-                    : 'bg-emerald-500/10 border-emerald-500/20'
-                    }`}
-                >
-                  <span className={`w-9 h-9 rounded-full text-sm font-bold flex items-center justify-center ${c.rank <= 2 ? 'bg-[#B08D55] text-white' : 'bg-white/20'
-                    }`}>
-                    #{c.rank}
-                  </span>
-                  <div className="flex-1">
-                    <div className="font-medium">{c.name}</div>
-                    <div className="text-xs text-white/60">{c.type}</div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Voici ce que pourrait être<br />
+              <span className="font-medium">votre site internet</span>
+            </h2>
+            <p className="text-gray-500 text-lg">
+              Un aperçu du site que je pourrais créer pour {nom}
+            </p>
+          </div>
+
+          {/* Mockup du site */}
+          <div className="relative">
+            {/* Browser frame */}
+            <div className="bg-gray-200 rounded-t-2xl px-4 py-3 flex items-center gap-3">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-amber-400" />
+                <div className="w-3 h-3 rounded-full bg-emerald-400" />
+              </div>
+              <div className="flex-1 bg-white rounded-lg px-4 py-1.5 text-sm text-gray-500 text-center">
+                byluciemendes.fr
+              </div>
+            </div>
+
+            {/* Site preview */}
+            <div className="bg-white rounded-b-2xl shadow-2xl overflow-hidden">
+
+              {/* Hero du site fictif */}
+              <div className="relative h-[400px] md:h-[500px]">
+                <img
+                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80"
+                  alt="Salon By Lucie Mendes"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+
+                {/* Header fictif */}
+                <div className="absolute top-0 left-0 right-0 p-6 flex items-center justify-between">
+                  <div className="text-white font-medium text-xl">
+                    By Lucie Mendes
                   </div>
-                  <span className={`text-xs px-2 py-1 rounded-full ${c.type === 'Annuaire' ? 'bg-orange-500/20 text-orange-300' : 'bg-emerald-500/20 text-emerald-300'
-                    }`}>
-                    {c.type === 'Annuaire' ? 'Annuaire' : 'A un site'}
-                  </span>
+                  <nav className="hidden md:flex items-center gap-8 text-white/80 text-sm">
+                    <span>Services</span>
+                    <span>Galerie</span>
+                    <span>Tarifs</span>
+                    <span>Contact</span>
+                    <span className="bg-white text-gray-900 px-4 py-2 rounded-full">Réserver</span>
+                  </nav>
                 </div>
-              ))}
-              {/* You */}
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-red-500/20 border-2 border-red-500/40 border-dashed">
-                <span className="w-9 h-9 rounded-full text-sm font-bold flex items-center justify-center bg-red-500">?</span>
-                <div className="flex-1">
-                  <div className="font-medium text-red-300">{nom}</div>
-                  <div className="text-xs text-red-400">Non classé (pas de site)</div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          {/* Insight */}
-          <div className="flex flex-col justify-center">
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <Lightbulb className="w-6 h-6 text-[#B08D55]" />
-                <h4 className="text-lg font-semibold">L'analyse</h4>
-              </div>
-              <p className="text-white/70 mb-6 leading-relaxed">
-                <strong className="text-white">Le Fil de l'Âme</strong> et <strong className="text-white">Salon Carré d'Or</strong> ont
-                des notes inférieures à la vôtre ({note}/5). Mais ils sont devant vous.
-              </p>
-              <p className="text-white/70 mb-6 leading-relaxed">
-                La différence ? <strong className="text-white">Ils ont un site web professionnel</strong>.
-                Google interprète ça comme un signal de crédibilité.
-              </p>
-              <div className="bg-[#B08D55]/20 rounded-xl p-4 border border-[#B08D55]/30">
-                <div className="flex items-center gap-2 text-[#B08D55] font-medium">
-                  <Target className="w-5 h-5" />
-                  Objectif réaliste : Top 5 en 4-6 mois
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 4 — Les opportunités (mots-clés)
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <Section>
-        <SectionHeader
-          badge="Opportunités identifiées"
-          title="Les requêtes que vous ne captez pas"
-          subtitle="Chaque ligne = des clients potentiels qui cherchent un coiffeur comme vous."
-        />
-
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {/* Quartiers */}
-          <div className="bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden">
-            <div className="p-5 border-b border-[#F5F5F5] flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-[#B08D55]" />
-              <h3 className="font-semibold">Par quartier</h3>
-            </div>
-            <div className="p-5 space-y-3">
-              {MARKET_DATA.quartiers.map((q, i) => (
-                <div key={i} className="flex items-center justify-between py-2 border-b border-[#F5F5F5] last:border-0">
-                  <span className="text-sm">{q.term}</span>
-                  <div className="flex items-center gap-2">
-                    <span className="font-semibold text-[#B08D55]">{q.volume}</span>
-                    <span className="text-xs text-[#8A8A8A]">/mois</span>
+                {/* Contenu hero fictif */}
+                <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                  <p className="text-white/70 text-sm uppercase tracking-wider mb-3">Salon de coiffure · Nice Centre</p>
+                  <h3 className="text-3xl md:text-4xl text-white font-light mb-4">
+                    L'expertise colorimétrie<br />
+                    <span className="font-medium">au cœur de Nice</span>
+                  </h3>
+                  <div className="flex items-center gap-4 text-white/80 text-sm mb-6">
+                    <span className="flex items-center gap-1">
+                      <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
+                      4.6/5 · 155 avis
+                    </span>
+                    <span>22 rue Hôtel des Postes</span>
+                  </div>
+                  <div className="flex gap-4">
+                    <span className="bg-white text-gray-900 px-6 py-3 rounded-full font-medium">
+                      Prendre rendez-vous
+                    </span>
+                    <span className="border border-white/30 text-white px-6 py-3 rounded-full">
+                      Découvrir le salon
+                    </span>
                   </div>
                 </div>
-              ))}
-            </div>
-            <div className="p-4 bg-[#B08D55]/5 border-t border-[#B08D55]/10">
-              <p className="text-sm text-[#B08D55] font-medium">
-                Total : {MARKET_DATA.quartiers.reduce((s, q) => s + q.volume, 0).toLocaleString()} recherches/mois
-              </p>
-            </div>
-          </div>
+              </div>
 
-          {/* Services */}
-          <div className="bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden">
-            <div className="p-5 border-b border-[#F5F5F5] flex items-center gap-2">
-              <Search className="w-5 h-5 text-[#B08D55]" />
-              <h3 className="font-semibold">Par intention</h3>
-            </div>
-            <div className="p-5 space-y-3">
-              {MARKET_DATA.services.map((s, i) => (
-                <div key={i} className="flex items-center justify-between py-2 border-b border-[#F5F5F5] last:border-0">
-                  <span className="text-sm">{s.term}</span>
-                  <div className="flex items-center gap-2">
-                    <span className="font-semibold text-[#B08D55]">{s.volume}</span>
-                    <span className="text-xs text-[#8A8A8A]">/mois</span>
-                  </div>
+              {/* Services fictifs */}
+              <div className="p-8 md:p-12 border-t border-gray-100">
+                <h4 className="text-xl font-medium text-gray-900 mb-6">Nos expertises</h4>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {['Coloration', 'Lissage brésilien', 'Balayage', 'Soins Tokio'].map((service) => (
+                    <div key={service} className="bg-gray-50 rounded-xl p-4 text-center">
+                      <p className="text-gray-900 font-medium text-sm">{service}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-            <div className="p-4 bg-emerald-50 border-t border-emerald-100">
-              <p className="text-sm text-emerald-700 font-medium">
-                "meilleur coiffeur nice" → Votre note de {note}/5 est un atout majeur
-              </p>
-            </div>
-          </div>
-        </div>
+              </div>
 
-        {/* Ghost Pages Strategy */}
-        <div className="bg-gradient-to-br from-[#1C1917] to-[#2C2926] rounded-2xl p-8 text-white">
-          <div className="flex items-center gap-3 mb-6">
-            <Sparkles className="w-6 h-6 text-[#B08D55]" />
-            <h3 className="text-xl font-semibold">Stratégie "Pages Locales"</h3>
+            </div>
           </div>
-          <p className="text-white/70 mb-6">
-            Je crée des pages optimisées pour chaque mot-clé à fort potentiel. Résultat : vous apparaissez sur plusieurs requêtes simultanément.
+
+          <p className="text-center text-gray-500 text-sm mt-8">
+            * Aperçu non contractuel. Le design final sera créé sur-mesure selon vos préférences.
           </p>
-          <div className="grid md:grid-cols-3 gap-4">
-            {[
-              { url: '/coiffeur-nice-nord', volume: 480 },
-              { url: '/meilleur-coiffeur-nice', volume: 720 },
-              { url: '/coiffeur-nice-sans-rdv', volume: 390 },
-            ].map((page, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-4">
-                <code className="text-[#B08D55] text-sm">{page.url}</code>
-                <p className="text-white/60 text-sm mt-1">→ {page.volume} prospects/mois</p>
-              </div>
-            ))}
-          </div>
+
         </div>
-      </Section>
+      </section>
 
-      {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 5 — ROI Calculator
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <Section className="bg-gradient-to-b from-[#F5F3F0] to-[#FAFAFA]">
-        <SectionHeader
-          badge="Projection"
-          title="Le calcul est simple"
-          subtitle="Estimation conservatrice basée sur les données Haloscan."
-        />
+      {/* ════════ SECTION : QU'EST-CE QUE LE SEO ? ════════ */}
+      <section className="py-24 px-6 md:px-12">
+        <div className="max-w-4xl mx-auto">
 
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden shadow-sm">
-            {[
-              { label: 'Recherches "coiffeur nice" /mois', value: MARKET_DATA.mainKeyword.volume.toLocaleString(), icon: Search },
-              { label: 'Taux de clic Top 5 (conservateur)', value: '5%', icon: Eye },
-              { label: 'Visiteurs potentiels /mois', value: monthlyVisitors.toString(), icon: Users },
-              { label: 'Taux de conversion (prise de RDV)', value: '10%', icon: Target },
-            ].map((row, i) => (
-              <div key={i} className="flex items-center justify-between p-5 border-b border-[#F5F5F5]">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#B08D55]/10 flex items-center justify-center">
-                    <row.icon className="w-5 h-5 text-[#B08D55]" />
-                  </div>
-                  <span className="text-[#6B6B6B]">{row.label}</span>
-                </div>
-                <span className="text-xl font-serif font-medium">{row.value}</span>
-              </div>
-            ))}
+          <div className="mb-16">
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 rounded-full px-4 py-2 text-sm font-medium mb-6">
+              <Search className="w-4 h-4" />
+              Comprendre le référencement
+            </div>
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Le SEO, c'est quoi ?
+            </h2>
+            <p className="text-gray-500 text-lg">
+              Et pourquoi c'est important pour votre salon.
+            </p>
+          </div>
 
-            {/* Results */}
-            <div className="bg-emerald-50 p-5 border-b border-emerald-100">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
-                    <Heart className="w-5 h-5 text-emerald-600" />
-                  </div>
-                  <span className="text-emerald-700 font-medium">Nouveaux clients /mois</span>
-                </div>
-                <span className="text-2xl font-serif font-medium text-emerald-600">+{monthlyClients}</span>
-              </div>
+          <div className="space-y-8">
+
+            <div className="bg-white border border-gray-200 rounded-2xl p-8">
+              <h3 className="text-xl font-medium text-gray-900 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-sm font-bold">1</span>
+                Google classe les sites par pertinence
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Quand quelqu'un tape "coiffeur Nice" dans Google, il y a des milliers de résultats possibles.
+                Google les classe du plus pertinent au moins pertinent. Les 10 premiers résultats de la première page
+                récupèrent <strong>90% des clics</strong>. Le SEO (Search Engine Optimization), c'est l'ensemble des techniques
+                pour apparaître dans ces premiers résultats.
+              </p>
             </div>
 
-            <div className="bg-[#B08D55]/10 p-5">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-[#B08D55]/20 flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-[#B08D55]" />
+            <div className="bg-white border border-gray-200 rounded-2xl p-8">
+              <h3 className="text-xl font-medium text-gray-900 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-sm font-bold">2</span>
+                Les mots-clés : ce que les gens cherchent
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Un mot-clé, c'est une recherche que les gens tapent dans Google. Voici quelques exemples
+                pour votre secteur à {ville} :
+              </p>
+              <div className="grid md:grid-cols-2 gap-3">
+                {[
+                  { keyword: 'coiffeur nice', volume: '2 800/mois' },
+                  { keyword: 'coloriste nice', volume: '260/mois' },
+                  { keyword: 'lissage brésilien nice', volume: '320/mois' },
+                  { keyword: 'balayage nice', volume: '210/mois' },
+                  { keyword: 'meilleur coiffeur nice', volume: '140/mois' },
+                  { keyword: 'coiffeur nice centre', volume: '180/mois' },
+                ].map((kw) => (
+                  <div key={kw.keyword} className="flex items-center justify-between bg-gray-50 rounded-lg px-4 py-3">
+                    <span className="text-gray-900">"{kw.keyword}"</span>
+                    <span className="text-gray-500 text-sm">{kw.volume}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-gray-500 text-sm mt-4">
+                Ces chiffres sont réels, issus d'outils professionnels (Haloscan, SEMrush).
+              </p>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-2xl p-8">
+              <h3 className="text-xl font-medium text-gray-900 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-sm font-bold">3</span>
+                Comment on fait pour apparaître ?
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Pour que Google vous classe bien, il faut :
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600"><strong className="text-gray-900">Un site web</strong> — Sans site, vous ne pouvez pas apparaître dans les résultats organiques.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600"><strong className="text-gray-900">Du contenu optimisé</strong> — Des pages qui parlent de vos services avec les bons mots-clés.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600"><strong className="text-gray-900">Un site rapide et mobile</strong> — Google pénalise les sites lents ou mal affichés sur téléphone.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-600"><strong className="text-gray-900">De la régularité</strong> — Publier du contenu régulièrement montre à Google que votre site est actif.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* ════════ SECTION : GOOGLE MY BUSINESS ════════ */}
+      <section className="py-24 px-6 md:px-12 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+
+          <div className="mb-16">
+            <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 rounded-full px-4 py-2 text-sm font-medium mb-6">
+              <MapPin className="w-4 h-4" />
+              Votre fiche Google
+            </div>
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Google My Business :<br />
+              <span className="font-medium">comment je vous aide</span>
+            </h2>
+            <p className="text-gray-500 text-lg">
+              Vous avez déjà une fiche Google avec {note}★ et {avis} avis. C'est une excellente base.
+              Mais elle peut être optimisée pour attirer plus de clientes.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+
+            <div className="bg-white rounded-2xl p-8 shadow-sm">
+              <h3 className="text-lg font-medium text-gray-900 mb-4">
+                Ce que je fais pour votre fiche
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-600" />
                   </div>
                   <div>
-                    <span className="text-[#1C1917] font-medium">CA additionnel /an</span>
-                    <p className="text-xs text-[#8A8A8A]">{monthlyClients} × {avgTicket}€ × 12 mois</p>
+                    <strong className="text-gray-900">Optimisation complète</strong>
+                    <p className="text-gray-500 text-sm">Description, catégories, services, horaires — tout est passé en revue.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-600" />
+                  </div>
+                  <div>
+                    <strong className="text-gray-900">Posts réguliers</strong>
+                    <p className="text-gray-500 text-sm">Comme Instagram, mais pour Google. Ça montre que votre salon est actif.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-600" />
+                  </div>
+                  <div>
+                    <strong className="text-gray-900">Gestion des avis</strong>
+                    <p className="text-gray-500 text-sm">Réponses professionnelles aux avis positifs et négatifs.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5 text-emerald-600" />
+                  </div>
+                  <div>
+                    <strong className="text-gray-900">Photos mises à jour</strong>
+                    <p className="text-gray-500 text-sm">Des photos récentes et de qualité attirent plus de clics.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-sm">
+              <h3 className="text-lg font-medium text-gray-900 mb-4">
+                L'objectif : le "Pack Local"
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Quand quelqu'un cherche "coiffeur nice" sur Google, il voit d'abord une carte avec 3 résultats.
+                C'est le "Pack Local". C'est la zone la plus cliquée de Google pour les recherches locales.
+              </p>
+              <div className="bg-gray-50 rounded-xl p-6">
+                <p className="text-sm text-gray-500 mb-3">Exemple de Pack Local</p>
+                <div className="space-y-3">
+                  {['Salon A', 'Salon B', 'Salon C'].map((salon, i) => (
+                    <div key={salon} className="flex items-center gap-3 text-sm">
+                      <span className="w-6 h-6 bg-blue-100 rounded text-blue-600 flex items-center justify-center font-medium">{i + 1}</span>
+                      <span className="text-gray-700">{salon}</span>
+                      <span className="text-gray-400">· 4.{5 - i}★</span>
+                    </div>
+                  ))}
+                  <div className="pt-2 border-t border-gray-200 mt-3">
+                    <p className="text-sm text-emerald-600 font-medium">
+                      Objectif : placer {nom} dans ce top 3
+                    </p>
                   </div>
                 </div>
-                <span className="text-3xl font-serif font-medium text-[#B08D55]">+{yearlyRevenue.toLocaleString()}€</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* ════════ SECTION : GEO / IA ════════ */}
+      <section className="py-24 px-6 md:px-12">
+        <div className="max-w-4xl mx-auto">
+
+          <div className="mb-16">
+            <div className="inline-flex items-center gap-2 bg-violet-50 text-violet-700 rounded-full px-4 py-2 text-sm font-medium mb-6">
+              <Bot className="w-4 h-4" />
+              L'ère de l'IA
+            </div>
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              ChatGPT, Gemini, Perplexity :<br />
+              <span className="font-medium">le nouveau Google</span>
+            </h2>
+            <p className="text-gray-500 text-lg max-w-2xl">
+              De plus en plus de gens utilisent des IA pour trouver des recommandations.
+              "Quel est le meilleur coiffeur à Nice ?" — c'est une question qu'on pose maintenant à ChatGPT.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-violet-50 to-blue-50 rounded-2xl p-8 md:p-12 mb-12">
+            <h3 className="text-xl font-medium text-gray-900 mb-6">
+              Comment les IA trouvent leurs réponses ?
+            </h3>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              ChatGPT, Gemini et Perplexity parcourent le web pour trouver des informations.
+              Ils privilégient les entreprises qui ont :
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6">
+                <div className="w-10 h-10 bg-violet-100 rounded-lg flex items-center justify-center mb-4">
+                  <Globe className="w-5 h-5 text-violet-600" />
+                </div>
+                <h4 className="font-medium text-gray-900 mb-2">Un site web</h4>
+                <p className="text-gray-500 text-sm">
+                  Sans site, l'IA n'a pas de source fiable pour parler de vous.
+                </p>
+              </div>
+              <div className="bg-white rounded-xl p-6">
+                <div className="w-10 h-10 bg-violet-100 rounded-lg flex items-center justify-center mb-4">
+                  <BarChart3 className="w-5 h-5 text-violet-600" />
+                </div>
+                <h4 className="font-medium text-gray-900 mb-2">Du contenu structuré</h4>
+                <p className="text-gray-500 text-sm">
+                  Des pages claires sur vos services, votre localisation, vos spécialités.
+                </p>
+              </div>
+              <div className="bg-white rounded-xl p-6">
+                <div className="w-10 h-10 bg-violet-100 rounded-lg flex items-center justify-center mb-4">
+                  <Star className="w-5 h-5 text-violet-600" />
+                </div>
+                <h4 className="font-medium text-gray-900 mb-2">Une bonne réputation</h4>
+                <p className="text-gray-500 text-sm">
+                  Vos {avis} avis avec {note}★ sont un atout majeur pour les IA.
+                </p>
               </div>
             </div>
           </div>
 
-          <p className="text-center text-sm text-[#8A8A8A] mt-6">
-            * Note : Un site Wix/Squarespace vous coûte ~300€/an en abonnement (+ votre temps) sans aucun SEO.
-            Chez IndHack, vous possédez votre actif et il travaille pour vous H24.
+          <div className="bg-gray-900 text-white rounded-2xl p-8 md:p-12">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Sparkles className="w-5 h-5 text-violet-400" />
+              </div>
+              <div>
+                <h3 className="text-xl font-medium mb-2">Ce que je fais pour le GEO</h3>
+                <p className="text-gray-400">GEO = Generative Engine Optimization (optimisation pour les IA)</p>
+              </div>
+            </div>
+            <p className="text-gray-300 leading-relaxed">
+              Je structure votre site et votre contenu pour qu'il soit facilement compréhensible par les IA.
+              Balises techniques, données structurées, contenu clair — tout est fait pour que quand quelqu'un
+              demande "Quel coiffeur pour un lissage brésilien à Nice ?", l'IA pense à vous.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ════════ SECTION : URGENCE ════════ */}
+      <section className="py-24 px-6 md:px-12 bg-rose-50">
+        <div className="max-w-4xl mx-auto">
+
+          <div className="flex flex-col md:flex-row items-start gap-6">
+            <div className="w-14 h-14 bg-rose-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+              <AlertTriangle className="w-7 h-7 text-rose-600" />
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-medium text-gray-900 mb-6">
+                Pourquoi ne pas attendre ?
+              </h2>
+
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>
+                  Le référencement, c'est un travail qui prend du temps. Les résultats ne sont pas immédiats —
+                  il faut généralement 3 à 6 mois pour commencer à voir des effets significatifs.
+                </p>
+                <p>
+                  Pendant ce temps, vos concurrents qui ont déjà un site continuent de capter les clientes
+                  qui vous cherchent. Plus vous attendez, plus ils prennent de l'avance.
+                </p>
+                <p>
+                  Et avec l'essor des IA comme ChatGPT et Gemini, la donne change encore plus vite.
+                  Les entreprises qui n'ont pas de présence en ligne structurée deviennent tout simplement
+                  invisibles pour cette nouvelle génération de recherche.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                <div className="bg-white rounded-xl p-6">
+                  <h4 className="font-medium text-gray-900 mb-3">Aujourd'hui</h4>
+                  <ul className="space-y-2 text-gray-600 text-sm">
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-rose-400 rounded-full" />
+                      Invisible sur Google
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-rose-400 rounded-full" />
+                      Inexistante pour les IA
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-rose-400 rounded-full" />
+                      2 800 recherches/mois qui ne vous trouvent pas
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-white rounded-xl p-6">
+                  <h4 className="font-medium text-gray-900 mb-3">Dans 6 mois avec un site</h4>
+                  <ul className="space-y-2 text-gray-600 text-sm">
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
+                      Visible sur les recherches locales
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
+                      Référencée par les IA
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
+                      De nouvelles clientes chaque mois
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ════════ SECTION : QUI SUIS-JE ════════ */}
+      <section className="py-24 px-6 md:px-12">
+        <div className="max-w-4xl mx-auto">
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+
+            <div>
+              <div className="inline-flex items-center gap-2 bg-gray-100 rounded-full px-4 py-2 text-sm text-gray-600 mb-6">
+                <span>IndHack · Nice</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-6">
+                Je suis Indiana,<br />
+                <span className="font-medium">consultante SEO</span>
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Après un double master en stratégie digitale et expérience utilisateur,
+                j'ai travaillé en agence avant de me lancer en indépendante.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Aujourd'hui, j'accompagne les indépendants et les petites entreprises
+                de la Côte d'Azur dans leur visibilité en ligne. Mon approche :
+                des stratégies concrètes, des résultats mesurables, pas de jargon inutile.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Je ne fais pas de promesses en l'air. Je vous explique ce qui est réaliste,
+                ce qui prend du temps, et on avance ensemble.
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-br from-amber-100 via-rose-50 to-violet-100 rounded-3xl blur-2xl opacity-60" />
+              <div className="relative bg-white rounded-2xl p-8 shadow-lg">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-full flex items-center justify-center">
+                    <span className="text-white font-medium text-xl">IA</span>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-gray-900">Indiana Aflalo</h3>
+                    <p className="text-gray-500 text-sm">Consultante SEO · Nice</p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3 text-gray-600">
+                    <Check className="w-5 h-5 text-emerald-500" />
+                    <span>Double master stratégie digitale & UX</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600">
+                    <Check className="w-5 h-5 text-emerald-500" />
+                    <span>Expérience en agence digitale</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600">
+                    <Check className="w-5 h-5 text-emerald-500" />
+                    <span>Spécialisée SEO local Côte d'Azur</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* ════════ SECTION : TARIFS ════════ */}
+      <section className="py-24 px-6 md:px-12 bg-gray-50" id="tarifs">
+        <div className="max-w-5xl mx-auto">
+
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Mes tarifs
+            </h2>
+            <p className="text-gray-500 text-lg">
+              Des formules adaptées à vos besoins, sans engagement sur les accompagnements mensuels.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+
+            {/* Formule 1 */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm">
+              <h3 className="text-xl font-medium text-gray-900 mb-2">Site Vitrine</h3>
+              <p className="text-gray-500 text-sm mb-6">Votre présence en ligne</p>
+
+              <div className="mb-8">
+                <p className="text-sm text-gray-500">à partir de</p>
+                <p className="text-4xl font-light text-gray-900">690<span className="text-lg">€</span></p>
+              </div>
+
+              <ul className="space-y-3 mb-8">
+                {['Site 5-7 pages sur-mesure', 'Design à votre image', 'Mobile & tablette', 'Bouton réservation', 'Hébergement 1 an'].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-gray-600 text-sm">
+                    <Check className="w-4 h-4 text-gray-400" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Formule 2 - Recommandée */}
+            <div className="bg-gray-900 text-white rounded-2xl p-8 shadow-lg relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="bg-amber-400 text-gray-900 text-xs font-medium px-4 py-1.5 rounded-full">
+                  Recommandé
+                </span>
+              </div>
+
+              <h3 className="text-xl font-medium mb-2 pt-2">Site + SEO</h3>
+              <p className="text-gray-400 text-sm mb-6">Être trouvée sur Google</p>
+
+              <div className="mb-8">
+                <p className="text-sm text-gray-400">à partir de</p>
+                <p className="text-4xl font-light">990<span className="text-lg">€</span></p>
+                <p className="text-sm text-gray-400">puis <span className="text-white">190€</span>/mois</p>
+              </div>
+
+              <ul className="space-y-3 mb-8">
+                {['Tout Site Vitrine +', '10 articles SEO/mois', 'Pages services optimisées', 'Suivi positions Google', 'Rapport mensuel'].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-gray-300 text-sm">
+                    <Check className="w-4 h-4 text-amber-400" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Formule 3 */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm">
+              <h3 className="text-xl font-medium text-gray-900 mb-2">Accompagnement Total</h3>
+              <p className="text-gray-500 text-sm mb-6">SEO + GMB + GEO</p>
+
+              <div className="mb-8">
+                <p className="text-sm text-gray-500">à partir de</p>
+                <p className="text-4xl font-light text-gray-900">1 290<span className="text-lg">€</span></p>
+                <p className="text-sm text-gray-500">puis <span className="text-gray-900">290€</span>/mois</p>
+              </div>
+
+              <ul className="space-y-3 mb-8">
+                {['Tout Site + SEO +', '20 articles/mois', 'Gestion Google My Business', 'Optimisation pour les IA', 'Support WhatsApp'].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-gray-600 text-sm">
+                    <Check className="w-4 h-4 text-gray-400" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+
+          <p className="text-center text-gray-500 text-sm mt-8">
+            Sans engagement sur les formules mensuelles. Le site vous appartient.
           </p>
+
         </div>
-      </Section>
+      </section>
 
-      {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 6 — Les offres
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <Section>
-        <SectionHeader
-          badge="Investissement"
-          title="Des prix justes, sans surprise"
-          subtitle="L'IA me permet de vous offrir un travail d'agence pour une fraction du prix."
-        />
+      {/* ════════ SECTION : CTA CALENDLY ════════ */}
+      <section className="py-24 px-6 md:px-12 bg-gray-900 text-white">
+        <div className="max-w-3xl mx-auto text-center">
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {/* Essentiel */}
-          <div className="bg-white rounded-2xl border border-[#E5E5E5] p-8 hover:border-[#B08D55]/30 hover:shadow-lg transition-all flex flex-col relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold px-3 py-1 rotate-45 translate-x-10 translate-y-2 uppercase w-40 text-center">
-              -200€ Flash
-            </div>
-            <h3 className="text-xl font-semibold mb-2">L'Offre Flash</h3>
-            <div className="flex items-baseline gap-1 mb-1">
-              <span className="text-4xl font-serif font-medium">490€</span>
-              <span className="text-sm text-[#8A8A8A] line-through">690€</span>
-            </div>
-            <p className="text-sm text-[#8A8A8A] mb-6">Paiement unique</p>
-
-            <div className="border-t border-[#F5F5F5] pt-6 space-y-3 flex-1">
-              {[
-                'Site Vitrine de Luxe (3 pages)',
-                'Design Mobile-First (90% du trafic)',
-                'Galerie "Hôtel des Postes" intégrée',
-                'Hébergement & SSL (1 an offert)',
-                'Livraison en 72h chrono',
-              ].map((item, i) => (
-                <div key={i} className="flex gap-3 text-sm">
-                  <Check className="w-4 h-4 text-[#B08D55] flex-shrink-0 mt-0.5" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <a
-              href="https://calendly.com/contact-indhack/30min"
-              target="_blank"
-              className="mt-8 block w-full text-center py-3 border border-[#E5E5E5] rounded-xl font-medium hover:bg-[#F5F5F5] transition-colors"
-            >
-              Saisir l'offre
-            </a>
-          </div>
-
-          {/* Écosystème */}
-          <div className="bg-[#1C1917] text-white rounded-2xl p-8 relative shadow-xl flex flex-col transform md:-translate-y-4 border-2 border-[#B08D55]">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#B08D55] text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-widest whitespace-nowrap">
-              Le Choix Intelligent
-            </div>
-
-            <h3 className="text-xl font-semibold text-[#B08D55] mb-2">Croissance Locale</h3>
-            <div className="flex items-baseline gap-1 mb-1">
-              <span className="text-4xl font-serif font-medium">890€</span>
-              <span className="text-sm text-white/40 line-through">1 290€</span>
-            </div>
-            <p className="text-sm text-white/60 mb-6">+ 99€/mois (Maintenance & SEO)</p>
-
-            <div className="border-t border-white/10 pt-6 space-y-3 flex-1">
-              {[
-                'Tout L\'Offre Flash inclus',
-                'Domination "Coiffeur Nice Centre"',
-                'Pages SEO pour chaque quartier',
-                'Booking Direct (Adieu commissions)',
-                'Support WhatsApp 7j/7',
-                'Garanti Top 10 Google en 90j',
-              ].map((item, i) => (
-                <div key={i} className="flex gap-3 text-sm">
-                  <Check className="w-4 h-4 text-[#B08D55] flex-shrink-0 mt-0.5" />
-                  <span className="text-white/80">{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <a
-              href="https://calendly.com/contact-indhack/30min"
-              target="_blank"
-              className="mt-8 block w-full text-center py-4 bg-[#B08D55] rounded-xl font-bold hover:bg-[#C9A66B] transition-all hover:scale-[1.02]"
-            >
-              Exploser mon CA
-            </a>
-          </div>
-
-          {/* Pack Dominant */}
-          <div className="bg-white rounded-2xl border border-[#E5E5E5] p-8 hover:border-[#B08D55]/30 hover:shadow-lg transition-all flex flex-col">
-            <h3 className="text-xl font-semibold mb-2">Pack Prestige</h3>
-            <div className="flex items-baseline gap-1 mb-1">
-              <span className="text-4xl font-serif font-medium">1 490€</span>
-            </div>
-            <p className="text-sm text-[#8A8A8A] mb-6">+ 199€/mois</p>
-
-            <div className="border-t border-[#F5F5F5] pt-6 space-y-3 flex-1">
-              {[
-                'Tout Le Pack Croissance',
-                'Shooting Photo Sublimateur',
-                'Création de 4 Reels/mois',
-                'Gestion de votre Instagram Nice',
-                'Publicité Locale (Adwords) gérée',
-              ].map((item, i) => (
-                <div key={i} className="flex gap-3 text-sm">
-                  <Check className="w-4 h-4 text-[#B08D55] flex-shrink-0 mt-0.5" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <a
-              href="https://calendly.com/contact-indhack/30min"
-              target="_blank"
-              className="mt-8 block w-full text-center py-3 border border-[#E5E5E5] rounded-xl font-medium hover:bg-[#F5F5F5] transition-colors"
-            >
-              Candidature Prestige
-            </a>
-          </div>
-        </div>
-
-        {/* Market comparison */}
-        <div className="bg-[#F5F3F0] rounded-2xl p-6 max-w-2xl mx-auto">
-          <div className="flex items-center gap-2 mb-4">
-            <Award className="w-5 h-5 text-[#B08D55]" />
-            <span className="font-semibold">Comparé au marché</span>
-          </div>
-          <div className="grid grid-cols-3 gap-4 text-center">
-            <div>
-              <p className="text-sm text-[#8A8A8A] mb-1">Agence</p>
-              <p className="font-medium line-through text-[#8A8A8A]">3 000€ - 8 000€</p>
-            </div>
-            <div>
-              <p className="text-sm text-[#8A8A8A] mb-1">Freelance</p>
-              <p className="font-medium line-through text-[#8A8A8A]">1 500€ - 3 000€</p>
-            </div>
-            <div className="bg-[#B08D55]/10 rounded-xl py-2 -my-2">
-              <p className="text-sm text-[#B08D55] mb-1">IndHack</p>
-              <p className="font-medium text-[#B08D55]">690€ - 1 290€</p>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* ═══════════════════════════════════════════════════════════════════════
-          SECTION 7 — FAQ
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <Section className="bg-[#FAFAFA]">
-        <SectionHeader
-          badge="Questions fréquentes"
-          title="Ce que vous voulez savoir"
-        />
-
-        <div className="max-w-3xl mx-auto space-y-4">
-          <Accordion title="Combien de temps pour voir des résultats ?" icon="⏱️">
-            <p>
-              Votre site est en ligne sous <strong>7-10 jours</strong>. Pour le SEO, comptez 2-3 mois pour les premières améliorations,
-              et 4-6 mois pour des positions stables en top 10. C'est un investissement moyen-terme qui génère du trafic gratuit et qualifié.
-            </p>
-          </Accordion>
-
-          <Accordion title="Je n'y connais rien en informatique, c'est compliqué ?" icon="💻">
-            <p>
-              Zéro technique de votre côté. Je vous envoie un questionnaire simple (infos, photos), et je m'occupe de tout :
-              création, mise en ligne, optimisation, maintenance. Vous vous concentrez sur votre métier.
-            </p>
-          </Accordion>
-
-          <Accordion title="Et si je veux arrêter l'abonnement ?" icon="🔓">
-            <p>
-              Aucun engagement minimum. Le site vous appartient. Si vous arrêtez l'abonnement "Écosystème",
-              vous gardez le site (sans les mises à jour SEO mensuelles). Hébergement seul : ~10€/mois.
-            </p>
-          </Accordion>
-
-          <Accordion title="Pourquoi c'est moins cher qu'une agence ?" icon="🤖">
-            <p>
-              J'utilise l'IA pour automatiser 80% du travail technique (code, optimisation, rapports).
-              Je me concentre sur la stratégie et la personnalisation. Pas de bureaux, pas de salariés = économies répercutées sur vous.
-            </p>
-          </Accordion>
-
-          <Accordion title="Comment ça marche avec ChatGPT et les IA ?" icon="🧠">
-            <p>
-              Les IA comme ChatGPT ou Perplexity puisent leurs infos sur le web. Si vous avez un site bien structuré
-              avec des infos claires (services, localisation, avis), elles peuvent vous recommander quand quelqu'un demande
-              "quel coiffeur à Nice ?". Sans site = invisibilité totale.
-            </p>
-          </Accordion>
-        </div>
-      </Section>
-
-      {/* ═══════════════════════════════════════════════════════════════════════
-          CTA FINAL
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <Section dark className="text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl md:text-5xl font-serif font-medium mb-6 max-w-3xl mx-auto leading-tight">
-            {nom}, vos {avis} clientes<br />méritent de vous trouver.
+          <h2 className="text-3xl md:text-4xl font-light mb-6">
+            On en discute ?
           </h2>
-          <p className="text-lg text-white/60 mb-10 max-w-xl mx-auto">
-            30 minutes. Gratuit. Sans engagement.
-            Je vous montre exactement comment atteindre le top 5 Google.
+          <p className="text-gray-400 text-lg mb-10 leading-relaxed">
+            Réservez un appel de 30 minutes. Je vous explique concrètement ce qu'on peut faire
+            pour <span className="text-white">{nom}</span>, sans engagement.
           </p>
 
           <a
             href="https://calendly.com/contact-indhack/30min"
             target="_blank"
-            className="inline-flex items-center gap-3 bg-[#B08D55] text-white px-10 py-5 rounded-full font-medium text-lg hover:bg-[#C9A66B] transition-all hover:scale-[1.02] shadow-xl"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-white text-gray-900 px-10 py-5 rounded-full font-medium hover:bg-gray-100 transition-colors text-lg"
           >
-            <Calendar className="w-6 h-6" />
-            Réserver mon audit gratuit
-            <ArrowRight className="w-5 h-5" />
+            <Calendar className="w-5 h-5" />
+            Réserver un appel gratuit
           </a>
 
-          <p className="text-sm text-white/40 mt-8">
-            Ou appelez directement : <a href="tel:0661139748" className="text-[#B08D55] hover:underline">06 61 13 97 48</a>
-          </p>
-        </motion.div>
-      </Section>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-500">
+            <a href="tel:0661139748" className="flex items-center gap-2 hover:text-white transition-colors">
+              <Phone className="w-4 h-4" />
+              06 61 13 97 48
+            </a>
+            <a href="mailto:contact@indhack.com" className="flex items-center gap-2 hover:text-white transition-colors">
+              <MessageCircle className="w-4 h-4" />
+              contact@indhack.com
+            </a>
+          </div>
 
-      {/* ═══════════════════════════════════════════════════════════════════════
-          FOOTER
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <footer className="py-10 bg-white border-t border-[#E5E5E5] text-center">
-        <div className="w-12 h-12 rounded-full bg-[#1C1917] mx-auto mb-4 flex items-center justify-center">
-          <span className="text-[#B08D55] font-bold">IH</span>
         </div>
-        <p className="font-semibold text-[#1C1917] mb-1">IndHack • {ville}</p>
-        <p className="text-sm text-[#8A8A8A] mb-4">Expert SEO local & création web</p>
-        <p className="text-xs text-[#CCCCCC]">06 61 13 97 48 • contact@indhack.com</p>
+      </section>
+
+      {/* ════════ FOOTER ════════ */}
+      <footer className="py-8 px-6 bg-gray-950">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+          <span>IndHack · Consultante SEO · Nice</span>
+          <span>© {new Date().getFullYear()}</span>
+        </div>
       </footer>
 
-      {/* ═══════════════════════════════════════════════════════════════════════
-          FLOATING CTA
-      ═══════════════════════════════════════════════════════════════════════ */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <a
-          href="https://calendly.com/contact-indhack/30min"
-          target="_blank"
-          className="flex items-center gap-3 bg-[#1C1917] text-white pl-3 pr-5 py-2.5 rounded-full shadow-2xl hover:scale-105 transition-transform border border-white/10"
-        >
-          <div className="relative">
-            <div className="w-10 h-10 rounded-full bg-[#B08D55] flex items-center justify-center">
-              <span className="text-xs font-bold text-white">IH</span>
-            </div>
-            <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-500 border-2 border-[#1C1917] rounded-full animate-pulse" />
-          </div>
-          <div className="text-left">
-            <span className="block text-[10px] text-[#B08D55] uppercase tracking-wider font-semibold">Dispo maintenant</span>
-            <span className="block text-sm font-medium">On en parle ?</span>
-          </div>
-        </a>
-      </div>
-
-      {/* Animations CSS */}
-      <style jsx global>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-        }
-        .animate-float {
-          animation: float 4s ease-in-out infinite;
-        }
-        .animate-float-delayed {
-          animation: float 4s ease-in-out infinite;
-          animation-delay: 2s;
-        }
-      `}</style>
     </main>
   )
 }
 
-export default function CoiffeurPage() {
+export default function CoiffeurDiagnosticPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-[#FAFAFA]" />}>
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
       <DiagnosticContent />
     </Suspense>
   )
