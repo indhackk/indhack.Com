@@ -32,7 +32,7 @@ function DiagnosticContent() {
 
           {/* Titre */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-[#2D2A26] leading-[1.1] mb-8">
-            Vos clientes<br />
+            Vos clients<br />
             vous adorent.<br />
             <span className="font-semibold text-[#8B7355]">Google ne le sait pas.</span>
           </h1>
@@ -44,9 +44,9 @@ function DiagnosticContent() {
               C'est la preuve que vous faites du bon travail.
             </p>
             <p>
-              Le problème ? Quand une femme cherche <strong className="text-[#2D2A26]">"balayage {ville}"</strong>,
+              Le problème ? Quand un internaute cherche <strong className="text-[#2D2A26]">"balayage {ville}"</strong>,
               <strong className="text-[#2D2A26]"> "coloriste {ville}"</strong> ou <strong className="text-[#2D2A26]">"coiffeur visagiste"</strong> sur Google,
-              elle ne tombe pas sur vous.
+              il ne tombe pas sur vous.
             </p>
             <p>
               Elle tombe sur vos concurrents. Ceux qui ont un site internet.
@@ -122,8 +122,8 @@ function DiagnosticContent() {
           </div>
 
           <p className="text-center text-[#5C5650] text-lg max-w-2xl mx-auto">
-            Ces chiffres sont réels. Ce sont des femmes qui tapent ces mots dans Google,
-            prêtes à prendre rendez-vous. <strong className="text-[#2D2A26]">Sans site internet, vous êtes invisible pour elles.</strong>
+            Ces chiffres sont réels. Ce sont des internautes qui tapent ces mots dans Google,
+            prêts à prendre rendez-vous. <strong className="text-[#2D2A26]">Sans site internet, vous êtes invisible pour eux.</strong>
           </p>
 
         </div>
@@ -151,10 +151,10 @@ function DiagnosticContent() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-[#2D2A26] mb-4">
-                Être trouvée sur Google
+                Être trouvé sur Google
               </h3>
               <p className="text-[#5C5650] leading-relaxed">
-                Quand quelqu'un cherche <strong className="text-[#2D2A26]">"balayage {ville}"</strong> ou
+                Quand un internaute cherche <strong className="text-[#2D2A26]">"balayage {ville}"</strong> ou
                 <strong className="text-[#2D2A26]"> "meilleur coiffeur {ville}"</strong>,
                 un site web vous permet d'apparaître dans les résultats.
               </p>
@@ -171,8 +171,8 @@ function DiagnosticContent() {
                 Inspirer confiance
               </h3>
               <p className="text-[#5C5650] leading-relaxed">
-                Une nouvelle cliente qui découvre votre travail veut en savoir plus.
-                Un site pro avec vos <strong className="text-[#2D2A26]">photos, tarifs et avis</strong> la rassure et l'incite à réserver.
+                Un internaute découvre votre travail et veut en savoir plus.
+                Un site pro avec vos <strong className="text-[#2D2A26]">photos, tarifs et avis</strong> rassure et incite à réserver.
               </p>
             </div>
 
@@ -187,8 +187,8 @@ function DiagnosticContent() {
                 Travailler pour vous H24
               </h3>
               <p className="text-[#5C5650] leading-relaxed">
-                Votre site attire des visiteurs même quand vous êtes fermée.
-                Le dimanche soir, une cliente peut découvrir votre salon et
+                Votre site attire des visiteurs même quand le salon est fermé.
+                Le dimanche soir, un internaute peut vous découvrir et
                 <strong className="text-[#2D2A26]"> réserver pour la semaine</strong>.
               </p>
             </div>
@@ -285,15 +285,110 @@ function DiagnosticContent() {
         </div>
       </section>
 
-      {/* ════════ CE QUE JE FAIS POUR VOUS ════════ */}
+      {/* ════════ COMMENT ÇA MARCHE - PÉDAGOGIE SEO ════════ */}
       <section className="py-24 px-8 md:px-16 bg-white">
+        <div className="max-w-4xl mx-auto">
+
+          <div className="text-center mb-16">
+            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">La stratégie</p>
+            <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
+              Comment on vous rend<br />
+              <span className="font-semibold">visible sur Google ?</span>
+            </h2>
+          </div>
+
+          {/* Explication pédagogique */}
+          <div className="bg-[#F5F0EB] rounded-3xl p-8 md:p-12 mb-12">
+            <h3 className="text-xl font-semibold text-[#2D2A26] mb-6">Le principe est simple :</h3>
+            <div className="space-y-4 text-[#5C5650] leading-relaxed">
+              <p>
+                <strong className="text-[#2D2A26]">1 mot-clé = 1 page dédiée sur votre site.</strong>
+              </p>
+              <p>
+                Quand un internaute tape <strong className="text-[#2D2A26]">"balayage {ville}"</strong> dans Google,
+                on veut que Google affiche <strong className="text-[#2D2A26]">votre page</strong> qui parle spécifiquement
+                du balayage dans votre salon.
+              </p>
+              <p>
+                Plus vous avez de pages qui répondent aux recherches des gens,
+                plus vous avez de chances d'apparaître. C'est mathématique.
+              </p>
+            </div>
+          </div>
+
+          {/* Exemple concret */}
+          <div className="mb-12">
+            <h3 className="text-lg font-semibold text-[#2D2A26] mb-6 text-center">Exemple concret pour {nom} :</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-[#FDFCFB] rounded-2xl p-5 flex items-center gap-4">
+                <div className="w-10 h-10 bg-[#D4A574] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-medium text-[#2D2A26]">Page "Balayage {ville}"</p>
+                  <p className="text-sm text-[#8B7355]">→ cible 390 recherches/mois</p>
+                </div>
+              </div>
+
+              <div className="bg-[#FDFCFB] rounded-2xl p-5 flex items-center gap-4">
+                <div className="w-10 h-10 bg-[#D4A574] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-medium text-[#2D2A26]">Page "Coloriste {ville}"</p>
+                  <p className="text-sm text-[#8B7355]">→ cible 260 recherches/mois</p>
+                </div>
+              </div>
+
+              <div className="bg-[#FDFCFB] rounded-2xl p-5 flex items-center gap-4">
+                <div className="w-10 h-10 bg-[#D4A574] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-medium text-[#2D2A26]">Page "Coiffeur visagiste"</p>
+                  <p className="text-sm text-[#8B7355]">→ cible 210 recherches/mois</p>
+                </div>
+              </div>
+
+              <div className="bg-[#FDFCFB] rounded-2xl p-5 flex items-center gap-4">
+                <div className="w-10 h-10 bg-[#D4A574] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-medium text-[#2D2A26]">Page "Lissage brésilien"</p>
+                  <p className="text-sm text-[#8B7355]">→ cible 180 recherches/mois</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-[#5C5650] text-lg max-w-2xl mx-auto">
+              Le tarif SEO dépend du <strong className="text-[#2D2A26]">nombre de mots-clés</strong> que vous souhaitez cibler.
+              Plus on crée de pages, plus on capte de recherches.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ════════ CE QUE JE FAIS POUR VOUS ════════ */}
+      <section className="py-24 px-8 md:px-16 bg-[#FDFCFB]">
         <div className="max-w-4xl mx-auto">
 
           <div className="text-center mb-16">
             <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Mon accompagnement</p>
             <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
               Je m'occupe de tout.<br />
-              <span className="font-semibold">Vous vous concentrez sur vos clientes.</span>
+              <span className="font-semibold">Vous vous concentrez sur votre métier.</span>
             </h2>
           </div>
 
@@ -481,12 +576,18 @@ function DiagnosticContent() {
               </div>
 
               <h3 className="text-xl font-semibold mb-2 pt-2">Site + Visibilité</h3>
-              <p className="text-[#A89F94] text-sm mb-6">Être trouvée sur Google</p>
+              <p className="text-[#A89F94] text-sm mb-6">Être trouvé sur Google</p>
 
               <div className="mb-8">
-                <p className="text-sm text-[#A89F94]">à partir de</p>
-                <p className="text-4xl font-light">180€<span className="text-xl">/mois</span></p>
-                <p className="text-sm text-[#A89F94]">Site (690€) inclus</p>
+                <div className="flex items-baseline gap-2 mb-1">
+                  <p className="text-2xl font-light">690€</p>
+                  <p className="text-sm text-[#A89F94]">site</p>
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <p className="text-sm text-[#A89F94]">+</p>
+                  <p className="text-3xl font-light">180€</p>
+                  <p className="text-sm text-[#A89F94]">/mois SEO</p>
+                </div>
               </div>
 
               <ul className="space-y-3 text-[#D4D0CB] text-sm">
@@ -494,19 +595,19 @@ function DiagnosticContent() {
                   <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Tout le Site Vitrine
+                  Site vitrine sur-mesure
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Optimisation pour Google
+                  Pages d'atterrissage SEO
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  10 articles par mois
+                  5-10 mots-clés ciblés
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -522,7 +623,7 @@ function DiagnosticContent() {
                 </li>
               </ul>
 
-              <p className="text-xs text-[#A89F94] mt-6">Sans engagement</p>
+              <p className="text-xs text-[#A89F94] mt-6">Engagement 6 mois</p>
             </div>
 
             {/* Formule 3 */}
@@ -531,9 +632,15 @@ function DiagnosticContent() {
               <p className="text-[#8B7355] text-sm mb-6">Visibilité maximale</p>
 
               <div className="mb-8">
-                <p className="text-sm text-[#8B7355]">à partir de</p>
-                <p className="text-4xl font-light text-[#2D2A26]">290€<span className="text-xl">/mois</span></p>
-                <p className="text-sm text-[#8B7355]">Site (690€) inclus</p>
+                <div className="flex items-baseline gap-2 mb-1">
+                  <p className="text-2xl font-light text-[#2D2A26]">690€</p>
+                  <p className="text-sm text-[#8B7355]">site</p>
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <p className="text-sm text-[#8B7355]">+</p>
+                  <p className="text-3xl font-light text-[#2D2A26]">290€</p>
+                  <p className="text-sm text-[#8B7355]">/mois SEO</p>
+                </div>
               </div>
 
               <ul className="space-y-3 text-[#5C5650] text-sm">
@@ -547,7 +654,7 @@ function DiagnosticContent() {
                   <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  20 articles par mois
+                  10-20 mots-clés ciblés
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -569,7 +676,7 @@ function DiagnosticContent() {
                 </li>
               </ul>
 
-              <p className="text-xs text-[#8B7355] mt-6">Sans engagement</p>
+              <p className="text-xs text-[#8B7355] mt-6">Engagement 6 mois</p>
             </div>
 
           </div>
