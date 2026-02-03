@@ -3,51 +3,53 @@
 import { useSearchParams } from 'next/navigation'
 import { Suspense, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Star, MapPin, Search, ArrowRight, Shield, Globe, Monitor, Smartphone, Check, X, Phone, Menu as MenuIcon, Cpu, Database, Share2, Layers, Zap, Code as CodeIcon, TrendingUp } from 'lucide-react'
+import { Star, MapPin, Smartphone, Check, ArrowRight, Code2, Cpu, MessageCircle, ShieldCheck, Zap, Menu } from 'lucide-react'
 
-// --- DATA SPÉCIFIQUE LUCIE MENDES / HALOSCAN 2026 ---
-const REAL_DATA = {
-  volumeGlobal: 2800,
-  competitors: [
-    { name: "Le Fil de l'Ame", rank: 3, rating: 4.4, reviews: 82 },
-    { name: "Salon Carré d'Or", rank: 4, rating: 4.5, reviews: 110 }
-  ],
-  opportunites: [
-    { keyword: "coiffeur nice nord", volume: 480 },
-    { keyword: "coiffeur nice etoile", volume: 390 },
-    { keyword: "prix lissage brésilien nice", volume: 210 },
-    { keyword: "coiffeur ouvert lundi nice", volume: 150 },
-  ]
-}
+// --- DESIGN SYSTEM CONFIG ---
+// Couleurs : Noir Encre (#1A1A1A), Or/Sable (#D4B996), Fond Crème (#FAFAF9)
+// Fonts : Serif (Titres), Sans (Texte)
 
-// --- COMPONENTS UTILES ---
+// --- COMPOSANTS UI ---
 
-function SectionHeading({ title, subtitle, dark = false }: { title: string, subtitle: string, dark?: boolean }) {
+function Badge({ children, icon: Icon }: { children: React.ReactNode, icon?: any }) {
   return (
-    <div className="text-center max-w-3xl mx-auto mb-16">
-      <h2 className={`text-3xl md:text-5xl font-serif font-bold mb-6 ${dark ? 'text-white' : 'text-gray-900'}`}>
-        {title}
-      </h2>
-      <p className={`text-lg md:text-xl ${dark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed font-light`}>
-        {subtitle}
-      </p>
-    </div>
-  )
-}
-
-function TechCard({ children, title, icon: Icon, className = "" }: { children: React.ReactNode, title: string, icon: any, className?: string }) {
-  return (
-    <div className={`bg-white rounded-2xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-shadow ${className}`}>
-      <div className="w-12 h-12 rounded-lg bg-gray-900 flex items-center justify-center text-white mb-6">
-        <Icon className="w-6 h-6" />
-      </div>
-      <h3 className="text-xl font-bold text-gray-900 mb-4 font-serif">{title}</h3>
+    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EAE8E4] border border-[#D6D3CD] text-[#5A5854] text-xs font-medium tracking-wide font-sans uppercase">
+      {Icon && <Icon className="w-3 h-3" />}
       {children}
     </div>
   )
 }
 
-// --- MAIN PAGE CONTENT ---
+function SectionTitle({ title, subtitle, centered = true }: { title: string, subtitle?: string, centered?: boolean }) {
+  return (
+    <div className={`mb-16 ${centered ? 'text-center' : 'text-left'} max-w-4xl mx-auto`}>
+      <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1A1A1A] mb-6 leading-tight">
+        {title}
+      </h2>
+      {subtitle && (
+        <p className="text-lg text-[#666] font-sans font-light leading-relaxed">
+          {subtitle}
+        </p>
+      )}
+    </div>
+  )
+}
+
+function BentoCard({ title, children, icon: Icon, highlight = false }: { title: string, children: React.ReactNode, icon: any, highlight?: boolean }) {
+  return (
+    <div className={`p-8 rounded-2xl border transition-all duration-300 h-full flex flex-col ${highlight ? 'bg-[#1A1A1A] text-white border-[#1A1A1A]' : 'bg-white border-[#E5E5E5] text-[#1A1A1A] hover:border-[#D4B996]'}`}>
+      <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${highlight ? 'bg-white/10 text-[#D4B996]' : 'bg-[#FAFAF9] text-[#1A1A1A]'}`}>
+        <Icon className="w-6 h-6" />
+      </div>
+      <h3 className={`text-xl font-serif font-bold mb-4 ${highlight ? 'text-white' : 'text-[#1A1A1A]'}`}>{title}</h3>
+      <div className={`text-sm leading-relaxed ${highlight ? 'text-gray-300' : 'text-gray-600'}`}>
+        {children}
+      </div>
+    </div>
+  )
+}
+
+// --- CONTENU PRINCIPAL ---
 
 function DiagnosticContent({ metier }: { metier: string }) {
   const searchParams = useSearchParams()
@@ -55,194 +57,148 @@ function DiagnosticContent({ metier }: { metier: string }) {
   const ville = searchParams.get('ville')?.replace(/\+/g, ' ') || 'Nice'
   const tel = searchParams.get('tel') || '06 61 13 97 48'
 
-  // États pour le mockup
-  const [viewMode, setViewMode] = useState<'desktop' | 'mobile'>('desktop')
-
   return (
-    <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-100 selection:text-blue-900">
+    <main className="min-h-screen bg-[#FAFAF9] text-[#1A1A1A] font-sans selection:bg-[#D4B996] selection:text-white">
 
-      {/* 1. HERO SECTION: EXPERTISE TECHNIQUE */}
-      <section className="relative min-h-[85vh] flex items-center bg-gray-50 border-b border-gray-200">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50" />
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+      {/* SECTION 1: HERO */}
+      <section className="relative min-h-[90vh] flex items-center pt-20 pb-20 px-6">
+        <div className="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-left"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider mb-8">
-              <Cpu className="w-3 h-3" />
-              Analyse Technique : {nom}
+            <div className="mb-8">
+              <Badge icon={MapPin}>Audit pour {nom} • 22 Rue de l'Hôtel des Postes, {ville}</Badge>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-serif text-gray-900 mb-8 leading-[1.1]">
-              Votre talent est visible.<br />
-              <span className="text-gray-400">Votre code est invisible.</span>
+            <h1 className="text-5xl md:text-7xl font-serif font-medium text-[#1A1A1A] mb-8 leading-[1.1]">
+              Lucie,<br />
+              votre salon mérite mieux que d'être <span className="italic text-[#D4B996]">invisible.</span>
             </h1>
 
-            <p className="text-xl text-gray-600 mb-10 font-light leading-relaxed max-w-lg">
-              Google est un robot aveugle. Il ne voit pas la beauté de vos coupes. Il lit le code.
-              Aujourd'hui, votre code est muet. Nous allons lui donner la parole.
+            <p className="text-xl text-[#666] font-light leading-relaxed mb-10 max-w-xl">
+              Vous avez l'excellence (<span className="font-semibold text-[#1A1A1A]">4.6/5 sur 155 avis</span>).
+              Mais sur Google, ce sont vos concurrents moins bien notés qui récupèrent les <span className="font-semibold text-[#1A1A1A]">2 800 recherches mensuelles</span> à {ville}.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button onClick={() => document.getElementById('tech-educ')?.scrollIntoView({ behavior: 'smooth' })} className="bg-gray-900 text-white px-8 py-4 rounded-lg font-bold hover:bg-black transition-all flex items-center justify-center gap-2 shadow-lg shadow-gray-900/20">
-                Comprendre la stratégie
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
+            <button onClick={() => document.getElementById('expertise')?.scrollIntoView({ behavior: 'smooth' })} className="group bg-[#1A1A1A] text-white px-8 py-4 rounded-lg font-medium text-lg flex items-center gap-3 hover:bg-black transition-all shadow-xl shadow-black/5">
+              Voir la réalité technique
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
           </motion.div>
 
-          {/* Visualisation Code/Data */}
+          {/* Image Subtle / Abstract */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="relative"
+            transition={{ duration: 1, delay: 0.2 }}
+            className="relative h-[600px] w-full hidden lg:block"
           >
-            <div className="bg-[#1E1E1E] rounded-xl shadow-2xl p-6 font-mono text-sm leading-relaxed overflow-hidden border border-gray-800">
-              <div className="flex items-center gap-2 mb-4 border-b border-gray-700 pb-4">
-                <div className="w-3 h-3 rounded-full bg-red-500" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                <div className="w-3 h-3 rounded-full bg-green-500" />
-                <span className="text-gray-500 text-xs ml-2">google-bot-crawler.js</span>
-              </div>
-              <div className="text-gray-400">
-                <span className="text-blue-400">const</span> <span className="text-yellow-400">analyzeSite</span> = <span className="text-blue-400">async</span> (url) ={'>'} {'{'}<br />
-                &nbsp;&nbsp;<span className="text-green-400">{'// ANALYSE ACTUELLE'}</span><br />
-                &nbsp;&nbsp;<span className="text-purple-400">if</span> (!structuredData) <span className="text-blue-400">return</span> <span className="text-red-400">"INCONNU"</span>;<br />
-                <br />
-                &nbsp;&nbsp;<span className="text-green-400">{'// OBJECTIF INDHACK'}</span><br />
-                &nbsp;&nbsp;<span className="text-blue-400">return</span> {'{'}<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;entity: <span className="text-orange-400">"Coiffeur Premium"</span>,<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;location: <span className="text-orange-400">"{ville}"</span>,<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;rating: <span className="text-blue-400">4.6</span>,<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;expertise: [<span className="text-orange-400">"Coloriste"</span>, <span className="text-orange-400">"Lissage"</span>]<br />
-                &nbsp;&nbsp;{'}'};<br />
-                {'}'}
-              </div>
-              <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"></div>
+            <div className="absolute inset-0 bg-[#D4B996]/10 rounded-t-full rounded-b-full transform rotate-3 scale-95" />
+            <div className="absolute inset-0 rounded-t-full rounded-b-full overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1595476103518-3c182ffe0948?q=80&w=1000&auto=format&fit=crop"
+                alt="Coiffure Art"
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+              />
             </div>
-
-            {/* Stats Card Overlay */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-gray-100 flex items-center gap-4 animate-bounce-slow">
-              <div className="bg-green-100 p-3 rounded-full text-green-700">
-                <TrendingUp className="w-6 h-6" />
+            <div className="absolute bottom-10 -left-10 bg-white p-6 rounded-xl shadow-xl border border-[#FAFAF9] max-w-xs">
+              <div className="flex text-[#D4B996] mb-2">
+                <Star className="w-4 h-4 fill-current" />
+                <Star className="w-4 h-4 fill-current" />
+                <Star className="w-4 h-4 fill-current" />
+                <Star className="w-4 h-4 fill-current" />
+                <Star className="w-4 h-4 fill-current" />
               </div>
-              <div>
-                <div className="text-sm text-gray-500 font-medium">Potentiel Trafic</div>
-                <div className="text-2xl font-bold text-gray-900">2 800/mois</div>
-              </div>
+              <p className="font-serif text-lg italic text-[#1A1A1A]">"Une expertise rare."</p>
+              <p className="text-xs text-[#999] mt-2 font-sans uppercase tracking-wider">Avis Google</p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* 2. LE FUTUR DU WEB (GEO & AI) */}
-      <section id="tech-educ" className="py-24 px-6 bg-white">
-        <div className="container mx-auto">
-          <SectionHeading
-            title="Pourquoi 90% des sites sont déjà obsolètes"
-            subtitle="Le web change. Google change. L'IA arrive. Voici comment nous préparons votre entreprise pour les 5 prochaines années."
+      {/* SECTION 2: EXPERTISE TECHNIQUE */}
+      <section id="expertise" className="py-24 px-6 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <SectionTitle
+            title="Pourquoi un 'joli site' ne suffit plus en 2026."
+            subtitle="Le web a changé. Avoir un site Wix ou Wordpress ne suffit plus pour exister face aux nouvelles technologies."
           />
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <TechCard title="Le Code Parle à Google" icon={CodeIcon}>
-              <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                Les sites classiques (Wix, etc.) génèrent un code "sale". Google peine à les comprendre.<br /><br />
-                <strong className="text-gray-900">Notre approche :</strong> Nous utilisons <span className="bg-gray-100 px-1 rounded font-mono text-xs">Next.js</span> et <span className="bg-gray-100 px-1 rounded font-mono text-xs">JSON-LD</span> (le langage natif de Google) pour lui dire exactement qui vous êtes. Résultat : une indexation immédiate et précise.
-              </p>
-            </TechCard>
+          <div className="grid md:grid-cols-3 gap-8">
+            <BentoCard title="Google est devenu aveugle" icon={Code2}>
+              Google ne "regarde" pas votre site, il lit le <strong>CODE</strong>.
+              La plupart des sites actuels (Wix, etc.) génèrent un code lourd et illisible.
+              <br /><br />
+              <strong>Mon approche :</strong> J'utilise <span className="bg-[#FAFAF9] px-1 border border-[#E5E5E5] rounded text-xs font-mono">Next.js</span>, une technologie qui sert à Google un code pur, optimisé pour être compris et indexé instantanément.
+            </BentoCard>
 
-            <TechCard title="Cluster de Réponses" icon={Share2}>
-              <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                Avoir un blog ne suffit plus. Il faut répondre aux <strong>intentions</strong> réelles.<br /><br />
-                <strong className="text-gray-900">Notre approche :</strong> Notre algo détecte les questions exactes : <em>"Coiffeur ouvert lundi ?"</em>, <em>"Prix lissage Nice ?"</em>. Nous créons automatiquement les pages qui répondent à ces questions précises.
-              </p>
-            </TechCard>
+            <BentoCard title="La Révolution IA (GEO)" icon={Cpu} highlight={true}>
+              Bientôt, vos clients ne chercheront plus sur Google, ils demanderont à ChatGPT : <em>"Trouve-moi un coloriste expert à Nice"</em>.
+              <br /><br />
+              Si votre site n'a pas les <strong>données structurées</strong> (Schema.org) pour parler à l'IA, <strong>vous n'existerez pas.</strong> Mon infrastructure est "AI-Ready" dès le premier jour.
+            </BentoCard>
 
-            <TechCard title="GEO (IA Ready)" icon={Zap} className="border-blue-200 bg-blue-50/30">
-              <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                Demain, vos clients demanderont à ChatGPT : <em>"Trouve-moi le meilleur coloriste à Nice"</em>.<br /><br />
-                <strong className="text-gray-900">Notre approche :</strong> Nous structurons vos données (Prix, Avis, Services) pour qu'elles soient lisibles par les IA. C'est votre assurance vie numérique.
-              </p>
-            </TechCard>
+            <BentoCard title="Stratégie de Réponses" icon={MessageCircle}>
+              Je n'écris pas juste "Coiffeur Nice" sur une page. C'est inefficace.
+              <br /><br />
+              <strong>Mon approche :</strong> Je crée des pages qui répondent aux <strong>vraies questions</strong> : <em>"Prix lissage brésilien Nice"</em>, <em>"Coiffeur ouvert lundi"</em>, <em>"Rattrapage couleur"</em>. C'est la seule façon de capturer 100% du trafic local qualifié.
+            </BentoCard>
           </div>
         </div>
       </section>
 
-      {/* 3. LE MOCKUP COMPLET (AVEC BLOG/CONSEILS) */}
-      <section className="py-24 px-6 bg-gray-900 text-white overflow-hidden">
-        <div className="container mx-auto">
-          <SectionHeading
-            title="L'Expérience IndHack"
-            subtitle="Pas juste une jolie image. Une machine à convertir."
-            dark={true}
+      {/* SECTION 3: MOCKUP IPHONE */}
+      <section className="py-24 px-6 bg-[#FAFAF9] overflow-hidden">
+        <div className="container mx-auto max-w-6xl text-center">
+          <SectionTitle
+            title="La Preuve par l'Image"
+            subtitle="Voici à quoi ressemble une interface conçue pour convertir."
+            centered={true}
           />
 
-          {/* Toggle View */}
-          <div className="flex justify-center gap-4 mb-12">
-            <button onClick={() => setViewMode('desktop')} className={`flex items-center gap-2 px-6 py-2 rounded-full transition-all text-sm font-medium border ${viewMode === 'desktop' ? 'bg-white text-black border-white' : 'bg-transparent text-gray-400 border-gray-700'}`}>
-              <Monitor className="w-4 h-4" /> Desktop
-            </button>
-            <button onClick={() => setViewMode('mobile')} className={`flex items-center gap-2 px-6 py-2 rounded-full transition-all text-sm font-medium border ${viewMode === 'mobile' ? 'bg-white text-black border-white' : 'bg-transparent text-gray-400 border-gray-700'}`}>
-              <Smartphone className="w-4 h-4" /> Mobile
-            </button>
-          </div>
+          <div className="relative mx-auto w-[320px] md:w-[380px] h-[750px] bg-[#1A1A1A] rounded-[50px] p-4 shadow-2xl border-[8px] border-[#1A1A1A] ring-1 ring-gray-200">
+            {/* Notch */}
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-32 h-6 bg-black rounded-full z-20"></div>
 
-          <div className="flex justify-center">
-            <div className={`transition-all duration-500 bg-white rounded-lg overflow-hidden shadow-2xl ${viewMode === 'desktop' ? 'w-full max-w-5xl' : 'w-[320px]'}`}>
-              {/* Header Site Mockup */}
-              <div className="bg-white border-b border-gray-100 p-4 flex justify-between items-center text-gray-900">
-                <div className="font-serif font-bold text-xl tracking-tight">By Lucie Mendes</div>
-                {viewMode === 'desktop' && (
-                  <div className="flex gap-6 text-sm font-medium text-gray-500">
-                    <span className="text-gray-900">Accueil</span>
-                    <span>Nos Conseils</span>
-                    <span>Tarifs</span>
-                    <span className="bg-black text-white px-4 py-2 rounded">Réserver</span>
-                  </div>
-                )}
-                {viewMode === 'mobile' && <MenuIcon className="w-5 h-5" />}
+            {/* Screen Content */}
+            <div className="w-full h-full bg-white rounded-[40px] overflow-hidden flex flex-col relative text-left">
+              {/* Navbar */}
+              <div className="pt-12 px-6 pb-4 flex justify-between items-center bg-white sticky top-0 z-10">
+                <span className="font-serif font-bold text-lg">{nom}</span>
+                <Menu className="w-6 h-6 text-[#1A1A1A]" />
               </div>
 
-              {/* Hero Site Mockup */}
-              <div className="relative bg-[#F5F5F0] py-16 px-6 text-center">
-                <p className="text-amber-800 text-xs font-bold tracking-[0.2em] uppercase mb-4">Experte Coloriste • Nice Centre</p>
-                <h2 className="text-gray-900 font-serif text-4xl md:text-5xl mb-6">Sublimez vos cheveux.</h2>
-                <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm text-sm font-medium text-gray-900 mb-8">
-                  <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  <span>4.6/5 sur Google (155 avis)</span>
-                </div>
-                <div className="flex justify-center gap-4">
-                  <button className="bg-gray-900 text-white px-6 py-3 rounded text-sm font-medium">Prendre RDV</button>
+              {/* Hero Mobile */}
+              <div className="px-6 pt-4 pb-8 bg-[#FAFAF9]">
+                <p className="text-xs font-bold text-[#D4B996] uppercase tracking-[0.2em] mb-4">Coloriste Expert • Nice</p>
+                <h2 className="text-3xl font-serif text-[#1A1A1A] leading-tight mb-6">L'Art de la Coloration à Nice.</h2>
+                <img
+                  src="https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=600"
+                  className="w-full aspect-[4/3] object-cover rounded-lg mb-6 shadow-sm"
+                  alt="Salon"
+                />
+                <div className="bg-[#1A1A1A] text-white text-center py-4 rounded-lg font-medium shadow-lg">
+                  Prendre Rendez-vous
                 </div>
               </div>
 
-              {/* Blog/Questions Section Mockup (PREUVE DE VALEUR) */}
-              <div className="bg-white py-12 px-8">
-                <div className="flex justify-between items-end mb-8">
-                  <h3 className="text-gray-900 font-serif text-2xl">Nos conseils d'experte</h3>
-                  {viewMode === 'desktop' && <span className="text-gray-400 text-sm border-b border-gray-300">Voir tous les articles</span>}
+              {/* Review */}
+              <div className="px-6 py-8 bg-white border-t border-gray-100">
+                <div className="flex gap-1 text-[#D4B996] mb-3">
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
                 </div>
-                <div className={`grid ${viewMode === 'desktop' ? 'grid-cols-3' : 'grid-cols-1'} gap-6`}>
-                  {[
-                    { title: "Quel prix pour un lissage brésilien à Nice ?", cat: "Tarifs" },
-                    { title: "Comment rattraper une couleur ratée ?", cat: "Expertise" },
-                    { title: "Soins cheveux après le soleil : notre routine", cat: "Saison" }
-                  ].map((art, i) => (
-                    <div key={i} className="group cursor-pointer">
-                      <div className="aspect-[4/3] bg-gray-100 rounded-lg mb-3 overflow-hidden">
-                        <div className="w-full h-full bg-gray-200 group-hover:scale-105 transition-transform duration-500" />
-                      </div>
-                      <span className="text-xs text-amber-600 font-bold uppercase tracking-wide">{art.cat}</span>
-                      <h4 className="text-gray-900 font-bold leading-tight mt-1 group-hover:text-amber-700 transition-colors">{art.title}</h4>
-                    </div>
-                  ))}
+                <p className="text-sm font-serif italic text-gray-600 mb-4">
+                  "Je n'ai jamais eu un résultat aussi naturel. Lucie comprend exactement ce qu'on veut, même quand on ne sait pas l'expliquer. Magicienne."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center font-bold text-xs">SM</div>
+                  <span className="text-xs font-bold text-gray-900">Sarah Maazouz</span>
                 </div>
               </div>
             </div>
@@ -250,101 +206,96 @@ function DiagnosticContent({ metier }: { metier: string }) {
         </div>
       </section>
 
-      {/* 4. LES 3 OFFRES (STRUCTURE TECH) */}
-      <section className="py-24 px-6 bg-[#FDFBF7]" id="tarifs">
-        <div className="container mx-auto">
-          <SectionHeading
-            title="Investir dans votre Infrastructure"
-            subtitle="Choisissez votre niveau de puissance digitale."
+      {/* SECTION 4: OFFRES */}
+      <section className="py-24 px-6 bg-white" id="offres">
+        <div className="container mx-auto max-w-6xl">
+          <SectionTitle
+            title="Investir dans votre Actif Digital"
+            subtitle="Trois niveaux d'accompagnement pour transformer votre présence en ligne."
           />
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto items-start">
+          <div className="grid md:grid-cols-3 gap-8 items-start">
 
-            {/* OFFRE 1: LE SOCLE */}
-            <div className="bg-white p-8 rounded-2xl border border-gray-200">
-              <div className="mb-6">
-                <div className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">L'ESSENTIEL</div>
-                <h3 className="text-2xl font-serif font-bold text-gray-900">Le Socle</h3>
-                <div className="mt-4 flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-gray-900">890€</span>
-                </div>
-                <span className="text-gray-500 text-sm block mt-1">+ 49€/mois (Maintenance)</span>
-              </div>
-              <p className="text-gray-600 text-sm mb-8 leading-relaxed border-b border-gray-100 pb-8">
-                Une infrastructure technique saine, rapide, et propriétaire. Idéal pour débuter proprement sans dépendre de plateformes fermées.
-              </p>
+            {/* OFFRE 1 */}
+            <div className="p-8 border border-[#E5E5E5] rounded-2xl bg-[#FAFAF9]">
+              <h3 className="text-xl font-serif font-bold text-[#1A1A1A] mb-2">Le Socle</h3>
+              <div className="text-3xl font-bold mb-1 font-serif">990€</div>
+              <p className="text-xs text-[#999] mb-8 font-sans">Paiement unique</p>
+
               <ul className="space-y-4 mb-8">
-                <li className="flex gap-3 text-sm text-gray-700"><Check className="w-5 h-5 text-gray-900 flex-shrink-0" /> <strong>Code Next.js Clean</strong></li>
-                <li className="flex gap-3 text-sm text-gray-700"><Check className="w-5 h-5 text-gray-900 flex-shrink-0" /> Site One-Page Ultra-Rapide</li>
-                <li className="flex gap-3 text-sm text-gray-700"><Check className="w-5 h-5 text-gray-900 flex-shrink-0" /> Propriété 100% (Pas de location)</li>
-                <li className="flex gap-3 text-sm text-gray-700"><Check className="w-5 h-5 text-gray-900 flex-shrink-0" /> Hébergement Haute Perf.</li>
+                <li className="flex gap-3 text-sm text-[#555]"><Check className="w-4 h-4 text-[#1A1A1A]" /> Site Vitrine Haute Performance</li>
+                <li className="flex gap-3 text-sm text-[#555]"><Check className="w-4 h-4 text-[#1A1A1A]" /> Code Next.js (Google Native)</li>
+                <li className="flex gap-3 text-sm text-[#555]"><Check className="w-4 h-4 text-[#1A1A1A]" /> Design Premium Sur-mesure</li>
+                <li className="flex gap-3 text-sm text-[#555]"><Check className="w-4 h-4 text-[#1A1A1A]" /> Propriétaire à 100%</li>
               </ul>
-              <button className="w-full py-3 rounded-lg border border-gray-300 text-gray-900 font-bold hover:bg-gray-50 transition-colors">Sélectionner Le Socle</button>
+              <button className="w-full py-3 border border-[#E5E5E5] bg-white text-[#1A1A1A] rounded-lg text-sm font-bold hover:bg-[#F0F0F0] transition-colors">Choisir Le Socle</button>
             </div>
 
-            {/* OFFRE 2: L'EXPANSION (HERO) */}
-            <div className="bg-gray-900 text-white p-8 rounded-2xl shadow-2xl ring-1 ring-gray-900 relative transform md:-translate-y-4">
-              <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">STRATÉGIE RECOMMANDÉE</div>
-              <div className="mb-6">
-                <div className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">CROISSANCE</div>
-                <h3 className="text-2xl font-serif font-bold text-white">L'Expansion</h3>
-                <div className="mt-4 flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-white">1 490€</span>
-                </div>
-                <span className="text-gray-400 text-sm block mt-1">+ 149€/mois (SEO Actif)</span>
-              </div>
-              <p className="text-gray-400 text-sm mb-8 leading-relaxed border-b border-gray-800 pb-8">
-                Déploiement de clusters de contenu pour capter le trafic local. On ne fait pas "2 articles", on répond aux questions de vos clients.
+            {/* OFFRE 2 (HERO) */}
+            <div className="p-8 border border-[#D4B996] rounded-2xl bg-[#1A1A1A] text-white relative shadow-2xl transform md:-translate-y-6">
+              <div className="absolute top-0 right-0 bg-[#D4B996] text-[#1A1A1A] text-[10px] font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl tracking-wider uppercase">Recommandé</div>
+
+              <h3 className="text-xl font-serif font-bold text-[#D4B996] mb-2">L'Expansion</h3>
+              <div className="text-3xl font-bold mb-1 font-serif">1 490€</div>
+              <p className="text-xs text-gray-400 mb-8 font-sans">+ 149€/mois (Maintenance & SEO)</p>
+
+              <p className="text-sm text-gray-300 mb-6 italic border-b border-gray-800 pb-4">
+                "La stratégie complète pour capter les clients de votre zone."
               </p>
+
               <ul className="space-y-4 mb-8">
-                <li className="flex gap-3 text-sm text-gray-200"><Check className="w-5 h-5 text-blue-400 flex-shrink-0" /> <strong>Site Complet (5 Pages)</strong></li>
-                <li className="flex gap-3 text-sm text-gray-200"><Check className="w-5 h-5 text-blue-400 flex-shrink-0" /> <strong>Maillage "Quartiers Nice"</strong></li>
-                <li className="flex gap-3 text-sm text-gray-200"><Check className="w-5 h-5 text-blue-400 flex-shrink-0" /> <strong>Cluster "Questions Clients"</strong></li>
-                <li className="flex gap-3 text-sm text-gray-200"><Check className="w-5 h-5 text-blue-400 flex-shrink-0" /> Rapport Sémantique Mensuel</li>
+                <li className="flex gap-3 text-sm text-gray-200"><Check className="w-4 h-4 text-[#D4B996]" /> <span className="font-bold">Stratégie Sémantique Complète</span></li>
+                <li className="flex gap-3 text-sm text-gray-200"><Check className="w-4 h-4 text-[#D4B996]" /> <span className="font-bold">Inclus tout le Socle (Site Pro)</span></li>
+                <li className="flex gap-3 text-sm text-gray-200"><Check className="w-4 h-4 text-[#D4B996]" /> Cluster "Réponses aux Questions"</li>
+                <li className="flex gap-3 text-sm text-gray-200"><Check className="w-4 h-4 text-[#D4B996]" /> Visibilité Quartiers (Carré d'Or...)</li>
+                <li className="flex gap-3 text-sm text-gray-200"><Check className="w-4 h-4 text-[#D4B996]" /> Maintenance technique incluse</li>
               </ul>
-              <button className="w-full py-3 rounded-lg bg-blue-600 text-white font-bold hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/50">Démarrer l'Expansion</button>
+              <button className="w-full py-3 bg-[#D4B996] text-[#1A1A1A] rounded-lg text-sm font-bold hover:bg-[#C4A986] transition-colors shadow-lg shadow-[#D4B996]/20">Démarrer l'Expansion</button>
             </div>
 
-            {/* OFFRE 3: L'AUTORITÉ */}
-            <div className="bg-white p-8 rounded-2xl border border-gray-200">
-              <div className="mb-6">
-                <div className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">DOMINATION</div>
-                <h3 className="text-2xl font-serif font-bold text-gray-900">L'Autorité</h3>
-                <div className="mt-4 flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-gray-900">1 990€</span>
-                </div>
-                <span className="text-gray-500 text-sm block mt-1">+ 290€/mois (Full Service)</span>
-              </div>
-              <p className="text-gray-600 text-sm mb-8 leading-relaxed border-b border-gray-100 pb-8">
-                L'assurance vie numérique. Préparation pour l'IA (GEO), gestion complète de votre réputation et optimisation continue.
-              </p>
+            {/* OFFRE 3 */}
+            <div className="p-8 border border-[#E5E5E5] rounded-2xl bg-[#FAFAF9]">
+              <h3 className="text-xl font-serif font-bold text-[#1A1A1A] mb-2">L'Autorité</h3>
+              <div className="text-3xl font-bold mb-1 font-serif">Sur Devis</div>
+              <p className="text-xs text-[#999] mb-8 font-sans">ou forfait 290€/mois</p>
+
               <ul className="space-y-4 mb-8">
-                <li className="flex gap-3 text-sm text-gray-700"><Check className="w-5 h-5 text-purple-600 flex-shrink-0" /> <strong>Optimisé GEO (IA Ready)</strong></li>
-                <li className="flex gap-3 text-sm text-gray-700"><Check className="w-5 h-5 text-purple-600 flex-shrink-0" /> Gestion Google Maps (Avis/Posts)</li>
-                <li className="flex gap-3 text-sm text-gray-700"><Check className="w-5 h-5 text-purple-600 flex-shrink-0" /> Données Structurées Avancées</li>
-                <li className="flex gap-3 text-sm text-gray-700"><Check className="w-5 h-5 text-purple-600 flex-shrink-0" /> Support Tech Prioritaire</li>
+                <li className="flex gap-3 text-sm text-[#555]"><Check className="w-4 h-4 text-[#1A1A1A]" /> Domination Totale & IA</li>
+                <li className="flex gap-3 text-sm text-[#555]"><Check className="w-4 h-4 text-[#1A1A1A]" /> Optimisation GEO (ChatGPT Ready)</li>
+                <li className="flex gap-3 text-sm text-[#555]"><Check className="w-4 h-4 text-[#1A1A1A]" /> Gestion GMB (Avis & Posts)</li>
+                <li className="flex gap-3 text-sm text-[#555]"><Check className="w-4 h-4 text-[#1A1A1A]" /> Support Prioritaire</li>
               </ul>
-              <button className="w-full py-3 rounded-lg border border-gray-300 text-gray-900 font-bold hover:bg-gray-50 transition-colors">Viser l'Autorité</button>
+              <button className="w-full py-3 border border-[#E5E5E5] bg-white text-[#1A1A1A] rounded-lg text-sm font-bold hover:bg-[#F0F0F0] transition-colors">Me contacter</button>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="py-12 bg-white text-center border-t border-gray-100">
-        <p className="text-gray-500 text-sm mb-2">
-          Analyse technique générée pour <span className="text-gray-900 font-medium">{nom}</span>.
-        </p>
-        <p className="text-xs text-gray-400 font-mono">IndHack Next.js Branch • v4.2.0 • Nice HQ</p>
+      {/* FOOTER & CTA FLOTTANT */}
+      <footer className="py-12 bg-white text-center border-t border-gray-200">
+        <p className="text-[#1A1A1A] font-serif font-bold text-lg mb-2">IndHack</p>
+        <p className="text-[#666] text-sm">Consultant SEO & Tech à Nice. Pas d'agence, pas de blabla. Juste des résultats.</p>
       </footer>
+
+      {/* Flottant */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <button className="bg-[#1A1A1A] text-white px-6 py-4 rounded-full font-medium shadow-2xl flex items-center gap-2 hover:scale-105 transition-transform">
+          <span className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4B996] opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-[#D4B996]"></span>
+          </span>
+          Réserver mon audit avec Indiana
+        </button>
+      </div>
+
     </main>
   )
 }
 
 export default function DiagnosticPage({ params }: { params: { metier: string } }) {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-gray-50 flex items-center justify-center"><div className="w-6 h-6 border-2 border-gray-900 border-t-transparent rounded-full animate-spin" /></div>}>
+    <Suspense fallback={<div className="min-h-screen bg-[#FAFAF9]" />}>
       <DiagnosticContent metier={params.metier} />
     </Suspense>
   )
