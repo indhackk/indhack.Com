@@ -623,7 +623,7 @@ function DiagnosticContent() {
                 </li>
               </ul>
 
-              <p className="text-xs text-[#A89F94] mt-6">Engagement 6 mois</p>
+              <p className="text-xs text-[#A89F94] mt-6">Sans engagement</p>
             </div>
 
             {/* Formule 3 */}
@@ -676,7 +676,7 @@ function DiagnosticContent() {
                 </li>
               </ul>
 
-              <p className="text-xs text-[#8B7355] mt-6">Engagement 6 mois</p>
+              <p className="text-xs text-[#8B7355] mt-6">Sans engagement</p>
             </div>
 
           </div>
