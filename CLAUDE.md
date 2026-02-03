@@ -45,6 +45,17 @@ bun run postbuild    # Auto-generate sitemaps (runs automatically after build)
 - Singletons: settings, homepage, navigation
 - Content stored in `/content/` directory
 
+**GMB Autopilot SaaS** (`/(gmb-app)/` route group):
+- Isolated layout with separate navbar/footer via `ConditionalLayout.tsx`
+- State management: Zustand store at `/lib/gmb/use-gmb-store.ts`
+- AI engines: `/lib/gmb/sentiment-engine.ts`, `/lib/gmb/seo-score-engine.ts`, `/lib/gmb/ai-response-generator.ts`
+- Dashboard views: reviews, responses, analytics, posts, settings
+
+**Diagnostic Lead Pages** (`/diagnostic/[metier]/`):
+- Dynamic profession-specific landing pages (avocat, coiffeur, electricien, etc.)
+- Data layer: `/lib/diagnostic-data.ts` (keyword volumes, client questions, ROI data)
+- Components: `ProspectLandingTemplate`, `ROICalculator`, `DiagnosticScore`, `InvestmentValue`
+
 ### Styling
 
 ```
@@ -58,12 +69,28 @@ Fonts:
 - IBM Plex Sans (font-body, font-sans)
 ```
 
+**Layout Strategy**:
+- Main site, GMB SaaS, and Keystatic have separate layouts
+- `ConditionalLayout.tsx` switches navbar/footer based on route path
+- GMB routes: `/(gmb-app)/app/*` get isolated SaaS UI
+
 ### Security
 
 - Rate limiting: 100 req/min per IP (`middleware.ts`)
 - Admin routes protected via ADMIN_PASSWORD env var: `/keystatic/*`, `/dashboard/*`
 - CSP, HSTS, X-Frame-Options in `next.config.mjs`
 - WordPress redirect cleanup (301s for legacy URLs)
+
+### Key File Paths
+
+| Purpose | Path |
+|---------|------|
+| City data (19 cities) | `/lib/cities-data.ts` |
+| Diagnostic professions | `/lib/diagnostic-data.ts` |
+| City hub template | `/components/CityPageTemplateV2.tsx` |
+| Sub-service template | `/components/CityServiceTemplate.tsx` |
+| GMB state store | `/lib/gmb/use-gmb-store.ts` |
+| Route protection | `/middleware.ts` |
 
 ## Strategic Objectives
 
