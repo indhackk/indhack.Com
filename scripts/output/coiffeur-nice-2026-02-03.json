@@ -1,0 +1,152 @@
+[
+  {
+    "name": "One Love Barbershop",
+    "rating": 4.6,
+    "reviewCount": 341,
+    "address": "5 Rue du Lycée, 06000 Nice, France",
+    "phone": "04 93 88 80 12",
+    "placeId": "ChIJQWA166TazRIRlh8o-VmS-wQ",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=One%20Love%20Barbershop&ville=Nice&note=4.6&avis=341"
+  },
+  {
+    "name": "GM coiffure by Pauline",
+    "rating": 5,
+    "reviewCount": 332,
+    "address": "16 Rue Pastorelli, 06000 Nice, France",
+    "phone": "04 93 85 70 07",
+    "placeId": "ChIJHYrT7CfbzRIR57voYU2-STs",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=GM%20coiffure%20by%20Pauline&ville=Nice&note=5&avis=332"
+  },
+  {
+    "name": "Studio7 et Salon les Empereurs",
+    "rating": 4.8,
+    "reviewCount": 216,
+    "address": "8 Rue Spitalieri, 06000 Nice, France",
+    "phone": "09 80 64 24 07",
+    "placeId": "ChIJX1eMdjfbzRIRiZmo6M4qlaM",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=Studio7%20et%20Salon%20les%20Empereurs&ville=Nice&note=4.8&avis=216"
+  },
+  {
+    "name": "KRISTEL HAIR CONCEPT - Coiffure & Onglerie",
+    "rating": 4.9,
+    "reviewCount": 210,
+    "address": "3 Rue du Dr Albert Balestre, 06000 Nice, France",
+    "phone": "06 59 43 08 22",
+    "placeId": "ChIJb3odAJrbzRIRrv311PwUdUY",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=KRISTEL%20HAIR%20CONCEPT%20-%20Coiffure%20%26%20Onglerie&ville=Nice&note=4.9&avis=210"
+  },
+  {
+    "name": "Station coiffure Nice république",
+    "rating": 4.7,
+    "reviewCount": 166,
+    "address": "19 Av. de la République, 06300 Nice, France",
+    "phone": "09 81 11 19 00",
+    "placeId": "ChIJ456tMbfazRIRBD2PiHV9wLg",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=Station%20coiffure%20Nice%20r%C3%A9publique&ville=Nice&note=4.7&avis=166"
+  },
+  {
+    "name": "By Lucie Mendes Coiffeur",
+    "rating": 4.6,
+    "reviewCount": 155,
+    "address": "22 Rue de l'Hôtel des Postes, 06000 Nice, France",
+    "phone": "04 93 85 02 23",
+    "placeId": "ChIJUTShSKTazRIRa36x54nqzPQ",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=By%20Lucie%20Mendes%20Coiffeur&ville=Nice&note=4.6&avis=155"
+  },
+  {
+    "name": "Le Salon",
+    "rating": 4.9,
+    "reviewCount": 138,
+    "address": "Palais Grimaldi, 2 Pl. Grimaldi, 06000 Nice, France",
+    "phone": "04 93 87 74 52",
+    "placeId": "ChIJF3kdpKDazRIRd_x-pEV6xpw",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=Le%20Salon&ville=Nice&note=4.9&avis=138"
+  },
+  {
+    "name": "JOKER BEAUTY",
+    "rating": 4.9,
+    "reviewCount": 116,
+    "address": "12 Rue Maccarani, 06000 Nice, France",
+    "phone": "04 93 04 42 14",
+    "placeId": "ChIJI4hAbAvbzRIRiTFTGjZLKNM",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=JOKER%20BEAUTY&ville=Nice&note=4.9&avis=116"
+  },
+  {
+    "name": "Paganini Coiffure",
+    "rating": 4.9,
+    "reviewCount": 115,
+    "address": "27 Rue Paganini, 06000 Nice, France",
+    "phone": "06 20 29 78 80",
+    "placeId": "ChIJq6qa3gfQzRIR0ExulsHa8cM",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=Paganini%20Coiffure&ville=Nice&note=4.9&avis=115"
+  },
+  {
+    "name": "KS Beauty Hair - Salon de coiffure Nice.Ombre hair,Lissages",
+    "rating": 5,
+    "reviewCount": 80,
+    "address": "1 Rue Melchior de Vogue, 06000 Nice, France",
+    "phone": "06 21 67 01 29",
+    "placeId": "ChIJbSFlKZfbzRIR4diDcvWzCMU",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=KS%20Beauty%20Hair%20-%20Salon%20de%20coiffure%20Nice.Ombre%20hair%2CLissages&ville=Nice&note=5&avis=80"
+  },
+  {
+    "name": "Hair by Priscillia.k",
+    "rating": 5,
+    "reviewCount": 80,
+    "address": "6 Rue Parmentier, 06100 Nice, France",
+    "phone": "06 59 67 12 63",
+    "placeId": "ChIJHdMSLOWdBycReDvfFVJJkBo",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=Hair%20by%20Priscillia.k&ville=Nice&note=5&avis=80"
+  },
+  {
+    "name": "CORSO COIFFEUR",
+    "rating": 4.6,
+    "reviewCount": 75,
+    "address": "14 Rue du Maréchal Joffre, 06000 Nice, France",
+    "phone": "04 93 87 68 95",
+    "placeId": "ChIJ__KEIHDbzRIRMoRV985BDBI",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=CORSO%20COIFFEUR&ville=Nice&note=4.6&avis=75"
+  },
+  {
+    "name": "GABRIEL.B",
+    "rating": 4.9,
+    "reviewCount": 65,
+    "address": "48 Bd Jean Jaurès, 06300 Nice, France",
+    "phone": "04 23 13 00 51",
+    "placeId": "ChIJQdYzxjvbzRIRtHIRahiS-M4",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=GABRIEL.B&ville=Nice&note=4.9&avis=65"
+  },
+  {
+    "name": "Valenti Style coiffure change d’adresse au salon « les copines »",
+    "rating": 4.9,
+    "reviewCount": 52,
+    "address": "15 Av. du Marechal Foch, 06000 Nice, France",
+    "phone": "06 09 30 25 41",
+    "placeId": "ChIJhcj7nQjQzRIR-nIDZq2dOlE",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=Valenti%20Style%20coiffure%20change%20d%E2%80%99adresse%20au%20salon%20%C2%AB%20les%20copines%20%C2%BB&ville=Nice&note=4.9&avis=52"
+  },
+  {
+    "name": "Salon IDA",
+    "rating": 4.8,
+    "reviewCount": 42,
+    "address": "3 Rue François 1er, 06000 Nice, France",
+    "phone": "04 93 81 93 96",
+    "placeId": "ChIJpYsOygnQzRIRovl_qSFk7wE",
+    "hasWebsite": false,
+    "diagnosticUrl": "https://indhack.com/diagnostic/coiffeur?nom=Salon%20IDA&ville=Nice&note=4.8&avis=42"
+  }
+]

@@ -1,0 +1,15 @@
+https://indhack.com/diagnostic/coiffeur?nom=One%20Love%20Barbershop&ville=Nice&note=4.6&avis=341
+https://indhack.com/diagnostic/coiffeur?nom=GM%20coiffure%20by%20Pauline&ville=Nice&note=5&avis=332
+https://indhack.com/diagnostic/coiffeur?nom=Studio7%20et%20Salon%20les%20Empereurs&ville=Nice&note=4.8&avis=216
+https://indhack.com/diagnostic/coiffeur?nom=KRISTEL%20HAIR%20CONCEPT%20-%20Coiffure%20%26%20Onglerie&ville=Nice&note=4.9&avis=210
+https://indhack.com/diagnostic/coiffeur?nom=Station%20coiffure%20Nice%20r%C3%A9publique&ville=Nice&note=4.7&avis=166
+https://indhack.com/diagnostic/coiffeur?nom=By%20Lucie%20Mendes%20Coiffeur&ville=Nice&note=4.6&avis=155
+https://indhack.com/diagnostic/coiffeur?nom=Le%20Salon&ville=Nice&note=4.9&avis=138
+https://indhack.com/diagnostic/coiffeur?nom=JOKER%20BEAUTY&ville=Nice&note=4.9&avis=116
+https://indhack.com/diagnostic/coiffeur?nom=Paganini%20Coiffure&ville=Nice&note=4.9&avis=115
+https://indhack.com/diagnostic/coiffeur?nom=KS%20Beauty%20Hair%20-%20Salon%20de%20coiffure%20Nice.Ombre%20hair%2CLissages&ville=Nice&note=5&avis=80
+https://indhack.com/diagnostic/coiffeur?nom=Hair%20by%20Priscillia.k&ville=Nice&note=5&avis=80
+https://indhack.com/diagnostic/coiffeur?nom=CORSO%20COIFFEUR&ville=Nice&note=4.6&avis=75
+https://indhack.com/diagnostic/coiffeur?nom=GABRIEL.B&ville=Nice&note=4.9&avis=65
+https://indhack.com/diagnostic/coiffeur?nom=Valenti%20Style%20coiffure%20change%20d%E2%80%99adresse%20au%20salon%20%C2%AB%20les%20copines%20%C2%BB&ville=Nice&note=4.9&avis=52
+https://indhack.com/diagnostic/coiffeur?nom=Salon%20IDA&ville=Nice&note=4.8&avis=42
