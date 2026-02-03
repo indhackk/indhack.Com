@@ -18,24 +18,26 @@ import {
 // ═══════════════════════════════════════════════════════════════════════════════
 const MARKET_DATA = {
   mainKeyword: { term: 'coiffeur nice', volume: 2800 },
+  address: "22 Rue de l'Hôtel des Postes, Nice",
+  uniqueSellingPoint: "Sièges massants & Ambiance Relaxation",
   quartiers: [
-    { term: 'coiffeur nice nord', volume: 480 },
-    { term: 'coiffeur nice etoile', volume: 390 },
-    { term: 'coiffeur nice ouest', volume: 260 },
-    { term: 'coiffeur nice riquier', volume: 170 },
-    { term: 'coiffeur nice centre', volume: 110 },
+    { term: 'coiffeur nice centre', volume: 1100 },
+    { term: 'coiffeur rue hotel des postes', volume: 140 },
+    { term: 'coiffeur nice etoile', volume: 890 },
+    { term: 'coiffeur jean medecin', volume: 720 },
+    { term: 'meilleur coiffeur nice', volume: 1200 },
   ],
   services: [
-    { term: 'meilleur coiffeur nice', volume: 720 },
-    { term: 'coiffeur nice homme', volume: 590 },
-    { term: 'coiffeur nice pas cher', volume: 480 },
-    { term: 'coiffeur nice sans rdv', volume: 390 },
+    { term: 'balayage nice', volume: 480 },
+    { term: 'coloration cheveux nice', volume: 390 },
+    { term: 'coiffeur visagiste nice', volume: 320 },
+    { term: 'soin cheveux nice', volume: 210 },
   ],
   competitors: [
-    { rank: 1, name: 'Planity', type: 'Annuaire', threat: 'Prend 2-5% par RDV' },
-    { rank: 2, name: 'Petit Futé', type: 'Annuaire', threat: 'Pas votre vitrine' },
-    { rank: 3, name: 'Le Fil de l\'Âme', type: 'Concurrent', threat: 'A un site = Top 3' },
-    { rank: 4, name: 'Salon Carré d\'Or', type: 'Concurrent', threat: 'A un site = Top 4' },
+    { rank: 1, name: 'Planity', type: 'Annuaire', threat: 'Vole votre marque sur Google' },
+    { rank: 2, name: 'Fresha', type: 'Annuaire', threat: 'Clientèle volatile' },
+    { rank: 3, name: 'Le Fil de l\'Âme', type: 'Concurrent', threat: 'Top 3 (a un site)' },
+    { rank: 4, name: 'Salon Carré d\'Or', type: 'Concurrent', threat: 'Top 4 (a un site)' },
   ],
 }
 
@@ -164,6 +166,13 @@ function DiagnosticContent() {
     <main className="min-h-screen bg-[#FAFAFA] text-[#1C1917] font-sans antialiased">
 
       {/* ═══════════════════════════════════════════════════════════════════════
+          BANNER EXCLUSIVITÉ
+      ═══════════════════════════════════════════════════════════════════════ */}
+      <div className="bg-[#B08D55] text-white py-2 px-5 text-center text-xs font-bold uppercase tracking-[0.2em] relative z-50">
+        Attention : 1 seule place disponible pour le secteur "Nice Hôtel des Postes / Jean Médecin" en Février
+      </div>
+
+      {/* ═══════════════════════════════════════════════════════════════════════
           HERO — L'accroche qui fait mal
       ═══════════════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-screen flex items-center py-20 px-5 md:px-8 overflow-hidden bg-gradient-to-b from-[#F5F3F0] to-[#FAFAFA]">
@@ -187,15 +196,14 @@ function DiagnosticContent() {
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.05] mb-6">
               {nom},<br />
-              <span className="text-[#B08D55]">{MARKET_DATA.mainKeyword.volume.toLocaleString()}</span> clients<br />
+              <span className="text-[#B08D55]">{MARKET_DATA.mainKeyword.volume.toLocaleString()}</span> clientes<br />
               vous cherchent.<br />
-              <span className="text-[#8A8A8A] text-[0.7em]">Chaque mois.</span>
+              <span className="text-[#8A8A8A] text-[0.7em]">Sur Nice.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-[#6B6B6B] leading-relaxed mb-8 max-w-xl">
-              Votre note est excellente. Vos clientes vous adorent.
-              Mais <strong className="text-[#1C1917]">sans site web</strong>, Google vous ignore
-              et <strong className="text-[#1C1917]">Planity encaisse</strong> à votre place.
+              Votre réputation rue de l'Hôtel des Postes est solide. Vos <span className="text-[#B08D55] font-semibold">{MARKET_DATA.uniqueSellingPoint}</span> sont un atout majeur.
+              Mais <strong className="text-[#1C1917]">sans site propre</strong>, vous êtes invisible face à l'IA et aux annuaires qui captent vos marges.
             </p>
 
             {/* Mini SERP */}
@@ -304,7 +312,7 @@ function DiagnosticContent() {
                     <BarChart3 className="w-5 h-5 text-[#B08D55]" />
                   </div>
                   <div>
-                    <div className="font-bold text-[#B08D55]">+{(yearlyRevenue/1000).toFixed(0)}k€</div>
+                    <div className="font-bold text-[#B08D55]">+{(yearlyRevenue / 1000).toFixed(0)}k€</div>
                     <div className="text-xs text-[#8A8A8A]">CA/an potentiel</div>
                   </div>
                 </div>
@@ -340,8 +348,8 @@ function DiagnosticContent() {
             },
             {
               icon: MessageCircle,
-              title: "Absent des IA",
-              desc: "ChatGPT, Perplexity, Google Gemini... Ces IA recommandent des salons avec un site. Sans site = pas de données = pas de recommandation.",
+              title: "Invisible pour l'IA",
+              desc: "ChatGPT et Perplexity recommandent les salons qui ont un site structuré. Sans site, pour l'IA de 2026, vous n'existez pas.",
               color: "purple"
             },
           ].map((item, i) => (
@@ -426,24 +434,21 @@ function DiagnosticContent() {
               {MARKET_DATA.competitors.map((c, i) => (
                 <div
                   key={i}
-                  className={`flex items-center gap-4 p-4 rounded-xl border ${
-                    c.type === 'Annuaire'
-                      ? 'bg-orange-500/10 border-orange-500/20'
-                      : 'bg-emerald-500/10 border-emerald-500/20'
-                  }`}
+                  className={`flex items-center gap-4 p-4 rounded-xl border ${c.type === 'Annuaire'
+                    ? 'bg-orange-500/10 border-orange-500/20'
+                    : 'bg-emerald-500/10 border-emerald-500/20'
+                    }`}
                 >
-                  <span className={`w-9 h-9 rounded-full text-sm font-bold flex items-center justify-center ${
-                    c.rank <= 2 ? 'bg-[#B08D55] text-white' : 'bg-white/20'
-                  }`}>
+                  <span className={`w-9 h-9 rounded-full text-sm font-bold flex items-center justify-center ${c.rank <= 2 ? 'bg-[#B08D55] text-white' : 'bg-white/20'
+                    }`}>
                     #{c.rank}
                   </span>
                   <div className="flex-1">
                     <div className="font-medium">{c.name}</div>
                     <div className="text-xs text-white/60">{c.type}</div>
                   </div>
-                  <span className={`text-xs px-2 py-1 rounded-full ${
-                    c.type === 'Annuaire' ? 'bg-orange-500/20 text-orange-300' : 'bg-emerald-500/20 text-emerald-300'
-                  }`}>
+                  <span className={`text-xs px-2 py-1 rounded-full ${c.type === 'Annuaire' ? 'bg-orange-500/20 text-orange-300' : 'bg-emerald-500/20 text-emerald-300'
+                    }`}>
                     {c.type === 'Annuaire' ? 'Annuaire' : 'A un site'}
                   </span>
                 </div>
@@ -628,7 +633,8 @@ function DiagnosticContent() {
           </div>
 
           <p className="text-center text-sm text-[#8A8A8A] mt-6">
-            * Calcul basé sur le mot-clé principal uniquement. Avec les pages locales, le potentiel est 2-3× supérieur.
+            * Note : Un site Wix/Squarespace vous coûte ~300€/an en abonnement (+ votre temps) sans aucun SEO.
+            Chez IndHack, vous possédez votre actif et il travaille pour vous H24.
           </p>
         </div>
       </Section>
@@ -645,20 +651,24 @@ function DiagnosticContent() {
 
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {/* Essentiel */}
-          <div className="bg-white rounded-2xl border border-[#E5E5E5] p-8 hover:border-[#B08D55]/30 hover:shadow-lg transition-all flex flex-col">
-            <h3 className="text-xl font-semibold mb-2">L'Essentiel</h3>
+          <div className="bg-white rounded-2xl border border-[#E5E5E5] p-8 hover:border-[#B08D55]/30 hover:shadow-lg transition-all flex flex-col relative overflow-hidden">
+            <div className="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold px-3 py-1 rotate-45 translate-x-10 translate-y-2 uppercase w-40 text-center">
+              -200€ Flash
+            </div>
+            <h3 className="text-xl font-semibold mb-2">L'Offre Flash</h3>
             <div className="flex items-baseline gap-1 mb-1">
-              <span className="text-4xl font-serif font-medium">690€</span>
+              <span className="text-4xl font-serif font-medium">490€</span>
+              <span className="text-sm text-[#8A8A8A] line-through">690€</span>
             </div>
             <p className="text-sm text-[#8A8A8A] mb-6">Paiement unique</p>
 
             <div className="border-t border-[#F5F5F5] pt-6 space-y-3 flex-1">
               {[
-                'Site vitrine 3 pages',
-                'Design premium responsive',
-                'Optimisation fiche Google',
-                'Hébergement 1 an inclus',
-                'Certificat SSL sécurisé',
+                'Site Vitrine de Luxe (3 pages)',
+                'Design Mobile-First (90% du trafic)',
+                'Galerie "Hôtel des Postes" intégrée',
+                'Hébergement & SSL (1 an offert)',
+                'Livraison en 72h chrono',
               ].map((item, i) => (
                 <div key={i} className="flex gap-3 text-sm">
                   <Check className="w-4 h-4 text-[#B08D55] flex-shrink-0 mt-0.5" />
@@ -672,31 +682,31 @@ function DiagnosticContent() {
               target="_blank"
               className="mt-8 block w-full text-center py-3 border border-[#E5E5E5] rounded-xl font-medium hover:bg-[#F5F5F5] transition-colors"
             >
-              En savoir plus
+              Saisir l'offre
             </a>
           </div>
 
           {/* Écosystème */}
-          <div className="bg-[#1C1917] text-white rounded-2xl p-8 relative shadow-xl flex flex-col transform md:-translate-y-4">
-            <div className="absolute top-0 right-6 bg-[#B08D55] text-white text-[10px] font-bold px-3 py-1.5 rounded-b-lg uppercase tracking-wider">
-              Recommandé
+          <div className="bg-[#1C1917] text-white rounded-2xl p-8 relative shadow-xl flex flex-col transform md:-translate-y-4 border-2 border-[#B08D55]">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#B08D55] text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-widest whitespace-nowrap">
+              Le Choix Intelligent
             </div>
 
-            <h3 className="text-xl font-semibold text-[#B08D55] mb-2">L'Écosystème</h3>
+            <h3 className="text-xl font-semibold text-[#B08D55] mb-2">Croissance Locale</h3>
             <div className="flex items-baseline gap-1 mb-1">
-              <span className="text-4xl font-serif font-medium">990€</span>
+              <span className="text-4xl font-serif font-medium">890€</span>
+              <span className="text-sm text-white/40 line-through">1 290€</span>
             </div>
-            <p className="text-sm text-white/60 mb-6">+ 149€/mois (SEO actif)</p>
+            <p className="text-sm text-white/60 mb-6">+ 99€/mois (Maintenance & SEO)</p>
 
             <div className="border-t border-white/10 pt-6 space-y-3 flex-1">
               {[
-                'Tout L\'Essentiel inclus',
-                'Stratégie SEO locale complète',
-                'Pages quartiers optimisées',
-                '1 article blog /mois',
-                'Réponses aux avis Google',
-                'Mises à jour illimitées',
-                'Rapport de performance mensuel',
+                'Tout L\'Offre Flash inclus',
+                'Domination "Coiffeur Nice Centre"',
+                'Pages SEO pour chaque quartier',
+                'Booking Direct (Adieu commissions)',
+                'Support WhatsApp 7j/7',
+                'Garanti Top 10 Google en 90j',
               ].map((item, i) => (
                 <div key={i} className="flex gap-3 text-sm">
                   <Check className="w-4 h-4 text-[#B08D55] flex-shrink-0 mt-0.5" />
@@ -708,27 +718,27 @@ function DiagnosticContent() {
             <a
               href="https://calendly.com/contact-indhack/30min"
               target="_blank"
-              className="mt-8 block w-full text-center py-3 bg-[#B08D55] rounded-xl font-medium hover:bg-[#C9A66B] transition-colors"
+              className="mt-8 block w-full text-center py-4 bg-[#B08D55] rounded-xl font-bold hover:bg-[#C9A66B] transition-all hover:scale-[1.02]"
             >
-              Réserver un appel
+              Exploser mon CA
             </a>
           </div>
 
           {/* Pack Dominant */}
           <div className="bg-white rounded-2xl border border-[#E5E5E5] p-8 hover:border-[#B08D55]/30 hover:shadow-lg transition-all flex flex-col">
-            <h3 className="text-xl font-semibold mb-2">Pack Dominant</h3>
+            <h3 className="text-xl font-semibold mb-2">Pack Prestige</h3>
             <div className="flex items-baseline gap-1 mb-1">
-              <span className="text-4xl font-serif font-medium">1 290€</span>
+              <span className="text-4xl font-serif font-medium">1 490€</span>
             </div>
             <p className="text-sm text-[#8A8A8A] mb-6">+ 199€/mois</p>
 
             <div className="border-t border-[#F5F5F5] pt-6 space-y-3 flex-1">
               {[
-                'Tout L\'Écosystème inclus',
-                'Shooting photo professionnel',
-                '1 Reel/Short vidéo par mois',
-                'Gestion réseaux sociaux',
-                'Visibilité multi-plateforme',
+                'Tout Le Pack Croissance',
+                'Shooting Photo Sublimateur',
+                'Création de 4 Reels/mois',
+                'Gestion de votre Instagram Nice',
+                'Publicité Locale (Adwords) gérée',
               ].map((item, i) => (
                 <div key={i} className="flex gap-3 text-sm">
                   <Check className="w-4 h-4 text-[#B08D55] flex-shrink-0 mt-0.5" />
@@ -742,7 +752,7 @@ function DiagnosticContent() {
               target="_blank"
               className="mt-8 block w-full text-center py-3 border border-[#E5E5E5] rounded-xl font-medium hover:bg-[#F5F5F5] transition-colors"
             >
-              En savoir plus
+              Candidature Prestige
             </a>
           </div>
         </div>
