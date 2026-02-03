@@ -60,8 +60,8 @@ const metiersData: Record<string, {
   coiffeur: {
     label: 'Salon de Coiffure',
     icon: '💇',
-    searchVolume: 3200,
-    avgTicket: 45,
+    searchVolume: 2800,
+    avgTicket: 55,
     conversionRate: 15,
     heroImage: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200',
     color: '#EC4899'
