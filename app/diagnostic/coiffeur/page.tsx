@@ -3,15 +3,10 @@
 import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
 import { motion } from 'framer-motion'
-import { Star, MapPin, Check, ArrowRight, Sparkles, Heart, Crown, MessageCircle, Menu, Smartphone, Globe, Lock } from 'lucide-react'
+import { Star, MapPin, Check, ArrowRight, Sparkles, Heart, Crown, MessageCircle, Menu, Smartphone, Globe, Lock, TrendingUp, Search } from 'lucide-react'
 
 // --- DESIGN SYSTEM V9 (DESIRE & REALITY) ---
-// Concept : "L'Indépendance Digitale".
-// Couleurs : 
-// - Fond : #F9F7F5 (Sable très clair, premium)
-// - Texte : #3C3633 (Café noir doux)
-// - Or : #B08D55 (Or patiné, moins jaune)
-// - Accent : #E8E2D9 (Pierre chaude)
+// Couleurs : #F9F7F5 (Sable), #B08D55 (Or), #3C3633 (Café)
 
 function Badge({ children, icon: Icon }: { children: React.ReactNode, icon?: any }) {
   return (
@@ -55,8 +50,13 @@ function WarmCard({ title, children, icon: Icon, highlight = false }: { title: s
 
 function DiagnosticContent() {
   const searchParams = useSearchParams()
-  const nom = searchParams.get('nom')?.replace(/\+/g, ' ') || 'By Lucie Mendes'
+
+  // DONNÉES DYNAMIQUES (Le retour de l'intelligence)
+  const nom = searchParams.get('nom')?.replace(/\+/g, ' ') || 'Votre Salon'
   const ville = searchParams.get('ville')?.replace(/\+/g, ' ') || 'Nice'
+  const avis = searchParams.get('avis') || '155'
+  const note = searchParams.get('note') || '4.6'
+  const quartier = searchParams.get('quartier')?.replace(/\+/g, ' ') || 'Centre-Ville'
 
   return (
     <main className="min-h-screen bg-[#F9F7F5] text-[#3C3633] font-sans selection:bg-[#B08D55] selection:text-white overflow-x-hidden">
@@ -81,10 +81,10 @@ function DiagnosticContent() {
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Badge adresse */}
+            {/* Badge adresse dynamique */}
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur px-6 py-3 rounded-full shadow-xl border border-[#E8E2D9] flex gap-2 items-center whitespace-nowrap">
               <MapPin className="w-4 h-4 text-[#B08D55]" />
-              <span className="text-sm font-medium text-[#3C3633]">22 Rue de l'Hôtel des Postes, Nice</span>
+              <span className="text-sm font-medium text-[#3C3633]">{quartier}, {ville}</span>
             </div>
           </motion.div>
 
@@ -94,22 +94,39 @@ function DiagnosticContent() {
             transition={{ duration: 0.8 }}
           >
             <div className="mb-8">
-              <Badge icon={Crown}>Excellence (4.6/5 · 155 avis)</Badge>
+              <Badge icon={Crown}>Excellence ({note}/5 · {avis} avis)</Badge>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-serif font-medium text-[#3C3633] mb-8 leading-[1.05]">
-              Ne soyez plus<br />
+              {nom}, ne soyez plus<br />
               <span className="text-[#B08D55] italic">locataire</span> de votre visibilité.
             </h1>
 
             <p className="text-xl text-[#6D635C] font-light leading-relaxed mb-10 max-w-lg">
-              Les plateformes de réservation vous rendent service, mais elles gardent le contrôle.
+              Vos clientes vous adorent ({note}/5), mais sur Google, ce sont les annuaires qui profitent de votre travail.
               <br /><br />
-              Il est temps d'avoir votre propre "Maison Digitale". <strong>Un actif qui vous appartient à 100%</strong>, sans commission, et qui attire les clients vers <em>votre</em> marque.
+              Il est temps d'avoir votre propre actif digital qui attire les clients vers <em>vous</em>, sans commissions.
             </p>
 
+            {/* PARTIE CHIFFRÉE (DIAGNOSTIC) */}
+            <div className="bg-white p-6 rounded-2xl shadow-lg border border-[#E8E2D9] mb-10">
+              <h3 className="text-sm font-bold text-[#B08D55] uppercase tracking-wider mb-4 border-b border-[#F4F1ED] pb-2">
+                Le Potentiel inexploité à {ville}
+              </h3>
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <div className="text-3xl font-serif text-[#3C3633]">2 800</div>
+                  <div className="text-xs text-[#8A7A70]">Recherches "Coiffeur" /mois</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-serif text-[#3C3633] text-green-600">+45</div>
+                  <div className="text-xs text-[#8A7A70]">Nouveaux clients potentiels</div>
+                </div>
+              </div>
+            </div>
+
             <a href="https://calendly.com/contact-indhack/30min" target="_blank" className="inline-flex group bg-[#3C3633] text-[#F9F7F5] px-8 py-4 rounded-full font-medium text-lg items-center gap-3 hover:bg-[#B08D55] transition-all shadow-xl hover:scale-105">
-              Réserver un audit stratégique
+              Réserver mon audit pour {nom}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
@@ -117,31 +134,31 @@ function DiagnosticContent() {
         </div>
       </section>
 
-      {/* SECTION 2: RÉALITÉ DU MARCHÉ (POURQUOI MAINTENANT ?) */}
+      {/* SECTION 2: RÉALITÉ DU MARCHÉ */}
       <section id="solution" className="py-24 px-6 bg-white relative z-10 border-t border-[#E8E2D9]">
         <div className="container mx-auto max-w-6xl">
           <SectionTitle
-            title="Pourquoi un 'joli site' ne suffit plus"
-            subtitle="Le digital a changé. Voici les 3 piliers d'un salon qui dure en 2026."
+            title="Pourquoi vos concurrents vous passent devant"
+            subtitle="Ce n'est pas une question de talent. C'est une question de technique."
           />
 
           <div className="grid md:grid-cols-3 gap-8">
-            <WarmCard title="Propriété vs Location" icon={Lock}>
-              Planity vous coûte un abonnement à vie. Fresha prend 20% sur vos nouveaux clients.
+            <WarmCard title="Le Piège des Commissions" icon={Lock}>
+              Planity et Fresha sont géniaux pour gérer l'agenda, mais ils gardent vos données.
               <br /><br />
-              <strong>Ma solution :</strong> Vous investissez une fois. Le site est à vous. Les clients sont à vous. Fini les taxes sur votre succès.
+              <strong>Le risque :</strong> Si vous arrêtez de payer, vous disparaissez. Avec moi, votre site vous appartient à vie. C'est un fonds de commerce.
             </WarmCard>
 
-            <WarmCard title="L'Image de Marque" icon={Sparkles} highlight={true}>
-              Sur les annuaires, votre logo fait 2cm. Vous êtes "un coiffeur parmi d'autres".
+            <WarmCard title="Google est devenue une IA" icon={Sparkles} highlight={true}>
+              Aujourd'hui, Google ne lit plus des mots-clés, il cherche des *réponses*.
               <br /><br />
-              Votre nouveau site est un écrin. Il plonge la cliente dans l'ambiance <em>By Lucie Mendes</em> avant même qu'elle ne pousse la porte. C'est ça qui justifie vos prix.
+              Quand une cliente demande <em>"Coiffeur spécialiste blond à {ville}"</em>, mon code dit à Google : "C'est {nom}". Un site Wix ne sait pas faire ça.
             </WarmCard>
 
-            <WarmCard title="Domination Locale" icon={Globe}>
-              Aujourd'hui, si on tape "Coiffeur Hôtel des Postes", on tombe sur qui ?
+            <WarmCard title="La Stratégie Locale" icon={Globe}>
+              Vous êtes à {quartier}. Mais êtes-vous visible pour les gens à 2km ?
               <br /><br />
-              Je ne fais pas juste un site. Je construis une <strong>forteresse locale</strong>. Chaque quartier de Nice aura une page qui mène à vous. C'est mathématique.
+              <strong>Ma méthode :</strong> Je crée des pages spécifiques pour chaque micro-quartier autour de {ville}. On encercle la zone. C'est mathématique.
             </WarmCard>
           </div>
         </div>
@@ -153,7 +170,7 @@ function DiagnosticContent() {
         <div className="container mx-auto max-w-6xl text-center relative z-10">
           <SectionTitle
             title="Votre nouvelle vitrine"
-            subtitle="Imaginez l'expérience que vous pourriez offrir."
+            subtitle="Une expérience mobile pensée pour convertir les visiteurs en rendez-vous."
             centered={true}
           />
 
@@ -161,18 +178,18 @@ function DiagnosticContent() {
             {/* Notch Area */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-7 bg-[#1a1a1a] rounded-b-3xl z-30"></div>
 
-            {/* Screen Content - CORRECTION : Pas de sticky header ici pour éviter le bug */}
+            {/* Screen Content */}
             <div className="w-full h-full bg-white rounded-[45px] overflow-hidden flex flex-col relative text-left">
 
-              {/* Navbar Absolue (Remplaçant le sticky) */}
+              {/* Navbar Absolue */}
               <div className="absolute top-0 left-0 right-0 pt-12 px-6 pb-4 flex justify-between items-center z-20 bg-gradient-to-b from-white via-white/80 to-transparent">
-                <span className="font-serif font-bold text-lg tracking-tight text-[#3C3633]">By Lucie Mendes</span>
+                <span className="font-serif font-bold text-lg tracking-tight text-[#3C3633]">{nom}</span>
                 <Menu className="w-6 h-6 text-[#3C3633]" />
               </div>
 
-              {/* Content Scrolling - Contenu qui passe SOUS la navbar */}
+              {/* Content Scrolling */}
               <div className="flex-1 overflow-y-auto no-scrollbar bg-[#F9F7F5] pt-0">
-                {/* Grande Image Hero dans le tel */}
+                {/* Grande Image Hero */}
                 <div className="h-[400px] w-full relative">
                   <img
                     src="https://images.unsplash.com/photo-1595476103518-3c182ffe0948?q=80&w=600"
@@ -182,13 +199,13 @@ function DiagnosticContent() {
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#F9F7F5] to-transparent h-32" />
                   <div className="absolute bottom-8 left-6">
                     <span className="text-xs bg-[#B08D55] text-white px-2 py-1 rounded mb-2 inline-block">Mèches & Balayage</span>
-                    <h2 className="text-3xl font-serif text-[#3C3633] leading-none text-shadow">L'Art du Blond.</h2>
+                    <h2 className="text-3xl font-serif text-[#3C3633] leading-none text-shadow">Révélez votre beauté à {ville}.</h2>
                   </div>
                 </div>
 
                 <div className="px-6 py-6 pb-20">
                   <p className="text-sm text-[#6D635C] leading-relaxed mb-6 font-light">
-                    "Un savoir-faire unique au cœur de Nice. Prenez le temps de vous révéler."
+                    "Un savoir-faire unique au cœur de {quartier}. Prenez le temps de vous révéler."
                   </p>
 
                   <div className="bg-white p-4 rounded-xl shadow-sm border border-[#E8E2D9] mb-6 flex items-center gap-4">
@@ -196,8 +213,8 @@ function DiagnosticContent() {
                       <Star className="w-5 h-5 fill-current" />
                     </div>
                     <div>
-                      <div className="font-bold text-[#3C3633]">4.6/5 Excellence</div>
-                      <div className="text-xs text-[#8A7A70]">Basé sur 155 avis Google</div>
+                      <div className="font-bold text-[#3C3633]">{note}/5 Excellence</div>
+                      <div className="text-xs text-[#8A7A70]">Basé sur {avis} avis Google</div>
                     </div>
                   </div>
 
@@ -213,12 +230,12 @@ function DiagnosticContent() {
         </div>
       </section>
 
-      {/* SECTION 4: LES OFFRES "RENTABLES" */}
+      {/* SECTION 4: LES OFFRES "INVESTISSEMENT" (JUSTIFICATION PRIX) */}
       <section className="py-24 px-6 bg-white relative z-10" id="offres">
         <div className="container mx-auto max-w-6xl">
           <SectionTitle
             title="Plus qu'un coût, un investissement"
-            subtitle="Ces tarifs incluent le design sur-mesure, le code technique Google-Ready, et votre liberté."
+            subtitle="Le prix inclut TOUT ce qu'une agence vous facturerait en option. Pas de surprise."
           />
 
           <div className="grid md:grid-cols-3 gap-8 items-stretch">
@@ -227,35 +244,40 @@ function DiagnosticContent() {
             <div className="p-8 border border-[#E8E2D9] rounded-2xl bg-[#F9F7F5] flex flex-col hover:border-[#B08D55]/50 transition-colors">
               <h3 className="text-xl font-serif font-medium text-[#3C3633] mb-2">L'Essentiel</h3>
               <div className="text-3xl font-medium mb-1 font-serif text-[#3C3633]">1 290€</div>
-              <p className="text-xs text-[#8A7A70] mb-8 font-sans">Paiement unique</p>
+              <p className="text-xs text-[#8A7A70] mb-6 font-sans">Payable en 3x sans frais</p>
 
-              <p className="text-sm text-[#6D635C] mb-8 leading-relaxed">
-                Votre "Carte de Visite" de luxe. Un site rapide, mobile-first, qui présente votre salon et vos tarifs avec élégance.
-              </p>
+              <div className="border-t border-[#E8E2D9] py-6 space-y-3">
+                <p className="font-bold text-sm text-[#3C3633]">Ce que vous achetez :</p>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Site Vitrine Premium (5 pages)</li>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Design Sur-mesure (Pas de template)</li>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Code Google-Ready (SEO Technique)</li>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Hébergement Rapide INCLUS à vie</li>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Connexion à votre Agenda actuel</li>
+              </div>
+
               <div className="mt-auto">
                 <a href="https://calendly.com/contact-indhack/30min" target="_blank" className="block w-full text-center py-3 border border-[#E8E2D9] bg-white text-[#3C3633] rounded-lg text-sm font-medium hover:bg-[#F4F1ED] transition-colors">Réserver L'Essentiel</a>
+                <p className="text-[10px] text-center mt-2 text-[#999]">Rentabilisé avec 10 nouveaux clients.</p>
               </div>
             </div>
 
             {/* OFFRE 2 (STAR) */}
             <div className="p-8 border border-[#B08D55] rounded-2xl bg-white relative shadow-2xl flex flex-col transform md:-translate-y-4">
-              <div className="absolute top-0 right-0 bg-[#B08D55] text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl tracking-wider uppercase">Best Seller</div>
+              <div className="absolute top-0 right-0 bg-[#B08D55] text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl tracking-wider uppercase">Recommandé</div>
 
               <h3 className="text-xl font-serif font-medium text-[#B08D55] mb-2">L'Écosystème</h3>
               <div className="text-3xl font-medium mb-1 font-serif text-[#3C3633]">1 890€</div>
-              <p className="text-xs text-[#B08D55] mb-8 font-sans">+ 190€/mois (Maintenance & SEO)</p>
+              <p className="text-xs text-[#B08D55] mb-6 font-sans">+ 190€/mois (Votre machine à clients)</p>
 
-              <p className="text-sm text-[#6D635C] mb-6 italic border-b border-[#F4F1ED] pb-4">
-                La machine à clients.
-                On ne fait pas juste un site, on crée du contenu tous les mois pour que Google vous adore.
-              </p>
+              <div className="border-t border-[#F4F1ED] py-6 space-y-3">
+                <p className="font-bold text-sm text-[#3C3633]">Tout L'Essentiel, PLUS :</p>
+                <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> <strong>Stratégie de Contenu Mensuelle</strong></li>
+                <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> 1 Article de Blog SEO / mois</li>
+                <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> Pages "Quartiers" (Maillage local)</li>
+                <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> Optimisation fiche Google My Business</li>
+                <li className="flex gap-2 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> Mises à jour illimitées (Tarifs, Photos)</li>
+              </div>
 
-              <ul className="space-y-4 mb-8">
-                <li className="flex gap-3 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> <span className="font-medium">Site Premium Complet</span></li>
-                <li className="flex gap-3 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> <span className="font-medium">1 Article de Blog / mois</span></li>
-                <li className="flex gap-3 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> <span className="font-medium">Modifications illimitées</span></li>
-                <li className="flex gap-3 text-sm text-[#5A5243]"><Check className="w-4 h-4 text-[#B08D55]" /> <span className="font-medium">Rapport de Visibilité Mensuel</span></li>
-              </ul>
               <div className="mt-auto">
                 <a href="https://calendly.com/contact-indhack/30min" target="_blank" className="block w-full text-center py-3 bg-[#3C3633] text-white rounded-lg text-sm font-medium hover:bg-[#5A5243] transition-colors shadow-lg">Choisir L'Écosystème</a>
               </div>
@@ -265,11 +287,16 @@ function DiagnosticContent() {
             <div className="p-8 border border-[#E8E2D9] rounded-2xl bg-[#F9F7F5] flex flex-col hover:border-[#B08D55]/50 transition-colors">
               <h3 className="text-xl font-serif font-medium text-[#3C3633] mb-2">Sur-Mesure</h3>
               <div className="text-3xl font-medium mb-1 font-serif text-[#3C3633]">Devis</div>
-              <p className="text-xs text-[#8A7A70] mb-8 font-sans">Pour l'excellence absolue</p>
+              <p className="text-xs text-[#8A7A70] mb-6 font-sans">L'excellence absolue</p>
 
-              <p className="text-sm text-[#6D635C] mb-8 leading-relaxed">
-                Shooting photo, Vidéo drone, Réseaux sociaux... Une direction artistique complète pour faire de vous la référence n°1.
-              </p>
+              <div className="border-t border-[#E8E2D9] py-6 space-y-3">
+                <p className="font-bold text-sm text-[#3C3633]">Direction Artistique Totale :</p>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Shooting Photo Pro au salon</li>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Vidéo de présentation (Drone/Intérieur)</li>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Gestion des Réseaux Sociaux (1 mois)</li>
+                <li className="flex gap-2 text-sm text-[#6D635C]"><Check className="w-4 h-4 text-[#B08D55]" /> Branding Complet (Logo, Cartes)</li>
+              </div>
+
               <div className="mt-auto">
                 <a href="https://calendly.com/contact-indhack/30min" target="_blank" className="block w-full text-center py-3 border border-[#E8E2D9] bg-white text-[#3C3633] rounded-lg text-sm font-medium hover:bg-[#F4F1ED] transition-colors">En discuter</a>
               </div>
@@ -286,12 +313,12 @@ function DiagnosticContent() {
             <span className="font-serif font-bold text-[#B08D55]">IH</span>
           </div>
         </div>
-        <p className="text-[#3C3633] font-serif font-medium text-lg mb-2">IndHack Nice</p>
+        <p className="text-[#3C3633] font-serif font-medium text-lg mb-2">IndHack {ville}</p>
         <p className="text-[#6D635C] text-sm mb-8">Artisan du Web pour Artisans du Réel.</p>
         <p className="text-xs text-[#CCC]">06 61 13 97 48 • contact@indhack.com</p>
       </footer>
 
-      {/* Flottant Humain */}
+      {/* Flottant Humain (Modèle V8 conservé mais avec lien correct) */}
       <div className="fixed bottom-6 right-6 z-50">
         <a href="https://calendly.com/contact-indhack/30min" target="_blank" className="bg-[#3C3633] text-white pl-2 pr-6 py-2 rounded-full font-medium shadow-2xl flex items-center gap-3 hover:scale-105 transition-transform border border-[#5A5243]">
           <div className="relative">
