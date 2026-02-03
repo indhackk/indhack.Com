@@ -44,8 +44,8 @@ function DiagnosticContent() {
               C'est la preuve que vous faites du bon travail.
             </p>
             <p>
-              Le problème ? Quand une femme cherche <strong className="text-[#2D2A26]">"coiffeur {ville}"</strong> ou
-              <strong className="text-[#2D2A26]"> "coloriste {ville}"</strong> sur Google,
+              Le problème ? Quand une femme cherche <strong className="text-[#2D2A26]">"balayage {ville}"</strong>,
+              <strong className="text-[#2D2A26]"> "coloriste {ville}"</strong> ou <strong className="text-[#2D2A26]">"coiffeur visagiste"</strong> sur Google,
               elle ne tombe pas sur vous.
             </p>
             <p>
@@ -97,21 +97,26 @@ function DiagnosticContent() {
           </div>
 
           {/* Grille de stats */}
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
+          <div className="grid md:grid-cols-4 gap-4 mb-16">
 
-            <div className="bg-[#FDFCFB] rounded-2xl p-8 text-center">
-              <p className="text-5xl font-light text-[#2D2A26] mb-2">2 800</p>
-              <p className="text-[#8B7355]">recherches <strong>"coiffeur {ville}"</strong></p>
+            <div className="bg-[#FDFCFB] rounded-2xl p-6 text-center">
+              <p className="text-4xl font-light text-[#2D2A26] mb-2">390</p>
+              <p className="text-[#8B7355] text-sm">recherches <strong>"balayage {ville}"</strong></p>
             </div>
 
-            <div className="bg-[#FDFCFB] rounded-2xl p-8 text-center">
-              <p className="text-5xl font-light text-[#2D2A26] mb-2">320</p>
-              <p className="text-[#8B7355]">recherches <strong>"lissage brésilien"</strong></p>
+            <div className="bg-[#FDFCFB] rounded-2xl p-6 text-center">
+              <p className="text-4xl font-light text-[#2D2A26] mb-2">260</p>
+              <p className="text-[#8B7355] text-sm">recherches <strong>"coloriste {ville}"</strong></p>
             </div>
 
-            <div className="bg-[#FDFCFB] rounded-2xl p-8 text-center">
-              <p className="text-5xl font-light text-[#2D2A26] mb-2">260</p>
-              <p className="text-[#8B7355]">recherches <strong>"coloriste {ville}"</strong></p>
+            <div className="bg-[#FDFCFB] rounded-2xl p-6 text-center">
+              <p className="text-4xl font-light text-[#2D2A26] mb-2">210</p>
+              <p className="text-[#8B7355] text-sm">recherches <strong>"coiffeur visagiste"</strong></p>
+            </div>
+
+            <div className="bg-[#FDFCFB] rounded-2xl p-6 text-center">
+              <p className="text-4xl font-light text-[#2D2A26] mb-2">180</p>
+              <p className="text-[#8B7355] text-sm">recherches <strong>"lissage brésilien"</strong></p>
             </div>
 
           </div>
@@ -315,7 +320,7 @@ function DiagnosticContent() {
                 <h3 className="text-lg font-semibold text-[#2D2A26] mb-2">Je vous rends visible sur Google</h3>
                 <p className="text-[#5C5650]">
                   J'optimise votre site pour que vous apparaissiez quand quelqu'un cherche
-                  <strong className="text-[#2D2A26]"> "coiffeur {ville}"</strong>, <strong className="text-[#2D2A26]">"coloriste {ville}"</strong>, etc.
+                  <strong className="text-[#2D2A26]"> "balayage {ville}"</strong>, <strong className="text-[#2D2A26]">"coloriste {ville}"</strong>, <strong className="text-[#2D2A26]">"coiffeur visagiste"</strong>, etc.
                 </p>
               </div>
             </div>
@@ -483,9 +488,9 @@ function DiagnosticContent() {
               <p className="text-[#A89F94] text-sm mb-6">Être trouvée sur Google</p>
 
               <div className="mb-8">
-                <p className="text-sm text-[#A89F94]">à partir de</p>
-                <p className="text-4xl font-light">990€</p>
-                <p className="text-sm text-[#A89F94]">puis <span className="text-white">190€</span>/mois</p>
+                <p className="text-sm text-[#A89F94]">Site</p>
+                <p className="text-4xl font-light">690€</p>
+                <p className="text-sm text-[#A89F94]">+ SEO à partir de <span className="text-white">180€</span>/mois</p>
               </div>
 
               <ul className="space-y-3 text-[#D4D0CB] text-sm">
@@ -530,9 +535,9 @@ function DiagnosticContent() {
               <p className="text-[#8B7355] text-sm mb-6">Visibilité maximale</p>
 
               <div className="mb-8">
-                <p className="text-sm text-[#8B7355]">à partir de</p>
-                <p className="text-4xl font-light text-[#2D2A26]">1 290€</p>
-                <p className="text-sm text-[#8B7355]">puis <span className="text-[#2D2A26]">290€</span>/mois</p>
+                <p className="text-sm text-[#8B7355]">Site</p>
+                <p className="text-4xl font-light text-[#2D2A26]">690€</p>
+                <p className="text-sm text-[#8B7355]">+ SEO à partir de <span className="text-[#2D2A26]">290€</span>/mois</p>
               </div>
 
               <ul className="space-y-3 text-[#5C5650] text-sm">
