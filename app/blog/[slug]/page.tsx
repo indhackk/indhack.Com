@@ -210,9 +210,9 @@ export default function BlogPostPage({ params }: PageProps) {
 
                             {/* Table des matières */}
                             <div className="hidden lg:block">
-                                <h3 className="text-xs font-bold text-ink uppercase tracking-wider mb-4 border-b border-gray-100 pb-2">
+                                <div className="text-xs font-bold text-ink uppercase tracking-wider mb-4 border-b border-gray-100 pb-2">
                                     Sommaire
-                                </h3>
+                                </div>
                                 <nav className="space-y-1">
                                     {post.content.split('\n').filter(line => line.startsWith('##')).map((line, i) => {
                                         // Nettoyage basique des titres markdown pour l'affichage
@@ -239,7 +239,7 @@ export default function BlogPostPage({ params }: PageProps) {
                             </div>
 
                             <div className="bg-ink p-6 rounded-2xl text-white">
-                                <h3 className="font-heading font-bold text-lg mb-4">Besoin d'aide ?</h3>
+                                <div className="font-heading font-bold text-lg mb-4">Besoin d'aide ?</div>
                                 <p className="text-white/70 text-sm mb-6">
                                     Passons de la théorie à la pratique ensemble.
                                 </p>
@@ -253,7 +253,7 @@ export default function BlogPostPage({ params }: PageProps) {
                             </div>
 
                             <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                                <h3 className="font-heading font-bold text-ink mb-4">Auteur</h3>
+                                <div className="font-heading font-bold text-ink mb-4">Auteur</div>
                                 <div className="flex items-center gap-3 mb-4">
                                     <div className="relative w-12 h-12 rounded-full overflow-hidden">
                                         <Image
@@ -311,9 +311,9 @@ export default function BlogPostPage({ params }: PageProps) {
 
                 {/* Final CTA Area */}
                 <section className="mt-20 py-12 px-8 bg-gray-50 rounded-3xl text-center border border-gray-100">
-                    <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-4">
+                    <div className="text-2xl md:text-3xl font-heading font-bold text-ink mb-4">
                         Cet article vous a été utile ?
-                    </h2>
+                    </div>
                     <p className="text-soft mb-8 max-w-xl mx-auto">
                         Partagez-le ou contactez-moi pour discuter de votre stratégie SEO en détail.
                     </p>

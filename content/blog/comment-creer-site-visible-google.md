@@ -8,106 +8,108 @@ author: "Indiana Aflalo"
 keywords: ["créer site internet visible Google", "référencement site web", "site web premier page Google", "création site SEO", "freelance SEO", "agence web vs freelance"]
 ---
 
-Créer un site Internet, c'est facile. **Créer un site Internet visible sur Google**, c'est une autre histoire. En tant qu'[Experte Référencement Naturel](/) chez IndHack, je constate chaque jour des sites magnifiques... mais totalement invisibles. Pourquoi ? Parce que la visibilité ne s'improvise pas.
+Créer un site Internet, c'est facile. **Créer un site Internet visible sur Google**, c'est une autre histoire. En tant que [consultante SEO](/consultant-seo), je constate chaque jour des sites magnifiques... mais totalement invisibles. Pourquoi ? Parce que la **visibilité ne s'improvise pas**.
 
 ## Pourquoi 90% des sites ne génèrent aucun trafic organique ?
 
-La plupart des entrepreneurs font l'erreur de séparer la création de leur site et leur stratégie SEO. Ils pensent d'abord au design, puis "on verra pour Google plus tard". **C'est exactement l'inverse qu'il faut faire.**
+La plupart des entrepreneurs font l'erreur de séparer la création de leur site et leur stratégie **SEO**. Ils pensent d'abord au design, puis "on verra pour Google plus tard". **C'est exactement l'inverse qu'il faut faire.**
 
-Un site construit sans penser au référencement dès le départ, c'est comme construire une maison sans fondations. Il faudra tout casser pour recommencer.
+Un site construit sans penser au [référencement](/referencement-naturel) dès le départ, c'est comme construire une maison sans fondations. Il faudra tout casser pour recommencer.
 
 ### Les erreurs les plus fréquentes
 
-1. **Structure de pages non optimisée** : Des URLs incompréhensibles, pas de hiérarchie H1/H2/H3
-2. **Contenu générique** : Du texte "lorem ipsum" remplacé à la va-vite
-3. **Aucune stratégie de mots-clés** : On parle de soi au lieu de répondre aux recherches des clients
-4. **Vitesse catastrophique** : Images non compressées, code alourdi par des builders
-5. **Pas de maillage interne** : Les pages sont isolées, Google ne comprend pas la structure
+| Erreur | Conséquence |
+|--------|-------------|
+| **Structure non optimisée** | URLs incompréhensibles, pas de hiérarchie Hn |
+| **Contenu générique** | Texte "lorem ipsum" remplacé à la va-vite |
+| **Aucune stratégie de mots-clés** | On parle de soi au lieu de répondre aux recherches |
+| **Vitesse catastrophique** | Images non compressées, code alourdi |
+| **Pas de maillage interne** | Pages isolées, Google ne comprend rien |
 
-## Agence web ou freelance : qui choisir pour un site visible ?
+## Agence web ou freelance : qui choisir ?
 
-C'est LA question que tout entrepreneur se pose. Voici mon analyse honnête après des années dans le métier.
+C'est LA question que tout entrepreneur se pose. Voici mon analyse honnête.
 
 ### L'agence web classique
 
-**Avantages** :
-- Équipe pluridisciplinaire
-- Process rodés pour les gros projets
-- SAV et maintenance
+| Avantages | Inconvénients |
+|-----------|---------------|
+| Équipe pluridisciplinaire | Tarifs élevés (charges, locaux) |
+| Process rodés pour gros projets | Interlocuteurs multiples |
+| SAV et maintenance | Templates standardisés |
+| | SEO souvent vendu "en supplément" |
 
-**Inconvénients** :
-- Tarifs élevés (charges, locaux, commerciaux)
-- Interlocuteurs multiples, perte d'information
-- Templates standardisés, peu de personnalisation SEO
-- Le SEO est souvent un "module" vendu en supplément
+### Le freelance spécialisé SEO
 
-### Le freelance passionné
+| Avantages | Inconvénients |
+|-----------|---------------|
+| **Expertise pointue** et actualisée | Disponibilité parfois limitée |
+| Relation directe, communication fluide | Moins adapté aux très gros projets |
+| Flexibilité et réactivité | |
+| SEO intégré **nativement** | |
+| Tarifs compétitifs | |
 
-**Avantages** :
-- Expertise pointue et actualisée
-- Relation directe, communication fluide
-- Flexibilité et réactivité
-- Le SEO est intégré **nativement** dans chaque décision
-- Tarifs compétitifs (pas de structure lourde)
+**Mon conseil :** Si votre objectif est d'**apparaître sur Google** et de générer des leads qualifiés, privilégiez un [consultant SEO freelance](/consultant-seo-freelance) qui maîtrise aussi la création de sites. Il ne va pas juste "faire joli". Il va construire chaque page comme une **machine à capter du trafic**.
 
-**Inconvénients** :
-- Disponibilité parfois limitée
-- Moins adapté aux très gros projets multi-équipes
+## Les étapes pour créer un site visible sur Google
 
-### Mon conseil
-
-Si votre objectif est d'**apparaître sur Google** et de générer des leads qualifiés, privilégiez un freelance spécialisé en SEO qui maîtrise aussi la création de sites. La différence ? Il ne va pas juste "faire joli". Il va construire chaque page comme une **machine à capter du trafic**.
-
-## Les 7 étapes pour créer un site visible sur Google
-
-### 1. Étude de mots-clés AVANT la maquette
+### Étude de mots-clés avant la maquette
 
 Avant de dessiner la moindre page, on identifie :
-- Ce que vos clients potentiels tapent sur Google
-- Le volume de recherche mensuel
-- La difficulté de positionnement
-- L'intention de recherche (informationnelle, transactionnelle, locale)
+- Ce que vos **clients potentiels** tapent sur Google
+- Le **volume de recherche** mensuel
+- La **difficulté** de positionnement
+- L'**intention de recherche** (informationnelle, transactionnelle, locale)
 
-### 2. Architecture de site en "cocon sémantique"
+### Architecture en cocon sémantique
 
-Chaque page doit avoir un objectif clair et s'inscrire dans une hiérarchie logique :
-- **Page mère** : Votre service principal (ex: "Consultant SEO Nice")
-- **Pages filles** : Les sous-services (ex: "Audit technique", "Netlinking")
-- **Pages petites-filles** : Les articles de blog qui soutiennent l'ensemble
+Chaque page doit avoir un objectif clair et s'inscrire dans une **hiérarchie logique** :
 
-### 3. Développement technique SEO-first
+| Niveau | Rôle | Exemple |
+|--------|------|---------|
+| **Page mère** | Service principal | "[Consultant SEO Nice](/seo-nice)" |
+| **Pages filles** | Sous-services | "[Audit technique](/audit-seo)" |
+| **Articles blog** | Longue traîne | Cet article ! |
 
-- Core Web Vitals optimisés (LCP, FID, CLS)
-- Rendu côté serveur (SSR) ou génération statique (SSG)
-- Données structurées Schema.org
-- Sitemap XML automatique
-- Robots.txt configuré
+### Développement technique SEO-first
 
-### 4. Contenu rédigé pour Google ET pour l'humain
+| Élément | Objectif |
+|---------|----------|
+| **Core Web Vitals** | LCP, FID, CLS optimisés |
+| **SSR/SSG** | Rendu côté serveur ou statique |
+| **Schema.org** | Données structurées pour rich snippets |
+| **Sitemap XML** | Automatique et à jour |
+| **Robots.txt** | Correctement configuré |
+
+### Contenu rédigé pour Google ET pour l'humain
 
 Le contenu doit :
-- Répondre précisément à l'intention de recherche
-- Utiliser le mot-clé principal et ses variantes naturellement
-- Être structuré avec des H2/H3 clairs
+- Répondre **précisément** à l'intention de recherche
+- Utiliser le **mot-clé principal** et ses variantes naturellement
+- Être structuré avec des **H2/H3** clairs
 - Inclure des listes, des tableaux, des citations
-- Faire minimum 800 mots pour les pages importantes
+- Faire minimum **800 mots** pour les pages importantes
 
-### 5. Maillage interne stratégique
+### Maillage interne stratégique
 
 Chaque page doit être reliée aux autres par des **ancres optimisées**. C'est comme ça que vous transmettez le "jus SEO" et que Google comprend vos priorités.
 
-### 6. Optimisation des images
+Découvrez comment je structure le [maillage interne](/blog/missions-consultant-seo) dans mes accompagnements.
 
-- Compression sans perte de qualité
-- Format WebP ou AVIF
-- Attributs alt descriptifs
-- Lazy loading
+### Optimisation des images
 
-### 7. Lancement et indexation
+| Action | Impact |
+|--------|--------|
+| **Compression** | Sans perte de qualité |
+| **Format WebP/AVIF** | Taille réduite |
+| **Attributs alt** | Descriptifs et optimisés |
+| **Lazy loading** | Chargement différé |
 
-- Soumission du sitemap à Google Search Console
-- Vérification de l'indexation de chaque page
-- Correction des erreurs 404 et redirections
+### Lancement et indexation
+
+- Soumission du **sitemap** à Google Search Console
+- Vérification de l'**indexation** de chaque page
+- Correction des erreurs **404** et redirections
 
 ## Combien coûte un site visible sur Google ?
 
@@ -115,16 +117,23 @@ Oubliez les sites à 500€. Un site **réellement optimisé** pour le référen
 
 | Type de site | Fourchette |
 |--------------|------------|
-| Site vitrine 5-10 pages | 2 000€ - 4 000€ |
-| Site avec blog SEO | 3 500€ - 6 000€ |
-| E-commerce optimisé | 5 000€ - 15 000€ |
+| **Site vitrine** 5-10 pages | 2 000€ - 4 000€ |
+| **Site avec blog SEO** | 3 500€ - 6 000€ |
+| **E-commerce optimisé** | 5 000€ - 15 000€ |
 
-C'est un investissement, pas une dépense. Un site bien référencé génère des clients **gratuitement** pendant des années.
+C'est un **investissement**, pas une dépense. Un site bien référencé génère des clients **gratuitement** pendant des années.
 
-## Conclusion : Ne laissez plus Google vous ignorer
+## Ce qu'il faut retenir
 
-Votre site peut être le plus beau du monde. S'il n'apparaît pas sur Google, il ne sert à rien.
+Votre site peut être le plus beau du monde. S'il n'apparaît pas sur Google, **il ne sert à rien**.
 
 La solution ? Travailler avec quelqu'un qui pense **SEO d'abord**. Quelqu'un qui va construire votre site comme une fondation solide pour votre croissance digitale.
+
+---
+
+**À lire aussi :**
+- [Pourquoi faire appel à un consultant SEO ?](/blog/pourquoi-consultant-seo)
+- [L'audit SEO : point de départ de votre croissance](/blog/importance-audit-seo)
+- [SEO local à Nice : dominer le marché azuréen](/blog/seo-local-nice)
 
 Prêt à créer un site qui travaille pour vous 24h/24 ? [Demandez votre audit gratuit](/contact) et découvrons ensemble votre potentiel de visibilité.
