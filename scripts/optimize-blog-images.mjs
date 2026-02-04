@@ -15,7 +15,7 @@ const BLOG_IMAGES_DIR = './public/images/blog';
 const BLOG_IMAGES_CONFIG = [
     {
         slug: 'seo-local-nice',
-        source: './public/images/cities/nice-promenade-anglais.webp',
+        source: './public/images/cities/nice-promenade-anglais.jpg',
         output: 'seo-local-nice.jpg',
         keyword: 'SEO Local Nice - Consultant SEO Côte d\'Azur',
         description: 'Vue panoramique de Nice, Promenade des Anglais - SEO Local Nice',
