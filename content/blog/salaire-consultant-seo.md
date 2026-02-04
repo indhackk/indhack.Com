@@ -3,12 +3,12 @@ title: "Salaire consultant SEO en 2026 : grilles et évolutions"
 description: "Combien gagne un consultant SEO en France ? Salaires junior, confirmé, senior, freelance. Grilles détaillées par expérience, région et spécialité."
 date: "2026-01-25"
 category: "Métier"
-image: "/images/partnership.png"
+image: "/images/blog/salaire-consultant-seo.jpg"
 author: "Indiana Aflalo"
 keywords: ["salaire consultant SEO", "rémunération SEO", "combien gagne consultant SEO", "TJM consultant SEO", "salaire référenceur", "salaire SEO manager"]
 ---
 
-Combien gagne réellement un [consultant SEO](/consultant-seo) en France ? C'est LA question que se posent tous ceux qui envisagent cette carrière. Voici les données actualisées pour 2026, basées sur les études de rémunération et mon expérience du marché.
+Combien gagne réellement un **[consultant SEO](/consultant-seo)** en France ? C'est LA question que se posent tous ceux qui envisagent cette **carrière SEO**. Voici les données actualisées pour 2026, basées sur les études de rémunération et mon expérience du marché.
 
 ## Grille des salaires SEO en 2026
 
@@ -24,7 +24,7 @@ Les **salaires SEO** varient fortement selon votre niveau d'expertise :
 | **Expert/Lead** | 8+ ans | 65 000€ - 90 000€ |
 | **Head of SEO** | 10+ ans | 75 000€ - 120 000€ |
 
-Ces fourchettes concernent les postes en CDI à temps plein. Le **référencement naturel** est l'une des spécialités les mieux payées du marketing digital.
+Ces fourchettes concernent les postes en CDI à temps plein. Le **référencement naturel** est l'une des spécialités les mieux payées du **marketing digital**.
 
 ### Variations selon la région
 
@@ -53,7 +53,7 @@ Les postes **in-house** (directement chez l'annonceur) sont généralement mieux
 
 ## Salaire consultant SEO freelance
 
-C'est là que les choses deviennent intéressantes. En tant que [consultant SEO freelance](/consultant-seo-freelance), votre rémunération dépend de votre **TJM** (Taux Journalier Moyen) et de votre taux d'occupation.
+C'est là que les choses deviennent intéressantes. En tant que **[consultant SEO freelance](/consultant-seo-freelance)**, votre **rémunération SEO** dépend de votre **TJM** (Taux Journalier Moyen) et de votre taux d'occupation.
 
 ### Grille des TJM consultants SEO
 
@@ -79,7 +79,7 @@ Avec un taux d'occupation de 70% (soit ~160 jours facturés/an) :
 
 *Estimation en micro-entreprise ou SASU optimisée
 
-Le **freelance bien établi** peut dépasser les revenus d'un salarié senior, mais avec plus de risques et la nécessité de gérer son activité commerciale.
+Le **freelance SEO bien établi** peut dépasser les **revenus d'un salarié** senior, mais avec plus de risques et la nécessité de gérer son activité commerciale.
 
 ## Facteurs qui influencent le salaire
 
@@ -193,7 +193,7 @@ Le statut de [consultant SEO freelance](/consultant-seo-freelance) offre le meil
 
 ## Ce qu'il faut retenir
 
-Le salaire d'un **consultant SEO** varie de 28K€ (junior) à plus de 100K€ (expert freelance ou Head of SEO). Les facteurs clés sont l'expérience, la spécialisation, la région et le type de structure.
+Le **salaire d'un consultant SEO** varie de 28K€ (junior) à plus de 100K€ (**expert freelance** ou **Head of SEO**). Les facteurs clés sont l'expérience, la **spécialisation SEO**, la région et le type de structure.
 
 ---
 

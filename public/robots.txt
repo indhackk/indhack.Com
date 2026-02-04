@@ -8,6 +8,7 @@ Disallow: /login
 Disallow: /dashboard
 Disallow: /app/*
 Disallow: /*.json
+Disallow: /diagnostic/*
 
 # Host
 Host: https://indhack.com

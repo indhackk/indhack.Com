@@ -54,7 +54,7 @@ export function BlogServiceCTA({ category }: BlogServiceCTAProps) {
                 </p>
                 <Link
                     href="/audit-seo"
-                    className="inline-flex items-center gap-2 bg-sauge text-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-ink transition-all"
+                    className="inline-flex items-center gap-2 bg-white text-ink px-6 py-3 rounded-full font-bold hover:bg-sauge hover:text-white transition-all"
                 >
                     Demander mon audit
                     <ArrowRight className="w-4 h-4" />
@@ -79,7 +79,7 @@ export function BlogServiceCTA({ category }: BlogServiceCTAProps) {
             </p>
             <Link
                 href={serviceData.href}
-                className="inline-flex items-center gap-2 bg-sauge text-white px-6 py-3 rounded-full font-bold hover:bg-white hover:text-ink transition-all"
+                className="inline-flex items-center gap-2 bg-white text-ink px-6 py-3 rounded-full font-bold hover:bg-sauge hover:text-white transition-all"
             >
                 Découvrir ce service
                 <ArrowRight className="w-4 h-4" />

@@ -3,7 +3,7 @@ title: "SEO Local à Nice : Dominer le marché azuréen en 2026"
 description: "Comment apparaître en tête des recherches locales à Nice et dans les Alpes-Maritimes ? Guide complet du référencement local par une consultante SEO native de la région."
 date: "2026-01-20"
 category: "SEO Local"
-image: "/images/cities/nice-promenade-anglais.webp"
+image: "/images/blog/seo-local-nice.jpg"
 author: "Indiana Aflalo"
 keywords: ["SEO Nice", "référencement local Nice", "Alpes-Maritimes", "Google Maps Nice", "consultant SEO Nice", "Google Business Profile Nice"]
 ---
@@ -12,7 +12,7 @@ Pour une entreprise locale, être visible sur des recherches comme "**consultant
 
 ## La puissance de la recherche locale
 
-Les recherches de proximité ont un **taux de conversion** bien plus élevé que les recherches génériques :
+Les **recherches de proximité** ont un **taux de conversion** bien plus élevé que les recherches génériques :
 
 | Statistique | Donnée |
 |-------------|--------|
@@ -20,11 +20,11 @@ Les recherches de proximité ont un **taux de conversion** bien plus élevé que
 | Recherches locales → achat | **28%** |
 | Croissance des recherches "near me" | **+500%** |
 
-Quand un prospect cherche "coiffeur Nice" ou "plombier Cannes", il est **déjà prêt à passer à l'action**. C'est du trafic ultra-qualifié.
+Quand un prospect cherche "**coiffeur Nice**" ou "**plombier Cannes**", il est **déjà prêt à passer à l'action**. C'est du **trafic ultra-qualifié**.
 
 ## Optimiser votre fiche Google Business Profile
 
-C'est votre **vitrine numéro 1** sur Maps et dans le Local Pack (les 3 résultats locaux en haut de Google).
+C'est votre **vitrine numéro 1** sur **Google Maps** et dans le **Local Pack** (les 3 résultats locaux en haut de Google).
 
 **Checklist GBP complète :**
 - **Catégorie** principale et secondaires pertinentes
@@ -34,7 +34,7 @@ C'est votre **vitrine numéro 1** sur Maps et dans le Local Pack (les 3 résulta
 - **Attributs** activés (Wi-Fi, accessibilité, paiements...)
 - **Posts** réguliers (offres, actualités, événements)
 
-Une fiche GBP bien optimisée peut **doubler votre visibilité locale** en quelques semaines.
+Une **fiche GBP** bien optimisée peut **doubler votre visibilité locale** en quelques semaines.
 
 ## Créer des pages locales dédiées
 
@@ -51,7 +51,7 @@ Chaque page doit avoir du **contenu unique**, pas juste un changement de nom de 
 
 ## Collecter des avis clients locaux
 
-La **preuve sociale** est le carburant de votre visibilité locale. Les avis impactent :
+La **preuve sociale** est le carburant de votre **visibilité locale**. Les **avis clients** impactent :
 - Votre positionnement dans le **Local Pack**
 - Votre **taux de clic** (CTR)
 - La **confiance** des prospects
@@ -73,7 +73,7 @@ Ces **backlinks locaux** envoient un signal fort à Google sur votre implantatio
 
 ## Optimiser pour la recherche vocale
 
-*"OK Google, trouve-moi un restaurant italien à Nice"* — La **recherche vocale** explose. Optimisez pour :
+*"OK Google, trouve-moi un restaurant italien à Nice"* — La **recherche vocale** explose sur la **Côte d'Azur**. Optimisez pour :
 - Les requêtes **conversationnelles**
 - Les questions (qui, quoi, où, comment)
 - Les **formulations naturelles**

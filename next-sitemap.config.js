@@ -19,6 +19,9 @@ module.exports = {
         '/dashboard',
         '/app/*',
 
+        // Pages diagnostic clients (audits personnalisés)
+        '/diagnostic/*',
+
         // Pages légales avec noindex
         '/cgv',
         '/confidentialite',
@@ -49,6 +52,7 @@ module.exports = {
                     '/dashboard',
                     '/app/*',
                     '/*.json',
+                    '/diagnostic/*',
                 ],
             },
             // Note: Ne plus bloquer les bots SEO pour le tracking
