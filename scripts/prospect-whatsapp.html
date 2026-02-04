@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indhack - Dashboard Prospection WhatsApp</title>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4620859186405862"
+        crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #25D366;
+            --secondary: #128C7E;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #25D366 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stats {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            border: 1px solid #334155;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .lead-card {
+            background: var(--card-bg);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lead-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary);
+        }
+
+        .lead-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .lead-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .lead-info {
+            color: var(--text-dim);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            background: #25d36622;
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .message-box {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            color: #cbd5e1;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        button {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #22c55e;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-secondary {
+            background: #334155;
+            color: white;
+        }
+
+        .btn-secondary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #334155;
+            border-radius: 4px;
+            margin-top: 2rem;
+            overflow: hidden;
+        }
+
+        .progress-inner {
+            height: 100%;
+            background: var(--primary);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .finished {
+            text-align: center;
+            padding: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>WhatsApp Prospection 🚀</h1>
+            <p style="color: var(--text-dim)">Envoyez vos messages personnalisés en un clic.</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-value" id="count-total">0</span>
+                <span class="stat-label">Total Leads</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="count-sent">0</span>
+                <span class="stat-label">Envoyés</span>
+            </div>
+        </div>
+
+        <div id="prospect-card" class="lead-card">
+            <div class="lead-header">
+                <div>
+                    <h2 class="lead-name" id="lead-name">Chargement...</h2>
+                    <div class="lead-info" id="lead-city">Ville, Code</div>
+                </div>
+                <div class="badge" id="lead-note">5.0★</div>
+            </div>
+
+            <div class="message-box" id="lead-message">
+                Message en cours de génération...
+            </div>
+
+            <div class="actions">
+                <button class="btn-secondary" onclick="prevLead()" id="btn-prev" disabled>Précédent</button>
+                <button class="btn-primary" onclick="sendLead()" id="btn-send">ENVOYER SUR WHATSAPP</button>
+                <button class="btn-secondary" onclick="nextLead()" id="btn-next">Suivant</button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-inner" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <div id="finished-card" class="lead-card hidden finished">
+            <h2>🎉 Terminé !</h2>
+            <p>Vous avez parcouru tous les prospects de la liste.</p>
+            <button class="btn-primary" onclick="reset()">Recommencer</button>
+        </div>
+    </div>
+
+    <script>
+        const leads = [
+            { "name": "KRISTEL HAIR CONCEPT", "mobile": "33659430822", "city": "Nice", "note": "4.9", "avis": "210", "url": "https://indhack.com/diagnostic/coiffeur?nom=KRISTEL%20HAIR%20CONCEPT%20-%20Coiffure%20%26%20Onglerie&ville=Nice&note=4.9&avis=210" },
+            { "name": "Paganini Coiffure", "mobile": "33620297880", "city": "Nice", "note": "4.9", "avis": "115", "url": "https://indhack.com/diagnostic/coiffeur?nom=Paganini%20Coiffure&ville=Nice&note=4.9&avis=115" },
+            { "name": "KS Beauty Hair", "mobile": "33621670129", "city": "Nice", "note": "5", "avis": "80", "url": "https://indhack.com/diagnostic/coiffeur?nom=KS%20Beauty%20Hair%20-%20Salon%20de%20coiffure%20Nice.Ombre%20hair%2CLissages&ville=Nice&note=5&avis=80" },
+            { "name": "Hair by Priscillia.k", "mobile": "33659671263", "city": "Nice", "note": "5", "avis": "80", "url": "https://indhack.com/diagnostic/coiffeur?nom=Hair%20by%20Priscillia.k&ville=Nice&note=5&avis=80" },
+            { "name": "Valenti Style coiffure", "mobile": "33609302541", "city": "Nice", "note": "4.9", "avis": "52", "url": "https://indhack.com/diagnostic/coiffeur?nom=Valenti%20Style%20coiffure%20change%20d%E2%80%99adresse%20au%20salon%20%C2%AB%20les%20copines%20%C2%BB&ville=Nice&note=4.9&avis=52" },
+            { "name": "Barber House Port", "mobile": "33761738472", "city": "Nice", "note": "4.6", "avis": "390", "url": "https://indhack.com/diagnostic/barbier?nom=Barber%20House%20Port&ville=Nice&note=4.6&avis=390" },
+            { "name": "MY BARBER SHOP", "mobile": "33658462782", "city": "Nice", "note": "4.6", "avis": "168", "url": "https://indhack.com/diagnostic/barbier?nom=MY%20BARBER%20SHOP%20(%20Avec%20%2F%20Sans%20RDV)&ville=Nice&note=4.6&avis=168" },
+            { "name": "Comptoir des Barbiers", "mobile": "33616776899", "city": "Nice", "note": "4.7", "avis": "141", "url": "https://indhack.com/diagnostic/barbier?nom=Comptoir%20des%20Barbiers&ville=Nice&note=4.7&avis=141" },
+            { "name": "Barber Chic Nice", "mobile": "33674981669", "city": "Nice", "note": "4.8", "avis": "120", "url": "https://indhack.com/diagnostic/barbier?nom=Barber%20Chic%20Nice&ville=Nice&note=4.8&avis=120" },
+            { "name": "Barber Style", "mobile": "33768526102", "city": "Nice", "note": "4.6", "avis": "106", "url": "https://indhack.com/diagnostic/barbier?nom=Barber%20Style%20-%20Barber%20shop%20Nice&ville=Nice&note=4.6&avis=106" },
+            { "name": "My Barberhood", "mobile": "33688446024", "city": "Nice", "note": "4.5", "avis": "84", "url": "https://indhack.com/diagnostic/barbier?nom=My%20Barberhood&ville=Nice&note=4.5&avis=84" },
+            { "name": "Street barber", "mobile": "33665985773", "city": "Nice", "note": "4.4", "avis": "74", "url": "https://indhack.com/diagnostic/barbier?nom=Street%20barber&ville=Nice&note=4.4&avis=74" },
+            { "name": "45th Barber Street", "mobile": "33781017357", "city": "Nice", "note": "4.7", "avis": "66", "url": "https://indhack.com/diagnostic/barbier?nom=45th%20Barber%20Street&ville=Nice&note=4.7&avis=66" },
+            { "name": "MS BARBER", "mobile": "33616293016", "city": "Nice", "note": "4.8", "avis": "60", "url": "https://indhack.com/diagnostic/barbier?nom=MS%20BARBER&ville=Nice&note=4.8&avis=60" },
+            { "name": "Les Barbiers", "mobile": "33603447368", "city": "Nice", "note": "4.8", "avis": "41", "url": "https://indhack.com/diagnostic/barbier?nom=Les%20Barbiers&ville=Nice&note=4.8&avis=41" },
+            { "name": "BARBER 24", "mobile": "33762366597", "city": "Nice", "note": "4.6", "avis": "32", "url": "https://indhack.com/diagnostic/barbier?nom=BARBER%2024&ville=Nice&note=4.6&avis=32" },
+            { "name": "Barber Shop 06", "mobile": "33753425212", "city": "Nice", "note": "4.7", "avis": "26", "url": "https://indhack.com/diagnostic/barbier?nom=Barber%20Shop%2006&ville=Nice&note=4.7&avis=26" },
+            { "name": "BARBER HOUSE", "mobile": "33769036802", "city": "Nice", "note": "4.7", "avis": "14", "url": "https://indhack.com/diagnostic/barbier?nom=BARBER%20HOUSE&ville=Nice&note=4.7&avis=14" },
+            { "name": "As barber", "mobile": "33775741254", "city": "Nice", "note": "5", "avis": "6", "url": "https://indhack.com/diagnostic/barbier?nom=As%20barber&ville=Nice&note=5&avis=6" },
+            { "name": "Hb Barber Shop", "mobile": "33649545937", "city": "Cannes", "note": "4.5", "avis": "50", "url": "https://indhack.com/diagnostic/barbier?nom=Hb%20Barber%20Shop&ville=Cannes&note=4.5&avis=50" },
+            { "name": "Le Barbier d'Antibes", "mobile": "33602040128", "city": "Antibes", "note": "4.9", "avis": "95", "url": "https://indhack.com/diagnostic/barbier?nom=Le%20Barbier%20d%27Antibes&ville=Antibes&note=4.9&avis=95" },
+            { "name": "L'Atelier Barber Shop", "mobile": "33760829831", "city": "Antibes", "note": "4.9", "avis": "110", "url": "https://indhack.com/diagnostic/barbier?nom=L%27Atelier%20Barber%20Shop&ville=Antibes&note=4.9&avis=110" },
+            { "name": "Salon Bio Grasse", "mobile": "33609530326", "city": "Grasse", "note": "4.7", "avis": "55", "url": "https://indhack.com/diagnostic/coiffeur?nom=Salon%20Bio%20Grasse&ville=Grasse&note=4.7&avis=55" },
+            { "name": "Oh Lala Beauty", "mobile": "33627760073", "city": "Grasse", "note": "4.8", "avis": "65", "url": "https://indhack.com/diagnostic/coiffeur?nom=Oh%20Lala%20Beauty&ville=Grasse&note=4.8&avis=65" },
+            { "name": "Salon Dreadlocks", "mobile": "33699258858", "city": "Villeneuve", "note": "4.9", "avis": "35", "url": "https://indhack.com/diagnostic/coiffeur?nom=Salon%20Dreadlocks&ville=Villeneuve-Loubet&note=4.9&avis=35" },
+            { "name": "Tete a Tete", "mobile": "33662629915", "city": "Villeneuve", "note": "4.6", "avis": "42", "url": "https://indhack.com/diagnostic/coiffeur?nom=T%C3%AAte%20%C3%A0%20T%C3%AAte&ville=Villeneuve-Loubet&note=4.6&avis=42" },
+            { "name": "Barber Shop Le Vallaurien", "mobile": "33615990074", "city": "Vallauris", "note": "4.8", "avis": "85", "url": "https://indhack.com/diagnostic/barbier?nom=Barber%20Shop%20Le%20Vallaurien&ville=Vallauris&note=4.8&avis=85" },
+            { "name": "Bea Coiffure", "mobile": "33663304183", "city": "Beausoleil", "note": "4.9", "avis": "50", "url": "https://indhack.com/diagnostic/coiffeur?nom=B%C3%A9a%20Coiffure&ville=Beausoleil&note=4.9&avis=50" }
+        ];
+
+        let currentIndex = 0;
+        let sentCount = 0;
+        const sentList = new Set();
+
+        function updateUI() {
+            if (currentIndex >= leads.length) {
+                document.getElementById('prospect-card').classList.add('hidden');
+                document.getElementById('finished-card').classList.remove('hidden');
+                return;
+            }
+
+            const lead = leads[currentIndex];
+            document.getElementById('lead-name').textContent = lead.name;
+            document.getElementById('lead-city').textContent = lead.city;
+            document.getElementById('lead-note').textContent = lead.note + '★ (' + lead.avis + ' avis)';
+
+            const msg = `Bonjour, je me permets de vous contacter car je suis tombée sur votre fiche Google My Business et j'ai remarqué que vous aviez de très bons avis (${lead.note}★) !
+
+Je me suis permis de faire un rapide audit personnalisé pour ${lead.name}. 
+
+L'idée n'est absolument pas de vous déranger, c'est un diagnostic qui n'engage à rien. Je voulais simplement vous montrer concrètement comment vous pourriez monter en puissance ici à ${lead.city} et capter encore plus de clients grâce à votre réputation.
+
+Vous pouvez consulter votre audit gratuit ici :
+${lead.url}
+
+Bonne journée !
+Indiana`;
+
+            document.getElementById('lead-message').textContent = msg;
+            document.getElementById('count-total').textContent = leads.length;
+            document.getElementById('count-sent').textContent = sentList.size;
+
+            const progress = ((currentIndex) / leads.length) * 100;
+            document.getElementById('progress-bar').style.width = progress + '%';
+
+            document.getElementById('btn-prev').disabled = currentIndex === 0;
+        }
+
+        function sendLead() {
+            const lead = leads[currentIndex];
+            const msg = document.getElementById('lead-message').textContent;
+            const url = `https://wa.me/${lead.mobile}?text=${encodeURIComponent(msg)}`;
+
+            window.open(url, '_blank');
+            sentList.add(currentIndex);
+
+            // Auto next after 1 second
+            setTimeout(() => {
+                nextLead();
+            }, 1000);
+        }
+
+        function nextLead() {
+            if (currentIndex < leads.length) {
+                currentIndex++;
+                updateUI();
+            }
+        }
+
+        function prevLead() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateUI();
+            }
+        }
+
+        function reset() {
+            currentIndex = 0;
+            sentList.clear();
+            document.getElementById('prospect-card').classList.remove('hidden');
+            document.getElementById('finished-card').classList.add('hidden');
+            updateUI();
+        }
+
+        updateUI();
+    </script>
+</body>
+
+</html>

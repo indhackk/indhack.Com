@@ -1,0 +1,39 @@
+Type,Nom,Ville,Note,Avis,Mobile,Tel Fixe,Instagram,Adresse,URL Personnalisee,Priorite
+Barbier,Hb Barber Shop,Cannes,4.5,50,06 49 54 59 37,,,"33 Rue des Suisses, 06400 Cannes",https://indhack.com/diagnostic/barbier?nom=Hb%20Barber%20Shop&ville=Cannes&note=4.5&avis=50,HAUTE
+Barbier,Le Barbier Santa Maria,Cannes,4.6,80,,04 93 68 90 15,,"5 Rue du Marechal Foch, 06400 Cannes",https://indhack.com/diagnostic/barbier?nom=Le%20Barbier%20Santa%20Maria&ville=Cannes&note=4.6&avis=80,MOYENNE
+Barbier,Welcome Barber Shop,Cannes,4.7,120,,04 93 68 03 48,,"5 Bd de la Ferrage, 06400 Cannes",https://indhack.com/diagnostic/barbier?nom=Welcome%20Barber%20Shop%20Cannes&ville=Cannes&note=4.7&avis=120,MOYENNE
+Barbier,Barber Shop Carnot,Cannes,5.0,90,,,,"95 Bd Carnot, 06400 Cannes",https://indhack.com/diagnostic/barbier?nom=Barber%20Shop%20Carnot&ville=Cannes&note=5&avis=90,MOYENNE
+Barbier,L'essentiel Par Le Barbier,Le Cannet,4.8,60,,,,"89 Pl. Pierre Sauvaigo, 06110 Le Cannet",https://indhack.com/diagnostic/barbier?nom=L%27essentiel%20Par%20Le%20Barbier&ville=Le%20Cannet&note=4.8&avis=60,MOYENNE
+Barbier,OC Barbershop,Le Cannet,4.7,45,,,,"38-40 Bd Jean Moulin, 06110 Le Cannet",https://indhack.com/diagnostic/barbier?nom=OC%20Barbershop&ville=Le%20Cannet&note=4.7&avis=45,MOYENNE
+Barbier,Banda Barbers,Le Cannet,4.8,70,,09 83 71 00 01,,"67 Bd Sadi Carnot, 06110 Le Cannet",https://indhack.com/diagnostic/barbier?nom=Banda%20Barbers&ville=Le%20Cannet&note=4.8&avis=70,MOYENNE
+Coiffeur,Hair Line Coiffure,Antibes,4.5,40,,,,"19 rue St Honorat, 06160 Antibes",https://indhack.com/diagnostic/coiffeur?nom=Hair%20Line%20Coiffure&ville=Antibes&note=4.5&avis=40,MOYENNE
+Barbier,JP The Barber Shop,Antibes,4.8,85,,,,"21 rue du General d'Andeossy, 06600 Antibes",https://indhack.com/diagnostic/barbier?nom=JP%20The%20Barber%20Shop&ville=Antibes&note=4.8&avis=85,MOYENNE
+Barbier,Le Barbier d'Antibes,Antibes,4.9,95,06 02 04 01 28,09 55 66 77 13,@lebarbierdantibes_byaly,"38 avenue Philippe Rochat, 06600 Antibes",https://indhack.com/diagnostic/barbier?nom=Le%20Barbier%20d%27Antibes&ville=Antibes&note=4.9&avis=95,HAUTE
+Barbier,L'Atelier Barber Shop,Antibes,4.9,110,07 60 82 98 31,,@latelierantibes,Antibes,https://indhack.com/diagnostic/barbier?nom=L%27Atelier%20Barber%20Shop&ville=Antibes&note=4.9&avis=110,HAUTE
+Coiffeur,Salon Bio Grasse,Grasse,4.7,55,06 09 53 03 26,04 93 77 81 77,,"36 boulevard Emmanuel Rouquier, 06130 Grasse",https://indhack.com/diagnostic/coiffeur?nom=Salon%20Bio%20Grasse&ville=Grasse&note=4.7&avis=55,HAUTE
+Coiffeur,Oh Lala Beauty,Grasse,4.8,65,06 27 76 00 73,,,"129 route Paoute, 06130 Grasse",https://indhack.com/diagnostic/coiffeur?nom=Oh%20Lala%20Beauty&ville=Grasse&note=4.8&avis=65,HAUTE
+Coiffeur,Access Coiffure,Grasse,4.6,40,,,,"3 bis Avenue Thiers, 06130 Grasse",https://indhack.com/diagnostic/coiffeur?nom=Access%20Coiffure&ville=Grasse&note=4.6&avis=40,MOYENNE
+Barbier,NAYRBARBER,Roquebrune-Cap-Martin,5.0,101,,,,"25 Av. Jean Monnet, 06190 Roquebrune-Cap-Martin",https://indhack.com/diagnostic/barbier?nom=NAYRBARBER&ville=Roquebrune-Cap-Martin&note=5&avis=101,HAUTE
+Barbier,Urban Style By Cl,Roquebrune-Cap-Martin,4.7,55,,09 52 51 75 52,,"3 rue Albini, 06190 Roquebrune Cap Martin",https://indhack.com/diagnostic/barbier?nom=Urban%20Style%20By%20Cl&ville=Roquebrune-Cap-Martin&note=4.7&avis=55,MOYENNE
+Barbier,Salon Aristide Briand,Roquebrune-Cap-Martin,4.6,48,,04 93 35 34 96,,"207 avenue Aristide Briand, 06190 Roquebrune Cap Martin",https://indhack.com/diagnostic/barbier?nom=Salon%20Aristide%20Briand&ville=Roquebrune-Cap-Martin&note=4.6&avis=48,MOYENNE
+Barbier,Barber'igo,Menton,4.8,75,,,,"94 Avenue des Allies, 06500 Menton",https://indhack.com/diagnostic/barbier?nom=Barber%27igo&ville=Menton&note=4.8&avis=75,MOYENNE
+Coiffeur,VIP Espace Coiffure,Cagnes-sur-Mer,4.7,60,,,,"73 boulevard Marechal Juin, 06800 Cagnes-sur-Mer",https://indhack.com/diagnostic/coiffeur?nom=VIP%20Espace%20Coiffure&ville=Cagnes-sur-Mer&note=4.7&avis=60,MOYENNE
+Coiffeur,Coiffure et Beaute,Cagnes-sur-Mer,4.6,55,,,,"44 boulevard Marechal Juin, 06800 Cagnes-sur-Mer",https://indhack.com/diagnostic/coiffeur?nom=Coiffure%20et%20Beaut%C3%A9&ville=Cagnes-sur-Mer&note=4.6&avis=55,MOYENNE
+Coiffeur,Marotte Coiffure,Cagnes-sur-Mer,4.8,70,,,,Cagnes-sur-Mer,https://indhack.com/diagnostic/coiffeur?nom=Marotte%20Coiffure&ville=Cagnes-sur-Mer&note=4.8&avis=70,MOYENNE
+Coiffeur,Tignasse Coiffure,Cagnes-sur-Mer,4.5,45,,,,Cagnes-sur-Mer,https://indhack.com/diagnostic/coiffeur?nom=Tignasse%20Coiffure&ville=Cagnes-sur-Mer&note=4.5&avis=45,BASSE
+Barbier,Barber Side,Villeneuve-Loubet,4.7,50,06 79 49 XX XX,,,"10 Des Mesures, Villeneuve-Loubet",https://indhack.com/diagnostic/barbier?nom=Barber%20Side&ville=Villeneuve-Loubet&note=4.7&avis=50,HAUTE
+Coiffeur,Salon Dreadlocks,Villeneuve-Loubet,4.9,35,06 99 25 88 58,,,"114 avenue Loubet, 06270 Villeneuve-Loubet",https://indhack.com/diagnostic/coiffeur?nom=Salon%20Dreadlocks&ville=Villeneuve-Loubet&note=4.9&avis=35,HAUTE
+Coiffeur,Tete a Tete,Villeneuve-Loubet,4.6,42,06 62 62 99 15,,,Villeneuve-Loubet,https://indhack.com/diagnostic/coiffeur?nom=T%C3%AAte%20%C3%A0%20T%C3%AAte&ville=Villeneuve-Loubet&note=4.6&avis=42,HAUTE
+Barbier,Salon St Bernardin,Villeneuve-Loubet,4.5,38,,04 93 20 57 07,,"9 rue St Bernardin, 06270 Villeneuve-Loubet",https://indhack.com/diagnostic/barbier?nom=Salon%20St%20Bernardin&ville=Villeneuve-Loubet&note=4.5&avis=38,MOYENNE
+Barbier,Barbershop Chez Wahid,Vence,4.8,65,,,,Vence,https://indhack.com/diagnostic/barbier?nom=Barbershop%20Chez%20Wahid&ville=Vence&note=4.8&avis=65,MOYENNE
+Barbier,L'instant Homme,Mandelieu-la-Napoule,5.0,70,,,,"454 Rue Jean Monnet, 06210 Mandelieu-La Napoule",https://indhack.com/diagnostic/barbier?nom=L%27instant%20Homme&ville=Mandelieu-la-Napoule&note=5&avis=70,HAUTE
+Barbier,Jack's Barber Shop,Mandelieu-la-Napoule,4.8,260,,,,"629 Av. des Anciens Combattants, 06210 Mandelieu-La Napoule",https://indhack.com/diagnostic/barbier?nom=Jack%27s%20Barber%20Shop&ville=Mandelieu-la-Napoule&note=4.8&avis=260,HAUTE
+Barbier,L'HOM Barber Shop,Mandelieu-la-Napoule,4.7,50,,,,"601 Av. de Frejus, 06210 Mandelieu-La Napoule",https://indhack.com/diagnostic/barbier?nom=L%27HOM%20Barber%20Shop&ville=Mandelieu-la-Napoule&note=4.7&avis=50,MOYENNE
+Barbier,Claude Daniel,Mandelieu-la-Napoule,4.6,45,,,,"400 rue de la Mer, 06210 Mandelieu La Napoule",https://indhack.com/diagnostic/barbier?nom=Claude%20Daniel&ville=Mandelieu-la-Napoule&note=4.6&avis=45,MOYENNE
+Barbier,Barber'Studio,Mougins,4.7,55,,09 86 27 94 29,,"243 Av. de Tournamy, 06250 Mougins",https://indhack.com/diagnostic/barbier?nom=Barber%27Studio&ville=Mougins&note=4.7&avis=55,MOYENNE
+Barbier,Salon Juyette,Mougins,4.5,40,,04 92 92 99 54,,"10 Av. Juyette, 06250 Mougins",https://indhack.com/diagnostic/barbier?nom=Salon%20Juyette&ville=Mougins&note=4.5&avis=40,MOYENNE
+Barbier,Barber Shop Le Vallaurien,Vallauris,4.8,85,06 15 99 00 74,,,"65 Avenue Georges Clemenceau, 06220 Vallauris",https://indhack.com/diagnostic/barbier?nom=Barber%20Shop%20Le%20Vallaurien&ville=Vallauris&note=4.8&avis=85,HAUTE
+Coiffeur,Bea Coiffure,Beausoleil,4.9,50,06 63 30 41 83,,,Beausoleil + Monaco + zone,https://indhack.com/diagnostic/coiffeur?nom=B%C3%A9a%20Coiffure&ville=Beausoleil&note=4.9&avis=50,HAUTE
+Coiffeur,Charles Meyer Coiffure,Beausoleil,4.6,35,,,,"Imp. Musso, 06240 Beausoleil",https://indhack.com/diagnostic/coiffeur?nom=Charles%20Meyer%20Coiffure&ville=Beausoleil&note=4.6&avis=35,MOYENNE
+Coiffeur,Le Boudoir d'Adeline,Beausoleil,4.8,60,,,,"N1 Boulevard des Moneghetti, 06240 Beausoleil",https://indhack.com/diagnostic/coiffeur?nom=Le%20Boudoir%20d%27Adeline&ville=Beausoleil&note=4.8&avis=60,MOYENNE
+Barbier,Marco Coiffeur Barbier,Cap d'Ail,4.7,45,,,,"9 Av. du Trois Septembre, 06320 Cap-d'Ail",https://indhack.com/diagnostic/barbier?nom=Marco%20Coiffeur%20Barbier&ville=Cap%20d%27Ail&note=4.7&avis=45,MOYENNE

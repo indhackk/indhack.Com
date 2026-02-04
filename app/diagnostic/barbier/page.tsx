@@ -391,6 +391,94 @@ function DiagnosticContent() {
         </div>
       </section>
 
+      {/* ════════ MES OUTILS & EXPERTISE ════════ */}
+      <section className="py-24 px-8 md:px-16 bg-[#111111]">
+        <div className="max-w-4xl mx-auto">
+
+          <div className="text-center mb-16">
+            <p className="text-[#C9A66B] text-sm font-medium uppercase tracking-wider mb-4">Mon expertise</p>
+            <h2 className="text-3xl md:text-4xl font-light text-white">
+              Je sais exactement ce que<br />
+              <span className="font-semibold">vos futurs clients recherchent</span>
+            </h2>
+          </div>
+
+          <div className="bg-[#1A1A1A] rounded-3xl p-8 md:p-10 border border-[#2A2A2A] mb-8">
+            <div className="grid md:grid-cols-2 gap-8">
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#2A2520] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#C9A66B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Outils professionnels</h3>
+                  <p className="text-[#A0A0A0] text-sm leading-relaxed">
+                    J'utilise les mêmes outils que les grandes agences pour analyser les volumes de recherche,
+                    la concurrence et identifier les opportunités.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#1A2520] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#6B9B8A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Analyse des requêtes</h3>
+                  <p className="text-[#A0A0A0] text-sm leading-relaxed">
+                    Je sais exactement combien de personnes tapent "barbier {ville}" ou "barber {ville}"
+                    chaque mois. Pas de suppositions, des données réelles.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#1A1A25] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#7B8FC3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Stratégie de positionnement</h3>
+                  <p className="text-[#A0A0A0] text-sm leading-relaxed">
+                    Je sais quels mots-clés sont accessibles rapidement et lesquels demandent plus de travail.
+                    On priorise ensemble pour des résultats concrets.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#25201A] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#C3947B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Suivi des résultats</h3>
+                  <p className="text-[#A0A0A0] text-sm leading-relaxed">
+                    Je surveille vos positions sur Google et vous envoie des rapports clairs.
+                    Vous voyez concrètement l'évolution de votre visibilité.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-[#A0A0A0] leading-relaxed max-w-2xl mx-auto">
+              <strong className="text-white">Pas de jargon technique, pas de promesses en l'air.</strong><br />
+              Je vous explique tout simplement et vous montre les chiffres. Vous savez exactement où vous en êtes.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       {/* ════════ CE QUE JE FAIS POUR VOUS ════════ */}
       <section className="py-24 px-8 md:px-16 bg-[#111111]">
         <div className="max-w-4xl mx-auto">
