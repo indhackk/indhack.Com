@@ -17,8 +17,27 @@ export default function AdminLoginPage() {
         setLoading(true);
         setError('');
 
-        // Redirect with password param - middleware will validate
-        router.push(`/keystatic?password=${encodeURIComponent(password)}`);
+        try {
+            // Authentification via API sécurisée (pas de password en URL)
+            const response = await fetch('/api/admin-auth', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password }),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                // Cookie set par l'API, on peut redirect
+                router.push('/keystatic');
+            } else {
+                setError(result.error || 'Mot de passe incorrect');
+                setLoading(false);
+            }
+        } catch {
+            setError('Erreur de connexion. Réessayez.');
+            setLoading(false);
+        }
     };
 
     return (

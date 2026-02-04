@@ -44,10 +44,12 @@ const AuthContext = createContext<AuthContextType | null>(null);
 const AUTH_STORAGE_KEY = 'gmb-autopilot-auth';
 const USERS_STORAGE_KEY = 'gmb-autopilot-users';
 
-// Utilisateur prédéfini pour toi
-const PREDEFINED_USERS: Record<string, RegisteredUser> = {
+// Utilisateur prédéfini - password via variable d'environnement (pas hardcodé)
+const GMB_ADMIN_PASSWORD = process.env.NEXT_PUBLIC_GMB_ADMIN_PASSWORD || '';
+
+const PREDEFINED_USERS: Record<string, RegisteredUser> = GMB_ADMIN_PASSWORD ? {
     'indiana@indhack.com': {
-        password: 'Indiana2024!',
+        password: GMB_ADMIN_PASSWORD,
         user: {
             id: 'indiana-owner-1',
             email: 'indiana@indhack.com',
@@ -63,7 +65,7 @@ const PREDEFINED_USERS: Record<string, RegisteredUser> = {
             }
         }
     }
-};
+} : {};
 
 function getStoredUsers(): Record<string, RegisteredUser> {
     if (typeof window === 'undefined') return {};
