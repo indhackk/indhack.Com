@@ -1,0 +1,17 @@
+# Fichier de désaveu de liens - indhack.com
+# Généré le 2026-02-04
+# À soumettre sur Google Search Console
+
+# Domaines spam identifiés sur Semrush
+domain:seoflox.io
+domain:zhanhao.online
+domain:2x9.co
+domain:5913231.cc
+domain:8coint.com
+domain:toplikevideo.com
+domain:blacksonwhites.com
+domain:getwebsiteworth.com
+domain:globalecommerce.org
+
+# Réseaux de liens toxiques connus
+domain:uplinke.com

@@ -51,15 +51,8 @@ module.exports = {
                     '/*.json',
                 ],
             },
-            // Bloquer les bots agressifs
-            {
-                userAgent: 'AhrefsBot',
-                disallow: '/',
-            },
-            {
-                userAgent: 'SemrushBot',
-                disallow: '/',
-            },
+            // Note: Ne plus bloquer les bots SEO pour le tracking
+            // AhrefsBot et SemrushBot sont maintenant autorisés
         ],
         additionalSitemaps: [],
     },

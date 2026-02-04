@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown, Search, Target, Sparkles, Clock, Euro, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ReactMarkdown from "react-markdown";
 import { FAQSchema } from "@/components/FAQSchema";
 
 interface FAQItem {
@@ -96,10 +97,9 @@ export function FAQ({ items = defaultFaqs, title = "Questions Fréquentes" }: FA
                                         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                                     >
                                         <div className="px-7 md:px-9 pb-9 pt-0 pl-14 md:pl-24">
-                                            <div
-                                                className="text-soft text-lg leading-relaxed max-w-2xl"
-                                                dangerouslySetInnerHTML={{ __html: typeof faq.answer === 'string' ? faq.answer : '' }}
-                                            />
+                                            <div className="text-soft text-lg leading-relaxed max-w-2xl">
+                                                <ReactMarkdown>{typeof faq.answer === 'string' ? faq.answer : ''}</ReactMarkdown>
+                                            </div>
                                         </div>
                                     </motion.div>
                                 )}

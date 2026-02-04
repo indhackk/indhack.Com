@@ -5,6 +5,7 @@ import { FAQ } from "@/components/FAQ";
 import { RelatedServices } from "@/components/RelatedServices";
 import { motion } from "framer-motion";
 import { Search, BarChart4, ClipboardList, Target, ArrowRight, CheckCircle2, AlertTriangle, MapPin, FileText } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -279,7 +280,9 @@ function AuditPoint({ title, text }: { title: string, text: string }) {
                 <CheckCircle2 className="w-6 h-6 text-sauge" />
             </div>
             <h4 className="text-2xl font-bold text-ink uppercase tracking-tight">{title}</h4>
-            <p className="text-soft leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
+            <div className="text-soft leading-relaxed">
+                <ReactMarkdown>{text}</ReactMarkdown>
+            </div>
         </div>
     )
 }

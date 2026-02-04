@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Calendar, ArrowRight } from "lucide-react";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
+import ReactMarkdown from "react-markdown";
 
 export default function BlogListingPage() {
     const posts = getAllPosts();
@@ -67,9 +68,9 @@ export default function BlogListingPage() {
                                     </Link>
                                 </h2>
 
-                                <p className="text-soft text-sm mb-6 line-clamp-3 leading-relaxed">
-                                    {post.description}
-                                </p>
+                                <div className="text-soft text-sm mb-6 line-clamp-3 leading-relaxed">
+                                    <ReactMarkdown>{post.description}</ReactMarkdown>
+                                </div>
 
                                 <div className="mt-auto">
                                     <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-sauge font-bold text-sm group/link">

@@ -9,6 +9,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import ReactMarkdown from "react-markdown";
 import { Dashboard } from "@/components/gmb-autopilot/Dashboard";
 import { SUBSCRIPTION_PLANS } from "@/lib/gmb/mock-data";
 
@@ -172,7 +173,7 @@ export default function GMBAutoPilotClient() {
                                         <div>
                                             <p className="text-white font-medium">Marie D.</p>
                                             <div className="flex gap-0.5">
-                                                {[1,2,3,4,5].map(i => (
+                                                {[1, 2, 3, 4, 5].map(i => (
                                                     <Star key={i} className="w-3 h-3 text-yellow-400 fill-yellow-400" />
                                                 ))}
                                             </div>
@@ -330,11 +331,10 @@ export default function GMBAutoPilotClient() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className={`relative bg-white rounded-3xl p-8 ${
-                                    plan.popular
-                                        ? 'border-2 border-sauge shadow-xl shadow-sauge/10 scale-105'
-                                        : 'border border-gray-200'
-                                }`}
+                                className={`relative bg-white rounded-3xl p-8 ${plan.popular
+                                    ? 'border-2 border-sauge shadow-xl shadow-sauge/10 scale-105'
+                                    : 'border border-gray-200'
+                                    }`}
                             >
                                 {plan.popular && (
                                     <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-sauge text-white text-sm font-bold rounded-full">
@@ -359,11 +359,10 @@ export default function GMBAutoPilotClient() {
 
                                 <Button
                                     onClick={() => setShowDemo(true)}
-                                    className={`w-full rounded-xl py-6 text-lg font-bold ${
-                                        plan.popular
-                                            ? 'bg-sauge hover:bg-sauge/90 text-white'
-                                            : 'bg-gray-100 hover:bg-gray-200 text-ink'
-                                    }`}
+                                    className={`w-full rounded-xl py-6 text-lg font-bold ${plan.popular
+                                        ? 'bg-sauge hover:bg-sauge/90 text-white'
+                                        : 'bg-gray-100 hover:bg-gray-200 text-ink'
+                                        }`}
                                 >
                                     {plan.price === 0 ? 'Commencer gratuitement' : 'Essayer 14 jours gratuit'}
                                 </Button>
@@ -467,7 +466,7 @@ export default function GMBAutoPilotClient() {
                                     <span className="text-sauge group-open:rotate-45 transition-transform">+</span>
                                 </summary>
                                 <div className="px-6 pb-6 text-gray-600">
-                                    {faq.a}
+                                    <ReactMarkdown>{faq.a}</ReactMarkdown>
                                 </div>
                             </details>
                         ))}

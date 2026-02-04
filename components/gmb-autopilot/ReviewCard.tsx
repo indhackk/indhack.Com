@@ -12,6 +12,8 @@ import { generateAIResponse } from "@/lib/gmb/ai-response-generator";
 import { SEOScoreDisplay } from "./SEOScoreDisplay";
 import { SentimentBadge, ValidationRequiredBadge } from "./SentimentBadge";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface ReviewCardProps {
     review: GMBReview;
@@ -159,15 +161,14 @@ export function ReviewCard({ review, business, onRespond, onSkip, onValidate }: 
                         <motion.div
                             initial={{ opacity: 0, x: 10 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className={`px-3 py-1 rounded-full text-xs font-medium ${
-                                review.status === 'pending'
-                                    ? 'bg-amber-100 text-amber-700'
-                                    : review.status === 'awaiting_validation'
-                                        ? 'bg-purple-100 text-purple-700'
-                                        : review.status === 'responded'
-                                            ? 'bg-green-100 text-green-700'
-                                            : 'bg-gray-100 text-gray-600'
-                            }`}
+                            className={`px-3 py-1 rounded-full text-xs font-medium ${review.status === 'pending'
+                                ? 'bg-amber-100 text-amber-700'
+                                : review.status === 'awaiting_validation'
+                                    ? 'bg-purple-100 text-purple-700'
+                                    : review.status === 'responded'
+                                        ? 'bg-green-100 text-green-700'
+                                        : 'bg-gray-100 text-gray-600'
+                                }`}
                         >
                             {review.status === 'pending' ? 'En attente' :
                                 review.status === 'awaiting_validation' ? 'Validation requise' :
@@ -290,10 +291,12 @@ export function ReviewCard({ review, business, onRespond, onSkip, onValidate }: 
                                 ) : (
                                     <motion.div
                                         onClick={() => setIsEditing(true)}
-                                        className="p-4 bg-white rounded-xl border border-gray-200 text-sm text-gray-700 cursor-text hover:border-sauge/30 transition-all hover:shadow-sm"
+                                        className="p-4 bg-white rounded-xl border border-gray-200 text-sm text-gray-700 cursor-text hover:border-sauge/30 transition-all hover:shadow-sm prose prose-sm prose-sauge max-w-none shadow-inner"
                                         whileHover={{ scale: 1.01 }}
                                     >
-                                        {editedResponse || aiResponse.text}
+                                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                            {editedResponse || aiResponse.text}
+                                        </ReactMarkdown>
                                         <p className="text-xs text-gray-400 mt-2 flex items-center gap-1">
                                             <span>Cliquez pour modifier</span>
                                             <span className="text-sauge">•</span>
@@ -362,11 +365,10 @@ export function ReviewCard({ review, business, onRespond, onSkip, onValidate }: 
                                 <div className="flex items-center gap-2 pt-2">
                                     <Button
                                         onClick={handleSendResponse}
-                                        className={`flex-1 rounded-xl h-11 ${
-                                            aiResponse.metadata.requiresValidation
-                                                ? 'bg-amber-500 hover:bg-amber-600'
-                                                : 'bg-green-600 hover:bg-green-700'
-                                        } text-white shadow-lg`}
+                                        className={`flex-1 rounded-xl h-11 ${aiResponse.metadata.requiresValidation
+                                            ? 'bg-amber-500 hover:bg-amber-600'
+                                            : 'bg-green-600 hover:bg-green-700'
+                                            } text-white shadow-lg`}
                                     >
                                         {aiResponse.metadata.requiresValidation ? (
                                             <>

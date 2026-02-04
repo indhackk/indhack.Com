@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { AuditCTA } from "@/components/blog/AuditCTA";
+import ReactMarkdown from "react-markdown";
 import {
     CheckCircle2,
     ArrowRight,
@@ -318,9 +319,9 @@ export default function ConsultantSEOFreelanceClient() {
                                 <h3 className="text-lg font-heading font-bold text-ink mb-3">
                                     {faq.question}
                                 </h3>
-                                <p className="text-soft leading-relaxed">
-                                    {faq.answer}
-                                </p>
+                                <div className="text-soft leading-relaxed">
+                                    <ReactMarkdown>{faq.answer}</ReactMarkdown>
+                                </div>
                             </motion.div>
                         ))}
                     </div>

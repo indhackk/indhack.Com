@@ -1,4 +1,4 @@
-import { getPostBySlug } from "@/lib/blog";
+import { getPostBySlug, getAllPosts } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +14,14 @@ import type { Metadata } from "next";
 
 interface PageProps {
     params: { slug: string };
+}
+
+// Génération statique des pages blog pour inclusion dans le sitemap
+export function generateStaticParams() {
+    const posts = getAllPosts();
+    return posts.map((post) => ({
+        slug: post.slug,
+    }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -186,9 +194,9 @@ export default function BlogPostPage({ params }: PageProps) {
                         {post.title}
                     </h1>
 
-                    <p className="text-xl text-soft leading-relaxed italic border-l-4 border-sauge pl-6 mb-10">
-                        {post.description}
-                    </p>
+                    <div className="text-xl text-soft leading-relaxed italic border-l-4 border-sauge pl-6 mb-10">
+                        <ReactMarkdown>{post.description}</ReactMarkdown>
+                    </div>
 
                     <div className="relative h-[300px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
                         <Image

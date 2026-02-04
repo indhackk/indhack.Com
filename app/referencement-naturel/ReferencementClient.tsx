@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Search, FileText, Link2, BarChart3, ArrowRight, TrendingUp, Target, MapPin } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import ReactMarkdown from "react-markdown";
 import { useModal } from "@/components/providers/ModalProvider";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
@@ -166,7 +167,9 @@ export default function ReferencementClient() {
                                     className="bg-white p-8 rounded-3xl border border-gray-100"
                                 >
                                     <h3 className="text-xl font-bold text-ink mb-4">{item.title}</h3>
-                                    <p className="text-soft leading-relaxed" dangerouslySetInnerHTML={{ __html: item.content }} />
+                                    <div className="text-soft leading-relaxed">
+                                        <ReactMarkdown>{item.content}</ReactMarkdown>
+                                    </div>
                                 </motion.div>
                             ))}
                         </div>

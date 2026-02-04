@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Search, MapPin, Check, Globe, Calendar, Star, TrendingUp, Phone, MessageCircle, ChevronDown, Users, BarChart3, Bot, AlertTriangle, Sparkles, ArrowRight } from 'lucide-react'
+import ReactMarkdown from 'react-markdown'
 import type { MetierData } from '@/lib/diagnostic-data'
 
 // ══════════════════════════════════════════════════════════════════════════════
@@ -104,9 +105,9 @@ export default function DiagnosticClient({ metier, metierData }: DiagnosticClien
               Pourquoi créer un site internet<br />
               <span className="font-medium">pour {nom} ?</span>
             </h2>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-              {metierData.problemStatement}
-            </p>
+            <div className="text-gray-500 text-lg max-w-2xl mx-auto">
+              <ReactMarkdown>{metierData.problemStatement}</ReactMarkdown>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">

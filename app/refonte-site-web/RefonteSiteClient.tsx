@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { RefreshCw, ShieldCheck, Zap, BarChart3, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import ReactMarkdown from "react-markdown";
 import { useModal } from "@/components/providers/ModalProvider";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
@@ -194,7 +195,9 @@ function ProcessItem({ num, title, text }: { num: string; title: string, text: s
             <span className="text-2xl font-bold text-sauge/50">{num}</span>
             <div>
                 <h4 className="text-xl font-bold mb-2">{title}</h4>
-                <p className="text-white/60 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: text }} />
+                <div className="text-white/60 text-sm leading-relaxed">
+                    <ReactMarkdown>{text}</ReactMarkdown>
+                </div>
             </div>
         </div>
     );

@@ -31,6 +31,7 @@ import {
   ChevronRight,
   Smartphone
 } from 'lucide-react'
+import ReactMarkdown from 'react-markdown'
 import type { MetierData, KeywordData } from '@/lib/diagnostic-data'
 import { getTotalSearchVolume, getEasyWinsCount } from '@/lib/diagnostic-data'
 
@@ -83,9 +84,9 @@ function SectionTitle({ title, subtitle }: { title: string; subtitle?: string })
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg text-[#666666] leading-relaxed">
-          {subtitle}
-        </p>
+        <div className="text-lg text-[#666666] leading-relaxed">
+          <ReactMarkdown>{subtitle}</ReactMarkdown>
+        </div>
       )}
     </div>
   )
@@ -162,9 +163,9 @@ export default function ProspectLandingTemplate({
                   <span className="font-normal">vos clients vous adorent.</span>
                 </h1>
 
-                <p className="text-xl text-[#666666] leading-relaxed mb-4 max-w-lg">
-                  {metier.heroSubtitle}
-                </p>
+                <div className="text-xl text-[#666666] leading-relaxed mb-4 max-w-lg">
+                  <ReactMarkdown>{metier.heroSubtitle}</ReactMarkdown>
+                </div>
 
                 <div className="flex items-center gap-2 text-[#999999] text-sm mb-10">
                   <MapPin className="w-4 h-4" />

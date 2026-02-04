@@ -9,14 +9,6 @@ Disallow: /dashboard
 Disallow: /app/*
 Disallow: /*.json
 
-# AhrefsBot
-User-agent: AhrefsBot
-Disallow: /
-
-# SemrushBot
-User-agent: SemrushBot
-Disallow: /
-
 # Host
 Host: https://indhack.com
 
