@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Êtes-vous visible sur Google ? Audit SEO gratuit pour barbershops. Découvrez votre potentiel de croissance.",
     url: "https://indhack.com/diagnostic/barbier",
     type: "website",
-    images: ["https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1200&q=80"],
+    images: ["/images/nice-seo-hero.png"],
   },
   robots: {
     index: true,

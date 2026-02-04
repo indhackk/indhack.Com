@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Êtes-vous visible sur Google ? Audit SEO gratuit pour salons de coiffure. Découvrez votre potentiel de croissance.",
     url: "https://indhack.com/diagnostic/coiffeur",
     type: "website",
-    images: ["https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80"],
+    images: ["/images/nice-seo-hero.png"],
   },
   robots: {
     index: true,

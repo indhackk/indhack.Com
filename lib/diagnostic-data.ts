@@ -62,8 +62,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Coiffeur',
     labelPlural: 'Coiffeurs',
 
-    heroImage: 'https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=1200',
-    mockupImage: 'https://images.unsplash.com/photo-1595476103518-3c182ffe0948?q=80&w=600',
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/seo-dashboard.png',
 
     accentColor: '#C6A87C', // Or antique (luxe coiffure)
 
@@ -130,8 +130,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Serrurier',
     labelPlural: 'Serruriers',
 
-    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200',
-    mockupImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600',
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/audit-seo.png',
 
     accentColor: '#3B82F6', // Bleu confiance
 
@@ -195,8 +195,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Plombier',
     labelPlural: 'Plombiers',
 
-    heroImage: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=1200',
-    mockupImage: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=600',
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/nice-data-flow.png',
 
     accentColor: '#0EA5E9', // Bleu eau
 
@@ -260,8 +260,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Électricien',
     labelPlural: 'Électriciens',
 
-    heroImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200',
-    mockupImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600',
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/nice-workspace.png',
 
     accentColor: '#F59E0B', // Jaune électrique
 
@@ -324,8 +324,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Prothésiste ongulaire',
     labelPlural: 'Prothésistes ongulaires',
 
-    heroImage: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1200',
-    mockupImage: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=600',
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/seo-dashboard.png',
 
     accentColor: '#EC4899', // Rose élégant
 
@@ -389,8 +389,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Dentiste',
     labelPlural: 'Dentistes',
 
-    heroImage: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1200',
-    mockupImage: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=600',
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/nice-data-flow.png',
 
     accentColor: '#06B6D4', // Cyan médical
 
@@ -454,8 +454,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Avocat',
     labelPlural: 'Avocats',
 
-    heroImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200',
-    mockupImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=600',
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/audit-seo.png',
 
     accentColor: '#1E3A5F', // Bleu juridique
 
@@ -518,8 +518,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Entreprise de rénovation',
     labelPlural: 'Entreprises de rénovation',
 
-    heroImage: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=1200',
-    mockupImage: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=600',
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/creation-site.png',
 
     accentColor: '#D97706', // Orange BTP
 
@@ -585,8 +585,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Boutique de vêtements',
     labelPlural: 'Boutiques de vêtements',
 
-    heroImage: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200',
-    mockupImage: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600',
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/croissance-seo.png',
 
     accentColor: '#8B5CF6', // Violet mode
 
