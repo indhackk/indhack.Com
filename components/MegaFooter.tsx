@@ -58,7 +58,8 @@ const CITIES_BY_REGION = [
 ];
 
 const SERVICES = [
-    { title: "Audit SEO", href: "/audit-seo", description: "Diagnostic complet" },
+    { title: "Consultant SEO Freelance", href: "/consultant-seo", description: "Expertise indépendante" },
+    { title: "Audit SEO Complet", href: "/audit-seo", description: "Diagnostic technique" },
     { title: "Référencement Naturel", href: "/referencement-naturel", description: "Stratégie SEO" },
     { title: "SEO Local", href: "/seo-local", description: "Visibilité géolocalisée" },
     { title: "Création Site Web", href: "/creation-site-web", description: "Sites performants" },
@@ -67,6 +68,7 @@ const SERVICES = [
 ];
 
 const LEGAL = [
+    { title: "Blog SEO", href: "/blog" },
     { title: "Mentions légales", href: "/mentions-legales" },
     { title: "Confidentialité", href: "/confidentialite" },
     { title: "CGV", href: "/cgv" },
@@ -94,8 +96,10 @@ export function MegaFooter() {
                             <span className="text-2xl font-heading font-bold">INDHACK</span>
                         </Link>
                         <p className="text-white/60 text-sm mb-6 leading-relaxed">
-                            <strong className="text-white/80">Consultante SEO indépendante</strong> spécialisée en{" "}
-                            <Link href="/" className="text-sauge hover:text-white transition-colors">
+                            <Link href="/consultant-seo" className="text-white/80 hover:text-sauge transition-colors font-bold">
+                                Consultante SEO indépendante
+                            </Link>{" "}spécialisée en{" "}
+                            <Link href="/referencement-naturel" className="text-sauge hover:text-white transition-colors">
                                 référencement naturel
                             </Link>{" "}
                             et stratégie de croissance digitale.
@@ -200,7 +204,7 @@ export function MegaFooter() {
                                                     href={city.slug}
                                                     className="text-sm text-white/60 hover:text-sauge transition-colors"
                                                 >
-                                                    SEO {city.name}
+                                                    Consultant SEO {city.name}
                                                 </Link>
                                             </li>
                                         ))}

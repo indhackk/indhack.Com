@@ -126,10 +126,18 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
 
     // Related services for internal linking
     const relatedServices = [
+        { title: "Consultant SEO Freelance", href: "/consultant-seo", desc: "Mon accompagnement complet", icon: <Target className="w-5 h-5" /> },
         { title: "Audit SEO Complet", href: "/audit-seo", desc: "Diagnostic technique + sémantique", icon: <FileSearch className="w-5 h-5" /> },
-        { title: `SEO ${city}`, href: `/${cityData.slug}`, desc: "Stratégie locale complète", icon: <Target className="w-5 h-5" /> },
+        { title: `Consultant SEO ${city}`, href: `/${cityData.slug}`, desc: "Stratégie locale complète", icon: <Target className="w-5 h-5" /> },
         { title: "Référencement Naturel", href: "/referencement-naturel", desc: "Visibilité nationale", icon: <TrendingUp className="w-5 h-5" /> },
         { title: "Création de Site", href: "/creation-site-web", desc: "Site optimisé SEO dès le départ", icon: <Globe className="w-5 h-5" /> }
+    ];
+
+    // Articles blog connexes pour le maillage
+    const relatedBlogPosts = [
+        { title: "L'importance d'un audit SEO", href: "/blog/importance-audit-seo", desc: "Pourquoi auditer votre site" },
+        { title: "Les missions d'un consultant SEO", href: "/blog/missions-consultant-seo", desc: "Ce que fait un expert SEO" },
+        { title: "Devenir visible sur Google", href: "/blog/comment-creer-site-visible-google", desc: "Guide pratique" }
     ];
 
     return (
@@ -471,7 +479,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                             L'<strong>audit technique</strong> est la première brique. Découvrez comment aller plus loin.
                         </p>
                     </div>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-5 max-w-6xl mx-auto">
                         {relatedServices.map((service, i) => (
                             <Link key={i} href={service.href}>
                                 <motion.div
@@ -495,6 +503,43 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                 </motion.div>
                             </Link>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Section Blog - Maillage vers Petite-fille */}
+            <section className="py-16 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-10">
+                        <h2 className="text-2xl font-heading font-bold text-ink">
+                            Articles SEO à lire
+                        </h2>
+                        <p className="text-soft text-sm mt-2">Approfondissez vos connaissances SEO</p>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                        {relatedBlogPosts.map((post, i) => (
+                            <Link key={i} href={post.href}>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 15 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.05 }}
+                                    className="p-5 bg-white rounded-xl border border-gray-100 hover:shadow-lg hover:border-[#638576]/30 transition-all group h-full"
+                                >
+                                    <h3 className="font-bold text-sm text-ink group-hover:text-[#638576] transition-colors mb-2">{post.title}</h3>
+                                    <p className="text-xs text-soft">{post.desc}</p>
+                                    <span className="mt-3 inline-flex items-center text-xs font-bold text-[#638576]">
+                                        Lire l'article <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                                    </span>
+                                </motion.div>
+                            </Link>
+                        ))}
+                    </div>
+                    <div className="text-center mt-6">
+                        <Link href="/blog" className="inline-flex items-center gap-2 text-[#638576] font-semibold hover:underline">
+                            Voir tous les articles du blog SEO
+                            <ArrowRight className="w-4 h-4" />
+                        </Link>
                     </div>
                 </div>
             </section>

@@ -1,10 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Search, TrendingUp, Sparkles, RefreshCw, ArrowRight } from "lucide-react";
+import { Search, TrendingUp, Sparkles, RefreshCw, ArrowRight, User, MapPin } from "lucide-react";
 import Link from "next/link";
 
 const SERVICES = [
+    {
+        title: "Consultant SEO Freelance",
+        desc: "Accompagnement SEO personnalisé par une experte indépendante. Stratégie sur-mesure adaptée à vos objectifs business.",
+        icon: <User className="w-8 h-8" />,
+        href: "/consultant-seo"
+    },
     {
         title: "Audit SEO Complet",
         desc: "Analyse approfondie de votre site pour détecter les freins à votre visibilité et cartographier les opportunités de croissance.",
@@ -16,6 +22,12 @@ const SERVICES = [
         desc: "Stratégie sur-mesure pour conquérir les premières positions sur Google et générer un trafic qualifié durable.",
         icon: <TrendingUp className="w-8 h-8" />,
         href: "/referencement-naturel"
+    },
+    {
+        title: "SEO Local",
+        desc: "Dominez Google Maps et le Pack Local. Attirez des clients qualifiés de votre zone géographique.",
+        icon: <MapPin className="w-8 h-8" />,
+        href: "/seo-local"
     },
     {
         title: "Création de Site Web",
@@ -67,7 +79,7 @@ export function ServicesSection() {
                 </div>
 
                 {/* Grid Services - Design Épuré et Magnifique */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     {SERVICES.map((service, i) => (
                         <motion.div
                             key={i}

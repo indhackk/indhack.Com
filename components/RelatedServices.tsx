@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Search, FileSearch, Globe, RefreshCw, Users, MapPin } from "lucide-react";
+import { ArrowRight, Search, FileSearch, Globe, RefreshCw, Users, MapPin, User } from "lucide-react";
 
 interface Service {
     title: string;
@@ -9,10 +9,16 @@ interface Service {
 }
 
 const ALL_SERVICES: Record<string, Service> = {
+    "consultant-seo": {
+        title: "Consultant SEO Freelance",
+        href: "/consultant-seo",
+        description: "Accompagnement SEO personnalisé",
+        icon: <User className="w-5 h-5" />
+    },
     "audit-seo": {
-        title: "Audit SEO",
+        title: "Audit SEO Complet",
         href: "/audit-seo",
-        description: "Diagnostic complet de votre site",
+        description: "Diagnostic technique de votre site",
         icon: <FileSearch className="w-5 h-5" />
     },
     "referencement-naturel": {
@@ -22,13 +28,13 @@ const ALL_SERVICES: Record<string, Service> = {
         icon: <Search className="w-5 h-5" />
     },
     "creation-site-web": {
-        title: "Création de Site",
+        title: "Création de Site Web",
         href: "/creation-site-web",
         description: "Sites optimisés SEO",
         icon: <Globe className="w-5 h-5" />
     },
     "refonte-site-web": {
-        title: "Refonte de Site",
+        title: "Refonte de Site Web",
         href: "/refonte-site-web",
         description: "Migration sans perte de trafic",
         icon: <RefreshCw className="w-5 h-5" />
@@ -47,14 +53,15 @@ const ALL_SERVICES: Record<string, Service> = {
     }
 };
 
-// Mapping des services liés par page
+// Mapping des services liés par page - maillage croisé complet
 const RELATED_MAPPING: Record<string, string[]> = {
-    "audit-seo": ["referencement-naturel", "creation-site-web", "seo-local"],
-    "referencement-naturel": ["audit-seo", "seo-local", "creation-site-web"],
-    "creation-site-web": ["referencement-naturel", "refonte-site-web", "audit-seo"],
-    "refonte-site-web": ["creation-site-web", "audit-seo", "referencement-naturel"],
-    "community-manager": ["creation-site-web", "seo-local", "referencement-naturel"],
-    "seo-local": ["audit-seo", "referencement-naturel", "creation-site-web"]
+    "consultant-seo": ["audit-seo", "referencement-naturel", "seo-local"],
+    "audit-seo": ["consultant-seo", "referencement-naturel", "seo-local"],
+    "referencement-naturel": ["consultant-seo", "audit-seo", "seo-local"],
+    "creation-site-web": ["consultant-seo", "referencement-naturel", "refonte-site-web"],
+    "refonte-site-web": ["consultant-seo", "creation-site-web", "audit-seo"],
+    "community-manager": ["consultant-seo", "creation-site-web", "seo-local"],
+    "seo-local": ["consultant-seo", "audit-seo", "referencement-naturel"]
 };
 
 interface RelatedServicesProps {

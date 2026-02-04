@@ -111,9 +111,17 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
     // Services liés avec liens vers sub-services
     const RELATED_SERVICES = [
         { title: `Audit Technique ${city}`, href: `/${cityData.slug}/audit-technique`, desc: "Diagnostic technique approfondi", isPrimary: true },
+        { title: "Consultant SEO Freelance", href: "/consultant-seo", desc: "Mon accompagnement complet" },
         { title: "Audit SEO Complet", href: "/audit-seo", desc: "Tous types d'audit SEO" },
         { title: "Référencement Naturel", href: "/referencement-naturel", desc: "Stratégie SEO nationale" },
         { title: "Création de Site", href: "/creation-site-web", desc: "Sites optimisés SEO" }
+    ];
+
+    // Articles blog connexes pour le maillage
+    const RELATED_BLOG_POSTS = [
+        { title: "Pourquoi faire appel à un consultant SEO ?", href: "/blog/pourquoi-consultant-seo", desc: "Les avantages d'un expert SEO" },
+        { title: "Comment créer un site visible sur Google", href: "/blog/comment-creer-site-visible-google", desc: "Guide pratique SEO" },
+        { title: "L'importance d'un audit SEO", href: "/blog/importance-audit-seo", desc: "Diagnostic complet" }
     ];
 
     // Avantages différenciants
@@ -363,7 +371,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                             Mes <span className="text-sauge">services</span> à {city}
                         </h2>
                     </div>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
                         {RELATED_SERVICES.map((service, i) => (
                             <Link key={i} href={service.href}>
                                 <motion.div
@@ -395,13 +403,50 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                     <div className="text-center mt-8">
                         <Link href="/consultant-seo" className="inline-flex items-center gap-2 text-sauge font-semibold hover:underline">
                             <Users className="w-4 h-4" />
-                            En savoir plus sur mes services de consultant SEO
+                            Découvrir mon offre de consultante SEO freelance
                         </Link>
                     </div>
                 </div>
             </section>
 
             {customContent}
+
+            {/* Section Blog - Maillage vers Petite-fille */}
+            <section className="py-12 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-8">
+                        <h2 className="text-2xl font-heading font-bold text-ink">
+                            Articles SEO à lire
+                        </h2>
+                        <p className="text-soft text-sm mt-2">Conseils et stratégies pour améliorer votre visibilité</p>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                        {RELATED_BLOG_POSTS.map((post, i) => (
+                            <Link key={i} href={post.href}>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 15 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.05 }}
+                                    className="p-5 bg-white rounded-xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group h-full"
+                                >
+                                    <h3 className="font-bold text-sm text-ink group-hover:text-sauge transition-colors mb-2">{post.title}</h3>
+                                    <p className="text-xs text-soft">{post.desc}</p>
+                                    <span className="mt-3 inline-flex items-center text-xs font-bold text-sauge">
+                                        Lire l'article <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                                    </span>
+                                </motion.div>
+                            </Link>
+                        ))}
+                    </div>
+                    <div className="text-center mt-6">
+                        <Link href="/blog" className="inline-flex items-center gap-2 text-sauge font-semibold hover:underline">
+                            Voir tous les articles du blog SEO
+                            <ArrowRight className="w-4 h-4" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
 
             {/* Lien vers la page d'accueil - Maillage interne SEO */}
             <HomepageBacklink variant="card" className="max-w-md mx-auto my-12" />
