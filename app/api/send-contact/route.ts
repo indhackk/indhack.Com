@@ -41,9 +41,39 @@ export async function POST(request: NextRequest) {
 
         const { name, email, phone, company, website, budget, message } = validation.data;
 
-        const FORMSUBMIT_EMAIL = 'contact@indhack.com';
+        // PRIORITÉ: Web3Forms (plus fiable, clé API configurée)
+        const WEB3FORMS_KEY = process.env.WEB3FORMS_ACCESS_KEY;
+        if (WEB3FORMS_KEY) {
+            const web3Response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_KEY,
+                    subject: `🚀 Nouveau contact - ${name}${company ? ` (${company})` : ''}`,
+                    from_name: name,
+                    replyto: email,
+                    Nom: name,
+                    Email: email,
+                    Telephone: phone || 'Non renseigné',
+                    Entreprise: company || 'Non renseigné',
+                    Site_Web: website || 'Non renseigné',
+                    Budget: budget || 'Non renseigné',
+                    Message: message,
+                })
+            });
 
-        // Première tentative avec FormSubmit
+            const web3Result = await web3Response.json();
+            if (web3Result.success) {
+                return NextResponse.json(
+                    { success: true, message: 'Message envoyé avec succès !' },
+                    { status: 200, headers: securityHeaders }
+                );
+            }
+            console.error('Web3Forms error:', web3Result);
+        }
+
+        // FALLBACK: FormSubmit
+        const FORMSUBMIT_EMAIL = 'contact@indhack.com';
         const response = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_EMAIL}`, {
             method: 'POST',
             headers: {
@@ -74,38 +104,8 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // FALLBACK: Web3Forms
-        const WEB3FORMS_KEY = process.env.WEB3FORMS_ACCESS_KEY;
-        if (WEB3FORMS_KEY) {
-            const web3Response = await fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    access_key: WEB3FORMS_KEY,
-                    subject: `Nouveau contact - ${name}`,
-                    from_name: name,
-                    replyto: email,
-                    Nom: name,
-                    Email: email,
-                    Telephone: phone || 'Non renseigné',
-                    Entreprise: company || 'Non renseigné',
-                    Site_Web: website || 'Non renseigné',
-                    Budget: budget || 'Non renseigné',
-                    Message: message,
-                })
-            });
-
-            const web3Result = await web3Response.json();
-            if (web3Result.success) {
-                return NextResponse.json(
-                    { success: true, message: 'Message envoyé avec succès !' },
-                    { status: 200, headers: securityHeaders }
-                );
-            }
-        }
-
         return NextResponse.json(
-            { success: false, error: 'Erreur lors de l\'envoi. Veuillez réessayer.' },
+            { success: false, error: 'Erreur lors de l\'envoi. Appelez-nous au 06 61 13 97 48.' },
             { status: 500, headers: securityHeaders }
         );
 

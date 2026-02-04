@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Hero } from "@/components/Hero";
 import { ServicesSection } from "@/components/ServicesSection";
 import { AboutSection } from "@/components/AboutSection";
@@ -6,6 +7,20 @@ import { CTASection } from "@/components/CTASection";
 import { SEOScoreChecker } from "@/components/SEOScoreChecker";
 import { CityCarousel } from "@/components/sections/CityCarousel";
 import { TrustSignals } from "@/components/sections/TrustSignals";
+
+export const metadata: Metadata = {
+    title: "Consultante SEO & Experte Référencement Naturel | INDHACK",
+    description: "Boostez votre visibilité Google avec une experte SEO. Audit gratuit, +200% de trafic organique en 6 mois. Résultats garantis pour PME et startups.",
+    alternates: {
+        canonical: "https://indhack.com"
+    },
+    openGraph: {
+        title: "Consultante SEO & Experte Référencement Naturel | INDHACK",
+        description: "Dominez Google avec une stratégie SEO sur-mesure. Audit gratuit, accompagnement personnalisé.",
+        url: "https://indhack.com",
+        type: "website",
+    }
+};
 
 // Homepage FAQ optimisée - SANS gras dans les questions
 const HOMEPAGE_FAQ = [

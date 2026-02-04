@@ -28,7 +28,7 @@ export function CTASection() {
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 mb-8">
                         <Sparkles className="w-4 h-4 text-sauge" />
-                        <span className="text-sauge font-bold text-xs uppercase tracking-[0.2em]">Scale your growth</span>
+                        <span className="text-sauge font-bold text-xs uppercase tracking-[0.2em]">Accélérez votre croissance</span>
                     </div>
 
                     <h2 className="text-5xl md:text-7xl font-heading font-bold mb-8 uppercase tracking-tighter leading-[0.95]">
@@ -64,13 +64,13 @@ export function CTASection() {
 
                     <div className="mt-16 flex items-center justify-center gap-10 opacity-30">
                         <div className="flex flex-col items-center">
-                            <span className="text-2xl font-bold italic">FAST</span>
+                            <span className="text-2xl font-bold italic">RAPIDE</span>
                         </div>
                         <div className="flex flex-col items-center">
-                            <span className="text-2xl font-bold italic">SMART</span>
+                            <span className="text-2xl font-bold italic">EFFICACE</span>
                         </div>
                         <div className="flex flex-col items-center">
-                            <span className="text-2xl font-bold italic">ROI-FIRST</span>
+                            <span className="text-2xl font-bold italic">RENTABLE</span>
                         </div>
                     </div>
                 </motion.div>
