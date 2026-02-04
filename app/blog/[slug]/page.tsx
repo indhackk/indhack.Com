@@ -10,8 +10,63 @@ import remarkGfm from "remark-gfm";
 import { Button } from "@/components/ui/button";
 import { AuditCTA } from "@/components/blog/AuditCTA";
 import { BlogServiceCTA } from "@/components/BlogServiceCTA";
+import type { Metadata } from "next";
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+interface PageProps {
+    params: { slug: string };
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const post = getPostBySlug(params.slug);
+
+    if (!post) {
+        return {
+            title: "Article non trouvé | IndHack",
+        };
+    }
+
+    return {
+        title: `${post.title} | Blog IndHack`,
+        description: post.description,
+        keywords: post.keywords,
+        authors: [{ name: post.author || "Indiana Aflalo" }],
+        openGraph: {
+            title: post.title,
+            description: post.description,
+            type: "article",
+            publishedTime: post.date,
+            authors: [post.author || "Indiana Aflalo"],
+            images: [
+                {
+                    url: `https://indhack.com${post.image}`,
+                    width: 1200,
+                    height: 630,
+                    alt: post.title,
+                }
+            ],
+            locale: "fr_FR",
+            siteName: "IndHack",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: post.title,
+            description: post.description,
+            images: [`https://indhack.com${post.image}`],
+        },
+        alternates: {
+            canonical: `https://indhack.com/blog/${params.slug}`,
+        },
+        robots: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+            "max-video-preview": -1,
+        },
+    };
+}
+
+export default function BlogPostPage({ params }: PageProps) {
     const post = getPostBySlug(params.slug);
 
     if (!post) {
@@ -28,6 +83,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     Retour au blog
                 </Link>
 
+                {/* Schema.org BlogPosting - Optimisé GEO */}
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
@@ -36,24 +92,80 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                             "@type": "BlogPosting",
                             "headline": post.title,
                             "description": post.description,
-                            "image": `https://indhack.com${post.image}`,
+                            "image": {
+                                "@type": "ImageObject",
+                                "url": `https://indhack.com${post.image}`,
+                                "width": 1200,
+                                "height": 630
+                            },
                             "datePublished": post.date,
+                            "dateModified": post.date,
                             "author": {
                                 "@type": "Person",
-                                "name": post.author || "Indiana Aflalo"
+                                "name": post.author || "Indiana Aflalo",
+                                "url": "https://indhack.com/a-propos",
+                                "jobTitle": "Consultante SEO",
+                                "worksFor": {
+                                    "@type": "Organization",
+                                    "name": "IndHack"
+                                },
+                                "sameAs": [
+                                    "https://www.linkedin.com/in/indianaaflalo"
+                                ]
                             },
                             "publisher": {
                                 "@type": "Organization",
                                 "name": "IndHack",
+                                "url": "https://indhack.com",
                                 "logo": {
                                     "@type": "ImageObject",
-                                    "url": "https://indhack.com/images/logo-indhack.png"
+                                    "url": "https://indhack.com/images/logo-indhack.png",
+                                    "width": 200,
+                                    "height": 60
                                 }
                             },
                             "mainEntityOfPage": {
                                 "@type": "WebPage",
                                 "@id": `https://indhack.com/blog/${params.slug}`
+                            },
+                            "keywords": post.keywords.join(", "),
+                            "articleSection": post.category,
+                            "inLanguage": "fr-FR",
+                            "isAccessibleForFree": true,
+                            "speakable": {
+                                "@type": "SpeakableSpecification",
+                                "cssSelector": ["h1", ".prose h2", ".prose p:first-of-type"]
                             }
+                        })
+                    }}
+                />
+                {/* Schema.org BreadcrumbList - Navigation GEO */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [
+                                {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Accueil",
+                                    "item": "https://indhack.com"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Blog",
+                                    "item": "https://indhack.com/blog"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": post.title,
+                                    "item": `https://indhack.com/blog/${params.slug}`
+                                }
+                            ]
                         })
                     }}
                 />
