@@ -29,18 +29,20 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
         setSubmitStatus('idle');
 
         try {
-            // Envoi via API sécurisée côté serveur
-            const response = await fetch('/api/send-audit', {
+            // Envoi direct à Web3Forms (plus fiable)
+            const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    name: formData.name,
-                    email: formData.email,
-                    phone: formData.phone,
-                    website: formData.website,
-                    message: formData.message || 'Demande d\'audit SEO depuis IndHack.com',
+                    access_key: 'dbf0dae2-86ac-495e-a670-c4fc028ce036',
+                    subject: `Demande d'Audit SEO - ${formData.name}`,
+                    from_name: formData.name,
+                    replyto: formData.email,
+                    Nom: formData.name,
+                    Email: formData.email,
+                    Telephone: formData.phone || 'Non renseigné',
+                    Site_Web: formData.website || 'Non renseigné',
+                    Message: formData.message || 'Demande d\'audit SEO depuis IndHack.com',
                 })
             });
 

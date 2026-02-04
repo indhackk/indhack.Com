@@ -27,19 +27,24 @@ export function ContactForm() {
         setError("");
 
         try {
-            const response = await fetch('/api/send-contact', {
+            // Envoi direct à Web3Forms (plus fiable que de passer par l'API backend)
+            const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
+                body: JSON.stringify({
+                    access_key: 'dbf0dae2-86ac-495e-a670-c4fc028ce036',
+                    subject: `Nouveau contact - ${formData.name}${formData.company ? ` (${formData.company})` : ''}`,
+                    from_name: formData.name,
+                    replyto: formData.email,
+                    Nom: formData.name,
+                    Email: formData.email,
+                    Telephone: formData.phone || 'Non renseigné',
+                    Entreprise: formData.company || 'Non renseigné',
+                    Site_Web: formData.website || 'Non renseigné',
+                    Budget: formData.budget || 'Non renseigné',
+                    Message: formData.message,
+                })
             });
-
-            // SAFETY: Handle non-JSON responses (like HTML error pages)
-            const contentType = response.headers.get("content-type");
-            if (!response.ok || !contentType || !contentType.includes("application/json")) {
-                const text = await response.text();
-                console.error('Server error response:', text);
-                throw new Error("Erreur serveur (HTML reçu au lieu de JSON)");
-            }
 
             const result = await response.json();
 
@@ -47,7 +52,7 @@ export function ContactForm() {
                 setIsSubmitted(true);
                 setFormData({ name: "", email: "", phone: "", company: "", website: "", message: "", budget: "" });
             } else {
-                setError(result.error || "Une erreur est survenue. Réessayez ou appelez-moi directement.");
+                setError("Une erreur est survenue. Réessayez ou appelez-moi au 06 61 13 97 48.");
             }
         } catch (err: any) {
             console.error('Fetch error:', err);
