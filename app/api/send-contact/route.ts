@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
         const { name, email, phone, company, website, budget, message } = validation.data;
 
         // PRIORITÉ: Web3Forms (plus fiable, clé API configurée)
-        const WEB3FORMS_KEY = process.env.WEB3FORMS_ACCESS_KEY;
+        const WEB3FORMS_KEY = process.env.WEB3FORMS_ACCESS_KEY || process.env.WEBFORM;
         if (WEB3FORMS_KEY) {
             const web3Response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
