@@ -76,7 +76,7 @@ export function Hero() {
 
                 {/* 3D Visual - lazy loaded after LCP */}
                 <div
-                    className={`h-[400px] lg:h-[650px] w-full relative group cursor-grab active:cursor-grabbing transition-all duration-1000 ${isAnimated ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+                    className="h-[400px] lg:h-[650px] w-full relative group cursor-grab active:cursor-grabbing"
                 >
                     {showBrain && <BrainCanvas />}
 
