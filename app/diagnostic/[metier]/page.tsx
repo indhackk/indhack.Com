@@ -13,13 +13,27 @@ interface PageProps {
   params: { metier: string }
 }
 
+// Métiers qui ont leurs propres pages statiques dédiées (dans /diagnostic/[metier]/page.tsx)
+// Ne PAS les générer ici pour éviter les conflits de routes
+const EXCLUDED_METIERS = ['barbier', 'coiffeur']
+
 export async function generateStaticParams() {
-  return Object.keys(metiersData).map((metier) => ({
-    metier,
-  }))
+  return Object.keys(metiersData)
+    .filter((metier) => !EXCLUDED_METIERS.includes(metier))
+    .map((metier) => ({
+      metier,
+    }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  // Ne pas générer de métadonnées pour les métiers avec pages dédiées
+  if (EXCLUDED_METIERS.includes(params.metier)) {
+    return {
+      title: 'Diagnostic SEO | INDHACK',
+      description: 'Diagnostic SEO gratuit pour votre entreprise',
+    }
+  }
+
   const metierData = getMetierData(params.metier)
 
   if (!metierData) {
@@ -57,6 +71,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default function DiagnosticPage({ params }: PageProps) {
+  // Rediriger vers les pages statiques dédiées si elles existent
+  if (EXCLUDED_METIERS.includes(params.metier)) {
+    notFound()
+  }
+
   const metierData = getMetierData(params.metier)
 
   if (!metierData) {
