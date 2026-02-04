@@ -4,12 +4,19 @@ import { HeroServices } from "@/components/services/HeroServices";
 import { FAQ } from "@/components/FAQ";
 import { RelatedServices } from "@/components/RelatedServices";
 import { motion } from "framer-motion";
-import { Search, BarChart4, ClipboardList, Target, ArrowRight, CheckCircle2, AlertTriangle } from "lucide-react";
+import { Search, BarChart4, ClipboardList, Target, ArrowRight, CheckCircle2, AlertTriangle, MapPin, FileText } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
+
+const FEATURED_CITIES = [
+    { name: "Nice", slug: "seo-nice" },
+    { name: "Paris", slug: "seo-paris" },
+    { name: "Lyon", slug: "seo-lyon" },
+    { name: "Marseille", slug: "seo-marseille" },
+];
 
 const AUDIT_FEATURES = [
     {
@@ -151,6 +158,76 @@ export default function AuditSeoClient() {
                         <AuditPoint title="Rigueur Pro" text="Je n'utilise pas d'outils automatisés génériques. Chaque audit est une <strong>analyse manuelle et experte</strong>." />
                         <AuditPoint title="Focus Business" text="Je ne liste pas d'erreurs gratuites. Je me focalise sur ce qui <strong>empêche vos ventes</strong> et vos conversions." />
                         <AuditPoint title="Accompagnement" text="Je vous explique chaque recommandation pour que vous puissiez l'implémenter sereinement." />
+                    </div>
+                </div>
+            </section>
+
+            {/* Section Types d'audit et Maillage */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-5xl mx-auto">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-4">
+                                Audit adapté à <span className="text-sauge">votre situation</span>
+                            </h2>
+                            <p className="text-lg text-soft max-w-2xl mx-auto">
+                                Que vous soyez une entreprise locale ou nationale, un e-commerce ou un site vitrine,
+                                l'audit est personnalisé selon vos objectifs.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-8 mb-12">
+                            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-sauge transition-all">
+                                <MapPin className="w-10 h-10 text-sauge mb-4" />
+                                <h3 className="text-xl font-bold text-ink mb-3">Audit SEO Local</h3>
+                                <p className="text-soft mb-4">
+                                    Pour les entreprises qui ciblent une zone géographique précise. Analyse de votre
+                                    <strong> Google Business Profile</strong>, positionnement local et stratégie de proximité.
+                                </p>
+                                <Link href="/seo-local" className="text-sauge font-semibold hover:underline inline-flex items-center gap-2">
+                                    Découvrir le SEO Local <ArrowRight className="w-4 h-4" />
+                                </Link>
+                            </div>
+                            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-sauge transition-all">
+                                <FileText className="w-10 h-10 text-sauge mb-4" />
+                                <h3 className="text-xl font-bold text-ink mb-3">Audit Technique Complet</h3>
+                                <p className="text-soft mb-4">
+                                    Analyse en profondeur de l'architecture, de la vitesse, de l'indexation et des Core Web Vitals.
+                                    Idéal avant une <Link href="/refonte-site-web" className="text-sauge hover:underline">refonte de site</Link>.
+                                </p>
+                                <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline inline-flex items-center gap-2">
+                                    En savoir plus sur mes services <ArrowRight className="w-4 h-4" />
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="bg-ink p-8 rounded-2xl text-white">
+                            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                                <div>
+                                    <h3 className="text-xl font-bold mb-2">Besoin d'un audit dans votre ville ?</h3>
+                                    <p className="text-white/70">
+                                        J'accompagne des entreprises dans toute la France avec une expertise particulière sur la Côte d'Azur.
+                                    </p>
+                                </div>
+                                <div className="flex flex-wrap gap-2">
+                                    {FEATURED_CITIES.map((city) => (
+                                        <Link
+                                            key={city.slug}
+                                            href={`/${city.slug}`}
+                                            className="px-4 py-2 bg-white/10 text-white rounded-full text-sm font-medium hover:bg-sauge transition-all"
+                                        >
+                                            {city.name}
+                                        </Link>
+                                    ))}
+                                    <Link
+                                        href="/seo-local"
+                                        className="px-4 py-2 bg-sauge text-white rounded-full text-sm font-medium hover:bg-white hover:text-ink transition-all"
+                                    >
+                                        Toutes les villes →
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

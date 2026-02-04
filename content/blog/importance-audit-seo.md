@@ -38,8 +38,22 @@ Chaque recommandation est classée selon :
 
 Un audit professionnel complet représente un investissement de **500€ à 2 000€** selon la taille du site. Mais un seul client gagné grâce aux optimisations peut rembourser 10 fois cet investissement.
 
+Découvrez en détail mon [service d'audit SEO complet](/audit-seo) : analyse technique, sémantique et concurrentielle avec roadmap priorisée.
+
+## Audit SEO pour entreprises locales
+
+Si vous êtes une entreprise locale (commerce, artisan, profession libérale), l'audit inclut une analyse de votre présence sur [Google Business Profile](/seo-local) et un benchmark local.
+
+Je propose des audits spécialisés pour les entreprises de :
+- [Nice et la Côte d'Azur](/seo-nice)
+- [Paris et Île-de-France](/seo-paris)
+- [Lyon et Rhône-Alpes](/seo-lyon)
+- [Marseille et PACA](/seo-marseille)
+
 ## Prêt à passer à l'action ?
 
 Le [référencement naturel](/referencement-naturel) est une course de fond. Plus vous commencez tôt votre audit, plus vite vous distancerez vos concurrents dans les résultats de recherche.
+
+En tant que [consultante SEO freelance](/consultant-seo), je vous accompagne de l'audit à l'implémentation.
 
 [Demandez votre audit SEO gratuit](/contact) et découvrez le potentiel caché de votre site.

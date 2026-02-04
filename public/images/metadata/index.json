@@ -1,44 +1,133 @@
 {
-  "generatedAt": "2026-01-16T17:03:10.395Z",
+  "generatedAt": "2026-02-04T10:00:00.000Z",
   "images": [
     {
       "file": "nice-seo-hero.png",
       "path": "/images/nice-seo-hero.png",
-      "metadataPath": "/images/metadata/nice-seo-hero.json",
-      "keywords": [
-        "audit seo nice",
-        "consultant seo nice",
-        "audit gratuit seo nice",
-        "référencement nice",
-        "seo nice 06"
-      ],
-      "location": "Nice"
+      "alt": "Consultant SEO Nice - Indiana Aflalo experte référencement naturel Côte d'Azur",
+      "title": "Consultante SEO Nice - Audit et Référencement",
+      "keywords": ["consultant seo nice", "audit seo nice", "référencement nice", "seo nice 06", "expert seo côte d'azur"],
+      "location": "Nice, Alpes-Maritimes, France",
+      "coordinates": { "lat": 43.7102, "lng": 7.2620 }
     },
     {
       "file": "nice-workspace.png",
       "path": "/images/nice-workspace.png",
-      "metadataPath": "/images/metadata/nice-workspace.json",
-      "keywords": [
-        "consultant seo nice",
-        "seo freelance nice",
-        "expert seo nice",
-        "agence seo nice",
-        "référencement naturel nice"
-      ],
-      "location": "Nice"
+      "alt": "Espace de travail consultant SEO Nice - Analyse référencement",
+      "title": "Bureau consultant SEO freelance Nice",
+      "keywords": ["consultant seo nice", "seo freelance nice", "expert seo nice", "référencement naturel nice"],
+      "location": "Nice, Alpes-Maritimes, France",
+      "coordinates": { "lat": 43.7102, "lng": 7.2620 }
     },
     {
       "file": "nice-data-flow.png",
       "path": "/images/nice-data-flow.png",
-      "metadataPath": "/images/metadata/nice-data-flow.json",
-      "keywords": [
-        "audit gratuit seo nice",
-        "audit seo nice",
-        "analyse seo nice",
-        "diagnostic seo nice",
-        "audit technique nice"
-      ],
-      "location": "Nice"
+      "alt": "Analyse de données SEO Nice - Dashboard référencement",
+      "title": "Dashboard audit SEO Nice",
+      "keywords": ["audit gratuit seo nice", "analyse seo nice", "diagnostic seo nice", "audit technique nice"],
+      "location": "Nice, Alpes-Maritimes, France",
+      "coordinates": { "lat": 43.7102, "lng": 7.2620 }
+    },
+    {
+      "file": "ai-brain.png",
+      "path": "/images/ai-brain.png",
+      "alt": "Intelligence artificielle et SEO - GEO Generative Engine Optimization",
+      "title": "IA et référencement naturel - GEO optimization",
+      "keywords": ["GEO", "IA SEO", "ChatGPT SEO", "Gemini SEO", "intelligence artificielle référencement"],
+      "location": "France"
+    },
+    {
+      "file": "audit-seo.png",
+      "path": "/images/audit-seo.png",
+      "alt": "Audit SEO complet - Analyse technique et sémantique de site web",
+      "title": "Service audit SEO professionnel",
+      "keywords": ["audit seo", "audit technique", "analyse seo", "diagnostic site web", "audit référencement"],
+      "location": "France"
+    },
+    {
+      "file": "creation-site.png",
+      "path": "/images/creation-site.png",
+      "alt": "Création de site web optimisé SEO - Développement Next.js",
+      "title": "Création site web SEO-friendly",
+      "keywords": ["création site web", "site internet optimisé seo", "développement web", "site vitrine seo"],
+      "location": "France"
+    },
+    {
+      "file": "croissance-seo.png",
+      "path": "/images/croissance-seo.png",
+      "alt": "Croissance organique SEO - Augmentation trafic Google",
+      "title": "Résultats référencement naturel - Croissance trafic",
+      "keywords": ["croissance seo", "trafic organique", "résultats seo", "augmentation visibilité google"],
+      "location": "France"
+    },
+    {
+      "file": "indiana-aflalo.jpg",
+      "path": "/images/indiana-aflalo.jpg",
+      "alt": "Indiana Aflalo - Consultante SEO Freelance Nice et France",
+      "title": "Indiana Aflalo consultant SEO",
+      "keywords": ["indiana aflalo", "consultante seo", "expert seo freelance", "seo nice"],
+      "location": "Nice, France",
+      "coordinates": { "lat": 43.7102, "lng": 7.2620 }
+    },
+    {
+      "file": "logo-indhack.png",
+      "path": "/images/logo-indhack.png",
+      "alt": "IndHack - Logo agence consultant SEO",
+      "title": "Logo IndHack consultant SEO",
+      "keywords": ["indhack", "logo seo", "agence seo"],
+      "location": "France"
+    },
+    {
+      "file": "partnership.png",
+      "path": "/images/partnership.png",
+      "alt": "Partenariat SEO - Accompagnement consultant référencement",
+      "title": "Collaboration consultant SEO client",
+      "keywords": ["partenariat seo", "accompagnement seo", "consultant seo freelance", "collaboration référencement"],
+      "location": "France"
+    },
+    {
+      "file": "seo-dashboard.png",
+      "path": "/images/seo-dashboard.png",
+      "alt": "Dashboard SEO - Suivi positions et trafic Google Analytics",
+      "title": "Tableau de bord référencement naturel",
+      "keywords": ["dashboard seo", "suivi positions", "analytics seo", "reporting référencement"],
+      "location": "France"
+    },
+    {
+      "file": "nice-premium-indhack.png",
+      "path": "/images/nice-premium-indhack.png",
+      "alt": "Service SEO premium Nice - Consultant référencement haut de gamme",
+      "title": "SEO premium consultant Nice",
+      "keywords": ["seo premium nice", "consultant seo nice", "référencement haut de gamme"],
+      "location": "Nice, Alpes-Maritimes, France",
+      "coordinates": { "lat": 43.7102, "lng": 7.2620 }
     }
-  ]
+  ],
+  "cities": {
+    "nice": {
+      "images": ["nice-promenade-anglais.webp", "nice-vieux-nice.webp", "nice-place-massena.webp"],
+      "keywords": ["seo nice", "référencement nice", "consultant seo nice"],
+      "location": "Nice, Alpes-Maritimes, France"
+    },
+    "cannes": {
+      "images": ["cannes-croisette.webp", "cannes-palais-festivals.webp", "cannes-vieux-port.webp"],
+      "keywords": ["seo cannes", "référencement cannes", "consultant seo cannes"],
+      "location": "Cannes, Alpes-Maritimes, France"
+    },
+    "paris": {
+      "images": ["paris-tour-eiffel.webp", "paris-marais.webp", "paris-sacre-coeur.webp"],
+      "keywords": ["seo paris", "référencement paris", "consultant seo paris"],
+      "location": "Paris, Île-de-France, France"
+    },
+    "lyon": {
+      "images": ["lyon-fourviere.webp", "lyon-bellecour.webp", "lyon-confluence.webp"],
+      "keywords": ["seo lyon", "référencement lyon", "consultant seo lyon"],
+      "location": "Lyon, Auvergne-Rhône-Alpes, France"
+    },
+    "marseille": {
+      "images": ["marseille-vieux-port.webp", "marseille-mucem.webp", "marseille-notre-dame-garde.webp"],
+      "keywords": ["seo marseille", "référencement marseille", "consultant seo marseille"],
+      "location": "Marseille, Bouches-du-Rhône, France"
+    }
+  }
 }

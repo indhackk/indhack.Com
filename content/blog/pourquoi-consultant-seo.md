@@ -8,7 +8,7 @@ author: "Indiana Aflalo"
 keywords: ["consultant SEO", "pourquoi consultant SEO", "expert référencement naturel", "faire appel consultant SEO", "tarif consultant SEO", "ROI SEO"]
 ---
 
-Vous avez lu quelques articles sur le SEO. Vous avez installé Yoast. Vous avez même écrit des "articles optimisés". Et pourtant... votre site reste invisible sur Google. C'est normal. Le SEO en 2026, ce n'est plus une affaire d'amateurs. C'est là qu'intervient le [consultant SEO](/referencement-naturel).
+Vous avez lu quelques articles sur le SEO. Vous avez installé Yoast. Vous avez même écrit des "articles optimisés". Et pourtant... votre site reste invisible sur Google. C'est normal. Le SEO en 2026, ce n'est plus une affaire d'amateurs. C'est là qu'intervient le [consultant SEO](/consultant-seo).
 
 ## Qu'est-ce qu'un consultant SEO exactement ?
 
@@ -86,11 +86,13 @@ Le bon consultant SEO n'est pas un prestataire qui fait ses heures et disparaît
 
 Les tarifs varient selon l'expérience et la complexité du projet :
 
-- **Audit SEO ponctuel** : 500€ - 2 000€
+- **[Audit SEO](/audit-seo) ponctuel** : 500€ - 2 000€
 - **Accompagnement mensuel** : 500€ - 2 500€/mois
 - **Mission complète** (audit + optimisation + suivi) : 3 000€ - 10 000€
 
 L'important n'est pas le coût, c'est le **retour sur investissement**. Un consultant qui vous fait gagner 10 clients à 1 000€ chacun a largement rentabilisé ses honoraires.
+
+Pour les entreprises locales, je propose également un [accompagnement SEO local](/seo-local) adapté aux recherches de proximité sur [Nice](/seo-nice), [Paris](/seo-paris), [Lyon](/seo-lyon) et toute la France.
 
 ## Quand faire appel à un consultant SEO ?
 
@@ -128,4 +130,9 @@ En 2026, si vous n'êtes pas visible sur Google, vous laissez vos concurrents ca
 
 Le meilleur moment pour investir dans le SEO, c'était il y a 5 ans. Le deuxième meilleur moment, c'est maintenant.
 
-Prêt à transformer votre visibilité en ligne ? [Contactez-moi](/contact) pour un premier échange sans engagement.
+Prêt à transformer votre visibilité en ligne ? Découvrez [mes services de consultant SEO](/consultant-seo) ou [contactez-moi](/contact) pour un premier échange sans engagement.
+
+**À lire aussi :**
+- [Quelles sont les missions d'un consultant SEO ?](/blog/missions-consultant-seo)
+- [Quelle formation SEO choisir ?](/blog/quelle-formation-seo)
+- [Pourquoi l'audit SEO est le point de départ](/blog/importance-audit-seo)

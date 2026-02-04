@@ -108,12 +108,12 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
         { step: "04", title: "Croissance", desc: "Reporting mensuel, évolution des positions, leads générés, ajustements.", icon: <TrendingUp className="w-5 h-5" /> }
     ];
 
-    // Services liés
+    // Services liés avec liens vers sub-services
     const RELATED_SERVICES = [
-        { title: "Audit SEO Complet", href: "/audit-seo", desc: "Diagnostic technique approfondi" },
+        { title: `Audit Technique ${city}`, href: `/${cityData.slug}/audit-technique`, desc: "Diagnostic technique approfondi", isPrimary: true },
+        { title: "Audit SEO Complet", href: "/audit-seo", desc: "Tous types d'audit SEO" },
         { title: "Référencement Naturel", href: "/referencement-naturel", desc: "Stratégie SEO nationale" },
-        { title: "Création de Site", href: "/creation-site-web", desc: "Sites optimisés SEO" },
-        { title: "Community Manager", href: "/community-manager", desc: "Gestion réseaux sociaux" }
+        { title: "Création de Site", href: "/creation-site-web", desc: "Sites optimisés SEO" }
     ];
 
     // Avantages différenciants
@@ -177,7 +177,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                         <strong className="text-ink">46% des recherches Google ont une intention locale.</strong> Si votre entreprise n'apparaît pas quand un habitant de {city} ou des zones {cityData.nearbyAreas.slice(0, 2).join(", ")} cherche vos services, vous laissez ces clients à vos concurrents.
                                     </p>
                                     <p>
-                                        En tant que <strong className="text-ink">consultante SEO spécialisée</strong> sur le marché {cityData.region}, je vous accompagne pour conquérir les premières positions Google et Google Maps. Une approche personnalisée, des résultats mesurables.
+                                        En tant que <Link href="/consultant-seo" className="text-sauge hover:underline font-semibold">consultante SEO spécialisée</Link> sur le marché {cityData.region}, je vous accompagne pour conquérir les premières positions Google et Google Maps. Une approche personnalisée, des résultats mesurables.
                                     </p>
                                 </div>
 
@@ -360,7 +360,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-8">
                         <h2 className="text-2xl font-heading font-bold text-ink">
-                            Mes autres <span className="text-sauge">services</span> à {city}
+                            Mes <span className="text-sauge">services</span> à {city}
                         </h2>
                     </div>
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
@@ -371,16 +371,32 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.05 }}
-                                    className="bg-gray-50 p-5 rounded-xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group h-full"
+                                    className={`p-5 rounded-xl border transition-all group h-full ${
+                                        (service as any).isPrimary
+                                            ? 'bg-sauge text-white border-sauge hover:bg-ink'
+                                            : 'bg-gray-50 border-gray-100 hover:shadow-lg hover:border-sauge/30'
+                                    }`}
                                 >
-                                    <h3 className="font-bold text-sm text-ink mb-1 group-hover:text-sauge transition-colors">{service.title}</h3>
-                                    <p className="text-xs text-soft">{service.desc}</p>
-                                    <span className="mt-3 inline-flex items-center text-sauge text-xs font-bold">
+                                    <h3 className={`font-bold text-sm mb-1 transition-colors ${
+                                        (service as any).isPrimary ? 'text-white' : 'text-ink group-hover:text-sauge'
+                                    }`}>{service.title}</h3>
+                                    <p className={`text-xs ${(service as any).isPrimary ? 'text-white/80' : 'text-soft'}`}>{service.desc}</p>
+                                    <span className={`mt-3 inline-flex items-center text-xs font-bold ${
+                                        (service as any).isPrimary ? 'text-white' : 'text-sauge'
+                                    }`}>
                                         Découvrir <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                                     </span>
                                 </motion.div>
                             </Link>
                         ))}
+                    </div>
+
+                    {/* Lien vers consultant SEO */}
+                    <div className="text-center mt-8">
+                        <Link href="/consultant-seo" className="inline-flex items-center gap-2 text-sauge font-semibold hover:underline">
+                            <Users className="w-4 h-4" />
+                            En savoir plus sur mes services de consultant SEO
+                        </Link>
                     </div>
                 </div>
             </section>

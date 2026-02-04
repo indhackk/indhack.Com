@@ -4,11 +4,20 @@ import { HeroServices } from "@/components/services/HeroServices";
 import { FAQ } from "@/components/FAQ";
 import { RelatedServices } from "@/components/RelatedServices";
 import { motion } from "framer-motion";
-import { Search, FileText, Link2, BarChart3, ArrowRight, TrendingUp, Target } from "lucide-react";
+import { Search, FileText, Link2, BarChart3, ArrowRight, TrendingUp, Target, MapPin } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
+
+const FEATURED_CITIES = [
+    { name: "Nice", slug: "seo-nice" },
+    { name: "Paris", slug: "seo-paris" },
+    { name: "Lyon", slug: "seo-lyon" },
+    { name: "Marseille", slug: "seo-marseille" },
+    { name: "Bordeaux", slug: "seo-bordeaux" },
+    { name: "Toulouse", slug: "seo-toulouse" },
+];
 
 const SEO_PILLARS = [
     {
@@ -191,6 +200,68 @@ export default function ReferencementClient() {
                                 <BarChart3 className="w-10 h-10 text-sauge mx-auto mb-4" />
                                 <h4 className="text-xl font-bold mb-3">Croissance Durable</h4>
                                 <p className="text-white/60 text-sm">Un actif qui génère des résultats même quand vous dormez.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section SEO Local - Maillage vers pages villes */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-5xl mx-auto">
+                        <div className="text-center mb-12">
+                            <p className="text-sauge font-bold tracking-[0.2em] uppercase mb-4 text-sm">Proximité</p>
+                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-4">
+                                Référencement <span className="text-sauge">local</span> pour entreprises ambitieuses
+                            </h2>
+                            <p className="text-lg text-soft max-w-2xl mx-auto">
+                                Dominez les recherches "près de chez moi" et captez les clients de votre zone géographique.
+                                Le <Link href="/seo-local" className="text-sauge hover:underline font-semibold">SEO local</Link> combine optimisation Google Business Profile et référencement de proximité.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-8 mb-12">
+                            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                                <MapPin className="w-10 h-10 text-sauge mb-4" />
+                                <h3 className="text-xl font-bold text-ink mb-3">Google Business Profile</h3>
+                                <p className="text-soft mb-4">
+                                    Optimisation complète de votre fiche pour apparaître dans le <strong>Local Pack</strong> (les 3 résultats locaux en haut de Google).
+                                </p>
+                                <Link href="/seo-local" className="text-sauge font-semibold hover:underline inline-flex items-center gap-2">
+                                    Découvrir le SEO Local <ArrowRight className="w-4 h-4" />
+                                </Link>
+                            </div>
+                            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                                <Search className="w-10 h-10 text-sauge mb-4" />
+                                <h3 className="text-xl font-bold text-ink mb-3">Pages Locales Optimisées</h3>
+                                <p className="text-soft mb-4">
+                                    Création de contenus géo-ciblés pour vous positionner sur les requêtes locales de votre secteur d'activité.
+                                </p>
+                                <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline inline-flex items-center gap-2">
+                                    Mon expertise consultant SEO <ArrowRight className="w-4 h-4" />
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="text-center">
+                            <p className="text-soft mb-4">J'accompagne des entreprises dans toute la France :</p>
+                            <div className="flex flex-wrap justify-center gap-3">
+                                {FEATURED_CITIES.map((city) => (
+                                    <Link
+                                        key={city.slug}
+                                        href={`/${city.slug}`}
+                                        className="px-4 py-2 bg-sauge/10 text-sauge rounded-full text-sm font-medium hover:bg-sauge hover:text-white transition-all"
+                                    >
+                                        SEO {city.name}
+                                    </Link>
+                                ))}
+                                <Link
+                                    href="/seo-local"
+                                    className="px-4 py-2 bg-ink text-white rounded-full text-sm font-medium hover:bg-sauge transition-all"
+                                >
+                                    Toutes les villes →
+                                </Link>
                             </div>
                         </div>
                     </div>
