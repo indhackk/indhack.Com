@@ -138,10 +138,10 @@ export function Navbar() {
                         </Button>
                     </div>
 
-                    {/* Mobile Menu Button */}
+                    {/* Mobile Menu Button - min 48x48px touch target */}
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className={`lg:hidden p-2 rounded-xl transition-colors ${useDarkMenu ? 'text-ink hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
+                        className={`lg:hidden p-3 min-w-[48px] min-h-[48px] flex items-center justify-center rounded-xl transition-colors ${useDarkMenu ? 'text-ink hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
                         aria-label="Ouvrir le menu"
                         aria-expanded={isMobileMenuOpen}
                     >
@@ -163,8 +163,8 @@ export function Navbar() {
                         <div className="flex flex-col h-full">
                             <div className="flex items-center justify-between p-6 border-b border-line">
                                 <span className="font-heading font-bold text-2xl tracking-tighter text-ink">INDHACK</span>
-                                <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-ink" aria-label="Fermer le menu">
-                                    <X size={32} />
+                                <button onClick={() => setIsMobileMenuOpen(false)} className="p-3 min-w-[48px] min-h-[48px] flex items-center justify-center text-ink" aria-label="Fermer le menu">
+                                    <X size={28} />
                                 </button>
                             </div>
 
@@ -218,11 +218,11 @@ function NavLink({ href, children, isScrolled }: { href: string; children: React
     return (
         <Link
             href={href}
-            className={`relative py-2 text-sm font-bold tracking-wide transition-colors group ${isScrolled ? 'text-ink hover:text-sauge' : 'text-white hover:text-white/80'
+            className={`relative py-4 px-2 min-h-[48px] flex items-center text-sm font-bold tracking-wide transition-colors group ${isScrolled ? 'text-ink hover:text-sauge' : 'text-white hover:text-white/80'
                 }`}
         >
             {children}
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-sauge scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+            <span className="absolute bottom-2 left-2 right-2 h-0.5 bg-sauge scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
         </Link>
     );
 }

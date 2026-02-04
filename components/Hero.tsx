@@ -5,7 +5,6 @@ import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
 import { ArrowRight, Phone, MousePointer2 } from "lucide-react";
-import { motion } from "framer-motion";
 
 const BrainCanvas = dynamic(() => import("@/components/BrainCanvas"), {
     ssr: false,
@@ -14,12 +13,15 @@ const BrainCanvas = dynamic(() => import("@/components/BrainCanvas"), {
 export function Hero() {
     const { openAuditModal } = useModal();
     const [showBrain, setShowBrain] = useState(false);
+    const [isAnimated, setIsAnimated] = useState(false);
 
     useEffect(() => {
         // 🚀 PERFORMANCE: Only load 3D on desktop to save mobile data & performance
         if (window.matchMedia("(min-width: 768px)").matches) {
             setShowBrain(true);
         }
+        // Trigger animations after initial paint for better LCP
+        requestAnimationFrame(() => setIsAnimated(true));
     }, []);
 
     return (
@@ -31,37 +33,26 @@ export function Hero() {
             </div>
 
             <div className="container mx-auto px-4 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center py-24">
-                {/* Value Proposition */}
-                <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-center lg:text-left space-y-8"
+                {/* Value Proposition - NO animation delay on LCP content */}
+                <div
+                    className={`text-center lg:text-left space-y-8 transition-all duration-700 ease-out ${isAnimated ? 'opacity-100 translate-x-0' : 'opacity-100'}`}
                 >
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3, duration: 0.8 }}
+                    {/* H1 is LCP element - render immediately without delay */}
+                    <h1
                         className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-white"
                     >
                         Dominez Google.<br />
                         <span className="text-sauge">Devenez le N°1.</span>
-                    </motion.h1>
+                    </h1>
 
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.5, duration: 0.8 }}
-                        className="font-body text-lg lg:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto lg:mx-0"
+                    <p
+                        className={`font-body text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto lg:mx-0 transition-opacity duration-500 ${isAnimated ? 'opacity-100' : 'opacity-90'}`}
                     >
                         Chaque jour, vos clients cherchent vos services sur Google. Ne les laissez plus à vos concurrents. Je transforme votre site en une <strong className="text-white">Machine d'Acquisition</strong> qui capture vos prospects au moment où ils en ont besoin.
-                    </motion.p>
+                    </p>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.6, duration: 0.8 }}
-                        className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start pt-6"
+                    <div
+                        className={`flex flex-col sm:flex-row gap-5 justify-center lg:justify-start pt-6 transition-all duration-500 ${isAnimated ? 'opacity-100 translate-y-0' : 'opacity-90'}`}
                     >
                         <Button
                             onClick={openAuditModal}
@@ -74,32 +65,29 @@ export function Hero() {
                         <a
                             href="tel:0661139748"
                             aria-label="Appeler le 06 61 13 97 48"
-                            className="flex items-center justify-center gap-3 h-16 px-10 rounded-full border-2 border-white/20 text-white hover:border-sauge hover:bg-white/5 transition-all duration-300 group"
+                            className="flex items-center justify-center gap-3 h-16 px-10 rounded-full border-2 border-white/30 text-white hover:border-sauge hover:bg-white/5 transition-all duration-300 group min-h-[48px]"
                         >
                             <Phone className="w-5 h-5 group-hover:text-sauge transition-colors" />
                             <span className="font-bold text-base">06 61 13 97 48</span>
                         </a>
-                    </motion.div>
+                    </div>
 
-                </motion.div>
+                </div>
 
-                {/* 3D Visual */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-                    className="h-[400px] lg:h-[650px] w-full relative group cursor-grab active:cursor-grabbing"
+                {/* 3D Visual - lazy loaded after LCP */}
+                <div
+                    className={`h-[400px] lg:h-[650px] w-full relative group cursor-grab active:cursor-grabbing transition-all duration-1000 ${isAnimated ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
                 >
                     {showBrain && <BrainCanvas />}
 
-                    {/* Interaction Hint - Only show if brain is shown? Or maybe easier to just hide it on mobile via CSS anyway */}
+                    {/* Interaction Hint */}
                     {showBrain && (
                         <div className="absolute bottom-0 right-0 p-4 opacity-0 group-hover:opacity-40 transition-opacity flex items-center gap-2 pointer-events-none">
                             <MousePointer2 className="w-4 h-4" />
                             <span className="text-[10px] font-bold tracking-[0.2em] uppercase">Interagissez</span>
                         </div>
                     )}
-                </motion.div>
+                </div>
             </div>
         </section>
     );

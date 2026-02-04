@@ -113,18 +113,24 @@ export default function RootLayout({
     return (
         <html lang="fr" className="scroll-smooth">
             <head>
+                {/* Preconnect pour performance */}
+                <link rel="preconnect" href="https://www.googletagmanager.com" />
+                <link rel="preconnect" href="https://www.google-analytics.com" />
+                <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
                 />
-                {/* Google AdSense Validation */}
-                <script
-                    async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4620859186405862"
-                    crossOrigin="anonymous"
-                ></script>
             </head>
             <body className={`${spaceGrotesk.variable} ${ibmPlexSans.variable} font-body antialiased text-ink bg-white`}>
+                {/* Google AdSense - loaded after content */}
+                <Script
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4620859186405862"
+                    strategy="lazyOnload"
+                    crossOrigin="anonymous"
+                />
+
                 {/* Google Analytics GA4 avec Consent Mode */}
                 <Script
                     src="https://www.googletagmanager.com/gtag/js?id=G-SXXS2G2753"

@@ -124,10 +124,15 @@ const nextConfig = {
                         key: "Permissions-Policy",
                         value: "camera=(), microphone=(), geolocation=(self), interest-cohort=()",
                     },
-                    // Strict Transport Security (HSTS)
+                    // Strict Transport Security (HSTS) - with preload
                     {
                         key: "Strict-Transport-Security",
-                        value: "max-age=31536000; includeSubDomains",
+                        value: "max-age=63072000; includeSubDomains; preload",
+                    },
+                    // Cross-Origin-Opener-Policy (COOP)
+                    {
+                        key: "Cross-Origin-Opener-Policy",
+                        value: "same-origin-allow-popups",
                     },
                     // Content Security Policy
                     {
