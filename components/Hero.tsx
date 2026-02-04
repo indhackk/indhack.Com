@@ -42,7 +42,7 @@ export function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.8 }}
-                        className="font-heading font-bold text-4xl md:text-5xl lg:text-7xl leading-[1.05] tracking-tight text-white"
+                        className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-white"
                     >
                         Dominez Google.<br />
                         <span className="text-sauge">Devenez le N°1.</span>

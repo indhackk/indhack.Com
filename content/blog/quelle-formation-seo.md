@@ -110,7 +110,7 @@ Une bonne **formation SEO** doit couvrir ces domaines :
 
 | Compétence | Niveau attendu |
 |------------|---------------|
-| [Audit technique](/audit-seo) | Expert |
+| [Audit SEO](/audit-seo) | Expert |
 | Structure HTML sémantique | Solide |
 | Données structurées Schema.org | Intermédiaire |
 | Analyse de logs serveur | Bases |

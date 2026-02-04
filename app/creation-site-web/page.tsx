@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import CreationSiteClient from "./CreationSiteClient";
 
 export const metadata: Metadata = {
-    title: "Création de Site Web SEO-Friendly",
+    title: "Création Site Web | INDHACK, Consultante SEO",
     description: "Sites WordPress et Next.js ultra-rapides, conçus pour la conversion et le référencement. Design sur-mesure, sécurité maximale. Devis gratuit. ✆ 06 61 13 97 48",
     alternates: {
         canonical: "https://indhack.com/creation-site-web"

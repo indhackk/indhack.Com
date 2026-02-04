@@ -5,7 +5,7 @@ import { MapPin, ArrowRight, Search, Users, TrendingUp, CheckCircle2, Phone, Zap
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-    title: "SEO Local France | Consultant Référencement par Ville",
+    title: "SEO Local | INDHACK, Consultante SEO",
     description: "Consultante SEO locale experte sur toutes les grandes villes françaises. Nice, Cannes, Marseille, Paris, Lyon, Bordeaux, Toulouse, Rennes, Nantes, Lille... Référencement géolocalisé pour PME. ✆ 06 61 13 97 48",
     alternates: {
         canonical: "https://indhack.com/seo-local"

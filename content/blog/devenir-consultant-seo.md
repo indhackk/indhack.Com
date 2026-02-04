@@ -174,7 +174,7 @@ Pour devenir **incontournable** dans votre domaine :
 | Diversité des missions | Isolement possible |
 | Choix des clients | Prospection nécessaire |
 
-**Mon conseil :** Commencez en entreprise ou agence pour acquérir de l'expérience solide, puis passez [freelance](/consultant-seo-freelance) si l'indépendance vous attire.
+**Mon conseil :** Commencez en entreprise ou agence pour acquérir de l'expérience solide, puis passez [consultant SEO freelance](/consultant-seo-freelance) si l'indépendance vous attire.
 
 ## Les erreurs à éviter absolument
 

@@ -5,7 +5,7 @@ import { Metadata } from "next";
 const cityData = getCityBySlug("seo-antibes")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO Antibes Juan-les-Pins (${cityData.zipCode}) | Référencement Local`,
+    title: `Consultant SEO Antibes | INDHACK, Consultante SEO`,
     description: `Boostez votre visibilité sur Google à Antibes et Juan-les-Pins. Consultante SEO freelance experte. Audit gratuit pour PME, commerces et artisans. ✆ 06 61 13 97 48`,
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`

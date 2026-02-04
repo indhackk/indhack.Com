@@ -5,7 +5,7 @@ import { Metadata } from "next";
 const cityData = getCityBySlug("seo-lyon")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO ${cityData.name} (${cityData.zipCode}) | Référencement Local`,
+    title: `Consultant SEO Lyon | INDHACK, Consultante SEO`,
     description: `Boostez votre visibilité sur Google à ${cityData.name}. Consultante SEO freelance experte en référencement local pour PME et entrepreneurs du ${cityData.department}. Audit gratuit ✆ 06 61 13 97 48`,
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`

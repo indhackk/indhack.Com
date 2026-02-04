@@ -5,7 +5,7 @@ import { Metadata } from "next";
 const cityData = getCityBySlug("seo-cannes")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO Cannes (${cityData.zipCode}) | Référencement Local`,
+    title: `Consultant SEO Cannes | INDHACK, Consultante SEO`,
     description: `Boostez votre visibilité sur Google à Cannes. Consultante SEO freelance experte de la Côte d'Azur. Audit gratuit pour PME, commerces et professions libérales. ✆ 06 61 13 97 48`,
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`

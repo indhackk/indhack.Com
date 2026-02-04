@@ -5,7 +5,7 @@ import { Metadata } from "next";
 const cityData = getCityBySlug("seo-paris")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO ${cityData.name} | Expert Référencement Naturel`,
+    title: `Consultant SEO Paris | INDHACK, Consultante SEO`,
     description: `Consultante SEO freelance à ${cityData.name}. Stratégies de référencement sur-mesure pour dominer Google dans la capitale. Audit gratuit, accompagnement personnalisé. ✆ 06 61 13 97 48`,
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`

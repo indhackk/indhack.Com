@@ -91,7 +91,7 @@ export function Navbar() {
                                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                                         animate={{ opacity: 1, y: 0, scale: 1 }}
                                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                        className="absolute top-full left-1/2 -translate-x-1/2 w-[600px] bg-white rounded-2xl shadow-2xl border border-line p-6 grid grid-cols-2 gap-3"
+                                        className="absolute top-full left-1/2 -translate-x-1/2 w-[850px] bg-white rounded-2xl shadow-2xl border border-line p-6 grid grid-cols-3 gap-3"
                                     >
                                         {SERVICES.map((service) => (
                                             <Link

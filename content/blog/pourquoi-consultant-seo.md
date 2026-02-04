@@ -12,10 +12,10 @@ Vous avez lu quelques articles sur le SEO. Vous avez installé Yoast. Vous avez 
 
 ## Qu'est-ce qu'un consultant SEO exactement ?
 
-Un **consultant SEO** est un expert en **référencement naturel** qui aide les entreprises à améliorer leur visibilité sur les moteurs de recherche. Contrairement à une [agence SEO](/referencement-naturel), le consultant travaille en direct avec vous, comme un partenaire intégré à votre équipe.
+Un **consultant SEO** est un expert en **référencement naturel** qui aide les entreprises à améliorer leur visibilité sur les moteurs de recherche. Contrairement à une agence de [référencement naturel](/referencement-naturel), le consultant travaille en direct avec vous, comme un partenaire intégré à votre équipe.
 
 **Son rôle :**
-- Analyser votre situation actuelle ([audit technique](/audit-seo), sémantique, concurrentiel)
+- Analyser votre situation actuelle ([audit SEO](/audit-seo), sémantique, concurrentiel)
 - Définir une **stratégie SEO** adaptée à vos objectifs business
 - Mettre en œuvre les optimisations techniques et éditoriales
 - Mesurer et ajuster en continu
@@ -30,7 +30,7 @@ Un **consultant SEO professionnel** va droit au but. Il sait ce qui fonctionne, 
 
 J'ai vu des sites perdre **80% de leur trafic** à cause d'une mauvaise migration. Des entreprises pénalisées par Google pour du **contenu dupliqué**. Des mois de travail anéantis par une stratégie de **netlinking toxique**.
 
-Un consultant SEO vous protège de ces erreurs. Il connaît les pièges et sait les éviter. C'est particulièrement critique lors d'une [refonte de site web](/refonte-site-web).
+Un consultant SEO vous protège de ces erreurs. Il connaît les pièges et sait les éviter. C'est particulièrement critique lors d'une [refonte site web](/refonte-site-web).
 
 ## Avoir une vision stratégique
 
@@ -110,7 +110,7 @@ Pour en savoir plus sur les rémunérations du secteur, consultez mon article su
 - Votre site a plus de 6 mois et n'apparaît pas sur Google
 - Votre **trafic organique** stagne ou diminue
 - Vous lancez un nouveau produit/service
-- Vous préparez une [refonte de site](/refonte-site-web)
+- Vous préparez une [refonte site web](/refonte-site-web)
 - Vos concurrents vous dépassent sur les **mots-clés** importants
 - Vous voulez réduire votre dépendance à la publicité payante
 

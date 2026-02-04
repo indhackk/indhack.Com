@@ -42,27 +42,38 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
         "@id": `https://indhack.com/${cityData.slug}/${serviceData.slug}#service`,
         "name": replacePlaceholders(serviceData.title) + ` ${city}`,
         "description": replacePlaceholders(serviceData.metaDescription),
+        "url": `https://indhack.com/${cityData.slug}/${serviceData.slug}`,
         "provider": {
-            "@type": "LocalBusiness",
-            "name": "IndHack - Indiana Aflalo",
+            "@type": "ProfessionalService",
+            "name": "IndHack",
             "url": "https://indhack.com",
             "telephone": "+33661139748",
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": cityData.lat,
-                "longitude": cityData.lng
+            "priceRange": "€€",
+            "image": "https://indhack.com/images/logo-indhack.png",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": city,
+                "addressRegion": "Provence-Alpes-Côte d'Azur",
+                "addressCountry": "FR"
             }
         },
-        "areaServed": {
-            "@type": "City",
-            "name": city,
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": cityData.lat,
-                "longitude": cityData.lng
-            }
+        "areaServed": [
+            { "@type": "City", "name": city },
+            { "@type": "Country", "name": "France" }
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services SEO",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": serviceData.title
+                    }
+                }
+            ]
         },
-        "serviceType": serviceData.title,
         "image": cityData.images ? [
             {
                 "@type": "ImageObject",
@@ -271,7 +282,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                                 index === 2 ? <TrendingUp className="w-7 h-7" /> :
                                                     <Shield className="w-7 h-7" />}
                                     </div>
-                                    <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink">
+                                    <h2 className="text-xl md:text-2xl font-heading font-bold text-ink">
                                         {replacePlaceholders(section.title)}
                                     </h2>
                                 </div>

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import CommunityManagerClient from "./CommunityManagerClient";
 
 export const metadata: Metadata = {
-    title: "Community Manager Freelance & Social Media",
+    title: "Community Manager | INDHACK, Consultante SEO",
     description: "Gestion experte de vos réseaux sociaux (Instagram, TikTok, LinkedIn). Augmentez votre engagement et générez des leads qualifiés. ✆ 06 61 13 97 48",
     alternates: {
         canonical: "https://indhack.com/community-manager"

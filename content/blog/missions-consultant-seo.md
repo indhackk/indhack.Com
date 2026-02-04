@@ -65,7 +65,7 @@ Le **SEO technique**, c'est s'assurer que Google peut crawler, comprendre et ind
 
 Un site lent ou mal structuré sera **pénalisé par Google**. Peu importe la qualité de votre contenu, si les fondations sont bancales, le reste ne tiendra pas.
 
-Le [SEO technique](/audit-seo) représente souvent les **quick wins** les plus rentables : corriger des erreurs peut doubler votre trafic sans créer un seul contenu.
+L'[audit SEO](/audit-seo) représente souvent les **quick wins** les plus rentables : corriger des erreurs peut doubler votre trafic sans créer un seul contenu.
 
 ## La stratégie de contenu
 
@@ -144,7 +144,7 @@ Optimisation de votre fiche **Google Business Profile** et positionnement sur le
 Découvrez mon expertise en [SEO local](/seo-local).
 
 ### Migration et refonte de site
-Accompagnement lors d'une [refonte de site web](/refonte-site-web) pour préserver votre SEO existant. Une migration mal gérée peut faire perdre **80% du trafic**.
+Accompagnement lors d'une [refonte site web](/refonte-site-web) pour préserver votre SEO existant. Une migration mal gérée peut faire perdre **80% du trafic**.
 
 ### Formation SEO
 Montée en compétence de vos équipes sur les bonnes pratiques SEO. Consultez mon article sur [quelle formation SEO choisir](/blog/quelle-formation-seo).

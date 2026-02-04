@@ -83,7 +83,7 @@ Ces **backlinks locaux** envoient un signal fort à Google sur votre implantatio
 Native de la région, j'aide les **PME de Nice**, Cannes, Antibes et Monaco à transformer leur site web en un véritable aimant à clients locaux.
 
 **Mon accompagnement [SEO local](/seo-local) comprend :**
-- [Audit](/audit-seo) de votre présence locale actuelle
+- [Audit SEO](/audit-seo) de votre présence locale actuelle
 - Optimisation **Google Business Profile**
 - Création de pages locales optimisées
 - Stratégie d'avis clients

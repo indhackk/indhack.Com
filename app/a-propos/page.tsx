@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { AboutContent } from "@/components/AboutContent";
 
 export const metadata: Metadata = {
-    title: "À Propos | Indiana Aflalo - Consultante SEO & Experte Acquisition Digitale",
+    title: "À Propos | INDHACK, Consultante SEO",
     description: "Découvrez mon parcours : consultante SEO indépendante spécialisée en référencement naturel, audit technique et stratégie digitale. Accompagnement personnalisé pour PME et startups.",
     alternates: {
         canonical: "https://indhack.com/a-propos"

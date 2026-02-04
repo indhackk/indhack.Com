@@ -99,7 +99,7 @@ Découvrez mon expertise en [SEO local](/seo-local).
 **Vous devez faire un audit maintenant si :**
 
 - Votre site existe depuis plus de **6 mois** sans résultats
-- Vous préparez une [refonte de site](/refonte-site-web)
+- Vous préparez une [refonte site web](/refonte-site-web)
 - Votre **trafic organique** stagne ou diminue
 - Vous n'avez jamais fait d'audit professionnel
 - Vos concurrents vous dépassent sur Google

@@ -22,7 +22,7 @@ Le **GEO** (Generative Engine Optimization) est l'ensemble des techniques visant
 | **Claude** | Anthropic | En progression |
 | **Copilot** | Microsoft | Intégré à Bing |
 
-Contrairement au [SEO classique](/referencement-naturel) qui vise à apparaître dans une liste de liens, le GEO vise à être **cité comme source** dans les réponses générées par l'IA.
+Contrairement au [référencement naturel](/referencement-naturel) classique qui vise à apparaître dans une liste de liens, le GEO vise à être **cité comme source** dans les réponses générées par l'IA.
 
 ## Pourquoi le GEO est crucial pour votre visibilité ?
 
@@ -102,7 +102,7 @@ Des outils spécialisés commencent à émerger pour tracker les **citations IA*
 En tant que [consultante SEO experte](/consultant-seo), j'intègre nativement les optimisations GEO dans chaque stratégie. Un site prêt pour l'IA est un site qui a **10 coups d'avance** sur sa concurrence.
 
 **Mon approche GEO-ready inclut :**
-- [Audit](/audit-seo) de votre présence dans les réponses IA
+- [Audit SEO](/audit-seo) de votre présence dans les réponses IA
 - Optimisation **Schema.org** avancée
 - Stratégie de contenu **E-E-A-T**
 - Monitoring des citations IA

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import AuditSeoClient from "./AuditSeoClient";
 
 export const metadata: Metadata = {
-    title: "Audit SEO Complet & Technique",
+    title: "Audit SEO | INDHACK, Consultante SEO",
     description: "Identifiez les freins SEO de votre site en 48h. Rapport détaillé + roadmap priorisée par ROI. +150 points analysés. Audit gratuit disponible. ✆ 06 61 13 97 48",
     alternates: {
         canonical: "https://indhack.com/audit-seo"

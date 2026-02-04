@@ -14,7 +14,7 @@ Créer un site Internet, c'est facile. **Créer un site Internet visible sur Goo
 
 La plupart des entrepreneurs font l'erreur de séparer la création de leur site et leur stratégie **SEO**. Ils pensent d'abord au design, puis "on verra pour Google plus tard". **C'est exactement l'inverse qu'il faut faire.**
 
-Un site construit sans penser au [référencement](/referencement-naturel) dès le départ, c'est comme construire une maison sans fondations. Il faudra tout casser pour recommencer.
+Un site construit sans penser au [référencement naturel](/referencement-naturel) dès le départ, c'est comme construire une maison sans fondations. Il faudra tout casser pour recommencer.
 
 ### Les erreurs les plus fréquentes
 
@@ -68,7 +68,7 @@ Chaque page doit avoir un objectif clair et s'inscrire dans une **hiérarchie lo
 | Niveau | Rôle | Exemple |
 |--------|------|---------|
 | **Page mère** | Service principal | "[Consultant SEO Nice](/seo-nice)" |
-| **Pages filles** | Sous-services | "[Audit technique](/audit-seo)" |
+| **Pages filles** | Sous-services | "[Audit SEO](/audit-seo)" |
 | **Articles blog** | Longue traîne | Cet article ! |
 
 ### Développement technique SEO-first

@@ -78,7 +78,53 @@ export default function Home() {
                             "SEO Local",
                             "Gestion Réseaux Sociaux"
                         ],
-                        "priceRange": "€€"
+                        "priceRange": "€€",
+                        "sameAs": [
+                            "https://www.linkedin.com/in/indianaaflalo",
+                            "https://twitter.com/indhack"
+                        ]
+                    })
+                }}
+            />
+
+            {/* Schema Markup - Organization & WebSite */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "IndHack",
+                        "url": "https://indhack.com",
+                        "logo": "https://indhack.com/images/logo-indhack.png",
+                        "foundingDate": "2024",
+                        "founders": [{
+                            "@type": "Person",
+                            "name": "Indiana Aflalo"
+                        }],
+                        "contactPoint": {
+                            "@type": "ContactPoint",
+                            "telephone": "+33661139748",
+                            "contactType": "customer service",
+                            "email": "contact@indhack.com"
+                        }
+                    })
+                }}
+            />
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "WebSite",
+                        "name": "IndHack",
+                        "url": "https://indhack.com",
+                        "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": "https://indhack.com/blog?q={search_term_string}",
+                            "query-input": "required name=search_term_string"
+                        }
                     })
                 }}
             />

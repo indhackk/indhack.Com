@@ -5,7 +5,7 @@ import { Metadata } from "next";
 const cityData = getCityBySlug("seo-nice")!;
 
 export const metadata: Metadata = {
-    title: `Consultante SEO Nice (${cityData.zipCode}) | Experte Référencement Freelance`,
+    title: `Consultant SEO Nice | INDHACK, Consultante SEO`,
     description: `Boostez votre visibilité sur Google à Nice avec une experte SEO locale. Audit gratuit, stratégie sur-mesure, accompagnement personnalisé pour PME et entrepreneurs niçois. ✆ 06 61 13 97 48`,
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`
