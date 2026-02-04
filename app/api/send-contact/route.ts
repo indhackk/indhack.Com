@@ -42,7 +42,8 @@ export async function POST(request: NextRequest) {
         const { name, email, phone, company, website, budget, message } = validation.data;
 
         // PRIORITÉ: Web3Forms (plus fiable, clé API configurée)
-        const WEB3FORMS_KEY = process.env.WEB3FORMS_ACCESS_KEY || process.env.WEBFORM;
+        // Note: Web3Forms dit que c'est une clé publique (comme un form ID)
+        const WEB3FORMS_KEY = process.env.WEB3FORMS_ACCESS_KEY || process.env.WEBFORM || 'dbf0dae2-86ac-495e-a670-c4fc028ce036';
         if (WEB3FORMS_KEY) {
             const web3Response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
