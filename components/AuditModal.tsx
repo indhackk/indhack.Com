@@ -28,22 +28,22 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
         setIsSubmitting(true);
         setSubmitStatus('idle');
 
+        // Création du FormData pour envoi natif
+        const formDataToSend = new FormData();
+        formDataToSend.append('access_key', 'dbf0dae2-86ac-495e-a670-c4fc028ce036');
+        formDataToSend.append('subject', `Demande d'Audit SEO - ${formData.name}`);
+        formDataToSend.append('from_name', formData.name);
+        formDataToSend.append('replyto', formData.email);
+        formDataToSend.append('Nom', formData.name);
+        formDataToSend.append('Email', formData.email);
+        formDataToSend.append('Telephone', formData.phone || 'Non renseigné');
+        formDataToSend.append('Site_Web', formData.website || 'Non renseigné');
+        formDataToSend.append('Message', formData.message || 'Demande d\'audit SEO depuis IndHack.com');
+
         try {
-            // Envoi direct à Web3Forms (plus fiable)
             const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    access_key: 'dbf0dae2-86ac-495e-a670-c4fc028ce036',
-                    subject: `Demande d'Audit SEO - ${formData.name}`,
-                    from_name: formData.name,
-                    replyto: formData.email,
-                    Nom: formData.name,
-                    Email: formData.email,
-                    Telephone: formData.phone || 'Non renseigné',
-                    Site_Web: formData.website || 'Non renseigné',
-                    Message: formData.message || 'Demande d\'audit SEO depuis IndHack.com',
-                })
+                body: formDataToSend
             });
 
             const result = await response.json();
@@ -56,9 +56,11 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                     onClose();
                 }, 2500);
             } else {
+                console.error('Web3Forms error:', result);
                 setSubmitStatus('error');
             }
-        } catch {
+        } catch (err) {
+            console.error('Fetch error:', err);
             setSubmitStatus('error');
         } finally {
             setIsSubmitting(false);

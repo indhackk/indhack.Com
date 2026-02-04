@@ -26,24 +26,24 @@ export function ContactForm() {
         setIsLoading(true);
         setError("");
 
+        // Création du FormData pour envoi natif
+        const formDataToSend = new FormData();
+        formDataToSend.append('access_key', 'dbf0dae2-86ac-495e-a670-c4fc028ce036');
+        formDataToSend.append('subject', `Nouveau contact - ${formData.name}${formData.company ? ` (${formData.company})` : ''}`);
+        formDataToSend.append('from_name', formData.name);
+        formDataToSend.append('replyto', formData.email);
+        formDataToSend.append('Nom', formData.name);
+        formDataToSend.append('Email', formData.email);
+        formDataToSend.append('Telephone', formData.phone || 'Non renseigné');
+        formDataToSend.append('Entreprise', formData.company || 'Non renseigné');
+        formDataToSend.append('Site_Web', formData.website || 'Non renseigné');
+        formDataToSend.append('Budget', formData.budget || 'Non renseigné');
+        formDataToSend.append('Message', formData.message);
+
         try {
-            // Envoi direct à Web3Forms (plus fiable que de passer par l'API backend)
             const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    access_key: 'dbf0dae2-86ac-495e-a670-c4fc028ce036',
-                    subject: `Nouveau contact - ${formData.name}${formData.company ? ` (${formData.company})` : ''}`,
-                    from_name: formData.name,
-                    replyto: formData.email,
-                    Nom: formData.name,
-                    Email: formData.email,
-                    Telephone: formData.phone || 'Non renseigné',
-                    Entreprise: formData.company || 'Non renseigné',
-                    Site_Web: formData.website || 'Non renseigné',
-                    Budget: formData.budget || 'Non renseigné',
-                    Message: formData.message,
-                })
+                body: formDataToSend
             });
 
             const result = await response.json();
@@ -52,6 +52,7 @@ export function ContactForm() {
                 setIsSubmitted(true);
                 setFormData({ name: "", email: "", phone: "", company: "", website: "", message: "", budget: "" });
             } else {
+                console.error('Web3Forms error:', result);
                 setError("Une erreur est survenue. Réessayez ou appelez-moi au 06 61 13 97 48.");
             }
         } catch (err: any) {
