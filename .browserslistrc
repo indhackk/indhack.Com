@@ -1,0 +1,18 @@
+# Cibler uniquement les navigateurs modernes pour réduire les polyfills
+# Économise ~12 KiB de JS selon PageSpeed
+
+# Production: navigateurs avec support ES2020+
+[production]
+chrome >= 90
+firefox >= 90
+safari >= 14
+edge >= 90
+ios >= 14
+and_chr >= 90
+and_ff >= 90
+
+# Development: navigateurs récents uniquement
+[development]
+last 1 chrome version
+last 1 firefox version
+last 1 safari version

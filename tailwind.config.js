@@ -25,7 +25,7 @@ module.exports = {
                 'accent-clair': '#9DADA4',
                 'sauge': '#7BA393',         // Sauge plus lumineux pour meilleur contraste WCAG
                 'ink': '#2A3830',           // Texte principal, moins noir
-                'soft': '#6B7D74',          // Texte secondaire
+                'soft': '#556962',          // Texte secondaire - assombri pour WCAG AA
                 'line': '#E4EBE7',          // Bordures
 
                 border: "hsl(var(--border))",

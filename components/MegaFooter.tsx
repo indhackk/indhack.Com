@@ -95,7 +95,7 @@ export function MegaFooter() {
                             />
                             <span className="text-2xl font-heading font-bold">INDHACK</span>
                         </Link>
-                        <p className="text-white/60 text-sm mb-6 leading-relaxed">
+                        <p className="text-white/70 text-sm mb-6 leading-relaxed">
                             <Link href="/consultant-seo" className="text-white/80 hover:text-sauge transition-colors font-bold">
                                 Consultante SEO indépendante
                             </Link>{" "}spécialisée en{" "}
@@ -143,7 +143,7 @@ export function MegaFooter() {
                             </a>
                             <a
                                 href="mailto:contact@indhack.com"
-                                className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm"
+                                className="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm"
                             >
                                 <Mail className="w-4 h-4" />
                                 contact@indhack.com
@@ -161,12 +161,12 @@ export function MegaFooter() {
                                 <li key={link.href}>
                                     <Link
                                         href={link.href}
-                                        className="group flex items-start gap-2 text-white/60 hover:text-white transition-colors"
+                                        className="group flex items-start gap-2 text-white/70 hover:text-white transition-colors"
                                     >
                                         <ArrowRight className="w-4 h-4 mt-0.5 text-sauge opacity-0 group-hover:opacity-100 transition-opacity" />
                                         <div>
                                             <span className="font-medium">{link.title}</span>
-                                            <span className="block text-xs text-white/40">{link.description}</span>
+                                            <span className="block text-xs text-white/60">{link.description}</span>
                                         </div>
                                     </Link>
                                 </li>
@@ -183,7 +183,7 @@ export function MegaFooter() {
                             </h4>
                             <button
                                 onClick={() => setShowAllCities(!showAllCities)}
-                                className="text-xs text-white/40 hover:text-white flex items-center gap-1 transition-colors"
+                                className="text-xs text-white/60 hover:text-white flex items-center gap-1 transition-colors"
                             >
                                 {showAllCities ? "Réduire" : "Voir tout"}
                                 <ChevronDown className={`w-4 h-4 transition-transform ${showAllCities ? "rotate-180" : ""}`} />
@@ -194,7 +194,7 @@ export function MegaFooter() {
                         <div className={`grid grid-cols-2 md:grid-cols-3 gap-6 ${!showAllCities ? "max-h-48 overflow-hidden" : ""}`}>
                             {CITIES_BY_REGION.map((region) => (
                                 <div key={region.region}>
-                                    <p className="text-xs font-bold text-white/30 uppercase tracking-wider mb-2">
+                                    <p className="text-xs font-bold text-white/50 uppercase tracking-wider mb-2">
                                         {region.region}
                                     </p>
                                     <ul className="space-y-1">
@@ -202,7 +202,7 @@ export function MegaFooter() {
                                             <li key={city.slug}>
                                                 <Link
                                                     href={city.slug}
-                                                    className="text-sm text-white/60 hover:text-sauge transition-colors"
+                                                    className="text-sm text-white/70 hover:text-sauge transition-colors"
                                                 >
                                                     Consultant SEO {city.name}
                                                 </Link>
@@ -251,7 +251,7 @@ export function MegaFooter() {
                                 <Link
                                     key={link.href}
                                     href={link.href}
-                                    className="text-xs uppercase tracking-widest text-white/30 hover:text-white transition-colors"
+                                    className="text-xs uppercase tracking-widest text-white/50 hover:text-white transition-colors"
                                 >
                                     {link.title}
                                 </Link>
@@ -259,7 +259,7 @@ export function MegaFooter() {
                         </div>
 
                         {/* Copyright with homepage backlink */}
-                        <p className="text-xs text-white/20 text-center">
+                        <p className="text-xs text-white/50 text-center">
                             © {new Date().getFullYear()}{" "}
                             <Link href="/" className="hover:text-sauge transition-colors">
                                 IndHack - Experte en référencement naturel

@@ -1,6 +1,28 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     // ══════════════════════════════════════════════════════════════
+    // OPTIMISATIONS PERFORMANCE - Cible 100/100 PageSpeed
+    // ══════════════════════════════════════════════════════════════
+
+    // Supprime console.log en production
+    compiler: {
+        removeConsole: process.env.NODE_ENV === 'production',
+    },
+
+    // Optimisations expérimentales
+    experimental: {
+        // Optimise le CSS (réduit ~15 KiB selon PageSpeed)
+        optimizeCss: true,
+    },
+
+    // Tree-shaking agressif pour les gros packages
+    modularizeImports: {
+        'lucide-react': {
+            transform: 'lucide-react/dist/esm/icons/{{member}}',
+        },
+    },
+
+    // ══════════════════════════════════════════════════════════════
     // REDIRECTIONS 301 - Nettoyage des anciennes URLs WordPress
     // ══════════════════════════════════════════════════════════════
     async redirects() {
