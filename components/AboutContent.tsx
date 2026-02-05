@@ -174,16 +174,16 @@ export function AboutContent() {
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
                         <Link href="/audit-seo" className="p-4 bg-gray-50 rounded-xl text-center hover:bg-sauge hover:text-white transition-all group">
-                            <span className="text-sm font-medium">Audit SEO</span>
+                            <span className="text-sm font-medium">Diagnostic complet</span>
                         </Link>
                         <Link href="/referencement-naturel" className="p-4 bg-gray-50 rounded-xl text-center hover:bg-sauge hover:text-white transition-all group">
-                            <span className="text-sm font-medium">Référencement Naturel</span>
+                            <span className="text-sm font-medium">Visibilité organique</span>
                         </Link>
                         <Link href="/creation-site-web" className="p-4 bg-gray-50 rounded-xl text-center hover:bg-sauge hover:text-white transition-all group">
-                            <span className="text-sm font-medium">Création de Site</span>
+                            <span className="text-sm font-medium">Plateforme web</span>
                         </Link>
                         <Link href="/seo-local" className="p-4 bg-gray-50 rounded-xl text-center hover:bg-sauge hover:text-white transition-all group">
-                            <span className="text-sm font-medium">SEO Local</span>
+                            <span className="text-sm font-medium">Visibilité proximité</span>
                         </Link>
                     </div>
                 </div>

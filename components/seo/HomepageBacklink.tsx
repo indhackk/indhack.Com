@@ -8,14 +8,14 @@ import { ArrowLeft, Home, Sparkles } from "lucide-react";
 // Variations d'ancres pour le maillage interne vers la page d'accueil
 // Mots-clés principaux : référencement naturel, SEO, consultant SEO, experte SEO
 const ANCHOR_VARIATIONS = [
-    { text: "Experte en référencement naturel", icon: <Sparkles className="w-4 h-4" /> },
-    { text: "Consultante SEO France", icon: <Home className="w-4 h-4" /> },
-    { text: "Stratégie SEO sur-mesure", icon: <Sparkles className="w-4 h-4" /> },
+    { text: "Votre experte en visibilité organique", icon: <Sparkles className="w-4 h-4" /> },
+    { text: "Propulsez votre croissance digitale", icon: <Home className="w-4 h-4" /> },
+    { text: "Stratégie de visibilité sur-mesure", icon: <Sparkles className="w-4 h-4" /> },
     { text: "Dominez Google avec IndHack", icon: <Sparkles className="w-4 h-4" /> },
-    { text: "Experte référencement Google", icon: <Home className="w-4 h-4" /> },
-    { text: "Audit SEO et référencement", icon: <Sparkles className="w-4 h-4" /> },
-    { text: "Consultante SEO indépendante", icon: <Home className="w-4 h-4" /> },
-    { text: "Votre partenaire SEO", icon: <Sparkles className="w-4 h-4" /> },
+    { text: "Boostez votre présence en ligne", icon: <Home className="w-4 h-4" /> },
+    { text: "Diagnostic et accompagnement complet", icon: <Sparkles className="w-4 h-4" /> },
+    { text: "Expertise indépendante en visibilité", icon: <Home className="w-4 h-4" /> },
+    { text: "Votre partenaire croissance digitale", icon: <Sparkles className="w-4 h-4" /> },
 ];
 
 interface HomepageBacklinkProps {

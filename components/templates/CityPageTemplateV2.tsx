@@ -110,11 +110,11 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
 
     // Services liés avec liens vers sub-services
     const RELATED_SERVICES = [
-        { title: `Audit Technique ${city}`, href: `/${cityData.slug}/audit-technique`, desc: "Diagnostic technique approfondi", isPrimary: true },
-        { title: "Consultant SEO Freelance", href: "/consultant-seo", desc: "Mon accompagnement complet" },
-        { title: "Audit SEO Complet", href: "/audit-seo", desc: "Tous types d'audit SEO" },
-        { title: "Référencement Naturel", href: "/referencement-naturel", desc: "Stratégie SEO nationale" },
-        { title: "Création de Site", href: "/creation-site-web", desc: "Sites optimisés SEO" }
+        { title: `Diagnostic technique ${city}`, href: `/${cityData.slug}/audit-technique`, desc: "Analyse approfondie de votre site", isPrimary: true },
+        { title: "Accompagnement expert", href: "/consultant-seo", desc: "Votre partenaire visibilité" },
+        { title: "Diagnostic complet", href: "/audit-seo", desc: "Analyse de votre présence" },
+        { title: "Stratégie organique", href: "/referencement-naturel", desc: "Croissance durable" },
+        { title: "Plateforme performante", href: "/creation-site-web", desc: "Site optimisé conversion" }
     ];
 
     // Articles blog connexes pour le maillage

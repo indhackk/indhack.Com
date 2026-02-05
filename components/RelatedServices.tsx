@@ -10,45 +10,45 @@ interface Service {
 
 const ALL_SERVICES: Record<string, Service> = {
     "consultant-seo": {
-        title: "Consultant SEO Freelance",
+        title: "Accompagnement personnalisé",
         href: "/consultant-seo",
-        description: "Accompagnement SEO personnalisé",
+        description: "Votre partenaire croissance",
         icon: <User className="w-5 h-5" />
     },
     "audit-seo": {
-        title: "Audit SEO Complet",
+        title: "Diagnostic approfondi",
         href: "/audit-seo",
-        description: "Diagnostic technique de votre site",
+        description: "Analyse technique complète",
         icon: <FileSearch className="w-5 h-5" />
     },
     "referencement-naturel": {
-        title: "Référencement Naturel",
+        title: "Stratégie de visibilité",
         href: "/referencement-naturel",
-        description: "Stratégie SEO complète",
+        description: "Croissance organique durable",
         icon: <Search className="w-5 h-5" />
     },
     "creation-site-web": {
-        title: "Création de Site Web",
+        title: "Plateforme performante",
         href: "/creation-site-web",
-        description: "Sites optimisés SEO",
+        description: "Site optimisé conversion",
         icon: <Globe className="w-5 h-5" />
     },
     "refonte-site-web": {
-        title: "Refonte de Site Web",
+        title: "Transformation digitale",
         href: "/refonte-site-web",
         description: "Migration sans perte de trafic",
         icon: <RefreshCw className="w-5 h-5" />
     },
     "community-manager": {
-        title: "Community Manager",
+        title: "Présence sociale",
         href: "/community-manager",
-        description: "Gestion réseaux sociaux",
+        description: "Animation communautaire",
         icon: <Users className="w-5 h-5" />
     },
     "seo-local": {
-        title: "SEO Local",
+        title: "Visibilité de proximité",
         href: "/seo-local",
-        description: "Visibilité dans votre ville",
+        description: "Dominez votre zone",
         icon: <MapPin className="w-5 h-5" />
     }
 };

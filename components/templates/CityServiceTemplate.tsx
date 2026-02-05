@@ -124,13 +124,13 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
         { icon: <AlertTriangle className="w-6 h-6" />, label: "Erreurs 4xx/5xx", status: "Détection & fix" },
     ];
 
-    // Related services for internal linking
+    // Related services for internal linking (ancres sémantiques)
     const relatedServices = [
-        { title: "Consultant SEO Freelance", href: "/consultant-seo", desc: "Mon accompagnement complet", icon: <Target className="w-5 h-5" /> },
-        { title: "Audit SEO Complet", href: "/audit-seo", desc: "Diagnostic technique + sémantique", icon: <FileSearch className="w-5 h-5" /> },
-        { title: `Consultant SEO ${city}`, href: `/${cityData.slug}`, desc: "Stratégie locale complète", icon: <Target className="w-5 h-5" /> },
-        { title: "Référencement Naturel", href: "/referencement-naturel", desc: "Visibilité nationale", icon: <TrendingUp className="w-5 h-5" /> },
-        { title: "Création de Site", href: "/creation-site-web", desc: "Site optimisé SEO dès le départ", icon: <Globe className="w-5 h-5" /> }
+        { title: "Votre partenaire visibilité", href: "/consultant-seo", desc: "Accompagnement expert", icon: <Target className="w-5 h-5" /> },
+        { title: "Diagnostic approfondi", href: "/audit-seo", desc: "Analyse technique + sémantique", icon: <FileSearch className="w-5 h-5" /> },
+        { title: `Stratégie locale ${city}`, href: `/${cityData.slug}`, desc: "Croissance sur votre marché", icon: <Target className="w-5 h-5" /> },
+        { title: "Croissance organique durable", href: "/referencement-naturel", desc: "Visibilité nationale", icon: <TrendingUp className="w-5 h-5" /> },
+        { title: "Plateforme optimisée conversion", href: "/creation-site-web", desc: "Site pensé pour Google", icon: <Globe className="w-5 h-5" /> }
     ];
 
     // Articles blog connexes pour le maillage
