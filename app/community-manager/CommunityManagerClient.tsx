@@ -78,8 +78,16 @@ const CommunityManagerFAQ = [
         answer: "Oui ! Reels Instagram, TikToks, vidéos explicatives courtes. Pour une production plus complexe (interviews, animations), collaboration avec des vidéastes de confiance."
     },
     {
-        question: "Quels sont vos tarifs ?",
-        answer: "Les tarifs sont adaptés selon le nombre de réseaux, la fréquence de publication et le niveau de création requis (vidéo, photo). Audit offert lors du premier rendez-vous pour établir un devis sur-mesure."
+        question: "Combien coûte un community manager ?",
+        answer: "Les forfaits démarrent à <strong>400€/mois</strong> pour une gestion basique (1 réseau, 3 posts/semaine). Un accompagnement complet multi-plateformes avec création de contenu vidéo se situe entre <strong>800€ et 1 500€/mois</strong>."
+    },
+    {
+        question: "Comment se passe la collaboration au quotidien ?",
+        answer: "Je propose un calendrier éditorial mensuel validé ensemble. Vous gardez le contrôle éditorial, je m'occupe de l'exécution. Communication via un outil dédié (Notion, Slack) pour valider les contenus avant publication."
+    },
+    {
+        question: "Les réseaux sociaux remplacent-ils le SEO ?",
+        answer: "Non, ils sont <strong>complémentaires</strong>. Les réseaux sociaux génèrent de la visibilité immédiate et du relationnel, le SEO apporte du trafic qualifié durable. L'idéal est de combiner les deux pour une stratégie d'acquisition complète."
     }
 ];
 

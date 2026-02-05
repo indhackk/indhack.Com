@@ -69,6 +69,7 @@ const SERVICES = [
 
 const LEGAL = [
     { title: "Blog SEO", href: "/blog" },
+    { title: "FAQ", href: "/faq" },
     { title: "Mentions légales", href: "/mentions-legales" },
     { title: "Confidentialité", href: "/confidentialite" },
     { title: "CGV", href: "/cgv" },

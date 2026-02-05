@@ -84,8 +84,16 @@ const CREATION_FAQ = [
         answer: "C'est la base de tout ce que je construis. Structure optimisée, balises correctes, vitesse de chargement, données structurées : tout est pensé pour le <strong>référencement dès la conception</strong>."
     },
     {
-        question: "Quels sont vos tarifs ?",
-        answer: `Chaque projet est unique. L'investissement dépend de la complexité technique et du design souhaité. Un audit gratuit nous permet de définir précisément vos besoins et de construire une offre adaptée à votre budget.`
+        question: "Combien coûte un site web professionnel ?",
+        answer: "Un <strong>site vitrine</strong> démarre à partir de <strong>1 500€</strong>, un <strong>site e-commerce</strong> à partir de <strong>3 000€</strong>. Le tarif dépend de la complexité technique et du design souhaité. Je fournis toujours un devis détaillé après notre premier échange."
+    },
+    {
+        question: "Pourquoi ne pas utiliser Wix ou WordPress.com ?",
+        answer: "Ces plateformes sont pratiques pour débuter mais <strong>limitées en SEO</strong> : code lourd, personnalisation restreinte, vitesse médiocre. Pour un projet business sérieux, un site sur-mesure offre de bien meilleures performances et un meilleur retour sur investissement."
+    },
+    {
+        question: "Proposez-vous la maintenance du site ?",
+        answer: "Oui, je propose des <strong>forfaits de maintenance</strong> qui incluent : mises à jour de sécurité, sauvegardes, monitoring de performance et support prioritaire. C'est facultatif mais recommandé pour garder votre site performant dans le temps."
     }
 ];
 
@@ -217,6 +225,37 @@ export default function CreationSiteClient() {
                                 <h4 className="font-bold mb-2">Sécurité et SSL</h4>
                                 <p className="text-white/60 text-sm">Certificat HTTPS et protections avancées</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Articles liés */}
+            <section className="py-16 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                            Approfondir le sujet
+                        </h2>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <Link href="/blog/cout-site-web-2026" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Combien coûte un site web en 2026 ?
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    Guide complet des tarifs : site vitrine, e-commerce, sur-mesure.
+                                </p>
+                            </Link>
+                            <Link href="/blog/comment-creer-site-visible-google" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Comment créer un site visible sur Google
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    Les bonnes pratiques pour un site optimisé dès la conception.
+                                </p>
+                            </Link>
                         </div>
                     </div>
                 </div>

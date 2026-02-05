@@ -54,6 +54,22 @@ const SEO_FAQ = [
     {
         question: "Quelle différence avec une agence classique ?",
         answer: "Je suis votre unique interlocutrice. Pas de junior qui apprend sur votre dossier comme en agence. Juste une expertise Senior, de la réactivité directe et une implication personnelle dans votre réussite."
+    },
+    {
+        question: "Combien coûte un accompagnement SEO ?",
+        answer: "Un accompagnement mensuel se situe entre <strong>500€ et 2000€/mois</strong> selon l'ampleur du projet et le niveau de concurrence. L'investissement est calibré sur vos objectifs business et votre capacité à absorber la croissance."
+    },
+    {
+        question: "Quelle différence entre SEO et SEA (Google Ads) ?",
+        answer: "Le <strong>SEO</strong> travaille sur les résultats organiques (gratuits) - c'est un investissement long terme qui continue de rapporter. Le <strong>SEA</strong> affiche des annonces payantes - résultats immédiats mais coût par clic. Les deux sont complémentaires."
+    },
+    {
+        question: "Garantissez-vous la première position Google ?",
+        answer: "<strong>Non, et méfiez-vous de ceux qui le promettent.</strong> Google seul décide des classements. Ce que je garantis : une méthodologie rigoureuse, un travail transparent et une amélioration mesurable de votre visibilité."
+    },
+    {
+        question: "Mon site est nouveau, peut-on faire du SEO ?",
+        answer: "C'est même le <strong>meilleur moment</strong> ! Un site nouveau peut être conçu avec une architecture SEO optimale dès le départ. Google met quelques mois à faire confiance, mais des fondations solides accélèrent les résultats."
     }
 ];
 
@@ -266,6 +282,37 @@ export default function ReferencementClient() {
                                     Toutes les villes →
                                 </Link>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Articles liés */}
+            <section className="py-16 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                            Approfondir le sujet
+                        </h2>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <Link href="/blog/seo-vs-sea-que-choisir" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    SEO vs SEA : que choisir ?
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    Comparatif complet : coûts, délais, ROI. Guide pour faire le bon choix.
+                                </p>
+                            </Link>
+                            <Link href="/blog/google-business-profile-guide-complet" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Google Business Profile : guide complet
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    Optimisez votre fiche pour dominer le pack local.
+                                </p>
+                            </Link>
                         </div>
                     </div>
                 </div>

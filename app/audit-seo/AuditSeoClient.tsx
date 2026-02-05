@@ -54,6 +54,18 @@ const AUDIT_FAQ = [
     {
         question: "Sous quel format est livré l'audit SEO ?",
         answer: "Vous recevez un rapport structuré avec une <strong>roadmap opérationnelle</strong>. Pas de blabla inutile : des recommandations concrètes, priorisées par impact business et facilité d'implémentation."
+    },
+    {
+        question: "Combien coûte un audit SEO ?",
+        answer: "Un audit complet démarre à partir de <strong>500€</strong> pour un site vitrine. Le tarif varie selon la taille du site et la profondeur d'analyse requise. Je propose un premier diagnostic gratuit pour évaluer précisément vos besoins."
+    },
+    {
+        question: "Combien de temps dure un audit SEO complet ?",
+        answer: "Comptez <strong>5 à 10 jours ouvrés</strong> selon la complexité de votre site. Je préfère prendre le temps d'une analyse approfondie plutôt que de livrer un rapport automatisé superficiel."
+    },
+    {
+        question: "Que contient le rapport d'audit ?",
+        answer: "Le rapport inclut : analyse technique (indexation, vitesse, Core Web Vitals), audit sémantique (mots-clés, contenu), profil de backlinks, benchmark concurrentiel, et surtout une <strong>roadmap priorisée</strong> avec les actions à mener classées par impact."
     }
 ];
 
@@ -228,6 +240,37 @@ export default function AuditSeoClient() {
                                     </Link>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Articles liés */}
+            <section className="py-16 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                            Approfondir le sujet
+                        </h2>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <Link href="/blog/contenu-rapport-audit-seo" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Audit SEO : que contient le rapport ?
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    Découvrez en détail ce que contient un rapport d'audit SEO professionnel.
+                                </p>
+                            </Link>
+                            <Link href="/blog/importance-audit-seo" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Pourquoi l'audit SEO est le point de départ
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    Ne naviguez plus à vue. L'audit est l'investissement le plus rentable.
+                                </p>
+                            </Link>
                         </div>
                     </div>
                 </div>

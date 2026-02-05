@@ -531,5 +531,201 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
             "données structurées", "schema.org", "profondeur de page", "cocon sémantique", "audit de logs",
             "PageSpeed Insights", "Lighthouse", "crawlabilité", "pages orphelines", "canonical"
         ]
+    },
+    "creation-site-web": {
+        slug: "creation-site-web",
+        title: "Création de Site Web",
+        metaTitle: "Création Site Web {city} {deptCode} - Site Optimisé SEO | INDHACK",
+        metaDescription: "Création de site web professionnel à {city}. Site vitrine, e-commerce ou sur-mesure optimisé SEO dès la conception. Devis gratuit. ✆ 06 61 13 97 48",
+        heroTitle: "Création de Site Web à {city}",
+        heroSubtitle: "Je conçois des sites web performants, pensés SEO dès la première ligne de code. Votre site sera visible sur Google dès sa mise en ligne.",
+        category: "Création Web",
+        parentService: "/creation-site-web",
+        h2Sections: [
+            {
+                title: "Pourquoi créer un site web optimisé SEO ?",
+                content: "En tant que <a href=\"/{citySlug}\" class=\"text-sauge font-bold hover:underline\">consultante SEO à {city}</a>, je ne crée pas de simples sites vitrines. Je construis des <strong>machines à générer du trafic organique</strong>.<br/><br/>La majorité des agences web créent d'abord le site, puis « pensent au SEO » ensuite. Résultat : 6 mois de refonte technique, du budget gaspillé, et un site qui rame à se positionner.<br/><br/>Ma méthode est inverse : <strong>le SEO guide chaque décision</strong> — architecture, URLs, temps de chargement, maillage interne. Votre site est conçu pour plaire à Google ET à vos visiteurs.",
+                bullets: [
+                    "<strong>Architecture SEO-first</strong> : structure d'URLs propre, hiérarchie de pages logique, cocon sémantique intégré",
+                    "<strong>Performance maximale</strong> : score PageSpeed 90+ garanti, Core Web Vitals optimisés, temps de chargement < 3s",
+                    "<strong>Mobile-first natif</strong> : 70% du trafic est mobile, votre site sera parfait sur tous les écrans",
+                    "<strong>Contenu optimisé</strong> : balises title, meta descriptions, Hn structurés, données structurées schema.org",
+                    "<strong>Indexation immédiate</strong> : sitemap XML, robots.txt configuré, soumission Search Console le jour J"
+                ]
+            },
+            {
+                title: "Les technologies que j'utilise",
+                content: "Je travaille avec les <strong>technologies les plus performantes</strong> du marché pour créer des sites rapides, sécurisés et évolutifs.<br/><br/>Pas de WordPress bricolé avec 40 plugins qui ralentissent tout. Je privilégie les solutions modernes qui garantissent <strong>performance et maintenabilité</strong> sur le long terme.",
+                bullets: [
+                    "<strong>Next.js / React</strong> : le framework utilisé par Netflix, TikTok et Notion. Rendu serveur ultra-rapide, SEO natif parfait",
+                    "<strong>Tailwind CSS</strong> : design sur-mesure sans surcharge CSS, sites légers et cohérents",
+                    "<strong>Vercel / Netlify</strong> : hébergement edge mondial, HTTPS automatique, déploiements instantanés",
+                    "<strong>Headless CMS</strong> : vous gérez votre contenu facilement, sans toucher au code",
+                    "<strong>WordPress optimisé</strong> : si vous préférez WordPress, je le configure proprement avec un thème sur-mesure léger"
+                ]
+            },
+            {
+                title: "Types de sites que je crée",
+                content: "Que vous soyez artisan à {city}, startup tech ou commerce local, je conçois le site adapté à vos besoins et votre budget.",
+                bullets: [
+                    "<strong>Site vitrine</strong> : présentez votre activité avec un site élégant qui convertit les visiteurs en clients",
+                    "<strong>Site e-commerce</strong> : vendez en ligne avec une boutique optimisée pour le SEO et la conversion",
+                    "<strong>Landing pages</strong> : pages de vente haute conversion pour vos campagnes marketing",
+                    "<strong>Blog professionnel</strong> : positionnez-vous comme expert de votre domaine avec du contenu qui ranke",
+                    "<strong>Application web</strong> : portails clients, dashboards, outils métier sur-mesure"
+                ]
+            },
+            {
+                title: "Ce qui différencie mes créations",
+                content: "À {city} comme ailleurs, les agences web pullulent. La différence avec moi ? <strong>Je suis d'abord SEO, ensuite développeuse</strong>.<br/><br/>Chaque site que je crée est pensé pour performer sur Google. Pas de « on verra le référencement plus tard ». Pas de site joli mais invisible. Vous avez un actif digital qui travaille pour vous 24/7.",
+                bullets: [
+                    "<strong>Audit de mots-clés préalable</strong> : je définis la stratégie SEO AVANT de coder. Vos pages ciblent les bonnes requêtes dès le départ",
+                    "<strong>Maillage interne stratégique</strong> : chaque lien est pensé pour distribuer le PageRank vers vos pages commerciales",
+                    "<strong>Formation incluse</strong> : je vous forme à la gestion de votre site et aux bonnes pratiques SEO",
+                    "<strong>Suivi de positionnement</strong> : 3 mois de monitoring offerts pour suivre vos premiers résultats Google"
+                ]
+            }
+        ],
+        methodology: [
+            { step: "01", title: "Stratégie & Mots-clés", desc: "J'analyse votre marché et vos concurrents à {city}. Je définis les <strong>mots-clés stratégiques</strong> que votre site devra cibler. Cette étape conditionne toute l'architecture." },
+            { step: "02", title: "Maquettes & Validation", desc: "Je crée les <strong>maquettes UI/UX</strong> de votre site. Vous visualisez le résultat final et validez avant le développement. Modifications illimitées à cette étape." },
+            { step: "03", title: "Développement SEO-First", desc: "Je développe votre site avec une <strong>architecture optimisée</strong>, des performances maximales et un code propre. Chaque page est pensée pour ranker." },
+            { step: "04", title: "Mise en ligne & Indexation", desc: "Je déploie votre site sur un hébergement performant, configure <strong>Google Search Console</strong>, soumets le sitemap et lance le monitoring de vos positions." }
+        ],
+        faq: [
+            {
+                question: "Combien coûte la création d'un site web ?",
+                answer: "Le prix dépend de la complexité de votre projet. Un <strong>site vitrine</strong> professionnel démarre autour de <strong>1 500€</strong>. Un <strong>site e-commerce</strong> ou une <strong>application sur-mesure</strong> représente un investissement plus conséquent. Je vous propose toujours un <strong>devis détaillé gratuit</strong> après avoir compris vos besoins. Mon approche SEO-first garantit un <strong>retour sur investissement</strong> supérieur aux sites « classiques »."
+            },
+            {
+                question: "En combien de temps mon site sera-t-il en ligne ?",
+                answer: "Comptez <strong>3 à 6 semaines</strong> pour un site vitrine, <strong>6 à 10 semaines</strong> pour un e-commerce. Je préfère travailler sur des délais réalistes plutôt que de bâcler. Chaque étape (stratégie, maquettes, développement, recette) a son importance. Un site bien fait dès le départ vous fait gagner des mois de corrections SEO par la suite."
+            },
+            {
+                question: "Pourquoi ne pas utiliser Wix ou Squarespace ?",
+                answer: "Ces plateformes sont pratiques pour débuter, mais <strong>limitées en SEO</strong>. Code lourd, personnalisation restreinte, vitesse de chargement médiocre, structure d'URL imposée... Pour un projet sérieux à {city}, vous avez besoin d'un site <strong>sur-mesure</strong> qui vous appartient totalement et qui peut évoluer avec votre business. C'est un investissement, pas une dépense."
+            },
+            {
+                question: "Mon site sera-t-il visible sur Google immédiatement ?",
+                answer: "Dès la mise en ligne, je soumets votre site à <strong>Google Search Console</strong> pour accélérer l'indexation. Les premières pages peuvent apparaître dans Google sous <strong>24 à 72h</strong>. Cependant, le <strong>positionnement</strong> sur des mots-clés compétitifs prend généralement <strong>3 à 6 mois</strong> de travail SEO continu. L'avantage de mon approche : votre site est optimisé dès le départ, donc les résultats arrivent plus vite."
+            },
+            {
+                question: "Puis-je gérer le contenu moi-même ensuite ?",
+                answer: "Absolument. Je configure un <strong>système de gestion de contenu</strong> (CMS) intuitif qui vous permet de modifier textes, images et pages sans toucher au code. Je vous fournis également une <strong>formation personnalisée</strong> et une documentation pour que vous soyez autonome. Et je reste disponible si vous avez des questions."
+            },
+            {
+                question: "Proposez-vous la maintenance du site ?",
+                answer: "Oui, je propose des <strong>forfaits de maintenance</strong> mensuels qui incluent : mises à jour de sécurité, sauvegardes, monitoring de performance, corrections de bugs, et support prioritaire. C'est facultatif mais recommandé pour garder votre site sécurisé et performant dans le temps. Je peux aussi former votre équipe technique si vous préférez gérer en interne."
+            }
+        ],
+        semanticKeywords: [
+            "création site web", "création site internet", "agence web", "développeur web",
+            "site vitrine", "site e-commerce", "landing page", "refonte site",
+            "Next.js", "React", "WordPress", "Tailwind CSS", "responsive design",
+            "Core Web Vitals", "PageSpeed", "mobile-first", "UX design", "UI design",
+            "hébergement web", "nom de domaine", "HTTPS", "SSL", "Vercel",
+            "CMS", "gestion de contenu", "blog professionnel", "SEO technique"
+        ]
+    },
+    "referencement-naturel": {
+        slug: "referencement-naturel",
+        title: "Référencement Naturel",
+        metaTitle: "Référencement Naturel {city} {deptCode} - Expert SEO | INDHACK",
+        metaDescription: "Stratégie de référencement naturel sur-mesure à {city}. Augmentez votre trafic organique de +200% en 6 mois. Audit gratuit. ✆ 06 61 13 97 48",
+        heroTitle: "Référencement Naturel à {city}",
+        heroSubtitle: "Je développe des stratégies SEO complètes qui propulsent votre site en première page Google. Plus de visibilité, plus de trafic qualifié, plus de clients.",
+        category: "SEO",
+        parentService: "/referencement-naturel",
+        h2Sections: [
+            {
+                title: "Qu'est-ce que le référencement naturel ?",
+                content: "Le <strong>référencement naturel</strong> (ou <strong>SEO</strong> pour Search Engine Optimization) désigne l'ensemble des techniques permettant d'améliorer la <strong>visibilité d'un site web</strong> dans les résultats organiques de Google.<br/><br/>En tant que <a href=\"/{citySlug}\" class=\"text-sauge font-bold hover:underline\">consultante SEO à {city}</a>, je ne vends pas de la « magie Google ». Je travaille sur les <strong>3 piliers fondamentaux</strong> du SEO : la technique, le contenu et la popularité (backlinks).<br/><br/>Mon objectif : faire de votre site une <strong>référence dans votre secteur</strong> aux yeux de Google. Pas avec des astuces court-termistes, mais avec une stratégie durable qui construit votre autorité.",
+                bullets: [
+                    "<strong>Pilier Technique</strong> : vitesse, mobile-first, indexation, architecture, données structurées",
+                    "<strong>Pilier Contenu</strong> : mots-clés stratégiques, cocon sémantique, contenu expert, optimisation on-page",
+                    "<strong>Pilier Popularité</strong> : backlinks de qualité, mentions, signaux de confiance externes"
+                ]
+            },
+            {
+                title: "Ma stratégie SEO en 4 phases",
+                content: "Une <strong>stratégie de référencement naturel</strong> efficace ne s'improvise pas. Je suis une méthodologie éprouvée qui a fait ses preuves auprès de dizaines de clients à {city} et partout en France.",
+                bullets: [
+                    "<strong>Phase 1 — Audit & Diagnostic</strong> : j'analyse votre site, vos concurrents, votre marché. J'identifie les opportunités et les blocages. C'est la feuille de route de tout le projet.",
+                    "<strong>Phase 2 — Fondations Techniques</strong> : je corrige les erreurs techniques qui freinent votre visibilité. Indexation, vitesse, maillage interne, Core Web Vitals.",
+                    "<strong>Phase 3 — Stratégie de Contenu</strong> : je définis les mots-clés à cibler, je crée le planning éditorial, j'optimise vos pages existantes et je produis du nouveau contenu SEO.",
+                    "<strong>Phase 4 — Netlinking & Autorité</strong> : je développe votre profil de liens avec des backlinks de qualité provenant de sites pertinents dans votre secteur."
+                ]
+            },
+            {
+                title: "Pourquoi investir en SEO plutôt qu'en publicité ?",
+                content: "Le <strong>SEO</strong> et le <strong>SEA</strong> (publicité Google Ads) sont complémentaires, mais le référencement naturel offre des avantages uniques pour votre business à {city}.",
+                bullets: [
+                    "<strong>ROI supérieur à long terme</strong> : chaque euro investi en SEO continue de rapporter pendant des années. La pub s'arrête dès que vous coupez le budget.",
+                    "<strong>Crédibilité renforcée</strong> : 70% des clics vont sur les résultats organiques. Les internautes font davantage confiance aux sites bien positionnés naturellement.",
+                    "<strong>Trafic qualifié durable</strong> : une fois en première page, vous recevez du trafic gratuit 24h/24. C'est un actif digital qui prend de la valeur.",
+                    "<strong>Indépendance</strong> : vous ne dépendez plus d'un budget pub mensuel. Votre visibilité ne disparaît pas du jour au lendemain."
+                ]
+            },
+            {
+                title: "Résultats que vous pouvez attendre",
+                content: "Le <strong>SEO</strong> est un investissement moyen/long terme. Les résultats ne sont pas immédiats, mais ils sont <strong>durables et cumulatifs</strong>. Voici ce que mes clients observent généralement :",
+                bullets: [
+                    "<strong>Mois 1-3</strong> : corrections techniques, premières optimisations, début d'indexation des nouveaux contenus",
+                    "<strong>Mois 3-6</strong> : progression visible sur les mots-clés secondaires, augmentation du trafic organique de 50 à 100%",
+                    "<strong>Mois 6-12</strong> : positionnement sur les mots-clés principaux, trafic organique multiplié par 2 à 3, génération de leads régulière",
+                    "<strong>Au-delà</strong> : consolidation des positions, expansion vers de nouveaux mots-clés, votre site devient une référence dans votre domaine"
+                ]
+            },
+            {
+                title: "Mon approche du SEO local à {city}",
+                content: "Si votre clientèle est à {city} et ses environs, le <strong>SEO local</strong> est essentiel. Je combine référencement naturel classique et optimisation géolocalisée pour maximiser votre visibilité locale.",
+                bullets: [
+                    "<strong>Optimisation Google Business Profile</strong> : fiche complète, catégories pertinentes, posts réguliers, gestion des avis",
+                    "<strong>Citations locales</strong> : présence cohérente sur les annuaires locaux de {city} et nationaux",
+                    "<strong>Contenu géolocalisé</strong> : pages dédiées à {city} et aux communes environnantes",
+                    "<strong>Schema LocalBusiness</strong> : données structurées pour apparaître dans le pack local Google"
+                ]
+            }
+        ],
+        methodology: [
+            { step: "01", title: "Audit Complet", desc: "J'analyse votre site, vos concurrents et votre marché. Je livre un <strong>rapport d'audit</strong> avec les opportunités SEO prioritaires et une feuille de route claire." },
+            { step: "02", title: "Optimisation Technique", desc: "Je corrige les erreurs techniques qui bloquent votre <strong>référencement</strong> : vitesse, indexation, maillage interne, mobile-first, Core Web Vitals." },
+            { step: "03", title: "Stratégie de Contenu", desc: "Je définis les <strong>mots-clés stratégiques</strong>, j'optimise vos pages existantes et je crée du contenu expert qui positionne votre site comme référence." },
+            { step: "04", title: "Netlinking & Suivi", desc: "Je développe votre <strong>autorité de domaine</strong> avec des backlinks de qualité. Reporting mensuel avec évolution des positions et du trafic." }
+        ],
+        faq: [
+            {
+                question: "Combien de temps pour voir des résultats SEO ?",
+                answer: "Le <strong>référencement naturel</strong> est un investissement moyen/long terme. Les premiers résultats (corrections techniques, indexation) sont visibles sous <strong>1 à 2 mois</strong>. Les gains de positionnement significatifs arrivent généralement entre <strong>3 et 6 mois</strong>. Pour des mots-clés très concurrentiels, comptez <strong>6 à 12 mois</strong> pour atteindre la première page. Je vous fournis un reporting mensuel pour suivre la progression."
+            },
+            {
+                question: "Garantissez-vous la première position Google ?",
+                answer: "Non, et <strong>fuyez quiconque le promet</strong>. Google seul décide des classements, et son algorithme évolue constamment. Ce que je garantis : une <strong>méthodologie rigoureuse</strong>, des optimisations conformes aux guidelines Google, un travail transparent avec reporting mensuel, et une amélioration mesurable de votre visibilité. Mes clients constatent en moyenne une <strong>augmentation de 150 à 300% de leur trafic organique</strong> sur 12 mois."
+            },
+            {
+                question: "Quelle différence entre SEO et SEA ?",
+                answer: "Le <strong>SEO</strong> (référencement naturel) travaille sur les résultats organiques de Google — c'est un investissement long terme qui continue de rapporter sans coût par clic. Le <strong>SEA</strong> (Google Ads) affiche des annonces payantes — vous payez chaque clic, et tout s'arrête quand le budget est épuisé. Je recommande généralement de <strong>combiner les deux</strong> : SEA pour des résultats immédiats, SEO pour construire un actif durable."
+            },
+            {
+                question: "Mon site est nouveau, peut-on faire du SEO ?",
+                answer: "Absolument, et c'est même <strong>le meilleur moment</strong>. Un site nouveau peut être conçu avec une <strong>architecture SEO optimale</strong> dès le départ, sans dette technique à corriger. Google met quelques mois à faire confiance à un nouveau domaine (« sandbox »), mais un travail SEO précoce permet de sortir de cette période avec des <strong>fondations solides</strong>. Mieux vaut bien faire dès le début que refondre dans 2 ans."
+            },
+            {
+                question: "Travaillez-vous avec des entreprises de tous secteurs ?",
+                answer: "Oui, j'accompagne des <strong>entreprises de toutes tailles et tous secteurs</strong> à {city} et partout en France : artisans, commerces locaux, PME, startups tech, e-commerces, professions libérales... Le SEO s'adapte à chaque contexte. J'ai développé une expertise particulière en <strong>SEO local</strong> pour les entreprises qui ciblent une clientèle géographique, et en <strong>SEO B2B</strong> pour la génération de leads."
+            },
+            {
+                question: "Comment mesurez-vous les résultats ?",
+                answer: "Je fournis un <strong>reporting mensuel détaillé</strong> qui inclut : évolution des positions sur vos mots-clés cibles, trafic organique (Google Analytics), impressions et clics (Search Console), autorité de domaine, backlinks acquis, et conversions générées. Vous avez une <strong>visibilité totale</strong> sur le travail effectué et les résultats obtenus. Pas de boîte noire."
+            }
+        ],
+        semanticKeywords: [
+            "référencement naturel", "SEO", "Search Engine Optimization", "positionnement Google",
+            "stratégie SEO", "audit SEO", "optimisation SEO", "consultant SEO",
+            "mots-clés", "cocon sémantique", "contenu SEO", "backlinks", "netlinking",
+            "autorité de domaine", "Domain Authority", "trafic organique", "SERP",
+            "Google Search Console", "Google Analytics", "Core Web Vitals", "mobile-first",
+            "SEO local", "référencement local", "Google Business Profile", "SEO on-page"
+        ]
     }
 };
