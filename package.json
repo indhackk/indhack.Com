@@ -5,10 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap && node scripts/index-google.js",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
-    "index": "node scripts/index-google.js"
+    "index": "node scripts/smart-indexing.js",
+    "index:status": "node scripts/smart-indexing.js --status",
+    "index:priority": "node scripts/smart-indexing.js --priority",
+    "index:force": "node scripts/smart-indexing.js --force"
   },
   "dependencies": {
     "@keystatic/core": "^0.5.48",

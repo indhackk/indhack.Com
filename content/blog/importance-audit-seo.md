@@ -8,13 +8,13 @@ author: "Indiana Aflalo"
 keywords: ["audit SEO", "PME", "croissance", "ROI", "stratégie digitale", "analyse site web", "optimisation SEO"]
 ---
 
-Beaucoup d'entreprises dépensent des **milliers d'euros en publicité** alors que leur propre site "fuit" de l'intérieur. **Erreurs techniques**, **contenu dupliqué**, **vitesse trop lente**... Un **[audit SEO](/audit-seo)** complet permet d'arrêter de perdre de l'argent et de construire sur des bases solides.
+Beaucoup d'entreprises dépensent des **milliers d'euros en publicité** alors que leur propre site "fuit" de l'intérieur. Erreurs techniques, contenu dupliqué, vitesse trop lente... Un audit complet permet d'arrêter de perdre de l'argent et de construire sur des bases solides.
 
-En tant que [consultante SEO](/consultant-seo), c'est **toujours la première étape** de mon accompagnement.
+En tant que consultante SEO, c'est **toujours la première étape** de mon accompagnement.
 
 ## Ce qu'un audit SEO révèle vraiment
 
-Un **audit SEO**, ce n'est pas juste une liste de problèmes techniques. C'est une **analyse de marché complète** qui répond aux questions essentielles :
+Un audit SEO, ce n'est pas juste une liste de problèmes techniques. C'est une **analyse de marché complète** qui répond aux questions essentielles :
 
 | Question | Ce que l'audit révèle |
 |----------|----------------------|
@@ -27,7 +27,7 @@ Un **audit SEO**, ce n'est pas juste une liste de problèmes techniques. C'est u
 
 ### Audit technique
 
-L'**audit technique SEO** analyse les **fondations de votre site** :
+L'**audit technique** analyse les fondations de votre site :
 
 - **Crawlabilité** — Google peut-il accéder à toutes vos pages ?
 - **Indexation** — Vos pages sont-elles bien dans l'index Google ?
@@ -37,7 +37,7 @@ L'**audit technique SEO** analyse les **fondations de votre site** :
 
 ### Audit sémantique
 
-L'**audit sémantique** analyse votre **stratégie de contenu** :
+L'**audit sémantique** analyse votre stratégie de contenu :
 
 - **Mots-clés actuels** — Sur quoi vous positionnez-vous déjà ?
 - **Opportunités manquées** — Quels mots-clés à fort volume ignorez-vous ?
@@ -46,7 +46,7 @@ L'**audit sémantique** analyse votre **stratégie de contenu** :
 
 ### Audit concurrentiel
 
-L'**audit concurrentiel** vous situe sur votre **marché** :
+L'**audit concurrentiel** vous situe sur votre marché :
 
 - **Benchmark** — Où êtes-vous vs vos principaux concurrents ?
 - **Gap analysis** — Quels mots-clés ils ciblent et pas vous ?
@@ -54,7 +54,7 @@ L'**audit concurrentiel** vous situe sur votre **marché** :
 
 ## L'approche IndHack : Prioriser pour le ROI
 
-Je ne vous donne pas un **rapport de 100 pages illisible**. Je vous livre une **roadmap priorisée** par impact business.
+Je ne vous donne pas un rapport de 100 pages illisible. Je vous livre une **roadmap priorisée** par impact business.
 
 On commence par les actions qui demandent le **moins d'effort** et qui rapportent le **plus de trafic qualifié**.
 
@@ -69,7 +69,7 @@ Chaque recommandation est classée selon l'**effort de mise en œuvre** et l'**i
 
 ## Combien coûte un audit SEO ?
 
-Un **audit SEO professionnel** représente un investissement de 500€ à 2 000€ selon la taille du site :
+Un audit SEO professionnel représente un investissement de 500€ à 2 000€ selon la taille du site :
 
 | Taille du site | Fourchette de prix |
 |----------------|-------------------|
@@ -77,38 +77,29 @@ Un **audit SEO professionnel** représente un investissement de 500€ à 2 000�
 | Site moyen (20-100 pages) | 800€ - 1 500€ |
 | Site e-commerce / gros site | 1 500€ - 2 000€+ |
 
-Mais **un seul client gagné** grâce aux **optimisations SEO** peut rembourser 10 fois cet investissement. Le **ROI d'un audit SEO** est généralement exceptionnel.
-
-Découvrez en détail mon [service d'audit SEO complet](/audit-seo).
+Mais **un seul client gagné** grâce aux optimisations peut rembourser 10 fois cet investissement. Le ROI d'un audit est généralement exceptionnel.
 
 ## Audit SEO pour entreprises locales
 
 Si vous êtes une **entreprise locale** (commerce, artisan, profession libérale), l'audit inclut une analyse de votre présence sur Google Business Profile et un benchmark local.
 
-Je propose des audits spécialisés pour les entreprises de :
-- [Nice et la Côte d'Azur](/seo-nice)
-- [Paris et Île-de-France](/seo-paris)
-- [Lyon et Rhône-Alpes](/seo-lyon)
-- [Marseille et PACA](/seo-marseille)
-- [Bordeaux](/seo-bordeaux) et [Toulouse](/seo-toulouse)
-
-Découvrez mon expertise en [SEO local](/seo-local).
+J'interviens sur toute la France avec une expertise particulière sur la Côte d'Azur, Paris, Lyon et les grandes métropoles. Découvrez mon approche du [référencement local](/seo-local) pour les entreprises de proximité.
 
 ## Quand faire un audit SEO ?
 
 **Vous devez faire un audit maintenant si :**
 
 - Votre site existe depuis plus de **6 mois** sans résultats
-- Vous préparez une [refonte site web](/refonte-site-web)
+- Vous préparez une [refonte de votre site web](/refonte-site-web)
 - Votre **trafic organique** stagne ou diminue
 - Vous n'avez jamais fait d'audit professionnel
 - Vos concurrents vous dépassent sur Google
 
-**L'audit n'est pas une dépense, c'est un investissement** qui évite de gaspiller de l'argent en actions inefficaces.
+L'audit n'est pas une dépense, c'est un **investissement** qui évite de gaspiller de l'argent en actions inefficaces.
 
 ## Ce qu'il faut retenir
 
-Le [référencement naturel](/referencement-naturel) est une course de fond. Plus vous commencez **tôt votre audit**, plus vite vous distancerez vos concurrents dans les résultats de recherche.
+Le référencement naturel est une course de fond. Plus vous commencez **tôt votre diagnostic**, plus vite vous distancerez vos concurrents dans les résultats de recherche.
 
 Un audit SEO vous permet de :
 - **Identifier les problèmes** qui bloquent votre visibilité
@@ -118,9 +109,4 @@ Un audit SEO vous permet de :
 
 ---
 
-**À lire aussi :**
-- [Quelles sont les missions d'un consultant SEO ?](/blog/missions-consultant-seo)
-- [Pourquoi faire appel à un consultant SEO ?](/blog/pourquoi-consultant-seo)
-- [Comment devenir consultant SEO ?](/blog/devenir-consultant-seo)
-
-En tant que [consultante SEO freelance](/consultant-seo-freelance), je vous accompagne de l'audit à l'implémentation. [Demandez votre audit SEO gratuit](/contact) et découvrez le potentiel caché de votre site.
+**Envie d'aller plus loin ?** Découvrez [les missions complètes d'un consultant SEO](/blog/missions-consultant-seo) ou [demandez votre diagnostic gratuit](/contact).

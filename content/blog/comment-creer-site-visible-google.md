@@ -8,7 +8,7 @@ author: "Indiana Aflalo"
 keywords: ["créer site internet visible Google", "référencement site web", "site web premier page Google", "création site SEO", "freelance SEO", "agence web vs freelance"]
 ---
 
-**Créer un site Internet**, c'est facile. **Créer un site Internet visible sur Google**, c'est une autre histoire. En tant que **[consultante SEO](/consultant-seo)**, je constate chaque jour des sites magnifiques... mais totalement invisibles. Pourquoi ? Parce que la **visibilité Google ne s'improvise pas**.
+**Créer un site Internet**, c'est facile. **Créer un site Internet visible sur Google**, c'est une autre histoire. En tant que **consultante SEO**, je constate chaque jour des sites magnifiques... mais totalement invisibles. Pourquoi ? Parce que la **visibilité Google ne s'improvise pas**.
 
 ## Pourquoi 90% des sites ne génèrent aucun trafic organique ?
 
@@ -49,7 +49,7 @@ C'est LA question que tout entrepreneur se pose. Voici mon analyse honnête.
 | SEO intégré **nativement** | |
 | Tarifs compétitifs | |
 
-**Mon conseil :** Si votre objectif est d'**apparaître sur Google** et de générer des **leads qualifiés**, privilégiez un **[consultant SEO freelance](/consultant-seo-freelance)** qui maîtrise aussi la **création de sites**. Il ne va pas juste "faire joli". Il va construire chaque page comme une **machine à capter du trafic**.
+**Mon conseil :** Si votre objectif est d'**apparaître sur Google** et de générer des **leads qualifiés**, privilégiez un consultant qui maîtrise aussi la **[création de sites web](/creation-site-web)**. Il ne va pas juste "faire joli". Il va construire chaque page comme une **machine à capter du trafic**.
 
 ## Les étapes pour créer un site visible sur Google
 
@@ -67,8 +67,8 @@ Chaque page doit avoir un objectif clair et s'inscrire dans une **hiérarchie lo
 
 | Niveau | Rôle | Exemple |
 |--------|------|---------|
-| **Page mère** | Service principal | "[Consultant SEO Nice](/seo-nice)" |
-| **Pages filles** | Sous-services | "[Audit SEO](/audit-seo)" |
+| **Page mère** | Service principal | "Consultant SEO Nice" |
+| **Pages filles** | Sous-services | "Audit technique" |
 | **Articles blog** | Longue traîne | Cet article ! |
 
 ### Développement technique SEO-first
@@ -93,8 +93,6 @@ Le contenu doit :
 ### Maillage interne stratégique
 
 Chaque page doit être reliée aux autres par des **ancres optimisées**. C'est comme ça que vous transmettez le "jus SEO" et que Google comprend vos priorités.
-
-Découvrez comment je structure le [maillage interne](/blog/missions-consultant-seo) dans mes accompagnements.
 
 ### Optimisation des images
 
@@ -129,11 +127,8 @@ Votre site peut être le plus beau du monde. S'il n'apparaît pas sur Google, **
 
 La solution ? Travailler avec quelqu'un qui pense **SEO d'abord**. Quelqu'un qui va construire votre site comme une fondation solide pour votre croissance digitale.
 
----
+Un [diagnostic complet de votre situation](/audit-seo) permet d'identifier précisément les opportunités de visibilité pour votre activité.
 
-**À lire aussi :**
-- [Pourquoi faire appel à un consultant SEO ?](/blog/pourquoi-consultant-seo)
-- [L'audit SEO : point de départ de votre croissance](/blog/importance-audit-seo)
-- [SEO local à Nice : dominer le marché azuréen](/blog/seo-local-nice)
+---
 
 Prêt à créer un site qui travaille pour vous 24h/24 ? [Demandez votre audit gratuit](/contact) et découvrons ensemble votre potentiel de visibilité.

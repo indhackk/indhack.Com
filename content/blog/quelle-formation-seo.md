@@ -18,12 +18,12 @@ Le **SEO n'est pas mort**, contrairement à ce qu'on lit parfois. Il **évolue**
 
 | Poste | Rémunération |
 |-------|--------------|
-| **[Consultant SEO freelance](/consultant-seo-freelance)** | 300€ à 800€/jour |
+| **Consultant SEO freelance** | 300€ à 800€/jour |
 | **SEO Manager en entreprise** | 45 000€ à 70 000€/an |
 | **Head of SEO** | 60 000€ à 100 000€/an |
 | **Fondateur d'agence SEO** | Revenus illimités |
 
-Le SEO ouvre aussi des portes vers le content marketing, le growth hacking, et le marketing digital. Pour plus de détails, consultez mon article sur le [salaire d'un consultant SEO](/blog/salaire-consultant-seo).
+Le SEO ouvre aussi des portes vers le content marketing, le growth hacking, et le marketing digital. Pour mieux comprendre le métier, découvrez les [missions d'un expert en référencement](/consultant-seo).
 
 ## Les différents parcours pour apprendre le SEO
 
@@ -110,7 +110,7 @@ Une bonne **formation SEO** doit couvrir ces domaines :
 
 | Compétence | Niveau attendu |
 |------------|---------------|
-| [Audit SEO](/audit-seo) | Expert |
+| Diagnostic technique complet | Expert |
 | Structure HTML sémantique | Solide |
 | Données structurées Schema.org | Intermédiaire |
 | Analyse de logs serveur | Bases |
@@ -140,9 +140,9 @@ Une bonne **formation SEO** doit couvrir ces domaines :
 ### Compétences annexes
 
 - Netlinking et relations presse digitale
-- [SEO local](/seo-local) et Google Business Profile
+- Visibilité locale et Google Business Profile
 - SEO international
-- [GEO](/blog/visibilite-ia-geo) (Generative Engine Optimization) pour l'IA
+- Optimisation pour les moteurs IA (GEO)
 
 ## Mon parcours personnel
 
@@ -188,11 +188,8 @@ Quelle que soit la **formation SEO** choisie, retenez ceci : **le SEO s'apprend 
 
 Les certifications sont utiles pour rassurer les clients ou les recruteurs. Mais ce qui fait un bon SEO, c'est sa capacité à générer des **résultats concrets**.
 
----
+Un [diagnostic de votre site actuel](/audit-seo) peut être un excellent point de départ pour mettre en pratique vos nouvelles compétences.
 
-**À lire aussi :**
-- [Comment devenir consultant SEO ?](/blog/devenir-consultant-seo)
-- [Quelles sont les missions d'un consultant SEO ?](/blog/missions-consultant-seo)
-- [Quel salaire pour un consultant SEO ?](/blog/salaire-consultant-seo)
+---
 
 Besoin de conseils personnalisés sur votre parcours ? [Contactez-moi](/contact) pour en discuter.
