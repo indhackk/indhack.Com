@@ -8,7 +8,7 @@ author: "Indiana Aflalo"
 keywords: ["devenir consultant SEO", "comment devenir consultant SEO", "carrière SEO", "métier consultant SEO", "reconversion SEO", "freelance SEO"]
 ---
 
-Vous souhaitez **devenir [consultant SEO](/consultant-seo)** ? Excellente idée ! Le **référencement naturel** est l'un des **métiers du digital** les plus demandés. Voici mon guide complet basé sur mon propre parcours et mon expérience de **[consultante SEO freelance](/consultant-seo-freelance)**.
+Vous souhaitez **devenir [expert en référencement naturel](/consultant-seo)** ? Excellente idée ! Le **référencement naturel** est l'un des **métiers du digital** les plus demandés. Voici mon guide complet basé sur mon propre parcours et mon expérience d'**[experte indépendante en visibilité](/consultant-seo-freelance)**.
 
 ## Pourquoi devenir consultant SEO en 2026 ?
 
@@ -139,9 +139,9 @@ Plusieurs options pour **décrocher vos premières missions** :
 
 Après quelques années, trouvez votre **niche d'expertise** :
 
-- **SEO technique** — Audits, migrations, performance ([audit SEO](/audit-seo))
+- **SEO technique** — Audits, migrations, performance ([diagnostiquer la santé de votre site](/audit-seo))
 - **SEO éditorial** — Stratégie de contenu, cocons sémantiques
-- **[SEO local](/seo-local)** — Google Business Profile, citations locales
+- **[Visibilité de proximité](/seo-local)** — Google Business Profile, citations locales
 - **SEO e-commerce** — Fiches produits, catégories, CRO
 - **SEO international** — Hreflang, multilingue, multi-marchés
 
@@ -174,7 +174,7 @@ Pour devenir **incontournable** dans votre domaine :
 | Diversité des missions | Isolement possible |
 | Choix des clients | Prospection nécessaire |
 
-**Mon conseil :** Commencez en entreprise ou agence pour acquérir de l'expérience solide, puis passez [consultant SEO freelance](/consultant-seo-freelance) si l'indépendance vous attire.
+**Mon conseil :** Commencez en entreprise ou agence pour acquérir de l'expérience solide, puis passez [en indépendant](/consultant-seo-freelance) si l'indépendance vous attire.
 
 ## Les erreurs à éviter absolument
 
@@ -211,4 +211,4 @@ Le meilleur moment pour commencer, c'est **maintenant**.
 - [Quelles sont les missions d'un consultant SEO ?](/blog/missions-consultant-seo)
 - [Pourquoi faire appel à un consultant SEO ?](/blog/pourquoi-consultant-seo)
 
-Vous cherchez un [consultant SEO](/consultant-seo) pour votre projet ? [Contactez-moi](/contact) pour un audit gratuit.
+Vous cherchez un [accompagnement professionnel en visibilité](/consultant-seo) pour votre projet ? [INDHACK](/) intervient sur Nice, Marseille, Lyon et toute la France. [Contactez-moi](/contact) pour un diagnostic gratuit.

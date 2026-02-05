@@ -8,7 +8,7 @@ author: "Indiana Aflalo"
 keywords: ["missions consultant SEO", "rôle consultant SEO", "que fait un consultant SEO", "travail consultant SEO", "expert SEO missions", "métier consultant SEO"]
 ---
 
-Vous envisagez de faire appel à un expert en référencement naturel mais vous ne savez pas exactement ce qu'il va faire pour votre entreprise ? Voici un guide complet des **missions SEO** que je réalise au quotidien pour mes clients.
+Vous envisagez de faire appel à un expert en référencement naturel mais vous ne savez pas exactement ce qu'il va faire pour votre entreprise ? Que vous soyez à Nice, Marseille ou ailleurs en France, voici un guide clair. Voici un guide complet des **missions SEO** que je réalise au quotidien pour mes clients.
 
 ## Les 5 piliers du travail d'un consultant SEO
 
@@ -39,7 +39,7 @@ C'est toujours la **première étape** de tout accompagnement. Sans diagnostic a
 
 ### Livrables d'un audit
 
-À la fin d'un [audit SEO complet](/audit-seo), je vous remets :
+À la fin d'un [diagnostic approfondi de votre site](/audit-seo), je vous remets :
 - Un **rapport détaillé** avec toutes les problématiques identifiées
 - Une **roadmap priorisée** par impact et effort
 - Des recommandations concrètes et actionnables
@@ -140,7 +140,7 @@ Selon vos besoins, un consultant SEO peut également intervenir sur :
 Optimisation de votre fiche **Google Business Profile** et positionnement sur les recherches de proximité. Idéal pour les commerces, artisans et professions libérales qui veulent dominer leur zone géographique.
 
 ### Migration et refonte de site
-Accompagnement lors d'une [refonte de site internet](/refonte-site-web) pour préserver votre référencement existant. Une migration mal gérée peut faire perdre **80% du trafic**.
+Accompagnement lors d'un [renouvellement de votre plateforme web](/refonte-site-web) pour préserver votre référencement existant. Une migration mal gérée peut faire perdre **80% du trafic**.
 
 ### Formation SEO
 Montée en compétence de vos équipes sur les bonnes pratiques. Savoir rédiger un contenu optimisé ou comprendre les bases techniques devient un atout stratégique.
@@ -166,4 +166,4 @@ L'important est de choisir un consultant qui :
 
 ---
 
-**Envie d'aller plus loin ?** Découvrez [pourquoi faire appel à un consultant SEO](/blog/pourquoi-consultant-seo) ou [demandez un diagnostic gratuit](/contact) de votre site.
+**Envie d'aller plus loin ?** Découvrez [pourquoi faire appel à un consultant SEO](/blog/pourquoi-consultant-seo) ou [demandez un diagnostic gratuit](/contact) à [INDHACK](/). J'interviens sur Nice, Marseille, Lyon, Paris et dans toute la France.

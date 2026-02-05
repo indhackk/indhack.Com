@@ -10,7 +10,7 @@ keywords: ["audit SEO", "PME", "croissance", "ROI", "stratégie digitale", "anal
 
 Beaucoup d'entreprises dépensent des **milliers d'euros en publicité** alors que leur propre site "fuit" de l'intérieur. Erreurs techniques, contenu dupliqué, vitesse trop lente... Un audit complet permet d'arrêter de perdre de l'argent et de construire sur des bases solides.
 
-En tant que consultante SEO, c'est **toujours la première étape** de mon accompagnement.
+En tant que consultante SEO chez [INDHACK](/), c'est **toujours la première étape** de mon accompagnement, que ce soit pour des entreprises à Nice, Marseille, Lyon ou dans toute la France.
 
 ## Ce qu'un audit SEO révèle vraiment
 
@@ -83,14 +83,14 @@ Mais **un seul client gagné** grâce aux optimisations peut rembourser 10 fois 
 
 Si vous êtes une **entreprise locale** (commerce, artisan, profession libérale), l'audit inclut une analyse de votre présence sur Google Business Profile et un benchmark local.
 
-J'interviens sur toute la France avec une expertise particulière sur la Côte d'Azur, Paris, Lyon et les grandes métropoles. Découvrez mon approche du [référencement local](/seo-local) pour les entreprises de proximité.
+J'interviens sur toute la France avec une expertise particulière sur la Côte d'Azur, Paris, Lyon et les grandes métropoles. Découvrez mon approche de la [visibilité de proximité](/seo-local) pour les entreprises locales.
 
 ## Quand faire un audit SEO ?
 
 **Vous devez faire un audit maintenant si :**
 
 - Votre site existe depuis plus de **6 mois** sans résultats
-- Vous préparez une [refonte de votre site web](/refonte-site-web)
+- Vous préparez un [renouvellement de votre plateforme digitale](/refonte-site-web)
 - Votre **trafic organique** stagne ou diminue
 - Vous n'avez jamais fait d'audit professionnel
 - Vos concurrents vous dépassent sur Google
@@ -109,4 +109,4 @@ Un audit SEO vous permet de :
 
 ---
 
-**Envie d'aller plus loin ?** Découvrez [les missions complètes d'un consultant SEO](/blog/missions-consultant-seo) ou [demandez votre diagnostic gratuit](/contact).
+**Envie d'aller plus loin ?** Découvrez [les missions complètes d'un consultant SEO](/blog/missions-consultant-seo) ou [demandez votre diagnostic gratuit](/contact) à [INDHACK](/), votre consultante SEO sur Nice, Marseille et toute la France.

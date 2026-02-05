@@ -8,7 +8,7 @@ author: "Indiana Aflalo"
 keywords: ["SEO Nice", "référencement local Nice", "Alpes-Maritimes", "Google Maps Nice", "consultant SEO Nice", "Google Business Profile Nice"]
 ---
 
-Pour une entreprise locale, être visible sur des recherches comme "**consultant SEO Nice**" ou "**expert référencement Alpes-Maritimes**" est plus important que d'être visible au niveau national sans intention d'achat. En tant qu'[experte SEO local](/seo-local), je vous partage les clés du **référencement** sur la Côte d'Azur.
+Pour une entreprise locale, être visible sur des recherches comme "**consultant SEO Nice**" ou "**expert référencement Alpes-Maritimes**" est plus important que d'être visible au niveau national sans intention d'achat. En tant qu'[experte en visibilité de proximité](/seo-local), je vous partage les clés du **référencement** sur la Côte d'Azur.
 
 ## La puissance de la recherche locale
 
@@ -38,14 +38,7 @@ Une **fiche GBP** bien optimisée peut **doubler votre visibilité locale** en q
 
 ## Créer des pages locales dédiées
 
-Votre site doit cibler les villes de votre **zone de chalandise**. Pour la Côte d'Azur :
-
-| Ville | Caractéristique | Page dédiée |
-|-------|-----------------|-------------|
-| **Nice** | Capitale économique du 06 | [/seo-nice](/seo-nice) |
-| **Cannes** | Tourisme, événementiel | [/seo-cannes](/seo-cannes) |
-| **Antibes** | Tech, yachting | [/seo-antibes](/seo-antibes) |
-| **Monaco** | Luxe, finance | [/seo-monaco](/seo-monaco) |
+Votre site doit cibler les villes de votre **zone de chalandise** avec du contenu unique pour chaque localité. Nice, Cannes, Antibes, Monaco — chaque marché a ses spécificités.
 
 Chaque page doit avoir du **contenu unique**, pas juste un changement de nom de ville. C'est ce qu'on appelle le **cocon sémantique local**.
 
@@ -82,8 +75,8 @@ Ces **backlinks locaux** envoient un signal fort à Google sur votre implantatio
 
 Native de la région, j'aide les **PME de Nice**, Cannes, Antibes et Monaco à transformer leur site web en un véritable aimant à clients locaux.
 
-**Mon accompagnement [SEO local](/seo-local) comprend :**
-- [Audit SEO](/audit-seo) de votre présence locale actuelle
+**Mon accompagnement en [visibilité de proximité](/seo-local) comprend :**
+- [Diagnostic complet](/audit-seo) de votre présence locale actuelle
 - Optimisation **Google Business Profile**
 - Création de pages locales optimisées
 - Stratégie d'avis clients
@@ -100,4 +93,4 @@ Le **SEO local** à Nice et sur la Côte d'Azur est un levier puissant pour les 
 - [L'audit SEO : point de départ de votre croissance](/blog/importance-audit-seo)
 - [Comment créer un site visible sur Google ?](/blog/comment-creer-site-visible-google)
 
-[Contactez-moi](/contact) pour un audit gratuit de votre visibilité locale sur la French Riviera.
+[INDHACK](/), votre consultante SEO sur la Côte d'Azur, vous accompagne. [Contactez-moi](/contact) pour un audit gratuit de votre visibilité locale sur la French Riviera.

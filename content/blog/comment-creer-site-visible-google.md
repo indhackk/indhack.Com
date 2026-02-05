@@ -14,7 +14,7 @@ keywords: ["créer site internet visible Google", "référencement site web", "s
 
 La plupart des entrepreneurs font l'erreur de séparer la création de leur site et leur stratégie **SEO**. Ils pensent d'abord au design, puis "on verra pour Google plus tard". **C'est exactement l'inverse qu'il faut faire.**
 
-Un site construit sans penser au **[référencement naturel](/referencement-naturel)** dès le départ, c'est comme construire une maison sans fondations. Il faudra tout casser pour recommencer.
+Un site construit sans penser à la **[visibilité organique dès la conception](/referencement-naturel)**, c'est comme construire une maison sans fondations. Il faudra tout casser pour recommencer.
 
 ### Les erreurs les plus fréquentes
 
@@ -49,7 +49,7 @@ C'est LA question que tout entrepreneur se pose. Voici mon analyse honnête.
 | SEO intégré **nativement** | |
 | Tarifs compétitifs | |
 
-**Mon conseil :** Si votre objectif est d'**apparaître sur Google** et de générer des **leads qualifiés**, privilégiez un consultant qui maîtrise aussi la **[création de sites web](/creation-site-web)**. Il ne va pas juste "faire joli". Il va construire chaque page comme une **machine à capter du trafic**.
+**Mon conseil :** Si votre objectif est d'**apparaître sur Google** et de générer des **leads qualifiés**, privilégiez un consultant qui maîtrise aussi la **[conception de plateformes web performantes](/creation-site-web)**. Il ne va pas juste "faire joli". Il va construire chaque page comme une **machine à capter du trafic**.
 
 ## Les étapes pour créer un site visible sur Google
 
@@ -131,4 +131,4 @@ Un [diagnostic complet de votre situation](/audit-seo) permet d'identifier préc
 
 ---
 
-Prêt à créer un site qui travaille pour vous 24h/24 ? [Demandez votre audit gratuit](/contact) et découvrons ensemble votre potentiel de visibilité.
+Prêt à créer un site qui travaille pour vous 24h/24 ? [INDHACK](/) accompagne les entreprises de Nice, Marseille, Lyon et toute la France. [Demandez votre audit gratuit](/contact) et découvrons ensemble votre potentiel de visibilité.
