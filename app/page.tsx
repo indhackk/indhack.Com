@@ -87,31 +87,7 @@ export default function Home() {
                 }}
             />
 
-            {/* Schema Markup - Organization & WebSite */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Organization",
-                        "name": "IndHack",
-                        "url": "https://indhack.com",
-                        "logo": "https://indhack.com/images/logo-indhack.png",
-                        "foundingDate": "2024",
-                        "founders": [{
-                            "@type": "Person",
-                            "name": "Indiana Aflalo"
-                        }],
-                        "contactPoint": {
-                            "@type": "ContactPoint",
-                            "telephone": "+33661139748",
-                            "contactType": "customer service",
-                            "email": "contact@indhack.com"
-                        }
-                    })
-                }}
-            />
-
+            {/* Schema Markup - WebSite (Organization est dans layout.tsx global) */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
