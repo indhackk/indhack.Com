@@ -10,45 +10,45 @@ interface Service {
 
 const ALL_SERVICES: Record<string, Service> = {
     "consultant-seo": {
-        title: "Accompagnement personnalisé",
+        title: "Accompagnement SEO sur-mesure",
         href: "/consultant-seo",
-        description: "Votre partenaire croissance",
+        description: "Expertise personnalisée",
         icon: <User className="w-5 h-5" />
     },
     "audit-seo": {
-        title: "Diagnostic approfondi",
+        title: "Diagnostic SEO approfondi",
         href: "/audit-seo",
         description: "Analyse technique complète",
         icon: <FileSearch className="w-5 h-5" />
     },
     "referencement-naturel": {
-        title: "Stratégie de visibilité",
+        title: "Stratégie SEO complète",
         href: "/referencement-naturel",
         description: "Croissance organique durable",
         icon: <Search className="w-5 h-5" />
     },
     "creation-site-web": {
-        title: "Plateforme performante",
+        title: "Site optimisé pour Google",
         href: "/creation-site-web",
-        description: "Site optimisé conversion",
+        description: "Création web SEO-first",
         icon: <Globe className="w-5 h-5" />
     },
     "refonte-site-web": {
-        title: "Transformation digitale",
+        title: "Refonte sans perte de trafic",
         href: "/refonte-site-web",
-        description: "Migration sans perte de trafic",
+        description: "Migration SEO sécurisée",
         icon: <RefreshCw className="w-5 h-5" />
     },
     "community-manager": {
-        title: "Présence sociale",
+        title: "Gestion réseaux sociaux",
         href: "/community-manager",
         description: "Animation communautaire",
         icon: <Users className="w-5 h-5" />
     },
     "seo-local": {
-        title: "Visibilité de proximité",
+        title: "Référencement Google Maps",
         href: "/seo-local",
-        description: "Dominez votre zone",
+        description: "Visibilité de proximité",
         icon: <MapPin className="w-5 h-5" />
     }
 };

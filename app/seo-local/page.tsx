@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FRENCH_CITIES } from "@/lib/cities-data";
 import { MapPin, ArrowRight, Search, Users, TrendingUp, CheckCircle2, Phone, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
 export const metadata: Metadata = {
     title: "SEO Local | INDHACK, Consultante SEO",
@@ -222,6 +223,8 @@ export default function SeoLocalPage() {
                     </div>
                 </div>
             </section>
+
+            <HomepageBacklink variant="default" />
         </main>
     );
 }

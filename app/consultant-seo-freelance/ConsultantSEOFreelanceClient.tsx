@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { AuditCTA } from "@/components/blog/AuditCTA";
+import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 import ReactMarkdown from "react-markdown";
 import {
     CheckCircle2,
@@ -489,6 +490,8 @@ export default function ConsultantSEOFreelanceClient() {
                     })
                 }}
             />
+
+            <HomepageBacklink variant="default" />
         </main>
     );
 }

@@ -171,16 +171,16 @@ export function ContactForm() {
                                 <p className="text-sm text-soft mb-3">Besoin d'un service précis ?</p>
                                 <div className="flex flex-wrap gap-2">
                                     <Link href="/audit-seo" className="text-xs bg-sauge/10 text-sauge px-3 py-1.5 rounded-full hover:bg-sauge hover:text-white transition-all">
-                                        Diagnostic
+                                        Diagnostic SEO
                                     </Link>
                                     <Link href="/referencement-naturel" className="text-xs bg-sauge/10 text-sauge px-3 py-1.5 rounded-full hover:bg-sauge hover:text-white transition-all">
-                                        Visibilité
+                                        Stratégie SEO
                                     </Link>
                                     <Link href="/creation-site-web" className="text-xs bg-sauge/10 text-sauge px-3 py-1.5 rounded-full hover:bg-sauge hover:text-white transition-all">
-                                        Site web
+                                        Création site
                                     </Link>
                                     <Link href="/seo-local" className="text-xs bg-sauge/10 text-sauge px-3 py-1.5 rounded-full hover:bg-sauge hover:text-white transition-all">
-                                        Proximité
+                                        Google Maps
                                     </Link>
                                 </div>
                             </div>

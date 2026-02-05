@@ -6,16 +6,17 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Home, Sparkles } from "lucide-react";
 
 // Variations d'ancres pour le maillage interne vers la page d'accueil
-// Mots-clés principaux : référencement naturel, SEO, consultant SEO, experte SEO
+// Mots-clés cibles homepage : consultant SEO, experte SEO, SEO Nice, référencement
+// Ancres = variations sémantiques (pas exact match, mais liées au champ lexical)
 const ANCHOR_VARIATIONS = [
-    { text: "Votre experte en visibilité organique", icon: <Sparkles className="w-4 h-4" /> },
-    { text: "Propulsez votre croissance digitale", icon: <Home className="w-4 h-4" /> },
-    { text: "Stratégie de visibilité sur-mesure", icon: <Sparkles className="w-4 h-4" /> },
-    { text: "Dominez Google avec IndHack", icon: <Sparkles className="w-4 h-4" /> },
-    { text: "Boostez votre présence en ligne", icon: <Home className="w-4 h-4" /> },
-    { text: "Diagnostic et accompagnement complet", icon: <Sparkles className="w-4 h-4" /> },
-    { text: "Expertise indépendante en visibilité", icon: <Home className="w-4 h-4" /> },
-    { text: "Votre partenaire croissance digitale", icon: <Sparkles className="w-4 h-4" /> },
+    { text: "Votre experte SEO indépendante", icon: <Sparkles className="w-4 h-4" /> },
+    { text: "Consultante référencement freelance", icon: <Home className="w-4 h-4" /> },
+    { text: "Spécialiste SEO & acquisition", icon: <Sparkles className="w-4 h-4" /> },
+    { text: "Experte en référencement Google", icon: <Sparkles className="w-4 h-4" /> },
+    { text: "Accompagnement SEO personnalisé", icon: <Home className="w-4 h-4" /> },
+    { text: "Votre consultante SEO dédiée", icon: <Sparkles className="w-4 h-4" /> },
+    { text: "Expert SEO Côte d'Azur", icon: <Home className="w-4 h-4" /> },
+    { text: "Stratégie SEO sur-mesure", icon: <Sparkles className="w-4 h-4" /> },
 ];
 
 interface HomepageBacklinkProps {

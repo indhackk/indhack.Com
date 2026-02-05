@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { AuditCTA } from "@/components/blog/AuditCTA";
+import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 import {
     Search,
     TrendingUp,
@@ -639,6 +640,8 @@ export default function ConsultantSEOClient() {
                     })
                 }}
             />
+
+            <HomepageBacklink variant="default" />
         </main>
     );
 }

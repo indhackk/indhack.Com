@@ -108,13 +108,13 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
         { step: "04", title: "Croissance", desc: "Reporting mensuel, évolution des positions, leads générés, ajustements.", icon: <TrendingUp className="w-5 h-5" /> }
     ];
 
-    // Services liés avec liens vers sub-services
+    // Services liés avec liens vers sub-services (ancres sémantiques liées au mot-clé cible)
     const RELATED_SERVICES = [
-        { title: `Diagnostic technique ${city}`, href: `/${cityData.slug}/audit-technique`, desc: "Analyse approfondie de votre site", isPrimary: true },
-        { title: "Accompagnement expert", href: "/consultant-seo", desc: "Votre partenaire visibilité" },
-        { title: "Diagnostic complet", href: "/audit-seo", desc: "Analyse de votre présence" },
-        { title: "Stratégie organique", href: "/referencement-naturel", desc: "Croissance durable" },
-        { title: "Plateforme performante", href: "/creation-site-web", desc: "Site optimisé conversion" }
+        { title: `Audit technique SEO ${city}`, href: `/${cityData.slug}/audit-technique`, desc: "Analyse approfondie de votre site", isPrimary: true },
+        { title: "Accompagnement SEO personnalisé", href: "/consultant-seo", desc: "Votre expert dédié" },
+        { title: "Diagnostic SEO complet", href: "/audit-seo", desc: "Analyse technique approfondie" },
+        { title: "Stratégie SEO nationale", href: "/referencement-naturel", desc: "Croissance organique durable" },
+        { title: "Création site SEO-ready", href: "/creation-site-web", desc: "Site optimisé Google" }
     ];
 
     // Articles blog connexes pour le maillage

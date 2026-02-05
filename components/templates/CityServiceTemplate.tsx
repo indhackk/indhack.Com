@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
 import { useModal } from "@/components/providers/ModalProvider";
 import { CityData, CityServiceData } from "@/lib/cities-data";
+import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
 interface CityServiceTemplateProps {
     cityData: CityData;
@@ -124,13 +125,13 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
         { icon: <AlertTriangle className="w-6 h-6" />, label: "Erreurs 4xx/5xx", status: "Détection & fix" },
     ];
 
-    // Related services for internal linking (ancres sémantiques)
+    // Related services for internal linking (ancres sémantiques liées au mot-clé cible)
     const relatedServices = [
-        { title: "Votre partenaire visibilité", href: "/consultant-seo", desc: "Accompagnement expert", icon: <Target className="w-5 h-5" /> },
-        { title: "Diagnostic approfondi", href: "/audit-seo", desc: "Analyse technique + sémantique", icon: <FileSearch className="w-5 h-5" /> },
-        { title: `Stratégie locale ${city}`, href: `/${cityData.slug}`, desc: "Croissance sur votre marché", icon: <Target className="w-5 h-5" /> },
-        { title: "Croissance organique durable", href: "/referencement-naturel", desc: "Visibilité nationale", icon: <TrendingUp className="w-5 h-5" /> },
-        { title: "Plateforme optimisée conversion", href: "/creation-site-web", desc: "Site pensé pour Google", icon: <Globe className="w-5 h-5" /> }
+        { title: "Accompagnement SEO expert", href: "/consultant-seo", desc: "Votre partenaire croissance", icon: <Target className="w-5 h-5" /> },
+        { title: "Diagnostic SEO complet", href: "/audit-seo", desc: "Analyse technique + sémantique", icon: <FileSearch className="w-5 h-5" /> },
+        { title: `Expert SEO ${city}`, href: `/${cityData.slug}`, desc: "Stratégie locale sur-mesure", icon: <Target className="w-5 h-5" /> },
+        { title: "Stratégie SEO globale", href: "/referencement-naturel", desc: "Visibilité nationale durable", icon: <TrendingUp className="w-5 h-5" /> },
+        { title: "Site web optimisé SEO", href: "/creation-site-web", desc: "Création pensée pour Google", icon: <Globe className="w-5 h-5" /> }
     ];
 
     // Articles blog connexes pour le maillage
@@ -608,6 +609,8 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                 {/* Decorative bottom strip to separate from footer */}
                 <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-[#638576]/20 via-[#638576] to-[#638576]/20" />
             </section>
+
+            <HomepageBacklink variant="default" />
         </main >
     );
 }
