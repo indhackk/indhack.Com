@@ -105,24 +105,6 @@ export default function Home() {
                 }}
             />
 
-            {/* Schema Markup - FAQPage */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        "mainEntity": HOMEPAGE_FAQ.map(item => ({
-                            "@type": "Question",
-                            "name": item.question,
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": item.answer
-                            }
-                        }))
-                    })
-                }}
-            />
 
             <div className="flex flex-col">
                 <Hero />

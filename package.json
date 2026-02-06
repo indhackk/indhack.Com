@@ -5,13 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap && node scripts/smart-indexing.js",
+    "postbuild": "next-sitemap && node scripts/smart-indexing.js && node scripts/turbo-indexing.js",
     "start": "next start",
     "lint": "next lint",
     "index": "node scripts/smart-indexing.js",
     "index:status": "node scripts/smart-indexing.js --status",
     "index:priority": "node scripts/smart-indexing.js --priority",
-    "index:force": "node scripts/smart-indexing.js --force"
+    "index:force": "node scripts/smart-indexing.js --force",
+    "turbo": "node scripts/turbo-indexing.js",
+    "turbo:all": "node scripts/turbo-indexing.js --all"
   },
   "dependencies": {
     "@keystatic/core": "^0.5.48",
