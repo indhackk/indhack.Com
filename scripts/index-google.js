@@ -48,6 +48,11 @@ const PRIORITY_URLS = [
 
 async function getAuthClient() {
     if (!fs.existsSync(CREDENTIALS_PATH)) {
+        // En environnement CI/CD (Vercel), ne pas bloquer le build
+        if (process.env.VERCEL || process.env.CI) {
+            console.log('ℹ️  Credentials manquants - Google Indexing ignoré (environnement CI)');
+            return null;
+        }
         console.error('❌ Fichier credentials manquant !');
         console.log('\n📋 Instructions :');
         console.log('1. Va sur https://console.cloud.google.com');
@@ -107,6 +112,13 @@ async function main() {
     console.log('🚀 Indexation Google - indhack.com\n');
 
     const authClient = await getAuthClient();
+
+    // Si pas de credentials (CI/CD), terminer silencieusement
+    if (!authClient) {
+        console.log('✅ Build terminé - indexation Google sera faite manuellement');
+        return;
+    }
+
     const specificUrl = process.argv[2];
 
     let urlsToIndex = [];
