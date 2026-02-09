@@ -71,6 +71,8 @@ export function HeroServices({ title, subtitle, category, image, customVisual }:
                                     alt={title}
                                     width={800}
                                     height={600}
+                                    priority
+                                    fetchPriority="high"
                                     className="w-full h-auto object-cover transition-all duration-1000"
                                 />
                                 <div className="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors duration-700" />
