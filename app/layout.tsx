@@ -41,18 +41,24 @@ export const metadata: Metadata = {
         siteName: "IndHack",
         title: "IndHack | Expertise SEO, GEO & Acquisition Digitale",
         description: "Dominez les résultats Google et les moteurs de réponse IA. Audit, stratégie et accompagnement SEO haute performance.",
-        images: [{ url: "/images/logo-indhack.png", width: 512, height: 512, alt: "IndHack Logo" }],
+        images: [{
+            url: "https://indhack.com/api/og?title=Consultante%20SEO%20%26%20Experte%20R%C3%A9f%C3%A9rencement&subtitle=Dominez%20Google%20avec%20IndHack",
+            width: 1200,
+            height: 630,
+            alt: "IndHack - Consultante SEO & Experte Référencement"
+        }],
     },
     twitter: {
         card: "summary_large_image",
         title: "IndHack | Acquisition Digitale & SEO",
         description: "Stratégies de référencement naturel d'élite et visibilité IA.",
-        images: ["/images/logo-indhack.png"],
+        images: ["https://indhack.com/api/og?title=Consultante%20SEO%20%26%20Experte%20R%C3%A9f%C3%A9rencement&subtitle=Dominez%20Google%20avec%20IndHack"],
         creator: "@indhack",
     },
     alternates: {
         languages: {
             'fr': 'https://indhack.com',
+            'x-default': 'https://indhack.com',
         },
     },
     robots: {
@@ -120,10 +126,22 @@ export default function RootLayout({
     return (
         <html lang="fr" className="scroll-smooth">
             <head>
-                {/* Preconnect pour performance */}
+                {/* Preconnect pour performance - fonts Google */}
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+                {/* Preconnect pour analytics (defer) */}
                 <link rel="preconnect" href="https://www.googletagmanager.com" />
                 <link rel="preconnect" href="https://www.google-analytics.com" />
                 <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+
+                {/* Preload LCP image pour homepage */}
+                <link
+                    rel="preload"
+                    href="/images/logo-indhack.png"
+                    as="image"
+                    type="image/png"
+                />
 
                 <script
                     type="application/ld+json"

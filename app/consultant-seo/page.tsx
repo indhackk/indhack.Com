@@ -17,11 +17,18 @@ export const metadata: Metadata = {
         type: "website",
         locale: "fr_FR",
         siteName: "IndHack",
+        images: [{
+            url: "https://indhack.com/api/og?title=Consultante%20SEO%20Freelance&subtitle=Audit%2C%20strat%C3%A9gie%20et%20optimisation%20pour%20booster%20votre%20visibilit%C3%A9%20Google",
+            width: 1200,
+            height: 630,
+            alt: "Consultante SEO Freelance - IndHack"
+        }],
     },
     twitter: {
         card: "summary_large_image",
         title: "Consultant SEO Freelance | Indiana Aflalo",
         description: "Consultante SEO freelance expérimentée. Résultats mesurables et ROI garanti.",
+        images: ["https://indhack.com/api/og?title=Consultante%20SEO%20Freelance&subtitle=R%C3%A9sultats%20mesurables%20et%20ROI%20garanti"],
     },
     robots: {
         index: true,

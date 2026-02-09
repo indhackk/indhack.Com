@@ -74,6 +74,8 @@ export function AboutContent() {
                                     alt="Indiana Aflalo - Experte en Référencement Naturel"
                                     width={400}
                                     height={500}
+                                    priority
+                                    fetchPriority="high"
                                     className="w-full h-auto object-cover"
                                 />
                             </div>

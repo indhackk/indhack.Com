@@ -195,6 +195,10 @@ const nextConfig = {
     },
 
     images: {
+        // Formats modernes pour LCP optimal (WebP/AVIF)
+        formats: ['image/avif', 'image/webp'],
+        // Cache images optimisées pendant 1 an
+        minimumCacheTTL: 31536000,
         remotePatterns: [
             {
                 protocol: "https",
