@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 import RefonteSiteClient from "./RefonteSiteClient";
+import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
+import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Refonte Site Web | INDHACK, Consultante SEO",
+    title: "Refonte de Site Web | Migration SEO Sécurisée – INDHACK",
     description: "Refonte de site sans perte de trafic. Migration SEO sécurisée, redirection 301 et optimisation technique. Sécurisez votre visibilité. ✆ 06 61 13 97 48",
     alternates: {
         canonical: "https://indhack.com/refonte-site-web"
@@ -15,5 +17,16 @@ export const metadata: Metadata = {
 };
 
 export default function RefonteSiteWebPage() {
-    return <RefonteSiteClient />;
+    return (
+        <>
+            <ServiceSchema
+                name="Refonte de Site Web"
+                description="Refonte de site sans perte de trafic. Migration SEO sécurisée, redirection 301 et optimisation technique."
+                url="https://indhack.com/refonte-site-web"
+                serviceType="Refonte de Site Web"
+            />
+            <Breadcrumb items={getServiceBreadcrumb("Refonte de Site Web", "/refonte-site-web")} />
+            <RefonteSiteClient />
+        </>
+    );
 }

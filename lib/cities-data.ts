@@ -33,7 +33,7 @@ export const FRENCH_CITIES: CityData[] = [
     // Côte d'Azur (PACA)
     {
         name: "Nice",
-        slug: "seo-nice",
+        slug: "consultant-seo-nice",
         zipCode: "06000",
         lat: "43.7102",
         lng: "7.2620",
@@ -52,7 +52,7 @@ export const FRENCH_CITIES: CityData[] = [
     },
     {
         name: "Cannes",
-        slug: "seo-cannes",
+        slug: "consultant-seo-cannes",
         zipCode: "06400",
         lat: "43.5528",
         lng: "7.0174",
@@ -71,7 +71,7 @@ export const FRENCH_CITIES: CityData[] = [
     },
     {
         name: "Antibes",
-        slug: "seo-antibes",
+        slug: "consultant-seo-antibes",
         zipCode: "06600",
         lat: "43.5804",
         lng: "7.1251",
@@ -90,7 +90,7 @@ export const FRENCH_CITIES: CityData[] = [
     },
     {
         name: "Monaco",
-        slug: "seo-monaco",
+        slug: "consultant-seo-monaco",
         zipCode: "98000",
         lat: "43.7384",
         lng: "7.4246",
@@ -109,7 +109,7 @@ export const FRENCH_CITIES: CityData[] = [
     },
     {
         name: "Sophia-Antipolis",
-        slug: "seo-sophia-antipolis",
+        slug: "consultant-seo-sophia-antipolis",
         zipCode: "06560",
         lat: "43.6163",
         lng: "7.0557",
@@ -129,7 +129,7 @@ export const FRENCH_CITIES: CityData[] = [
     // Marseille et environs
     {
         name: "Marseille",
-        slug: "seo-marseille",
+        slug: "consultant-seo-marseille",
         zipCode: "13000",
         lat: "43.2965",
         lng: "5.3698",
@@ -148,7 +148,7 @@ export const FRENCH_CITIES: CityData[] = [
     },
     {
         name: "Aix-en-Provence",
-        slug: "seo-aix-en-provence",
+        slug: "consultant-seo-aix-en-provence",
         zipCode: "13100",
         lat: "43.5297",
         lng: "5.4474",
@@ -168,7 +168,7 @@ export const FRENCH_CITIES: CityData[] = [
     // Paris et Île-de-France
     {
         name: "Paris",
-        slug: "seo-paris",
+        slug: "consultant-seo-paris",
         zipCode: "75000",
         lat: "48.8566",
         lng: "2.3522",
@@ -187,7 +187,7 @@ export const FRENCH_CITIES: CityData[] = [
     },
     {
         name: "Boulogne-Billancourt",
-        slug: "seo-boulogne-billancourt",
+        slug: "consultant-seo-boulogne-billancourt",
         zipCode: "92100",
         lat: "48.8396",
         lng: "2.2399",
@@ -207,7 +207,7 @@ export const FRENCH_CITIES: CityData[] = [
     // Bretagne
     {
         name: "Rennes",
-        slug: "seo-rennes",
+        slug: "consultant-seo-rennes",
         zipCode: "35000",
         lat: "48.1173",
         lng: "-1.6778",
@@ -226,7 +226,7 @@ export const FRENCH_CITIES: CityData[] = [
     },
     {
         name: "Nantes",
-        slug: "seo-nantes",
+        slug: "consultant-seo-nantes",
         zipCode: "44000",
         lat: "47.2184",
         lng: "-1.5536",
@@ -246,7 +246,7 @@ export const FRENCH_CITIES: CityData[] = [
     // Lyon et Rhône-Alpes
     {
         name: "Lyon",
-        slug: "seo-lyon",
+        slug: "consultant-seo-lyon",
         zipCode: "69000",
         lat: "45.7640",
         lng: "4.8357",
@@ -265,7 +265,7 @@ export const FRENCH_CITIES: CityData[] = [
     },
     {
         name: "Grenoble",
-        slug: "seo-grenoble",
+        slug: "consultant-seo-grenoble",
         zipCode: "38000",
         lat: "45.1885",
         lng: "5.7245",
@@ -285,7 +285,7 @@ export const FRENCH_CITIES: CityData[] = [
     // Sud-Ouest
     {
         name: "Toulouse",
-        slug: "seo-toulouse",
+        slug: "consultant-seo-toulouse",
         zipCode: "31000",
         lat: "43.6047",
         lng: "1.4442",
@@ -304,7 +304,7 @@ export const FRENCH_CITIES: CityData[] = [
     },
     {
         name: "Bordeaux",
-        slug: "seo-bordeaux",
+        slug: "consultant-seo-bordeaux",
         zipCode: "33000",
         lat: "44.8378",
         lng: "-0.5792",
@@ -323,7 +323,7 @@ export const FRENCH_CITIES: CityData[] = [
     },
     {
         name: "Montpellier",
-        slug: "seo-montpellier",
+        slug: "consultant-seo-montpellier",
         zipCode: "34000",
         lat: "43.6108",
         lng: "3.8767",
@@ -343,7 +343,7 @@ export const FRENCH_CITIES: CityData[] = [
     // Nord et Est
     {
         name: "Lille",
-        slug: "seo-lille",
+        slug: "consultant-seo-lille",
         zipCode: "59000",
         lat: "50.6292",
         lng: "3.0573",
@@ -362,7 +362,7 @@ export const FRENCH_CITIES: CityData[] = [
     },
     {
         name: "Strasbourg",
-        slug: "seo-strasbourg",
+        slug: "consultant-seo-strasbourg",
         zipCode: "67000",
         lat: "48.5734",
         lng: "7.7521",

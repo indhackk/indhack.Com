@@ -5,12 +5,15 @@ import { Calendar, ArrowRight } from "lucide-react";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import ReactMarkdown from "react-markdown";
+import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 
 export default function BlogListingPage() {
     const posts = getAllPosts();
 
     return (
-        <main className="pt-32 pb-20 bg-gray-50 min-h-screen">
+        <>
+            <Breadcrumb items={getServiceBreadcrumb("Blog SEO", "/blog")} />
+            <main className="pt-32 pb-20 bg-gray-50 min-h-screen">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header */}
@@ -84,5 +87,6 @@ export default function BlogListingPage() {
                 </div>
             </div>
         </main>
+        </>
     );
 }

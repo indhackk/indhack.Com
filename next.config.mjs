@@ -92,6 +92,105 @@ const nextConfig = {
                 destination: '/a-propos',
                 permanent: true,
             },
+            // ══════════════════════════════════════════════════════════════
+            // REDIRECTIONS SEO VILLES : /seo-[ville] → /consultant-seo-[ville]
+            // ══════════════════════════════════════════════════════════════
+            {
+                source: '/seo-nice',
+                destination: '/consultant-seo-nice',
+                permanent: true,
+            },
+            {
+                source: '/seo-paris',
+                destination: '/consultant-seo-paris',
+                permanent: true,
+            },
+            {
+                source: '/seo-cannes',
+                destination: '/consultant-seo-cannes',
+                permanent: true,
+            },
+            {
+                source: '/seo-lyon',
+                destination: '/consultant-seo-lyon',
+                permanent: true,
+            },
+            {
+                source: '/seo-marseille',
+                destination: '/consultant-seo-marseille',
+                permanent: true,
+            },
+            {
+                source: '/seo-toulouse',
+                destination: '/consultant-seo-toulouse',
+                permanent: true,
+            },
+            {
+                source: '/seo-bordeaux',
+                destination: '/consultant-seo-bordeaux',
+                permanent: true,
+            },
+            {
+                source: '/seo-montpellier',
+                destination: '/consultant-seo-montpellier',
+                permanent: true,
+            },
+            {
+                source: '/seo-nantes',
+                destination: '/consultant-seo-nantes',
+                permanent: true,
+            },
+            {
+                source: '/seo-lille',
+                destination: '/consultant-seo-lille',
+                permanent: true,
+            },
+            {
+                source: '/seo-strasbourg',
+                destination: '/consultant-seo-strasbourg',
+                permanent: true,
+            },
+            {
+                source: '/seo-rennes',
+                destination: '/consultant-seo-rennes',
+                permanent: true,
+            },
+            {
+                source: '/seo-grenoble',
+                destination: '/consultant-seo-grenoble',
+                permanent: true,
+            },
+            {
+                source: '/seo-antibes',
+                destination: '/consultant-seo-antibes',
+                permanent: true,
+            },
+            {
+                source: '/seo-monaco',
+                destination: '/consultant-seo-monaco',
+                permanent: true,
+            },
+            {
+                source: '/seo-sophia-antipolis',
+                destination: '/consultant-seo-sophia-antipolis',
+                permanent: true,
+            },
+            {
+                source: '/seo-aix-en-provence',
+                destination: '/consultant-seo-aix-en-provence',
+                permanent: true,
+            },
+            {
+                source: '/seo-boulogne-billancourt',
+                destination: '/consultant-seo-boulogne-billancourt',
+                permanent: true,
+            },
+            // Sous-pages des villes (cocon sémantique)
+            {
+                source: '/seo-:city/:service',
+                destination: '/consultant-seo-:city/:service',
+                permanent: true,
+            },
         ];
     },
 

@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 import CreationSiteClient from "./CreationSiteClient";
+import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
+import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Création Site Web | INDHACK, Consultante SEO",
+    title: "Création de Site Web Optimisé SEO | Sites Performants – INDHACK",
     description: "Sites WordPress et Next.js ultra-rapides, conçus pour la conversion et le référencement. Design sur-mesure, sécurité maximale. Devis gratuit. ✆ 06 61 13 97 48",
     alternates: {
         canonical: "https://indhack.com/creation-site-web"
@@ -15,5 +17,16 @@ export const metadata: Metadata = {
 };
 
 export default function CreationSiteWebPage() {
-    return <CreationSiteClient />;
+    return (
+        <>
+            <ServiceSchema
+                name="Création de Site Web"
+                description="Sites WordPress et Next.js ultra-rapides, conçus pour la conversion et le référencement. Design sur-mesure, sécurité maximale."
+                url="https://indhack.com/creation-site-web"
+                serviceType="Création de Site Web"
+            />
+            <Breadcrumb items={getServiceBreadcrumb("Création de Site Web", "/creation-site-web")} />
+            <CreationSiteClient />
+        </>
+    );
 }

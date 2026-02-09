@@ -10,6 +10,17 @@ import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
 import { useModal } from "@/components/providers/ModalProvider";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
+import Link from "next/link";
+import { MapPin } from "lucide-react";
+
+const FEATURED_CITIES = [
+    { name: "Nice", slug: "consultant-seo-nice" },
+    { name: "Paris", slug: "consultant-seo-paris" },
+    { name: "Lyon", slug: "consultant-seo-lyon" },
+    { name: "Marseille", slug: "consultant-seo-marseille" },
+    { name: "Cannes", slug: "consultant-seo-cannes" },
+    { name: "Bordeaux", slug: "consultant-seo-bordeaux" },
+];
 
 const REFONTE_FEATURES = [
     {
@@ -147,6 +158,75 @@ export default function RefonteSiteClient() {
                                     className="object-cover"
                                 />
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section SEO Local - Maillage */}
+            <section className="py-16 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-2xl font-heading font-bold text-ink mb-4">
+                            Refonte de site web avec <span className="text-sauge">accompagnement SEO</span>
+                        </h2>
+                        <p className="text-soft mb-8">
+                            Que vous soyez à Nice, Paris ou ailleurs en France, je sécurise votre migration SEO.
+                            La refonte est l'occasion idéale d'améliorer votre <Link href="/referencement-naturel" className="text-sauge hover:underline">référencement naturel</Link> et
+                            de renforcer votre positionnement <Link href="/seo-local" className="text-sauge hover:underline">local</Link>.
+                        </p>
+                        <div className="flex flex-wrap justify-center gap-3 mb-8">
+                            {FEATURED_CITIES.map((city) => (
+                                <Link
+                                    key={city.slug}
+                                    href={`/${city.slug}`}
+                                    className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-sauge hover:text-white rounded-full text-sm font-medium transition-all border border-gray-100"
+                                >
+                                    <MapPin className="w-3 h-3" />
+                                    {city.name}
+                                </Link>
+                            ))}
+                            <Link
+                                href="/seo-local"
+                                className="px-4 py-2 bg-ink text-white rounded-full text-sm font-medium hover:bg-sauge transition-all"
+                            >
+                                Toutes les villes →
+                            </Link>
+                        </div>
+                        <p className="text-sm text-soft">
+                            Avant toute refonte, un <Link href="/audit-seo" className="text-sauge hover:underline">audit SEO complet</Link> est recommandé.
+                            Envie de créer un nouveau site plutôt qu'une refonte ? Découvrez mon offre de <Link href="/creation-site-web" className="text-sauge hover:underline">création de site web</Link>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Articles liés */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                            Approfondir le sujet
+                        </h2>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <Link href="/blog/migration-seo-refonte-site" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Migration SEO : comment réussir sa refonte ?
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    Guide complet pour éviter les pièges et conserver vos positions.
+                                </p>
+                            </Link>
+                            <Link href="/blog/importance-audit-seo" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Pourquoi l'audit SEO est le point de départ
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    L'audit avant refonte : un investissement indispensable.
+                                </p>
+                            </Link>
                         </div>
                     </div>
                 </div>

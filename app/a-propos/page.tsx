@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { AboutContent } from "@/components/AboutContent";
+import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
     title: "À Propos | INDHACK, Consultante SEO",
@@ -15,5 +16,10 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-    return <AboutContent />;
+    return (
+        <>
+            <Breadcrumb items={getServiceBreadcrumb("À propos", "/a-propos")} />
+            <AboutContent />
+        </>
+    );
 }

@@ -10,6 +10,16 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
+import { MapPin } from "lucide-react";
+
+const FEATURED_CITIES = [
+    { name: "Nice", slug: "consultant-seo-nice" },
+    { name: "Paris", slug: "consultant-seo-paris" },
+    { name: "Lyon", slug: "consultant-seo-lyon" },
+    { name: "Marseille", slug: "consultant-seo-marseille" },
+    { name: "Cannes", slug: "consultant-seo-cannes" },
+    { name: "Bordeaux", slug: "consultant-seo-bordeaux" },
+];
 
 const CREATION_FEATURES = [
     {
@@ -257,6 +267,45 @@ export default function CreationSiteClient() {
                                 </p>
                             </Link>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section SEO Local - Maillage */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-2xl font-heading font-bold text-ink mb-4">
+                            Création de site web <span className="text-sauge">optimisé SEO</span> dans votre ville
+                        </h2>
+                        <p className="text-soft mb-8">
+                            Basée sur la Côte d'Azur, j'accompagne des entrepreneurs et PME partout en France.
+                            Chaque site que je crée est pensé pour le <Link href="/referencement-naturel" className="text-sauge hover:underline">référencement naturel</Link> et
+                            intègre une stratégie de <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link> adaptée à votre zone de chalandise.
+                        </p>
+                        <div className="flex flex-wrap justify-center gap-3 mb-8">
+                            {FEATURED_CITIES.map((city) => (
+                                <Link
+                                    key={city.slug}
+                                    href={`/${city.slug}`}
+                                    className="flex items-center gap-2 px-4 py-2 bg-gray-50 hover:bg-sauge hover:text-white rounded-full text-sm font-medium transition-all"
+                                >
+                                    <MapPin className="w-3 h-3" />
+                                    {city.name}
+                                </Link>
+                            ))}
+                            <Link
+                                href="/seo-local"
+                                className="px-4 py-2 bg-ink text-white rounded-full text-sm font-medium hover:bg-sauge transition-all"
+                            >
+                                Toutes les villes →
+                            </Link>
+                        </div>
+                        <p className="text-sm text-soft">
+                            Besoin d'un <Link href="/audit-seo" className="text-sauge hover:underline">audit SEO</Link> avant de créer votre site ?
+                            Ou d'une <Link href="/refonte-site-web" className="text-sauge hover:underline">refonte</Link> de votre site existant ?
+                            <Link href="/contact" className="text-sauge hover:underline ml-1">Contactez-moi</Link> pour en discuter.
+                        </p>
                     </div>
                 </div>
             </section>

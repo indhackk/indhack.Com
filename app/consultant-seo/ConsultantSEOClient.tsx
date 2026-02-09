@@ -82,18 +82,18 @@ const AVANTAGES = [
 ];
 
 const CITIES = [
-    { name: "Nice", slug: "seo-nice" },
-    { name: "Paris", slug: "seo-paris" },
-    { name: "Cannes", slug: "seo-cannes" },
-    { name: "Monaco", slug: "seo-monaco" },
-    { name: "Marseille", slug: "seo-marseille" },
-    { name: "Lyon", slug: "seo-lyon" },
-    { name: "Bordeaux", slug: "seo-bordeaux" },
-    { name: "Toulouse", slug: "seo-toulouse" },
-    { name: "Nantes", slug: "seo-nantes" },
-    { name: "Rennes", slug: "seo-rennes" },
-    { name: "Montpellier", slug: "seo-montpellier" },
-    { name: "Lille", slug: "seo-lille" },
+    { name: "Nice", slug: "consultant-seo-nice" },
+    { name: "Paris", slug: "consultant-seo-paris" },
+    { name: "Cannes", slug: "consultant-seo-cannes" },
+    { name: "Monaco", slug: "consultant-seo-monaco" },
+    { name: "Marseille", slug: "consultant-seo-marseille" },
+    { name: "Lyon", slug: "consultant-seo-lyon" },
+    { name: "Bordeaux", slug: "consultant-seo-bordeaux" },
+    { name: "Toulouse", slug: "consultant-seo-toulouse" },
+    { name: "Nantes", slug: "consultant-seo-nantes" },
+    { name: "Rennes", slug: "consultant-seo-rennes" },
+    { name: "Montpellier", slug: "consultant-seo-montpellier" },
+    { name: "Lille", slug: "consultant-seo-lille" },
 ];
 
 const FAQ = [

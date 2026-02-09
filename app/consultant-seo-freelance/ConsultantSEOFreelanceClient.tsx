@@ -76,14 +76,14 @@ const MISSIONS = [
 ];
 
 const CITIES = [
-    { name: "Nice", slug: "seo-nice" },
-    { name: "Paris", slug: "seo-paris" },
-    { name: "Lyon", slug: "seo-lyon" },
-    { name: "Marseille", slug: "seo-marseille" },
-    { name: "Bordeaux", slug: "seo-bordeaux" },
-    { name: "Toulouse", slug: "seo-toulouse" },
-    { name: "Nantes", slug: "seo-nantes" },
-    { name: "Rennes", slug: "seo-rennes" },
+    { name: "Nice", slug: "consultant-seo-nice" },
+    { name: "Paris", slug: "consultant-seo-paris" },
+    { name: "Lyon", slug: "consultant-seo-lyon" },
+    { name: "Marseille", slug: "consultant-seo-marseille" },
+    { name: "Bordeaux", slug: "consultant-seo-bordeaux" },
+    { name: "Toulouse", slug: "consultant-seo-toulouse" },
+    { name: "Nantes", slug: "consultant-seo-nantes" },
+    { name: "Rennes", slug: "consultant-seo-rennes" },
 ];
 
 const FAQ = [

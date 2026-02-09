@@ -12,12 +12,12 @@ import { useModal } from "@/components/providers/ModalProvider";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
 const FEATURED_CITIES = [
-    { name: "Nice", slug: "seo-nice" },
-    { name: "Paris", slug: "seo-paris" },
-    { name: "Lyon", slug: "seo-lyon" },
-    { name: "Marseille", slug: "seo-marseille" },
-    { name: "Bordeaux", slug: "seo-bordeaux" },
-    { name: "Toulouse", slug: "seo-toulouse" },
+    { name: "Nice", slug: "consultant-seo-nice" },
+    { name: "Paris", slug: "consultant-seo-paris" },
+    { name: "Lyon", slug: "consultant-seo-lyon" },
+    { name: "Marseille", slug: "consultant-seo-marseille" },
+    { name: "Bordeaux", slug: "consultant-seo-bordeaux" },
+    { name: "Toulouse", slug: "consultant-seo-toulouse" },
 ];
 
 const SEO_PILLARS = [

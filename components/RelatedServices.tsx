@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Search, FileSearch, Globe, RefreshCw, Users, MapPin, User } from "lucide-react";
+import { ArrowRight, Search, FileSearch, Globe, RefreshCw, Users, MapPin, User, ShoppingCart } from "lucide-react";
 
 interface Service {
     title: string;
@@ -50,6 +50,12 @@ const ALL_SERVICES: Record<string, Service> = {
         href: "/seo-local",
         description: "Visibilité de proximité",
         icon: <MapPin className="w-5 h-5" />
+    },
+    "creation-boutique-en-ligne": {
+        title: "Boutique E-commerce",
+        href: "/creation-boutique-en-ligne",
+        description: "Vendre en ligne",
+        icon: <ShoppingCart className="w-5 h-5" />
     }
 };
 
@@ -58,10 +64,11 @@ const RELATED_MAPPING: Record<string, string[]> = {
     "consultant-seo": ["audit-seo", "referencement-naturel", "seo-local"],
     "audit-seo": ["consultant-seo", "referencement-naturel", "seo-local"],
     "referencement-naturel": ["consultant-seo", "audit-seo", "seo-local"],
-    "creation-site-web": ["consultant-seo", "referencement-naturel", "refonte-site-web"],
+    "creation-site-web": ["creation-boutique-en-ligne", "referencement-naturel", "refonte-site-web"],
     "refonte-site-web": ["consultant-seo", "creation-site-web", "audit-seo"],
     "community-manager": ["consultant-seo", "creation-site-web", "seo-local"],
-    "seo-local": ["consultant-seo", "audit-seo", "referencement-naturel"]
+    "seo-local": ["consultant-seo", "audit-seo", "referencement-naturel"],
+    "creation-boutique-en-ligne": ["creation-site-web", "referencement-naturel", "seo-local"]
 };
 
 interface RelatedServicesProps {

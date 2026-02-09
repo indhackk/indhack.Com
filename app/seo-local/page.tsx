@@ -4,9 +4,11 @@ import { FRENCH_CITIES } from "@/lib/cities-data";
 import { MapPin, ArrowRight, Search, Users, TrendingUp, CheckCircle2, Phone, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
+import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
+import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "SEO Local | INDHACK, Consultante SEO",
+    title: "SEO Local | Dominez Google Maps & le Pack Local – INDHACK",
     description: "Consultante SEO locale experte sur toutes les grandes villes françaises. Nice, Cannes, Marseille, Paris, Lyon, Bordeaux, Toulouse, Rennes, Nantes, Lille... Référencement géolocalisé pour PME. ✆ 06 61 13 97 48",
     alternates: {
         canonical: "https://indhack.com/seo-local"
@@ -28,9 +30,17 @@ const citiesByRegion = FRENCH_CITIES.reduce((acc, city) => {
 
 export default function SeoLocalPage() {
     return (
-        <main className="bg-white min-h-screen">
-            {/* Hero */}
-            <section className="bg-ink text-white pt-32 pb-20">
+        <>
+            <ServiceSchema
+                name="SEO Local"
+                description="Consultante SEO locale experte sur toutes les grandes villes françaises. Référencement géolocalisé pour PME."
+                url="https://indhack.com/seo-local"
+                serviceType="SEO Local"
+            />
+            <Breadcrumb items={getServiceBreadcrumb("SEO Local", "/seo-local")} />
+            <main className="bg-white min-h-screen">
+                {/* Hero */}
+                <section className="bg-ink text-white pt-32 pb-20">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="inline-flex items-center gap-2 bg-sauge/20 text-sauge px-4 py-2 rounded-full text-sm font-bold mb-6">
@@ -224,7 +234,8 @@ export default function SeoLocalPage() {
                 </div>
             </section>
 
-            <HomepageBacklink variant="default" />
-        </main>
+                <HomepageBacklink variant="default" />
+            </main>
+        </>
     );
 }

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
     title: "Contact | INDHACK, Consultante SEO",
@@ -15,5 +16,10 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-    return <ContactForm />;
+    return (
+        <>
+            <Breadcrumb items={getServiceBreadcrumb("Contact", "/contact")} />
+            <ContactForm />
+        </>
+    );
 }

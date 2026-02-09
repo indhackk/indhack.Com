@@ -2,7 +2,8 @@ import { getPostBySlug, getAllPosts } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { Calendar, ChevronLeft, ArrowRight, Phone } from "lucide-react";
+import { Calendar, ArrowRight, Phone } from "lucide-react";
+import { Breadcrumb, getBlogBreadcrumb } from "@/components/Breadcrumb";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
 import ReactMarkdown from "react-markdown";
@@ -82,16 +83,12 @@ export default function BlogPostPage({ params }: PageProps) {
     }
 
     return (
-        <main className="pt-32 pb-20 bg-white">
-            <div className="container mx-auto px-4 max-w-4xl">
+        <>
+            <Breadcrumb items={getBlogBreadcrumb(post.title, params.slug)} />
+            <main className="pt-8 pb-20 bg-white">
+                <div className="container mx-auto px-4 max-w-4xl">
 
-                {/* Back Link */}
-                <Link href="/blog" className="inline-flex items-center text-sauge hover:text-ink transition-colors mb-8 group">
-                    <ChevronLeft className="w-5 h-5 mr-1 group-hover:-translate-x-1 transition-transform" />
-                    Retour au blog
-                </Link>
-
-                {/* Schema.org BlogPosting - Optimisé GEO */}
+                    {/* Schema.org BlogPosting - Optimisé GEO */}
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
@@ -147,36 +144,7 @@ export default function BlogPostPage({ params }: PageProps) {
                         })
                     }}
                 />
-                {/* Schema.org BreadcrumbList - Navigation GEO */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "BreadcrumbList",
-                            "itemListElement": [
-                                {
-                                    "@type": "ListItem",
-                                    "position": 1,
-                                    "name": "Accueil",
-                                    "item": "https://indhack.com"
-                                },
-                                {
-                                    "@type": "ListItem",
-                                    "position": 2,
-                                    "name": "Blog",
-                                    "item": "https://indhack.com/blog"
-                                },
-                                {
-                                    "@type": "ListItem",
-                                    "position": 3,
-                                    "name": post.title,
-                                    "item": `https://indhack.com/blog/${params.slug}`
-                                }
-                            ]
-                        })
-                    }}
-                />
+                {/* Schema.org BreadcrumbList est inclus dans le composant Breadcrumb */}
 
                 {/* Post Header */}
                 <header className="mb-12 animate-in fade-in slide-in-from-bottom-4 duration-1000">
@@ -339,5 +307,6 @@ export default function BlogPostPage({ params }: PageProps) {
 
             </div>
         </main>
+        </>
     );
 }

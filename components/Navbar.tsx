@@ -18,8 +18,6 @@ const SERVICES = [
     // Création & Refonte Web
     { title: "Création de Site Web", href: "/creation-site-web", desc: "Sites haute performance optimisés SEO.", category: "web" },
     { title: "Refonte de Site", href: "/refonte-site-web", desc: "Migrez sans perdre votre visibilité.", category: "web" },
-    // Communication Digitale
-    { title: "Community Manager", href: "/community-manager", desc: "Gestion complète de vos réseaux sociaux.", category: "social" },
 ];
 
 export function Navbar() {

@@ -13,10 +13,10 @@ import { useModal } from "@/components/providers/ModalProvider";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
 const FEATURED_CITIES = [
-    { name: "Nice", slug: "seo-nice" },
-    { name: "Paris", slug: "seo-paris" },
-    { name: "Lyon", slug: "seo-lyon" },
-    { name: "Marseille", slug: "seo-marseille" },
+    { name: "Nice", slug: "consultant-seo-nice" },
+    { name: "Paris", slug: "consultant-seo-paris" },
+    { name: "Lyon", slug: "consultant-seo-lyon" },
+    { name: "Marseille", slug: "consultant-seo-marseille" },
 ];
 
 const AUDIT_FEATURES = [

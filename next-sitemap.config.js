@@ -66,20 +66,20 @@ module.exports = {
         // Pages prioritaires (services principaux)
         const highPriorityPages = [
             '/',
+            '/consultant-seo',
             '/seo-local',
             '/audit-seo',
             '/referencement-naturel',
             '/creation-site-web',
-            '/refonte-site-web',
-            '/community-manager'
+            '/refonte-site-web'
         ];
 
-        // Pages villes (cocoon SEO)
+        // Pages villes (cocoon SEO) - nouvelles URLs
         const cityPages = [
-            '/seo-nice', '/seo-cannes', '/seo-antibes', '/seo-monaco', '/seo-sophia-antipolis',
-            '/seo-marseille', '/seo-aix-en-provence', '/seo-paris', '/seo-lyon', '/seo-bordeaux',
-            '/seo-toulouse', '/seo-rennes', '/seo-nantes', '/seo-lille', '/seo-montpellier',
-            '/seo-strasbourg', '/seo-grenoble', '/seo-boulogne-billancourt'
+            '/consultant-seo-nice', '/consultant-seo-cannes', '/consultant-seo-antibes', '/consultant-seo-monaco', '/consultant-seo-sophia-antipolis',
+            '/consultant-seo-marseille', '/consultant-seo-aix-en-provence', '/consultant-seo-paris', '/consultant-seo-lyon', '/consultant-seo-bordeaux',
+            '/consultant-seo-toulouse', '/consultant-seo-rennes', '/consultant-seo-nantes', '/consultant-seo-lille', '/consultant-seo-montpellier',
+            '/consultant-seo-strasbourg', '/consultant-seo-grenoble', '/consultant-seo-boulogne-billancourt'
         ];
 
         // Pages outils (valeur ajoutée)

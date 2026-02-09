@@ -19,9 +19,9 @@ export default function DashboardPage() {
     ];
 
     const landingPages = [
-        { name: "SEO Nice", path: "/seo-nice" },
-        { name: "SEO Cannes", path: "/seo-cannes" },
-        { name: "SEO Antibes", path: "/seo-antibes" },
+        { name: "Consultant SEO Nice", path: "/consultant-seo-nice" },
+        { name: "Consultant SEO Cannes", path: "/consultant-seo-cannes" },
+        { name: "Consultant SEO Antibes", path: "/consultant-seo-antibes" },
         { name: "Audit Gratuit", path: "/audit-seo-gratuit" },
         { name: "Refonte Site Web", path: "/refonte-site-web" },
         { name: "Création Site Web", path: "/creation-site-web" },

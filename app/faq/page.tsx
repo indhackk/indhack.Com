@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { FAQContent } from "@/components/FAQContent";
+import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
     title: "FAQ - Questions Fréquentes SEO | INDHACK",
@@ -65,6 +66,7 @@ const faqSchema = {
 export default function FAQPage() {
     return (
         <>
+            <Breadcrumb items={getServiceBreadcrumb("FAQ", "/faq")} />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

@@ -7,10 +7,11 @@ import { CTASection } from "@/components/CTASection";
 import { SEOScoreChecker } from "@/components/SEOScoreChecker";
 import { CityCarousel } from "@/components/sections/CityCarousel";
 import { TrustSignals } from "@/components/sections/TrustSignals";
+import { HomepageSchemas } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
     title: "Consultante SEO & Experte Référencement Naturel | INDHACK",
-    description: "Boostez votre visibilité Google avec une experte SEO. Audit gratuit, +200% de trafic organique en 6 mois. Résultats garantis pour PME et startups.",
+    description: "Consultante SEO freelance spécialisée en référencement naturel, SEO local et création de site web. Audit SEO gratuit. Nice & toute la France. ✆ 06 61 13 97 48",
     alternates: {
         canonical: "https://indhack.com"
     },
@@ -53,58 +54,8 @@ const HOMEPAGE_FAQ = [
 export default function Home() {
     return (
         <>
-            {/* Schema Markup - ProfessionalService */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "ProfessionalService",
-                        "name": "IndHack - Experte en Référencement Naturel",
-                        "alternateName": "Indiana Aflalo",
-                        "description": "Experte en référencement naturel, création de sites web performants et stratégie digitale. Propulsez votre site en première page Google.",
-                        "url": "https://indhack.com",
-                        "telephone": "+33661139748",
-                        "email": "contact@indhack.com",
-                        "address": {
-                            "@type": "PostalAddress",
-                            "addressCountry": "FR"
-                        },
-                        "areaServed": "France",
-                        "serviceType": [
-                            "Référencement Naturel",
-                            "Audit SEO",
-                            "Création Site Web",
-                            "SEO Local",
-                            "Gestion Réseaux Sociaux"
-                        ],
-                        "priceRange": "€€",
-                        "sameAs": [
-                            "https://www.linkedin.com/in/indianaaflalo",
-                            "https://twitter.com/indhack"
-                        ]
-                    })
-                }}
-            />
-
-            {/* Schema Markup - WebSite (Organization est dans layout.tsx global) */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "WebSite",
-                        "name": "IndHack",
-                        "url": "https://indhack.com",
-                        "potentialAction": {
-                            "@type": "SearchAction",
-                            "target": "https://indhack.com/blog?q={search_term_string}",
-                            "query-input": "required name=search_term_string"
-                        }
-                    })
-                }}
-            />
-
+            {/* Schemas JSON-LD : Organization + LocalBusiness + WebSite */}
+            <HomepageSchemas />
 
             <div className="flex flex-col">
                 <Hero />

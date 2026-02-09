@@ -1,9 +1,11 @@
 import { Metadata } from "next";
 import ConsultantSEOClient from "./ConsultantSEOClient";
+import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
+import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Consultant SEO | INDHACK, Consultante SEO",
-    description: "Consultante SEO freelance expérimentée. Audit technique, stratégie de contenu, netlinking. Résultats mesurables et ROI garanti. Devis gratuit sous 24h.",
+    title: "Consultante SEO Freelance | Experte Référencement Naturel – INDHACK",
+    description: "Consultante SEO freelance expérimentée. Audit technique, stratégie de contenu, netlinking. Résultats mesurables et ROI garanti. Devis gratuit. ✆ 06 61 13 97 48",
     keywords: ["consultant SEO", "consultant SEO freelance", "consultante SEO", "expert référencement naturel", "consultant référencement", "SEO freelance"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo"
@@ -28,5 +30,16 @@ export const metadata: Metadata = {
 };
 
 export default function ConsultantSEOPage() {
-    return <ConsultantSEOClient />;
+    return (
+        <>
+            <ServiceSchema
+                name="Consultante SEO Freelance"
+                description="Consultante SEO freelance expérimentée. Audit technique, stratégie de contenu, netlinking. Résultats mesurables et ROI garanti."
+                url="https://indhack.com/consultant-seo"
+                serviceType="Consultant SEO"
+            />
+            <Breadcrumb items={getServiceBreadcrumb("Consultante SEO Freelance", "/consultant-seo")} />
+            <ConsultantSEOClient />
+        </>
+    );
 }
