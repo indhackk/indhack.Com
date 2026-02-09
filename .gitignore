@@ -24,6 +24,13 @@ ts-debug.log*
 
 # local env files
 .env*.local
+.env
+
+# Google credentials (NEVER commit these!)
+google-credentials.json
+*-credentials.json
+scripts/google-credentials.json
+*.gserviceaccount.json
 
 # vercel
 .vercel

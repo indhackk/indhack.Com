@@ -47,6 +47,13 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "IndHack | Acquisition Digitale & SEO",
         description: "Stratégies de référencement naturel d'élite et visibilité IA.",
+        images: ["/images/logo-indhack.png"],
+        creator: "@indhack",
+    },
+    alternates: {
+        languages: {
+            'fr': 'https://indhack.com',
+        },
     },
     robots: {
         index: true,

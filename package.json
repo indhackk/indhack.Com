@@ -13,7 +13,8 @@
     "index:priority": "node scripts/smart-indexing.js --priority",
     "index:force": "node scripts/smart-indexing.js --force",
     "turbo": "node scripts/turbo-indexing.js",
-    "turbo:all": "node scripts/turbo-indexing.js --all"
+    "turbo:all": "node scripts/turbo-indexing.js --all",
+    "ping-indexnow": "curl -X POST http://localhost:3000/api/indexnow -H 'Content-Type: application/json' -d '{}'"
   },
   "dependencies": {
     "@keystatic/core": "^0.5.48",

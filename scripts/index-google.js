@@ -15,10 +15,16 @@ const { google } = require('googleapis');
 const fs = require('fs');
 const path = require('path');
 
+// Charger les variables d'environnement si disponibles
+try { require('dotenv').config({ path: path.join(__dirname, '../.env.local') }); } catch {}
+
 // Configuration
 const CREDENTIALS_PATH = path.join(__dirname, 'google-credentials.json');
 const SITEMAP_PATH = path.join(__dirname, '../public/sitemap.xml');
 const SCOPES = ['https://www.googleapis.com/auth/indexing'];
+
+// IMPORTANT: Ne jamais committer le fichier google-credentials.json !
+// Il est exclu via .gitignore
 
 // URLs prioritaires à indexer en premier
 const PRIORITY_URLS = [
@@ -26,10 +32,18 @@ const PRIORITY_URLS = [
     'https://indhack.com/consultant-seo',
     'https://indhack.com/audit-seo',
     'https://indhack.com/referencement-naturel',
-    'https://indhack.com/seo-nice',
-    'https://indhack.com/seo-paris',
+    'https://indhack.com/seo-local',
     'https://indhack.com/creation-site-web',
+    'https://indhack.com/refonte-site-web',
+    'https://indhack.com/creation-boutique-en-ligne',
+    'https://indhack.com/tarifs',
+    'https://indhack.com/etudes-de-cas',
     'https://indhack.com/consultant-seo-freelance',
+    'https://indhack.com/consultant-seo-nice',
+    'https://indhack.com/consultant-seo-paris',
+    'https://indhack.com/consultant-seo-lyon',
+    'https://indhack.com/consultant-seo-marseille',
+    'https://indhack.com/consultant-seo-cannes',
 ];
 
 async function getAuthClient() {
