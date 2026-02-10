@@ -30,73 +30,73 @@ const BLOG_IMAGES_CONFIG = [
     },
     {
         slug: 'pourquoi-consultant-seo',
-        source: './public/images/partnership.png',
+        source: './public/images/blog/pourquoi-consultant-seo-source.png',
         output: 'pourquoi-consultant-seo.jpg',
         keyword: 'Consultant SEO - Expert Référencement Naturel',
-        description: 'Partenariat stratégique avec un consultant SEO professionnel',
+        description: 'Réunion professionnelle entre un consultant SEO et son client',
         date: '2026:02:04 09:00:00',
         gps: null
     },
     {
         slug: 'devenir-consultant-seo',
-        source: './public/images/croissance-seo.png',
+        source: './public/images/blog/refonte-site-seo-source.png',
         output: 'devenir-consultant-seo.jpg',
         keyword: 'Devenir Consultant SEO - Carrière Référencement',
-        description: 'Croissance de carrière dans le métier de consultant SEO',
+        description: 'Équipe en train de travailler sur une stratégie SEO',
         date: '2026:02:02 11:00:00',
         gps: null
     },
     {
         slug: 'salaire-consultant-seo',
-        source: './public/images/seo-dashboard.png',
+        source: './public/images/blog/cout-site-web-source.png',
         output: 'salaire-consultant-seo.jpg',
         keyword: 'Salaire Consultant SEO - Rémunération Expert SEO',
-        description: 'Dashboard de performance SEO et indicateurs salariaux',
+        description: 'Environnement de travail consultant SEO avec ordinateur et budget',
         date: '2026:01:25 14:00:00',
         gps: null
     },
     {
         slug: 'importance-audit-seo',
-        source: './public/images/audit-seo.png',
+        source: './public/images/blog/rapport-audit-seo-source.png',
         output: 'importance-audit-seo.jpg',
         keyword: 'Audit SEO - Analyse Site Web',
-        description: 'Audit SEO complet pour améliorer le référencement naturel',
+        description: 'Rapport d\'audit SEO détaillé sur un bureau',
         date: '2026:01:15 08:30:00',
         gps: null
     },
     {
         slug: 'comment-creer-site-visible-google',
-        source: './public/images/creation-site.png',
+        source: './public/images/blog/refonte-site-seo-source.png',
         output: 'creer-site-visible-google.jpg',
         keyword: 'Créer Site Internet Visible Google - Référencement Site Web',
-        description: 'Création de site web optimisé pour le référencement Google',
+        description: 'Équipe de développement web travaillant sur la visibilité Google',
         date: '2026:02:04 15:00:00',
         gps: null
     },
     {
         slug: 'quelle-formation-seo',
-        source: './public/images/ai-brain.png',
+        source: './public/images/blog/pourquoi-consultant-seo-source.png',
         output: 'formation-seo.jpg',
         keyword: 'Formation SEO - Apprendre le Référencement Naturel',
-        description: 'Formation SEO professionnelle et certification référencement',
+        description: 'Session de formation ou réunion stratégique SEO',
         date: '2026:02:03 10:30:00',
         gps: null
     },
     {
         slug: 'missions-consultant-seo',
-        source: './public/images/seo-dashboard.png',
+        source: './public/images/blog/seo-vs-sea-source.png',
         output: 'missions-consultant-seo.jpg',
         keyword: 'Missions Consultant SEO - Travail Expert Référencement',
-        description: 'Les missions principales d\'un consultant SEO professionnel',
+        description: 'Tableau de bord analytics montrant les résultats des missions SEO',
         date: '2026:02:01 16:00:00',
         gps: null
     },
     {
         slug: 'visibilite-ia-geo',
-        source: './public/images/ai-brain.png',
+        source: './public/images/blog/seo-vs-sea-source.png',
         output: 'geo-ia-seo.jpg',
         keyword: 'GEO - Generative Engine Optimization - SEO IA',
-        description: 'Optimisation pour les moteurs de recherche IA - ChatGPT Gemini',
+        description: 'Analyse d\'impact de l\'IA sur le trafic web',
         date: '2026:01:28 12:00:00',
         gps: null
     },
@@ -111,7 +111,7 @@ const BLOG_IMAGES_CONFIG = [
     },
     {
         slug: 'cout-site-web-2026',
-        source: './public/images/blog/cout-site-web-2026-source.png',
+        source: './public/images/blog/cout-site-web-source.png',
         output: 'cout-site-web-2026.jpg',
         keyword: 'Prix Site Web 2026 - Coût Création Site Internet',
         description: 'Estimation budget création site web en 2026 sur écran ordinateur',
