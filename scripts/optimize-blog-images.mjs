@@ -11,26 +11,11 @@ import path from 'path';
 
 const BLOG_IMAGES_DIR = './public/images/blog';
 
-// Configuration des images par article
 const BLOG_IMAGES_CONFIG = [
-    {
-        slug: 'seo-local-nice',
-        source: './public/images/cities/nice-promenade-anglais.jpg',
-        output: 'seo-local-nice.jpg',
-        keyword: 'SEO Local Nice - Consultant SEO Côte d\'Azur',
-        description: 'Vue panoramique de Nice, Promenade des Anglais - SEO Local Nice',
-        date: '2026:01:20 10:00:00',
-        // GPS Nice: 43.7102° N, 7.2620° E
-        gps: {
-            latitude: 43.7102,
-            longitude: 7.2620,
-            latitudeRef: 'N',
-            longitudeRef: 'E'
-        }
-    },
+    // 1. REUNION / CONTACT / MISSION
     {
         slug: 'pourquoi-consultant-seo',
-        source: './public/images/blog/pourquoi-consultant-seo-source.png',
+        source: './public/images/blog/real-meeting.png',
         output: 'pourquoi-consultant-seo.jpg',
         keyword: 'Consultant SEO - Expert Référencement Naturel',
         description: 'Réunion professionnelle entre un consultant SEO et son client',
@@ -38,111 +23,139 @@ const BLOG_IMAGES_CONFIG = [
         gps: null
     },
     {
-        slug: 'devenir-consultant-seo',
-        source: './public/images/blog/refonte-site-seo-source.png',
-        output: 'devenir-consultant-seo.jpg',
-        keyword: 'Devenir Consultant SEO - Carrière Référencement',
-        description: 'Équipe en train de travailler sur une stratégie SEO',
-        date: '2026:02:02 11:00:00',
-        gps: null
-    },
-    {
-        slug: 'salaire-consultant-seo',
-        source: './public/images/blog/cout-site-web-source.png',
-        output: 'salaire-consultant-seo.jpg',
-        keyword: 'Salaire Consultant SEO - Rémunération Expert SEO',
-        description: 'Environnement de travail consultant SEO avec ordinateur et budget',
-        date: '2026:01:25 14:00:00',
-        gps: null
-    },
-    {
-        slug: 'importance-audit-seo',
-        source: './public/images/blog/rapport-audit-seo-source.png',
-        output: 'importance-audit-seo.jpg',
-        keyword: 'Audit SEO - Analyse Site Web',
-        description: 'Rapport d\'audit SEO détaillé sur un bureau',
-        date: '2026:01:15 08:30:00',
-        gps: null
-    },
-    {
-        slug: 'comment-creer-site-visible-google',
-        source: './public/images/blog/refonte-site-seo-source.png',
-        output: 'creer-site-visible-google.jpg',
-        keyword: 'Créer Site Internet Visible Google - Référencement Site Web',
-        description: 'Équipe de développement web travaillant sur la visibilité Google',
-        date: '2026:02:04 15:00:00',
-        gps: null
-    },
-    {
-        slug: 'quelle-formation-seo',
-        source: './public/images/blog/pourquoi-consultant-seo-source.png',
-        output: 'formation-seo.jpg',
-        keyword: 'Formation SEO - Apprendre le Référencement Naturel',
-        description: 'Session de formation ou réunion stratégique SEO',
-        date: '2026:02:03 10:30:00',
-        gps: null
-    },
-    {
         slug: 'missions-consultant-seo',
-        source: './public/images/blog/seo-vs-sea-source.png',
+        source: './public/images/blog/real-meeting.png',
         output: 'missions-consultant-seo.jpg',
         keyword: 'Missions Consultant SEO - Travail Expert Référencement',
-        description: 'Tableau de bord analytics montrant les résultats des missions SEO',
+        description: 'Consultant SEO en réunion stratégique avec des clients',
         date: '2026:02:01 16:00:00',
         gps: null
     },
     {
-        slug: 'visibilite-ia-geo',
-        source: './public/images/blog/seo-vs-sea-source.png',
-        output: 'geo-ia-seo.jpg',
-        keyword: 'GEO - Generative Engine Optimization - SEO IA',
-        description: 'Analyse d\'impact de l\'IA sur le trafic web',
-        date: '2026:01:28 12:00:00',
+        slug: 'formation-seo',
+        source: './public/images/blog/real-meeting.png',
+        output: 'formation-seo.jpg',
+        keyword: 'Formation SEO - Apprendre le Référencement Naturel',
+        description: 'Session de formation interactives en référencement naturel',
+        date: '2026:02:03 10:30:00',
+        gps: null
+    },
+    {
+        slug: 'quelle-formation-seo',
+        source: './public/images/blog/real-meeting.png',
+        output: 'formation-seo.jpg',
+        keyword: 'Formation SEO - Apprendre le Référencement Naturel',
+        description: 'Formation et mentorat SEO en entreprise',
+        date: '2026:02:03 10:30:00',
+        gps: null
+    },
+
+    // 2. AUDIT / ANALYSE
+    {
+        slug: 'importance-audit-seo',
+        source: './public/images/blog/real-audit.png',
+        output: 'importance-audit-seo.jpg',
+        keyword: 'Audit SEO - Analyse Site Web',
+        description: 'Rapport d\'audit SEO complet sur un bureau',
+        date: '2026:01:15 08:30:00',
         gps: null
     },
     {
         slug: 'contenu-rapport-audit-seo',
-        source: './public/images/blog/rapport-audit-seo-source.png',
+        source: './public/images/blog/real-audit.png',
         output: 'rapport-audit-seo.jpg',
         keyword: 'Audit SEO - Rapport Analyse Site Web',
-        description: 'Rapport d\'audit SEO détaillé sur un bureau avec graphiques de performance',
+        description: 'Détail d\'un rapport d\'analyse SEO avec graphiques',
         date: '2026:02:10 09:00:00',
         gps: null
     },
     {
+        slug: 'visibilite-ia-geo',
+        source: './public/images/blog/real-audit.png',
+        output: 'geo-ia-seo.jpg',
+        keyword: 'GEO - Generative Engine Optimization - SEO IA',
+        description: 'Analyse approfondie de la visibilité sur les moteurs de recherche',
+        date: '2026:01:28 12:00:00',
+        gps: null
+    },
+
+    // 3. BUDGET / SALAIRE / CHIFFRES
+    {
+        slug: 'salaire-consultant-seo',
+        source: './public/images/blog/real-cout.png',
+        output: 'salaire-consultant-seo.jpg',
+        keyword: 'Salaire Consultant SEO - Rémunération Expert SEO',
+        description: 'Analyse financière et budgétaire sur ordinateur',
+        date: '2026:01:25 14:00:00',
+        gps: null
+    },
+    {
         slug: 'cout-site-web-2026',
-        source: './public/images/blog/cout-site-web-source.png',
+        source: './public/images/blog/real-cout.png',
         output: 'cout-site-web-2026.jpg',
         keyword: 'Prix Site Web 2026 - Coût Création Site Internet',
-        description: 'Estimation budget création site web en 2026 sur écran ordinateur',
+        description: 'Estimation des coûts de création de site web sur écran',
         date: '2026:02:10 10:00:00',
         gps: null
     },
-    {
-        slug: 'google-business-profile-guide-complet',
-        source: './public/images/blog/google-business-profile-source.png',
-        output: 'google-business-profile.jpg',
-        keyword: 'Google Business Profile - Fiche Établissement Google',
-        description: 'Fiche Google Business Profile sur smartphone',
-        date: '2026:02:10 11:00:00',
-        gps: null
-    },
+
+    // 4. TECH / REFONTE / EQUIPE
     {
         slug: 'refonte-site-web-sans-perdre-seo',
-        source: './public/images/blog/refonte-site-seo-source.png',
+        source: './public/images/blog/real-refonte.png',
         output: 'refonte-site-seo.jpg',
         keyword: 'Refonte Site Web SEO - Migration Site Internet',
-        description: 'Équipe travaillant sur une refonte de site web optimisée pour le SEO',
+        description: 'Équipe technique travaillant sur une refonte de site',
         date: '2026:02:10 13:00:00',
         gps: null
     },
     {
+        slug: 'comment-creer-site-visible-google',
+        source: './public/images/blog/real-refonte.png',
+        output: 'creer-site-visible-google.jpg',
+        keyword: 'Créer Site Internet Visible Google - Référencement Site Web',
+        description: 'Développeurs web optimisant un site pour Google',
+        date: '2026:02:04 15:00:00',
+        gps: null
+    },
+
+    // 5. DASHBOARD / STRATEGIE / CARRIERE
+    {
         slug: 'seo-vs-sea-que-choisir',
-        source: './public/images/blog/seo-vs-sea-source.png',
+        source: './public/images/blog/real-seo-sea.png',
         output: 'seo-vs-sea.jpg',
         keyword: 'SEO vs SEA - Référencement Naturel vs Payant',
-        description: 'Comparaison visuelle entre SEO et SEA sur tableau de bord analytics',
+        description: 'Comparatif visuel des performances SEO et SEA sur écran',
         date: '2026:02:10 14:00:00',
+        gps: null
+    },
+    {
+        slug: 'devenir-consultant-seo',
+        source: './public/images/blog/real-seo-sea.png',
+        output: 'devenir-consultant-seo.jpg',
+        keyword: 'Devenir Consultant SEO - Carrière Référencement',
+        description: 'Consultant analysant des courbes de trafic organique',
+        date: '2026:02:02 11:00:00',
+        gps: null
+    },
+
+    // 6. LOCAL / MOBILE
+    {
+        slug: 'google-business-profile-guide-complet',
+        source: './public/images/blog/real-gbp.png',
+        output: 'google-business-profile.jpg',
+        keyword: 'Google Business Profile - Fiche Établissement Google',
+        description: 'Fiche établissement Google affichée sur un smartphone',
+        date: '2026:02:10 11:00:00',
+        gps: null
+    },
+    {
+        slug: 'seo-local-nice',
+        source: './public/images/blog/real-gbp.png',
+        output: 'seo-local-nice.jpg',
+        keyword: 'SEO Local Nice - Consultant SEO Côte d\'Azur',
+        description: 'Recherche locale sur mobile avec résultats Google Maps',
+        date: '2026:01:20 10:00:00',
         gps: null
     }
 ];
