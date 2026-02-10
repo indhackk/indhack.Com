@@ -49,7 +49,6 @@ const CITIES = [
 const RESOURCES = [
     { title: "Blog SEO", href: "/blog" },
     { title: "Études de cas", href: "/etudes-de-cas" },
-    { title: "Tarifs", href: "/tarifs" },
     { title: "FAQ", href: "/faq" },
     { title: "À propos", href: "/a-propos" },
 ];

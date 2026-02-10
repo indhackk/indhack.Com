@@ -280,8 +280,7 @@ export default function EtudesDeCasClient() {
                         </div>
                         <p className="text-soft">
                             Vous souhaitez obtenir des résultats similaires ?
-                            Découvrez mes <Link href="/tarifs" className="text-sauge hover:underline">tarifs</Link> ou
-                            <Link href="/contact" className="text-sauge hover:underline ml-1">contactez-moi</Link> pour un audit gratuit.
+                            <Link href="/contact" className="text-sauge hover:underline">Contactez-moi</Link> pour un audit gratuit.
                         </p>
                     </div>
                 </div>

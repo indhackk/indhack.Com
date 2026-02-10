@@ -427,8 +427,7 @@ export default function CreationBoutiqueClient() {
                         <p className="text-sm text-soft">
                             Besoin d'un <Link href="/audit-seo" className="text-sauge hover:underline">audit SEO</Link> de votre boutique existante ?
                             Ou d'une <Link href="/refonte-site-web" className="text-sauge hover:underline">refonte complète</Link> ?
-                            Découvrez mes <Link href="/tarifs" className="text-sauge hover:underline">tarifs</Link> ou
-                            <Link href="/contact" className="text-sauge hover:underline ml-1">contactez-moi</Link>.
+                            <Link href="/contact" className="text-sauge hover:underline ml-1">Contactez-moi</Link> pour en discuter.
                         </p>
                     </div>
                 </div>
