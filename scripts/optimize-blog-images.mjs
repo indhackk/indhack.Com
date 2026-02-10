@@ -99,6 +99,51 @@ const BLOG_IMAGES_CONFIG = [
         description: 'Optimisation pour les moteurs de recherche IA - ChatGPT Gemini',
         date: '2026:01:28 12:00:00',
         gps: null
+    },
+    {
+        slug: 'contenu-rapport-audit-seo',
+        source: './public/images/blog/rapport-audit-seo-source.png',
+        output: 'rapport-audit-seo.jpg',
+        keyword: 'Audit SEO - Rapport Analyse Site Web',
+        description: 'Rapport d\'audit SEO détaillé sur un bureau avec graphiques de performance',
+        date: '2026:02:10 09:00:00',
+        gps: null
+    },
+    {
+        slug: 'cout-site-web-2026',
+        source: './public/images/blog/cout-site-web-2026-source.png',
+        output: 'cout-site-web-2026.jpg',
+        keyword: 'Prix Site Web 2026 - Coût Création Site Internet',
+        description: 'Estimation budget création site web en 2026 sur écran ordinateur',
+        date: '2026:02:10 10:00:00',
+        gps: null
+    },
+    {
+        slug: 'google-business-profile-guide-complet',
+        source: './public/images/blog/google-business-profile-source.png',
+        output: 'google-business-profile.jpg',
+        keyword: 'Google Business Profile - Fiche Établissement Google',
+        description: 'Fiche Google Business Profile sur smartphone',
+        date: '2026:02:10 11:00:00',
+        gps: null
+    },
+    {
+        slug: 'refonte-site-web-sans-perdre-seo',
+        source: './public/images/blog/refonte-site-seo-source.png',
+        output: 'refonte-site-seo.jpg',
+        keyword: 'Refonte Site Web SEO - Migration Site Internet',
+        description: 'Équipe travaillant sur une refonte de site web optimisée pour le SEO',
+        date: '2026:02:10 13:00:00',
+        gps: null
+    },
+    {
+        slug: 'seo-vs-sea-que-choisir',
+        source: './public/images/blog/seo-vs-sea-source.png',
+        output: 'seo-vs-sea.jpg',
+        keyword: 'SEO vs SEA - Référencement Naturel vs Payant',
+        description: 'Comparaison visuelle entre SEO et SEA sur tableau de bord analytics',
+        date: '2026:02:10 14:00:00',
+        gps: null
     }
 ];
 
