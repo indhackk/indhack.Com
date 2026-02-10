@@ -53,19 +53,19 @@ const AUDIT_FAQ = [
     },
     {
         question: "Sous quel format est livré l'audit SEO ?",
-        answer: "Vous recevez un rapport structuré avec une <strong>roadmap opérationnelle</strong>. Pas de blabla inutile : des recommandations concrètes, priorisées par impact business et facilité d'implémentation."
+        answer: "Vous recevez un rapport structuré avec une **roadmap opérationnelle**. Pas de blabla inutile : des recommandations concrètes, priorisées par impact business et facilité d'implémentation."
     },
     {
         question: "Combien coûte un audit SEO ?",
-        answer: "Un audit complet démarre à partir de <strong>500€</strong> pour un site vitrine. Le tarif varie selon la taille du site et la profondeur d'analyse requise. Je propose un premier diagnostic gratuit pour évaluer précisément vos besoins."
+        answer: "Un audit complet démarre à partir de **500€** pour un site vitrine. Le tarif varie selon la taille du site et la profondeur d'analyse requise. Je propose un premier diagnostic gratuit pour évaluer précisément vos besoins."
     },
     {
         question: "Combien de temps dure un audit SEO complet ?",
-        answer: "Comptez <strong>5 à 10 jours ouvrés</strong> selon la complexité de votre site. Je préfère prendre le temps d'une analyse approfondie plutôt que de livrer un rapport automatisé superficiel."
+        answer: "Comptez **5 à 10 jours ouvrés** selon la complexité de votre site. Je préfère prendre le temps d'une analyse approfondie plutôt que de livrer un rapport automatisé superficiel."
     },
     {
         question: "Que contient le rapport d'audit ?",
-        answer: "Le rapport inclut : analyse technique (indexation, vitesse, Core Web Vitals), audit sémantique (mots-clés, contenu), profil de backlinks, benchmark concurrentiel, et surtout une <strong>roadmap priorisée</strong> avec les actions à mener classées par impact."
+        answer: "Le rapport inclut : analyse technique (indexation, vitesse, Core Web Vitals), audit sémantique (mots-clés, contenu), profil de backlinks, benchmark concurrentiel, et surtout une **roadmap priorisée** avec les actions à mener classées par impact."
     }
 ];
 
@@ -168,8 +168,8 @@ export default function AuditSeoClient() {
                         Pourquoi IndHack pour votre <span className="text-sauge">Audit</span> ?
                     </h2>
                     <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
-                        <AuditPoint title="Rigueur Pro" text="Je n'utilise pas d'outils automatisés génériques. Chaque audit est une <strong>analyse manuelle et experte</strong>." />
-                        <AuditPoint title="Focus Business" text="Je ne liste pas d'erreurs gratuites. Je me focalise sur ce qui <strong>empêche vos ventes</strong> et vos conversions." />
+                        <AuditPoint title="Rigueur Pro" text="Je n'utilise pas d'outils automatisés génériques. Chaque audit est une analyse manuelle et experte." />
+                        <AuditPoint title="Focus Business" text="Je ne liste pas d'erreurs gratuites. Je me focalise sur ce qui empêche vos ventes et vos conversions." />
                         <AuditPoint title="Accompagnement" text="Je vous explique chaque recommandation pour que vous puissiez l'implémenter sereinement." />
                     </div>
                 </div>
@@ -195,7 +195,7 @@ export default function AuditSeoClient() {
                                 <h3 className="text-xl font-bold text-ink mb-3">Audit SEO Local</h3>
                                 <p className="text-soft mb-4">
                                     Pour les entreprises qui ciblent une zone géographique précise. Analyse de votre
-                                    <strong> Google Business Profile</strong>, positionnement local et stratégie de proximité.
+                                    <strong>Google Business Profile</strong>, positionnement local et stratégie de proximité.
                                 </p>
                                 <Link href="/seo-local" className="text-sauge font-semibold hover:underline inline-flex items-center gap-2">
                                     Découvrir le SEO Local <ArrowRight className="w-4 h-4" />

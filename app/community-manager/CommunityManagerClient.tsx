@@ -71,7 +71,7 @@ const CommunityManagerFAQ = [
     },
     {
         question: "Comment mesurez-vous le retour sur investissement ?",
-        answer: "Plusieurs indicateurs : taux d'engagement, croissance de communauté, portée, clics vers votre site, et surtout <strong>conversions</strong> (ventes, contacts, rendez-vous). Reporting mensuel transparent avec recommandations."
+        answer: "Plusieurs indicateurs : taux d'engagement, croissance de communauté, portée, clics vers votre site, et surtout **conversions** (ventes, contacts, rendez-vous). Reporting mensuel transparent avec recommandations."
     },
     {
         question: "Créez-vous aussi du contenu vidéo ?",
@@ -79,7 +79,7 @@ const CommunityManagerFAQ = [
     },
     {
         question: "Combien coûte un community manager ?",
-        answer: "Les forfaits démarrent à <strong>400€/mois</strong> pour une gestion basique (1 réseau, 3 posts/semaine). Un accompagnement complet multi-plateformes avec création de contenu vidéo se situe entre <strong>800€ et 1 500€/mois</strong>."
+        answer: "Les forfaits démarrent à **400€/mois** pour une gestion basique (1 réseau, 3 posts/semaine). Un accompagnement complet multi-plateformes avec création de contenu vidéo se situe entre **800€ et 1 500€/mois**."
     },
     {
         question: "Comment se passe la collaboration au quotidien ?",
@@ -87,7 +87,7 @@ const CommunityManagerFAQ = [
     },
     {
         question: "Les réseaux sociaux remplacent-ils le SEO ?",
-        answer: "Non, ils sont <strong>complémentaires</strong>. Les réseaux sociaux génèrent de la visibilité immédiate et du relationnel, le SEO apporte du trafic qualifié durable. L'idéal est de combiner les deux pour une stratégie d'acquisition complète."
+        answer: "Non, ils sont **complémentaires**. Les réseaux sociaux génèrent de la visibilité immédiate et du relationnel, le SEO apporte du trafic qualifié durable. L'idéal est de combiner les deux pour une stratégie d'acquisition complète."
     }
 ];
 

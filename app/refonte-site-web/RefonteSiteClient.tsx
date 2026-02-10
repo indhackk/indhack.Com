@@ -48,15 +48,15 @@ const REFONTE_FEATURES = [
 const REFONTE_FAQ = [
     {
         question: "Vais-je perdre mon trafic actuel lors d'une refonte ?",
-        answer: "Sans expertise, le risque est de <strong>80% de perte de trafic</strong>. Avec mon accompagnement, l'objectif est une <strong>migration neutre ou positive</strong>. Je sécurise chaque URL via un plan de redirection chirurgical."
+        answer: "Sans expertise, le risque est de **80% de perte de trafic**. Avec mon accompagnement, l'objectif est une **migration neutre ou positive**. Je sécurise chaque URL via un plan de redirection chirurgical."
     },
     {
         question: "Dois-je modifier mes contenus lors de la refonte ?",
-        answer: "C'est le moment idéal pour faire un <strong>élagage sémantique</strong>. On conserve ce qui ranke, on optimise ce qui sous-performe, et on supprime les pages inutiles qui pénalisent votre budget de crawl."
+        answer: "C'est le moment idéal pour faire un **élagage sémantique**. On conserve ce qui ranke, on optimise ce qui sous-performe, et on supprime les pages inutiles qui pénalisent votre budget de crawl."
     },
     {
         question: "Combien de temps faut-il pour voir les résultats après une refonte ?",
-        answer: "Google met généralement <strong>4 à 8 semaines</strong> pour ré-indexer totalement une nouvelle structure. Pendant cette phase, le suivi technique est quotidien pour s'assurer que le passage des bots se fait sans accroc."
+        answer: "Google met généralement **4 à 8 semaines** pour ré-indexer totalement une nouvelle structure. Pendant cette phase, le suivi technique est quotidien pour s'assurer que le passage des bots se fait sans accroc."
     }
 ];
 
@@ -143,7 +143,7 @@ export default function RefonteSiteClient() {
                             </h2>
                             <div className="space-y-6">
                                 <ProcessItem num="01" title="Audit Pré-Refonte" text="Identification des pages top performers et des 'quick wins' sémantiques." />
-                                <ProcessItem num="02" title="Mapping de Redirection" text="Établissement du <strong>plan de redirection 301</strong> pour éviter les erreurs 404 en masse." />
+                                <ProcessItem num="02" title="Mapping de Redirection" text="Établissement du plan de redirection 301 pour éviter les erreurs 404 en masse." />
                                 <ProcessItem num="03" title="Recettage Technique" text="Analyse du site en pré-production pour valider le balisage et la performance." />
                                 <ProcessItem num="04" title="Go-Live & Suivi" text="Surveillance accrue de la Search Console et rafraîchissement manuel de l'index." />
                             </div>

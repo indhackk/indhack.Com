@@ -107,35 +107,35 @@ const ECOMMERCE_PROCESS = [
 const ECOMMERCE_FAQ = [
     {
         question: "Combien coûte une boutique en ligne ?",
-        answer: "Une boutique e-commerce professionnelle démarre à partir de <strong>3 500€</strong> pour une solution WooCommerce (jusqu'à 50 produits). Les prix varient selon la complexité : catalogue important, fonctionnalités spécifiques (B2B, abonnements, marketplace), design sur-mesure. Je vous fournis un <strong>devis détaillé gratuit</strong> après analyse de votre projet."
+        answer: "Une boutique e-commerce professionnelle démarre à partir de **3 500€** pour une solution WooCommerce (jusqu'à 50 produits). Les prix varient selon la complexité : catalogue important, fonctionnalités spécifiques (B2B, abonnements, marketplace), design sur-mesure. Je vous fournis un **devis détaillé gratuit** après analyse de votre projet."
     },
     {
         question: "Quelle plateforme choisir : WooCommerce, Shopify ou PrestaShop ?",
-        answer: "<strong>WooCommerce</strong> si vous voulez flexibilité et contrôle total, avec un bon potentiel SEO. <strong>Shopify</strong> si vous voulez lancer vite avec un budget prévisible (abonnement mensuel). <strong>PrestaShop</strong> pour les gros catalogues ou besoins B2B spécifiques. Je vous conseille la meilleure option selon votre contexte."
+        answer: "**WooCommerce** si vous voulez flexibilité et contrôle total, avec un bon potentiel SEO. **Shopify** si vous voulez lancer vite avec un budget prévisible (abonnement mensuel). **PrestaShop** pour les gros catalogues ou besoins B2B spécifiques. Je vous conseille la meilleure option selon votre contexte."
     },
     {
         question: "Comment le SEO est-il intégré à la boutique ?",
-        answer: "Le SEO est pensé dès la conception : <strong>architecture des catégories</strong> optimisée, URLs propres, balises méta personnalisables, <strong>fiches produits structurées</strong> (Schema.org Product), vitesse de chargement optimisée, et maillage interne automatisé. C'est un avantage concurrentiel majeur dès le lancement."
+        answer: "Le SEO est pensé dès la conception : **architecture des catégories** optimisée, URLs propres, balises méta personnalisables, **fiches produits structurées** (Schema.org Product), vitesse de chargement optimisée, et maillage interne automatisé. C'est un avantage concurrentiel majeur dès le lancement."
     },
     {
         question: "Puis-je gérer ma boutique moi-même après la livraison ?",
-        answer: "Absolument. L'administration est conçue pour être <strong>simple et intuitive</strong>. Vous pourrez ajouter/modifier des produits, gérer les commandes et suivre vos ventes. Une formation complète est incluse dans chaque projet, avec documentation personnalisée."
+        answer: "Absolument. L'administration est conçue pour être **simple et intuitive**. Vous pourrez ajouter/modifier des produits, gérer les commandes et suivre vos ventes. Une formation complète est incluse dans chaque projet, avec documentation personnalisée."
     },
     {
         question: "Quels moyens de paiement peuvent être intégrés ?",
-        answer: "Tous les moyens de paiement standard : <strong>Stripe</strong> (CB, Apple Pay, Google Pay), <strong>PayPal</strong>, virement, chèque. Pour des besoins spécifiques (Alma pour le paiement fractionné, cryptomonnaies, etc.), c'est possible avec des modules additionnels."
+        answer: "Tous les moyens de paiement standard : **Stripe** (CB, Apple Pay, Google Pay), **PayPal**, virement, chèque. Pour des besoins spécifiques (Alma pour le paiement fractionné, cryptomonnaies, etc.), c'est possible avec des modules additionnels."
     },
     {
         question: "Gérez-vous la logistique et les transporteurs ?",
-        answer: "J'intègre les <strong>transporteurs de votre choix</strong> : Colissimo, Chronopost, Mondial Relay, DPD, etc. Calcul automatique des frais de port selon le poids/destination, suivi des colis, notifications clients. Connexion possible avec votre logiciel de gestion de stock."
+        answer: "J'intègre les **transporteurs de votre choix** : Colissimo, Chronopost, Mondial Relay, DPD, etc. Calcul automatique des frais de port selon le poids/destination, suivi des colis, notifications clients. Connexion possible avec votre logiciel de gestion de stock."
     },
     {
         question: "En combien de temps ma boutique sera-t-elle en ligne ?",
-        answer: "Comptez <strong>6 à 10 semaines</strong> pour une boutique e-commerce complète. Cela dépend de la taille du catalogue, des fonctionnalités et de votre réactivité pour valider les étapes. Un planning détaillé vous est fourni au démarrage."
+        answer: "Comptez **6 à 10 semaines** pour une boutique e-commerce complète. Cela dépend de la taille du catalogue, des fonctionnalités et de votre réactivité pour valider les étapes. Un planning détaillé vous est fourni au démarrage."
     },
     {
         question: "Proposez-vous la maintenance après la mise en ligne ?",
-        answer: "Oui, je propose des <strong>forfaits de maintenance</strong> incluant : mises à jour de sécurité, sauvegardes, monitoring, support technique et petites évolutions. C'est fortement recommandé pour un site e-commerce qui doit rester performant et sécurisé."
+        answer: "Oui, je propose des **forfaits de maintenance** incluant : mises à jour de sécurité, sauvegardes, monitoring, support technique et petites évolutions. C'est fortement recommandé pour un site e-commerce qui doit rester performant et sécurisé."
     }
 ];
 

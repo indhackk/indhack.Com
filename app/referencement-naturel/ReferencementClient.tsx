@@ -41,11 +41,11 @@ const SEO_PILLARS = [
 const SEO_FAQ = [
     {
         question: "Combien de temps pour remonter dans Google ?",
-        answer: "Le référencement est une course de fond. Les premiers résultats significatifs apparaissent entre 3 et 6 mois. C'est un <strong>investissement qui prend de la valeur chaque mois</strong>, contrairement à la publicité payante."
+        answer: "Le référencement est une course de fond. Les premiers résultats significatifs apparaissent entre 3 et 6 mois. C'est un **investissement qui prend de la valeur chaque mois**, contrairement à la publicité payante."
     },
     {
         question: "Proposez-vous un rapport de suivi ?",
-        answer: "Chaque mois, vous recevez un rapport de performance transparent : évolution des positions, trafic qualifié et surtout, impact sur vos <strong>conversions business</strong>."
+        answer: "Chaque mois, vous recevez un rapport de performance transparent : évolution des positions, trafic qualifié et surtout, impact sur vos **conversions business**."
     },
     {
         question: "Travaillez-vous avec tous les secteurs d'activité ?",
@@ -57,26 +57,26 @@ const SEO_FAQ = [
     },
     {
         question: "Combien coûte un accompagnement SEO ?",
-        answer: "Un accompagnement mensuel se situe entre <strong>500€ et 2000€/mois</strong> selon l'ampleur du projet et le niveau de concurrence. L'investissement est calibré sur vos objectifs business et votre capacité à absorber la croissance."
+        answer: "Un accompagnement mensuel se situe entre **500€ et 2000€/mois** selon l'ampleur du projet et le niveau de concurrence. L'investissement est calibré sur vos objectifs business et votre capacité à absorber la croissance."
     },
     {
         question: "Quelle différence entre SEO et SEA (Google Ads) ?",
-        answer: "Le <strong>SEO</strong> travaille sur les résultats organiques (gratuits) - c'est un investissement long terme qui continue de rapporter. Le <strong>SEA</strong> affiche des annonces payantes - résultats immédiats mais coût par clic. Les deux sont complémentaires."
+        answer: "Le **SEO** travaille sur les résultats organiques (gratuits) - c'est un investissement long terme qui continue de rapporter. Le **SEA** affiche des annonces payantes - résultats immédiats mais coût par clic. Les deux sont complémentaires."
     },
     {
         question: "Garantissez-vous la première position Google ?",
-        answer: "<strong>Non, et méfiez-vous de ceux qui le promettent.</strong> Google seul décide des classements. Ce que je garantis : une méthodologie rigoureuse, un travail transparent et une amélioration mesurable de votre visibilité."
+        answer: "**Non, et méfiez-vous de ceux qui le promettent.** Google seul décide des classements. Ce que je garantis : une méthodologie rigoureuse, un travail transparent et une amélioration mesurable de votre visibilité."
     },
     {
         question: "Mon site est nouveau, peut-on faire du SEO ?",
-        answer: "C'est même le <strong>meilleur moment</strong> ! Un site nouveau peut être conçu avec une architecture SEO optimale dès le départ. Google met quelques mois à faire confiance, mais des fondations solides accélèrent les résultats."
+        answer: "C'est même le **meilleur moment** ! Un site nouveau peut être conçu avec une architecture SEO optimale dès le départ. Google met quelques mois à faire confiance, mais des fondations solides accélèrent les résultats."
     }
 ];
 
 const SEO_EDUCATION = [
     {
         title: "Comprendre le référencement naturel",
-        content: "Le référencement naturel (SEO) consiste à optimiser votre site web pour qu'il apparaisse en <strong>première page de Google</strong> sur les mots-clés recherchés par vos clients potentiels. Contrairement à la publicité, vous ne payez pas pour chaque clic : une fois bien positionné, votre site génère du trafic gratuit en continu."
+        content: "Le référencement naturel (SEO) consiste à optimiser votre site web pour qu'il apparaisse en **première page de Google** sur les mots-clés recherchés par vos clients potentiels. Contrairement à la publicité, vous ne payez pas pour chaque clic : une fois bien positionné, votre site génère du trafic gratuit en continu."
     },
     {
         title: "Les trois piliers du SEO",
@@ -84,7 +84,7 @@ const SEO_EDUCATION = [
     },
     {
         title: "Pourquoi c'est un investissement rentable",
-        content: "Un site bien référencé génère des contacts qualifiés 24h/24, 7j/7. Le coût par acquisition diminue avec le temps car le trafic organique est gratuit. C'est un <strong>actif digital qui prend de la valeur</strong>, contrairement à la publicité qui s'arrête dès que vous coupez le budget."
+        content: "Un site bien référencé génère des contacts qualifiés 24h/24, 7j/7. Le coût par acquisition diminue avec le temps car le trafic organique est gratuit. C'est un **actif digital qui prend de la valeur**, contrairement à la publicité qui s'arrête dès que vous coupez le budget."
     }
 ];
 

@@ -75,7 +75,7 @@ const CREATION_PROCESS = [
 const CREATION_FAQ = [
     {
         question: "Pourquoi choisir un site sur-mesure plutôt qu'un modèle ?",
-        answer: "Un <strong>site sur-mesure</strong> est conçu pour vos objectifs spécifiques. Il est plus rapide, mieux référencé et offre une expérience unique à vos visiteurs. Les modèles sont limités et souvent lents car surchargés de fonctionnalités inutiles."
+        answer: "Un **site sur-mesure** est conçu pour vos objectifs spécifiques. Il est plus rapide, mieux référencé et offre une expérience unique à vos visiteurs. Les modèles sont limités et souvent lents car surchargés de fonctionnalités inutiles."
     },
     {
         question: "En combien de temps mon site sera-t-il prêt ?",
@@ -91,19 +91,19 @@ const CREATION_FAQ = [
     },
     {
         question: "Mon site sera-t-il bien référencé sur Google ?",
-        answer: "C'est la base de tout ce que je construis. Structure optimisée, balises correctes, vitesse de chargement, données structurées : tout est pensé pour le <strong>référencement dès la conception</strong>."
+        answer: "C'est la base de tout ce que je construis. Structure optimisée, balises correctes, vitesse de chargement, données structurées : tout est pensé pour le **référencement dès la conception**."
     },
     {
         question: "Combien coûte un site web professionnel ?",
-        answer: "Un <strong>site vitrine</strong> démarre à partir de <strong>1 500€</strong>, un <strong>site e-commerce</strong> à partir de <strong>3 000€</strong>. Le tarif dépend de la complexité technique et du design souhaité. Je fournis toujours un devis détaillé après notre premier échange."
+        answer: "Un **site vitrine** démarre à partir de **1 500€**, un **site e-commerce** à partir de **3 000€**. Le tarif dépend de la complexité technique et du design souhaité. Je fournis toujours un devis détaillé après notre premier échange."
     },
     {
         question: "Pourquoi ne pas utiliser Wix ou WordPress.com ?",
-        answer: "Ces plateformes sont pratiques pour débuter mais <strong>limitées en SEO</strong> : code lourd, personnalisation restreinte, vitesse médiocre. Pour un projet business sérieux, un site sur-mesure offre de bien meilleures performances et un meilleur retour sur investissement."
+        answer: "Ces plateformes sont pratiques pour débuter mais **limitées en SEO** : code lourd, personnalisation restreinte, vitesse médiocre. Pour un projet business sérieux, un site sur-mesure offre de bien meilleures performances et un meilleur retour sur investissement."
     },
     {
         question: "Proposez-vous la maintenance du site ?",
-        answer: "Oui, je propose des <strong>forfaits de maintenance</strong> qui incluent : mises à jour de sécurité, sauvegardes, monitoring de performance et support prioritaire. C'est facultatif mais recommandé pour garder votre site performant dans le temps."
+        answer: "Oui, je propose des **forfaits de maintenance** qui incluent : mises à jour de sécurité, sauvegardes, monitoring de performance et support prioritaire. C'est facultatif mais recommandé pour garder votre site performant dans le temps."
     }
 ];
 
