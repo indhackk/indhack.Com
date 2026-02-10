@@ -126,22 +126,10 @@ export default function RootLayout({
     return (
         <html lang="fr" className="scroll-smooth">
             <head>
-                {/* Preconnect pour performance - fonts Google */}
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-                {/* Preconnect pour analytics (defer) */}
+                {/* Preconnect pour performance */}
                 <link rel="preconnect" href="https://www.googletagmanager.com" />
                 <link rel="preconnect" href="https://www.google-analytics.com" />
                 <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-
-                {/* Preload LCP image pour homepage */}
-                <link
-                    rel="preload"
-                    href="/images/logo-indhack.png"
-                    as="image"
-                    type="image/png"
-                />
 
                 <script
                     type="application/ld+json"

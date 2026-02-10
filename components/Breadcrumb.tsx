@@ -45,12 +45,13 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
 
-            {/* Breadcrumb Navigation */}
+            {/* Breadcrumb Navigation - sr-only pour éviter conflit avec navbar transparente */}
+            {/* Le JSON-LD ci-dessus suffit pour le SEO */}
             <nav
                 aria-label="Fil d'Ariane"
-                className="container mx-auto px-4 py-4"
+                className="sr-only"
             >
-                <ol className="flex flex-wrap items-center gap-1 text-sm">
+                <ol>
                     {allItems.map((item, index) => {
                         const isLast = index === allItems.length - 1;
                         const isFirst = index === 0;

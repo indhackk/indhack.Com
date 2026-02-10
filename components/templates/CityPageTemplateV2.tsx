@@ -148,18 +148,10 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             />
             <BreadcrumbSchema items={breadcrumbItems} />
 
-            {/* Breadcrumb SEO */}
-            <div className="bg-gray-50 pt-24 pb-3 px-4">
-                <div className="container mx-auto">
-                    <nav className="text-xs text-soft flex items-center gap-2 flex-wrap" aria-label="Fil d'ariane">
-                        <Link href="/" className="hover:text-sauge transition-colors">Accueil</Link>
-                        <span>/</span>
-                        <Link href="/seo-local" className="hover:text-sauge transition-colors">SEO Local</Link>
-                        <span>/</span>
-                        <span className="text-ink font-medium">Consultant SEO {city}</span>
-                    </nav>
-                </div>
-            </div>
+            {/* Breadcrumb sr-only - le JSON-LD BreadcrumbSchema ci-dessus suffit pour le SEO */}
+            <nav className="sr-only" aria-label="Fil d'ariane">
+                <Link href="/">Accueil</Link> / <Link href="/seo-local">SEO Local</Link> / Consultant SEO {city}
+            </nav>
 
             {/* Hero */}
             <HeroServices
