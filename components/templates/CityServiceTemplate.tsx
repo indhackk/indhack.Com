@@ -13,6 +13,7 @@ import {
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import { useModal } from "@/components/providers/ModalProvider";
 import { CityData, CityServiceData } from "@/lib/cities-data";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
@@ -297,7 +298,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                     </h2>
                                 </div>
                                 <div className="text-lg text-soft leading-relaxed mb-8 prose prose-lg max-w-none">
-                                    <ReactMarkdown>{replacePlaceholders(section.content)}</ReactMarkdown>
+                                    <ReactMarkdown rehypePlugins={[rehypeRaw]}>{replacePlaceholders(section.content)}</ReactMarkdown>
                                 </div>
 
                                 {section.bullets && (
@@ -313,7 +314,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                             >
                                                 <CheckCircle2 className="w-5 h-5 text-[#638576] shrink-0 mt-0.5" />
                                                 <div className="text-sm text-soft leading-relaxed">
-                                                    <ReactMarkdown>{bullet}</ReactMarkdown>
+                                                    <ReactMarkdown rehypePlugins={[rehypeRaw]}>{bullet}</ReactMarkdown>
                                                 </div>
                                             </motion.div>
                                         ))}
@@ -409,7 +410,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                     </motion.div>
                                     <h3 className="font-bold text-lg mb-3 text-white">{item.title}</h3>
                                     <div className="text-sm text-white/60 leading-relaxed">
-                                        <ReactMarkdown>{replacePlaceholders(item.desc)}</ReactMarkdown>
+                                        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{replacePlaceholders(item.desc)}</ReactMarkdown>
                                     </div>
                                 </div>
 
