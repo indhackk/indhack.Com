@@ -411,8 +411,48 @@
     "https://indhack.com/blog/checklist-seo-2026": {
       "lastIndexed": "2026-02-11T16:40:49.171Z",
       "success": true
+    },
+    "https://indhack.com/blog/barometre-seo-pme-nice-2026": {
+      "lastIndexed": "2026-02-11T17:48:34.563Z",
+      "success": true
+    },
+    "https://indhack.com/outils/generateur-schema-json-ld": {
+      "lastIndexed": "2026-02-11T22:51:28.577Z",
+      "success": true
+    },
+    "https://indhack.com/outils/generateur-robots-txt": {
+      "lastIndexed": "2026-02-11T22:51:29.289Z",
+      "success": true
+    },
+    "https://indhack.com/outils": {
+      "lastIndexed": "2026-02-11T22:51:30.111Z",
+      "success": true
+    },
+    "https://indhack.com/outils/audit-seo-gratuit": {
+      "lastIndexed": "2026-02-11T23:02:54.140Z",
+      "success": true
+    },
+    "https://indhack.com/outils/testeur-visibilite-ia": {
+      "lastIndexed": "2026-02-11T23:02:54.914Z",
+      "success": true
+    },
+    "https://indhack.com/outils/extracteur-mots-cles": {
+      "lastIndexed": "2026-02-11T23:11:28.165Z",
+      "success": true
+    },
+    "https://indhack.com/outils/checker-accessibilite": {
+      "lastIndexed": "2026-02-11T23:11:28.949Z",
+      "success": true
+    },
+    "https://indhack.com/outils/analyseur-vitesse-site": {
+      "lastIndexed": "2026-02-11T23:22:54.773Z",
+      "success": true
+    },
+    "https://indhack.com/outils/simulateur-visibilite-locale": {
+      "lastIndexed": "2026-02-11T23:22:55.589Z",
+      "success": true
     }
   },
-  "dailyCount": 1,
-  "lastReset": "Wed Feb 11 2026"
+  "dailyCount": 6,
+  "lastReset": "Thu Feb 12 2026"
 }

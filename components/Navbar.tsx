@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, ArrowRight, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ArrowRight, ChevronDown, Search, Bot, Code2, MapPin, Accessibility, Gauge, FileCode, Tags } from "lucide-react";
 import { useModal } from "@/components/providers/ModalProvider";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -20,10 +20,22 @@ const SERVICES = [
     { title: "Refonte de Site", href: "/refonte-site-web", desc: "Migrez sans perdre votre visibilité.", category: "web" },
 ];
 
+const TOOLS = [
+    { title: "Audit SEO Gratuit", href: "/outils/audit-seo-gratuit", desc: "Score /100 en 30 secondes", icon: Search, status: "live" },
+    { title: "Testeur Visibilité IA", href: "/outils/testeur-visibilite-ia", desc: "ChatGPT vous trouve-t-il ?", icon: Bot, status: "live" },
+    { title: "Générateur Schema", href: "/outils/generateur-schema-json-ld", desc: "Données structurées en 1 clic", icon: Code2, status: "live" },
+    { title: "Simulateur Local", href: "/outils/simulateur-visibilite-locale", desc: "Qui domine votre ville ?", icon: MapPin, status: "live" },
+    { title: "Checker Accessibilité", href: "/outils/checker-accessibilite", desc: "Conformité RGAA", icon: Accessibility, status: "live" },
+    { title: "Analyseur Vitesse", href: "/outils/analyseur-vitesse-site", desc: "Core Web Vitals", icon: Gauge, status: "live" },
+    { title: "Générateur robots.txt", href: "/outils/generateur-robots-txt", desc: "Crawlers IA inclus", icon: FileCode, status: "live" },
+    { title: "Extracteur Mots-clés", href: "/outils/extracteur-mots-cles", desc: "Analyse sémantique", icon: Tags, status: "live" },
+];
+
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const [isToolsOpen, setIsToolsOpen] = useState(false);
     const { openAuditModal } = useModal();
     const pathname = usePathname();
 
@@ -107,6 +119,63 @@ export function Navbar() {
                             </AnimatePresence>
                         </div>
 
+                        {/* Outils Dropdown */}
+                        <div
+                            className="relative group"
+                            onMouseEnter={() => setIsToolsOpen(true)}
+                            onMouseLeave={() => setIsToolsOpen(false)}
+                        >
+                            <button
+                                className={`flex items-center gap-1.5 py-4 text-sm font-bold tracking-wide transition-colors ${useDarkMenu ? 'text-ink' : 'text-white'} hover:text-sauge`}
+                                aria-expanded={isToolsOpen}
+                                aria-haspopup="true"
+                            >
+                                Outils <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isToolsOpen ? 'rotate-180' : ''}`} />
+                            </button>
+
+                            <AnimatePresence>
+                                {isToolsOpen && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                        className="absolute top-full left-1/2 -translate-x-1/2 w-[700px] bg-white rounded-2xl shadow-2xl border border-line p-6"
+                                    >
+                                        <div className="flex items-center justify-between mb-4 pb-3 border-b border-line">
+                                            <span className="text-xs font-bold text-soft tracking-widest uppercase">Outils SEO Gratuits</span>
+                                            <Link href="/outils" className="text-xs text-sauge font-medium hover:underline">
+                                                Voir tous les outils →
+                                            </Link>
+                                        </div>
+                                        <div className="grid grid-cols-2 gap-2">
+                                            {TOOLS.map((tool) => {
+                                                const Icon = tool.icon;
+                                                const isLive = tool.status === "live";
+                                                return (
+                                                    <Link
+                                                        key={tool.href}
+                                                        href={isLive ? tool.href : "/outils"}
+                                                        className={`flex items-start gap-3 p-3 rounded-xl transition-all ${isLive ? 'hover:bg-gray-50' : 'opacity-50'}`}
+                                                    >
+                                                        <div className="w-8 h-8 rounded-lg bg-sauge/10 flex items-center justify-center flex-shrink-0">
+                                                            <Icon className="w-4 h-4 text-sauge" />
+                                                        </div>
+                                                        <div>
+                                                            <div className="font-bold text-ink text-sm flex items-center gap-2">
+                                                                {tool.title}
+                                                                {!isLive && <span className="text-[10px] bg-gray-100 text-soft px-1.5 py-0.5 rounded">Bientôt</span>}
+                                                            </div>
+                                                            <div className="text-xs text-soft">{tool.desc}</div>
+                                                        </div>
+                                                    </Link>
+                                                );
+                                            })}
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
+
                         <NavLink href="/a-propos" isScrolled={useDarkMenu}>À Propos</NavLink>
                         <NavLink href="/blog" isScrolled={useDarkMenu}>Blog</NavLink>
                         <NavLink href="/contact" isScrolled={useDarkMenu}>Contact</NavLink>
@@ -179,6 +248,27 @@ export function Navbar() {
                                             {service.title}
                                         </Link>
                                     ))}
+                                </div>
+
+                                <div className="space-y-4">
+                                    <p className="text-xs font-bold text-soft tracking-widest uppercase">Outils Gratuits</p>
+                                    {TOOLS.filter(t => t.status === "live").map((tool) => (
+                                        <Link
+                                            key={tool.href}
+                                            href={tool.href}
+                                            onClick={() => setIsMobileMenuOpen(false)}
+                                            className="block text-2xl font-bold text-ink hover:text-sauge transition-colors"
+                                        >
+                                            {tool.title}
+                                        </Link>
+                                    ))}
+                                    <Link
+                                        href="/outils"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        className="block text-lg text-sauge font-medium"
+                                    >
+                                        Voir tous les outils →
+                                    </Link>
                                 </div>
 
                                 <div className="space-y-4">
