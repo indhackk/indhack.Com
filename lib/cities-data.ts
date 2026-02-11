@@ -445,83 +445,82 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
         slug: "audit-technique",
         title: "Audit Technique SEO",
         metaTitle: "Audit Technique SEO {city} {deptCode} - INDHACK - Consultante SEO",
-        metaDescription: "Consultante SEO freelance à {city}. Mon audit technique révèle ce qui bloque votre visibilité Google : indexation, vitesse, maillage. Diagnostic gratuit.",
+        metaDescription: "Consultante SEO freelance à {city} ({deptCode}). Mon audit technique révèle ce qui bloque votre visibilité Google près de {landmark1}. Diagnostic gratuit.",
         heroTitle: "Audit Technique SEO à {city}",
-        heroSubtitle: "En tant que consultante SEO indépendante, j'analyse l'infrastructure technique de votre site pour identifier précisément ce qui freine votre visibilité sur Google.",
+        heroSubtitle: "Votre entreprise à {city} mérite d'être visible sur Google. J'analyse l'infrastructure technique de votre site pour identifier ce qui freine votre référencement dans le {deptCode}.",
         category: "Audit Technique",
         parentService: "/audit-seo",
         h2Sections: [
             {
-                title: "Qu'est-ce qu'un audit technique SEO ?",
-                content: "En tant que <a href=\"/{citySlug}\" class=\"text-sauge font-bold hover:underline\">consultante SEO à {city}</a> et <a href=\"/consultant-seo\" class=\"text-sauge font-bold hover:underline\">experte en référencement naturel</a>, je réalise des <strong>audits techniques</strong> qui vont bien au-delà des rapports automatisés.<br/><br/>L'<strong>audit technique SEO</strong> est la radiographie de votre site web. Il révèle tout ce qui empêche <strong>Google</strong> de crawler, indexer et positionner vos pages correctement. Sans fondations techniques solides, même le meilleur contenu reste invisible.<br/><br/>Ma méthode combine analyse automatisée et expertise humaine. Je ne me contente pas de lister des erreurs : je les priorise par <strong>impact business réel</strong> pour que vous sachiez exactement où investir vos efforts.",
+                title: "Audit technique SEO à {city} : mon approche",
+                content: "En tant que <a href=\"/{citySlug}\" class=\"text-sauge font-bold hover:underline\">consultante SEO à {city}</a> et <a href=\"/consultant-seo\" class=\"text-sauge font-bold hover:underline\">experte en référencement naturel</a>, j'accompagne les entreprises du {department} avec des <strong>audits techniques</strong> sur-mesure.<br/><br/>Que vous soyez basé près de {landmark1} ou dans les environs de {nearbyAreas}, votre site doit performer techniquement pour attirer les {population} habitants de {city} qui recherchent vos services sur Google.<br/><br/>L'<strong>audit technique SEO</strong> est la radiographie de votre site. Il révèle ce qui empêche Google de crawler et positionner vos pages correctement. Ma méthode va au-delà des rapports automatisés : je priorise par <strong>impact business réel</strong>.",
                 bullets: [
-                    "Analyse approfondie de l'<strong>indexation</strong> via <strong>Google Search Console</strong> : pages indexées, exclues, erreurs de couverture",
-                    "<strong>Crawl complet</strong> avec <strong>Screaming Frog</strong> pour cartographier le <strong>budget crawl</strong>, les erreurs 4xx/5xx et les redirections en chaîne",
-                    "Mesure précise des <strong>Core Web Vitals</strong> : <strong>LCP</strong> (chargement), <strong>FID</strong> (interactivité), <strong>CLS</strong> (stabilité visuelle)",
-                    "Audit du <strong>maillage interne</strong> : structure d'URL, profondeur de page, distribution du <strong>PageRank</strong> interne",
-                    "Vérification des <strong>balises meta</strong> : title, description, hiérarchie des <strong>balises Hn</strong>, données structurées <strong>schema.org</strong>",
-                    "Analyse du fichier <strong>robots.txt</strong>, <strong>sitemap XML</strong> et configuration du <strong>canonical</strong>"
+                    "Analyse approfondie de l'<strong>indexation</strong> via <strong>Google Search Console</strong> : pages indexées, exclues, erreurs de couverture pour les recherches \"{city}\"",
+                    "<strong>Crawl complet</strong> avec <strong>Screaming Frog</strong> : budget crawl, erreurs 4xx/5xx, redirections — optimisé pour le référencement local {deptCode}",
+                    "Mesure des <strong>Core Web Vitals</strong> : <strong>LCP</strong>, <strong>FID</strong>, <strong>CLS</strong> — critères essentiels pour surpasser vos concurrents à {city}",
+                    "Audit du <strong>maillage interne</strong> : structure d'URL, profondeur de page, distribution du <strong>PageRank</strong> vers vos pages stratégiques",
+                    "Vérification des <strong>balises meta</strong> optimisées pour {city} : title, description, hiérarchie Hn, données structurées <strong>LocalBusiness</strong>"
                 ]
             },
             {
-                title: "Ma méthode : les 6 piliers de l'audit technique",
-                content: "Mon approche d'<strong>audit technique SEO</strong> est structurée autour de 6 piliers essentiels. Je ne me contente pas de générer une liste d'erreurs automatique — je priorise chaque recommandation selon son <strong>impact réel</strong> sur votre visibilité et votre business.<br/><br/>Mon expertise de consultante freelance me permet d'aller au-delà des outils : je comprends comment Google évalue techniquement un site, et je traduis cette connaissance en actions concrètes pour votre équipe.",
+                title: "Les 6 piliers de mon audit technique à {city}",
+                content: "Mon approche d'<strong>audit technique SEO</strong> pour les entreprises de {city} et {region} est structurée autour de 6 piliers essentiels. Chaque recommandation est priorisée selon son <strong>impact réel</strong> sur votre visibilité locale.<br/><br/>Mon expertise de consultante freelance dans le {deptCode} me permet d'aller au-delà des outils : je comprends les spécificités du marché de {city} et je traduis cette connaissance en actions concrètes.",
                 bullets: [
-                    "<strong>Indexation Google</strong> : Vos pages sont-elles dans l'index ? Combien sont exclues et pourquoi ? J'identifie les problèmes de <strong>noindex</strong>, <strong>canonical</strong> et <strong>crawl budget</strong> gaspillé.",
-                    "<strong>Crawlabilité</strong> : Google peut-il accéder facilement à tout votre contenu stratégique ? Je détecte les blocages dans le <strong>robots.txt</strong>, les erreurs de navigation JavaScript et les <strong>pages orphelines</strong>.",
-                    "<strong>Vitesse de chargement</strong> : Les <strong>Core Web Vitals</strong> sont un facteur de ranking direct. J'analyse le temps de chargement, l'optimisation des images, la minification du code et les ressources bloquantes.",
-                    "<strong>Architecture du site</strong> : <strong>Profondeur de page</strong>, <strong>maillage interne</strong>, <strong>cocon sémantique</strong>. Une bonne architecture aide Google à comprendre la hiérarchie de votre contenu.",
-                    "<strong>Balisage HTML</strong> : <strong>Balises title</strong> uniques et optimisées, <strong>meta descriptions</strong> incitatives, structure <strong>Hn</strong> cohérente, <strong>données structurées</strong> pour les rich snippets.",
-                    "<strong>Mobile-First</strong> : Google indexe en priorité la version mobile. Je vérifie le <strong>responsive design</strong>, l'<strong>UX mobile</strong> et l'absence de contenu masqué."
+                    "<strong>Indexation Google</strong> : Vos pages ciblant {city} sont-elles indexées ? J'identifie les problèmes de <strong>noindex</strong>, <strong>canonical</strong> et <strong>crawl budget</strong> gaspillé.",
+                    "<strong>Crawlabilité</strong> : Google accède-t-il à votre contenu stratégique ? Je détecte les blocages <strong>robots.txt</strong>, erreurs JavaScript et <strong>pages orphelines</strong>.",
+                    "<strong>Vitesse de chargement</strong> : Les <strong>Core Web Vitals</strong> sont un facteur de ranking direct. J'optimise pour les connexions mobiles utilisées autour de {landmark2}.",
+                    "<strong>Architecture du site</strong> : <strong>Profondeur de page</strong>, <strong>maillage interne</strong>, <strong>cocon sémantique</strong> adapté à votre activité dans le {department}.",
+                    "<strong>Balisage HTML</strong> : <strong>Balises title</strong> intégrant {city}, <strong>meta descriptions</strong> incitatives, structure <strong>Hn</strong> cohérente.",
+                    "<strong>Mobile-First</strong> : Google indexe la version mobile. Je vérifie le <strong>responsive design</strong> et l'<strong>UX mobile</strong> pour les utilisateurs de {city}."
                 ]
             },
             {
-                title: "Pourquoi me confier votre audit technique ?",
-                content: "Contrairement aux agences qui délèguent à des juniors, <strong>je réalise personnellement chaque audit</strong>. Vous travaillez directement avec moi, sans intermédiaire.<br/><br/>Les outils automatisés génèrent des centaines d'alertes, mais toutes ne sont pas égales. Mon expertise me permet de distinguer les <strong>erreurs critiques</strong> qui bloquent vraiment votre référencement des faux positifs sans impact.<br/><br/>À {city}, j'accompagne des entreprises de toutes tailles avec une approche sur-mesure. Je ne vends pas de packages standardisés : je construis une <strong>stratégie adaptée</strong> à votre contexte, vos ressources et vos objectifs.",
+                title: "Pourquoi choisir mon expertise à {city} ?",
+                content: "Contrairement aux agences qui délèguent à des juniors, <strong>je réalise personnellement chaque audit</strong>. Vous travaillez directement avec moi, sans intermédiaire.<br/><br/>Les outils automatisés génèrent des centaines d'alertes sans contexte local. Mon expertise du marché de {city} et de {region} me permet de distinguer les <strong>erreurs critiques</strong> des faux positifs.<br/><br/>J'accompagne des entreprises de {city}, {nearbyAreas} et tout le {department} avec une approche sur-mesure. Pas de packages standardisés : une <strong>stratégie adaptée</strong> à votre contexte, vos concurrents locaux et vos objectifs de croissance.",
             },
             {
-                title: "Les erreurs que je détecte le plus souvent",
-                content: "Au fil de mes missions de <strong>consultante SEO</strong> à {city} et partout en France, j'ai identifié les problèmes techniques récurrents qui sabotent la visibilité de la majorité des sites :",
+                title: "Erreurs techniques fréquentes à {city}",
+                content: "Au fil de mes missions auprès d'entreprises de {city}, {nearbyAreas} et plus largement en {region}, j'ai identifié les problèmes techniques récurrents :",
                 bullets: [
-                    "<strong>Pages zombies</strong> : des centaines de pages à faible valeur ajoutée qui diluent votre <strong>crawl budget</strong> et votre autorité de domaine",
+                    "<strong>Pages zombies</strong> : contenus obsolètes qui diluent votre <strong>crawl budget</strong> et votre autorité sur les requêtes \"{city}\"",
                     "<strong>Contenu dupliqué</strong> : balises <strong>canonical</strong> mal configurées, versions HTTP/HTTPS ou www/non-www accessibles",
-                    "<strong>Vitesse catastrophique</strong> : images non optimisées, JavaScript render-blocking, absence de cache navigateur, hébergement sous-dimensionné",
-                    "<strong>Maillage interne anarchique</strong> : pages importantes à 4+ clics de la homepage, liens cassés internes, <strong>ancres</strong> non optimisées",
-                    "<strong>Mobile non optimisé</strong> : texte trop petit, éléments cliquables trop proches, contenu plus large que l'écran",
-                    "<strong>Données structurées absentes</strong> : pas de <strong>schema.org</strong> pour les FAQ, avis, produits, LocalBusiness..."
+                    "<strong>Vitesse catastrophique</strong> : images non optimisées, JavaScript render-blocking — problème critique pour le mobile dans le {deptCode}",
+                    "<strong>Maillage interne défaillant</strong> : pages importantes à 4+ clics, liens cassés, <strong>ancres</strong> non optimisées pour le SEO local",
+                    "<strong>Mobile non optimisé</strong> : texte trop petit, éléments cliquables trop proches — 70% des recherches \"{city}\" sont mobiles",
+                    "<strong>Données structurées absentes</strong> : pas de <strong>schema.org LocalBusiness</strong> pour apparaître dans le Pack Local de {city}"
                 ]
             }
         ],
         methodology: [
-            { step: "01", title: "Crawl Complet", desc: "J'analyse l'intégralité de votre site avec <strong>Screaming Frog</strong> pour identifier les erreurs techniques, pages orphelines, redirections en chaîne et problèmes de structure." },
-            { step: "02", title: "Analyse Search Console", desc: "J'exploite en profondeur vos données <strong>Google Search Console</strong> : couverture d'indexation, erreurs signalées, performances réelles sur Google, requêtes et CTR." },
-            { step: "03", title: "Core Web Vitals", desc: "Je mesure <strong>LCP</strong>, <strong>FID</strong> et <strong>CLS</strong> sur vos pages clés avec <strong>PageSpeed Insights</strong> et <strong>Lighthouse</strong> pour identifier les freins à l'UX et au ranking." },
-            { step: "04", title: "Rapport & Roadmap", desc: "Je livre un <strong>rapport de 20+ pages</strong> avec recommandations priorisées par impact SEO. Vous savez exactement quoi corriger en premier pour des résultats rapides." }
+            { step: "01", title: "Crawl Complet", desc: "J'analyse votre site avec <strong>Screaming Frog</strong> pour identifier les erreurs techniques, pages orphelines et problèmes de structure affectant votre visibilité à {city}." },
+            { step: "02", title: "Analyse Search Console", desc: "J'exploite vos données <strong>Google Search Console</strong> : couverture d'indexation, performances sur les requêtes \"{city}\", CTR et positions moyennes." },
+            { step: "03", title: "Core Web Vitals", desc: "Je mesure <strong>LCP</strong>, <strong>FID</strong> et <strong>CLS</strong> sur vos pages clés avec <strong>PageSpeed Insights</strong> pour optimiser l'expérience mobile dans le {deptCode}." },
+            { step: "04", title: "Rapport & Roadmap", desc: "Je livre un <strong>rapport de 20+ pages</strong> avec recommandations priorisées pour dominer Google à {city}. Actions concrètes et résultats mesurables." }
         ],
         faq: [
             {
-                question: "Comment se déroule un audit technique SEO ?",
-                answer: "L'<strong>audit technique</strong> commence par un <strong>crawl complet</strong> de votre site avec des outils professionnels comme <strong>Screaming Frog</strong>. J'analyse ensuite vos données <strong>Google Search Console</strong>, je mesure les <strong>Core Web Vitals</strong>, et j'examine votre <strong>maillage interne</strong>. Le livrable est un rapport détaillé avec des <strong>recommandations priorisées</strong> par impact sur votre visibilité. Je propose un premier diagnostic gratuit pour évaluer vos besoins spécifiques."
+                question: "Comment se déroule un audit technique SEO à {city} ?",
+                answer: "L'<strong>audit technique</strong> pour votre entreprise de {city} commence par un <strong>crawl complet</strong> avec <strong>Screaming Frog</strong>. J'analyse vos données <strong>Google Search Console</strong>, je mesure les <strong>Core Web Vitals</strong>, et j'examine votre <strong>maillage interne</strong>. Le livrable est un rapport détaillé avec des <strong>recommandations priorisées</strong> adaptées au marché de {city} et {region}. Premier diagnostic gratuit."
             },
             {
-                question: "Quels outils utilisez-vous pour l'audit technique ?",
-                answer: "J'utilise une <strong>stack professionnelle</strong> complète : <strong>Screaming Frog</strong> pour le crawl technique, <strong>Google Search Console</strong> pour les données d'indexation, <strong>PageSpeed Insights</strong> et <strong>Lighthouse</strong> pour les <strong>Core Web Vitals</strong>, <strong>Ahrefs</strong> pour l'analyse du profil de liens, et si nécessaire des outils d'<strong>analyse de logs serveur</strong> pour comprendre comment Googlebot crawle réellement votre site."
+                question: "Quels outils utilisez-vous pour auditer les sites de {city} ?",
+                answer: "J'utilise une <strong>stack professionnelle</strong> complète : <strong>Screaming Frog</strong> pour le crawl, <strong>Google Search Console</strong> pour l'indexation, <strong>PageSpeed Insights</strong> pour les <strong>Core Web Vitals</strong>, <strong>Ahrefs</strong> pour les backlinks. Pour les entreprises de {city}, j'analyse aussi votre positionnement sur les requêtes locales type \"{city} + votre activité\"."
             },
             {
-                question: "Combien de temps dure un audit technique complet ?",
-                answer: "Comptez <strong>5 à 10 jours ouvrés</strong> selon la taille et la complexité de votre site. Un <strong>audit technique SEO</strong> sérieux demande une analyse minutieuse pour ne rien manquer. Je préfère prendre le temps de faire un travail exhaustif plutôt que de livrer un rapport superficiel généré automatiquement. La qualité de l'analyse est directement proportionnelle aux résultats que vous obtiendrez."
+                question: "Combien coûte un audit technique SEO à {city} ?",
+                answer: "Le tarif dépend de la taille de votre site et de vos objectifs. Pour une PME de {city}, comptez entre <strong>500€ et 1500€</strong> pour un audit complet. Je propose un <strong>diagnostic gratuit</strong> de 30 minutes pour évaluer vos besoins et vous donner une estimation précise adaptée à votre situation dans le {deptCode}."
             },
             {
-                question: "L'audit technique suffit-il pour améliorer mon SEO ?",
-                answer: "L'<strong>audit technique</strong> est la <strong>fondation indispensable</strong>, mais le <strong>SEO</strong> repose sur <strong>3 piliers</strong> : technique, contenu et popularité (<strong>backlinks</strong>). Je recommande généralement de commencer par corriger les erreurs techniques majeures qui bloquent l'indexation, puis de travailler sur l'<strong>optimisation sémantique</strong> du contenu et enfin sur l'<strong>acquisition de liens</strong>. C'est un travail progressif et complémentaire."
+                question: "L'audit technique suffit-il pour être visible à {city} ?",
+                answer: "L'<strong>audit technique</strong> est la <strong>fondation indispensable</strong>, mais le SEO repose sur 3 piliers : technique, contenu et popularité. Pour dominer les recherches à {city}, il faut ensuite optimiser votre contenu pour les requêtes locales et obtenir des <strong>backlinks</strong> de sites du {department} et de {region}."
             },
             {
-                question: "Pouvez-vous implémenter les corrections après l'audit ?",
-                answer: "Absolument. Je propose un <strong>accompagnement à la mise en œuvre</strong> des recommandations, soit en formant votre équipe technique aux bonnes pratiques <strong>SEO</strong>, soit en pilotant directement les corrections avec vos développeurs. L'<strong>audit</strong> n'est utile que s'il est suivi d'<strong>actions concrètes</strong>. Je peux également assurer un suivi mensuel pour mesurer l'impact des corrections."
+                question: "Intervenez-vous sur site à {city} ?",
+                answer: "Je travaille principalement à distance avec des outils collaboratifs efficaces. Pour les entreprises de {city} et {nearbyAreas}, je propose des <strong>rendez-vous en visio</strong> ou en présentiel selon les besoins. L'essentiel est la qualité de l'audit et du suivi, pas la présence physique."
             },
             {
-                question: "Mon site est petit, ai-je vraiment besoin d'un audit technique ?",
-                answer: "Même un <strong>site vitrine</strong> de quelques pages peut avoir des problèmes techniques critiques : <strong>vitesse de chargement</strong> catastrophique, <strong>balises meta</strong> dupliquées, <strong>mobile</strong> non optimisé, absence de <strong>données structurées</strong>. Ces erreurs peuvent vous coûter des positions précieuses sur <strong>Google</strong>. Un audit rapide permet d'identifier les quick wins qui auront un impact immédiat sur votre <strong>référencement local</strong> à {city}."
+                question: "Mon entreprise à {city} a un petit site, l'audit est-il utile ?",
+                answer: "Même un <strong>site vitrine</strong> de quelques pages peut avoir des problèmes techniques critiques qui bloquent votre visibilité à {city} : vitesse, balises meta dupliquées, mobile non optimisé, absence de <strong>schema.org LocalBusiness</strong>. Un audit rapide identifie les quick wins pour dominer les recherches \"{city} + votre métier\"."
             }
         ],
         semanticKeywords: [
@@ -536,86 +535,86 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
         slug: "creation-site-web",
         title: "Création de Site Web",
         metaTitle: "Création Site Web {city} {deptCode} - Site Optimisé SEO | INDHACK",
-        metaDescription: "Création de site web professionnel à {city}. Site vitrine, e-commerce ou sur-mesure optimisé SEO dès la conception. Devis gratuit. ✆ 06 61 13 97 48",
+        metaDescription: "Création de site web professionnel à {city} ({deptCode}). Site vitrine, e-commerce optimisé SEO pour les entreprises près de {landmark1}. Devis gratuit.",
         heroTitle: "Création de Site Web à {city}",
-        heroSubtitle: "Je conçois des sites web performants, pensés SEO dès la première ligne de code. Votre site sera visible sur Google dès sa mise en ligne.",
+        heroSubtitle: "Votre entreprise à {city} mérite un site web qui génère des clients. Je conçois des sites performants, pensés SEO dès la première ligne de code pour dominer les recherches dans le {deptCode}.",
         category: "Création Web",
         parentService: "/creation-site-web",
         h2Sections: [
             {
-                title: "Pourquoi créer un site web optimisé SEO ?",
-                content: "En tant que <a href=\"/{citySlug}\" class=\"text-sauge font-bold hover:underline\">spécialiste SEO à {city}</a> et <a href=\"/consultant-seo\" class=\"text-sauge font-bold hover:underline\">consultante en référencement</a>, je ne crée pas de simples sites vitrines. Je construis des <strong>machines à générer du trafic organique</strong>.<br/><br/>La majorité des agences web créent d'abord le site, puis « pensent au SEO » ensuite. Résultat : 6 mois de refonte technique, du budget gaspillé, et un site qui rame à se positionner.<br/><br/>Ma méthode est inverse : <strong>le SEO guide chaque décision</strong> — architecture, URLs, temps de chargement, maillage interne. Votre site est conçu pour plaire à Google ET à vos visiteurs.",
+                title: "Création de site web optimisé SEO à {city}",
+                content: "En tant que <a href=\"/{citySlug}\" class=\"text-sauge font-bold hover:underline\">spécialiste SEO à {city}</a> et <a href=\"/consultant-seo\" class=\"text-sauge font-bold hover:underline\">consultante en référencement</a>, je ne crée pas de simples sites vitrines. Je construis des <strong>machines à générer du trafic organique</strong> pour les entreprises du {department}.<br/><br/>Que vous soyez basé près de {landmark1} ou dans les environs de {nearbyAreas}, les {population} habitants de {city} doivent pouvoir vous trouver sur Google.<br/><br/>Ma méthode est inverse aux agences web classiques : <strong>le SEO guide chaque décision</strong> — architecture, URLs, performances. Votre site est conçu pour plaire à Google ET aux clients de {city}.",
                 bullets: [
-                    "<strong>Architecture SEO-first</strong> : structure d'URLs propre, hiérarchie de pages logique, cocon sémantique intégré",
-                    "<strong>Performance maximale</strong> : score PageSpeed 90+ garanti, Core Web Vitals optimisés, temps de chargement < 3s",
-                    "<strong>Mobile-first natif</strong> : 70% du trafic est mobile, votre site sera parfait sur tous les écrans",
-                    "<strong>Contenu optimisé</strong> : balises title, meta descriptions, Hn structurés, données structurées schema.org",
-                    "<strong>Indexation immédiate</strong> : sitemap XML, robots.txt configuré, soumission Search Console le jour J"
+                    "<strong>Architecture SEO-first</strong> : structure d'URLs optimisée pour {city}, hiérarchie de pages logique, cocon sémantique intégré",
+                    "<strong>Performance maximale</strong> : score PageSpeed 90+ garanti, Core Web Vitals optimisés pour les connexions mobiles du {deptCode}",
+                    "<strong>Mobile-first natif</strong> : 70% des recherches \"{city}\" sont mobiles — votre site sera parfait sur tous les écrans",
+                    "<strong>SEO local intégré</strong> : schema.org LocalBusiness, optimisation pour le Pack Local de {city}",
+                    "<strong>Indexation immédiate</strong> : sitemap, robots.txt, soumission Search Console le jour J pour être visible à {city} rapidement"
                 ]
             },
             {
-                title: "Les technologies que j'utilise",
-                content: "Je travaille avec les <strong>technologies les plus performantes</strong> du marché pour créer des sites rapides, sécurisés et évolutifs.<br/><br/>Pas de WordPress bricolé avec 40 plugins qui ralentissent tout. Je privilégie les solutions modernes qui garantissent <strong>performance et maintenabilité</strong> sur le long terme.",
+                title: "Technologies modernes pour votre site à {city}",
+                content: "Je travaille avec les <strong>technologies les plus performantes</strong> du marché pour créer des sites rapides et évolutifs pour les entreprises de {city} et {region}.<br/><br/>Pas de WordPress bricolé avec 40 plugins. Je privilégie les solutions modernes qui garantissent <strong>performance et maintenabilité</strong> sur le long terme.",
                 bullets: [
-                    "<strong>Next.js / React</strong> : le framework utilisé par Netflix, TikTok et Notion. Rendu serveur ultra-rapide, SEO natif parfait",
-                    "<strong>Tailwind CSS</strong> : design sur-mesure sans surcharge CSS, sites légers et cohérents",
-                    "<strong>Vercel / Netlify</strong> : hébergement edge mondial, HTTPS automatique, déploiements instantanés",
-                    "<strong>Headless CMS</strong> : vous gérez votre contenu facilement, sans toucher au code",
-                    "<strong>WordPress optimisé</strong> : si vous préférez WordPress, je le configure proprement avec un thème sur-mesure léger"
+                    "<strong>Next.js / React</strong> : framework utilisé par Netflix et TikTok. Rendu serveur ultra-rapide, SEO natif parfait pour les requêtes \"{city}\"",
+                    "<strong>Tailwind CSS</strong> : design sur-mesure sans surcharge CSS, sites légers adaptés à votre image de marque",
+                    "<strong>Vercel / Netlify</strong> : hébergement edge mondial avec serveurs proches de {region}, HTTPS automatique",
+                    "<strong>Headless CMS</strong> : vous gérez votre contenu facilement depuis {city}, sans toucher au code",
+                    "<strong>WordPress optimisé</strong> : si vous préférez WordPress, je le configure proprement pour le SEO local"
                 ]
             },
             {
-                title: "Types de sites que je crée",
-                content: "Que vous soyez artisan à {city}, startup tech ou commerce local, je conçois le site adapté à vos besoins et votre budget.",
+                title: "Sites web pour entreprises de {city}",
+                content: "Que vous soyez artisan près de {landmark1}, startup tech ou commerce local à {city}, je conçois le site adapté à votre activité dans le {deptCode}.",
                 bullets: [
-                    "<strong>Site vitrine</strong> : présentez votre activité avec un site élégant qui convertit les visiteurs en clients",
-                    "<strong>Site e-commerce</strong> : vendez en ligne avec une boutique optimisée pour le SEO et la conversion",
-                    "<strong>Landing pages</strong> : pages de vente haute conversion pour vos campagnes marketing",
-                    "<strong>Blog professionnel</strong> : positionnez-vous comme expert de votre domaine avec du contenu qui ranke",
-                    "<strong>Application web</strong> : portails clients, dashboards, outils métier sur-mesure"
+                    "<strong>Site vitrine</strong> : présentez votre activité aux {population} habitants de {city} avec un site élégant qui convertit",
+                    "<strong>Site e-commerce</strong> : vendez en ligne aux clients de {city}, {nearbyAreas} et toute la {region}",
+                    "<strong>Landing pages</strong> : pages de vente haute conversion ciblant \"{city} + votre métier\"",
+                    "<strong>Blog professionnel</strong> : positionnez-vous comme expert dans le {department} avec du contenu qui ranke",
+                    "<strong>Application web</strong> : portails clients, dashboards, outils métier pour votre équipe à {city}"
                 ]
             },
             {
-                title: "Ce qui différencie mes créations",
-                content: "À {city} comme ailleurs, les agences web pullulent. La différence avec moi ? <strong>Je suis d'abord SEO, ensuite développeuse</strong>.<br/><br/>Chaque site que je crée est pensé pour performer sur Google. Pas de « on verra le référencement plus tard ». Pas de site joli mais invisible. Vous avez un actif digital qui travaille pour vous 24/7.",
+                title: "Pourquoi me choisir à {city} ?",
+                content: "À {city} et dans tout le {deptCode}, les agences web pullulent. La différence ? <strong>Je suis d'abord SEO, ensuite développeuse</strong>.<br/><br/>Chaque site que je crée est pensé pour performer sur Google dans votre zone : {city}, {nearbyAreas}. Pas de site joli mais invisible. Vous avez un actif digital qui travaille pour vous 24/7 et attire des clients du {department}.",
                 bullets: [
-                    "<strong>Audit de mots-clés préalable</strong> : je définis la stratégie SEO AVANT de coder. Vos pages ciblent les bonnes requêtes dès le départ",
-                    "<strong>Maillage interne stratégique</strong> : chaque lien est pensé pour distribuer le PageRank vers vos pages commerciales",
-                    "<strong>Formation incluse</strong> : je vous forme à la gestion de votre site et aux bonnes pratiques SEO",
-                    "<strong>Suivi de positionnement</strong> : 3 mois de monitoring offerts pour suivre vos premiers résultats Google"
+                    "<strong>Audit de mots-clés préalable</strong> : je cible les requêtes des habitants de {city} et {region} dès le départ",
+                    "<strong>Maillage interne stratégique</strong> : distribution optimale du PageRank vers vos pages commerciales ciblant {city}",
+                    "<strong>Formation incluse</strong> : je vous forme à la gestion de votre site depuis {city}",
+                    "<strong>Suivi de positionnement</strong> : 3 mois de monitoring offerts sur les requêtes \"{city} + votre activité\""
                 ]
             }
         ],
         methodology: [
-            { step: "01", title: "Stratégie & Mots-clés", desc: "J'analyse votre marché et vos concurrents à {city}. Je définis les <strong>mots-clés stratégiques</strong> que votre site devra cibler. Cette étape conditionne toute l'architecture." },
-            { step: "02", title: "Maquettes & Validation", desc: "Je crée les <strong>maquettes UI/UX</strong> de votre site. Vous visualisez le résultat final et validez avant le développement. Modifications illimitées à cette étape." },
-            { step: "03", title: "Développement SEO-First", desc: "Je développe votre site avec une <strong>architecture optimisée</strong>, des performances maximales et un code propre. Chaque page est pensée pour ranker." },
-            { step: "04", title: "Mise en ligne & Indexation", desc: "Je déploie votre site sur un hébergement performant, configure <strong>Google Search Console</strong>, soumets le sitemap et lance le monitoring de vos positions." }
+            { step: "01", title: "Stratégie & Mots-clés", desc: "J'analyse votre marché et vos concurrents à {city}. Je définis les <strong>mots-clés stratégiques</strong> ciblant le {deptCode} et {region}. Cette étape conditionne toute l'architecture." },
+            { step: "02", title: "Maquettes & Validation", desc: "Je crée les <strong>maquettes UI/UX</strong> de votre site. Vous visualisez le résultat et validez avant le développement. Modifications illimitées à cette étape." },
+            { step: "03", title: "Développement SEO-First", desc: "Je développe votre site avec une <strong>architecture optimisée</strong> pour {city}, des performances maximales et un code propre. Chaque page cible vos clients locaux." },
+            { step: "04", title: "Mise en ligne & Indexation", desc: "Je déploie votre site, configure <strong>Google Search Console</strong>, soumets le sitemap et lance le monitoring de vos positions sur les requêtes \"{city}\"." }
         ],
         faq: [
             {
-                question: "Combien coûte la création d'un site web ?",
-                answer: "Le prix dépend de la complexité de votre projet. Un <strong>site vitrine</strong> professionnel démarre autour de <strong>1 500€</strong>. Un <strong>site e-commerce</strong> ou une <strong>application sur-mesure</strong> représente un investissement plus conséquent. Je vous propose toujours un <strong>devis détaillé gratuit</strong> après avoir compris vos besoins. Mon approche SEO-first garantit un <strong>retour sur investissement</strong> supérieur aux sites « classiques »."
+                question: "Combien coûte un site web à {city} ?",
+                answer: "Pour une entreprise de {city}, un <strong>site vitrine</strong> professionnel démarre autour de <strong>1 500€</strong>. Un <strong>site e-commerce</strong> représente un investissement plus conséquent. Je vous propose un <strong>devis gratuit</strong> après avoir compris vos besoins. Mon approche SEO-first garantit un <strong>ROI supérieur</strong> car votre site génère des clients dès sa mise en ligne."
             },
             {
-                question: "En combien de temps mon site sera-t-il en ligne ?",
-                answer: "Comptez <strong>3 à 6 semaines</strong> pour un site vitrine, <strong>6 à 10 semaines</strong> pour un e-commerce. Je préfère travailler sur des délais réalistes plutôt que de bâcler. Chaque étape (stratégie, maquettes, développement, recette) a son importance. Un site bien fait dès le départ vous fait gagner des mois de corrections SEO par la suite."
+                question: "Délai de création pour un site à {city} ?",
+                answer: "Comptez <strong>3 à 6 semaines</strong> pour un site vitrine, <strong>6 à 10 semaines</strong> pour un e-commerce. Je travaille à distance avec des outils collaboratifs efficaces. Pour les entreprises de {city} et {nearbyAreas}, je propose des <strong>rendez-vous en visio</strong> ou en présentiel selon les besoins."
             },
             {
-                question: "Pourquoi ne pas utiliser Wix ou Squarespace ?",
-                answer: "Ces plateformes sont pratiques pour débuter, mais <strong>limitées en SEO</strong>. Code lourd, personnalisation restreinte, vitesse de chargement médiocre, structure d'URL imposée... Pour un projet sérieux à {city}, vous avez besoin d'un site <strong>sur-mesure</strong> qui vous appartient totalement et qui peut évoluer avec votre business. C'est un investissement, pas une dépense."
+                question: "Pourquoi pas Wix ou Squarespace pour mon site à {city} ?",
+                answer: "Ces plateformes sont <strong>limitées en SEO local</strong>. Code lourd, vitesse médiocre, structure d'URL imposée... Pour être visible à {city} et devancer vos concurrents du {deptCode}, vous avez besoin d'un site <strong>sur-mesure</strong> qui vous appartient et qui cible les requêtes \"{city} + votre métier\"."
             },
             {
-                question: "Mon site sera-t-il visible sur Google immédiatement ?",
-                answer: "Dès la mise en ligne, je soumets votre site à <strong>Google Search Console</strong> pour accélérer l'indexation. Les premières pages peuvent apparaître dans Google sous <strong>24 à 72h</strong>. Cependant, le <strong>positionnement</strong> sur des mots-clés compétitifs prend généralement <strong>3 à 6 mois</strong> de travail SEO continu. L'avantage de mon approche : votre site est optimisé dès le départ, donc les résultats arrivent plus vite."
+                question: "Mon site sera-t-il visible à {city} rapidement ?",
+                answer: "Dès la mise en ligne, je soumets votre site à <strong>Google Search Console</strong>. Les premières pages apparaissent sous <strong>24 à 72h</strong>. Le positionnement sur des requêtes compétitives comme \"{city} + votre métier\" prend <strong>3 à 6 mois</strong>. L'avantage : votre site est optimisé dès le départ pour les recherches locales dans le {deptCode}."
             },
             {
-                question: "Puis-je gérer le contenu moi-même ensuite ?",
-                answer: "Absolument. Je configure un <strong>système de gestion de contenu</strong> (CMS) intuitif qui vous permet de modifier textes, images et pages sans toucher au code. Je vous fournis également une <strong>formation personnalisée</strong> et une documentation pour que vous soyez autonome. Et je reste disponible si vous avez des questions."
+                question: "Puis-je gérer mon site depuis {city} ?",
+                answer: "Absolument. Je configure un <strong>CMS intuitif</strong> pour que vous puissiez modifier textes, images et pages depuis {city} sans toucher au code. <strong>Formation personnalisée</strong> et documentation incluses. Je reste disponible pour les questions."
             },
             {
-                question: "Proposez-vous la maintenance du site ?",
-                answer: "Oui, je propose des <strong>forfaits de maintenance</strong> mensuels qui incluent : mises à jour de sécurité, sauvegardes, monitoring de performance, corrections de bugs, et support prioritaire. C'est facultatif mais recommandé pour garder votre site sécurisé et performant dans le temps. Je peux aussi former votre équipe technique si vous préférez gérer en interne."
+                question: "Maintenance du site pour les entreprises de {city} ?",
+                answer: "Je propose des <strong>forfaits de maintenance</strong> mensuels : mises à jour de sécurité, sauvegardes, monitoring de performance, support prioritaire. Facultatif mais recommandé pour garder votre site performant dans le temps. Support à distance ou en présentiel pour les entreprises de {city} et {nearbyAreas}."
             }
         ],
         semanticKeywords: [
@@ -631,92 +630,92 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
         slug: "referencement-naturel",
         title: "Référencement Naturel",
         metaTitle: "Référencement Naturel {city} {deptCode} - Expert SEO | INDHACK",
-        metaDescription: "Stratégie de référencement naturel sur-mesure à {city}. Augmentez votre trafic organique de +200% en 6 mois. Audit gratuit. ✆ 06 61 13 97 48",
+        metaDescription: "Stratégie de référencement naturel sur-mesure à {city} ({deptCode}). Augmentez votre trafic organique de +200% en 6 mois près de {landmark1}. Audit gratuit.",
         heroTitle: "Référencement Naturel à {city}",
-        heroSubtitle: "Je développe des stratégies SEO complètes qui propulsent votre site en première page Google. Plus de visibilité, plus de trafic qualifié, plus de clients.",
+        heroSubtitle: "Votre entreprise à {city} mérite d'être en première page Google. Je développe des stratégies SEO sur-mesure pour les {population} habitants du {deptCode} qui recherchent vos services.",
         category: "SEO",
         parentService: "/referencement-naturel",
         h2Sections: [
             {
-                title: "Qu'est-ce que le référencement naturel ?",
-                content: "Le <strong>référencement naturel</strong> (ou <strong>SEO</strong> pour Search Engine Optimization) désigne l'ensemble des techniques permettant d'améliorer la <strong>visibilité d'un site web</strong> dans les résultats organiques de Google.<br/><br/>En tant que <a href=\"/{citySlug}\" class=\"text-sauge font-bold hover:underline\">experte SEO à {city}</a> et <a href=\"/consultant-seo\" class=\"text-sauge font-bold hover:underline\">consultante en référencement naturel</a>, je ne vends pas de la « magie Google ». Je travaille sur les <strong>3 piliers fondamentaux</strong> du SEO : la technique, le contenu et la popularité (backlinks).<br/><br/>Mon objectif : faire de votre site une <strong>référence dans votre secteur</strong> aux yeux de Google. Pas avec des astuces court-termistes, mais avec une stratégie durable qui construit votre autorité.",
+                title: "Référencement naturel à {city} : mon approche",
+                content: "Le <strong>référencement naturel</strong> (ou <strong>SEO</strong>) désigne l'ensemble des techniques pour améliorer votre <strong>visibilité sur Google</strong> dans le {deptCode}.<br/><br/>En tant que <a href=\"/{citySlug}\" class=\"text-sauge font-bold hover:underline\">experte SEO à {city}</a> et <a href=\"/consultant-seo\" class=\"text-sauge font-bold hover:underline\">consultante en référencement naturel</a>, j'accompagne les entreprises du {department} avec une méthodologie éprouvée.<br/><br/>Que vous soyez basé près de {landmark1} ou dans les environs de {nearbyAreas}, mon objectif : faire de votre site une <strong>référence locale</strong> aux yeux de Google et des {population} habitants de {city}.",
                 bullets: [
-                    "<strong>Pilier Technique</strong> : vitesse, mobile-first, indexation, architecture, données structurées",
-                    "<strong>Pilier Contenu</strong> : mots-clés stratégiques, cocon sémantique, contenu expert, optimisation on-page",
-                    "<strong>Pilier Popularité</strong> : backlinks de qualité, mentions, signaux de confiance externes"
+                    "<strong>Pilier Technique</strong> : vitesse, mobile-first, indexation, architecture optimisée pour les recherches \"{city}\"",
+                    "<strong>Pilier Contenu</strong> : mots-clés stratégiques ciblant le {deptCode}, cocon sémantique, contenu expert local",
+                    "<strong>Pilier Popularité</strong> : backlinks de qualité depuis des sites de {region} et nationaux"
                 ]
             },
             {
-                title: "Ma stratégie SEO en 4 phases",
-                content: "Une <strong>stratégie de référencement naturel</strong> efficace ne s'improvise pas. Je suis une méthodologie éprouvée qui a fait ses preuves auprès de dizaines de clients à {city} et partout en France.",
+                title: "Stratégie SEO en 4 phases pour {city}",
+                content: "Une <strong>stratégie de référencement naturel</strong> efficace à {city} ne s'improvise pas. Ma méthodologie a fait ses preuves auprès de dizaines de clients dans le {department} et toute la {region}.",
                 bullets: [
-                    "<strong>Phase 1 — Audit & Diagnostic</strong> : j'analyse votre site, vos concurrents, votre marché. J'identifie les opportunités et les blocages. C'est la feuille de route de tout le projet.",
-                    "<strong>Phase 2 — Fondations Techniques</strong> : je corrige les erreurs techniques qui freinent votre visibilité. Indexation, vitesse, maillage interne, Core Web Vitals.",
-                    "<strong>Phase 3 — Stratégie de Contenu</strong> : je définis les mots-clés à cibler, je crée le planning éditorial, j'optimise vos pages existantes et je produis du nouveau contenu SEO.",
-                    "<strong>Phase 4 — Netlinking & Autorité</strong> : je développe votre profil de liens avec des backlinks de qualité provenant de sites pertinents dans votre secteur."
+                    "<strong>Phase 1 — Audit & Diagnostic</strong> : j'analyse votre site, vos concurrents à {city}, les opportunités locales dans le {deptCode}. C'est la feuille de route du projet.",
+                    "<strong>Phase 2 — Fondations Techniques</strong> : je corrige les erreurs qui freinent votre visibilité à {city}. Indexation, vitesse, maillage interne, Core Web Vitals.",
+                    "<strong>Phase 3 — Stratégie de Contenu</strong> : je définis les mots-clés ciblant {city} et {nearbyAreas}, j'optimise vos pages et je crée du contenu SEO local.",
+                    "<strong>Phase 4 — Netlinking & Autorité</strong> : je développe votre profil de liens avec des backlinks de sites du {department} et nationaux pertinents."
                 ]
             },
             {
-                title: "Pourquoi investir en SEO plutôt qu'en publicité ?",
-                content: "Le <strong>SEO</strong> et le <strong>SEA</strong> (publicité Google Ads) sont complémentaires, mais le référencement naturel offre des avantages uniques pour votre business à {city}.",
+                title: "SEO vs publicité pour votre entreprise à {city}",
+                content: "Le <strong>SEO</strong> et le <strong>SEA</strong> (Google Ads) sont complémentaires, mais le référencement naturel offre des avantages uniques pour les entreprises de {city} et du {deptCode}.",
                 bullets: [
-                    "<strong>ROI supérieur à long terme</strong> : chaque euro investi en SEO continue de rapporter pendant des années. La pub s'arrête dès que vous coupez le budget.",
-                    "<strong>Crédibilité renforcée</strong> : 70% des clics vont sur les résultats organiques. Les internautes font davantage confiance aux sites bien positionnés naturellement.",
-                    "<strong>Trafic qualifié durable</strong> : une fois en première page, vous recevez du trafic gratuit 24h/24. C'est un actif digital qui prend de la valeur.",
-                    "<strong>Indépendance</strong> : vous ne dépendez plus d'un budget pub mensuel. Votre visibilité ne disparaît pas du jour au lendemain."
+                    "<strong>ROI supérieur à long terme</strong> : chaque euro investi en SEO continue de rapporter pendant des années auprès des clients de {city}",
+                    "<strong>Crédibilité renforcée</strong> : 70% des clics vont sur les résultats organiques. Les habitants de {city} font davantage confiance aux sites bien positionnés",
+                    "<strong>Trafic qualifié durable</strong> : une fois en première page pour \"{city} + votre métier\", vous recevez du trafic gratuit 24h/24",
+                    "<strong>Indépendance</strong> : vous ne dépendez plus d'un budget pub. Votre visibilité à {city} est acquise durablement."
                 ]
             },
             {
-                title: "Résultats que vous pouvez attendre",
-                content: "Le <strong>SEO</strong> est un investissement moyen/long terme. Les résultats ne sont pas immédiats, mais ils sont <strong>durables et cumulatifs</strong>. Voici ce que mes clients observent généralement :",
+                title: "Résultats SEO pour les entreprises de {city}",
+                content: "Le <strong>SEO</strong> est un investissement moyen/long terme. Les résultats sont <strong>durables et cumulatifs</strong>. Voici ce que mes clients de {city}, {nearbyAreas} et du {department} observent :",
                 bullets: [
-                    "<strong>Mois 1-3</strong> : corrections techniques, premières optimisations, début d'indexation des nouveaux contenus",
-                    "<strong>Mois 3-6</strong> : progression visible sur les mots-clés secondaires, augmentation du trafic organique de 50 à 100%",
-                    "<strong>Mois 6-12</strong> : positionnement sur les mots-clés principaux, trafic organique multiplié par 2 à 3, génération de leads régulière",
-                    "<strong>Au-delà</strong> : consolidation des positions, expansion vers de nouveaux mots-clés, votre site devient une référence dans votre domaine"
+                    "<strong>Mois 1-3</strong> : corrections techniques, premières optimisations, indexation des contenus ciblant {city}",
+                    "<strong>Mois 3-6</strong> : progression sur les requêtes \"{city} + votre métier\", trafic organique +50 à 100%",
+                    "<strong>Mois 6-12</strong> : première page sur vos mots-clés principaux à {city}, trafic ×2 à ×3, leads réguliers",
+                    "<strong>Au-delà</strong> : consolidation des positions sur {city} et expansion vers {nearbyAreas} et tout le {deptCode}"
                 ]
             },
             {
-                title: "Mon approche du SEO local à {city}",
-                content: "Si votre clientèle est à {city} et ses environs, le <strong>SEO local</strong> est essentiel. Je combine référencement naturel classique et optimisation géolocalisée pour maximiser votre visibilité locale.",
+                title: "SEO local : dominez {city} sur Google",
+                content: "Si votre clientèle est à {city}, {nearbyAreas} et dans le {deptCode}, le <strong>SEO local</strong> est essentiel. Je combine référencement naturel et optimisation géolocalisée pour maximiser votre visibilité auprès des {population} habitants.",
                 bullets: [
-                    "<strong>Optimisation Google Business Profile</strong> : fiche complète, catégories pertinentes, posts réguliers, gestion des avis",
-                    "<strong>Citations locales</strong> : présence cohérente sur les annuaires locaux de {city} et nationaux",
-                    "<strong>Contenu géolocalisé</strong> : pages dédiées à {city} et aux communes environnantes",
-                    "<strong>Schema LocalBusiness</strong> : données structurées pour apparaître dans le pack local Google"
+                    "<strong>Optimisation Google Business Profile</strong> : fiche complète pour apparaître dans le Pack Local de {city}, gestion des avis",
+                    "<strong>Citations locales</strong> : présence cohérente sur les annuaires de {city}, {department} et nationaux",
+                    "<strong>Contenu géolocalisé</strong> : pages dédiées à {city}, {nearbyAreas} et aux communes du {deptCode}",
+                    "<strong>Schema LocalBusiness</strong> : données structurées avec adresse près de {landmark1} pour le Pack Local"
                 ]
             }
         ],
         methodology: [
-            { step: "01", title: "Audit Complet", desc: "J'analyse votre site, vos concurrents et votre marché. Je livre un <strong>rapport d'audit</strong> avec les opportunités SEO prioritaires et une feuille de route claire." },
-            { step: "02", title: "Optimisation Technique", desc: "Je corrige les erreurs techniques qui bloquent votre <strong>référencement</strong> : vitesse, indexation, maillage interne, mobile-first, Core Web Vitals." },
-            { step: "03", title: "Stratégie de Contenu", desc: "Je définis les <strong>mots-clés stratégiques</strong>, j'optimise vos pages existantes et je crée du contenu expert qui positionne votre site comme référence." },
-            { step: "04", title: "Netlinking & Suivi", desc: "Je développe votre <strong>autorité de domaine</strong> avec des backlinks de qualité. Reporting mensuel avec évolution des positions et du trafic." }
+            { step: "01", title: "Audit Complet", desc: "J'analyse votre site, vos concurrents à {city} et dans le {deptCode}. Je livre un <strong>rapport d'audit</strong> avec les opportunités SEO locales prioritaires." },
+            { step: "02", title: "Optimisation Technique", desc: "Je corrige les erreurs qui bloquent votre <strong>référencement</strong> à {city} : vitesse, indexation, maillage, Core Web Vitals pour les connexions mobiles du {deptCode}." },
+            { step: "03", title: "Stratégie de Contenu", desc: "Je définis les <strong>mots-clés stratégiques</strong> ciblant {city} et {nearbyAreas}, j'optimise vos pages et crée du contenu expert local." },
+            { step: "04", title: "Netlinking & Suivi", desc: "Je développe votre <strong>autorité</strong> avec des backlinks de sites de {region} et nationaux. Reporting mensuel avec positions sur les requêtes \"{city}\"." }
         ],
         faq: [
             {
-                question: "Combien de temps pour voir des résultats SEO ?",
-                answer: "Le <strong>référencement naturel</strong> est un investissement moyen/long terme. Les premiers résultats (corrections techniques, indexation) sont visibles sous <strong>1 à 2 mois</strong>. Les gains de positionnement significatifs arrivent généralement entre <strong>3 et 6 mois</strong>. Pour des mots-clés très concurrentiels, comptez <strong>6 à 12 mois</strong> pour atteindre la première page. Je vous fournis un reporting mensuel pour suivre la progression."
+                question: "Délai pour être visible à {city} sur Google ?",
+                answer: "Le <strong>référencement naturel</strong> à {city} est un investissement moyen/long terme. Les premiers résultats sont visibles sous <strong>1 à 2 mois</strong>. Les gains significatifs sur \"{city} + votre métier\" arrivent entre <strong>3 et 6 mois</strong>. Pour des requêtes très concurrentielles dans le {deptCode}, comptez <strong>6 à 12 mois</strong>. Reporting mensuel pour suivre votre progression."
             },
             {
-                question: "Garantissez-vous la première position Google ?",
-                answer: "Non, et <strong>fuyez quiconque le promet</strong>. Google seul décide des classements, et son algorithme évolue constamment. Ce que je garantis : une <strong>méthodologie rigoureuse</strong>, des optimisations conformes aux guidelines Google, un travail transparent avec reporting mensuel, et une amélioration mesurable de votre visibilité. Mes clients constatent en moyenne une <strong>augmentation de 150 à 300% de leur trafic organique</strong> sur 12 mois."
+                question: "Garantissez-vous la première page à {city} ?",
+                answer: "Non, et <strong>fuyez quiconque le promet</strong>. Google seul décide des classements. Ce que je garantis : une <strong>méthodologie rigoureuse</strong>, des optimisations conformes aux guidelines, un reporting transparent, et une amélioration mesurable de votre visibilité à {city}. Mes clients du {department} constatent en moyenne <strong>+150 à 300% de trafic organique</strong> sur 12 mois."
             },
             {
-                question: "Quelle différence entre SEO et SEA ?",
-                answer: "Le <strong>SEO</strong> (référencement naturel) travaille sur les résultats organiques de Google — c'est un investissement long terme qui continue de rapporter sans coût par clic. Le <strong>SEA</strong> (Google Ads) affiche des annonces payantes — vous payez chaque clic, et tout s'arrête quand le budget est épuisé. Je recommande généralement de <strong>combiner les deux</strong> : SEA pour des résultats immédiats, SEO pour construire un actif durable."
+                question: "SEO ou Google Ads pour mon entreprise à {city} ?",
+                answer: "Le <strong>SEO</strong> travaille sur les résultats organiques — investissement long terme qui rapporte sans coût par clic. Le <strong>SEA</strong> (Google Ads) affiche des annonces payantes. Je recommande de <strong>combiner les deux</strong> pour les entreprises de {city} : SEA pour des résultats immédiats, SEO pour construire un actif durable dans le {deptCode}."
             },
             {
-                question: "Mon site est nouveau, peut-on faire du SEO ?",
-                answer: "Absolument, et c'est même <strong>le meilleur moment</strong>. Un site nouveau peut être conçu avec une <strong>architecture SEO optimale</strong> dès le départ, sans dette technique à corriger. Google met quelques mois à faire confiance à un nouveau domaine (« sandbox »), mais un travail SEO précoce permet de sortir de cette période avec des <strong>fondations solides</strong>. Mieux vaut bien faire dès le début que refondre dans 2 ans."
+                question: "Mon site à {city} est nouveau, peut-on faire du SEO ?",
+                answer: "Absolument, c'est <strong>le meilleur moment</strong>. Un site nouveau peut être conçu avec une <strong>architecture SEO optimale</strong> pour {city} dès le départ. Google met quelques mois à faire confiance (« sandbox »), mais un travail SEO précoce permet de sortir avec des <strong>fondations solides</strong> pour dominer le {deptCode}."
             },
             {
-                question: "Travaillez-vous avec des entreprises de tous secteurs ?",
-                answer: "Oui, j'accompagne des <strong>entreprises de toutes tailles et tous secteurs</strong> à {city} et partout en France : artisans, commerces locaux, PME, startups tech, e-commerces, professions libérales... Le SEO s'adapte à chaque contexte. J'ai développé une expertise particulière en <strong>SEO local</strong> pour les entreprises qui ciblent une clientèle géographique, et en <strong>SEO B2B</strong> pour la génération de leads."
+                question: "Travaillez-vous avec tous les secteurs à {city} ?",
+                answer: "J'accompagne des <strong>entreprises de tous secteurs</strong> à {city}, {nearbyAreas} et dans le {department} : artisans, commerces, PME, startups, e-commerces, professions libérales... Expertise particulière en <strong>SEO local</strong> pour les entreprises ciblant les {population} habitants de {city}."
             },
             {
-                question: "Comment mesurez-vous les résultats ?",
-                answer: "Je fournis un <strong>reporting mensuel détaillé</strong> qui inclut : évolution des positions sur vos mots-clés cibles, trafic organique (Google Analytics), impressions et clics (Search Console), autorité de domaine, backlinks acquis, et conversions générées. Vous avez une <strong>visibilité totale</strong> sur le travail effectué et les résultats obtenus. Pas de boîte noire."
+                question: "Comment mesurez-vous les résultats à {city} ?",
+                answer: "Je fournis un <strong>reporting mensuel</strong> : positions sur vos mots-clés ciblant {city}, trafic organique (Analytics), impressions et clics (Search Console), autorité de domaine, backlinks acquis dans le {department}. <strong>Visibilité totale</strong> sur le travail et les résultats."
             }
         ],
         semanticKeywords: [

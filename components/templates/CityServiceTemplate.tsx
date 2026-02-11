@@ -28,6 +28,16 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
     const city = cityData.name;
     const deptCode = cityData.zipCode.substring(0, 2); // Extract department code (e.g., "06" from "06000")
 
+    // City-specific data for unique content
+    const landmarks = cityData.landmarks?.slice(0, 3).join(", ") || "";
+    const landmark1 = cityData.landmarks?.[0] || "";
+    const landmark2 = cityData.landmarks?.[1] || "";
+    const nearbyAreas = cityData.nearbyAreas?.slice(0, 3).join(", ") || "";
+    const population = cityData.population || "";
+    const cityDescription = cityData.description || "";
+    const keyPoint1 = cityData.keyPoints?.[0] || "";
+    const keyPoint2 = cityData.keyPoints?.[1] || "";
+
     // Replace all placeholders in content
     const replacePlaceholders = (text: string) => {
         return text
@@ -35,7 +45,15 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
             .replace(/\{citySlug\}/g, cityData.slug)
             .replace(/\{deptCode\}/g, deptCode)
             .replace(/\{department\}/g, cityData.department)
-            .replace(/\{region\}/g, cityData.region);
+            .replace(/\{region\}/g, cityData.region)
+            .replace(/\{population\}/g, population)
+            .replace(/\{landmarks\}/g, landmarks)
+            .replace(/\{landmark1\}/g, landmark1)
+            .replace(/\{landmark2\}/g, landmark2)
+            .replace(/\{nearbyAreas\}/g, nearbyAreas)
+            .replace(/\{cityDescription\}/g, cityDescription)
+            .replace(/\{keyPoint1\}/g, keyPoint1)
+            .replace(/\{keyPoint2\}/g, keyPoint2);
     };
 
     // JSON-LD Service Schema avec images géolocalisées
