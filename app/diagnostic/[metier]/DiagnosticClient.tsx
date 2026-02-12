@@ -4,20 +4,156 @@ import { useSearchParams } from 'next/navigation'
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Search, MapPin, Check, Globe, Calendar, Star, TrendingUp, Phone, MessageCircle, ChevronDown, Users, BarChart3, Bot, AlertTriangle, Sparkles, ArrowRight } from 'lucide-react'
+import { Search, MapPin, Check, Globe, Calendar, Star, TrendingUp, Phone, MessageCircle, ChevronDown, Users, BarChart3, Bot, AlertTriangle, Clock, ArrowRight, Zap } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
 import type { MetierData } from '@/lib/diagnostic-data'
 
 // ══════════════════════════════════════════════════════════════════════════════
-// DIAGNOSTIC CLIENT - Contenu interactif
+// CONFIGURATION PAR MÉTIER
 // ══════════════════════════════════════════════════════════════════════════════
 
-interface DiagnosticClientProps {
-  metier: string
-  metierData: MetierData
+// Accroches émotionnelles personnalisées par métier
+const PROFESSION_HOOKS: Record<string, { hook: string; heroImage?: string }> = {
+  coiffeur: { hook: "Vos clientes vous adorent. Google ne le sait pas.", heroImage: "/images/diagnostic/coiffeur-hero.jpg" },
+  barbier: { hook: "Vos clients reviennent chaque mois. Google ne le sait pas.", heroImage: "/images/diagnostic/barbier-hero.jpg" },
+  restaurant: { hook: "Vos clients adorent votre cuisine. Google ne le sait pas.", heroImage: "/images/diagnostic/restaurant-hero.jpg" },
+  boulangerie: { hook: "Vos clients font la queue chaque matin. Google ne le sait pas.", heroImage: "/images/diagnostic/boulangerie-hero.jpg" },
+  traiteur: { hook: "Vos événements sont inoubliables. Google ne le sait pas.", heroImage: "/images/diagnostic/traiteur-hero.jpg" },
+  osteopathe: { hook: "Vos patients vous recommandent. Google ne le sait pas.", heroImage: "/images/diagnostic/osteopathe-hero.jpg" },
+  kinesitherapeute: { hook: "Vos patients progressent grâce à vous. Google ne le sait pas.", heroImage: "/images/diagnostic/kine-hero.jpg" },
+  psychologue: { hook: "Vos patients vous font confiance. Google ne le sait pas.", heroImage: "/images/diagnostic/psychologue-hero.jpg" },
+  dentiste: { hook: "Vos patients vous recommandent. Google ne le sait pas.", heroImage: "/images/diagnostic/dentiste-hero.jpg" },
+  peintre: { hook: "Vos chantiers parlent pour vous. Google ne le sait pas.", heroImage: "/images/diagnostic/peintre-hero.jpg" },
+  carreleur: { hook: "Votre travail est impeccable. Google ne le sait pas.", heroImage: "/images/diagnostic/carreleur-hero.jpg" },
+  plombier: { hook: "Vos clients vous rappellent pour chaque urgence. Google ne le sait pas.", heroImage: "/images/diagnostic/plombier-hero.jpg" },
+  electricien: { hook: "Vos clients vous font confiance. Google ne le sait pas.", heroImage: "/images/diagnostic/electricien-hero.jpg" },
+  serrurier: { hook: "Vos clients comptent sur vous dans l'urgence. Google ne le sait pas.", heroImage: "/images/diagnostic/serrurier-hero.jpg" },
+  avocat: { hook: "Vos clients vous font confiance pour les défendre. Google ne le sait pas.", heroImage: "/images/diagnostic/avocat-hero.jpg" },
+  renovation: { hook: "Vos chantiers transforment les espaces. Google ne le sait pas.", heroImage: "/images/diagnostic/renovation-hero.jpg" },
+  boutique: { hook: "Vos clientes reviennent saison après saison. Google ne le sait pas.", heroImage: "/images/diagnostic/boutique-hero.jpg" },
+  'prothesiste-ongulaire': { hook: "Vos clientes adorent vos créations. Google ne le sait pas.", heroImage: "/images/diagnostic/nails-hero.jpg" },
 }
 
-// Villes pour les liens internes SEO
+// Rubriques mockup par métier (navigation du futur site)
+const MOCKUP_TABS: Record<string, string[]> = {
+  coiffeur: ['Services', 'Galerie', 'Tarifs', 'Réserver'],
+  barbier: ['Services', 'Galerie', 'Tarifs', 'Réserver'],
+  restaurant: ['Notre carte', 'Réservation', 'Photos', 'Livraison'],
+  boulangerie: ['Nos pains', 'Pâtisseries', 'Horaires', 'Contact'],
+  traiteur: ['Nos prestations', 'Menu', 'Devis', 'Contact'],
+  osteopathe: ['Spécialités', 'Tarifs', 'Prendre RDV', 'Contact'],
+  kinesitherapeute: ['Spécialités', 'Tarifs', 'Prendre RDV', 'Contact'],
+  psychologue: ['Approche', 'Tarifs', 'Prendre RDV', 'Contact'],
+  dentiste: ['Soins', 'Tarifs', 'Prendre RDV', 'Contact'],
+  peintre: ['Réalisations', 'Services', 'Devis gratuit', 'Contact'],
+  carreleur: ['Réalisations', 'Services', 'Devis gratuit', 'Contact'],
+  plombier: ['Urgences', 'Services', 'Devis', 'Contact'],
+  electricien: ['Dépannage', 'Services', 'Devis', 'Contact'],
+  serrurier: ['Urgences 24h', 'Services', 'Tarifs', 'Contact'],
+  avocat: ['Spécialités', 'Honoraires', 'Consultation', 'Contact'],
+  renovation: ['Réalisations', 'Services', 'Devis', 'Contact'],
+  boutique: ['Nouveautés', 'Collections', 'Horaires', 'Contact'],
+  'prothesiste-ongulaire': ['Prestations', 'Galerie', 'Tarifs', 'Réserver'],
+}
+
+// Accroches du mockup par métier
+const MOCKUP_TAGLINES: Record<string, string> = {
+  coiffeur: "Votre beauté, notre passion",
+  barbier: "L'art du barbier depuis 2010",
+  restaurant: "Une cuisine authentique et généreuse",
+  boulangerie: "Artisan boulanger depuis 3 générations",
+  traiteur: "Des saveurs qui marquent vos événements",
+  osteopathe: "Retrouvez votre équilibre naturel",
+  kinesitherapeute: "Votre rééducation, notre expertise",
+  psychologue: "Un espace d'écoute bienveillant",
+  dentiste: "Votre sourire, notre priorité",
+  peintre: "La qualité dans chaque détail",
+  carreleur: "Un savoir-faire artisanal",
+  plombier: "Intervention rapide, travail soigné",
+  electricien: "Votre sécurité électrique",
+  serrurier: "24h/24, toujours disponible",
+  avocat: "Défendre vos intérêts avec rigueur",
+  renovation: "Transformer votre espace de vie",
+  boutique: "Des pièces uniques pour votre style",
+  'prothesiste-ongulaire': "Sublimez vos mains",
+}
+
+// Images de mockup par métier (template style)
+const MOCKUP_IMAGES: Record<string, string> = {
+  restaurant: "/images/mockups/restaurant-mockup.jpg",
+  boulangerie: "/images/mockups/boulangerie-mockup.jpg",
+  coiffeur: "/images/mockups/coiffeur-mockup.jpg",
+  barbier: "/images/mockups/barbier-mockup.jpg",
+  osteopathe: "/images/mockups/sante-mockup.jpg",
+  kinesitherapeute: "/images/mockups/sante-mockup.jpg",
+  psychologue: "/images/mockups/sante-mockup.jpg",
+  dentiste: "/images/mockups/dentiste-mockup.jpg",
+  peintre: "/images/mockups/artisan-mockup.jpg",
+  carreleur: "/images/mockups/artisan-mockup.jpg",
+  plombier: "/images/mockups/artisan-mockup.jpg",
+  electricien: "/images/mockups/artisan-mockup.jpg",
+  serrurier: "/images/mockups/artisan-mockup.jpg",
+  traiteur: "/images/mockups/traiteur-mockup.jpg",
+}
+
+// Populations des villes pour adapter les volumes
+const CITY_POPULATIONS: Record<string, number> = {
+  'nice': 340000,
+  'cannes': 74000,
+  'antibes': 73000,
+  'grasse': 51000,
+  'cagnes-sur-mer': 50000,
+  'le cannet': 42000,
+  'menton': 30000,
+  'vallauris': 28000,
+  'mandelieu-la-napoule': 23000,
+  'mougins': 19000,
+  'vence': 19000,
+  'villeneuve-loubet': 15000,
+  'beausoleil': 14000,
+  'roquebrune-cap-martin': 13000,
+  'carros': 12000,
+  'la trinité': 11000,
+  'saint-laurent-du-var': 30000,
+  'marseille': 870000,
+  'paris': 2150000,
+  'lyon': 520000,
+  'toulouse': 480000,
+  'bordeaux': 260000,
+  'montpellier': 290000,
+  'strasbourg': 280000,
+  'nantes': 310000,
+  'lille': 230000,
+  'monaco': 39000,
+}
+
+// Population de référence (Nice pour les volumes de base)
+const REFERENCE_POPULATION = 340000
+
+// ══════════════════════════════════════════════════════════════════════════════
+// HELPERS
+// ══════════════════════════════════════════════════════════════════════════════
+
+function estimateVolumeForCity(baseVolume: number, cityName: string): number {
+  const citySlug = cityName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  const population = CITY_POPULATIONS[citySlug] || 50000
+  const ratio = population / REFERENCE_POPULATION
+  // Boost pour les petites villes (recherches plus locales)
+  const localBoost = 1 + (0.15 * (1 - ratio))
+  return Math.round(baseVolume * ratio * localBoost)
+}
+
+function formatVolume(volume: number): string {
+  if (volume >= 1000) {
+    return `${(volume / 1000).toFixed(1).replace('.0', '')}k`
+  }
+  return volume.toString()
+}
+
+// ══════════════════════════════════════════════════════════════════════════════
+// VILLES POUR LIENS SEO
+// ══════════════════════════════════════════════════════════════════════════════
+
 const FEATURED_CITIES = [
   { name: 'Nice', slug: 'seo-nice' },
   { name: 'Cannes', slug: 'seo-cannes' },
@@ -27,27 +163,46 @@ const FEATURED_CITIES = [
   { name: 'Paris', slug: 'seo-paris' },
 ]
 
+// ══════════════════════════════════════════════════════════════════════════════
+// COMPOSANT PRINCIPAL
+// ══════════════════════════════════════════════════════════════════════════════
+
+interface DiagnosticClientProps {
+  metier: string
+  metierData: MetierData
+}
+
 export default function DiagnosticClient({ metier, metierData }: DiagnosticClientProps) {
   const searchParams = useSearchParams()
-  const nom = searchParams.get('nom')?.replace(/\+/g, ' ') || 'Votre Salon'
+  const nom = searchParams.get('nom')?.replace(/\+/g, ' ') || 'Votre Commerce'
   const ville = searchParams.get('ville')?.replace(/\+/g, ' ') || 'Nice'
   const note = searchParams.get('note') || '4.6'
   const avis = searchParams.get('avis') || '155'
 
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
-  // Récupérer le volume de recherche principal
+  // Récupérer les données personnalisées
+  const professionHook = PROFESSION_HOOKS[metier] || { hook: "Vos clients vous font confiance. Google ne le sait pas." }
+  const mockupTabs = MOCKUP_TABS[metier] || ['Accueil', 'Services', 'Contact', 'À propos']
+  const mockupTagline = MOCKUP_TAGLINES[metier] || "L'excellence au service de nos clients"
+
+  // Calculer les volumes adaptés à la ville
   const mainKeyword = metierData.keywords.principal[0]
-  const totalVolume = metierData.keywords.principal.reduce((sum, kw) => sum + kw.volume, 0)
+  const adaptedKeywords = metierData.keywords.principal.map(kw => ({
+    ...kw,
+    keyword: kw.keyword.replace('nice', ville.toLowerCase()).replace('Nice', ville),
+    volume: estimateVolumeForCity(kw.volume, ville)
+  }))
+  const totalVolume = adaptedKeywords.reduce((sum, kw) => sum + kw.volume, 0)
 
   return (
     <main className="min-h-screen bg-white">
 
-      {/* ════════ HEADER HERO ════════ */}
+      {/* ════════ SECTION 1 — HERO PERSONNALISÉ ════════ */}
       <section className="relative min-h-[85vh] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src={metierData.heroImage}
+            src={professionHook.heroImage || metierData.heroImage}
             alt={`${metierData.label} - Diagnostic SEO`}
             fill
             className="object-cover"
@@ -60,34 +215,32 @@ export default function DiagnosticClient({ metier, metierData }: DiagnosticClien
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
               <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-              <span className="text-white/90 text-sm">Analyse personnalisée</span>
+              <span className="text-white/90 text-sm">Analyse pour <strong>{nom}</strong></span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-6">
-              Et si <span className="font-medium">{nom}</span><br />
-              était visible sur Google ?
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight mb-6">
+              {professionHook.hook}
             </h1>
 
-            <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-xl">
-              Aujourd'hui, vos {avis} clients satisfaits vous trouvent par le bouche-à-oreille.
-              Mais chaque mois, <strong className="text-white">{totalVolume.toLocaleString()} personnes</strong> cherchent un {metierData.label.toLowerCase()} à {ville} sur Google.
-              <br /><br />
-              Elles ne vous trouvent pas.
-            </p>
-
-            <div className="flex flex-wrap items-center gap-6 text-white/70">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-4 text-white/80 mb-8">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
                 <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
-                <span>{note}/5 sur Google</span>
+                <span className="font-medium">{note}/5</span>
+                <span className="text-white/60">sur Google</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5" />
-                <span>{avis} avis clients</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-5 h-5" />
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                <MapPin className="w-4 h-4" />
                 <span>{ville}</span>
               </div>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+              <p className="text-lg text-white/90 font-medium mb-2">
+                {metierData.label} · {nom}
+              </p>
+              <p className="text-white/70">
+                {avis} avis clients · Noté {note}/5 sur Google
+              </p>
             </div>
           </div>
         </div>
@@ -97,7 +250,45 @@ export default function DiagnosticClient({ metier, metierData }: DiagnosticClien
         </div>
       </section>
 
-      {/* ════════ POURQUOI UN SITE INTERNET ════════ */}
+      {/* ════════ SECTION 2 — VOLUMES DE RECHERCHE ADAPTÉS À LA VILLE ════════ */}
+      <section className="py-24 px-6 md:px-12 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Chaque mois à <span className="font-medium">{ville}</span>
+            </h2>
+            <p className="text-xl text-gray-500">
+              Des clients cherchent un {metierData.label.toLowerCase()}. Ils ne vous trouvent pas.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {adaptedKeywords.slice(0, 3).map((kw, i) => (
+              <div key={kw.keyword} className="bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-100">
+                <div className="text-4xl font-light text-gray-900 mb-2">
+                  {formatVolume(kw.volume)}
+                </div>
+                <p className="text-gray-500 text-sm">
+                  recherches/mois
+                </p>
+                <p className="text-gray-700 font-medium mt-4">
+                  "{kw.keyword}"
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-amber-50 border border-amber-100 rounded-2xl p-6 text-center">
+            <p className="text-amber-800">
+              <strong>{formatVolume(totalVolume)} recherches/mois</strong> pour des {metierData.labelPlural.toLowerCase()} à {ville}.
+              <br />
+              <span className="text-amber-700">Sans site optimisé, ces clients vont chez vos concurrents.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════ SECTION 3 — POURQUOI C'EST IMPORTANT (4 blocs adaptés) ════════ */}
       <section className="py-24 px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -105,9 +296,6 @@ export default function DiagnosticClient({ metier, metierData }: DiagnosticClien
               Pourquoi créer un site internet<br />
               <span className="font-medium">pour {nom} ?</span>
             </h2>
-            <div className="text-gray-500 text-lg max-w-2xl mx-auto">
-              <ReactMarkdown>{metierData.problemStatement}</ReactMarkdown>
-            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -117,30 +305,8 @@ export default function DiagnosticClient({ metier, metierData }: DiagnosticClien
               </div>
               <h3 className="text-xl font-medium text-gray-900 mb-3">Être trouvé sur Google</h3>
               <p className="text-gray-600 leading-relaxed">
-                Quand quelqu'un tape "{mainKeyword?.keyword}" sur Google, il voit une liste de résultats.
-                Sans site web, vous n'apparaissez pas. Vous êtes invisible.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                <Globe className="w-6 h-6 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-medium text-gray-900 mb-3">Posséder votre vitrine digitale</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Instagram et Google My Business, c'est bien. Mais ce sont des plateformes qui ne vous appartiennent pas.
-                Un site web, c'est votre espace, avec vos règles.
-              </p>
-            </div>
-
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
-                <TrendingUp className="w-6 h-6 text-emerald-600" />
-              </div>
-              <h3 className="text-xl font-medium text-gray-900 mb-3">Attirer de nouveaux clients</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Un site bien fait attire des visiteurs en continu, 24h/24. C'est un commercial qui travaille
-                pour vous sans jamais s'arrêter.
+                Quand quelqu'un tape "{metierData.label.toLowerCase()} {ville}" sur Google, il voit une liste de résultats.
+                Sans site web optimisé, {nom} n'apparaît pas.
               </p>
             </div>
 
@@ -150,152 +316,226 @@ export default function DiagnosticClient({ metier, metierData }: DiagnosticClien
               </div>
               <h3 className="text-xl font-medium text-gray-900 mb-3">Inspirer confiance</h3>
               <p className="text-gray-600 leading-relaxed">
-                En 2026, un professionnel sans site web paraît moins crédible. Un site soigné
-                rassure les nouveaux clients et montre votre sérieux.
+                En 2026, un {metierData.label.toLowerCase()} sans site web paraît moins crédible.
+                Un site soigné rassure les nouveaux clients de {ville} et montre votre professionnalisme.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                <Clock className="w-6 h-6 text-emerald-600" />
+              </div>
+              <h3 className="text-xl font-medium text-gray-900 mb-3">Travailler 24h/24</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Votre site présente vos services aux habitants de {ville} même quand vous dormez.
+                C'est un commercial qui travaille pour {nom} sans jamais s'arrêter.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-8">
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                <Globe className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-medium text-gray-900 mb-3">Posséder votre espace</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Instagram et Google My Business ne vous appartiennent pas.
+                Votre site web, c'est l'espace de {nom}, avec vos règles.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ════════ MOTS-CLÉS DE VOTRE SECTEUR ════════ */}
-      <section className="py-24 px-6 md:px-12 bg-gray-50">
+      {/* ════════ SECTION 4 — MOCKUP DU FUTUR SITE ════════ */}
+      <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Votre futur site pourrait<br />
+              <span className="font-medium">ressembler à ça</span>
+            </h2>
+            <p className="text-gray-500">
+              Un site personnalisé pour {nom}, optimisé pour {ville}
+            </p>
+          </div>
+
+          {/* Browser Mockup */}
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+            {/* Browser Chrome */}
+            <div className="bg-gray-100 px-4 py-3 flex items-center gap-3 border-b border-gray-200">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+              </div>
+              <div className="flex-1 bg-white rounded-lg px-4 py-1.5 text-sm text-gray-500 font-mono">
+                {nom.toLowerCase().replace(/\s+/g, '-').normalize('NFD').replace(/[\u0300-\u036f]/g, '')}.fr
+              </div>
+            </div>
+
+            {/* Site Content */}
+            <div className="relative">
+              {/* Navigation */}
+              <nav className="bg-white px-6 py-4 flex items-center justify-between border-b border-gray-100">
+                <div className="font-semibold text-gray-900 text-lg">{nom}</div>
+                <div className="hidden md:flex items-center gap-6 text-sm text-gray-600">
+                  {mockupTabs.map((tab) => (
+                    <span key={tab} className="hover:text-gray-900 cursor-pointer">{tab}</span>
+                  ))}
+                </div>
+                <div className="md:hidden text-gray-600">
+                  <div className="w-6 h-0.5 bg-gray-600 mb-1.5" />
+                  <div className="w-6 h-0.5 bg-gray-600 mb-1.5" />
+                  <div className="w-4 h-0.5 bg-gray-600" />
+                </div>
+              </nav>
+
+              {/* Hero Section of Mockup */}
+              <div className="relative h-64 md:h-80 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                <div className="absolute inset-0 opacity-30">
+                  <Image
+                    src={MOCKUP_IMAGES[metier] || metierData.heroImage}
+                    alt={`Site web ${metierData.label}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative z-10 text-center px-6">
+                  <h3 className="text-2xl md:text-3xl font-light text-white mb-3">{nom}</h3>
+                  <p className="text-white/80">{mockupTagline}</p>
+                  <div className="mt-6">
+                    <span className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-full text-sm font-medium">
+                      <Calendar className="w-4 h-4" />
+                      {mockupTabs.includes('Réserver') || mockupTabs.includes('Prendre RDV') ? 'Prendre RDV' : 'Nous contacter'}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Quick Info */}
+              <div className="grid grid-cols-3 text-center py-6 bg-gray-50 border-t border-gray-100">
+                <div>
+                  <div className="flex items-center justify-center gap-1 text-amber-500 mb-1">
+                    <Star className="w-4 h-4 fill-amber-500" />
+                    <span className="font-medium">{note}</span>
+                  </div>
+                  <p className="text-xs text-gray-500">{avis} avis</p>
+                </div>
+                <div>
+                  <div className="flex items-center justify-center gap-1 text-gray-700 mb-1">
+                    <MapPin className="w-4 h-4" />
+                    <span className="font-medium text-sm">{ville}</span>
+                  </div>
+                  <p className="text-xs text-gray-500">Localisation</p>
+                </div>
+                <div>
+                  <div className="flex items-center justify-center gap-1 text-emerald-600 mb-1">
+                    <Check className="w-4 h-4" />
+                    <span className="font-medium text-sm">Ouvert</span>
+                  </div>
+                  <p className="text-xs text-gray-500">Aujourd'hui</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-center text-gray-500 text-sm mt-8">
+            Aperçu indicatif · Le design final sera adapté à votre identité
+          </p>
+        </div>
+      </section>
+
+      {/* ════════ SECTION 5 — STRATÉGIE 1 MOT-CLÉ = 1 PAGE ════════ */}
+      <section className="py-24 px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
           <div className="mb-16">
             <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 rounded-full px-4 py-2 text-sm font-medium mb-6">
-              <Search className="w-4 h-4" />
-              Comprendre le référencement
+              <Zap className="w-4 h-4" />
+              Stratégie SEO
             </div>
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-              Ce que les gens cherchent
+              1 mot-clé = 1 page<br />
+              <span className="font-medium">La méthode qui fonctionne</span>
             </h2>
             <p className="text-gray-500 text-lg">
-              Voici les vraies recherches Google dans votre secteur à {ville}.
+              Voici les pages que nous créerions pour {nom} à {ville}.
             </p>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-2xl p-8">
-            <h3 className="text-xl font-medium text-gray-900 mb-6">Mots-clés principaux</h3>
-            <div className="grid md:grid-cols-2 gap-3">
-              {[...metierData.keywords.principal, ...metierData.keywords.niches.slice(0, 4)].map((kw) => (
-                <div key={kw.keyword} className="flex items-center justify-between bg-gray-50 rounded-lg px-4 py-3">
-                  <span className="text-gray-900">"{kw.keyword}"</span>
-                  <span className="text-gray-500 text-sm">{kw.volume.toLocaleString()}/mois</span>
-                </div>
-              ))}
+            <h3 className="text-xl font-medium text-gray-900 mb-6">Pages optimisées pour {nom}</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              {metierData.ghostPageExamples.map((page) => {
+                const adaptedPage = page.replace('Nice', ville)
+                return (
+                  <div key={page} className="flex items-center gap-3 bg-gray-50 rounded-xl px-5 py-4">
+                    <div className="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Check className="w-4 h-4 text-emerald-600" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-900">{adaptedPage}</p>
+                      <p className="text-sm text-gray-500">Page dédiée</p>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
-            <p className="text-gray-500 text-sm mt-4">
-              Données issues d'outils professionnels (SEMrush, Haloscan). Ces recherches sont réelles.
+            <p className="text-gray-500 text-sm mt-6">
+              Chaque page cible un mot-clé précis que vos clients tapent sur Google.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ════════ GEO / IA ════════ */}
-      <section className="py-24 px-6 md:px-12">
+      {/* ════════ SECTION 6 — ACCOMPAGNEMENT (4 ÉTAPES) ════════ */}
+      <section className="py-24 px-6 md:px-12 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-16">
-            <div className="inline-flex items-center gap-2 bg-violet-50 text-violet-700 rounded-full px-4 py-2 text-sm font-medium mb-6">
-              <Bot className="w-4 h-4" />
-              L'ère de l'IA
-            </div>
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-              ChatGPT, Gemini, Perplexity :<br />
-              <span className="font-medium">le nouveau Google</span>
+              Comment ça se passe ?
             </h2>
-            <p className="text-gray-500 text-lg max-w-2xl">
-              De plus en plus de gens utilisent des IA pour trouver des recommandations.
-              "Quel est le meilleur {metierData.label.toLowerCase()} à {ville} ?" — on pose maintenant cette question à ChatGPT.
+            <p className="text-gray-500 text-lg">
+              Un accompagnement simple et transparent pour {nom}
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-violet-50 to-blue-50 rounded-2xl p-8 md:p-12 mb-12">
-            <h3 className="text-xl font-medium text-gray-900 mb-6">Comment les IA trouvent leurs réponses ?</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-xl p-6">
-                <div className="w-10 h-10 bg-violet-100 rounded-lg flex items-center justify-center mb-4">
-                  <Globe className="w-5 h-5 text-violet-600" />
-                </div>
-                <h4 className="font-medium text-gray-900 mb-2">Un site web</h4>
-                <p className="text-gray-500 text-sm">Sans site, l'IA n'a pas de source fiable pour parler de vous.</p>
-              </div>
-              <div className="bg-white rounded-xl p-6">
-                <div className="w-10 h-10 bg-violet-100 rounded-lg flex items-center justify-center mb-4">
-                  <BarChart3 className="w-5 h-5 text-violet-600" />
-                </div>
-                <h4 className="font-medium text-gray-900 mb-2">Contenu structuré</h4>
-                <p className="text-gray-500 text-sm">Des pages claires sur vos services et votre localisation.</p>
-              </div>
-              <div className="bg-white rounded-xl p-6">
-                <div className="w-10 h-10 bg-violet-100 rounded-lg flex items-center justify-center mb-4">
-                  <Star className="w-5 h-5 text-violet-600" />
-                </div>
-                <h4 className="font-medium text-gray-900 mb-2">Bonne réputation</h4>
-                <p className="text-gray-500 text-sm">Vos {avis} avis avec {note}★ sont un atout majeur.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ════════ SECTION : URGENCE ════════ */}
-      <section className="py-24 px-6 md:px-12 bg-rose-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-start gap-6">
-            <div className="w-14 h-14 bg-rose-100 rounded-2xl flex items-center justify-center flex-shrink-0">
-              <AlertTriangle className="w-7 h-7 text-rose-600" />
-            </div>
-            <div>
-              <h2 className="text-2xl md:text-3xl font-medium text-gray-900 mb-6">
-                Pourquoi ne pas attendre ?
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Le référencement prend du temps. Les résultats apparaissent en 3 à 6 mois.
-                Pendant ce temps, vos concurrents qui ont déjà un site captent les clients qui vous cherchent.
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl p-8 relative">
+              <div className="absolute -top-4 -left-4 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center font-medium">1</div>
+              <h3 className="text-lg font-medium text-gray-900 mb-3 pt-2">Appel découverte</h3>
+              <p className="text-gray-600">
+                30 minutes pour comprendre votre activité de {metierData.label.toLowerCase()}, vos objectifs à {ville} et vos besoins.
               </p>
+            </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mt-8">
-                <div className="bg-white rounded-xl p-6">
-                  <h4 className="font-medium text-gray-900 mb-3">Aujourd'hui</h4>
-                  <ul className="space-y-2 text-gray-600 text-sm">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-rose-400 rounded-full" />
-                      Invisible sur Google
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-rose-400 rounded-full" />
-                      Inexistant pour les IA
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-rose-400 rounded-full" />
-                      {totalVolume.toLocaleString()} recherches/mois qui ne vous trouvent pas
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-white rounded-xl p-6">
-                  <h4 className="font-medium text-gray-900 mb-3">Dans 6 mois avec un site</h4>
-                  <ul className="space-y-2 text-gray-600 text-sm">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
-                      Visible sur les recherches locales
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
-                      Référencé par les IA
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full" />
-                      De nouveaux clients chaque mois
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div className="bg-white rounded-2xl p-8 relative">
+              <div className="absolute -top-4 -left-4 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center font-medium">2</div>
+              <h3 className="text-lg font-medium text-gray-900 mb-3 pt-2">Audit & proposition</h3>
+              <p className="text-gray-600">
+                J'analyse votre marché à {ville} et je vous propose une stratégie adaptée à {nom}.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 relative">
+              <div className="absolute -top-4 -left-4 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center font-medium">3</div>
+              <h3 className="text-lg font-medium text-gray-900 mb-3 pt-2">Création du site</h3>
+              <p className="text-gray-600">
+                Design sur-mesure, contenus optimisés, mise en ligne de votre nouveau site.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 relative">
+              <div className="absolute -top-4 -left-4 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center font-medium">4</div>
+              <h3 className="text-lg font-medium text-gray-900 mb-3 pt-2">Suivi & optimisation</h3>
+              <p className="text-gray-600">
+                Référencement continu, suivi des positions, ajustements pour maximiser vos résultats.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ════════ QUI SUIS-JE ════════ */}
+      {/* ════════ SECTION 7 — QUI SUIS-JE ════════ */}
       <section className="py-24 px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -309,7 +549,7 @@ export default function DiagnosticClient({ metier, metierData }: DiagnosticClien
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Après un double master en stratégie digitale et expérience utilisateur,
-                j'accompagne les indépendants et PME dans leur visibilité en ligne.
+                j'accompagne les {metierData.labelPlural.toLowerCase()} et indépendants dans leur visibilité en ligne.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Mon approche : des stratégies concrètes, des résultats mesurables, pas de jargon inutile.
@@ -348,72 +588,147 @@ export default function DiagnosticClient({ metier, metierData }: DiagnosticClien
         </div>
       </section>
 
-      {/* ════════ TARIFS ════════ */}
+      {/* ════════ SECTION 8 — TARIFS ════════ */}
       <section className="py-24 px-6 md:px-12 bg-gray-50" id="tarifs">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">Mes tarifs</h2>
-            <p className="text-gray-500 text-lg">
-              Des formules adaptées à vos besoins, sans engagement.
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">Tarifs transparents</h2>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+              Des formules claires, adaptées à votre budget. Sans engagement.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-xl font-medium text-gray-900 mb-2">Site Vitrine</h3>
+          {/* Disclaimer AVANT les tarifs */}
+          <div className="bg-amber-50 border border-amber-100 rounded-2xl p-6 mb-12 text-center">
+            <p className="text-amber-800">
+              <strong>Ces tarifs sont des points de départ</strong> pour vous donner une idée.
+              <br />
+              Le prix final sera ajusté après notre échange, en fonction de vos besoins spécifiques et de l'audit détaillé de {nom}.
+            </p>
+          </div>
+
+          {/* 3 CARDS TARIFS */}
+          <div className="grid md:grid-cols-3 gap-6">
+
+            {/* CARD 1 — Site Vitrine */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+              <h3 className="text-xl font-medium text-gray-900 mb-1">Site Vitrine</h3>
               <p className="text-gray-500 text-sm mb-6">Votre présence en ligne</p>
               <div className="mb-8">
                 <p className="text-sm text-gray-500">à partir de</p>
-                <p className="text-4xl font-light text-gray-900">690<span className="text-lg">€</span></p>
+                <p className="text-4xl font-light text-gray-900">490<span className="text-lg">€</span></p>
+                <p className="text-sm text-gray-500">paiement unique</p>
               </div>
               <ul className="space-y-3 mb-8">
-                {['Site 5-7 pages sur-mesure', 'Design à votre image', 'Mobile & tablette', 'Bouton réservation', 'Hébergement 1 an'].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-gray-600 text-sm">
-                    <Check className="w-4 h-4 text-gray-400" />
-                    {item}
-                  </li>
-                ))}
+                <li className="flex items-start gap-3 text-gray-600 text-sm">
+                  <span className="text-gray-400 mt-1">·</span>
+                  <span>Site sur-mesure à votre image</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-600 text-sm">
+                  <span className="text-gray-400 mt-1">·</span>
+                  <span>Adapté mobile et tablette</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-600 text-sm">
+                  <span className="text-gray-400 mt-1">·</span>
+                  <span>Bouton de réservation</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-600 text-sm">
+                  <span className="text-gray-400 mt-1">·</span>
+                  <span>Vous êtes propriétaire du site</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-600 text-sm">
+                  <span className="text-gray-400 mt-1">·</span>
+                  <span>Hébergement 1ère année inclus</span>
+                </li>
               </ul>
             </div>
 
-            <div className="bg-gray-900 text-white rounded-2xl p-8 shadow-lg relative">
+            {/* CARD 2 — Site + Visibilité (POPULAIRE) */}
+            <div className="bg-gray-900 text-white rounded-2xl p-8 shadow-lg relative border-2 border-amber-400">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <span className="bg-amber-400 text-gray-900 text-xs font-medium px-4 py-1.5 rounded-full">Recommandé</span>
+                <span className="bg-amber-400 text-gray-900 text-xs font-semibold px-4 py-1.5 rounded-full">Populaire</span>
               </div>
-              <h3 className="text-xl font-medium mb-2 pt-2">Site + SEO</h3>
+              <h3 className="text-xl font-medium mb-1 pt-2">Site + Visibilité</h3>
               <p className="text-gray-400 text-sm mb-6">Être trouvé sur Google</p>
               <div className="mb-8">
                 <p className="text-sm text-gray-400">à partir de</p>
-                <p className="text-4xl font-light">990<span className="text-lg">€</span></p>
-                <p className="text-sm text-gray-400">puis <span className="text-white">190€</span>/mois</p>
+                <p className="text-4xl font-light">150<span className="text-lg">€</span><span className="text-lg text-gray-400">/mois</span></p>
+                <p className="text-sm text-gray-400">+ création du site</p>
               </div>
               <ul className="space-y-3 mb-8">
-                {['Tout Site Vitrine +', '10 articles SEO/mois', 'Pages services optimisées', 'Suivi positions Google', 'Rapport mensuel'].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-gray-300 text-sm">
-                    <Check className="w-4 h-4 text-amber-400" />
-                    {item}
-                  </li>
-                ))}
+                <li className="flex items-start gap-3 text-gray-300 text-sm">
+                  <span className="text-amber-400 mt-1">·</span>
+                  <span>Site vitrine sur-mesure</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-300 text-sm">
+                  <span className="text-amber-400 mt-1">·</span>
+                  <span>Pages optimisées pour vos mots-clés</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-300 text-sm">
+                  <span className="text-amber-400 mt-1">·</span>
+                  <span>Fiche Google optimisée</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-300 text-sm">
+                  <span className="text-amber-400 mt-1">·</span>
+                  <span>Contenu adapté à votre activité</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-300 text-sm">
+                  <span className="text-amber-400 mt-1">·</span>
+                  <span>Rapport mensuel simple et clair</span>
+                </li>
+                <li className="flex items-start gap-3 text-white text-sm font-medium">
+                  <span className="text-amber-400 mt-1">·</span>
+                  <span>Sans engagement</span>
+                </li>
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-xl font-medium text-gray-900 mb-2">Accompagnement Total</h3>
-              <p className="text-gray-500 text-sm mb-6">SEO + GMB + GEO</p>
+            {/* CARD 3 — Accompagnement Complet */}
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+              <h3 className="text-xl font-medium text-gray-900 mb-1">Accompagnement Complet</h3>
+              <p className="text-gray-500 text-sm mb-6">Visibilité maximale</p>
               <div className="mb-8">
                 <p className="text-sm text-gray-500">à partir de</p>
-                <p className="text-4xl font-light text-gray-900">1 290<span className="text-lg">€</span></p>
-                <p className="text-sm text-gray-500">puis <span className="text-gray-900">290€</span>/mois</p>
+                <p className="text-4xl font-light text-gray-900">250<span className="text-lg">€</span><span className="text-lg text-gray-500">/mois</span></p>
+                <p className="text-sm text-gray-500">+ création du site</p>
               </div>
               <ul className="space-y-3 mb-8">
-                {['Tout Site + SEO +', '20 articles/mois', 'Gestion Google My Business', 'Optimisation pour les IA', 'Support WhatsApp'].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-gray-600 text-sm">
-                    <Check className="w-4 h-4 text-gray-400" />
-                    {item}
-                  </li>
-                ))}
+                <li className="flex items-start gap-3 text-gray-600 text-sm">
+                  <span className="text-gray-400 mt-1">·</span>
+                  <span>Tout le pack Visibilité</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-600 text-sm">
+                  <span className="text-gray-400 mt-1">·</span>
+                  <span>Gestion complète fiche Google</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-600 text-sm">
+                  <span className="text-gray-400 mt-1">·</span>
+                  <span>Réponses aux avis optimisées</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-600 text-sm">
+                  <span className="text-gray-400 mt-1">·</span>
+                  <span>Visibilité dans les réponses IA</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-600 text-sm">
+                  <span className="text-gray-400 mt-1">·</span>
+                  <span>Support WhatsApp direct</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-900 text-sm font-medium">
+                  <span className="text-gray-400 mt-1">·</span>
+                  <span>Sans engagement</span>
+                </li>
               </ul>
             </div>
+          </div>
+
+          {/* Texte sous les cards */}
+          <div className="text-center mt-10">
+            <p className="text-gray-500 max-w-2xl mx-auto">
+              Chaque commerce est différent. Ces tarifs sont des points de départ —
+              je vous propose un devis détaillé et transparent après notre échange.
+              <br />
+              <strong className="text-gray-700">Pas de surprise, pas de frais cachés.</strong>
+            </p>
           </div>
         </div>
       </section>
@@ -484,13 +799,13 @@ export default function DiagnosticClient({ metier, metierData }: DiagnosticClien
         </div>
       </section>
 
-      {/* ════════ CTA CALENDLY ════════ */}
+      {/* ════════ SECTION 9 — CTA CALENDLY ════════ */}
       <section className="py-24 px-6 md:px-12 bg-gray-900 text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-light mb-6">On en discute ?</h2>
           <p className="text-gray-400 text-lg mb-10 leading-relaxed">
             Réservez un appel de 30 minutes. Je vous explique concrètement ce qu'on peut faire
-            pour <span className="text-white">{nom}</span>, sans engagement.
+            pour <span className="text-white">{nom}</span> à {ville}, sans engagement.
           </p>
 
           <a
