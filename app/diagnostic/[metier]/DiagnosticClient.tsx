@@ -78,24 +78,6 @@ const MOCKUP_TAGLINES: Record<string, string> = {
   'prothesiste-ongulaire': "Sublimez vos mains",
 }
 
-// Images de mockup par métier (template style)
-const MOCKUP_IMAGES: Record<string, string> = {
-  restaurant: "/images/mockups/restaurant-mockup.jpg",
-  boulangerie: "/images/mockups/boulangerie-mockup.jpg",
-  coiffeur: "/images/mockups/coiffeur-mockup.jpg",
-  barbier: "/images/mockups/barbier-mockup.jpg",
-  osteopathe: "/images/mockups/sante-mockup.jpg",
-  kinesitherapeute: "/images/mockups/sante-mockup.jpg",
-  psychologue: "/images/mockups/sante-mockup.jpg",
-  dentiste: "/images/mockups/dentiste-mockup.jpg",
-  peintre: "/images/mockups/artisan-mockup.jpg",
-  carreleur: "/images/mockups/artisan-mockup.jpg",
-  plombier: "/images/mockups/artisan-mockup.jpg",
-  electricien: "/images/mockups/artisan-mockup.jpg",
-  serrurier: "/images/mockups/artisan-mockup.jpg",
-  traiteur: "/images/mockups/traiteur-mockup.jpg",
-}
-
 // Populations des villes pour adapter les volumes
 const CITY_POPULATIONS: Record<string, number> = {
   'nice': 340000,
@@ -202,11 +184,12 @@ export default function DiagnosticClient({ metier, metierData }: DiagnosticClien
       <section className="relative min-h-[85vh] flex items-center">
         <div className="absolute inset-0">
           <Image
-            src={professionHook.heroImage || metierData.heroImage}
+            src={metierData.heroImage}
             alt={`${metierData.label} - Diagnostic SEO`}
             fill
             className="object-cover"
             priority
+            unoptimized={metierData.heroImage.startsWith('http')}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         </div>
@@ -391,22 +374,28 @@ export default function DiagnosticClient({ metier, metierData }: DiagnosticClien
               </nav>
 
               {/* Hero Section of Mockup */}
-              <div className="relative h-64 md:h-80 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                <div className="absolute inset-0 opacity-30">
+              <div className="relative h-72 md:h-96 bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0">
                   <Image
-                    src={MOCKUP_IMAGES[metier] || metierData.heroImage}
+                    src={metierData.mockupImage}
                     alt={`Site web ${metierData.label}`}
                     fill
-                    className="object-cover"
+                    className="object-cover opacity-60"
+                    unoptimized={metierData.mockupImage.startsWith('http')}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                 </div>
-                <div className="relative z-10 text-center px-6">
-                  <h3 className="text-2xl md:text-3xl font-light text-white mb-3">{nom}</h3>
-                  <p className="text-white/80">{mockupTagline}</p>
-                  <div className="mt-6">
-                    <span className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-full text-sm font-medium">
-                      <Calendar className="w-4 h-4" />
+                <div className="relative z-10 text-center px-6 max-w-xl">
+                  <h3 className="text-3xl md:text-4xl font-semibold text-white mb-4 drop-shadow-lg">{nom}</h3>
+                  <p className="text-white/90 text-lg mb-8">{mockupTagline}</p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <span className="inline-flex items-center justify-center gap-2 bg-white text-gray-900 px-8 py-4 rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow">
+                      <Calendar className="w-5 h-5" />
                       {mockupTabs.includes('Réserver') || mockupTabs.includes('Prendre RDV') ? 'Prendre RDV' : 'Nous contacter'}
+                    </span>
+                    <span className="inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-medium border border-white/30">
+                      <Phone className="w-5 h-5" />
+                      Appeler
                     </span>
                   </div>
                 </div>

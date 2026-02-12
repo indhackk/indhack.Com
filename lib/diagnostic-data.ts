@@ -62,8 +62,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Coiffeur',
     labelPlural: 'Coiffeurs',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/seo-dashboard.png',
+    heroImage: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&h=600&fit=crop',
 
     accentColor: '#C6A87C', // Or antique (luxe coiffure)
 
@@ -123,6 +123,71 @@ export const metiersData: Record<string, MetierData> = {
   },
 
   // ─────────────────────────────────────────────────────────────────────────────
+  // BARBIER
+  // ─────────────────────────────────────────────────────────────────────────────
+  barbier: {
+    slug: 'barbier',
+    label: 'Barbier',
+    labelPlural: 'Barbiers',
+
+    heroImage: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&h=600&fit=crop',
+
+    accentColor: '#1E3A5F', // Bleu masculin élégant
+
+    heroTitle: 'Vos clients reviennent chaque mois.',
+    heroSubtitle: 'Mais les nouveaux ne vous trouvent pas sur Google.',
+    problemStatement: 'Quand un homme cherche "barbier Nice", ce sont vos concurrents qui apparaissent en premier.',
+
+    keywords: {
+      principal: [
+        { keyword: 'barbier nice', volume: 1900, difficulty: 'difficile', type: 'principal' },
+        { keyword: 'barber shop nice', volume: 1400, difficulty: 'difficile', type: 'principal' },
+        { keyword: 'coiffeur homme nice', volume: 880, difficulty: 'moyen', type: 'principal' },
+      ],
+      niches: [
+        { keyword: 'barbe nice', volume: 390, difficulty: 'moyen', type: 'niche' },
+        { keyword: 'rasage traditionnel nice', volume: 210, difficulty: 'facile', type: 'niche' },
+        { keyword: 'dégradé homme nice', volume: 320, difficulty: 'facile', type: 'niche' },
+        { keyword: 'barbier sans rdv nice', volume: 170, difficulty: 'facile', type: 'niche' },
+        { keyword: 'coupe homme tendance nice', volume: 140, difficulty: 'facile', type: 'niche' },
+      ],
+      longueTraine: [
+        { keyword: 'barbier nice centre', volume: 110, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'meilleur barbier nice', volume: 170, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'barbier nice pas cher', volume: 90, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'barbier ouvert dimanche nice', volume: 70, difficulty: 'facile', type: 'longue-traine' },
+      ]
+    },
+
+    ghostPageExamples: [
+      'Barbier Nice Centre',
+      'Barber Shop Nice',
+      'Dégradé Homme Nice',
+      'Rasage Traditionnel Nice',
+      'Meilleur Barbier Nice',
+    ],
+
+    clientQuestions: [
+      'Prenez-vous sans rendez-vous ?',
+      'Faites-vous le rasage à l\'ancienne ?',
+      'Êtes-vous ouvert le dimanche ?',
+      'Quel est le prix d\'une coupe + barbe ?',
+    ],
+
+    services: [
+      'Coupe homme',
+      'Taille de barbe',
+      'Rasage traditionnel',
+      'Dégradé',
+      'Coloration barbe',
+      'Soins visage',
+    ],
+
+    averageTicket: 35,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
   // SERRURIER
   // ─────────────────────────────────────────────────────────────────────────────
   serrurier: {
@@ -130,8 +195,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Serrurier',
     labelPlural: 'Serruriers',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/audit-seo.png',
+    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop',
 
     accentColor: '#3B82F6', // Bleu confiance
 
@@ -195,8 +260,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Plombier',
     labelPlural: 'Plombiers',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/nice-data-flow.png',
+    heroImage: 'https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&h=600&fit=crop',
 
     accentColor: '#0EA5E9', // Bleu eau
 
@@ -260,8 +325,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Électricien',
     labelPlural: 'Électriciens',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/nice-workspace.png',
+    heroImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1558402529-d2638a7023e9?w=800&h=600&fit=crop',
 
     accentColor: '#F59E0B', // Jaune électrique
 
@@ -324,8 +389,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Prothésiste ongulaire',
     labelPlural: 'Prothésistes ongulaires',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/seo-dashboard.png',
+    heroImage: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=800&h=600&fit=crop',
 
     accentColor: '#EC4899', // Rose élégant
 
@@ -389,8 +454,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Dentiste',
     labelPlural: 'Dentistes',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/nice-data-flow.png',
+    heroImage: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&h=600&fit=crop',
 
     accentColor: '#06B6D4', // Cyan médical
 
@@ -454,8 +519,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Avocat',
     labelPlural: 'Avocats',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/audit-seo.png',
+    heroImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?w=800&h=600&fit=crop',
 
     accentColor: '#1E3A5F', // Bleu juridique
 
@@ -518,8 +583,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Entreprise de rénovation',
     labelPlural: 'Entreprises de rénovation',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/creation-site.png',
+    heroImage: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=600&fit=crop',
 
     accentColor: '#D97706', // Orange BTP
 
@@ -585,8 +650,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Boutique de vêtements',
     labelPlural: 'Boutiques de vêtements',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/croissance-seo.png',
+    heroImage: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&h=600&fit=crop',
 
     accentColor: '#8B5CF6', // Violet mode
 
@@ -649,8 +714,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Restaurant',
     labelPlural: 'Restaurants',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/seo-dashboard.png',
+    heroImage: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop',
 
     accentColor: '#D97706', // Orange chaleureux
 
@@ -715,8 +780,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Boulangerie',
     labelPlural: 'Boulangeries',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/seo-dashboard.png',
+    heroImage: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1568254183919-78a4f43a2877?w=800&h=600&fit=crop',
 
     accentColor: '#92400E', // Brun pain
 
@@ -780,8 +845,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Traiteur',
     labelPlural: 'Traiteurs',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/seo-dashboard.png',
+    heroImage: 'https://images.unsplash.com/photo-1555244162-803834f70033?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&h=600&fit=crop',
 
     accentColor: '#7C3AED', // Violet événementiel
 
@@ -845,8 +910,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Ostéopathe',
     labelPlural: 'Ostéopathes',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/nice-data-flow.png',
+    heroImage: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&h=600&fit=crop',
 
     accentColor: '#059669', // Vert santé
 
@@ -910,8 +975,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Kinésithérapeute',
     labelPlural: 'Kinésithérapeutes',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/nice-data-flow.png',
+    heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop',
 
     accentColor: '#0891B2', // Bleu médical
 
@@ -975,8 +1040,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Psychologue',
     labelPlural: 'Psychologues',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/nice-data-flow.png',
+    heroImage: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=800&h=600&fit=crop',
 
     accentColor: '#7C3AED', // Violet apaisant
 
@@ -1040,8 +1105,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Peintre en bâtiment',
     labelPlural: 'Peintres en bâtiment',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/creation-site.png',
+    heroImage: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop',
 
     accentColor: '#EA580C', // Orange BTP
 
@@ -1105,8 +1170,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Carreleur',
     labelPlural: 'Carreleurs',
 
-    heroImage: '/images/nice-seo-hero.png',
-    mockupImage: '/images/creation-site.png',
+    heroImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop',
 
     accentColor: '#64748B', // Gris carrelage
 
