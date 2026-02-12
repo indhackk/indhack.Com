@@ -1040,8 +1040,8 @@ export const metiersData: Record<string, MetierData> = {
     label: 'Psychologue',
     labelPlural: 'Psychologues',
 
-    heroImage: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&h=800&fit=crop',
-    mockupImage: 'https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=800&h=600&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1200&h=800&fit=crop',
+    mockupImage: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=600&fit=crop',
 
     accentColor: '#7C3AED', // Violet apaisant
 

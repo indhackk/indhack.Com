@@ -6,10 +6,124 @@ import Image from 'next/image'
 import type { MetierData } from '@/lib/diagnostic-data'
 
 // ══════════════════════════════════════════════════════════════════════════════
-// PAGE DIAGNOSTIC DYNAMIQUE - Même template que Coiffeur
+// PAGE DIAGNOSTIC DYNAMIQUE - Couleurs adaptees par categorie
 // ══════════════════════════════════════════════════════════════════════════════
 
-// Hooks personnalisés par métier
+// Schemas de couleurs par CATEGORIE
+interface ColorScheme {
+  bg: string           // Fond principal
+  bgAlt: string        // Fond alternatif
+  bgCard: string       // Fond des cartes
+  accent: string       // Couleur d'accent principale
+  accentLight: string  // Accent clair (badges, highlights)
+  accentDark: string   // Accent fonce (CTA)
+  text: string         // Texte principal
+  textMuted: string    // Texte secondaire
+  textAccent: string   // Texte accent
+}
+
+const CATEGORY_COLORS: Record<string, ColorScheme> = {
+  // RESTAURATION : tons chauds, appetissants
+  RESTAURATION: {
+    bg: '#FFFBF7',
+    bgAlt: '#FFF5EB',
+    bgCard: '#FFFFFF',
+    accent: '#D97706',
+    accentLight: '#FEF3E7',
+    accentDark: '#92400E',
+    text: '#2D2A26',
+    textMuted: '#78716C',
+    textAccent: '#B45309',
+  },
+  // SANTE : tons froids, professionnels, rassurants
+  SANTE: {
+    bg: '#F8FDFC',
+    bgAlt: '#E6F7F5',
+    bgCard: '#FFFFFF',
+    accent: '#0D9488',
+    accentLight: '#CCFBF1',
+    accentDark: '#115E59',
+    text: '#1E3A3A',
+    textMuted: '#5F7A7A',
+    textAccent: '#0F766E',
+  },
+  // ARTISANS : tons terre, solides, fiables
+  ARTISANS: {
+    bg: '#FAFAF9',
+    bgAlt: '#F5F5F4',
+    bgCard: '#FFFFFF',
+    accent: '#EA580C',
+    accentLight: '#FED7AA',
+    accentDark: '#9A3412',
+    text: '#1C1917',
+    textMuted: '#78716C',
+    textAccent: '#C2410C',
+  },
+  // BEAUTE : tons roses/dores, elegants
+  BEAUTE: {
+    bg: '#FDFCFB',
+    bgAlt: '#F5F0EB',
+    bgCard: '#FFFFFF',
+    accent: '#D4A574',
+    accentLight: '#FEF3E7',
+    accentDark: '#8B7355',
+    text: '#2D2A26',
+    textMuted: '#5C5650',
+    textAccent: '#8B7355',
+  },
+}
+
+// Mapping metier -> categorie
+const METIER_CATEGORY: Record<string, string> = {
+  // BEAUTE
+  coiffeur: 'BEAUTE',
+  barbier: 'BEAUTE',
+  'prothesiste-ongulaire': 'BEAUTE',
+  boutique: 'BEAUTE',
+  estheticienne: 'BEAUTE',
+  spa: 'BEAUTE',
+
+  // RESTAURATION
+  restaurant: 'RESTAURATION',
+  boulangerie: 'RESTAURATION',
+  patisserie: 'RESTAURATION',
+  traiteur: 'RESTAURATION',
+  pizzeria: 'RESTAURATION',
+  cafe: 'RESTAURATION',
+  bar: 'RESTAURATION',
+  glacier: 'RESTAURATION',
+
+  // SANTE
+  osteopathe: 'SANTE',
+  kinesitherapeute: 'SANTE',
+  psychologue: 'SANTE',
+  dentiste: 'SANTE',
+  medecin: 'SANTE',
+  infirmier: 'SANTE',
+  avocat: 'SANTE', // Pro, serieux
+  notaire: 'SANTE',
+
+  // ARTISANS
+  peintre: 'ARTISANS',
+  carreleur: 'ARTISANS',
+  plombier: 'ARTISANS',
+  electricien: 'ARTISANS',
+  serrurier: 'ARTISANS',
+  renovation: 'ARTISANS',
+  maconnerie: 'ARTISANS',
+  menuisier: 'ARTISANS',
+  couvreur: 'ARTISANS',
+  chauffagiste: 'ARTISANS',
+  climatisation: 'ARTISANS',
+  paysagiste: 'ARTISANS',
+}
+
+function getColorScheme(metier: string): ColorScheme {
+  const category = METIER_CATEGORY[metier] || 'BEAUTE'
+  return CATEGORY_COLORS[category]
+}
+
+// Hooks personnalises par metier
 const PROFESSION_HOOKS: Record<string, { line1: string; line2: string; line3: string }> = {
   coiffeur: { line1: "Vos clients", line2: "vous adorent.", line3: "Google ne le sait pas." },
   barbier: { line1: "Vos clients", line2: "reviennent chaque mois.", line3: "Google ne le sait pas." },
@@ -147,13 +261,16 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
   const note = searchParams.get('note') || '4.6'
   const avis = searchParams.get('avis') || '155'
 
-  // Récupérer les données personnalisées
+  // COULEURS DYNAMIQUES par categorie
+  const colors = getColorScheme(metier)
+
+  // Recuperer les donnees personnalisees
   const hooks = PROFESSION_HOOKS[metier] || { line1: "Vos clients", line2: "vous font confiance.", line3: "Google ne le sait pas." }
-  const heroKeywords = HERO_KEYWORDS[metier] || ['votre service', 'votre activité', 'votre expertise']
+  const heroKeywords = HERO_KEYWORDS[metier] || ['votre service', 'votre activite', 'votre expertise']
   const mockupTabs = MOCKUP_TABS[metier] || ['Accueil', 'Services', 'Tarifs', 'Contact']
   const mockupTagline = MOCKUP_TAGLINES[metier] || "L'excellence au service de nos clients"
 
-  // Calculer les volumes adaptés à la ville
+  // Calculer les volumes adaptes a la ville
   const adaptedKeywords = metierData.keywords.principal.slice(0, 4).map(kw => ({
     ...kw,
     keyword: kw.keyword.replace(/nice/gi, ville),
@@ -170,7 +287,7 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
   const statsKeywords = [...adaptedKeywords.slice(0, 2), ...nicheKeywords.slice(0, 2)]
 
   return (
-    <main className="min-h-screen bg-[#FDFCFB]">
+    <main className="min-h-screen" style={{ backgroundColor: colors.bg }}>
 
       {/* ════════ HERO - Texte gauche / Image droite ════════ */}
       <section className="min-h-screen grid lg:grid-cols-2">
@@ -179,27 +296,27 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
         <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-16 lg:py-0">
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#F5F0EB] rounded-full px-4 py-2 w-fit mb-8">
-            <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
-            <span className="text-[#8B7355] text-sm font-medium">Analyse pour {nom}</span>
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 w-fit mb-8" style={{ backgroundColor: colors.accentLight }}>
+            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: colors.accent }}></span>
+            <span className="text-sm font-medium" style={{ color: colors.textAccent }}>Analyse pour {nom}</span>
           </div>
 
           {/* Titre */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-[#2D2A26] leading-[1.1] mb-8">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1] mb-8" style={{ color: colors.text }}>
             {hooks.line1}<br />
             {hooks.line2}<br />
-            <span className="font-semibold text-[#8B7355]">{hooks.line3}</span>
+            <span className="font-semibold" style={{ color: colors.accent }}>{hooks.line3}</span>
           </h1>
 
           {/* Texte */}
-          <div className="space-y-6 text-[#5C5650] text-lg leading-relaxed mb-10 max-w-lg">
+          <div className="space-y-6 text-lg leading-relaxed mb-10 max-w-lg" style={{ color: colors.textMuted }}>
             <p>
-              <strong className="text-[#2D2A26]">{note} étoiles</strong> et <strong className="text-[#2D2A26]">{avis} avis</strong> sur votre fiche Google.
+              <strong style={{ color: colors.text }}>{note} etoiles</strong> et <strong style={{ color: colors.text }}>{avis} avis</strong> sur votre fiche Google.
               C'est la preuve que vous faites du bon travail.
             </p>
             <p>
-              Le problème ? Quand un internaute cherche <strong className="text-[#2D2A26]">"{heroKeywords[0]} {ville}"</strong>,
-              <strong className="text-[#2D2A26]"> "{heroKeywords[1]} {ville}"</strong> ou <strong className="text-[#2D2A26]">"{heroKeywords[2]} {ville}"</strong> sur Google,
+              Le probleme ? Quand un internaute cherche <strong style={{ color: colors.text }}>"{heroKeywords[0]} {ville}"</strong>,
+              <strong style={{ color: colors.text }}> "{heroKeywords[1]} {ville}"</strong> ou <strong style={{ color: colors.text }}>"{heroKeywords[2]} {ville}"</strong> sur Google,
               il ne tombe pas sur vous.
             </p>
             <p>
@@ -208,7 +325,7 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
           </div>
 
           {/* Stats */}
-          <div className="flex items-center gap-8 text-sm text-[#8B7355]">
+          <div className="flex items-center gap-8 text-sm" style={{ color: colors.textAccent }}>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
@@ -236,18 +353,19 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
             priority
             unoptimized={metierData.heroImage.startsWith('http')}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:bg-gradient-to-r lg:from-[#FDFCFB] lg:via-transparent lg:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:hidden"></div>
+          <div className="absolute inset-0 hidden lg:block" style={{ background: `linear-gradient(to right, ${colors.bg}, transparent, transparent)` }}></div>
         </div>
 
       </section>
 
       {/* ════════ LE CONSTAT EN CHIFFRES ════════ */}
-      <section className="py-24 px-8 md:px-16 bg-white">
+      <section className="py-24 px-8 md:px-16" style={{ backgroundColor: colors.bgCard }}>
         <div className="max-w-4xl mx-auto">
 
           <div className="text-center mb-16">
-            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Chaque mois à {ville}</p>
-            <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
+            <p className="text-sm font-medium uppercase tracking-wider mb-4" style={{ color: colors.textAccent }}>Chaque mois a {ville}</p>
+            <h2 className="text-3xl md:text-4xl font-light" style={{ color: colors.text }}>
               Des clients cherchent un {metierData.label.toLowerCase()}.<br />
               <span className="font-semibold">Ils ne vous trouvent pas.</span>
             </h2>
@@ -256,23 +374,23 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
           {/* Grille de stats */}
           <div className="grid md:grid-cols-4 gap-4 mb-16">
             {statsKeywords.map((kw) => (
-              <div key={kw.keyword} className="bg-[#FDFCFB] rounded-2xl p-6 text-center">
-                <p className="text-4xl font-light text-[#2D2A26] mb-2">{kw.volume}</p>
-                <p className="text-[#8B7355] text-sm">recherches <strong>"{kw.keyword}"</strong></p>
+              <div key={kw.keyword} className="rounded-2xl p-6 text-center" style={{ backgroundColor: colors.bg }}>
+                <p className="text-4xl font-light mb-2" style={{ color: colors.text }}>{kw.volume}</p>
+                <p className="text-sm" style={{ color: colors.textAccent }}>recherches <strong>"{kw.keyword}"</strong></p>
               </div>
             ))}
           </div>
 
-          <p className="text-center text-[#5C5650] text-lg max-w-2xl mx-auto">
-            Ces chiffres sont réels. Ce sont des internautes qui tapent ces mots dans Google,
-            prêts à vous contacter. <strong className="text-[#2D2A26]">Sans site internet, vous êtes invisible pour eux.</strong>
+          <p className="text-center text-lg max-w-2xl mx-auto" style={{ color: colors.textMuted }}>
+            Ces chiffres sont reels. Ce sont des internautes qui tapent ces mots dans Google,
+            prets a vous contacter. <strong style={{ color: colors.text }}>Sans site internet, vous etes invisible pour eux.</strong>
           </p>
 
-          <div className="mt-12 bg-[#FEF3E7] rounded-2xl p-6 text-center">
-            <p className="text-[#8B7355] font-medium">
+          <div className="mt-12 rounded-2xl p-6 text-center" style={{ backgroundColor: colors.accentLight }}>
+            <p className="font-medium" style={{ color: colors.textAccent }}>
               Chaque jour sans site, ce sont des clients potentiels qui vont chez vos concurrents.
               <br />
-              <span className="text-[#2D2A26]">Pas parce qu'ils sont meilleurs - mais parce qu'ils sont visibles.</span>
+              <span style={{ color: colors.text }}>Pas parce qu'ils sont meilleurs - mais parce qu'ils sont visibles.</span>
             </p>
           </div>
 
@@ -280,12 +398,12 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
       </section>
 
       {/* ════════ POURQUOI UN SITE ════════ */}
-      <section className="py-24 px-8 md:px-16">
+      <section className="py-24 px-8 md:px-16" style={{ backgroundColor: colors.bg }}>
         <div className="max-w-5xl mx-auto">
 
           <div className="text-center mb-16">
-            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Pourquoi c'est important</p>
-            <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
+            <p className="text-sm font-medium uppercase tracking-wider mb-4" style={{ color: colors.textAccent }}>Pourquoi c'est important</p>
+            <h2 className="text-3xl md:text-4xl font-light" style={{ color: colors.text }}>
               Un site internet, c'est votre<br />
               <span className="font-semibold">vitrine ouverte 24h/24</span>
             </h2>
@@ -294,67 +412,67 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
           <div className="grid md:grid-cols-2 gap-8">
 
             {/* Carte 1 */}
-            <div className="bg-white rounded-3xl p-10 shadow-sm">
-              <div className="w-16 h-16 bg-[#FEF3E7] rounded-2xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-[#D4A574]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="rounded-3xl p-10 shadow-sm" style={{ backgroundColor: colors.bgCard }}>
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6" style={{ backgroundColor: colors.accentLight }}>
+                <svg className="w-8 h-8" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-[#2D2A26] mb-4">
-                Être trouvé sur Google
+              <h3 className="text-xl font-semibold mb-4" style={{ color: colors.text }}>
+                Etre trouve sur Google
               </h3>
-              <p className="text-[#5C5650] leading-relaxed">
-                Quand un internaute cherche <strong className="text-[#2D2A26]">"{heroKeywords[0]} {ville}"</strong> ou
-                <strong className="text-[#2D2A26]"> "{heroKeywords[1]} {ville}"</strong>,
-                un site web vous permet d'apparaître dans les résultats.
+              <p className="leading-relaxed" style={{ color: colors.textMuted }}>
+                Quand un internaute cherche <strong style={{ color: colors.text }}>"{heroKeywords[0]} {ville}"</strong> ou
+                <strong style={{ color: colors.text }}> "{heroKeywords[1]} {ville}"</strong>,
+                un site web vous permet d'apparaitre dans les resultats.
               </p>
             </div>
 
             {/* Carte 2 */}
-            <div className="bg-white rounded-3xl p-10 shadow-sm">
-              <div className="w-16 h-16 bg-[#E8F5F0] rounded-2xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-[#6B9B8A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="rounded-3xl p-10 shadow-sm" style={{ backgroundColor: colors.bgCard }}>
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6" style={{ backgroundColor: colors.accentLight }}>
+                <svg className="w-8 h-8" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-[#2D2A26] mb-4">
+              <h3 className="text-xl font-semibold mb-4" style={{ color: colors.text }}>
                 Inspirer confiance
               </h3>
-              <p className="text-[#5C5650] leading-relaxed">
-                Un internaute découvre votre travail et veut en savoir plus.
-                Un site pro avec vos <strong className="text-[#2D2A26]">photos, tarifs et avis</strong> rassure et incite à vous contacter.
+              <p className="leading-relaxed" style={{ color: colors.textMuted }}>
+                Un internaute decouvre votre travail et veut en savoir plus.
+                Un site pro avec vos <strong style={{ color: colors.text }}>photos, tarifs et avis</strong> rassure et incite a vous contacter.
               </p>
             </div>
 
             {/* Carte 3 */}
-            <div className="bg-white rounded-3xl p-10 shadow-sm">
-              <div className="w-16 h-16 bg-[#F0E8F5] rounded-2xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-[#9B6BA3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="rounded-3xl p-10 shadow-sm" style={{ backgroundColor: colors.bgCard }}>
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6" style={{ backgroundColor: colors.accentLight }}>
+                <svg className="w-8 h-8" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-[#2D2A26] mb-4">
+              <h3 className="text-xl font-semibold mb-4" style={{ color: colors.text }}>
                 Travailler pour vous H24
               </h3>
-              <p className="text-[#5C5650] leading-relaxed">
-                Votre site attire des visiteurs même quand vous dormez.
-                Le dimanche soir, un internaute peut vous découvrir et
-                <strong className="text-[#2D2A26]"> vous contacter pour la semaine</strong>.
+              <p className="leading-relaxed" style={{ color: colors.textMuted }}>
+                Votre site attire des visiteurs meme quand vous dormez.
+                Le dimanche soir, un internaute peut vous decouvrir et
+                <strong style={{ color: colors.text }}> vous contacter pour la semaine</strong>.
               </p>
             </div>
 
             {/* Carte 4 */}
-            <div className="bg-white rounded-3xl p-10 shadow-sm">
-              <div className="w-16 h-16 bg-[#E7F0FE] rounded-2xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-[#5B7FC3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="rounded-3xl p-10 shadow-sm" style={{ backgroundColor: colors.bgCard }}>
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6" style={{ backgroundColor: colors.accentLight }}>
+                <svg className="w-8 h-8" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-[#2D2A26] mb-4">
-                Posséder votre espace
+              <h3 className="text-xl font-semibold mb-4" style={{ color: colors.text }}>
+                Posseder votre espace
               </h3>
-              <p className="text-[#5C5650] leading-relaxed">
-                Instagram peut changer ses règles demain. Votre site, c'est <strong className="text-[#2D2A26]">votre propriété</strong>.
+              <p className="leading-relaxed" style={{ color: colors.textMuted }}>
+                Instagram peut changer ses regles demain. Votre site, c'est <strong style={{ color: colors.text }}>votre propriete</strong>.
                 Personne ne peut vous l'enlever ou vous faire payer des commissions.
               </p>
             </div>
@@ -364,20 +482,20 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
         </div>
       </section>
 
-      {/* ════════ APERÇU DU SITE ════════ */}
-      <section className="py-24 px-8 md:px-16 bg-[#F5F0EB]">
+      {/* ════════ APERCU DU SITE ════════ */}
+      <section className="py-24 px-8 md:px-16" style={{ backgroundColor: colors.bgAlt }}>
         <div className="max-w-5xl mx-auto">
 
           <div className="text-center mb-12">
-            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Ce que vous aurez</p>
-            <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
+            <p className="text-sm font-medium uppercase tracking-wider mb-4" style={{ color: colors.textAccent }}>Ce que vous aurez</p>
+            <h2 className="text-3xl md:text-4xl font-light" style={{ color: colors.text }}>
               Un site professionnel<br />
               <span className="font-semibold">qui travaille pour vous</span>
             </h2>
           </div>
 
           {/* Mockup navigateur ameliore */}
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+          <div className="rounded-2xl shadow-2xl overflow-hidden border border-gray-200" style={{ backgroundColor: colors.bgCard }}>
 
             {/* Barre navigateur */}
             <div className="bg-gradient-to-b from-[#F8F8F8] to-[#EFEFEF] px-4 py-3 flex items-center gap-3 border-b border-gray-200">
@@ -392,42 +510,42 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
             </div>
 
             {/* Site simule - structure realiste */}
-            <div className="bg-white">
+            <div style={{ backgroundColor: colors.bgCard }}>
 
               {/* Header du site fictif */}
               <div className="border-b border-gray-100 px-6 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-[#2D2A26] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: colors.accentDark }}>
                     <span className="text-white font-bold text-sm">{nom.charAt(0)}</span>
                   </div>
-                  <span className="font-semibold text-[#2D2A26]">{nom}</span>
+                  <span className="font-semibold" style={{ color: colors.text }}>{nom}</span>
                 </div>
                 <div className="hidden md:flex items-center gap-6 text-sm text-gray-600">
                   {mockupTabs.slice(0, 3).map((tab) => (
-                    <span key={tab} className="hover:text-[#2D2A26] cursor-pointer">{tab}</span>
+                    <span key={tab} className="cursor-pointer" style={{ color: colors.textMuted }}>{tab}</span>
                   ))}
-                  <span className="bg-[#2D2A26] text-white px-4 py-2 rounded-lg font-medium text-sm">{mockupTabs[3] || 'Contact'}</span>
+                  <span className="text-white px-4 py-2 rounded-lg font-medium text-sm" style={{ backgroundColor: colors.accentDark }}>{mockupTabs[3] || 'Contact'}</span>
                 </div>
               </div>
 
               {/* Hero du site fictif */}
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="p-8 md:p-12 flex flex-col justify-center">
-                  <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-medium w-fit mb-4">
-                    <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium w-fit mb-4" style={{ backgroundColor: colors.accentLight, color: colors.accentDark }}>
+                    <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: colors.accent }}></span>
                     Ouvert aujourd'hui
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#2D2A26] mb-4 leading-tight">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight" style={{ color: colors.text }}>
                     {mockupTagline}
                   </h3>
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                  <p className="mb-6 text-sm leading-relaxed" style={{ color: colors.textMuted }}>
                     {metierData.label} a {ville}. {note} etoiles sur Google avec {avis} avis clients.
                   </p>
                   <div className="flex flex-wrap gap-3">
-                    <span className="bg-[#2D2A26] text-white px-5 py-2.5 rounded-lg font-medium text-sm">
+                    <span className="text-white px-5 py-2.5 rounded-lg font-medium text-sm" style={{ backgroundColor: colors.accentDark }}>
                       {mockupTabs.includes('Reserver') || mockupTabs.includes('Prendre RDV') ? 'Reserver en ligne' : 'Demander un devis'}
                     </span>
-                    <span className="border border-gray-300 text-gray-700 px-5 py-2.5 rounded-lg font-medium text-sm">
+                    <span className="border px-5 py-2.5 rounded-lg font-medium text-sm" style={{ borderColor: colors.textMuted, color: colors.textMuted }}>
                       06 XX XX XX XX
                     </span>
                   </div>
@@ -444,21 +562,21 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
               </div>
 
               {/* Section services du site fictif */}
-              <div className="border-t border-gray-100 p-6 md:p-8 bg-gray-50">
+              <div className="border-t border-gray-100 p-6 md:p-8" style={{ backgroundColor: colors.bgAlt }}>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {metierData.services.slice(0, 4).map((service, i) => (
-                    <div key={service} className="bg-white p-4 rounded-xl text-center shadow-sm">
-                      <div className="w-10 h-10 bg-[#F5F0EB] rounded-lg mx-auto mb-3 flex items-center justify-center">
-                        <span className="text-[#8B7355] font-semibold text-sm">{i + 1}</span>
+                    <div key={service} className="p-4 rounded-xl text-center shadow-sm" style={{ backgroundColor: colors.bgCard }}>
+                      <div className="w-10 h-10 rounded-lg mx-auto mb-3 flex items-center justify-center" style={{ backgroundColor: colors.accentLight }}>
+                        <span className="font-semibold text-sm" style={{ color: colors.textAccent }}>{i + 1}</span>
                       </div>
-                      <span className="text-sm text-[#2D2A26] font-medium">{service}</span>
+                      <span className="text-sm font-medium" style={{ color: colors.text }}>{service}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Footer du site fictif */}
-              <div className="border-t border-gray-100 px-6 py-4 flex items-center justify-between text-xs text-gray-400">
+              <div className="border-t border-gray-100 px-6 py-4 flex items-center justify-between text-xs" style={{ color: colors.textMuted }}>
                 <span>{nom} - {ville}</span>
                 <div className="flex items-center gap-4">
                   <span>Mentions legales</span>
@@ -472,32 +590,32 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
 
           {/* Points cles sous le mockup */}
           <div className="mt-10 grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-xl p-5 shadow-sm">
-              <div className="w-10 h-10 bg-[#E8F5F0] rounded-lg flex items-center justify-center mb-3">
-                <svg className="w-5 h-5 text-[#059669]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="rounded-xl p-5 shadow-sm" style={{ backgroundColor: colors.bgCard }}>
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{ backgroundColor: colors.accentLight }}>
+                <svg className="w-5 h-5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                 </svg>
               </div>
-              <h4 className="font-semibold text-[#2D2A26] mb-1">Adapte mobile</h4>
-              <p className="text-sm text-gray-600">60% des recherches se font sur telephone</p>
+              <h4 className="font-semibold mb-1" style={{ color: colors.text }}>Adapte mobile</h4>
+              <p className="text-sm" style={{ color: colors.textMuted }}>60% des recherches se font sur telephone</p>
             </div>
-            <div className="bg-white rounded-xl p-5 shadow-sm">
-              <div className="w-10 h-10 bg-[#FEF3E7] rounded-lg flex items-center justify-center mb-3">
-                <svg className="w-5 h-5 text-[#D97706]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="rounded-xl p-5 shadow-sm" style={{ backgroundColor: colors.bgCard }}>
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{ backgroundColor: colors.accentLight }}>
+                <svg className="w-5 h-5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
                 </svg>
               </div>
-              <h4 className="font-semibold text-[#2D2A26] mb-1">Ultra rapide</h4>
-              <p className="text-sm text-gray-600">Chargement en moins de 2 secondes</p>
+              <h4 className="font-semibold mb-1" style={{ color: colors.text }}>Ultra rapide</h4>
+              <p className="text-sm" style={{ color: colors.textMuted }}>Chargement en moins de 2 secondes</p>
             </div>
-            <div className="bg-white rounded-xl p-5 shadow-sm">
-              <div className="w-10 h-10 bg-[#F0E8F5] rounded-lg flex items-center justify-center mb-3">
-                <svg className="w-5 h-5 text-[#7C3AED]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="rounded-xl p-5 shadow-sm" style={{ backgroundColor: colors.bgCard }}>
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{ backgroundColor: colors.accentLight }}>
+                <svg className="w-5 h-5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
                 </svg>
               </div>
-              <h4 className="font-semibold text-[#2D2A26] mb-1">Modifiable</h4>
-              <p className="text-sm text-gray-600">Vous pouvez modifier vos infos facilement</p>
+              <h4 className="font-semibold mb-1" style={{ color: colors.text }}>Modifiable</h4>
+              <p className="text-sm" style={{ color: colors.textMuted }}>Vous pouvez modifier vos infos facilement</p>
             </div>
           </div>
 
@@ -505,39 +623,39 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
       </section>
 
       {/* ════════ COMMENT ÇA MARCHE - PÉDAGOGIE SEO ════════ */}
-      <section className="py-24 px-8 md:px-16 bg-white">
+      <section className="py-24 px-8 md:px-16" style={{ backgroundColor: colors.bgCard }}>
         <div className="max-w-4xl mx-auto">
 
           <div className="text-center mb-16">
-            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">La stratégie</p>
-            <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
+            <p className="text-sm font-medium uppercase tracking-wider mb-4" style={{ color: colors.textAccent }}>La strategie</p>
+            <h2 className="text-3xl md:text-4xl font-light" style={{ color: colors.text }}>
               Comment on vous rend<br />
               <span className="font-semibold">visible sur Google ?</span>
             </h2>
           </div>
 
           {/* Explication pédagogique */}
-          <div className="bg-[#F5F0EB] rounded-3xl p-8 md:p-12 mb-12">
-            <h3 className="text-xl font-semibold text-[#2D2A26] mb-6">Le principe est simple :</h3>
-            <div className="space-y-4 text-[#5C5650] leading-relaxed">
+          <div className="rounded-3xl p-8 md:p-12 mb-12" style={{ backgroundColor: colors.bgAlt }}>
+            <h3 className="text-xl font-semibold mb-6" style={{ color: colors.text }}>Le principe est simple :</h3>
+            <div className="space-y-4 leading-relaxed" style={{ color: colors.textMuted }}>
               <p>
-                <strong className="text-[#2D2A26]">1 mot-clé = 1 page dédiée sur votre site.</strong>
+                <strong style={{ color: colors.text }}>1 mot-cle = 1 page dediee sur votre site.</strong>
               </p>
               <p>
-                Quand un internaute tape <strong className="text-[#2D2A26]">"{heroKeywords[0]} {ville}"</strong> dans Google,
-                on veut que Google affiche <strong className="text-[#2D2A26]">votre page</strong> qui parle spécifiquement
+                Quand un internaute tape <strong style={{ color: colors.text }}>"{heroKeywords[0]} {ville}"</strong> dans Google,
+                on veut que Google affiche <strong style={{ color: colors.text }}>votre page</strong> qui parle specifiquement
                 de ce service.
               </p>
               <p>
-                Plus vous avez de pages qui répondent aux recherches des gens,
-                plus vous avez de chances d'apparaître. C'est mathématique.
+                Plus vous avez de pages qui repondent aux recherches des gens,
+                plus vous avez de chances d'apparaitre. C'est mathematique.
               </p>
             </div>
           </div>
 
           {/* Exemple concret */}
           <div className="mb-12">
-            <h3 className="text-lg font-semibold text-[#2D2A26] mb-6 text-center">Exemple concret pour {nom} :</h3>
+            <h3 className="text-lg font-semibold mb-6 text-center" style={{ color: colors.text }}>Exemple concret pour {nom} :</h3>
             <div className="grid md:grid-cols-2 gap-4">
               {metierData.ghostPageExamples.slice(0, 4).map((page) => {
                 const adaptedPage = page.replace(/Nice/gi, ville)
@@ -546,15 +664,15 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
                 const volume = matchingKw ? estimateVolumeForCity(matchingKw.volume, ville) : 100
 
                 return (
-                  <div key={page} className="bg-[#FDFCFB] rounded-2xl p-5 flex items-center gap-4">
-                    <div className="w-10 h-10 bg-[#D4A574] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div key={page} className="rounded-2xl p-5 flex items-center gap-4" style={{ backgroundColor: colors.bg }}>
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: colors.accent }}>
                       <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                       </svg>
                     </div>
                     <div>
-                      <p className="font-medium text-[#2D2A26]">Page "{adaptedPage}"</p>
-                      <p className="text-sm text-[#8B7355]">→ cible {volume} recherches/mois</p>
+                      <p className="font-medium" style={{ color: colors.text }}>Page "{adaptedPage}"</p>
+                      <p className="text-sm" style={{ color: colors.textAccent }}>→ cible {volume} recherches/mois</p>
                     </div>
                   </div>
                 )
@@ -563,9 +681,9 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
           </div>
 
           <div className="text-center">
-            <p className="text-[#5C5650] text-lg max-w-2xl mx-auto">
-              Le tarif SEO dépend du <strong className="text-[#2D2A26]">nombre de mots-clés</strong> que vous souhaitez cibler.
-              Plus on crée de pages, plus on capte de recherches.
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: colors.textMuted }}>
+              Le tarif SEO depend du <strong style={{ color: colors.text }}>nombre de mots-cles</strong> que vous souhaitez cibler.
+              Plus on cree de pages, plus on capte de recherches.
             </p>
           </div>
 
@@ -573,67 +691,67 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
       </section>
 
       {/* ════════ CE QUE JE FAIS POUR VOUS ════════ */}
-      <section className="py-24 px-8 md:px-16 bg-[#FDFCFB]">
+      <section className="py-24 px-8 md:px-16" style={{ backgroundColor: colors.bg }}>
         <div className="max-w-4xl mx-auto">
 
           <div className="text-center mb-16">
-            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Mon accompagnement</p>
-            <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
+            <p className="text-sm font-medium uppercase tracking-wider mb-4" style={{ color: colors.textAccent }}>Mon accompagnement</p>
+            <h2 className="text-3xl md:text-4xl font-light" style={{ color: colors.text }}>
               Je m'occupe de tout.<br />
-              <span className="font-semibold">Vous vous concentrez sur votre métier.</span>
+              <span className="font-semibold">Vous vous concentrez sur votre metier.</span>
             </h2>
           </div>
 
           <div className="space-y-6">
 
-            <div className="flex items-start gap-6 p-6 bg-[#FDFCFB] rounded-2xl">
-              <div className="w-12 h-12 bg-[#D4A574] rounded-xl flex items-center justify-center flex-shrink-0">
+            <div className="flex items-start gap-6 p-6 rounded-2xl" style={{ backgroundColor: colors.bgCard }}>
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: colors.accent }}>
                 <span className="text-white font-semibold">1</span>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-[#2D2A26] mb-2">Je crée votre site sur-mesure</h3>
-                <p className="text-[#5C5650]">
-                  Un site <strong className="text-[#2D2A26]">rapide et élégant</strong>, avec vos photos,
-                  vos services, vos tarifs. Prêt à l'emploi, vous n'avez rien à faire.
+                <h3 className="text-lg font-semibold mb-2" style={{ color: colors.text }}>Je cree votre site sur-mesure</h3>
+                <p style={{ color: colors.textMuted }}>
+                  Un site <strong style={{ color: colors.text }}>rapide et elegant</strong>, avec vos photos,
+                  vos services, vos tarifs. Pret a l'emploi, vous n'avez rien a faire.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-6 p-6 bg-[#FDFCFB] rounded-2xl">
-              <div className="w-12 h-12 bg-[#D4A574] rounded-xl flex items-center justify-center flex-shrink-0">
+            <div className="flex items-start gap-6 p-6 rounded-2xl" style={{ backgroundColor: colors.bgCard }}>
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: colors.accent }}>
                 <span className="text-white font-semibold">2</span>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-[#2D2A26] mb-2">Je vous rends visible sur Google</h3>
-                <p className="text-[#5C5650]">
+                <h3 className="text-lg font-semibold mb-2" style={{ color: colors.text }}>Je vous rends visible sur Google</h3>
+                <p style={{ color: colors.textMuted }}>
                   J'optimise votre site pour que vous apparaissiez quand quelqu'un cherche
-                  <strong className="text-[#2D2A26]"> "{heroKeywords[0]} {ville}"</strong>, <strong className="text-[#2D2A26]">"{heroKeywords[1]} {ville}"</strong>, etc.
+                  <strong style={{ color: colors.text }}> "{heroKeywords[0]} {ville}"</strong>, <strong style={{ color: colors.text }}>"{heroKeywords[1]} {ville}"</strong>, etc.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-6 p-6 bg-[#FDFCFB] rounded-2xl">
-              <div className="w-12 h-12 bg-[#D4A574] rounded-xl flex items-center justify-center flex-shrink-0">
+            <div className="flex items-start gap-6 p-6 rounded-2xl" style={{ backgroundColor: colors.bgCard }}>
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: colors.accent }}>
                 <span className="text-white font-semibold">3</span>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-[#2D2A26] mb-2">J'optimise votre fiche Google</h3>
-                <p className="text-[#5C5650]">
-                  Votre fiche avec <strong className="text-[#2D2A26]">{note}★ et {avis} avis</strong> est un atout.
-                  Je l'optimise pour qu'elle ressorte encore mieux dans les résultats.
+                <h3 className="text-lg font-semibold mb-2" style={{ color: colors.text }}>J'optimise votre fiche Google</h3>
+                <p style={{ color: colors.textMuted }}>
+                  Votre fiche avec <strong style={{ color: colors.text }}>{note} et {avis} avis</strong> est un atout.
+                  Je l'optimise pour qu'elle ressorte encore mieux dans les resultats.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-6 p-6 bg-[#FDFCFB] rounded-2xl">
-              <div className="w-12 h-12 bg-[#D4A574] rounded-xl flex items-center justify-center flex-shrink-0">
+            <div className="flex items-start gap-6 p-6 rounded-2xl" style={{ backgroundColor: colors.bgCard }}>
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: colors.accent }}>
                 <span className="text-white font-semibold">4</span>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-[#2D2A26] mb-2">Le site est à vous</h3>
-                <p className="text-[#5C5650]">
-                  Contrairement aux solutions où vous louez votre site, ici <strong className="text-[#2D2A26]">vous êtes propriétaire</strong>.
-                  Si on arrête de travailler ensemble, vous gardez tout.
+                <h3 className="text-lg font-semibold mb-2" style={{ color: colors.text }}>Le site est a vous</h3>
+                <p style={{ color: colors.textMuted }}>
+                  Contrairement aux solutions ou vous louez votre site, ici <strong style={{ color: colors.text }}>vous etes proprietaire</strong>.
+                  Si on arrete de travailler ensemble, vous gardez tout.
                 </p>
               </div>
             </div>
@@ -644,35 +762,35 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
       </section>
 
       {/* ════════ QUI SUIS-JE ════════ */}
-      <section className="py-24 px-8 md:px-16 bg-[#FDFCFB]">
+      <section className="py-24 px-8 md:px-16" style={{ backgroundColor: colors.bgAlt }}>
         <div className="max-w-4xl mx-auto">
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
 
             <div className="order-2 md:order-1">
-              <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Votre interlocutrice</p>
-              <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26] mb-6">
+              <p className="text-sm font-medium uppercase tracking-wider mb-4" style={{ color: colors.textAccent }}>Votre interlocutrice</p>
+              <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ color: colors.text }}>
                 Indiana Aflalo<br />
                 <span className="font-semibold">Consultante digitale</span>
               </h2>
-              <div className="space-y-4 text-[#5C5650] leading-relaxed">
+              <div className="space-y-4 leading-relaxed" style={{ color: colors.textMuted }}>
                 <p>
-                  Après plusieurs années en agence digitale, j'ai créé ma propre structure pour
-                  accompagner les commerces locaux. <strong className="text-[#2D2A26]">C'est devenu une vraie passion.</strong>
+                  Apres plusieurs annees en agence digitale, j'ai cree ma propre structure pour
+                  accompagner les commerces locaux. <strong style={{ color: colors.text }}>C'est devenu une vraie passion.</strong>
                 </p>
                 <p>
-                  Diplômée d'un <strong className="text-[#2D2A26]">double master en stratégie digitale</strong>,
-                  j'aime voir mes clients gagner en visibilité et décrocher de nouveaux rendez-vous.
+                  Diplomee d'un <strong style={{ color: colors.text }}>double master en strategie digitale</strong>,
+                  j'aime voir mes clients gagner en visibilite et decrocher de nouveaux rendez-vous.
                 </p>
                 <p>
-                  Mon approche : des <strong className="text-[#2D2A26]">explications simples</strong>,
-                  des actions concrètes, et des résultats mesurables.
+                  Mon approche : des <strong style={{ color: colors.text }}>explications simples</strong>,
+                  des actions concretes, et des resultats mesurables.
                 </p>
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
-                <span className="bg-white px-4 py-2 rounded-full text-sm text-[#5C5650] shadow-sm">SEO Local</span>
-                <span className="bg-white px-4 py-2 rounded-full text-sm text-[#5C5650] shadow-sm">Création de sites</span>
-                <span className="bg-white px-4 py-2 rounded-full text-sm text-[#5C5650] shadow-sm">Google Business</span>
+                <span className="px-4 py-2 rounded-full text-sm shadow-sm" style={{ backgroundColor: colors.bgCard, color: colors.textMuted }}>SEO Local</span>
+                <span className="px-4 py-2 rounded-full text-sm shadow-sm" style={{ backgroundColor: colors.bgCard, color: colors.textMuted }}>Creation de sites</span>
+                <span className="px-4 py-2 rounded-full text-sm shadow-sm" style={{ backgroundColor: colors.bgCard, color: colors.textMuted }}>Google Business</span>
               </div>
             </div>
 
@@ -685,16 +803,16 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
                   height={400}
                   className="w-full max-w-xs mx-auto rounded-3xl shadow-xl"
                 />
-                <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-4 shadow-lg">
+                <div className="absolute -bottom-4 -right-4 rounded-2xl p-4 shadow-lg" style={{ backgroundColor: colors.bgCard }}>
                   <div className="flex items-center gap-2">
                     <div className="flex -space-x-1">
-                      <div className="w-6 h-6 bg-[#D4A574] rounded-full flex items-center justify-center">
+                      <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: colors.accent }}>
                         <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                         </svg>
                       </div>
                     </div>
-                    <span className="text-sm text-[#2D2A26] font-medium">Basee dans le 06</span>
+                    <span className="text-sm font-medium" style={{ color: colors.text }}>Basee dans le 06</span>
                   </div>
                 </div>
               </div>
@@ -706,168 +824,168 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
       </section>
 
       {/* ════════ TARIFS ════════ */}
-      <section className="py-24 px-8 md:px-16 bg-white" id="tarifs">
+      <section className="py-24 px-8 md:px-16" style={{ backgroundColor: colors.bgCard }} id="tarifs">
         <div className="max-w-5xl mx-auto">
 
           <div className="text-center mb-16">
-            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Tarifs indicatifs</p>
-            <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
+            <p className="text-sm font-medium uppercase tracking-wider mb-4" style={{ color: colors.textAccent }}>Tarifs indicatifs</p>
+            <h2 className="text-3xl md:text-4xl font-light" style={{ color: colors.text }}>
               Des formules claires,<br />
               <span className="font-semibold">sans surprise</span>
             </h2>
-            <p className="text-[#5C5650] mt-4 max-w-2xl mx-auto">
-              Ces tarifs donnent un ordre d'idée de ce type de travail. On peut affiner ensemble lors d'un échange,
-              selon vos besoins et sur quels mots-clés vous souhaitez être visible.
+            <p className="mt-4 max-w-2xl mx-auto" style={{ color: colors.textMuted }}>
+              Ces tarifs donnent un ordre d'idee de ce type de travail. On peut affiner ensemble lors d'un echange,
+              selon vos besoins et sur quels mots-cles vous souhaitez etre visible.
             </p>
-            <p className="text-[#8B7355] mt-3 max-w-2xl mx-auto text-sm">
+            <p className="mt-3 max-w-2xl mx-auto text-sm" style={{ color: colors.textAccent }}>
               C'est un <strong>investissement qui se renforce avec le temps</strong> : plus votre site vieillit et accumule du contenu,
-              plus Google lui fait confiance. Ce que vous construisez aujourd'hui devient de plus en plus précieux.
+              plus Google lui fait confiance. Ce que vous construisez aujourd'hui devient de plus en plus precieux.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
 
             {/* Formule 1 */}
-            <div className="bg-[#FDFCFB] rounded-3xl p-8">
-              <h3 className="text-xl font-semibold text-[#2D2A26] mb-2">Site Vitrine</h3>
-              <p className="text-[#8B7355] text-sm mb-6">Votre présence en ligne</p>
+            <div className="rounded-3xl p-8" style={{ backgroundColor: colors.bg }}>
+              <h3 className="text-xl font-semibold mb-2" style={{ color: colors.text }}>Site Vitrine</h3>
+              <p className="text-sm mb-6" style={{ color: colors.textAccent }}>Votre presence en ligne</p>
 
               <div className="mb-8">
-                <p className="text-sm text-[#8B7355]">à partir de</p>
-                <p className="text-4xl font-light text-[#2D2A26]">490€</p>
-                <p className="text-sm text-[#8B7355]">paiement unique</p>
+                <p className="text-sm" style={{ color: colors.textAccent }}>a partir de</p>
+                <p className="text-4xl font-light" style={{ color: colors.text }}>490€</p>
+                <p className="text-sm" style={{ color: colors.textAccent }}>paiement unique</p>
               </div>
 
-              <ul className="space-y-3 text-[#5C5650] text-sm">
+              <ul className="space-y-3 text-sm" style={{ color: colors.textMuted }}>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
                   Site 5-7 pages sur-mesure
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Design à votre image
+                  Design a votre image
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Adapté mobile et tablette
+                  Adapte mobile et tablette
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Bouton de réservation
+                  Bouton de reservation
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Vous êtes propriétaire
+                  Vous etes proprietaire
                 </li>
               </ul>
             </div>
 
             {/* Formule 2 - Recommandée */}
-            <div className="bg-[#2D2A26] text-white rounded-3xl p-8 relative">
+            <div className="text-white rounded-3xl p-8 relative" style={{ backgroundColor: colors.accentDark }}>
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <span className="bg-[#D4A574] text-white text-xs font-semibold px-4 py-1.5 rounded-full">
-                  Recommandé
+                <span className="text-white text-xs font-semibold px-4 py-1.5 rounded-full" style={{ backgroundColor: colors.accent }}>
+                  Recommande
                 </span>
               </div>
 
-              <h3 className="text-xl font-semibold mb-2 pt-2">Site + Visibilité</h3>
-              <p className="text-[#A89F94] text-sm mb-6">Être trouvé sur Google</p>
+              <h3 className="text-xl font-semibold mb-2 pt-2">Site + Visibilite</h3>
+              <p className="text-sm mb-6 opacity-70">Etre trouve sur Google</p>
 
               <div className="mb-8">
-                <p className="text-sm text-[#A89F94] mb-1">Tarif site +</p>
-                <p className="text-4xl font-light">150€<span className="text-lg text-[#A89F94]">/mois</span></p>
+                <p className="text-sm opacity-70 mb-1">Tarif site +</p>
+                <p className="text-4xl font-light">150€<span className="text-lg opacity-70">/mois</span></p>
               </div>
 
-              <ul className="space-y-3 text-[#D4D0CB] text-sm">
+              <ul className="space-y-3 text-sm opacity-90">
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
                   Site vitrine sur-mesure
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  1 mot-clé principal + longues traînes
+                  1 mot-cle principal + longues traines
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Contenu validé avant publication
+                  Contenu valide avant publication
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
                   Optimisation fiche Google
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#D4A574] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
                   Rapport mensuel
                 </li>
               </ul>
 
-              <p className="text-xs text-[#A89F94] mt-6">Sans engagement</p>
+              <p className="text-xs mt-6 opacity-70">Sans engagement</p>
             </div>
 
             {/* Formule 3 */}
-            <div className="bg-[#FDFCFB] rounded-3xl p-8">
-              <h3 className="text-xl font-semibold text-[#2D2A26] mb-2">Accompagnement Complet</h3>
-              <p className="text-[#8B7355] text-sm mb-6">Visibilité maximale</p>
+            <div className="rounded-3xl p-8" style={{ backgroundColor: colors.bg }}>
+              <h3 className="text-xl font-semibold mb-2" style={{ color: colors.text }}>Accompagnement Complet</h3>
+              <p className="text-sm mb-6" style={{ color: colors.textAccent }}>Visibilite maximale</p>
 
               <div className="mb-8">
-                <p className="text-sm text-[#8B7355] mb-1">Tarif site +</p>
-                <p className="text-4xl font-light text-[#2D2A26]">250€<span className="text-lg text-[#8B7355]">/mois</span></p>
+                <p className="text-sm mb-1" style={{ color: colors.textAccent }}>Tarif site +</p>
+                <p className="text-4xl font-light" style={{ color: colors.text }}>250€<span className="text-lg" style={{ color: colors.textAccent }}>/mois</span></p>
               </div>
 
-              <ul className="space-y-3 text-[#5C5650] text-sm">
+              <ul className="space-y-3 text-sm" style={{ color: colors.textMuted }}>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Tout Site + Visibilité
+                  Tout Site + Visibilite
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  2-3 mots-clés + longues traînes
+                  2-3 mots-cles + longues traines
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Gestion fiche Google optimisée SEO
+                  Gestion fiche Google optimisee SEO
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Réponses aux avis optimisées SEO
+                  Reponses aux avis optimisees SEO
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#6B9B8A] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: colors.accent }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
                   </svg>
-                  Posts Google avec mots-clés
+                  Posts Google avec mots-cles
                 </li>
               </ul>
 
-              <p className="text-xs text-[#8B7355] mt-6">Sans engagement</p>
+              <p className="text-xs mt-6" style={{ color: colors.textAccent }}>Sans engagement</p>
             </div>
 
           </div>
@@ -876,13 +994,13 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
       </section>
 
       {/* ════════ CTA FINAL ════════ */}
-      <section className="py-24 px-8 md:px-16 bg-[#2D2A26]">
+      <section className="py-24 px-8 md:px-16" style={{ backgroundColor: colors.accentDark }}>
         <div className="max-w-2xl mx-auto text-center">
 
           <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
             On en discute ?
           </h2>
-          <p className="text-[#A89F94] text-lg mb-10">
+          <p className="text-lg mb-10 text-white/70">
             30 minutes pour parler de <span className="text-white">{nom}</span> et voir
             ce qu'on peut faire ensemble. Sans engagement.
           </p>
@@ -891,15 +1009,16 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
             href="https://calendly.com/contact-indhack/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#D4A574] text-white px-8 py-4 rounded-full font-medium hover:bg-[#C49664] transition-colors text-lg"
+            className="inline-flex items-center gap-3 text-white px-8 py-4 rounded-full font-medium hover:opacity-90 transition-opacity text-lg"
+            style={{ backgroundColor: colors.accent }}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
             </svg>
-            Réserver un appel gratuit
+            Reserver un appel gratuit
           </a>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-[#A89F94]">
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-white/70">
             <a href="tel:0661139748" className="flex items-center gap-2 hover:text-white transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
@@ -922,8 +1041,9 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
 }
 
 export default function DiagnosticClient({ metier, metierData }: DiagnosticClientProps) {
+  const colors = getColorScheme(metier)
   return (
-    <Suspense fallback={<div className="min-h-screen bg-[#FDFCFB]" />}>
+    <Suspense fallback={<div className="min-h-screen" style={{ backgroundColor: colors.bg }} />}>
       <DiagnosticContent metier={metier} metierData={metierData} />
     </Suspense>
   )
