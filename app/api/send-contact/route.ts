@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
                     { status: 200, headers: securityHeaders }
                 );
             }
-            console.error('Web3Forms error:', web3Result);
+            // Web3Forms failed, try fallback
         }
 
         // FALLBACK: FormSubmit
@@ -109,8 +109,8 @@ export async function POST(request: NextRequest) {
             { status: 500, headers: securityHeaders }
         );
 
-    } catch (error: unknown) {
-        console.error('Erreur API contact:', error);
+    } catch {
+        // Error logged server-side only
         return NextResponse.json(
             { success: false, error: 'Erreur serveur. Veuillez réessayer.' },
             { status: 500, headers: securityHeaders }

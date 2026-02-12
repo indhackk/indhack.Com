@@ -38,9 +38,7 @@ const CITIES = [
     { name: "Monaco", href: "/consultant-seo-monaco" },
     { name: "Sophia-Antipolis", href: "/consultant-seo-sophia-antipolis" },
     { name: "Aix-en-Provence", href: "/consultant-seo-aix-en-provence" },
-    { name: "Toulon", href: "/consultant-seo-toulon" },
-    { name: "Rouen", href: "/consultant-seo-rouen" },
-    { name: "Dijon", href: "/consultant-seo-dijon" },
+    { name: "Boulogne-Billancourt", href: "/consultant-seo-boulogne-billancourt" },
 ];
 
 // ══════════════════════════════════════════════════════════════

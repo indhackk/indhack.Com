@@ -111,7 +111,7 @@ export function Sidebar({
             <div className="p-3 border-t border-gray-100">
                 <Link
                     href="https://indhack.com/contact"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-gray-500 hover:bg-gray-50 hover:text-ink transition-all"
                 >
                     <HelpCircle className="w-4 h-4" />

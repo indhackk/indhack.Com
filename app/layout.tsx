@@ -3,6 +3,7 @@ import { Space_Grotesk, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import { ModalProvider } from "@/components/providers/ModalProvider";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
+import { CookieConsent } from "@/components/CookieConsent";
 
 import Script from "next/script";
 
@@ -175,6 +176,7 @@ export default function RootLayout({
                     <ConditionalLayout>
                         {children}
                     </ConditionalLayout>
+                    <CookieConsent />
                 </ModalProvider>
             </body>
         </html>
