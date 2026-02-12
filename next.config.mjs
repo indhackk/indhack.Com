@@ -92,6 +92,30 @@ const nextConfig = {
                 destination: '/a-propos',
                 permanent: true,
             },
+            // Ancienne page tarifs → referencement-naturel
+            {
+                source: '/tarifs',
+                destination: '/referencement-naturel',
+                permanent: true,
+            },
+            // ══════════════════════════════════════════════════════════════
+            // REDIRECTIONS VILLES SUPPRIMEES → Villes proches
+            // ══════════════════════════════════════════════════════════════
+            {
+                source: '/consultant-seo-dijon',
+                destination: '/consultant-seo-lyon',
+                permanent: true,
+            },
+            {
+                source: '/consultant-seo-toulon',
+                destination: '/consultant-seo-marseille',
+                permanent: true,
+            },
+            {
+                source: '/consultant-seo-rouen',
+                destination: '/consultant-seo-paris',
+                permanent: true,
+            },
             // ══════════════════════════════════════════════════════════════
             // REDIRECTIONS SEO VILLES : /seo-[ville] → /consultant-seo-[ville]
             // ══════════════════════════════════════════════════════════════
