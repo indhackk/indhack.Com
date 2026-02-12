@@ -1,0 +1,758 @@
+{
+  "nice-promenade-anglais.jpg": {
+    "gps": {
+      "lat": 43.7102,
+      "lng": 7.262
+    },
+    "city": "Nice",
+    "keywords": [
+      "SEO Nice",
+      "consultant SEO 06",
+      "Côte d'Azur"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "nice-vieux-nice.jpg": {
+    "gps": {
+      "lat": 43.7102,
+      "lng": 7.262
+    },
+    "city": "Nice",
+    "keywords": [
+      "SEO Nice",
+      "consultant SEO 06",
+      "Côte d'Azur"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "nice-place-massena.jpg": {
+    "gps": {
+      "lat": 43.7102,
+      "lng": 7.262
+    },
+    "city": "Nice",
+    "keywords": [
+      "SEO Nice",
+      "consultant SEO 06",
+      "Côte d'Azur"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "cannes-croisette.jpg": {
+    "gps": {
+      "lat": 43.5528,
+      "lng": 7.0174
+    },
+    "city": "Cannes",
+    "keywords": [
+      "SEO Cannes",
+      "consultant SEO 06",
+      "Côte d'Azur"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "cannes-palais-festivals.jpg": {
+    "gps": {
+      "lat": 43.5528,
+      "lng": 7.0174
+    },
+    "city": "Cannes",
+    "keywords": [
+      "SEO Cannes",
+      "consultant SEO 06",
+      "Côte d'Azur"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "cannes-vieux-port.jpg": {
+    "gps": {
+      "lat": 43.5528,
+      "lng": 7.0174
+    },
+    "city": "Cannes",
+    "keywords": [
+      "SEO Cannes",
+      "consultant SEO 06",
+      "Côte d'Azur"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "antibes-port-vauban.jpg": {
+    "gps": {
+      "lat": 43.5804,
+      "lng": 7.1251
+    },
+    "city": "Antibes",
+    "keywords": [
+      "SEO Antibes",
+      "consultant SEO 06",
+      "Côte d'Azur"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "antibes-vieille-ville.jpg": {
+    "gps": {
+      "lat": 43.5804,
+      "lng": 7.1251
+    },
+    "city": "Antibes",
+    "keywords": [
+      "SEO Antibes",
+      "consultant SEO 06",
+      "Côte d'Azur"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "antibes-cap.jpg": {
+    "gps": {
+      "lat": 43.5804,
+      "lng": 7.1251
+    },
+    "city": "Antibes",
+    "keywords": [
+      "SEO Antibes",
+      "consultant SEO 06",
+      "Côte d'Azur"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "monaco-casino.jpg": {
+    "gps": {
+      "lat": 43.7384,
+      "lng": 7.4246
+    },
+    "city": "Monaco",
+    "keywords": [
+      "SEO Monaco",
+      "consultant SEO 98",
+      "Monaco"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "monaco-port-hercule.jpg": {
+    "gps": {
+      "lat": 43.7384,
+      "lng": 7.4246
+    },
+    "city": "Monaco",
+    "keywords": [
+      "SEO Monaco",
+      "consultant SEO 98",
+      "Monaco"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "monaco-rocher.jpg": {
+    "gps": {
+      "lat": 43.7384,
+      "lng": 7.4246
+    },
+    "city": "Monaco",
+    "keywords": [
+      "SEO Monaco",
+      "consultant SEO 98",
+      "Monaco"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "sophia-antipolis-technopole.jpg": {
+    "gps": {
+      "lat": 43.6163,
+      "lng": 7.0557
+    },
+    "city": "Sophia Antipolis",
+    "keywords": [
+      "SEO Sophia Antipolis",
+      "consultant SEO 06",
+      "technopole"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "sophia-antipolis-bureaux.jpg": {
+    "gps": {
+      "lat": 43.6163,
+      "lng": 7.0557
+    },
+    "city": "Sophia Antipolis",
+    "keywords": [
+      "SEO Sophia Antipolis",
+      "consultant SEO 06",
+      "technopole"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "sophia-antipolis-campus.jpg": {
+    "gps": {
+      "lat": 43.6163,
+      "lng": 7.0557
+    },
+    "city": "Sophia Antipolis",
+    "keywords": [
+      "SEO Sophia Antipolis",
+      "consultant SEO 06",
+      "technopole"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "marseille-vieux-port.jpg": {
+    "gps": {
+      "lat": 43.2965,
+      "lng": 5.3698
+    },
+    "city": "Marseille",
+    "keywords": [
+      "SEO Marseille",
+      "consultant SEO 13",
+      "PACA"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "marseille-mucem.jpg": {
+    "gps": {
+      "lat": 43.2965,
+      "lng": 5.3698
+    },
+    "city": "Marseille",
+    "keywords": [
+      "SEO Marseille",
+      "consultant SEO 13",
+      "PACA"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "marseille-notre-dame-garde.jpg": {
+    "gps": {
+      "lat": 43.2965,
+      "lng": 5.3698
+    },
+    "city": "Marseille",
+    "keywords": [
+      "SEO Marseille",
+      "consultant SEO 13",
+      "PACA"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "aix-cours-mirabeau.jpg": {
+    "gps": {
+      "lat": 43.5297,
+      "lng": 5.4474
+    },
+    "city": "Aix-en-Provence",
+    "keywords": [
+      "SEO Aix-en-Provence",
+      "consultant SEO 13",
+      "Provence"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "aix-rotonde.jpg": {
+    "gps": {
+      "lat": 43.5297,
+      "lng": 5.4474
+    },
+    "city": "Aix-en-Provence",
+    "keywords": [
+      "SEO Aix-en-Provence",
+      "consultant SEO 13",
+      "Provence"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "aix-sainte-victoire.jpg": {
+    "gps": {
+      "lat": 43.5297,
+      "lng": 5.4474
+    },
+    "city": "Aix-en-Provence",
+    "keywords": [
+      "SEO Aix-en-Provence",
+      "consultant SEO 13",
+      "Provence"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "lyon-bellecour.jpg": {
+    "gps": {
+      "lat": 45.764,
+      "lng": 4.8357
+    },
+    "city": "Lyon",
+    "keywords": [
+      "SEO Lyon",
+      "consultant SEO 69",
+      "Rhône-Alpes"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "lyon-fourviere.jpg": {
+    "gps": {
+      "lat": 45.764,
+      "lng": 4.8357
+    },
+    "city": "Lyon",
+    "keywords": [
+      "SEO Lyon",
+      "consultant SEO 69",
+      "Rhône-Alpes"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "lyon-confluence.jpg": {
+    "gps": {
+      "lat": 45.764,
+      "lng": 4.8357
+    },
+    "city": "Lyon",
+    "keywords": [
+      "SEO Lyon",
+      "consultant SEO 69",
+      "Rhône-Alpes"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "bordeaux-place-bourse.jpg": {
+    "gps": {
+      "lat": 44.8378,
+      "lng": -0.5792
+    },
+    "city": "Bordeaux",
+    "keywords": [
+      "SEO Bordeaux",
+      "consultant SEO 33",
+      "Gironde"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "bordeaux-miroir-eau.jpg": {
+    "gps": {
+      "lat": 44.8378,
+      "lng": -0.5792
+    },
+    "city": "Bordeaux",
+    "keywords": [
+      "SEO Bordeaux",
+      "consultant SEO 33",
+      "Gironde"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "bordeaux-cite-vin.jpg": {
+    "gps": {
+      "lat": 44.8378,
+      "lng": -0.5792
+    },
+    "city": "Bordeaux",
+    "keywords": [
+      "SEO Bordeaux",
+      "consultant SEO 33",
+      "Gironde"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "toulouse-capitole.jpg": {
+    "gps": {
+      "lat": 43.6047,
+      "lng": 1.4442
+    },
+    "city": "Toulouse",
+    "keywords": [
+      "SEO Toulouse",
+      "consultant SEO 31",
+      "Occitanie"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "toulouse-garonne.jpg": {
+    "gps": {
+      "lat": 43.6047,
+      "lng": 1.4442
+    },
+    "city": "Toulouse",
+    "keywords": [
+      "SEO Toulouse",
+      "consultant SEO 31",
+      "Occitanie"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "toulouse-cite-espace.jpg": {
+    "gps": {
+      "lat": 43.6047,
+      "lng": 1.4442
+    },
+    "city": "Toulouse",
+    "keywords": [
+      "SEO Toulouse",
+      "consultant SEO 31",
+      "Occitanie"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "montpellier-comedie.jpg": {
+    "gps": {
+      "lat": 43.6108,
+      "lng": 3.8767
+    },
+    "city": "Montpellier",
+    "keywords": [
+      "SEO Montpellier",
+      "consultant SEO 34",
+      "Hérault"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "montpellier-ecusson.jpg": {
+    "gps": {
+      "lat": 43.6108,
+      "lng": 3.8767
+    },
+    "city": "Montpellier",
+    "keywords": [
+      "SEO Montpellier",
+      "consultant SEO 34",
+      "Hérault"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "montpellier-antigone.jpg": {
+    "gps": {
+      "lat": 43.6108,
+      "lng": 3.8767
+    },
+    "city": "Montpellier",
+    "keywords": [
+      "SEO Montpellier",
+      "consultant SEO 34",
+      "Hérault"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "strasbourg-cathedrale.jpg": {
+    "gps": {
+      "lat": 48.5734,
+      "lng": 7.7521
+    },
+    "city": "Strasbourg",
+    "keywords": [
+      "SEO Strasbourg",
+      "consultant SEO 67",
+      "Alsace"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "strasbourg-petite-france.jpg": {
+    "gps": {
+      "lat": 48.5734,
+      "lng": 7.7521
+    },
+    "city": "Strasbourg",
+    "keywords": [
+      "SEO Strasbourg",
+      "consultant SEO 67",
+      "Alsace"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "strasbourg-parlement.jpg": {
+    "gps": {
+      "lat": 48.5734,
+      "lng": 7.7521
+    },
+    "city": "Strasbourg",
+    "keywords": [
+      "SEO Strasbourg",
+      "consultant SEO 67",
+      "Alsace"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "nantes-chateau.jpg": {
+    "gps": {
+      "lat": 47.2184,
+      "lng": -1.5536
+    },
+    "city": "Nantes",
+    "keywords": [
+      "SEO Nantes",
+      "consultant SEO 44",
+      "Loire-Atlantique"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "nantes-machines.jpg": {
+    "gps": {
+      "lat": 47.2184,
+      "lng": -1.5536
+    },
+    "city": "Nantes",
+    "keywords": [
+      "SEO Nantes",
+      "consultant SEO 44",
+      "Loire-Atlantique"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "nantes-passage-pommeraye.jpg": {
+    "gps": {
+      "lat": 47.2184,
+      "lng": -1.5536
+    },
+    "city": "Nantes",
+    "keywords": [
+      "SEO Nantes",
+      "consultant SEO 44",
+      "Loire-Atlantique"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "rennes-parlement.jpg": {
+    "gps": {
+      "lat": 48.1173,
+      "lng": -1.6778
+    },
+    "city": "Rennes",
+    "keywords": [
+      "SEO Rennes",
+      "consultant SEO 35",
+      "Bretagne"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "rennes-republique.jpg": {
+    "gps": {
+      "lat": 48.1173,
+      "lng": -1.6778
+    },
+    "city": "Rennes",
+    "keywords": [
+      "SEO Rennes",
+      "consultant SEO 35",
+      "Bretagne"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "rennes-thabor.jpg": {
+    "gps": {
+      "lat": 48.1173,
+      "lng": -1.6778
+    },
+    "city": "Rennes",
+    "keywords": [
+      "SEO Rennes",
+      "consultant SEO 35",
+      "Bretagne"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "lille-grand-place.jpg": {
+    "gps": {
+      "lat": 50.6292,
+      "lng": 3.0573
+    },
+    "city": "Lille",
+    "keywords": [
+      "SEO Lille",
+      "consultant SEO 59",
+      "Nord"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "lille-vieux-lille.jpg": {
+    "gps": {
+      "lat": 50.6292,
+      "lng": 3.0573
+    },
+    "city": "Lille",
+    "keywords": [
+      "SEO Lille",
+      "consultant SEO 59",
+      "Nord"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "lille-beffroi.jpg": {
+    "gps": {
+      "lat": 50.6292,
+      "lng": 3.0573
+    },
+    "city": "Lille",
+    "keywords": [
+      "SEO Lille",
+      "consultant SEO 59",
+      "Nord"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "grenoble-bastille.jpg": {
+    "gps": {
+      "lat": 45.1885,
+      "lng": 5.7245
+    },
+    "city": "Grenoble",
+    "keywords": [
+      "SEO Grenoble",
+      "consultant SEO 38",
+      "Isère"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "grenoble-telepherique.jpg": {
+    "gps": {
+      "lat": 45.1885,
+      "lng": 5.7245
+    },
+    "city": "Grenoble",
+    "keywords": [
+      "SEO Grenoble",
+      "consultant SEO 38",
+      "Isère"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "grenoble-alpes.jpg": {
+    "gps": {
+      "lat": 45.1885,
+      "lng": 5.7245
+    },
+    "city": "Grenoble",
+    "keywords": [
+      "SEO Grenoble",
+      "consultant SEO 38",
+      "Isère"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "paris-tour-eiffel.jpg": {
+    "gps": {
+      "lat": 48.8566,
+      "lng": 2.3522
+    },
+    "city": "Paris",
+    "keywords": [
+      "SEO Paris",
+      "consultant SEO 75",
+      "Île-de-France"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "paris-sacre-coeur.jpg": {
+    "gps": {
+      "lat": 48.8566,
+      "lng": 2.3522
+    },
+    "city": "Paris",
+    "keywords": [
+      "SEO Paris",
+      "consultant SEO 75",
+      "Île-de-France"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "paris-marais.jpg": {
+    "gps": {
+      "lat": 48.8566,
+      "lng": 2.3522
+    },
+    "city": "Paris",
+    "keywords": [
+      "SEO Paris",
+      "consultant SEO 75",
+      "Île-de-France"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  },
+  "boulogne-seine-musicale.jpg": {
+    "gps": {
+      "lat": 48.8352,
+      "lng": 2.2407
+    },
+    "city": "Boulogne-Billancourt",
+    "keywords": [
+      "SEO Boulogne-Billancourt",
+      "consultant SEO 92",
+      "Hauts-de-Seine"
+    ],
+    "type": "seo_laptop",
+    "license": "Pexels (free commercial)"
+  },
+  "boulogne-ile-seguin.jpg": {
+    "gps": {
+      "lat": 48.8352,
+      "lng": 2.2407
+    },
+    "city": "Boulogne-Billancourt",
+    "keywords": [
+      "SEO Boulogne-Billancourt",
+      "consultant SEO 92",
+      "Hauts-de-Seine"
+    ],
+    "type": "office",
+    "license": "Pexels (free commercial)"
+  },
+  "boulogne-bureaux.jpg": {
+    "gps": {
+      "lat": 48.8352,
+      "lng": 2.2407
+    },
+    "city": "Boulogne-Billancourt",
+    "keywords": [
+      "SEO Boulogne-Billancourt",
+      "consultant SEO 92",
+      "Hauts-de-Seine"
+    ],
+    "type": "meeting",
+    "license": "Pexels (free commercial)"
+  }
+}
