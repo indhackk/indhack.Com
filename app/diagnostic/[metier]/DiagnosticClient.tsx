@@ -369,73 +369,136 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
         <div className="max-w-5xl mx-auto">
 
           <div className="text-center mb-12">
-            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Aperçu</p>
+            <p className="text-[#8B7355] text-sm font-medium uppercase tracking-wider mb-4">Ce que vous aurez</p>
             <h2 className="text-3xl md:text-4xl font-light text-[#2D2A26]">
-              Votre futur site pourrait<br />
-              <span className="font-semibold">ressembler à ça</span>
+              Un site professionnel<br />
+              <span className="font-semibold">qui travaille pour vous</span>
             </h2>
           </div>
 
-          {/* Mockup navigateur */}
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+          {/* Mockup navigateur ameliore */}
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
 
             {/* Barre navigateur */}
-            <div className="bg-[#F5F5F5] px-4 py-3 flex items-center gap-3 border-b border-gray-200">
+            <div className="bg-gradient-to-b from-[#F8F8F8] to-[#EFEFEF] px-4 py-3 flex items-center gap-3 border-b border-gray-200">
               <div className="flex gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#FF5F57]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#28CA41]"></div>
               </div>
-              <div className="flex-1 bg-white rounded-md px-4 py-1 text-sm text-gray-400 text-center mx-8">
-                {nom.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}.fr
+              <div className="flex-1 bg-white rounded-lg px-4 py-1.5 text-sm text-gray-500 text-center mx-8 border border-gray-200 shadow-inner">
+                <span className="text-green-600">https://</span>{nom.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}.fr
               </div>
             </div>
 
-            {/* Contenu site */}
-            <div className="relative h-[400px] md:h-[500px]">
-              <Image
-                src={metierData.mockupImage}
-                alt="Aperçu site"
-                fill
-                className="object-cover"
-                unoptimized={metierData.mockupImage.startsWith('http')}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            {/* Site simule - structure realiste */}
+            <div className="bg-white">
 
-              {/* Header fictif */}
-              <div className="absolute top-0 left-0 right-0 p-6 flex items-center justify-between">
-                <span className="text-white font-medium text-lg">{nom}</span>
-                <div className="hidden md:flex items-center gap-6 text-white/80 text-sm">
+              {/* Header du site fictif */}
+              <div className="border-b border-gray-100 px-6 py-4 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#2D2A26] flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">{nom.charAt(0)}</span>
+                  </div>
+                  <span className="font-semibold text-[#2D2A26]">{nom}</span>
+                </div>
+                <div className="hidden md:flex items-center gap-6 text-sm text-gray-600">
                   {mockupTabs.slice(0, 3).map((tab) => (
-                    <span key={tab}>{tab}</span>
+                    <span key={tab} className="hover:text-[#2D2A26] cursor-pointer">{tab}</span>
                   ))}
-                  <span className="bg-white text-[#2D2A26] px-4 py-2 rounded-full font-medium">{mockupTabs[3] || 'Contact'}</span>
+                  <span className="bg-[#2D2A26] text-white px-4 py-2 rounded-lg font-medium text-sm">{mockupTabs[3] || 'Contact'}</span>
                 </div>
               </div>
 
-              {/* Contenu fictif */}
-              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-                <p className="text-white/70 text-sm uppercase tracking-wider mb-3">{metierData.label} · {ville}</p>
-                <h3 className="text-3xl md:text-4xl text-white font-light mb-6">
-                  {mockupTagline}<br />
-                  <span className="font-semibold">au cœur de {ville}</span>
-                </h3>
-                <div className="flex items-center gap-4">
-                  <span className="bg-white text-[#2D2A26] px-6 py-3 rounded-full font-medium">
-                    {mockupTabs.includes('Réserver') || mockupTabs.includes('Prendre RDV') ? 'Prendre rendez-vous' : 'Nous contacter'}
-                  </span>
+              {/* Hero du site fictif */}
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="p-8 md:p-12 flex flex-col justify-center">
+                  <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-medium w-fit mb-4">
+                    <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                    Ouvert aujourd'hui
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#2D2A26] mb-4 leading-tight">
+                    {mockupTagline}
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                    {metierData.label} a {ville}. {note} etoiles sur Google avec {avis} avis clients.
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <span className="bg-[#2D2A26] text-white px-5 py-2.5 rounded-lg font-medium text-sm">
+                      {mockupTabs.includes('Reserver') || mockupTabs.includes('Prendre RDV') ? 'Reserver en ligne' : 'Demander un devis'}
+                    </span>
+                    <span className="border border-gray-300 text-gray-700 px-5 py-2.5 rounded-lg font-medium text-sm">
+                      06 XX XX XX XX
+                    </span>
+                  </div>
+                </div>
+                <div className="relative h-[250px] md:h-auto">
+                  <Image
+                    src={metierData.mockupImage}
+                    alt={`${metierData.label} ${ville}`}
+                    fill
+                    className="object-cover"
+                    unoptimized={metierData.mockupImage.startsWith('http')}
+                  />
                 </div>
               </div>
+
+              {/* Section services du site fictif */}
+              <div className="border-t border-gray-100 p-6 md:p-8 bg-gray-50">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {metierData.services.slice(0, 4).map((service, i) => (
+                    <div key={service} className="bg-white p-4 rounded-xl text-center shadow-sm">
+                      <div className="w-10 h-10 bg-[#F5F0EB] rounded-lg mx-auto mb-3 flex items-center justify-center">
+                        <span className="text-[#8B7355] font-semibold text-sm">{i + 1}</span>
+                      </div>
+                      <span className="text-sm text-[#2D2A26] font-medium">{service}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Footer du site fictif */}
+              <div className="border-t border-gray-100 px-6 py-4 flex items-center justify-between text-xs text-gray-400">
+                <span>{nom} - {ville}</span>
+                <div className="flex items-center gap-4">
+                  <span>Mentions legales</span>
+                  <span>Contact</span>
+                </div>
+              </div>
+
             </div>
 
           </div>
 
-          <div className="mt-8 bg-white rounded-2xl p-6 max-w-2xl mx-auto">
-            <p className="text-[#5C5650] text-center leading-relaxed">
-              <strong className="text-[#2D2A26]">Le design peut être très travaillé</strong> - on construit votre projet ensemble.
-              Vous avez une idée précise ? Je la réalise. Vous ne savez pas par où commencer ?
-              Je vous fais des propositions. Je suis perfectionniste : je ne livre que du travail dont je suis fière.
-            </p>
+          {/* Points cles sous le mockup */}
+          <div className="mt-10 grid md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-xl p-5 shadow-sm">
+              <div className="w-10 h-10 bg-[#E8F5F0] rounded-lg flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-[#059669]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <h4 className="font-semibold text-[#2D2A26] mb-1">Adapte mobile</h4>
+              <p className="text-sm text-gray-600">60% des recherches se font sur telephone</p>
+            </div>
+            <div className="bg-white rounded-xl p-5 shadow-sm">
+              <div className="w-10 h-10 bg-[#FEF3E7] rounded-lg flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-[#D97706]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <h4 className="font-semibold text-[#2D2A26] mb-1">Ultra rapide</h4>
+              <p className="text-sm text-gray-600">Chargement en moins de 2 secondes</p>
+            </div>
+            <div className="bg-white rounded-xl p-5 shadow-sm">
+              <div className="w-10 h-10 bg-[#F0E8F5] rounded-lg flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-[#7C3AED]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                </svg>
+              </div>
+              <h4 className="font-semibold text-[#2D2A26] mb-1">Modifiable</h4>
+              <p className="text-sm text-gray-600">Vous pouvez modifier vos infos facilement</p>
+            </div>
           </div>
 
         </div>
@@ -631,7 +694,7 @@ function DiagnosticContent({ metier, metierData }: DiagnosticClientProps) {
                         </svg>
                       </div>
                     </div>
-                    <span className="text-sm text-[#2D2A26] font-medium">Basée à {ville}</span>
+                    <span className="text-sm text-[#2D2A26] font-medium">Basee dans le 06</span>
                   </div>
                 </div>
               </div>
