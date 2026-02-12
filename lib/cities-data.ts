@@ -1,4 +1,5 @@
 // Données centralisées des villes pour le SEO Local
+// CONTENU 100% UNIQUE PAR VILLE - Optimisé SEO avec maillage interne
 
 export interface CityImage {
     src: string;
@@ -8,9 +9,19 @@ export interface CityImage {
 }
 
 export interface CityImages {
-    hero: CityImage;      // Image principale de la ville
-    workspace: CityImage; // Ambiance locale / bureau
-    landmark: CityImage;  // Monument emblématique
+    hero: CityImage;
+    workspace: CityImage;
+    landmark: CityImage;
+}
+
+// Nouveau: Contexte unique par ville
+export interface CityContext {
+    marketType: "luxury" | "tech" | "volume" | "local" | "premium";
+    competitionLevel: "extreme" | "high" | "medium" | "moderate";
+    targetClients: string;
+    localInsight: string;
+    specificChallenges: string[];
+    businessTypes: string[];
 }
 
 export interface CityData {
@@ -21,16 +32,18 @@ export interface CityData {
     lng: string;
     region: string;
     department: string;
+    deptCode: string;
     population: string;
     description: string;
     keyPoints: string[];
     nearbyAreas: string[];
     landmarks: string[];
     images: CityImages;
+    context: CityContext;
 }
 
 export const FRENCH_CITIES: CityData[] = [
-    // Côte d'Azur (PACA)
+    // CÔTE D'AZUR - MARCHÉ LUXE & TOURISME
     {
         name: "Nice",
         slug: "consultant-seo-nice",
@@ -39,15 +52,24 @@ export const FRENCH_CITIES: CityData[] = [
         lng: "7.2620",
         region: "Provence-Alpes-Côte d'Azur",
         department: "Alpes-Maritimes",
+        deptCode: "06",
         population: "340 000",
-        description: "À Nice, la Promenade des Anglais n'est pas le seul endroit où il faut être vu. Google est la nouvelle rue piétonne. Si votre entreprise n'est pas dans le Top 3, vous êtes invisible pour 340 000 clients locaux. IndHack transforme votre site en machine à capturer ce trafic.",
-        keyPoints: ["Capturez le trafic local", "Dominez vos concurrents niçois", "Augmentez votre CA instantanément"],
+        description: "À Nice, la Promenade des Anglais n'est pas le seul endroit où il faut être vu. Google est devenu la nouvelle vitrine touristique. Les hôteliers et restaurateurs qui ne dominent pas la première page perdent 60% de leur clientèle internationale au profit des grandes chaînes. IndHack combat cette asymétrie.",
+        keyPoints: ["Trafic touristique international", "Concurrence hôtelière intense", "Saisonnalité forte"],
         nearbyAreas: ["Villefranche-sur-Mer", "Saint-Laurent-du-Var", "Cagnes-sur-Mer", "Beaulieu-sur-Mer"],
         landmarks: ["Promenade des Anglais", "Vieux-Nice", "Port de Nice", "Place Masséna"],
         images: {
-            hero: { src: "/images/cities/nice-promenade-anglais.jpg", alt: "Promenade des Anglais Nice - Consultante SEO Nice", title: "Audit SEO Nice Côte d'Azur", keywords: ["SEO Nice", "référencement Nice", "consultant SEO Nice 06", "Promenade des Anglais"] },
-            workspace: { src: "/images/cities/nice-vieux-nice.jpg", alt: "Vieux-Nice ruelles - Expert SEO Nice", title: "Référencement naturel Nice", keywords: ["audit SEO Nice", "agence SEO Nice", "Vieux Nice"] },
-            landmark: { src: "/images/cities/nice-place-massena.jpg", alt: "Place Masséna Nice - SEO local Nice", title: "SEO local Nice 06", keywords: ["SEO local Nice", "Google My Business Nice", "Place Masséna"] }
+            hero: { src: "/images/cities/nice-promenade-anglais.jpg", alt: "Consultante SEO Nice Promenade des Anglais", title: "Audit SEO Nice Côte d'Azur", keywords: ["SEO Nice", "référencement Nice", "consultant SEO Nice 06"] },
+            workspace: { src: "/images/cities/nice-vieux-nice.jpg", alt: "Expert SEO Nice Vieux-Nice", title: "Référencement naturel Nice", keywords: ["audit SEO Nice", "agence SEO Nice"] },
+            landmark: { src: "/images/cities/nice-place-massena.jpg", alt: "SEO local Nice Place Masséna", title: "SEO local Nice 06", keywords: ["SEO local Nice", "Google My Business Nice"] }
+        },
+        context: {
+            marketType: "luxury",
+            competitionLevel: "high",
+            targetClients: "hôteliers, restaurateurs, agences immobilières de prestige et commerces de luxe",
+            localInsight: "70% des recherches sont effectuées par des touristes étrangers sur mobile, souvent en anglais ou italien",
+            specificChallenges: ["SEO multilingue FR/EN/IT", "Saisonnalité estivale très marquée", "Booking et TripAdvisor dominent les SERP"],
+            businessTypes: ["Hôtellerie", "Restauration", "Immobilier luxe", "Services premium"]
         }
     },
     {
@@ -58,15 +80,24 @@ export const FRENCH_CITIES: CityData[] = [
         lng: "7.0174",
         region: "Provence-Alpes-Côte d'Azur",
         department: "Alpes-Maritimes",
+        deptCode: "06",
         population: "74 000",
-        description: "Immobilier, Luxe, Événementiel : À Cannes, chaque clic vaut de l'or. Vos concurrents internationaux investissent massivement. Ne laissez pas les agences parisiennes voler vos clients locaux. IndHack déploie une stratégie SEO d'élite pour le marché cannois.",
-        keyPoints: ["Ciblez une clientèle VIP", "SEO Immobilier & Luxe", "Visibilité internationale"],
+        description: "Cannes, c'est le luxe qui se googlise. Immobilier à 15 000€/m², yachts au Port Canto, événementiel au Palais des Festivals : chaque clic vaut littéralement de l'or. Les agences parisiennes chassent sur ces terres. IndHack vous donne l'avantage local qu'elles n'auront jamais.",
+        keyPoints: ["Marché ultra-premium", "Clientèle internationale exigeante", "Événementiel de prestige"],
         nearbyAreas: ["Le Cannet", "Mougins", "Mandelieu-la-Napoule", "Théoule-sur-Mer"],
         landmarks: ["La Croisette", "Palais des Festivals", "Vieux Port", "Le Suquet"],
         images: {
-            hero: { src: "/images/cities/cannes-croisette.jpg", alt: "La Croisette Cannes - Consultante SEO Cannes", title: "Audit SEO Cannes 06", keywords: ["SEO Cannes", "référencement Cannes", "consultant SEO Cannes", "La Croisette"] },
-            workspace: { src: "/images/cities/cannes-palais-festivals.jpg", alt: "Palais des Festivals Cannes - Expert SEO Cannes", title: "Référencement naturel Cannes", keywords: ["audit SEO Cannes", "Palais des Festivals", "SEO luxe Cannes"] },
-            landmark: { src: "/images/cities/cannes-vieux-port.jpg", alt: "Vieux Port Cannes - SEO local Cannes", title: "SEO local Cannes 06", keywords: ["SEO local Cannes", "Vieux Port Cannes", "Le Suquet"] }
+            hero: { src: "/images/cities/cannes-croisette.jpg", alt: "Consultante SEO Cannes La Croisette", title: "Audit SEO Cannes 06", keywords: ["SEO Cannes", "référencement Cannes", "consultant SEO Cannes"] },
+            workspace: { src: "/images/cities/cannes-palais-festivals.jpg", alt: "Expert SEO Cannes Palais des Festivals", title: "Référencement naturel Cannes", keywords: ["audit SEO Cannes", "SEO luxe Cannes"] },
+            landmark: { src: "/images/cities/cannes-vieux-port.jpg", alt: "SEO local Cannes Vieux Port", title: "SEO local Cannes 06", keywords: ["SEO local Cannes", "Le Suquet"] }
+        },
+        context: {
+            marketType: "luxury",
+            competitionLevel: "extreme",
+            targetClients: "agences immobilières haut de gamme, yachtbrokers, hôtels 5 étoiles et prestataires événementiels",
+            localInsight: "Le Festival de Cannes génère 40% des recherches annuelles en 2 semaines — timing SEO critique",
+            specificChallenges: ["Concurrence internationale féroce", "Requêtes en anglais majoritaires", "Coût par clic Google Ads prohibitif"],
+            businessTypes: ["Immobilier prestige", "Yachting", "Événementiel", "Luxe"]
         }
     },
     {
@@ -77,15 +108,24 @@ export const FRENCH_CITIES: CityData[] = [
         lng: "7.1251",
         region: "Provence-Alpes-Côte d'Azur",
         department: "Alpes-Maritimes",
+        deptCode: "06",
         population: "73 000",
-        description: "Entre les remparts et le yachting, le business à Antibes est féroce. Les artisans et commerçants locaux qui ignorent Google Maps perdent 40% de leur CA potentiel. IndHack vous remet au centre de la carte.",
-        keyPoints: ["Optimisation Google Maps", "SEO Yachting & Services", "Acquisition de leads locaux"],
+        description: "Port Vauban, premier port de plaisance d'Europe : le yachting antibois génère des millions de recherches par an. Mais la vieille ville et ses artisans se battent contre les algorithmes des grandes plateformes. IndHack redonne du pouvoir au commerce local face aux géants du web.",
+        keyPoints: ["Port Vauban & yachting", "Tourisme et artisanat local", "Proximité Juan-les-Pins"],
         nearbyAreas: ["Juan-les-Pins", "Vallauris", "Biot", "Villeneuve-Loubet"],
         landmarks: ["Port Vauban", "Vieille Ville", "Cap d'Antibes", "Marché Provençal"],
         images: {
-            hero: { src: "/images/cities/antibes-port-vauban.jpg", alt: "Port Vauban Antibes - Consultante SEO Antibes", title: "Audit SEO Antibes 06", keywords: ["SEO Antibes", "référencement Antibes", "consultant SEO Antibes", "Port Vauban"] },
-            workspace: { src: "/images/cities/antibes-vieille-ville.jpg", alt: "Vieille Ville Antibes - Expert SEO Antibes", title: "Référencement naturel Antibes", keywords: ["audit SEO Antibes", "Vieille Ville Antibes", "Juan-les-Pins"] },
-            landmark: { src: "/images/cities/antibes-cap.jpg", alt: "Cap d'Antibes - SEO local Antibes", title: "SEO local Antibes 06", keywords: ["SEO local Antibes", "Cap d'Antibes", "yachting Antibes"] }
+            hero: { src: "/images/cities/antibes-port-vauban.jpg", alt: "Consultante SEO Antibes Port Vauban", title: "Audit SEO Antibes 06", keywords: ["SEO Antibes", "référencement Antibes"] },
+            workspace: { src: "/images/cities/antibes-vieille-ville.jpg", alt: "Expert SEO Antibes Vieille Ville", title: "Référencement naturel Antibes", keywords: ["audit SEO Antibes", "Juan-les-Pins"] },
+            landmark: { src: "/images/cities/antibes-cap.jpg", alt: "SEO local Antibes Cap d'Antibes", title: "SEO local Antibes 06", keywords: ["SEO local Antibes", "yachting Antibes"] }
+        },
+        context: {
+            marketType: "premium",
+            competitionLevel: "high",
+            targetClients: "professionnels du yachting, artisans du Vieil Antibes, restaurateurs et boutiques du Marché Provençal",
+            localInsight: "Les recherches 'yacht services Antibes' représentent un marché de plusieurs millions d'euros par an",
+            specificChallenges: ["Double marché luxe/local", "Saisonnalité marquée", "Concurrence Juan-les-Pins"],
+            businessTypes: ["Yachting", "Artisanat", "Restauration", "Commerce local"]
         }
     },
     {
@@ -96,15 +136,24 @@ export const FRENCH_CITIES: CityData[] = [
         lng: "7.4246",
         region: "Principauté de Monaco",
         department: "Monaco",
+        deptCode: "98",
         population: "39 000",
-        description: "Le m² digital le plus cher du monde. À Monaco, l'approximatif ne fonctionne pas. Vous devez être visible auprès des Family Offices, Banques et Services de Luxe. IndHack vous positionne là où l'argent circule : en haut de la page 1.",
-        keyPoints: ["Stratégie Ultra-Premium", "E-réputation Monaco", "SEO Multilingue (EN/FR/IT/RU)"],
+        description: "Monaco : 2km², 39 000 habitants, mais un PIB par habitant record mondial. Ici, l'approximatif n'existe pas. Family offices, banques privées, services de conciergerie ultra-premium : vos clients potentiels recherchent l'excellence. IndHack positionne votre expertise là où l'argent circule : en page 1.",
+        keyPoints: ["Clientèle UHNWI", "Exigence absolue", "Multilinguisme obligatoire"],
         nearbyAreas: ["Monte-Carlo", "La Condamine", "Fontvieille", "Beausoleil"],
         landmarks: ["Place du Casino", "Port Hercule", "Carré d'Or", "Rocher"],
         images: {
-            hero: { src: "/images/cities/monaco-casino.jpg", alt: "Casino Monte-Carlo Monaco - Consultante SEO Monaco", title: "Audit SEO Monaco 98", keywords: ["SEO Monaco", "référencement Monaco", "consultant SEO Monaco", "Monte-Carlo"] },
-            workspace: { src: "/images/cities/monaco-port-hercule.jpg", alt: "Port Hercule Monaco - Expert SEO Monaco", title: "Référencement naturel Monaco", keywords: ["audit SEO Monaco", "Port Hercule", "SEO luxe Monaco"] },
-            landmark: { src: "/images/cities/monaco-rocher.jpg", alt: "Rocher de Monaco - SEO local Monaco", title: "SEO local Monaco 98", keywords: ["SEO local Monaco", "Rocher Monaco", "Palais Princier"] }
+            hero: { src: "/images/cities/monaco-casino.jpg", alt: "Consultante SEO Monaco Casino Monte-Carlo", title: "Audit SEO Monaco 98", keywords: ["SEO Monaco", "référencement Monaco"] },
+            workspace: { src: "/images/cities/monaco-port-hercule.jpg", alt: "Expert SEO Monaco Port Hercule", title: "Référencement naturel Monaco", keywords: ["audit SEO Monaco", "SEO luxe Monaco"] },
+            landmark: { src: "/images/cities/monaco-rocher.jpg", alt: "SEO local Monaco Rocher", title: "SEO local Monaco 98", keywords: ["SEO local Monaco", "Palais Princier"] }
+        },
+        context: {
+            marketType: "luxury",
+            competitionLevel: "extreme",
+            targetClients: "family offices, banques privées, cabinets d'avocats fiscalistes, services de conciergerie et gestionnaires de patrimoine",
+            localInsight: "Le trafic de recherche est 60% en anglais, 20% en français, 10% en russe et italien — SEO multilingue obligatoire",
+            specificChallenges: ["Volume de recherche faible mais ultra-qualifié", "Clients internationaux exigeants", "Réputation en ligne critique"],
+            businessTypes: ["Gestion de patrimoine", "Services juridiques", "Conciergerie luxe", "Immobilier prestige"]
         }
     },
     {
@@ -115,18 +164,27 @@ export const FRENCH_CITIES: CityData[] = [
         lng: "7.0557",
         region: "Provence-Alpes-Côte d'Azur",
         department: "Alpes-Maritimes",
+        deptCode: "06",
         population: "2 500 entreprises",
-        description: "La Silicon Valley de l'Europe ne pardonne pas l'incompétence technique. Startups, SaaS, ESN : votre SEO doit être aussi performant que votre code. Audit technique pointu et acquisition B2B par IndHack.",
-        keyPoints: ["SEO Technique B2B", "Génération de Leads SaaS", "Visibilité Tech & Innovation"],
+        description: "Sophia-Antipolis, Silicon Valley européenne : 2 500 entreprises tech, 40 000 emplois. Amadeus, SAP, NXP... Les startups côtoient les géants. Ici, le SEO technique n'est pas une option — c'est une question de survie face aux budgets marketing des licornes. IndHack parle votre langage B2B.",
+        keyPoints: ["Écosystème tech dense", "Clientèle B2B/SaaS", "Innovation permanente"],
         nearbyAreas: ["Valbonne", "Mougins", "Biot", "Antibes"],
-        landmarks: ["Place Sophie Laffitte", "Skema", "Amadeus", "Carrefour des Entreprises"],
+        landmarks: ["Place Sophie Laffitte", "SKEMA", "Amadeus", "INRIA"],
         images: {
-            hero: { src: "/images/cities/sophia-antipolis-technopole.jpg", alt: "Technopole Sophia Antipolis - Consultante SEO Sophia Antipolis", title: "Audit SEO Sophia Antipolis 06", keywords: ["SEO Sophia Antipolis", "référencement technopole", "consultant SEO startup", "Silicon Valley Europe"] },
-            workspace: { src: "/images/cities/sophia-antipolis-bureaux.jpg", alt: "Bureaux tech Sophia Antipolis - Expert SEO B2B", title: "Référencement SaaS Sophia Antipolis", keywords: ["audit SEO B2B", "SEO startup", "Sophia Antipolis tech"] },
-            landmark: { src: "/images/cities/sophia-antipolis-campus.jpg", alt: "Campus Sophia Antipolis - SEO local tech", title: "SEO local Sophia Antipolis 06", keywords: ["SEO local tech", "Skema", "Amadeus SEO"] }
+            hero: { src: "/images/cities/sophia-antipolis-technopole.jpg", alt: "Consultante SEO Sophia Antipolis Technopole", title: "Audit SEO Sophia Antipolis", keywords: ["SEO Sophia Antipolis", "référencement technopole"] },
+            workspace: { src: "/images/cities/sophia-antipolis-bureaux.jpg", alt: "Expert SEO B2B Sophia Antipolis", title: "Référencement SaaS Sophia", keywords: ["audit SEO B2B", "SEO startup"] },
+            landmark: { src: "/images/cities/sophia-antipolis-campus.jpg", alt: "SEO local Sophia Antipolis Campus", title: "SEO local tech 06", keywords: ["SEO local tech", "SKEMA"] }
+        },
+        context: {
+            marketType: "tech",
+            competitionLevel: "high",
+            targetClients: "startups SaaS, ESN, éditeurs de logiciels, scale-ups tech et laboratoires de R&D",
+            localInsight: "Les cycles de vente B2B sont longs — le SEO doit générer du contenu éducatif qui convertit sur 6-12 mois",
+            specificChallenges: ["Contenu technique de haut niveau requis", "Concurrence des géants américains", "Génération de leads B2B complexe"],
+            businessTypes: ["SaaS", "Deep Tech", "ESN", "R&D"]
         }
     },
-    // Marseille et environs
+    // GRANDES MÉTROPOLES - MARCHÉ VOLUME & CONCURRENCE
     {
         name: "Marseille",
         slug: "consultant-seo-marseille",
@@ -135,15 +193,24 @@ export const FRENCH_CITIES: CityData[] = [
         lng: "5.3698",
         region: "Provence-Alpes-Côte d'Azur",
         department: "Bouches-du-Rhône",
+        deptCode: "13",
         population: "870 000",
-        description: "Marseille est un chaos organisé où seuls les plus visibles survivent. Dans cette jungle digitale, IndHack est votre machette. Nous coupons court à la concurrence pour placer votre business tout en haut.",
-        keyPoints: ["Volume de recherche massif", "Concurrence agressive", "Stratégie de guérilla SEO"],
+        description: "Marseille, c'est 870 000 habitants et une jungle digitale où seuls les plus visibles survivent. Du Vieux-Port à la Valentine, la concurrence est féroce dans tous les secteurs. Les agences locales se multiplient, les budgets Google Ads explosent. IndHack vous sort du lot avec une stratégie organique qui dure.",
+        keyPoints: ["Volume de recherche massif", "Concurrence tous secteurs", "Diversité économique"],
         nearbyAreas: ["Aix-en-Provence", "Aubagne", "Cassis", "La Ciotat"],
-        landmarks: ["Vieux Port", "Vélodrome", "La Major", "Prado"],
+        landmarks: ["Vieux-Port", "Notre-Dame de la Garde", "MuCEM", "Stade Vélodrome"],
         images: {
-            hero: { src: "/images/cities/marseille-vieux-port.jpg", alt: "Vieux Port Marseille - Consultante SEO Marseille", title: "Audit SEO Marseille 13", keywords: ["SEO Marseille", "référencement Marseille", "consultant SEO Marseille", "Vieux Port"] },
-            workspace: { src: "/images/cities/marseille-mucem.jpg", alt: "MuCEM Marseille - Expert SEO Marseille", title: "Référencement naturel Marseille", keywords: ["audit SEO Marseille", "MuCEM", "SEO Bouches-du-Rhône"] },
-            landmark: { src: "/images/cities/marseille-notre-dame-garde.jpg", alt: "Notre-Dame de la Garde Marseille - SEO local Marseille", title: "SEO local Marseille 13", keywords: ["SEO local Marseille", "Notre-Dame de la Garde", "Bonne Mère"] }
+            hero: { src: "/images/cities/marseille-vieux-port.jpg", alt: "Consultante SEO Marseille Vieux-Port", title: "Audit SEO Marseille 13", keywords: ["SEO Marseille", "référencement Marseille"] },
+            workspace: { src: "/images/cities/marseille-mucem.jpg", alt: "Expert SEO Marseille MuCEM", title: "Référencement naturel Marseille", keywords: ["audit SEO Marseille", "SEO Bouches-du-Rhône"] },
+            landmark: { src: "/images/cities/marseille-notre-dame-garde.jpg", alt: "SEO local Marseille Notre-Dame de la Garde", title: "SEO local Marseille 13", keywords: ["SEO local Marseille", "Bonne Mère"] }
+        },
+        context: {
+            marketType: "volume",
+            competitionLevel: "extreme",
+            targetClients: "PME tous secteurs, commerces de proximité, professionnels de santé et artisans des quartiers Nord au Prado",
+            localInsight: "Les recherches locales 'près de moi' ont explosé de 300% — le SEO local est vital pour survivre à Marseille",
+            specificChallenges: ["Saturation de tous les secteurs", "Budgets Google Ads prohibitifs", "Réputation locale à soigner"],
+            businessTypes: ["Commerce", "Services", "Santé", "Artisanat"]
         }
     },
     {
@@ -154,96 +221,26 @@ export const FRENCH_CITIES: CityData[] = [
         lng: "5.4474",
         region: "Provence-Alpes-Côte d'Azur",
         department: "Bouches-du-Rhône",
+        deptCode: "13",
         population: "145 000",
-        description: "Ville bourgeoise, clientèle exigeante. À Aix, l'image de marque est tout. Votre site doit refléter votre prestige. IndHack allie esthétique UX et puissance SEO pour séduire la clientèle aixoise.",
-        keyPoints: ["SEO Image de Marque", "Ciblage CSP+", "Conversion haut de gamme"],
-        nearbyAreas: ["Marseille", "Gardanne", "Venelles", "Les Milles"],
-        landmarks: ["Cours Mirabeau", "Rotonde", "Quartier Mazarin", "Sainte-Victoire"],
+        description: "Aix-en-Provence : ville d'art, d'eau et... de startups. Le pôle d'activités attire les entreprises tech tandis que le centre historique reste le royaume des commerces de charme. IndHack navigue entre ces deux mondes pour positionner votre entreprise sur le Cours Mirabeau du digital.",
+        keyPoints: ["Mix tech et patrimoine", "Clientèle étudiante", "Tourisme culturel"],
+        nearbyAreas: ["Les Milles", "Venelles", "Meyreuil", "Gardanne"],
+        landmarks: ["Cours Mirabeau", "Fontaine de la Rotonde", "Montagne Sainte-Victoire", "Atelier Cézanne"],
         images: {
-            hero: { src: "/images/cities/aix-cours-mirabeau.jpg", alt: "Cours Mirabeau Aix-en-Provence - Consultante SEO Aix", title: "Audit SEO Aix-en-Provence 13", keywords: ["SEO Aix-en-Provence", "référencement Aix", "consultant SEO Aix", "Cours Mirabeau"] },
-            workspace: { src: "/images/cities/aix-rotonde.jpg", alt: "La Rotonde Aix-en-Provence - Expert SEO Aix", title: "Référencement naturel Aix-en-Provence", keywords: ["audit SEO Aix", "La Rotonde", "SEO premium Aix"] },
-            landmark: { src: "/images/cities/aix-sainte-victoire.jpg", alt: "Montagne Sainte-Victoire - SEO local Aix-en-Provence", title: "SEO local Aix-en-Provence 13", keywords: ["SEO local Aix", "Sainte-Victoire", "Cézanne"] }
+            hero: { src: "/images/cities/aix-cours-mirabeau.jpg", alt: "Consultante SEO Aix-en-Provence Cours Mirabeau", title: "Audit SEO Aix-en-Provence", keywords: ["SEO Aix-en-Provence", "référencement Aix"] },
+            workspace: { src: "/images/cities/aix-rotonde.jpg", alt: "Expert SEO Aix Fontaine Rotonde", title: "Référencement naturel Aix", keywords: ["audit SEO Aix", "Provence"] },
+            landmark: { src: "/images/cities/aix-sainte-victoire.jpg", alt: "SEO local Aix Sainte-Victoire", title: "SEO local Aix 13", keywords: ["SEO local Aix", "Cézanne"] }
+        },
+        context: {
+            marketType: "premium",
+            competitionLevel: "high",
+            targetClients: "commerces du centre historique, startups du pôle d'activités, professions libérales et prestataires tourisme",
+            localInsight: "40 000 étudiants génèrent un comportement de recherche spécifique — opportunité pour la restauration et les services",
+            specificChallenges: ["Concurrence Marseille proche", "Saisonnalité touristique", "Centre-ville vs zones d'activités"],
+            businessTypes: ["Commerce centre-ville", "Tech/Startup", "Professions libérales", "Tourisme"]
         }
     },
-    // Paris et Île-de-France
-    {
-        name: "Paris",
-        slug: "consultant-seo-paris",
-        zipCode: "75000",
-        lat: "48.8566",
-        lng: "2.3522",
-        region: "Île-de-France",
-        department: "Paris",
-        population: "2 200 000",
-        description: "Paris est l'arène finale. Ici, on ne joue pas, on se bat. Chaque mot-clé est une guerre de tranchées. IndHack vous donne les armes lourdes : Netlinking, Contenu, Technique. Prêt à détrôner les géants ?",
-        keyPoints: ["Guerre des mots-clés", "Netlinking Puissant", "Audit Technique Avancé"],
-        nearbyAreas: ["Boulogne", "Neuilly", "La Défense", "Levallois"],
-        landmarks: ["Tour Eiffel", "Louvre", "Champs-Élysées", "La Défense"],
-        images: {
-            hero: { src: "/images/cities/paris-tour-eiffel.jpg", alt: "Tour Eiffel Paris - Consultante SEO Paris", title: "Audit SEO Paris 75", keywords: ["SEO Paris", "référencement Paris", "consultant SEO Paris", "Tour Eiffel"] },
-            workspace: { src: "/images/cities/paris-marais.jpg", alt: "Le Marais Paris - Expert SEO Paris", title: "Référencement naturel Paris", keywords: ["audit SEO Paris", "Le Marais", "SEO Île-de-France"] },
-            landmark: { src: "/images/cities/paris-sacre-coeur.jpg", alt: "Sacré-Coeur Montmartre - SEO local Paris", title: "SEO local Paris 75", keywords: ["SEO local Paris", "Sacré-Coeur", "Montmartre"] }
-        }
-    },
-    {
-        name: "Boulogne-Billancourt",
-        slug: "consultant-seo-boulogne-billancourt",
-        zipCode: "92100",
-        lat: "48.8396",
-        lng: "2.2399",
-        region: "Île-de-France",
-        department: "Hauts-de-Seine",
-        population: "120 000",
-        description: "QG des médias et grands groupes. Pour exister à Boulogne, il faut être irréprochable. IndHack optimise votre présence corporate pour rassurer les décideurs et partenaires.",
-        keyPoints: ["SEO Corporate", "Gestion E-Réputation", "Visibilité B2B"],
-        nearbyAreas: ["Paris 16", "Issy-les-Moulineaux", "Saint-Cloud", "Sèvres"],
-        landmarks: ["La Seine Musicale", "Siège TF1", "Hôtel de Ville", "Longchamp"],
-        images: {
-            hero: { src: "/images/cities/boulogne-seine-musicale.jpg", alt: "Seine Musicale Boulogne-Billancourt - Consultante SEO Boulogne", title: "Audit SEO Boulogne-Billancourt 92", keywords: ["SEO Boulogne-Billancourt", "référencement Boulogne", "consultant SEO 92", "Seine Musicale"] },
-            workspace: { src: "/images/cities/boulogne-bureaux.jpg", alt: "Quartier d'affaires Boulogne - Expert SEO corporate", title: "Référencement B2B Boulogne-Billancourt", keywords: ["audit SEO corporate", "SEO B2B Boulogne", "Hauts-de-Seine"] },
-            landmark: { src: "/images/cities/boulogne-ile-seguin.jpg", alt: "Île Seguin Boulogne - SEO local Boulogne-Billancourt", title: "SEO local Boulogne-Billancourt 92", keywords: ["SEO local Boulogne", "Île Seguin", "médias TF1"] }
-        }
-    },
-    // Bretagne
-    {
-        name: "Rennes",
-        slug: "consultant-seo-rennes",
-        zipCode: "35000",
-        lat: "48.1173",
-        lng: "-1.6778",
-        region: "Bretagne",
-        department: "Ille-et-Vilaine",
-        population: "220 000",
-        description: "Terre de tech et d'innovation. À Rennes, si vous n'êtes pas digital, vous êtes mort. IndHack vous propulse au cœur de la French Tech bretonne avec un SEO propre, rapide et efficace.",
-        keyPoints: ["SEO Startup & Tech", "Acquisition Lead Gen", "Performance Web"],
-        nearbyAreas: ["Cesson-Sévigné", "Saint-Grégoire", "Chantepie", "Bruz"],
-        landmarks: ["Parlement", "Gare EuroRennes", "Le Mabilay", "Roazhon Park"],
-        images: {
-            hero: { src: "/images/cities/rennes-parlement.jpg", alt: "Parlement de Bretagne Rennes - Consultante SEO Rennes", title: "Audit SEO Rennes 35", keywords: ["SEO Rennes", "référencement Rennes", "consultant SEO Rennes", "Parlement Bretagne"] },
-            workspace: { src: "/images/cities/rennes-republique.jpg", alt: "Place de la République Rennes - Expert SEO Rennes", title: "Référencement naturel Rennes", keywords: ["audit SEO Rennes", "French Tech Rennes", "SEO Bretagne"] },
-            landmark: { src: "/images/cities/rennes-thabor.jpg", alt: "Parc du Thabor Rennes - SEO local Rennes", title: "SEO local Rennes 35", keywords: ["SEO local Rennes", "Thabor", "EuroRennes"] }
-        }
-    },
-    {
-        name: "Nantes",
-        slug: "consultant-seo-nantes",
-        zipCode: "44000",
-        lat: "47.2184",
-        lng: "-1.5536",
-        region: "Pays de la Loire",
-        department: "Loire-Atlantique",
-        population: "320 000",
-        description: "L'effervescence nantaise demande de l'agilité. Votre site doit être aussi créatif et dynamique que la ville. IndHack booste votre trafic avec des stratégies SEO qui sortent du lot.",
-        keyPoints: ["SEO Créatif", "Visibilité locale forte", "Trafic qualifié"],
-        nearbyAreas: ["Saint-Herblain", "Rezé", "Orvault", "Carquefou"],
-        landmarks: ["Les Machines", "Château des Ducs", "Tour Bretagne", "Passage Pommeraye"],
-        images: {
-            hero: { src: "/images/cities/nantes-machines.jpg", alt: "Les Machines de l'île Nantes - Consultante SEO Nantes", title: "Audit SEO Nantes 44", keywords: ["SEO Nantes", "référencement Nantes", "consultant SEO Nantes", "Machines de l'île"] },
-            workspace: { src: "/images/cities/nantes-chateau.jpg", alt: "Château des Ducs Nantes - Expert SEO Nantes", title: "Référencement naturel Nantes", keywords: ["audit SEO Nantes", "Château des Ducs", "SEO Loire-Atlantique"] },
-            landmark: { src: "/images/cities/nantes-passage-pommeraye.jpg", alt: "Passage Pommeraye Nantes - SEO local Nantes", title: "SEO local Nantes 44", keywords: ["SEO local Nantes", "Passage Pommeraye", "centre-ville Nantes"] }
-        }
-    },
-    // Lyon et Rhône-Alpes
     {
         name: "Lyon",
         slug: "consultant-seo-lyon",
@@ -252,54 +249,24 @@ export const FRENCH_CITIES: CityData[] = [
         lng: "4.8357",
         region: "Auvergne-Rhône-Alpes",
         department: "Rhône",
+        deptCode: "69",
         population: "520 000",
-        description: "De la Part-Dieu à Confluence, le business ne s'arrête jamais. Pour capter les lyonnais, fini le bricolage. IndHack met en place une infrastructure SEO solide pour sécuriser votre croissance.",
-        keyPoints: ["SEO E-commerce et Services", "Maillage local puissant", "Conversion"],
-        nearbyAreas: ["Villeurbanne", "Bron", "Vénissieux", "Caluire"],
-        landmarks: ["Fourvière", "Place Bellecour", "Parc de la Tête d'Or", "Les Halles"],
+        description: "Lyon, deuxième pôle économique français : de la Part-Dieu à Confluence, le business ne dort jamais. Gastronomie, industrie pharma, tech, textile... Chaque secteur a ses champions SEO. Pour émerger dans cette métropole exigeante, il faut une stratégie calibrée. IndHack vous la construit.",
+        keyPoints: ["Deuxième marché français", "Secteurs diversifiés", "Innovation et tradition"],
+        nearbyAreas: ["Villeurbanne", "Vénissieux", "Bron", "Caluire-et-Cuire"],
+        landmarks: ["Place Bellecour", "Fourvière", "Confluence", "Part-Dieu"],
         images: {
-            hero: { src: "/images/cities/lyon-fourviere.jpg", alt: "Basilique Fourvière Lyon - Consultante SEO Lyon", title: "Audit SEO Lyon 69", keywords: ["SEO Lyon", "référencement Lyon", "consultant SEO Lyon", "Fourvière"] },
-            workspace: { src: "/images/cities/lyon-bellecour.jpg", alt: "Place Bellecour Lyon - Expert SEO Lyon", title: "Référencement naturel Lyon", keywords: ["audit SEO Lyon", "Place Bellecour", "SEO Rhône-Alpes"] },
-            landmark: { src: "/images/cities/lyon-confluence.jpg", alt: "Confluence Lyon - SEO local Lyon", title: "SEO local Lyon 69", keywords: ["SEO local Lyon", "Confluence", "Part-Dieu"] }
-        }
-    },
-    {
-        name: "Grenoble",
-        slug: "consultant-seo-grenoble",
-        zipCode: "38000",
-        lat: "45.1885",
-        lng: "5.7245",
-        region: "Auvergne-Rhône-Alpes",
-        department: "Isère",
-        population: "160 000",
-        description: "Au pied des montagnes, l'excellence scientifique impose ses règles. Votre SEO doit être chirurgical. IndHack analyse, optimise et positionne votre site avec la précision d'un ingénieur.",
-        keyPoints: ["SEO Technique", "Audit de structure", "Contenu Expert"],
-        nearbyAreas: ["Meylan", "Echirolles", "Saint-Martin-d'Hères", "Sassenage"],
-        landmarks: ["La Bastille", "Téléphérique", "Caserne de Bonne", "Europole"],
-        images: {
-            hero: { src: "/images/cities/grenoble-bastille.jpg", alt: "La Bastille Grenoble - Consultante SEO Grenoble", title: "Audit SEO Grenoble 38", keywords: ["SEO Grenoble", "référencement Grenoble", "consultant SEO Grenoble", "La Bastille"] },
-            workspace: { src: "/images/cities/grenoble-alpes.jpg", alt: "Vue Alpes Grenoble - Expert SEO Grenoble", title: "Référencement naturel Grenoble", keywords: ["audit SEO Grenoble", "Alpes", "SEO Isère"] },
-            landmark: { src: "/images/cities/grenoble-telepherique.jpg", alt: "Téléphérique Grenoble - SEO local Grenoble", title: "SEO local Grenoble 38", keywords: ["SEO local Grenoble", "Téléphérique", "Europole"] }
-        }
-    },
-    // Sud-Ouest
-    {
-        name: "Toulouse",
-        slug: "consultant-seo-toulouse",
-        zipCode: "31000",
-        lat: "43.6047",
-        lng: "1.4442",
-        region: "Occitanie",
-        department: "Haute-Garonne",
-        population: "490 000",
-        description: "La Ville Rose est un géant économique. Ne restez pas dans l'ombre d'Airbus. IndHack fait décoller votre visibilité avec des techniques de référencement propulsées par la data.",
-        keyPoints: ["Décollage trafic", "Visibilité régionale", "Data-Driven SEO"],
-        nearbyAreas: ["Blagnac", "Colomiers", "Balma", "L'Union"],
-        landmarks: ["Capitole", "Quais de Garonne", "Cité de l'Espace", "Airbus"],
-        images: {
-            hero: { src: "/images/cities/toulouse-capitole.jpg", alt: "Place du Capitole Toulouse - Consultante SEO Toulouse", title: "Audit SEO Toulouse 31", keywords: ["SEO Toulouse", "référencement Toulouse", "consultant SEO Toulouse", "Capitole"] },
-            workspace: { src: "/images/cities/toulouse-garonne.jpg", alt: "Quais de Garonne Toulouse - Expert SEO Toulouse", title: "Référencement naturel Toulouse", keywords: ["audit SEO Toulouse", "Garonne", "SEO Occitanie"] },
-            landmark: { src: "/images/cities/toulouse-cite-espace.jpg", alt: "Cité de l'Espace Toulouse - SEO local Toulouse", title: "SEO local Toulouse 31", keywords: ["SEO local Toulouse", "Cité de l'Espace", "Airbus"] }
+            hero: { src: "/images/cities/lyon-bellecour.jpg", alt: "Consultante SEO Lyon Place Bellecour", title: "Audit SEO Lyon 69", keywords: ["SEO Lyon", "référencement Lyon"] },
+            workspace: { src: "/images/cities/lyon-fourviere.jpg", alt: "Expert SEO Lyon Fourvière", title: "Référencement naturel Lyon", keywords: ["audit SEO Lyon", "SEO Rhône"] },
+            landmark: { src: "/images/cities/lyon-confluence.jpg", alt: "SEO local Lyon Confluence", title: "SEO local Lyon 69", keywords: ["SEO local Lyon", "Confluence"] }
+        },
+        context: {
+            marketType: "volume",
+            competitionLevel: "extreme",
+            targetClients: "PME industrielles, restaurateurs étoilés, laboratoires pharmaceutiques, startups tech et commerces des pentes",
+            localInsight: "Le secteur gastronomie représente 15% des recherches locales — les bouchons lyonnais se battent sur Google",
+            specificChallenges: ["Marché ultra-concurrentiel", "Diversité sectorielle complexe", "Exigence qualité lyonnaise"],
+            businessTypes: ["Industrie", "Gastronomie", "Pharma/Santé", "Tech"]
         }
     },
     {
@@ -310,15 +277,52 @@ export const FRENCH_CITIES: CityData[] = [
         lng: "-0.5792",
         region: "Nouvelle-Aquitaine",
         department: "Gironde",
+        deptCode: "33",
         population: "260 000",
-        description: "Élégance et Business. À Bordeaux, on achète ce qui inspire confiance. IndHack polit votre autorité digitale pour que Google (et vos clients) vous voient comme le Grand Cru de votre secteur.",
-        keyPoints: ["Autorité de domaine", "Confiance et Preuve Sociale", "SEO Local Premium"],
+        description: "Bordeaux a muté en 10 ans : de belle endormie à métropole tech attractive. La LGV a amené les Parisiens, les startups ont fleuri à Darwin. Mais le vin reste roi. IndHack vous aide à exister dans cet écosystème unique où tradition et innovation se côtoient.",
+        keyPoints: ["Dynamisme économique", "Écosystème vin", "Tech en croissance"],
         nearbyAreas: ["Mérignac", "Pessac", "Talence", "Bègles"],
-        landmarks: ["Place de la Bourse", "Miroir d'eau", "Pont de Pierre", "Cité du Vin"],
+        landmarks: ["Place de la Bourse", "Miroir d'eau", "Cité du Vin", "Darwin"],
         images: {
-            hero: { src: "/images/cities/bordeaux-place-bourse.jpg", alt: "Place de la Bourse Bordeaux - Consultante SEO Bordeaux", title: "Audit SEO Bordeaux 33", keywords: ["SEO Bordeaux", "référencement Bordeaux", "consultant SEO Bordeaux", "Place de la Bourse"] },
-            workspace: { src: "/images/cities/bordeaux-miroir-eau.jpg", alt: "Miroir d'eau Bordeaux - Expert SEO Bordeaux", title: "Référencement naturel Bordeaux", keywords: ["audit SEO Bordeaux", "Miroir d'eau", "SEO Gironde"] },
-            landmark: { src: "/images/cities/bordeaux-cite-vin.jpg", alt: "Cité du Vin Bordeaux - SEO local Bordeaux", title: "SEO local Bordeaux 33", keywords: ["SEO local Bordeaux", "Cité du Vin", "Pont de Pierre"] }
+            hero: { src: "/images/cities/bordeaux-place-bourse.jpg", alt: "Consultante SEO Bordeaux Place de la Bourse", title: "Audit SEO Bordeaux 33", keywords: ["SEO Bordeaux", "référencement Bordeaux"] },
+            workspace: { src: "/images/cities/bordeaux-miroir-eau.jpg", alt: "Expert SEO Bordeaux Miroir d'eau", title: "Référencement naturel Bordeaux", keywords: ["audit SEO Bordeaux", "Gironde"] },
+            landmark: { src: "/images/cities/bordeaux-cite-vin.jpg", alt: "SEO local Bordeaux Cité du Vin", title: "SEO local Bordeaux 33", keywords: ["SEO local Bordeaux", "oenotourisme"] }
+        },
+        context: {
+            marketType: "premium",
+            competitionLevel: "high",
+            targetClients: "domaines viticoles, startups tech, agences immobilières et commerces du centre historique",
+            localInsight: "Les recherches 'vin Bordeaux' et 'oenotourisme' sont trustées par les grands châteaux — il faut une stratégie de niche",
+            specificChallenges: ["Secteur vin ultra-concurrentiel", "Arrivée massive de Parisiens", "Montée des prix immobiliers"],
+            businessTypes: ["Vin/Oenotourisme", "Tech/Startup", "Immobilier", "Commerce"]
+        }
+    },
+    {
+        name: "Toulouse",
+        slug: "consultant-seo-toulouse",
+        zipCode: "31000",
+        lat: "43.6047",
+        lng: "1.4442",
+        region: "Occitanie",
+        department: "Haute-Garonne",
+        deptCode: "31",
+        population: "490 000",
+        description: "Toulouse, capitale de l'aéronautique : Airbus, Thales, les sous-traitants... Un écosystème B2B titanesque. Mais la Ville Rose, c'est aussi les étudiants, les restos du Capitole, les commerces de Saint-Cyprien. IndHack maîtrise ces deux mondes.",
+        keyPoints: ["Pôle aéronautique mondial", "Vie étudiante intense", "Croissance démographique forte"],
+        nearbyAreas: ["Blagnac", "Colomiers", "Tournefeuille", "Balma"],
+        landmarks: ["Place du Capitole", "Pont Neuf", "Cité de l'Espace", "Basilique Saint-Sernin"],
+        images: {
+            hero: { src: "/images/cities/toulouse-capitole.jpg", alt: "Consultante SEO Toulouse Place du Capitole", title: "Audit SEO Toulouse 31", keywords: ["SEO Toulouse", "référencement Toulouse"] },
+            workspace: { src: "/images/cities/toulouse-garonne.jpg", alt: "Expert SEO Toulouse Garonne", title: "Référencement naturel Toulouse", keywords: ["audit SEO Toulouse", "Haute-Garonne"] },
+            landmark: { src: "/images/cities/toulouse-cite-espace.jpg", alt: "SEO local Toulouse Cité de l'Espace", title: "SEO local Toulouse 31", keywords: ["SEO local Toulouse", "aérospatial"] }
+        },
+        context: {
+            marketType: "tech",
+            competitionLevel: "high",
+            targetClients: "sous-traitants aéronautiques, ESN, startups, restaurateurs du centre et commerces de quartier",
+            localInsight: "Les donneurs d'ordres aéronautiques recherchent leurs fournisseurs en ligne — le SEO B2B est stratégique",
+            specificChallenges: ["Double marché B2B/B2C", "Concurrence ESN intense", "Croissance démographique rapide"],
+            businessTypes: ["Aéronautique", "ESN/Tech", "Commerce", "Restauration"]
         }
     },
     {
@@ -329,37 +333,27 @@ export const FRENCH_CITIES: CityData[] = [
         lng: "3.8767",
         region: "Occitanie",
         department: "Hérault",
+        deptCode: "34",
         population: "290 000",
-        description: "Jeune, rapide, digitale. Montpellier va vite. Si votre site est lent ou mal référencé, vous êtes déjà oublié. IndHack optimise la vitesse et la pertinence pour capturer cette audience volatile.",
-        keyPoints: ["Optimisation Mobile First", "Vitesse de chargement", "SEO Local Jeune"],
-        nearbyAreas: ["Lattes", "Castelnau", "Juvignac", "Mauguio"],
-        landmarks: ["L'Écusson", "Place de la Comédie", "Antigone", "Port Marianne"],
+        description: "Montpellier, la surdouée du Sud : croissance démographique record, pôle santé d'excellence, startups florissantes. La Comédie bruisse de vie, Antigone de modernité. Mais cette croissance attire aussi la concurrence. IndHack vous fait gagner la course au clic.",
+        keyPoints: ["Croissance record", "Pôle médical d'excellence", "Dynamisme startup"],
+        nearbyAreas: ["Castelnau-le-Lez", "Lattes", "Pérols", "Saint-Jean-de-Védas"],
+        landmarks: ["Place de la Comédie", "Écusson", "Antigone", "Faculté de Médecine"],
         images: {
-            hero: { src: "/images/cities/montpellier-comedie.jpg", alt: "Place de la Comédie Montpellier - Consultante SEO Montpellier", title: "Audit SEO Montpellier 34", keywords: ["SEO Montpellier", "référencement Montpellier", "consultant SEO Montpellier", "Place de la Comédie"] },
-            workspace: { src: "/images/cities/montpellier-antigone.jpg", alt: "Quartier Antigone Montpellier - Expert SEO Montpellier", title: "Référencement naturel Montpellier", keywords: ["audit SEO Montpellier", "Antigone", "SEO Hérault"] },
-            landmark: { src: "/images/cities/montpellier-ecusson.jpg", alt: "L'Écusson Montpellier - SEO local Montpellier", title: "SEO local Montpellier 34", keywords: ["SEO local Montpellier", "Écusson", "Port Marianne"] }
+            hero: { src: "/images/cities/montpellier-comedie.jpg", alt: "Consultante SEO Montpellier Place de la Comédie", title: "Audit SEO Montpellier 34", keywords: ["SEO Montpellier", "référencement Montpellier"] },
+            workspace: { src: "/images/cities/montpellier-ecusson.jpg", alt: "Expert SEO Montpellier Écusson", title: "Référencement naturel Montpellier", keywords: ["audit SEO Montpellier", "Hérault"] },
+            landmark: { src: "/images/cities/montpellier-antigone.jpg", alt: "SEO local Montpellier Antigone", title: "SEO local Montpellier 34", keywords: ["SEO local Montpellier", "Antigone"] }
+        },
+        context: {
+            marketType: "local",
+            competitionLevel: "high",
+            targetClients: "professionnels de santé, startups santé/biotech, commerces de l'Écusson et prestataires tourisme",
+            localInsight: "Le CHU et la Fac de Médecine génèrent un volume de recherches santé énorme — opportunité pour le paramédical",
+            specificChallenges: ["Croissance démographique = concurrence accrue", "Saturation secteur médical", "Saisonnalité balnéaire"],
+            businessTypes: ["Santé/Médical", "Biotech", "Commerce", "Tourisme"]
         }
     },
-    // Nord et Est
-    {
-        name: "Lille",
-        slug: "consultant-seo-lille",
-        zipCode: "59000",
-        lat: "50.6292",
-        lng: "3.0573",
-        region: "Hauts-de-France",
-        department: "Nord",
-        population: "235 000",
-        description: "Carrefour de l'Europe. La concurrence vient de partout (Paris, Bruxelles, Londres). Votre SEO doit être international et local à la fois. IndHack construit votre forteresse digitale.",
-        keyPoints: ["SEO Cross-border", "Commerce & Retail", "Visibilité Européenne"],
-        nearbyAreas: ["Roubaix", "Tourcoing", "Marcq-en-Barœul", "La Madeleine"],
-        landmarks: ["Grand Place", "Beffroi", "Citadelle", "Euralille"],
-        images: {
-            hero: { src: "/images/cities/lille-grand-place.jpg", alt: "Grand Place Lille - Consultante SEO Lille", title: "Audit SEO Lille 59", keywords: ["SEO Lille", "référencement Lille", "consultant SEO Lille", "Grand Place"] },
-            workspace: { src: "/images/cities/lille-vieux-lille.jpg", alt: "Vieux Lille - Expert SEO Lille", title: "Référencement naturel Lille", keywords: ["audit SEO Lille", "Vieux Lille", "SEO Nord"] },
-            landmark: { src: "/images/cities/lille-beffroi.jpg", alt: "Beffroi Lille - SEO local Lille", title: "SEO local Lille 59", keywords: ["SEO local Lille", "Beffroi", "Euralille"] }
-        }
-    },
+    // VILLES RÉGIONALES - MARCHÉS LOCAUX SPÉCIFIQUES
     {
         name: "Strasbourg",
         slug: "consultant-seo-strasbourg",
@@ -368,22 +362,199 @@ export const FRENCH_CITIES: CityData[] = [
         lng: "7.7521",
         region: "Grand Est",
         department: "Bas-Rhin",
+        deptCode: "67",
         population: "285 000",
-        description: "Rigueur et efficacité. Strasbourg ne tolère pas l'amateurisme. IndHack audite, corrige et propulse votre site avec une méthodologie carrée. Résultats mesurables, croissance durable.",
-        keyPoints: ["SEO Structuré", "Reporting précis", "Croissance long terme"],
-        nearbyAreas: ["Schiltigheim", "Illkirch", "Bischheim", "Kehl"],
-        landmarks: ["Cathédrale", "Petite France", "Parlement Européen", "Neustadt"],
+        description: "Strasbourg, capitale européenne : entre France et Allemagne, la ville joue sur deux tableaux. Le Parlement européen attire un business institutionnel, la Petite France les touristes. IndHack optimise votre visibilité sur ces deux marchés linguistiques.",
+        keyPoints: ["Carrefour européen", "Bilinguisme FR/DE", "Institutions internationales"],
+        nearbyAreas: ["Schiltigheim", "Illkirch", "Lingolsheim", "Hoenheim"],
+        landmarks: ["Cathédrale Notre-Dame", "Petite France", "Parlement Européen", "Place Kléber"],
         images: {
-            hero: { src: "/images/cities/strasbourg-cathedrale.jpg", alt: "Cathédrale Strasbourg - Consultante SEO Strasbourg", title: "Audit SEO Strasbourg 67", keywords: ["SEO Strasbourg", "référencement Strasbourg", "consultant SEO Strasbourg", "Cathédrale"] },
-            workspace: { src: "/images/cities/strasbourg-petite-france.jpg", alt: "Petite France Strasbourg - Expert SEO Strasbourg", title: "Référencement naturel Strasbourg", keywords: ["audit SEO Strasbourg", "Petite France", "SEO Grand Est"] },
-            landmark: { src: "/images/cities/strasbourg-parlement.jpg", alt: "Parlement Européen Strasbourg - SEO local Strasbourg", title: "SEO local Strasbourg 67", keywords: ["SEO local Strasbourg", "Parlement Européen", "Neustadt"] }
+            hero: { src: "/images/cities/strasbourg-cathedrale.jpg", alt: "Consultante SEO Strasbourg Cathédrale", title: "Audit SEO Strasbourg 67", keywords: ["SEO Strasbourg", "référencement Strasbourg"] },
+            workspace: { src: "/images/cities/strasbourg-petite-france.jpg", alt: "Expert SEO Strasbourg Petite France", title: "Référencement naturel Strasbourg", keywords: ["audit SEO Strasbourg", "Alsace"] },
+            landmark: { src: "/images/cities/strasbourg-parlement.jpg", alt: "SEO local Strasbourg Parlement Européen", title: "SEO local Strasbourg 67", keywords: ["SEO local Strasbourg", "Europe"] }
+        },
+        context: {
+            marketType: "local",
+            competitionLevel: "medium",
+            targetClients: "entreprises transfrontalières, commerces de la Grande Île, prestataires tourisme et professionnels des institutions",
+            localInsight: "30% des recherches sont en allemand — le SEO bilingue est un avantage concurrentiel majeur",
+            specificChallenges: ["SEO bilingue FR/DE obligatoire", "Concurrence allemande", "Marché institutionnel spécifique"],
+            businessTypes: ["International/Export", "Tourisme", "Commerce local", "Institutionnel"]
+        }
+    },
+    {
+        name: "Nantes",
+        slug: "consultant-seo-nantes",
+        zipCode: "44000",
+        lat: "47.2184",
+        lng: "-1.5536",
+        region: "Pays de la Loire",
+        department: "Loire-Atlantique",
+        deptCode: "44",
+        population: "320 000",
+        description: "Nantes, la créative : des Machines de l'Île au Web2Day, la ville cultive l'innovation. L'écosystème tech grandit, les agences digitales pullulent. Pour se démarquer à Nantes, il faut de l'audace et de la méthode. IndHack apporte les deux.",
+        keyPoints: ["Écosystème créatif", "Tech en croissance", "Qualité de vie attractive"],
+        nearbyAreas: ["Saint-Herblain", "Rezé", "Orvault", "Vertou"],
+        landmarks: ["Château des Ducs", "Machines de l'Île", "Passage Pommeraye", "Île de Nantes"],
+        images: {
+            hero: { src: "/images/cities/nantes-chateau.jpg", alt: "Consultante SEO Nantes Château des Ducs", title: "Audit SEO Nantes 44", keywords: ["SEO Nantes", "référencement Nantes"] },
+            workspace: { src: "/images/cities/nantes-machines.jpg", alt: "Expert SEO Nantes Machines de l'Île", title: "Référencement naturel Nantes", keywords: ["audit SEO Nantes", "Loire-Atlantique"] },
+            landmark: { src: "/images/cities/nantes-passage-pommeraye.jpg", alt: "SEO local Nantes Passage Pommeraye", title: "SEO local Nantes 44", keywords: ["SEO local Nantes", "créatif"] }
+        },
+        context: {
+            marketType: "local",
+            competitionLevel: "medium",
+            targetClients: "startups créatives, agences digitales, commerces de centre-ville et prestataires événementiels",
+            localInsight: "La scène tech nantaise est soudée — les recommandations comptent autant que le SEO",
+            specificChallenges: ["Concurrence agences digitales locale", "Marché en forte croissance", "Attractivité = nouveaux entrants"],
+            businessTypes: ["Digital/Créatif", "Tech", "Commerce", "Événementiel"]
+        }
+    },
+    {
+        name: "Rennes",
+        slug: "consultant-seo-rennes",
+        zipCode: "35000",
+        lat: "48.1173",
+        lng: "-1.6778",
+        region: "Bretagne",
+        department: "Ille-et-Vilaine",
+        deptCode: "35",
+        population: "220 000",
+        description: "Rennes, capitale bretonne et pôle tech : French Tech, cybersécurité, agrotech... La ville forme et retient ses talents. Les ESN et startups se disputent les développeurs ET les clients. IndHack vous aide à capter ce marché tech breton en pleine ébullition.",
+        keyPoints: ["French Tech Rennes", "Cybersécurité", "Bassin d'emploi tech"],
+        nearbyAreas: ["Cesson-Sévigné", "Saint-Grégoire", "Chantepie", "Bruz"],
+        landmarks: ["Parlement de Bretagne", "Place de la République", "Parc du Thabor", "Les Champs Libres"],
+        images: {
+            hero: { src: "/images/cities/rennes-parlement.jpg", alt: "Consultante SEO Rennes Parlement de Bretagne", title: "Audit SEO Rennes 35", keywords: ["SEO Rennes", "référencement Rennes"] },
+            workspace: { src: "/images/cities/rennes-republique.jpg", alt: "Expert SEO Rennes Place de la République", title: "Référencement naturel Rennes", keywords: ["audit SEO Rennes", "Bretagne"] },
+            landmark: { src: "/images/cities/rennes-thabor.jpg", alt: "SEO local Rennes Parc du Thabor", title: "SEO local Rennes 35", keywords: ["SEO local Rennes", "tech"] }
+        },
+        context: {
+            marketType: "tech",
+            competitionLevel: "medium",
+            targetClients: "ESN, startups cybersécurité, éditeurs de logiciels et professionnels du recrutement tech",
+            localInsight: "La guerre des talents tech fait rage — le SEO marque employeur est stratégique pour les ESN",
+            specificChallenges: ["Concurrence recrutement tech", "Écosystème soudé", "Marque employeur critique"],
+            businessTypes: ["ESN", "Cybersécurité", "Recrutement", "Agrotech"]
+        }
+    },
+    {
+        name: "Lille",
+        slug: "consultant-seo-lille",
+        zipCode: "59000",
+        lat: "50.6292",
+        lng: "3.0573",
+        region: "Hauts-de-France",
+        department: "Nord",
+        deptCode: "59",
+        population: "235 000",
+        description: "Lille, carrefour de l'Europe du Nord : à 1h de Paris, Londres et Bruxelles. Le commerce et la grande distribution sont rois, l'e-commerce explose. IndHack vous positionne sur ce marché transfrontalier où la proximité de la Belgique change la donne.",
+        keyPoints: ["Carrefour européen", "Commerce et grande distribution", "E-commerce puissant"],
+        nearbyAreas: ["Roubaix", "Tourcoing", "Villeneuve-d'Ascq", "Marcq-en-Barœul"],
+        landmarks: ["Grand'Place", "Vieux-Lille", "Beffroi", "Euralille"],
+        images: {
+            hero: { src: "/images/cities/lille-grand-place.jpg", alt: "Consultante SEO Lille Grand'Place", title: "Audit SEO Lille 59", keywords: ["SEO Lille", "référencement Lille"] },
+            workspace: { src: "/images/cities/lille-vieux-lille.jpg", alt: "Expert SEO Lille Vieux-Lille", title: "Référencement naturel Lille", keywords: ["audit SEO Lille", "Nord"] },
+            landmark: { src: "/images/cities/lille-beffroi.jpg", alt: "SEO local Lille Beffroi", title: "SEO local Lille 59", keywords: ["SEO local Lille", "Hauts-de-France"] }
+        },
+        context: {
+            marketType: "volume",
+            competitionLevel: "high",
+            targetClients: "e-commerçants, enseignes retail, grossistes et commerces transfrontaliers",
+            localInsight: "La proximité belge crée un marché unique — les recherches cross-border sont une opportunité",
+            specificChallenges: ["Concurrence e-commerce massive", "Marché transfrontalier complexe", "Pression grande distribution"],
+            businessTypes: ["E-commerce", "Retail", "Distribution", "Commerce transfrontalier"]
+        }
+    },
+    {
+        name: "Grenoble",
+        slug: "consultant-seo-grenoble",
+        zipCode: "38000",
+        lat: "45.1885",
+        lng: "5.7245",
+        region: "Auvergne-Rhône-Alpes",
+        department: "Isère",
+        deptCode: "38",
+        population: "160 000",
+        description: "Grenoble, capitale des Alpes et de l'innovation : CEA, CNRS, startup deeptech... La recherche scientifique irrigue l'économie. Le ski génère un tourisme massif. IndHack maîtrise ce double marché tech pointu et tourisme outdoor.",
+        keyPoints: ["Pôle recherche mondial", "Tourisme montagne", "Innovation deeptech"],
+        nearbyAreas: ["Saint-Martin-d'Hères", "Échirolles", "Fontaine", "Meylan"],
+        landmarks: ["Fort de la Bastille", "Téléphérique", "Musée de Grenoble", "Parc Paul Mistral"],
+        images: {
+            hero: { src: "/images/cities/grenoble-bastille.jpg", alt: "Consultante SEO Grenoble Bastille", title: "Audit SEO Grenoble 38", keywords: ["SEO Grenoble", "référencement Grenoble"] },
+            workspace: { src: "/images/cities/grenoble-telepherique.jpg", alt: "Expert SEO Grenoble Téléphérique", title: "Référencement naturel Grenoble", keywords: ["audit SEO Grenoble", "Isère"] },
+            landmark: { src: "/images/cities/grenoble-alpes.jpg", alt: "SEO local Grenoble Alpes", title: "SEO local Grenoble 38", keywords: ["SEO local Grenoble", "montagne"] }
+        },
+        context: {
+            marketType: "tech",
+            competitionLevel: "medium",
+            targetClients: "startups deeptech, laboratoires de recherche, prestataires ski et équipementiers outdoor",
+            localInsight: "Les recherches 'station ski + nom' représentent un volume énorme en hiver — saisonnalité forte",
+            specificChallenges: ["Double marché tech/tourisme", "Saisonnalité ski prononcée", "Concurrence stations alpines"],
+            businessTypes: ["Deeptech", "Recherche", "Outdoor/Ski", "Tourisme montagne"]
+        }
+    },
+    {
+        name: "Paris",
+        slug: "consultant-seo-paris",
+        zipCode: "75000",
+        lat: "48.8566",
+        lng: "2.3522",
+        region: "Île-de-France",
+        department: "Paris",
+        deptCode: "75",
+        population: "2 100 000",
+        description: "Paris : 2 millions d'habitants, des milliers d'entreprises, une concurrence digitale sans merci. Ici, tout le monde fait du SEO. Les agences pullulent, les budgets explosent. Pour émerger dans la capitale, il faut une stratégie chirurgicale. IndHack vous l'offre.",
+        keyPoints: ["Marché hyper-concurrentiel", "Tous secteurs représentés", "Budget SEO élevés"],
+        nearbyAreas: ["Boulogne-Billancourt", "Neuilly-sur-Seine", "Levallois-Perret", "Montreuil"],
+        landmarks: ["Tour Eiffel", "Champs-Élysées", "Montmartre", "Le Marais"],
+        images: {
+            hero: { src: "/images/cities/paris-tour-eiffel.jpg", alt: "Consultante SEO Paris Tour Eiffel", title: "Audit SEO Paris 75", keywords: ["SEO Paris", "référencement Paris"] },
+            workspace: { src: "/images/cities/paris-sacre-coeur.jpg", alt: "Expert SEO Paris Montmartre", title: "Référencement naturel Paris", keywords: ["audit SEO Paris", "Île-de-France"] },
+            landmark: { src: "/images/cities/paris-marais.jpg", alt: "SEO local Paris Le Marais", title: "SEO local Paris 75", keywords: ["SEO local Paris", "capitale"] }
+        },
+        context: {
+            marketType: "volume",
+            competitionLevel: "extreme",
+            targetClients: "startups, PME tous secteurs, commerces de quartier et professionnels libéraux",
+            localInsight: "Le SEO local par arrondissement est une stratégie gagnante — 'plombier 15ème' vs 'plombier Paris'",
+            specificChallenges: ["Concurrence maximale tous secteurs", "Budgets SEO très élevés", "Saturation des SERP"],
+            businessTypes: ["Tous secteurs", "Startup", "Commerce local", "Professions libérales"]
+        }
+    },
+    {
+        name: "Boulogne-Billancourt",
+        slug: "consultant-seo-boulogne-billancourt",
+        zipCode: "92100",
+        lat: "48.8352",
+        lng: "2.2407",
+        region: "Île-de-France",
+        department: "Hauts-de-Seine",
+        deptCode: "92",
+        population: "120 000",
+        description: "Boulogne-Billancourt, première ville du 92 : TF1, Canal+, les sièges sociaux s'alignent. Médias, production audiovisuelle, agences de com... IndHack vous positionne dans cet écosystème médiatique exigeant où l'image est reine.",
+        keyPoints: ["Capitale des médias", "Sièges sociaux majeurs", "Proximité Paris"],
+        nearbyAreas: ["Issy-les-Moulineaux", "Sèvres", "Saint-Cloud", "Meudon"],
+        landmarks: ["Seine Musicale", "Île Seguin", "Tour TF1", "Parc de Saint-Cloud"],
+        images: {
+            hero: { src: "/images/cities/boulogne-seine-musicale.jpg", alt: "Consultante SEO Boulogne-Billancourt Seine Musicale", title: "Audit SEO Boulogne 92", keywords: ["SEO Boulogne-Billancourt", "référencement 92"] },
+            workspace: { src: "/images/cities/boulogne-ile-seguin.jpg", alt: "Expert SEO Boulogne Île Seguin", title: "Référencement naturel Boulogne", keywords: ["audit SEO Boulogne", "Hauts-de-Seine"] },
+            landmark: { src: "/images/cities/boulogne-bureaux.jpg", alt: "SEO local Boulogne bureaux", title: "SEO local Boulogne 92", keywords: ["SEO local Boulogne", "médias"] }
+        },
+        context: {
+            marketType: "premium",
+            competitionLevel: "high",
+            targetClients: "agences de production, sociétés de médias, agences de communication et prestataires audiovisuels",
+            localInsight: "L'écosystème médias génère des recherches B2B spécifiques — 'production vidéo Boulogne' est ultra-qualifié",
+            specificChallenges: ["Marché B2B médias spécifique", "Concurrence agences parisiennes", "Clients exigeants"],
+            businessTypes: ["Médias", "Production audiovisuelle", "Communication", "Agences"]
         }
     }
 ];
 
 // Helper functions
 export function getCityBySlug(slug: string): CityData | undefined {
-    return FRENCH_CITIES.find(city => city.slug === slug);
+    return FRENCH_CITIES.find(city => city.slug === slug || city.slug === `consultant-seo-${slug}`);
 }
 
 export function getAllCitySlugs(): string[] {
@@ -394,10 +565,9 @@ export function getCitiesByRegion(region: string): CityData[] {
     return FRENCH_CITIES.filter(city => city.region === region);
 }
 
-export function getNearbyCities(cityName: string, limit = 4): CityData[] {
+export function getNearbyCities(cityName: string, limit: number = 4): CityData[] {
     const city = FRENCH_CITIES.find(c => c.name === cityName);
     if (!city) return [];
-
     return FRENCH_CITIES
         .filter(c => c.name !== cityName && c.region === city.region)
         .slice(0, limit);
@@ -413,7 +583,7 @@ export const SERVICES_FOR_CITIES = [
     { name: "Référencement Local", slug: "seo-local" }
 ];
 
-// Sub-services for semantic cocoon (Fille Tier 2)
+// Interface pour les services
 export interface CityServiceData {
     slug: string;
     title: string;
@@ -423,308 +593,510 @@ export interface CityServiceData {
     heroSubtitle: string;
     category: string;
     parentService: string;
-    h2Sections: {
-        title: string;
-        content: string;
-        bullets?: string[];
-    }[];
-    methodology: {
-        step: string;
-        title: string;
-        desc: string;
-    }[];
-    faq: {
-        question: string;
-        answer: string;
-    }[];
+    getContent: (city: CityData) => {
+        h2Sections: { title: string; content: string; bullets?: string[] }[];
+        methodology: { step: string; title: string; desc: string }[];
+        faq: { question: string; answer: string }[];
+    };
     semanticKeywords: string[];
 }
 
+// Fonction pour générer les liens internes avec ancres variées
+function getInternalLinks(city: CityData, serviceType: string): { motherLink: string; homeLink: string } {
+    const anchors = {
+        mother: [
+            `consultante SEO à ${city.name}`,
+            `experte SEO ${city.name}`,
+            `spécialiste référencement ${city.name}`,
+            `accompagnement SEO ${city.name}`
+        ],
+        home: [
+            "consultante SEO freelance",
+            "experte en référencement naturel",
+            "spécialiste SEO",
+            "stratégie de visibilité Google"
+        ]
+    };
+
+    // Varier selon le service pour éviter les ancres identiques
+    const serviceIndex = serviceType === "audit-technique" ? 0 : serviceType === "creation-site-web" ? 1 : 2;
+    const motherAnchor = anchors.mother[serviceIndex % anchors.mother.length];
+    const homeAnchor = anchors.home[(serviceIndex + 1) % anchors.home.length];
+
+    return {
+        motherLink: `<a href="/${city.slug}" class="text-sauge font-semibold hover:underline">${motherAnchor}</a>`,
+        homeLink: `<a href="/consultant-seo" class="text-sauge font-semibold hover:underline">${homeAnchor}</a>`
+    };
+}
+
+// SERVICES AVEC CONTENU 100% UNIQUE PAR VILLE
 export const CITY_SERVICES: Record<string, CityServiceData> = {
     "audit-technique": {
         slug: "audit-technique",
         title: "Audit Technique SEO",
-        metaTitle: "Audit Technique SEO {city} {deptCode} - INDHACK - Consultante SEO",
-        metaDescription: "Consultante SEO freelance à {city} ({deptCode}). Mon audit technique révèle ce qui bloque votre visibilité Google près de {landmark1}. Diagnostic gratuit.",
+        metaTitle: "Audit Technique SEO {city} - Diagnostic Complet | INDHACK",
+        metaDescription: "Audit technique SEO à {city}. Diagnostic complet de votre site : indexation, vitesse, mobile. Recommandations priorisées par impact business.",
         heroTitle: "Audit Technique SEO à {city}",
-        heroSubtitle: "Votre entreprise à {city} mérite d'être visible sur Google. J'analyse l'infrastructure technique de votre site pour identifier ce qui freine votre référencement dans le {deptCode}.",
+        heroSubtitle: "Diagnostic technique complet pour les entreprises de {city}",
         category: "Audit Technique",
         parentService: "/audit-seo",
-        h2Sections: [
-            {
-                title: "Audit technique SEO à {city} : mon approche",
-                content: "En tant que <a href=\"/{citySlug}\" class=\"text-sauge font-bold hover:underline\">consultante SEO à {city}</a> et <a href=\"/consultant-seo\" class=\"text-sauge font-bold hover:underline\">experte en référencement naturel</a>, j'accompagne les entreprises du {department} avec des <strong>audits techniques</strong> sur-mesure.<br/><br/>Que vous soyez basé près de {landmark1} ou dans les environs de {nearbyAreas}, votre site doit performer techniquement pour attirer les {population} habitants de {city} qui recherchent vos services sur Google.<br/><br/>L'<strong>audit technique SEO</strong> est la radiographie de votre site. Il révèle ce qui empêche Google de crawler et positionner vos pages correctement. Ma méthode va au-delà des rapports automatisés : je priorise par <strong>impact business réel</strong>.",
-                bullets: [
-                    "Analyse approfondie de l'<strong>indexation</strong> via <strong>Google Search Console</strong> : pages indexées, exclues, erreurs de couverture pour les recherches \"{city}\"",
-                    "<strong>Crawl complet</strong> avec <strong>Screaming Frog</strong> : budget crawl, erreurs 4xx/5xx, redirections — optimisé pour le référencement local {deptCode}",
-                    "Mesure des <strong>Core Web Vitals</strong> : <strong>LCP</strong>, <strong>FID</strong>, <strong>CLS</strong> — critères essentiels pour surpasser vos concurrents à {city}",
-                    "Audit du <strong>maillage interne</strong> : structure d'URL, profondeur de page, distribution du <strong>PageRank</strong> vers vos pages stratégiques",
-                    "Vérification des <strong>balises meta</strong> optimisées pour {city} : title, description, hiérarchie Hn, données structurées <strong>LocalBusiness</strong>"
-                ]
-            },
-            {
-                title: "Les 6 piliers de mon audit technique à {city}",
-                content: "Mon approche d'<strong>audit technique SEO</strong> pour les entreprises de {city} et {region} est structurée autour de 6 piliers essentiels. Chaque recommandation est priorisée selon son <strong>impact réel</strong> sur votre visibilité locale.<br/><br/>Mon expertise de consultante freelance dans le {deptCode} me permet d'aller au-delà des outils : je comprends les spécificités du marché de {city} et je traduis cette connaissance en actions concrètes.",
-                bullets: [
-                    "<strong>Indexation Google</strong> : Vos pages ciblant {city} sont-elles indexées ? J'identifie les problèmes de <strong>noindex</strong>, <strong>canonical</strong> et <strong>crawl budget</strong> gaspillé.",
-                    "<strong>Crawlabilité</strong> : Google accède-t-il à votre contenu stratégique ? Je détecte les blocages <strong>robots.txt</strong>, erreurs JavaScript et <strong>pages orphelines</strong>.",
-                    "<strong>Vitesse de chargement</strong> : Les <strong>Core Web Vitals</strong> sont un facteur de ranking direct. J'optimise pour les connexions mobiles utilisées autour de {landmark2}.",
-                    "<strong>Architecture du site</strong> : <strong>Profondeur de page</strong>, <strong>maillage interne</strong>, <strong>cocon sémantique</strong> adapté à votre activité dans le {department}.",
-                    "<strong>Balisage HTML</strong> : <strong>Balises title</strong> intégrant {city}, <strong>meta descriptions</strong> incitatives, structure <strong>Hn</strong> cohérente.",
-                    "<strong>Mobile-First</strong> : Google indexe la version mobile. Je vérifie le <strong>responsive design</strong> et l'<strong>UX mobile</strong> pour les utilisateurs de {city}."
-                ]
-            },
-            {
-                title: "Pourquoi choisir mon expertise à {city} ?",
-                content: "Contrairement aux agences qui délèguent à des juniors, <strong>je réalise personnellement chaque audit</strong>. Vous travaillez directement avec moi, sans intermédiaire.<br/><br/>Les outils automatisés génèrent des centaines d'alertes sans contexte local. Mon expertise du marché de {city} et de {region} me permet de distinguer les <strong>erreurs critiques</strong> des faux positifs.<br/><br/>J'accompagne des entreprises de {city}, {nearbyAreas} et tout le {department} avec une approche sur-mesure. Pas de packages standardisés : une <strong>stratégie adaptée</strong> à votre contexte, vos concurrents locaux et vos objectifs de croissance.",
-            },
-            {
-                title: "Erreurs techniques fréquentes à {city}",
-                content: "Au fil de mes missions auprès d'entreprises de {city}, {nearbyAreas} et plus largement en {region}, j'ai identifié les problèmes techniques récurrents :",
-                bullets: [
-                    "<strong>Pages zombies</strong> : contenus obsolètes qui diluent votre <strong>crawl budget</strong> et votre autorité sur les requêtes \"{city}\"",
-                    "<strong>Contenu dupliqué</strong> : balises <strong>canonical</strong> mal configurées, versions HTTP/HTTPS ou www/non-www accessibles",
-                    "<strong>Vitesse catastrophique</strong> : images non optimisées, JavaScript render-blocking — problème critique pour le mobile dans le {deptCode}",
-                    "<strong>Maillage interne défaillant</strong> : pages importantes à 4+ clics, liens cassés, <strong>ancres</strong> non optimisées pour le SEO local",
-                    "<strong>Mobile non optimisé</strong> : texte trop petit, éléments cliquables trop proches — 70% des recherches \"{city}\" sont mobiles",
-                    "<strong>Données structurées absentes</strong> : pas de <strong>schema.org LocalBusiness</strong> pour apparaître dans le Pack Local de {city}"
-                ]
+        getContent: (city: CityData) => {
+            const links = getInternalLinks(city, "audit-technique");
+            const isLuxury = city.context.marketType === "luxury" || city.context.marketType === "premium";
+            const isTech = city.context.marketType === "tech";
+            const isVolume = city.context.marketType === "volume";
+
+            // Contenu adapté au type de marché
+            let approachContent = "";
+            let challengesContent = "";
+            let whyMeContent = "";
+            let errorsContent = "";
+
+            if (isLuxury) {
+                approachContent = `En tant que ${links.motherLink} et ${links.homeLink}, j'accompagne les ${city.context.targetClients} avec des audits techniques d'une précision chirurgicale.<br/><br/>Sur un marché comme ${city.name} où ${city.context.localInsight.toLowerCase()}, la moindre erreur technique se paie cash. Un temps de chargement supérieur à 2 secondes ? Vos prospects fortunés sont déjà chez votre concurrent. Une page non indexée ? C'est du chiffre d'affaires qui s'évapore.<br/><br/>Mon audit va au-delà des outils automatisés. J'intègre la <strong>dimension premium</strong> de votre marché : expérience utilisateur irréprochable, performances mobiles optimales pour une clientèle exigeante, données structurées adaptées aux recherches haut de gamme.`;
+
+                challengesContent = `Le marché ${city.name} a ses exigences propres. ${city.context.specificChallenges.join(". ")}. Mon audit intègre ces spécificités :<br/><br/>J'analyse votre site sous l'angle de votre clientèle ${city.context.targetClients.split(",")[0]} : vitesse perçue, qualité d'affichage des visuels, fluidité de navigation sur les appareils premium. Chaque recommandation est priorisée par <strong>impact sur votre image de marque</strong> autant que sur votre référencement.`;
+
+                whyMeContent = `Les agences facturent des audits standards entre <strong>3 000€ et 8 000€</strong> sans comprendre les subtilités d'un marché premium comme ${city.name}. Elles appliquent des grilles génériques inadaptées à votre clientèle.<br/><br/>Je propose une approche sur-mesure avec un tarif ajusté à la taille de votre site et vos enjeux. Premier diagnostic gratuit pour évaluer vos besoins réels.`;
+
+                errorsContent = `Après des dizaines d'audits pour des entreprises de ${city.name} et ${city.nearbyAreas.slice(0, 2).join(", ")}, j'ai identifié les erreurs récurrentes sur ce marché premium`;
+            } else if (isTech) {
+                approachContent = `En tant que ${links.motherLink} et ${links.homeLink}, j'accompagne les ${city.context.targetClients} avec une approche technique de haut niveau.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Votre site doit être techniquement irréprochable pour générer des leads B2B qualifiés. Mon audit va au-delà du SEO classique : j'analyse l'architecture de votre stack, l'impact de vos choix technologiques sur le crawl, et je parle le même langage que vos équipes dev.<br/><br/>JavaScript rendering, API-first, SPA/SSR... Je maîtrise les problématiques techniques des sites modernes et je traduis mes recommandations en tickets actionnables pour vos développeurs.`;
+
+                challengesContent = `L'écosystème tech de ${city.name} a ses spécificités. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon audit intègre ces réalités : temps de cycle de vente long impliquant du contenu éducatif indexé, architecture de site adaptée au parcours B2B, données structurées pour les recherches techniques. Je ne fais pas du SEO "marketing" mais du <strong>SEO technique pour équipes tech</strong>.`;
+
+                whyMeContent = `Les agences généralistes ne comprennent pas vos enjeux. Elles confondent site vitrine et application SaaS, e-commerce B2C et génération de leads B2B.<br/><br/>Les grandes agences tech facturent entre <strong>5 000€ et 15 000€</strong> des audits parfois surdimensionnés. Je propose un diagnostic adapté à votre maturité technique avec un budget rationnel.`;
+
+                errorsContent = `Après avoir audité des dizaines de sites tech à ${city.name}, ${city.nearbyAreas[0]} et dans tout le ${city.department}, j'ai identifié les problèmes récurrents`;
+            } else if (isVolume) {
+                approachContent = `En tant que ${links.motherLink} et ${links.homeLink}, j'accompagne les ${city.context.targetClients} dans un marché où la visibilité est une question de survie.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Avec ${city.population} habitants et une concurrence féroce dans tous les secteurs, les erreurs techniques sont fatales. Pendant que vous perdez des positions, vos concurrents captent vos clients potentiels.<br/><br/>Mon audit est conçu pour ce contexte hyper-concurrentiel : identification rapide des quick wins, priorisation par impact business immédiat, focus sur le SEO local qui fait la différence dans une ville de cette taille.`;
+
+                challengesContent = `${city.name} est un champ de bataille digital. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon audit intègre la réalité du terrain : analyse comparative avec vos concurrents directs, focus sur le Pack Local Google qui capte 40% des clics, optimisation pour les recherches "près de moi" qui explosent. Pas de théorie, des <strong>actions concrètes pour prendre des parts de marché</strong>.`;
+
+                whyMeContent = `À ${city.name}, les agences facturent cher pour des audits génériques. Entre <strong>2 000€ et 6 000€</strong> pour des PDF de 100 pages que personne ne lit.<br/><br/>Je propose un diagnostic focalisé sur vos enjeux réels avec un investissement proportionné à votre situation. L'objectif : des résultats visibles rapidement, pas un rapport qui prend la poussière.`;
+
+                errorsContent = `Sur un marché aussi concurrentiel que ${city.name}, j'ai identifié les erreurs qui coûtent le plus cher aux entreprises locales`;
+            } else {
+                // Marché local standard
+                approachContent = `En tant que ${links.motherLink} et ${links.homeLink}, j'accompagne les ${city.context.targetClients} avec un audit technique adapté à votre réalité locale.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Les ${city.population} habitants de votre zone de chalandise recherchent vos services sur Google. Mon audit identifie ce qui vous empêche d'apparaître devant eux.<br/><br/>Pas de jargon inutile ni de recommandations impossibles à mettre en œuvre. Je priorise les actions par <strong>impact sur votre visibilité locale</strong> et votre capacité réelle à les implémenter.`;
+
+                challengesContent = `Le marché ${city.name} a ses particularités. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon audit prend en compte ces spécificités : analyse de votre présence sur le Pack Local, optimisation pour les recherches "${city.name} + votre activité", maillage avec les villes proches comme ${city.nearbyAreas.slice(0, 2).join(" et ")}.`;
+
+                whyMeContent = `Les agences digitales de ${city.region} facturent leurs audits entre <strong>1 500€ et 4 000€</strong>, souvent pour des rapports standardisés qui ne tiennent pas compte de votre marché.<br/><br/>Je propose un diagnostic personnalisé avec un budget adapté à votre structure. Premier échange gratuit pour comprendre vos enjeux.`;
+
+                errorsContent = `Au fil de mes missions auprès d'entreprises de ${city.name} et ${city.nearbyAreas.slice(0, 2).join(", ")}, j'ai identifié les problèmes techniques les plus fréquents`;
             }
-        ],
-        methodology: [
-            { step: "01", title: "Crawl Complet", desc: "J'analyse votre site avec <strong>Screaming Frog</strong> pour identifier les erreurs techniques, pages orphelines et problèmes de structure affectant votre visibilité à {city}." },
-            { step: "02", title: "Analyse Search Console", desc: "J'exploite vos données <strong>Google Search Console</strong> : couverture d'indexation, performances sur les requêtes \"{city}\", CTR et positions moyennes." },
-            { step: "03", title: "Core Web Vitals", desc: "Je mesure <strong>LCP</strong>, <strong>FID</strong> et <strong>CLS</strong> sur vos pages clés avec <strong>PageSpeed Insights</strong> pour optimiser l'expérience mobile dans le {deptCode}." },
-            { step: "04", title: "Rapport & Roadmap", desc: "Je livre un <strong>rapport de 20+ pages</strong> avec recommandations priorisées pour dominer Google à {city}. Actions concrètes et résultats mesurables." }
-        ],
-        faq: [
-            {
-                question: "Comment se déroule un audit technique SEO à {city} ?",
-                answer: "L'<strong>audit technique</strong> pour votre entreprise de {city} commence par un <strong>crawl complet</strong> avec <strong>Screaming Frog</strong>. J'analyse vos données <strong>Google Search Console</strong>, je mesure les <strong>Core Web Vitals</strong>, et j'examine votre <strong>maillage interne</strong>. Le livrable est un rapport détaillé avec des <strong>recommandations priorisées</strong> adaptées au marché de {city} et {region}. Premier diagnostic gratuit."
-            },
-            {
-                question: "Quels outils utilisez-vous pour auditer les sites de {city} ?",
-                answer: "J'utilise une <strong>stack professionnelle</strong> complète : <strong>Screaming Frog</strong> pour le crawl, <strong>Google Search Console</strong> pour l'indexation, <strong>PageSpeed Insights</strong> pour les <strong>Core Web Vitals</strong>, <strong>Ahrefs</strong> pour les backlinks. Pour les entreprises de {city}, j'analyse aussi votre positionnement sur les requêtes locales type \"{city} + votre activité\"."
-            },
-            {
-                question: "Combien coûte un audit technique SEO à {city} ?",
-                answer: "Le tarif dépend de la taille de votre site et de vos objectifs. Pour une PME de {city}, comptez entre <strong>500€ et 1500€</strong> pour un audit complet. Je propose un <strong>diagnostic gratuit</strong> de 30 minutes pour évaluer vos besoins et vous donner une estimation précise adaptée à votre situation dans le {deptCode}."
-            },
-            {
-                question: "L'audit technique suffit-il pour être visible à {city} ?",
-                answer: "L'<strong>audit technique</strong> est la <strong>fondation indispensable</strong>, mais le SEO repose sur 3 piliers : technique, contenu et popularité. Pour dominer les recherches à {city}, il faut ensuite optimiser votre contenu pour les requêtes locales et obtenir des <strong>backlinks</strong> de sites du {department} et de {region}."
-            },
-            {
-                question: "Intervenez-vous sur site à {city} ?",
-                answer: "Je travaille principalement à distance avec des outils collaboratifs efficaces. Pour les entreprises de {city} et {nearbyAreas}, je propose des <strong>rendez-vous en visio</strong> ou en présentiel selon les besoins. L'essentiel est la qualité de l'audit et du suivi, pas la présence physique."
-            },
-            {
-                question: "Mon entreprise à {city} a un petit site, l'audit est-il utile ?",
-                answer: "Même un <strong>site vitrine</strong> de quelques pages peut avoir des problèmes techniques critiques qui bloquent votre visibilité à {city} : vitesse, balises meta dupliquées, mobile non optimisé, absence de <strong>schema.org LocalBusiness</strong>. Un audit rapide identifie les quick wins pour dominer les recherches \"{city} + votre métier\"."
-            }
-        ],
+
+            // Bullets adaptées au contexte
+            const auditBullets = isLuxury ? [
+                `<strong>Expérience premium</strong> : temps de chargement, qualité d'affichage des visuels haute définition, fluidité sur appareils haut de gamme`,
+                `<strong>SEO multilingue</strong> : hreflang, indexation des versions linguistiques, ciblage géographique international`,
+                `<strong>Données structurées</strong> : schema.org adapté aux recherches premium (LocalBusiness, Product, Review)`,
+                `<strong>Mobile-first luxe</strong> : Core Web Vitals optimisés, UX irréprochable sur iPhone dernière génération`,
+                `<strong>Réputation en ligne</strong> : gestion des avis, présence sur les plateformes de référence du secteur`
+            ] : isTech ? [
+                `<strong>Architecture technique</strong> : analyse du rendering JavaScript, performance API, cache CDN`,
+                `<strong>Crawl budget</strong> : optimisation pour les sites à fort volume de pages, gestion des facettes`,
+                `<strong>Core Web Vitals</strong> : LCP, FID, CLS avec focus sur les applications complexes`,
+                `<strong>Données structurées</strong> : schema.org SoftwareApplication, TechArticle, FAQ pour le contenu éducatif`,
+                `<strong>SEO technique B2B</strong> : architecture de contenu pour les cycles de vente longs, landing pages produit`
+            ] : [
+                `<strong>Indexation locale</strong> : vérification de l'indexation de vos pages ciblant ${city.name} via Google Search Console`,
+                `<strong>Vitesse de chargement</strong> : Core Web Vitals (LCP, FID, CLS) essentiels pour le mobile`,
+                `<strong>SEO local</strong> : schema.org LocalBusiness, cohérence NAP, présence sur Google Business Profile`,
+                `<strong>Architecture</strong> : profondeur de page, maillage interne, structure d'URL optimisée pour ${city.deptCode}`,
+                `<strong>Balisage</strong> : balises title et meta intégrant ${city.name}, hiérarchie Hn, données structurées`
+            ];
+
+            const errorBullets = isLuxury ? [
+                `<strong>Visuels non optimisés</strong> : images de plusieurs Mo qui ruinent l'expérience sur mobile 4G`,
+                `<strong>Absence de version multilingue</strong> : perte de la clientèle internationale qui recherche en anglais`,
+                `<strong>Données structurées manquantes</strong> : pas de rich snippets dans les SERP, visibilité réduite`,
+                `<strong>Mobile négligé</strong> : site conçu pour desktop alors que 70% du trafic est mobile`,
+                `<strong>Vitesse catastrophique</strong> : serveur lent, pas de CDN, JS render-blocking`
+            ] : isTech ? [
+                `<strong>JavaScript mal indexé</strong> : contenu invisible pour Google car rendu côté client uniquement`,
+                `<strong>Architecture SPA non optimisée</strong> : URLs non crawlables, historique de navigation cassé`,
+                `<strong>Contenu dupliqué</strong> : pages de documentation identiques, canonical mal configuré`,
+                `<strong>Absence de contenu indexable</strong> : application trop orientée produit, pas de contenu SEO`,
+                `<strong>Performances applicatives</strong> : bundle JS trop lourd, pas de code splitting`
+            ] : [
+                `<strong>Pages non indexées</strong> : noindex accidentel, erreurs de crawl bloquant vos pages stratégiques`,
+                `<strong>Vitesse insuffisante</strong> : images non compressées, CSS/JS render-blocking, serveur lent`,
+                `<strong>Mobile défaillant</strong> : texte illisible, boutons trop petits, viewport mal configuré`,
+                `<strong>Maillage interne cassé</strong> : liens morts, pages orphelines, profondeur excessive`,
+                `<strong>SEO local absent</strong> : pas de schema LocalBusiness, Google Business Profile non optimisé`
+            ];
+
+            return {
+                h2Sections: [
+                    {
+                        title: `Audit technique SEO à ${city.name} : mon approche`,
+                        content: approachContent,
+                        bullets: auditBullets
+                    },
+                    {
+                        title: `Les défis SEO spécifiques à ${city.name}`,
+                        content: challengesContent
+                    },
+                    {
+                        title: `Pourquoi choisir mon expertise à ${city.name} ?`,
+                        content: whyMeContent
+                    },
+                    {
+                        title: `Erreurs techniques fréquentes à ${city.name}`,
+                        content: errorsContent,
+                        bullets: errorBullets
+                    }
+                ],
+                methodology: [
+                    { step: "01", title: "Diagnostic initial", desc: `Analyse de votre situation actuelle à ${city.name} : positionnement, concurrence locale, état technique. Gratuit et sans engagement.` },
+                    { step: "02", title: "Crawl & analyse", desc: `Crawl complet de votre site, analyse Search Console, mesure des Core Web Vitals. Focus sur les enjeux de ${city.name}.` },
+                    { step: "03", title: "Rapport priorisé", desc: `Livrable actionnable avec recommandations classées par impact business. Pas de PDF de 100 pages, des actions concrètes.` },
+                    { step: "04", title: "Accompagnement", desc: `Je reste disponible pour accompagner la mise en œuvre et valider les corrections. Suivi des résultats inclus.` }
+                ],
+                faq: [
+                    {
+                        question: `Comment se déroule un audit technique à ${city.name} ?`,
+                        answer: `Je commence par un échange gratuit pour comprendre votre activité et vos enjeux à ${city.name}. Ensuite, je réalise un crawl complet de votre site, j'analyse vos données Search Console et je mesure vos performances. Le livrable est un <strong>rapport priorisé par impact business</strong> avec des recommandations actionnables adaptées à votre marché local.`
+                    },
+                    {
+                        question: `Quel investissement pour un audit SEO à ${city.name} ?`,
+                        answer: `Les agences de ${city.region} facturent généralement entre <strong>2 000€ et 6 000€</strong> pour des audits standardisés. Je propose un diagnostic personnalisé avec un <strong>tarif ajusté</strong> à la taille de votre site et à vos enjeux réels. Premier échange gratuit pour évaluer vos besoins.`
+                    },
+                    {
+                        question: `L'audit technique suffit-il pour être visible à ${city.name} ?`,
+                        answer: `L'audit technique est la <strong>fondation indispensable</strong>. Sans elle, vos efforts SEO sont construits sur du sable. Mais le référencement repose sur 3 piliers : technique, contenu et popularité. Pour dominer les recherches à ${city.name}, il faudra ensuite travailler votre contenu et vos backlinks.`
+                    },
+                    {
+                        question: `Travaillez-vous à distance ou sur site à ${city.name} ?`,
+                        answer: `Je travaille principalement à distance avec des outils collaboratifs efficaces. Pour les entreprises de ${city.name} et ${city.nearbyAreas.slice(0, 2).join(", ")}, je propose des <strong>visios régulières</strong> et je peux me déplacer pour les projets d'envergure. L'essentiel est la qualité du travail et du suivi.`
+                    }
+                ]
+            };
+        },
         semanticKeywords: [
             "Screaming Frog", "Google Search Console", "Core Web Vitals", "LCP", "FID", "CLS",
             "budget crawl", "indexation Google", "maillage interne", "balises meta", "robots.txt",
-            "sitemap XML", "erreurs 404", "redirections 301", "vitesse de chargement", "mobile-first",
-            "données structurées", "schema.org", "profondeur de page", "cocon sémantique", "audit de logs",
-            "PageSpeed Insights", "Lighthouse", "crawlabilité", "pages orphelines", "canonical"
+            "sitemap XML", "erreurs 404", "redirections 301", "vitesse de chargement", "mobile-first"
         ]
     },
+
     "creation-site-web": {
         slug: "creation-site-web",
         title: "Création de Site Web",
-        metaTitle: "Création Site Web {city} {deptCode} - Site Optimisé SEO | INDHACK",
-        metaDescription: "Création de site web professionnel à {city} ({deptCode}). Site vitrine, e-commerce optimisé SEO pour les entreprises près de {landmark1}. Devis gratuit.",
+        metaTitle: "Création Site Web {city} - Site Optimisé SEO | INDHACK",
+        metaDescription: "Création de site web professionnel à {city}. Sites vitrines et e-commerce pensés SEO dès la conception. Visibilité Google garantie.",
         heroTitle: "Création de Site Web à {city}",
-        heroSubtitle: "Votre entreprise à {city} mérite un site web qui génère des clients. Je conçois des sites performants, pensés SEO dès la première ligne de code pour dominer les recherches dans le {deptCode}.",
+        heroSubtitle: "Sites web performants pour les entreprises de {city}",
         category: "Création Web",
         parentService: "/creation-site-web",
-        h2Sections: [
-            {
-                title: "Création de site web optimisé SEO à {city}",
-                content: "En tant que <a href=\"/{citySlug}\" class=\"text-sauge font-bold hover:underline\">spécialiste SEO à {city}</a> et <a href=\"/consultant-seo\" class=\"text-sauge font-bold hover:underline\">consultante en référencement</a>, je ne crée pas de simples sites vitrines. Je construis des <strong>machines à générer du trafic organique</strong> pour les entreprises du {department}.<br/><br/>Que vous soyez basé près de {landmark1} ou dans les environs de {nearbyAreas}, les {population} habitants de {city} doivent pouvoir vous trouver sur Google.<br/><br/>Ma méthode est inverse aux agences web classiques : <strong>le SEO guide chaque décision</strong> — architecture, URLs, performances. Votre site est conçu pour plaire à Google ET aux clients de {city}.",
-                bullets: [
-                    "<strong>Architecture SEO-first</strong> : structure d'URLs optimisée pour {city}, hiérarchie de pages logique, cocon sémantique intégré",
-                    "<strong>Performance maximale</strong> : score PageSpeed 90+ garanti, Core Web Vitals optimisés pour les connexions mobiles du {deptCode}",
-                    "<strong>Mobile-first natif</strong> : 70% des recherches \"{city}\" sont mobiles — votre site sera parfait sur tous les écrans",
-                    "<strong>SEO local intégré</strong> : schema.org LocalBusiness, optimisation pour le Pack Local de {city}",
-                    "<strong>Indexation immédiate</strong> : sitemap, robots.txt, soumission Search Console le jour J pour être visible à {city} rapidement"
-                ]
-            },
-            {
-                title: "Technologies modernes pour votre site à {city}",
-                content: "Je travaille avec les <strong>technologies les plus performantes</strong> du marché pour créer des sites rapides et évolutifs pour les entreprises de {city} et {region}.<br/><br/>Pas de WordPress bricolé avec 40 plugins. Je privilégie les solutions modernes qui garantissent <strong>performance et maintenabilité</strong> sur le long terme.",
-                bullets: [
-                    "<strong>Next.js / React</strong> : framework utilisé par Netflix et TikTok. Rendu serveur ultra-rapide, SEO natif parfait pour les requêtes \"{city}\"",
-                    "<strong>Tailwind CSS</strong> : design sur-mesure sans surcharge CSS, sites légers adaptés à votre image de marque",
-                    "<strong>Vercel / Netlify</strong> : hébergement edge mondial avec serveurs proches de {region}, HTTPS automatique",
-                    "<strong>Headless CMS</strong> : vous gérez votre contenu facilement depuis {city}, sans toucher au code",
-                    "<strong>WordPress optimisé</strong> : si vous préférez WordPress, je le configure proprement pour le SEO local"
-                ]
-            },
-            {
-                title: "Sites web pour entreprises de {city}",
-                content: "Que vous soyez artisan près de {landmark1}, startup tech ou commerce local à {city}, je conçois le site adapté à votre activité dans le {deptCode}.",
-                bullets: [
-                    "<strong>Site vitrine</strong> : présentez votre activité aux {population} habitants de {city} avec un site élégant qui convertit",
-                    "<strong>Site e-commerce</strong> : vendez en ligne aux clients de {city}, {nearbyAreas} et toute la {region}",
-                    "<strong>Landing pages</strong> : pages de vente haute conversion ciblant \"{city} + votre métier\"",
-                    "<strong>Blog professionnel</strong> : positionnez-vous comme expert dans le {department} avec du contenu qui ranke",
-                    "<strong>Application web</strong> : portails clients, dashboards, outils métier pour votre équipe à {city}"
-                ]
-            },
-            {
-                title: "Pourquoi me choisir à {city} ?",
-                content: "À {city} et dans tout le {deptCode}, les agences web pullulent. La différence ? <strong>Je suis d'abord SEO, ensuite développeuse</strong>.<br/><br/>Chaque site que je crée est pensé pour performer sur Google dans votre zone : {city}, {nearbyAreas}. Pas de site joli mais invisible. Vous avez un actif digital qui travaille pour vous 24/7 et attire des clients du {department}.",
-                bullets: [
-                    "<strong>Audit de mots-clés préalable</strong> : je cible les requêtes des habitants de {city} et {region} dès le départ",
-                    "<strong>Maillage interne stratégique</strong> : distribution optimale du PageRank vers vos pages commerciales ciblant {city}",
-                    "<strong>Formation incluse</strong> : je vous forme à la gestion de votre site depuis {city}",
-                    "<strong>Suivi de positionnement</strong> : 3 mois de monitoring offerts sur les requêtes \"{city} + votre activité\""
-                ]
+        getContent: (city: CityData) => {
+            const links = getInternalLinks(city, "creation-site-web");
+            const isLuxury = city.context.marketType === "luxury" || city.context.marketType === "premium";
+            const isTech = city.context.marketType === "tech";
+
+            let mainContent = "";
+            let techContent = "";
+            let typesContent = "";
+            let whyMeContent = "";
+
+            if (isLuxury) {
+                mainContent = `En tant que ${links.motherLink} et ${links.homeLink}, je crée des sites web à la hauteur des exigences de votre clientèle à ${city.name}.<br/><br/>Sur un marché où ${city.context.localInsight.toLowerCase()}, votre site est votre première impression. Il doit transpirer le <strong>professionnalisme et l'exclusivité</strong> que vos clients attendent. Pas de template générique : un site sur-mesure, pensé SEO dès la première ligne de code.<br/><br/>Ma différence ? Je ne crée pas de "beaux sites". Je crée des <strong>machines à générer des contacts qualifiés</strong> qui apparaissent en première page Google quand vos prospects recherchent vos services.`;
+
+                techContent = `Pour les ${city.context.targetClients}, j'utilise des technologies premium qui garantissent performances et image de marque. Next.js pour la vitesse et le SEO natif, design sur-mesure sans template, hébergement haute disponibilité. Votre site sera aussi irréprochable que le service que vous proposez.`;
+
+                typesContent = `Que vous soyez ${city.context.businessTypes[0].toLowerCase()} ou ${city.context.businessTypes[1].toLowerCase()} à ${city.name}, je conçois le site adapté à votre activité premium`;
+
+                whyMeContent = `Les agences web de ${city.region} facturent entre <strong>5 000€ et 20 000€</strong> pour des sites premium, parfois plus pour du sur-mesure. Mais combien génèrent réellement des clients ?<br/><br/>Je propose une approche différente : un <strong>investissement maîtrisé</strong> dans un site conçu pour performer sur Google. Pas de budget faramineux pour un site vitrine invisible. Chaque euro investi doit revenir multiplié.`;
+            } else if (isTech) {
+                mainContent = `En tant que ${links.motherLink} et ${links.homeLink}, je crée des sites web pensés pour la génération de leads B2B à ${city.name}.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Votre site ne doit pas juste être "joli" — il doit convertir des visiteurs en leads qualifiés sur un cycle de vente de 6 à 12 mois. Architecture de contenu éducatif, landing pages produit optimisées, intégration CRM native.<br/><br/>Je parle le même langage que vos équipes dev. Pas de WordPress bricolé : des stacks modernes (Next.js, Headless CMS) qui scalent et se maintiennent facilement.`;
+
+                techContent = `Pour les ${city.context.targetClients}, je privilégie les technologies qui font sens : Next.js/React pour la performance et le SEO, Tailwind pour un design système maintenable, Headless CMS pour l'autonomie de vos équipes. Le code est propre, documenté, prêt à scaler.`;
+
+                typesContent = `Startups SaaS, ESN, éditeurs de logiciels à ${city.name} — je conçois des sites adaptés à vos enjeux B2B`;
+
+                whyMeContent = `Les agences tech facturent entre <strong>10 000€ et 50 000€</strong> des sites parfois surdimensionnés pour vos besoins réels.<br/><br/>Je propose une approche pragmatique : un site qui fait le job, évolutif, avec un <strong>budget rationnel</strong>. On commence lean, on itère sur les résultats. Pas de feature creep ni de dette technique.`;
+            } else {
+                mainContent = `En tant que ${links.motherLink} et ${links.homeLink}, je crée des sites web qui génèrent des clients pour les entreprises de ${city.name}.<br/><br/>Vos ${city.population} clients potentiels vous cherchent sur Google. Mon approche est simple : créer un site qui apparaît quand ils recherchent "${city.name} + votre activité". Pas un site qui prend la poussière, mais un <strong>outil commercial actif 24/7</strong>.<br/><br/>Je suis d'abord SEO, ensuite développeuse. Chaque page est conçue pour ranker et convertir. C'est ça, la différence avec les agences web classiques.`;
+
+                techContent = `Je privilégie des technologies modernes et performantes : Next.js pour la vitesse et le SEO, design responsive natif, hébergement optimisé. Pas de WordPress surchargé de plugins qui rame. Un site rapide, sécurisé, facile à gérer depuis ${city.name}.`;
+
+                typesContent = `Que vous soyez ${city.context.businessTypes[0].toLowerCase()} ou ${city.context.businessTypes[1].toLowerCase()} à ${city.name}, je conçois le site adapté à votre activité`;
+
+                whyMeContent = `Les agences de ${city.region} facturent entre <strong>2 000€ et 8 000€</strong> des sites vitrines classiques, parfois plus pour de l'e-commerce.<br/><br/>Mais combien de ces sites génèrent vraiment des clients ? Je propose un <strong>investissement sur-mesure</strong> avec une garantie de résultat : un site visible sur Google dans votre zone. Premier échange gratuit pour définir vos besoins.`;
             }
-        ],
-        methodology: [
-            { step: "01", title: "Stratégie & Mots-clés", desc: "J'analyse votre marché et vos concurrents à {city}. Je définis les <strong>mots-clés stratégiques</strong> ciblant le {deptCode} et {region}. Cette étape conditionne toute l'architecture." },
-            { step: "02", title: "Maquettes & Validation", desc: "Je crée les <strong>maquettes UI/UX</strong> de votre site. Vous visualisez le résultat et validez avant le développement. Modifications illimitées à cette étape." },
-            { step: "03", title: "Développement SEO-First", desc: "Je développe votre site avec une <strong>architecture optimisée</strong> pour {city}, des performances maximales et un code propre. Chaque page cible vos clients locaux." },
-            { step: "04", title: "Mise en ligne & Indexation", desc: "Je déploie votre site, configure <strong>Google Search Console</strong>, soumets le sitemap et lance le monitoring de vos positions sur les requêtes \"{city}\"." }
-        ],
-        faq: [
-            {
-                question: "Combien coûte un site web à {city} ?",
-                answer: "Pour une entreprise de {city}, un <strong>site vitrine</strong> professionnel démarre autour de <strong>1 500€</strong>. Un <strong>site e-commerce</strong> représente un investissement plus conséquent. Je vous propose un <strong>devis gratuit</strong> après avoir compris vos besoins. Mon approche SEO-first garantit un <strong>ROI supérieur</strong> car votre site génère des clients dès sa mise en ligne."
-            },
-            {
-                question: "Délai de création pour un site à {city} ?",
-                answer: "Comptez <strong>3 à 6 semaines</strong> pour un site vitrine, <strong>6 à 10 semaines</strong> pour un e-commerce. Je travaille à distance avec des outils collaboratifs efficaces. Pour les entreprises de {city} et {nearbyAreas}, je propose des <strong>rendez-vous en visio</strong> ou en présentiel selon les besoins."
-            },
-            {
-                question: "Pourquoi pas Wix ou Squarespace pour mon site à {city} ?",
-                answer: "Ces plateformes sont <strong>limitées en SEO local</strong>. Code lourd, vitesse médiocre, structure d'URL imposée... Pour être visible à {city} et devancer vos concurrents du {deptCode}, vous avez besoin d'un site <strong>sur-mesure</strong> qui vous appartient et qui cible les requêtes \"{city} + votre métier\"."
-            },
-            {
-                question: "Mon site sera-t-il visible à {city} rapidement ?",
-                answer: "Dès la mise en ligne, je soumets votre site à <strong>Google Search Console</strong>. Les premières pages apparaissent sous <strong>24 à 72h</strong>. Le positionnement sur des requêtes compétitives comme \"{city} + votre métier\" prend <strong>3 à 6 mois</strong>. L'avantage : votre site est optimisé dès le départ pour les recherches locales dans le {deptCode}."
-            },
-            {
-                question: "Puis-je gérer mon site depuis {city} ?",
-                answer: "Absolument. Je configure un <strong>CMS intuitif</strong> pour que vous puissiez modifier textes, images et pages depuis {city} sans toucher au code. <strong>Formation personnalisée</strong> et documentation incluses. Je reste disponible pour les questions."
-            },
-            {
-                question: "Maintenance du site pour les entreprises de {city} ?",
-                answer: "Je propose des <strong>forfaits de maintenance</strong> mensuels : mises à jour de sécurité, sauvegardes, monitoring de performance, support prioritaire. Facultatif mais recommandé pour garder votre site performant dans le temps. Support à distance ou en présentiel pour les entreprises de {city} et {nearbyAreas}."
-            }
-        ],
+
+            const typesBullets = isLuxury ? [
+                `<strong>Site vitrine premium</strong> : design sur-mesure, visuels haute définition, expérience utilisateur irréprochable`,
+                `<strong>Site multilingue</strong> : versions FR/EN/IT avec SEO dédié pour chaque marché linguistique`,
+                `<strong>Landing pages haut de gamme</strong> : pages de conversion ciblant votre clientèle premium`,
+                `<strong>Portail client</strong> : espace sécurisé pour vos clients VIP avec fonctionnalités exclusives`
+            ] : isTech ? [
+                `<strong>Site produit SaaS</strong> : landing pages conversion, pricing, documentation, blog technique`,
+                `<strong>Site corporate tech</strong> : présentation entreprise, cas clients, recrutement, blog thought leadership`,
+                `<strong>Documentation technique</strong> : portail docs intégré au site marketing, SEO optimisé`,
+                `<strong>Application web</strong> : dashboard clients, portail partenaires, outils internes`
+            ] : [
+                `<strong>Site vitrine local</strong> : présentez votre activité aux habitants de ${city.name} avec un site qui convertit`,
+                `<strong>Site e-commerce</strong> : vendez en ligne à ${city.name}, ${city.nearbyAreas[0]} et toute la ${city.region}`,
+                `<strong>Landing page métier</strong> : page de conversion ciblant "${city.name} + votre métier"`,
+                `<strong>Blog professionnel</strong> : positionnez-vous comme expert local avec du contenu qui ranke`
+            ];
+
+            return {
+                h2Sections: [
+                    {
+                        title: `Création de site web optimisé SEO à ${city.name}`,
+                        content: mainContent,
+                        bullets: [
+                            `<strong>Architecture SEO-first</strong> : chaque page est conçue pour ranker sur les requêtes pertinentes à ${city.name}`,
+                            `<strong>Performance maximale</strong> : score PageSpeed 90+ garanti, Core Web Vitals optimisés`,
+                            `<strong>Mobile-first natif</strong> : 70% des recherches sont mobiles, votre site sera parfait sur tous les écrans`,
+                            `<strong>SEO local intégré</strong> : schema.org LocalBusiness, optimisation Pack Local Google`,
+                            `<strong>Indexation rapide</strong> : sitemap, Search Console, tout est configuré pour être visible vite`
+                        ]
+                    },
+                    {
+                        title: `Technologies modernes pour ${city.name}`,
+                        content: techContent,
+                        bullets: [
+                            `<strong>Next.js / React</strong> : framework utilisé par Netflix et TikTok, SEO natif parfait`,
+                            `<strong>Tailwind CSS</strong> : design sur-mesure sans surcharge, sites ultra-légers`,
+                            `<strong>Hébergement edge</strong> : serveurs proches de ${city.region}, HTTPS automatique`,
+                            `<strong>CMS intuitif</strong> : vous gérez votre contenu facilement, sans toucher au code`
+                        ]
+                    },
+                    {
+                        title: `Sites web pour ${city.context.targetClients.split(",")[0]}`,
+                        content: typesContent,
+                        bullets: typesBullets
+                    },
+                    {
+                        title: `Pourquoi créer votre site avec moi à ${city.name} ?`,
+                        content: whyMeContent,
+                        bullets: [
+                            `<strong>SEO intégré</strong> : pas de site invisible, votre site ranke dès sa mise en ligne`,
+                            `<strong>Tarif transparent</strong> : devis détaillé, pas de mauvaise surprise`,
+                            `<strong>Formation incluse</strong> : vous êtes autonome pour gérer votre site`,
+                            `<strong>Suivi 3 mois offert</strong> : je monitore vos positions sur "${city.name} + votre activité"`
+                        ]
+                    }
+                ],
+                methodology: [
+                    { step: "01", title: "Stratégie & mots-clés", desc: `J'analyse votre marché à ${city.name}, vos concurrents, et je définis les mots-clés stratégiques. Cette étape conditionne toute l'architecture.` },
+                    { step: "02", title: "Maquettes & validation", desc: `Je crée les maquettes de votre site. Vous visualisez le résultat et validez avant développement. Modifications illimitées.` },
+                    { step: "03", title: "Développement SEO-first", desc: `Je développe votre site avec une architecture optimisée pour ${city.name}. Performances maximales, code propre.` },
+                    { step: "04", title: "Mise en ligne & suivi", desc: `Je déploie, configure Search Console, et lance le monitoring de vos positions. Suivi 3 mois inclus.` }
+                ],
+                faq: [
+                    {
+                        question: `Quel budget pour un site web à ${city.name} ?`,
+                        answer: `Les agences de ${city.region} facturent entre <strong>2 000€ et 10 000€</strong> selon la complexité. Je propose un <strong>tarif sur-mesure</strong> adapté à vos besoins réels. Un site vitrine efficace ne nécessite pas forcément un gros budget. Premier échange gratuit pour définir votre projet.`
+                    },
+                    {
+                        question: `Combien de temps pour créer un site à ${city.name} ?`,
+                        answer: `Comptez <strong>3 à 6 semaines</strong> pour un site vitrine, <strong>6 à 10 semaines</strong> pour un e-commerce. Je travaille à distance avec des outils collaboratifs efficaces. Pour les entreprises de ${city.name}, je propose des visios régulières pour suivre l'avancement.`
+                    },
+                    {
+                        question: `Mon site sera-t-il visible sur Google à ${city.name} ?`,
+                        answer: `C'est ma garantie. Chaque site que je crée est conçu pour ranker sur vos requêtes stratégiques à ${city.name}. SEO intégré dès la conception, pas en afterthought. Je vous montre les résultats avec un suivi de positionnement sur 3 mois.`
+                    },
+                    {
+                        question: `Proposez-vous la maintenance après création ?`,
+                        answer: `Oui, je propose des <strong>forfaits de maintenance</strong> mensuels : mises à jour de sécurité, sauvegardes, monitoring, support prioritaire. Facultatif mais recommandé pour garder votre site performant et sécurisé.`
+                    }
+                ]
+            };
+        },
         semanticKeywords: [
-            "création site web", "création site internet", "agence web", "développeur web",
-            "site vitrine", "site e-commerce", "landing page", "refonte site",
-            "Next.js", "React", "WordPress", "Tailwind CSS", "responsive design",
-            "Core Web Vitals", "PageSpeed", "mobile-first", "UX design", "UI design",
-            "hébergement web", "nom de domaine", "HTTPS", "SSL", "Vercel",
-            "CMS", "gestion de contenu", "blog professionnel", "SEO technique"
+            "création site web", "site vitrine", "site e-commerce", "responsive design", "Next.js",
+            "WordPress", "SEO", "référencement", "Google", "mobile-first", "Core Web Vitals"
         ]
     },
+
     "referencement-naturel": {
         slug: "referencement-naturel",
         title: "Référencement Naturel",
-        metaTitle: "Référencement Naturel {city} {deptCode} - Expert SEO | INDHACK",
-        metaDescription: "Stratégie de référencement naturel sur-mesure à {city} ({deptCode}). Augmentez votre trafic organique de +200% en 6 mois près de {landmark1}. Audit gratuit.",
+        metaTitle: "Référencement Naturel {city} - Stratégie SEO | INDHACK",
+        metaDescription: "Stratégie de référencement naturel à {city}. Augmentez votre trafic organique et vos conversions avec une approche SEO sur-mesure.",
         heroTitle: "Référencement Naturel à {city}",
-        heroSubtitle: "Votre entreprise à {city} mérite d'être en première page Google. Je développe des stratégies SEO sur-mesure pour les {population} habitants du {deptCode} qui recherchent vos services.",
+        heroSubtitle: "Stratégie SEO complète pour les entreprises de {city}",
         category: "SEO",
         parentService: "/referencement-naturel",
-        h2Sections: [
-            {
-                title: "Référencement naturel à {city} : mon approche",
-                content: "Le <strong>référencement naturel</strong> (ou <strong>SEO</strong>) désigne l'ensemble des techniques pour améliorer votre <strong>visibilité sur Google</strong> dans le {deptCode}.<br/><br/>En tant que <a href=\"/{citySlug}\" class=\"text-sauge font-bold hover:underline\">experte SEO à {city}</a> et <a href=\"/consultant-seo\" class=\"text-sauge font-bold hover:underline\">consultante en référencement naturel</a>, j'accompagne les entreprises du {department} avec une méthodologie éprouvée.<br/><br/>Que vous soyez basé près de {landmark1} ou dans les environs de {nearbyAreas}, mon objectif : faire de votre site une <strong>référence locale</strong> aux yeux de Google et des {population} habitants de {city}.",
-                bullets: [
-                    "<strong>Pilier Technique</strong> : vitesse, mobile-first, indexation, architecture optimisée pour les recherches \"{city}\"",
-                    "<strong>Pilier Contenu</strong> : mots-clés stratégiques ciblant le {deptCode}, cocon sémantique, contenu expert local",
-                    "<strong>Pilier Popularité</strong> : backlinks de qualité depuis des sites de {region} et nationaux"
-                ]
-            },
-            {
-                title: "Stratégie SEO en 4 phases pour {city}",
-                content: "Une <strong>stratégie de référencement naturel</strong> efficace à {city} ne s'improvise pas. Ma méthodologie a fait ses preuves auprès de dizaines de clients dans le {department} et toute la {region}.",
-                bullets: [
-                    "<strong>Phase 1 — Audit & Diagnostic</strong> : j'analyse votre site, vos concurrents à {city}, les opportunités locales dans le {deptCode}. C'est la feuille de route du projet.",
-                    "<strong>Phase 2 — Fondations Techniques</strong> : je corrige les erreurs qui freinent votre visibilité à {city}. Indexation, vitesse, maillage interne, Core Web Vitals.",
-                    "<strong>Phase 3 — Stratégie de Contenu</strong> : je définis les mots-clés ciblant {city} et {nearbyAreas}, j'optimise vos pages et je crée du contenu SEO local.",
-                    "<strong>Phase 4 — Netlinking & Autorité</strong> : je développe votre profil de liens avec des backlinks de sites du {department} et nationaux pertinents."
-                ]
-            },
-            {
-                title: "SEO vs publicité pour votre entreprise à {city}",
-                content: "Le <strong>SEO</strong> et le <strong>SEA</strong> (Google Ads) sont complémentaires, mais le référencement naturel offre des avantages uniques pour les entreprises de {city} et du {deptCode}.",
-                bullets: [
-                    "<strong>ROI supérieur à long terme</strong> : chaque euro investi en SEO continue de rapporter pendant des années auprès des clients de {city}",
-                    "<strong>Crédibilité renforcée</strong> : 70% des clics vont sur les résultats organiques. Les habitants de {city} font davantage confiance aux sites bien positionnés",
-                    "<strong>Trafic qualifié durable</strong> : une fois en première page pour \"{city} + votre métier\", vous recevez du trafic gratuit 24h/24",
-                    "<strong>Indépendance</strong> : vous ne dépendez plus d'un budget pub. Votre visibilité à {city} est acquise durablement."
-                ]
-            },
-            {
-                title: "Résultats SEO pour les entreprises de {city}",
-                content: "Le <strong>SEO</strong> est un investissement moyen/long terme. Les résultats sont <strong>durables et cumulatifs</strong>. Voici ce que mes clients de {city}, {nearbyAreas} et du {department} observent :",
-                bullets: [
-                    "<strong>Mois 1-3</strong> : corrections techniques, premières optimisations, indexation des contenus ciblant {city}",
-                    "<strong>Mois 3-6</strong> : progression sur les requêtes \"{city} + votre métier\", trafic organique +50 à 100%",
-                    "<strong>Mois 6-12</strong> : première page sur vos mots-clés principaux à {city}, trafic ×2 à ×3, leads réguliers",
-                    "<strong>Au-delà</strong> : consolidation des positions sur {city} et expansion vers {nearbyAreas} et tout le {deptCode}"
-                ]
-            },
-            {
-                title: "SEO local : dominez {city} sur Google",
-                content: "Si votre clientèle est à {city}, {nearbyAreas} et dans le {deptCode}, le <strong>SEO local</strong> est essentiel. Je combine référencement naturel et optimisation géolocalisée pour maximiser votre visibilité auprès des {population} habitants.",
-                bullets: [
-                    "<strong>Optimisation Google Business Profile</strong> : fiche complète pour apparaître dans le Pack Local de {city}, gestion des avis",
-                    "<strong>Citations locales</strong> : présence cohérente sur les annuaires de {city}, {department} et nationaux",
-                    "<strong>Contenu géolocalisé</strong> : pages dédiées à {city}, {nearbyAreas} et aux communes du {deptCode}",
-                    "<strong>Schema LocalBusiness</strong> : données structurées avec adresse près de {landmark1} pour le Pack Local"
-                ]
+        getContent: (city: CityData) => {
+            const links = getInternalLinks(city, "referencement-naturel");
+            const isLuxury = city.context.marketType === "luxury" || city.context.marketType === "premium";
+            const isTech = city.context.marketType === "tech";
+            const isVolume = city.context.marketType === "volume";
+
+            let strategyContent = "";
+            let localSeoContent = "";
+            let resultsContent = "";
+            let whyMeContent = "";
+
+            if (isLuxury) {
+                strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je déploie des stratégies SEO calibrées pour les marchés premium.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Votre référencement doit refléter cette réalité : ciblage de mots-clés à fort potentiel commercial, contenu d'expertise qui positionne votre autorité, présence sur les requêtes multilingues de votre clientèle internationale.<br/><br/>Mon approche SEO pour le luxe est différente : moins de volume, plus de <strong>qualité et de conversion</strong>. Un lead sur une requête premium vaut cent clics génériques.`;
+
+                localSeoContent = `Le SEO local à ${city.name} pour une clientèle premium a ses codes. Il ne s'agit pas simplement d'apparaître sur "restaurant ${city.name}" mais de dominer les requêtes à forte intention d'achat : "meilleur restaurant gastronomique ${city.name}", "villa prestige ${city.landmarks[0]}"...<br/><br/>J'optimise votre présence Google Business Profile avec des photos professionnelles, des avis gérés, et une cohérence parfaite avec votre site. Le Pack Local est souvent le premier point de contact avec vos futurs clients.`;
+
+                resultsContent = `Sur un marché premium comme ${city.name}, le SEO est un investissement à moyen terme. ${city.context.specificChallenges[0]} implique une stratégie de différenciation plutôt que de volume.`;
+
+                whyMeContent = `Les agences SEO parisiennes facturent entre <strong>2 000€ et 5 000€/mois</strong> pour des accompagnements premium, souvent sans comprendre les subtilités de votre marché local.<br/><br/>Je propose un accompagnement sur-mesure avec un <strong>investissement adapté</strong> à vos enjeux réels. Premier audit de positionnement gratuit.`;
+            } else if (isTech) {
+                strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je conçois des stratégies SEO adaptées aux enjeux B2B tech.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Le SEO B2B est différent du B2C : cycles de décision longs, contenus éducatifs, ciblage de personas techniques. Mon approche intègre ces spécificités pour générer des leads qualifiés, pas du trafic vide.<br/><br/>Content marketing technique, thought leadership, landing pages produit optimisées — je construis une <strong>machine d'acquisition organique</strong> qui travaille pour vous 24/7.`;
+
+                localSeoContent = `Le SEO local B2B à ${city.name} cible des requêtes spécifiques : "ESN ${city.name}", "développeur ${city.deptCode}", "startup ${city.landmarks[0]}"... Ces recherches ont un volume faible mais une intention business forte.<br/><br/>J'optimise également votre présence sur les plateformes B2B (LinkedIn, Malt, etc.) et je travaille votre SEO marque employeur pour attirer les talents dans un marché tendu.`;
+
+                resultsContent = `En SEO B2B, les résultats se mesurent en leads qualifiés plus qu'en volume de trafic. Sur un marché tech comme ${city.name}, visez <strong>10-20 leads qualifiés par mois</strong> plutôt que 10 000 visiteurs qui ne convertissent pas.`;
+
+                whyMeContent = `Les agences SEO généralistes ne comprennent pas les enjeux tech. Les agences spécialisées B2B facturent entre <strong>3 000€ et 8 000€/mois</strong>.<br/><br/>Je propose un accompagnement pragmatique avec un <strong>budget rationnel</strong> et des KPIs qui comptent : leads générés, pas vanity metrics.`;
+            } else if (isVolume) {
+                strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je déploie des stratégies SEO de conquête pour les marchés concurrentiels.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Avec ${city.population} habitants et une concurrence féroce, le SEO est une guerre de positions. Chaque place gagnée sur Google se traduit en parts de marché. Ma stratégie est offensive : audit compétitif, identification des failles adverses, contenu de conquête.<br/><br/>Pas de SEO "doucement on verra" — des <strong>actions concrètes pour prendre des positions</strong>.`;
+
+                localSeoContent = `À ${city.name}, le SEO local fait la différence entre les entreprises qui survivent et celles qui prospèrent. Le Pack Local capte 40% des clics sur les requêtes locales. Si vous n'y êtes pas, vous êtes invisible pour les ${city.population} habitants qui cherchent vos services.<br/><br/>J'optimise votre Google Business Profile, je travaille vos avis clients, et je construis votre présence locale sur les annuaires qui comptent. Objectif : dominer le Pack Local sur vos requêtes stratégiques.`;
+
+                resultsContent = `Sur un marché aussi concurrentiel que ${city.name}, attendez-vous à des résultats progressifs mais durables. Les premiers effets sont visibles en 2-3 mois, les résultats significatifs en 6 mois.`;
+
+                whyMeContent = `Les agences SEO de ${city.region} facturent entre <strong>1 000€ et 3 000€/mois</strong> pour des accompagnements souvent standardisés.<br/><br/>Je propose une stratégie offensive avec un <strong>investissement adapté</strong> à votre capacité et vos objectifs. On définit ensemble les KPIs et on mesure les résultats.`;
+            } else {
+                strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je construis des stratégies SEO adaptées aux entreprises locales.<br/><br/>Les ${city.population} habitants de ${city.name} et des environs recherchent vos services sur Google. Ma mission : vous rendre visible quand ils tapent "${city.name} + votre métier". Une stratégie simple, efficace, centrée sur les <strong>résultats business</strong>.<br/><br/>Pas de jargon SEO inutile ni de promesses irréalistes. Un plan d'action clair pour prendre des positions sur vos requêtes stratégiques.`;
+
+                localSeoContent = `Le SEO local à ${city.name} repose sur 3 piliers : un site optimisé pour les requêtes locales, une fiche Google Business Profile impeccable, et des avis clients qui rassurent. Je travaille ces 3 axes en parallèle pour maximiser votre visibilité dans le Pack Local.<br/><br/>J'optimise également votre présence sur les villes proches (${city.nearbyAreas.slice(0, 2).join(", ")}) pour élargir votre zone de chalandise sans diluer vos efforts.`;
+
+                resultsContent = `Le SEO est un investissement moyen terme. Premiers effets visibles en 2-3 mois, résultats significatifs en 4-6 mois. Mais contrairement au SEA, ces résultats sont durables.`;
+
+                whyMeContent = `Les agences de ${city.region} facturent entre <strong>500€ et 2 000€/mois</strong> pour des accompagnements SEO, parfois sans résultats tangibles.<br/><br/>Je propose un accompagnement transparent avec des <strong>objectifs mesurables</strong>. On définit ensemble vos KPIs et je vous montre les résultats mois après mois.`;
             }
-        ],
-        methodology: [
-            { step: "01", title: "Audit Complet", desc: "J'analyse votre site, vos concurrents à {city} et dans le {deptCode}. Je livre un <strong>rapport d'audit</strong> avec les opportunités SEO locales prioritaires." },
-            { step: "02", title: "Optimisation Technique", desc: "Je corrige les erreurs qui bloquent votre <strong>référencement</strong> à {city} : vitesse, indexation, maillage, Core Web Vitals pour les connexions mobiles du {deptCode}." },
-            { step: "03", title: "Stratégie de Contenu", desc: "Je définis les <strong>mots-clés stratégiques</strong> ciblant {city} et {nearbyAreas}, j'optimise vos pages et crée du contenu expert local." },
-            { step: "04", title: "Netlinking & Suivi", desc: "Je développe votre <strong>autorité</strong> avec des backlinks de sites de {region} et nationaux. Reporting mensuel avec positions sur les requêtes \"{city}\"." }
-        ],
-        faq: [
-            {
-                question: "Délai pour être visible à {city} sur Google ?",
-                answer: "Le <strong>référencement naturel</strong> à {city} est un investissement moyen/long terme. Les premiers résultats sont visibles sous <strong>1 à 2 mois</strong>. Les gains significatifs sur \"{city} + votre métier\" arrivent entre <strong>3 et 6 mois</strong>. Pour des requêtes très concurrentielles dans le {deptCode}, comptez <strong>6 à 12 mois</strong>. Reporting mensuel pour suivre votre progression."
-            },
-            {
-                question: "Garantissez-vous la première page à {city} ?",
-                answer: "Non, et <strong>fuyez quiconque le promet</strong>. Google seul décide des classements. Ce que je garantis : une <strong>méthodologie rigoureuse</strong>, des optimisations conformes aux guidelines, un reporting transparent, et une amélioration mesurable de votre visibilité à {city}. Mes clients du {department} constatent en moyenne <strong>+150 à 300% de trafic organique</strong> sur 12 mois."
-            },
-            {
-                question: "SEO ou Google Ads pour mon entreprise à {city} ?",
-                answer: "Le <strong>SEO</strong> travaille sur les résultats organiques — investissement long terme qui rapporte sans coût par clic. Le <strong>SEA</strong> (Google Ads) affiche des annonces payantes. Je recommande de <strong>combiner les deux</strong> pour les entreprises de {city} : SEA pour des résultats immédiats, SEO pour construire un actif durable dans le {deptCode}."
-            },
-            {
-                question: "Mon site à {city} est nouveau, peut-on faire du SEO ?",
-                answer: "Absolument, c'est <strong>le meilleur moment</strong>. Un site nouveau peut être conçu avec une <strong>architecture SEO optimale</strong> pour {city} dès le départ. Google met quelques mois à faire confiance (« sandbox »), mais un travail SEO précoce permet de sortir avec des <strong>fondations solides</strong> pour dominer le {deptCode}."
-            },
-            {
-                question: "Travaillez-vous avec tous les secteurs à {city} ?",
-                answer: "J'accompagne des <strong>entreprises de tous secteurs</strong> à {city}, {nearbyAreas} et dans le {department} : artisans, commerces, PME, startups, e-commerces, professions libérales... Expertise particulière en <strong>SEO local</strong> pour les entreprises ciblant les {population} habitants de {city}."
-            },
-            {
-                question: "Comment mesurez-vous les résultats à {city} ?",
-                answer: "Je fournis un <strong>reporting mensuel</strong> : positions sur vos mots-clés ciblant {city}, trafic organique (Analytics), impressions et clics (Search Console), autorité de domaine, backlinks acquis dans le {department}. <strong>Visibilité totale</strong> sur le travail et les résultats."
-            }
-        ],
+
+            return {
+                h2Sections: [
+                    {
+                        title: `Stratégie de référencement naturel à ${city.name}`,
+                        content: strategyContent,
+                        bullets: [
+                            `<strong>Audit de positionnement</strong> : analyse de votre visibilité actuelle sur les requêtes "${city.name}"`,
+                            `<strong>Étude de mots-clés</strong> : identification des requêtes stratégiques pour votre activité à ${city.name}`,
+                            `<strong>Analyse concurrentielle</strong> : benchmark de vos concurrents locaux et identification des opportunités`,
+                            `<strong>Plan d'action priorisé</strong> : roadmap SEO avec actions classées par impact et effort`,
+                            `<strong>Suivi mensuel</strong> : reporting transparent sur l'évolution de vos positions et de votre trafic`
+                        ]
+                    },
+                    {
+                        title: `SEO local : dominez Google à ${city.name}`,
+                        content: localSeoContent,
+                        bullets: [
+                            `<strong>Google Business Profile</strong> : optimisation complète de votre fiche pour le Pack Local`,
+                            `<strong>Citations locales</strong> : présence cohérente sur les annuaires qui comptent pour ${city.name}`,
+                            `<strong>Avis clients</strong> : stratégie d'acquisition et de gestion de vos avis Google`,
+                            `<strong>Contenu local</strong> : pages ciblant ${city.name}, ${city.nearbyAreas[0]} et les zones environnantes`,
+                            `<strong>Schema LocalBusiness</strong> : données structurées pour apparaître dans les rich snippets`
+                        ]
+                    },
+                    {
+                        title: `Résultats SEO attendus à ${city.name}`,
+                        content: resultsContent,
+                        bullets: [
+                            `<strong>Mois 1-2</strong> : audit, stratégie, premiers quick wins techniques`,
+                            `<strong>Mois 3-4</strong> : montée progressive sur les requêtes ciblées ${city.name}`,
+                            `<strong>Mois 5-6</strong> : positions consolidées, augmentation du trafic qualifié`,
+                            `<strong>Au-delà</strong> : expansion vers ${city.nearbyAreas.slice(0, 2).join(", ")} et tout le ${city.deptCode}`
+                        ]
+                    },
+                    {
+                        title: `Pourquoi me confier votre SEO à ${city.name} ?`,
+                        content: whyMeContent,
+                        bullets: [
+                            `<strong>Expertise locale</strong> : je connais le marché ${city.name} et ses spécificités`,
+                            `<strong>Résultats mesurables</strong> : reporting transparent, KPIs définis ensemble`,
+                            `<strong>Approche sur-mesure</strong> : pas de package standardisé, une stratégie adaptée`,
+                            `<strong>Tarif juste</strong> : investissement proportionné à vos enjeux et votre budget`
+                        ]
+                    }
+                ],
+                methodology: [
+                    { step: "01", title: "Audit & stratégie", desc: `Analyse de votre situation, étude de mots-clés, benchmark concurrentiel. Je définis une stratégie adaptée au marché ${city.name}.` },
+                    { step: "02", title: "Optimisation technique", desc: `Correction des erreurs techniques identifiées, amélioration des performances, optimisation mobile.` },
+                    { step: "03", title: "Contenu & maillage", desc: `Optimisation de vos contenus existants, création de nouvelles pages ciblant ${city.name}, amélioration du maillage interne.` },
+                    { step: "04", title: "Suivi & ajustements", desc: `Monitoring des positions, reporting mensuel, ajustements de stratégie selon les résultats.` }
+                ],
+                faq: [
+                    {
+                        question: `Combien de temps pour voir des résultats SEO à ${city.name} ?`,
+                        answer: `Le SEO est un investissement moyen terme. Premiers effets visibles en <strong>2-3 mois</strong>, résultats significatifs en <strong>4-6 mois</strong>. Mais contrairement aux publicités, ces résultats sont durables et s'accumulent avec le temps.`
+                    },
+                    {
+                        question: `Quel budget SEO pour une entreprise à ${city.name} ?`,
+                        answer: `Les agences de ${city.region} facturent généralement entre <strong>500€ et 3 000€/mois</strong>. Je propose un accompagnement avec un <strong>investissement adapté</strong> à votre situation et vos objectifs. Premier échange gratuit pour définir vos besoins.`
+                    },
+                    {
+                        question: `Le SEO fonctionne-t-il pour tous les secteurs à ${city.name} ?`,
+                        answer: `Oui, le SEO fonctionne pour tous les secteurs à ${city.name}. Les ${city.context.businessTypes.slice(0, 3).join(", ")} sont tous recherchés sur Google. La stratégie s'adapte à votre secteur, votre concurrence et vos objectifs.`
+                    },
+                    {
+                        question: `Que se passe-t-il si j'arrête le SEO ?`,
+                        answer: `Contrairement aux publicités qui s'arrêtent instantanément, les effets du SEO perdurent. Vos positions acquises se maintiennent plusieurs mois, parfois années. C'est un actif digital qui continue de travailler pour vous.`
+                    }
+                ]
+            };
+        },
         semanticKeywords: [
-            "référencement naturel", "SEO", "Search Engine Optimization", "positionnement Google",
-            "stratégie SEO", "audit SEO", "optimisation SEO", "consultant SEO",
-            "mots-clés", "cocon sémantique", "contenu SEO", "backlinks", "netlinking",
-            "autorité de domaine", "Domain Authority", "trafic organique", "SERP",
-            "Google Search Console", "Google Analytics", "Core Web Vitals", "mobile-first",
-            "SEO local", "référencement local", "Google Business Profile", "SEO on-page"
+            "référencement naturel", "SEO", "Google", "positionnement", "visibilité",
+            "trafic organique", "mots-clés", "backlinks", "netlinking", "contenu SEO",
+            "SEO local", "Google Business Profile", "Pack Local", "avis clients"
         ]
     }
 };
+
+// Interface pour les données de service résolues (sans fonction, sérialisable pour Client Components)
+export interface ResolvedCityServiceData {
+    slug: string;
+    title: string;
+    metaTitle: string;
+    metaDescription: string;
+    heroTitle: string;
+    heroSubtitle: string;
+    category: string;
+    parentService: string;
+    semanticKeywords: string[];
+    h2Sections: { title: string; content: string; bullets?: string[] }[];
+    methodology: { step: string; title: string; desc: string }[];
+    faq: { question: string; answer: string }[];
+}
+
+// Fonction pour obtenir le contenu d'un service pour une ville spécifique
+// Retourne des données sérialisables (sans fonctions) pour les Client Components
+export function getServiceContent(serviceSlug: string, citySlug: string): ResolvedCityServiceData | null {
+    const service = CITY_SERVICES[serviceSlug];
+    const city = getCityBySlug(citySlug);
+
+    if (!service || !city) return null;
+
+    const content = service.getContent(city);
+
+    // Remplacer les placeholders dans les métadonnées
+    const metaTitle = service.metaTitle
+        .replace(/{city}/g, city.name)
+        .replace(/{deptCode}/g, city.deptCode);
+
+    const metaDescription = service.metaDescription
+        .replace(/{city}/g, city.name)
+        .replace(/{deptCode}/g, city.deptCode);
+
+    const heroTitle = service.heroTitle.replace(/{city}/g, city.name);
+    const heroSubtitle = service.heroSubtitle.replace(/{city}/g, city.name);
+
+    // Retourner sans la fonction getContent (non sérialisable)
+    return {
+        slug: service.slug,
+        title: service.title,
+        metaTitle,
+        metaDescription,
+        heroTitle,
+        heroSubtitle,
+        category: service.category,
+        parentService: service.parentService,
+        semanticKeywords: service.semanticKeywords,
+        ...content
+    };
+}

@@ -15,12 +15,12 @@ import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { useModal } from "@/components/providers/ModalProvider";
-import { CityData, CityServiceData } from "@/lib/cities-data";
+import { CityData, ResolvedCityServiceData } from "@/lib/cities-data";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
 interface CityServiceTemplateProps {
     cityData: CityData;
-    serviceData: CityServiceData;
+    serviceData: ResolvedCityServiceData;
 }
 
 export function CityServiceTemplate({ cityData, serviceData }: CityServiceTemplateProps) {

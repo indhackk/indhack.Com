@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import { Breadcrumb, getCityServiceBreadcrumb } from "@/components/Breadcrumb";
 import { CityServiceTemplate } from "@/components/templates/CityServiceTemplate";
-import { getCityBySlug, CITY_SERVICES } from "@/lib/cities-data";
+import { getCityBySlug, getServiceContent } from "@/lib/cities-data";
 
 const cityData = getCityBySlug("consultant-seo-lille")!;
-const serviceData = CITY_SERVICES["audit-technique"];
+const serviceData = getServiceContent("audit-technique", "consultant-seo-lille")!;
 
 export const metadata: Metadata = {
     title: "Audit Technique SEO Lille 59 | INDHACK, Consultante SEO",
