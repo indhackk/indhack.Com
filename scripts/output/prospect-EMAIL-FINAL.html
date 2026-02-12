@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prospection Email - 2 emails trouves</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #4285F4; --gmail: #EA4335; --bg: #0f172a; --card-bg: #1e293b; --text: #f8fafc; --text-dim: #94a3b8; --success: #22c55e; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 2rem; }
+        .container { width: 100%; max-width: 800px; }
+        header { text-align: center; margin-bottom: 2rem; }
+        h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stats { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+        .stat-card { background: var(--card-bg); padding: 1rem 2rem; border-radius: 1rem; border: 1px solid #334155; text-align: center; }
+        .stat-value { font-size: 1.5rem; font-weight: 700; display: block; }
+        .stat-label { color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; }
+        .lead-card { background: var(--card-bg); border-radius: 1.5rem; padding: 2rem; border: 1px solid #334155; position: relative; overflow: hidden; }
+        .lead-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--success); }
+        .lead-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+        .lead-name { font-size: 1.3rem; font-weight: 700; margin: 0; }
+        .lead-info { color: var(--text-dim); font-size: 0.9rem; }
+        .badge { background: #22c55e22; color: var(--success); padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+        .email-display { background: #0f172a; border: 2px solid var(--success); border-radius: 1rem; padding: 1rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+        .email-text { font-family: monospace; font-size: 1.1rem; color: var(--success); }
+        .btn-gmail { background: var(--gmail); color: white; border: none; padding: 1rem 2rem; border-radius: 0.75rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-size: 1rem; text-decoration: none; }
+        .btn-gmail:hover { opacity: 0.9; transform: translateY(-2px); }
+        .message-box { background: #0f172a; border: 1px solid #334155; border-radius: 1rem; padding: 1rem; margin-bottom: 1.5rem; font-size: 0.85rem; line-height: 1.5; white-space: pre-wrap; color: #cbd5e1; max-height: 150px; overflow-y: auto; }
+        .actions { display: flex; gap: 1rem; }
+        button { flex: 1; padding: 0.75rem; border-radius: 0.5rem; font-size: 0.9rem; font-weight: 600; cursor: pointer; border: none; }
+        .btn-secondary { background: #334155; color: white; }
+        .btn-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
+        .progress-bar { width: 100%; height: 6px; background: #334155; border-radius: 3px; margin-top: 1.5rem; overflow: hidden; }
+        .progress-inner { height: 100%; background: var(--success); transition: width 0.5s ease; }
+        .hidden { display: none; }
+        .shortcut-hint { text-align: center; color: var(--text-dim); font-size: 0.75rem; margin-top: 1rem; }
+        kbd { background: #334155; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Prospection Email - PRET A ENVOYER</h1>
+            <p style="color: var(--text-dim)">2 emails trouves automatiquement</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-value" id="count-total">2</span>
+                <span class="stat-label">Total</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="count-sent">0</span>
+                <span class="stat-label">Envoyes</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="count-remaining">2</span>
+                <span class="stat-label">Restants</span>
+            </div>
+        </div>
+
+        <div id="prospect-card" class="lead-card">
+            <div class="lead-header">
+                <div>
+                    <h2 class="lead-name" id="lead-name">Chargement...</h2>
+                    <div class="lead-info" id="lead-city">Ville</div>
+                </div>
+                <div class="badge" id="lead-note">5.0</div>
+            </div>
+
+            <div class="email-display">
+                <span class="email-text" id="lead-email">email@example.com</span>
+                <a href="#" class="btn-gmail" id="btn-gmail" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    OUVRIR GMAIL
+                </a>
+            </div>
+
+            <details>
+                <summary style="cursor:pointer;color:var(--text-dim);font-size:0.85rem;margin-bottom:1rem">Voir le message</summary>
+                <div class="message-box" id="lead-message">Message...</div>
+            </details>
+
+            <div class="actions">
+                <button class="btn-secondary" onclick="prevLead()" id="btn-prev" disabled>Precedent</button>
+                <button class="btn-secondary" onclick="nextLead()">Suivant →</button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-inner" id="progress-bar"></div>
+            </div>
+
+            <div class="shortcut-hint">
+                <kbd>Enter</kbd> ou <kbd>→</kbd> = Suivant | <kbd>←</kbd> = Precedent
+            </div>
+        </div>
+
+        <div id="finished-card" class="lead-card hidden" style="text-align:center;padding:3rem">
+            <h2>Termine !</h2>
+            <p>Tu as parcouru tous les prospects avec email.</p>
+            <button class="btn-gmail" onclick="reset()" style="margin:0 auto">Recommencer</button>
+        </div>
+    </div>
+
+    <script>
+        const leads = [
+  {
+    "name": "La trattoria",
+    "mobile": "33422109196",
+    "city": "Antibes",
+    "note": "4.7",
+    "avis": "577",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20trattoria&ville=Antibes&note=4.7&avis=577",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant",
+    "message": "Bonjour,\n\nJe viens de voir La trattoria sur Google avec 4.7 etoiles et 577 avis - vos clients vous adorent.\n\nMais quand quelqu'un cherche \"restaurant Antibes\" sur Google, vous n'apparaissez pas en premier... alors que vos concurrents moins bien notes, si.\n\nJ'ai prepare une analyse gratuite de votre visibilite ici :\nhttps://indhack.com/diagnostic/restaurant?nom=La%20trattoria&ville=Antibes&note=4.7&avis=577\n\nCa prend 2 min a regarder. Vous me dites ce que vous en pensez ?\n\nIndiana - IndHack\n06 61 13 97 48",
+    "subject": "La trattoria - Vos 577 avis meritent d etre vus sur Google",
+    "isMobile": false,
+    "whatsappUrl": null,
+    "emailSearchUrl": "https://www.google.com/search?q=La%20trattoria%20Antibes%20email%20contact",
+    "gmailUrl": "https://mail.google.com/mail/?view=cm&fs=1&su=La%20trattoria%20-%20Vos%20577%20avis%20meritent%20d%20etre%20vus%20sur%20Google&body=Bonjour%2C%0A%0AJe%20viens%20de%20voir%20La%20trattoria%20sur%20Google%20avec%204.7%20etoiles%20et%20577%20avis%20-%20vos%20clients%20vous%20adorent.%0A%0AMais%20quand%20quelqu'un%20cherche%20%22restaurant%20Antibes%22%20sur%20Google%2C%20vous%20n'apparaissez%20pas%20en%20premier...%20alors%20que%20vos%20concurrents%20moins%20bien%20notes%2C%20si.%0A%0AJ'ai%20prepare%20une%20analyse%20gratuite%20de%20votre%20visibilite%20ici%20%3A%0Ahttps%3A%2F%2Findhack.com%2Fdiagnostic%2Frestaurant%3Fnom%3DLa%2520trattoria%26ville%3DAntibes%26note%3D4.7%26avis%3D577%0A%0ACa%20prend%202%20min%20a%20regarder.%20Vous%20me%20dites%20ce%20que%20vous%20en%20pensez%20%3F%0A%0AIndiana%20-%20IndHack%0A06%2061%2013%2097%2048",
+    "foundEmail": "+OR+@orange.fr"
+  },
+  {
+    "name": "Ruby’s Garden",
+    "mobile": "33493671689",
+    "city": "Antibes",
+    "note": "4.8",
+    "avis": "243",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Ruby%E2%80%99s%20Garden&ville=Antibes&note=4.8&avis=243",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant",
+    "message": "Bonjour,\n\nJe viens de voir Ruby’s Garden sur Google avec 4.8 etoiles et 243 avis - vos clients vous adorent.\n\nMais quand quelqu'un cherche \"restaurant Antibes\" sur Google, vous n'apparaissez pas en premier... alors que vos concurrents moins bien notes, si.\n\nJ'ai prepare une analyse gratuite de votre visibilite ici :\nhttps://indhack.com/diagnostic/restaurant?nom=Ruby%E2%80%99s%20Garden&ville=Antibes&note=4.8&avis=243\n\nCa prend 2 min a regarder. Vous me dites ce que vous en pensez ?\n\nIndiana - IndHack\n06 61 13 97 48",
+    "subject": "Ruby’s Garden - Vos 243 avis meritent d etre vus sur Google",
+    "isMobile": false,
+    "whatsappUrl": null,
+    "emailSearchUrl": "https://www.google.com/search?q=Ruby%E2%80%99s%20Garden%20Antibes%20email%20contact",
+    "gmailUrl": "https://mail.google.com/mail/?view=cm&fs=1&su=Ruby%E2%80%99s%20Garden%20-%20Vos%20243%20avis%20meritent%20d%20etre%20vus%20sur%20Google&body=Bonjour%2C%0A%0AJe%20viens%20de%20voir%20Ruby%E2%80%99s%20Garden%20sur%20Google%20avec%204.8%20etoiles%20et%20243%20avis%20-%20vos%20clients%20vous%20adorent.%0A%0AMais%20quand%20quelqu'un%20cherche%20%22restaurant%20Antibes%22%20sur%20Google%2C%20vous%20n'apparaissez%20pas%20en%20premier...%20alors%20que%20vos%20concurrents%20moins%20bien%20notes%2C%20si.%0A%0AJ'ai%20prepare%20une%20analyse%20gratuite%20de%20votre%20visibilite%20ici%20%3A%0Ahttps%3A%2F%2Findhack.com%2Fdiagnostic%2Frestaurant%3Fnom%3DRuby%25E2%2580%2599s%2520Garden%26ville%3DAntibes%26note%3D4.8%26avis%3D243%0A%0ACa%20prend%202%20min%20a%20regarder.%20Vous%20me%20dites%20ce%20que%20vous%20en%20pensez%20%3F%0A%0AIndiana%20-%20IndHack%0A06%2061%2013%2097%2048",
+    "foundEmail": "rubysgarden06@gmail.com"
+  }
+];
+
+        let currentIndex = parseInt(localStorage.getItem('email_final_index') || '0');
+        let sentCount = parseInt(localStorage.getItem('email_final_sent') || '0');
+
+        function updateUI() {
+            if (currentIndex >= leads.length) {
+                document.getElementById('prospect-card').classList.add('hidden');
+                document.getElementById('finished-card').classList.remove('hidden');
+                return;
+            }
+
+            document.getElementById('prospect-card').classList.remove('hidden');
+            document.getElementById('finished-card').classList.add('hidden');
+
+            const lead = leads[currentIndex];
+            document.getElementById('lead-name').textContent = lead.name;
+            document.getElementById('lead-city').textContent = lead.city + ' - ' + lead.subcategory;
+            document.getElementById('lead-note').textContent = lead.note + ' (' + lead.avis + ' avis)';
+            document.getElementById('lead-message').textContent = lead.message;
+            document.getElementById('lead-email').textContent = lead.foundEmail;
+
+            // Gmail URL avec email pre-rempli
+            const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1' +
+                '&to=' + encodeURIComponent(lead.foundEmail) +
+                '&su=' + encodeURIComponent(lead.subject) +
+                '&body=' + encodeURIComponent(lead.message);
+            document.getElementById('btn-gmail').href = gmailUrl;
+
+            document.getElementById('btn-prev').disabled = currentIndex === 0;
+            document.getElementById('count-remaining').textContent = leads.length - currentIndex;
+            document.getElementById('count-sent').textContent = sentCount;
+            document.getElementById('progress-bar').style.width = ((currentIndex / leads.length) * 100) + '%';
+
+            localStorage.setItem('email_final_index', currentIndex);
+        }
+
+        function nextLead() {
+            sentCount++;
+            localStorage.setItem('email_final_sent', sentCount);
+            currentIndex++;
+            updateUI();
+        }
+
+        function prevLead() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateUI();
+            }
+        }
+
+        function reset() {
+            currentIndex = 0;
+            sentCount = 0;
+            localStorage.setItem('email_final_index', '0');
+            localStorage.setItem('email_final_sent', '0');
+            updateUI();
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === 'ArrowRight') {
+                nextLead();
+            } else if (e.key === 'ArrowLeft') {
+                prevLead();
+            }
+        });
+
+        updateUI();
+    </script>
+</body>
+</html>
