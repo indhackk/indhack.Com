@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prospection SANTE - 130 leads</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #06B6D4;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container { width: 100%; max-width: 800px; }
+        header { text-align: center; margin-bottom: 3rem; }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stats {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: var(--card-bg);
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            border: 1px solid #334155;
+            text-align: center;
+        }
+        .stat-value { font-size: 1.5rem; font-weight: 700; display: block; }
+        .stat-label { color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; }
+        .lead-card {
+            background: var(--card-bg);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .lead-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary);
+        }
+        .lead-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        .lead-name { font-size: 1.5rem; font-weight: 700; margin: 0; }
+        .lead-info { color: var(--text-dim); font-size: 1rem; margin-bottom: 0.5rem; }
+        .badge {
+            background: #06B6D422;
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .message-box {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            color: #cbd5e1;
+        }
+        .actions { display: flex; gap: 1rem; }
+        button {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        .btn-primary {
+            background: #25D366;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #22c55e;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.3);
+        }
+        .btn-secondary { background: #334155; color: white; }
+        .btn-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #334155;
+            border-radius: 4px;
+            margin-top: 2rem;
+            overflow: hidden;
+        }
+        .progress-inner {
+            height: 100%;
+            background: var(--primary);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        .hidden { display: none; }
+        .finished { text-align: center; padding: 3rem; }
+        .subcategory-tag {
+            background: #334155;
+            color: var(--text-dim);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Prospection SANTE 🚀</h1>
+            <p style="color: var(--text-dim)">Entreprises SANS SITE - Cliquez pour envoyer sur WhatsApp</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-value" id="count-total">130</span>
+                <span class="stat-label">Total Leads</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="count-sent">0</span>
+                <span class="stat-label">Envoyés</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="count-remaining">130</span>
+                <span class="stat-label">Restants</span>
+            </div>
+        </div>
+
+        <div id="prospect-card" class="lead-card">
+            <div class="lead-header">
+                <div>
+                    <h2 class="lead-name" id="lead-name">Chargement...</h2>
+                    <div class="lead-info" id="lead-city">Ville</div>
+                </div>
+                <div>
+                    <div class="badge" id="lead-note">5.0★</div>
+                    <span class="subcategory-tag" id="lead-subcategory">métier</span>
+                </div>
+            </div>
+
+            <div class="message-box" id="lead-message">Message...</div>
+
+            <div class="actions">
+                <button class="btn-secondary" onclick="prevLead()" id="btn-prev" disabled>← Précédent</button>
+                <button class="btn-primary" onclick="sendLead()" id="btn-send">📱 ENVOYER WHATSAPP</button>
+                <button class="btn-secondary" onclick="nextLead()" id="btn-next">Suivant →</button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-inner" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <div id="finished-card" class="lead-card hidden finished">
+            <h2>🎉 Terminé !</h2>
+            <p>Tu as parcouru tous les prospects.</p>
+            <button class="btn-primary" onclick="reset()">Recommencer</button>
+        </div>
+    </div>
+
+    <script>
+        const leads = [
+  {
+    "name": "Constantin Marian Dumitru",
+    "mobile": "33630700695",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "196",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Constantin%20Marian%20Dumitru&ville=Menton&note=5&avis=196",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Franck Zeitoun",
+    "mobile": "33493390766",
+    "city": "Cannes",
+    "note": "4.7",
+    "avis": "160",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Franck%20Zeitoun&ville=Cannes&note=4.7&avis=160",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Julien Casagrande - Ostéopathe",
+    "mobile": "33699708629",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "144",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Julien%20Casagrande%20-%20Ost%C3%A9opathe&ville=Le Cannet&note=5&avis=144",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Osteopathe LAURENT Emmanuel Le Cannet 06",
+    "mobile": "33661364106",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "138",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Osteopathe%20LAURENT%20Emmanuel%20Le%20Cannet%2006&ville=Cannes&note=5&avis=138",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Jean-dominique Delafraye Ostéopathe D.O",
+    "mobile": "33627819278",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "133",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Jean-dominique%20Delafraye%20Ost%C3%A9opathe%20D.O&ville=Cannes&note=5&avis=133",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Pugliesi William",
+    "mobile": "33625147147",
+    "city": "Menton",
+    "note": "4.9",
+    "avis": "127",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Pugliesi%20William&ville=Menton&note=4.9&avis=127",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Dr Madalina MITULESCU Dentiste Cannes",
+    "mobile": "33493471688",
+    "city": "Cannes",
+    "note": "4.3",
+    "avis": "111",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Dr%20Madalina%20MITULESCU%20Dentiste%20Cannes&ville=Cannes&note=4.3&avis=111",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Laurent Mollard - Kinésithérapeute",
+    "mobile": "33685769268",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "106",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Laurent%20Mollard%20-%20Kin%C3%A9sith%C3%A9rapeute&ville=Le Cannet&note=5&avis=106",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Azuelos Joëlle",
+    "mobile": "33493808376",
+    "city": "Nice",
+    "note": "4.9",
+    "avis": "83",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Azuelos%20Jo%C3%ABlle&ville=Nice&note=4.9&avis=83",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Vallivero Yannick",
+    "mobile": "33493946925",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "78",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Vallivero%20Yannick&ville=Le Cannet&note=5&avis=78",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Samy Bouyahia : Kinésithérapie - Suivi sportif - Thérapie Manuelle - Dry Needling",
+    "mobile": "33620064666",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "77",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Samy%20Bouyahia%20%3A%20Kin%C3%A9sith%C3%A9rapie%20-%20Suivi%20sportif%20-%20Th%C3%A9rapie%20Manuelle%20-%20Dry%20Needling&ville=Antibes&note=5&avis=77",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Dr jean luc HANNOUN kinésithérapie cardio respiratoire pédiatrique ,doctorat d 'état en sciences, Expert Judicaire",
+    "mobile": "33493465254",
+    "city": "Cannes",
+    "note": "4.8",
+    "avis": "74",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Dr%20jean%20luc%20HANNOUN%20kin%C3%A9sith%C3%A9rapie%20cardio%20respiratoire%20p%C3%A9diatrique%20%2Cdoctorat%20d%20'%C3%A9tat%20en%20sciences%2C%20Expert%20Judicaire&ville=Cannes&note=4.8&avis=74",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Lisa Nunes - Psychologue et psychothérapeute",
+    "mobile": "33610050153",
+    "city": "Le Cannet",
+    "note": "4.9",
+    "avis": "69",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Lisa%20Nunes%20-%20Psychologue%20et%20psychoth%C3%A9rapeute&ville=Le Cannet&note=4.9&avis=69",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Desclozeaux Matthieu",
+    "mobile": "33493427528",
+    "city": "Grasse",
+    "note": "4.5",
+    "avis": "63",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Desclozeaux%20Matthieu&ville=Grasse&note=4.5&avis=63",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Marco Impoco Kinésithérapeute/Physiotherapists Cannes e Le Cannet",
+    "mobile": "33768717835",
+    "city": "Le Cannet",
+    "note": "4.9",
+    "avis": "63",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Marco%20Impoco%20Kin%C3%A9sith%C3%A9rapeute%2FPhysiotherapists%20Cannes%20e%20Le%20Cannet&ville=Le Cannet&note=4.9&avis=63",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Dr Cozma Gelu Alex , Chirurgien-Dentiste ,Cabinet dentaire a Cannes",
+    "mobile": "33763954463",
+    "city": "Cannes",
+    "note": "4.7",
+    "avis": "62",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Dr%20Cozma%20Gelu%20Alex%20%2C%20Chirurgien-Dentiste%20%2CCabinet%20dentaire%20a%20Cannes&ville=Cannes&note=4.7&avis=62",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Cabinet Laurence Giudicelli - Psychothérapie & Art-Thérapie à Le Cannet et Mandelieu-la-Napoule",
+    "mobile": "33609419213",
+    "city": "Le Cannet",
+    "note": "4.8",
+    "avis": "55",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Cabinet%20Laurence%20Giudicelli%20-%20Psychoth%C3%A9rapie%20%26%20Art-Th%C3%A9rapie%20%C3%A0%20Le%20Cannet%20et%20Mandelieu-la-Napoule&ville=Le Cannet&note=4.8&avis=55",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Bérénice FÜRSTE",
+    "mobile": "33659110424",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "53",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=B%C3%A9r%C3%A9nice%20F%C3%9CRSTE&ville=Grasse&note=5&avis=53",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Asma BEN ABDA - Masseur kinésithérapeute DE",
+    "mobile": "33638900343",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "52",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Asma%20BEN%20ABDA%20-%20Masseur%20kin%C3%A9sith%C3%A9rapeute%20DE&ville=Antibes&note=5&avis=52",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Lucie OLLIER",
+    "mobile": "33788029385",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.9",
+    "avis": "51",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Lucie%20OLLIER&ville=Saint-Laurent-du-Var&note=4.9&avis=51",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Antoine Valentini - Kinésithérapeute à domicile",
+    "mobile": "33778465280",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "50",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Antoine%20Valentini%20-%20Kin%C3%A9sith%C3%A9rapeute%20%C3%A0%20domicile&ville=Antibes&note=5&avis=50",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Loussaïfi Marouen Ostéopathe",
+    "mobile": "33651966473",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.9",
+    "avis": "48",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Loussa%C3%AFfi%20Marouen%20Ost%C3%A9opathe&ville=Cagnes-sur-Mer&note=4.9&avis=48",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Clarisse Griffoni",
+    "mobile": "33765526368",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "47",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Clarisse%20Griffoni&ville=Grasse&note=5&avis=47",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Delmarre Thierry",
+    "mobile": "33493341200",
+    "city": "Antibes",
+    "note": "4.8",
+    "avis": "45",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Delmarre%20Thierry&ville=Antibes&note=4.8&avis=45",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "CABINET DENTAIRE DR CRAHAY",
+    "mobile": "33493676773",
+    "city": "Antibes",
+    "note": "4.2",
+    "avis": "42",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=CABINET%20DENTAIRE%20DR%20CRAHAY&ville=Antibes&note=4.2&avis=42",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "KINélite Cannes",
+    "mobile": "33493476735",
+    "city": "Cannes",
+    "note": "4.7",
+    "avis": "39",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=KIN%C3%A9lite%20Cannes&ville=Cannes&note=4.7&avis=39",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "DOCTEUR DANIEL MIZRAHI",
+    "mobile": "33493311329",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.9",
+    "avis": "36",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=DOCTEUR%20DANIEL%20MIZRAHI&ville=Saint-Laurent-du-Var&note=4.9&avis=36",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Cabinet dentaire Dr Émilie Guez",
+    "mobile": "33492938678",
+    "city": "Antibes",
+    "note": "4.4",
+    "avis": "35",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Cabinet%20dentaire%20Dr%20%C3%89milie%20Guez&ville=Antibes&note=4.4&avis=35",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Laurent VIGUIER",
+    "mobile": "33493390451",
+    "city": "Cannes",
+    "note": "4.6",
+    "avis": "33",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Laurent%20VIGUIER&ville=Cannes&note=4.6&avis=33",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Emmanuelle MATILE - Kinésithérapeute le Cannet",
+    "mobile": "33492180808",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "33",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Emmanuelle%20MATILE%20-%20Kin%C3%A9sith%C3%A9rapeute%20le%20Cannet&ville=Le Cannet&note=5&avis=33",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Cabinet Kiné Ribeyron",
+    "mobile": "33953003988",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "29",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Cabinet%20Kin%C3%A9%20Ribeyron&ville=Menton&note=5&avis=29",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Centre Paramédical Nice Quest....centro medico",
+    "mobile": "33493212502",
+    "city": "Nice",
+    "note": "4.4",
+    "avis": "29",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Centre%20Param%C3%A9dical%20Nice%20Quest....centro%20medico&ville=Nice&note=4.4&avis=29",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Docteur Alexandre DURAND",
+    "mobile": "33493611010",
+    "city": "Antibes",
+    "note": "4.9",
+    "avis": "27",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Docteur%20Alexandre%20DURAND&ville=Antibes&note=4.9&avis=27",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Garcia Jacqueline",
+    "mobile": "33493288101",
+    "city": "Menton",
+    "note": "4.8",
+    "avis": "27",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Garcia%20Jacqueline&ville=Menton&note=4.8&avis=27",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Dr Lonjon Jean-Baptiste",
+    "mobile": "33493311139",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.6",
+    "avis": "27",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Dr%20Lonjon%20Jean-Baptiste&ville=Saint-Laurent-du-Var&note=4.6&avis=27",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Scotte Laurent",
+    "mobile": "33493573415",
+    "city": "Menton",
+    "note": "4.3",
+    "avis": "27",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Scotte%20Laurent&ville=Menton&note=4.3&avis=27",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Cabinet de kinésithérapie ostéopathie BELOLI.C - MORTREUX.B - BELOLI.R - POP.V",
+    "mobile": "33492132434",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.8",
+    "avis": "27",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Cabinet%20de%20kin%C3%A9sith%C3%A9rapie%20ost%C3%A9opathie%20BELOLI.C%20-%20MORTREUX.B%20-%20BELOLI.R%20-%20POP.V&ville=Cagnes-sur-Mer&note=4.8&avis=27",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Prost Nicolas",
+    "mobile": "33493839256",
+    "city": "Nice",
+    "note": "4.4",
+    "avis": "26",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Prost%20Nicolas&ville=Nice&note=4.4&avis=26",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Vaillant Kathleen",
+    "mobile": "33493466001",
+    "city": "Le Cannet",
+    "note": "4.6",
+    "avis": "25",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Vaillant%20Kathleen&ville=Le Cannet&note=4.6&avis=25",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Bompard Fernandez Anne",
+    "mobile": "33493682262",
+    "city": "Cannes",
+    "note": "4.5",
+    "avis": "25",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Bompard%20Fernandez%20Anne&ville=Cannes&note=4.5&avis=25",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Chirurgien dentiste Toev Monica",
+    "mobile": "33493683821",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "24",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Chirurgien%20dentiste%20Toev%20Monica&ville=Cannes&note=5&avis=24",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "André Chira Kinésithérapeute",
+    "mobile": "33493717153",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "24",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Andr%C3%A9%20Chira%20Kin%C3%A9sith%C3%A9rapeute&ville=Nice&note=5&avis=24",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "CHIBOIS Aurélie",
+    "mobile": "33626691530",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "22",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=CHIBOIS%20Aur%C3%A9lie&ville=Grasse&note=5&avis=22",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Cabinet de Kinésithérapie du Vercors",
+    "mobile": "33493474272",
+    "city": "Cannes",
+    "note": "4.7",
+    "avis": "22",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Cabinet%20de%20Kin%C3%A9sith%C3%A9rapie%20du%20Vercors&ville=Cannes&note=4.7&avis=22",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Pagnoud Sophie",
+    "mobile": "33493898120",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.8",
+    "avis": "22",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Pagnoud%20Sophie&ville=Cagnes-sur-Mer&note=4.8&avis=22",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Jacques Jason",
+    "mobile": "33782799593",
+    "city": "Le Cannet",
+    "note": "4.8",
+    "avis": "22",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Jacques%20Jason&ville=Le Cannet&note=4.8&avis=22",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Kinésithérapeute Emanuel VRINCEANU",
+    "mobile": "33766062354",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "20",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Kin%C3%A9sith%C3%A9rapeute%20Emanuel%20VRINCEANU&ville=Menton&note=5&avis=20",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Vantaggi Marlène",
+    "mobile": "33493464741",
+    "city": "Le Cannet",
+    "note": "4.2",
+    "avis": "20",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Vantaggi%20Marl%C3%A8ne&ville=Le Cannet&note=4.2&avis=20",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Ctorza Jérôme",
+    "mobile": "33493704644",
+    "city": "Grasse",
+    "note": "4.4",
+    "avis": "19",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Ctorza%20J%C3%A9r%C3%B4me&ville=Grasse&note=4.4&avis=19",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Cabinet Kinésithérapeute Ostéopathie",
+    "mobile": "33493341561",
+    "city": "Antibes",
+    "note": "4.4",
+    "avis": "19",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Cabinet%20Kin%C3%A9sith%C3%A9rapeute%20Ost%C3%A9opathie&ville=Antibes&note=4.4&avis=19",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Cabinet de Kinésithérapie Mitric Emanuel",
+    "mobile": "33489681862",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "19",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Cabinet%20de%20Kin%C3%A9sith%C3%A9rapie%20Mitric%20Emanuel&ville=Le Cannet&note=5&avis=19",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Sophie Bocher - Psychologue Antibes",
+    "mobile": "33609706836",
+    "city": "Antibes",
+    "note": "4.8",
+    "avis": "19",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Sophie%20Bocher%20-%20Psychologue%20Antibes&ville=Antibes&note=4.8&avis=19",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Yves Boulais",
+    "mobile": "33493698582",
+    "city": "Le Cannet",
+    "note": "4.9",
+    "avis": "18",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Yves%20Boulais&ville=Le Cannet&note=4.9&avis=18",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Bagarre Michel",
+    "mobile": "33493141058",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.5",
+    "avis": "18",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Bagarre%20Michel&ville=Saint-Laurent-du-Var&note=4.5&avis=18",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "AZUR PHYSIO",
+    "mobile": "33492102274",
+    "city": "Menton",
+    "note": "4.8",
+    "avis": "17",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=AZUR%20PHYSIO&ville=Menton&note=4.8&avis=17",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Alvaro ÁVILA FERNÁNDEZ",
+    "mobile": "33631864904",
+    "city": "Cannes",
+    "note": "4.8",
+    "avis": "16",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Alvaro%20%C3%81VILA%20FERN%C3%81NDEZ&ville=Cannes&note=4.8&avis=16",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "CHAIBI Helmi",
+    "mobile": "33621033516",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "16",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=CHAIBI%20Helmi&ville=Grasse&note=5&avis=16",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Sophie Rohmer",
+    "mobile": "33493601028",
+    "city": "Grasse",
+    "note": "4.8",
+    "avis": "16",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Sophie%20Rohmer&ville=Grasse&note=4.8&avis=16",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Michel BROHAN Kinésithérapeute",
+    "mobile": "33493942739",
+    "city": "Cannes",
+    "note": "4.7",
+    "avis": "15",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Michel%20BROHAN%20Kin%C3%A9sith%C3%A9rapeute&ville=Cannes&note=4.7&avis=15",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Bigozzi Chloe Kinésithérapie Vestibulaire",
+    "mobile": "33493333553",
+    "city": "Antibes",
+    "note": "4.7",
+    "avis": "15",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Bigozzi%20Chloe%20Kin%C3%A9sith%C3%A9rapie%20Vestibulaire&ville=Antibes&note=4.7&avis=15",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Cabinet de kinésithérapie Vincenzo Pratico",
+    "mobile": "33950261224",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "15",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Cabinet%20de%20kin%C3%A9sith%C3%A9rapie%20Vincenzo%20Pratico&ville=Antibes&note=5&avis=15",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Daniel Khalifa Kinésithérapeute Ostéopathe",
+    "mobile": "33607314902",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "15",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Daniel%20Khalifa%20Kin%C3%A9sith%C3%A9rapeute%20Ost%C3%A9opathe&ville=Le Cannet&note=5&avis=15",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Dalmasso Michael Eddy Gregory",
+    "mobile": "33493144549",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.5",
+    "avis": "15",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Dalmasso%20Michael%20Eddy%20Gregory&ville=Saint-Laurent-du-Var&note=4.5&avis=15",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Aline Sarrasin - Ostéopathe D.O",
+    "mobile": "33664900817",
+    "city": "Cannes",
+    "note": "4.7",
+    "avis": "14",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Aline%20Sarrasin%20-%20Ost%C3%A9opathe%20D.O&ville=Cannes&note=4.7&avis=14",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Centre de kinésithérapie Carnot",
+    "mobile": "33973892763",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "14",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Centre%20de%20kin%C3%A9sith%C3%A9rapie%20Carnot&ville=Cannes&note=5&avis=14",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Ostéopathe Nice Ouest Florian Gracia",
+    "mobile": "33622495951",
+    "city": "Nice",
+    "note": "4.8",
+    "avis": "13",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Ost%C3%A9opathe%20Nice%20Ouest%20Florian%20Gracia&ville=Nice&note=4.8&avis=13",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Julie Atlan - Ostéopathe pédiatrique",
+    "mobile": "33649247571",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "13",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Julie%20Atlan%20-%20Ost%C3%A9opathe%20p%C3%A9diatrique&ville=Saint-Laurent-du-Var&note=5&avis=13",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Malek Nicolas",
+    "mobile": "33493436258",
+    "city": "Cannes",
+    "note": "4.7",
+    "avis": "13",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Malek%20Nicolas&ville=Cannes&note=4.7&avis=13",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Alice Schiopu kinésithérapie vestibulaire",
+    "mobile": "33669788994",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "13",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Alice%20Schiopu%20kin%C3%A9sith%C3%A9rapie%20vestibulaire&ville=Menton&note=5&avis=13",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Cabinet de Kinésithérapie K'Sante Le Cannet",
+    "mobile": "33489024591",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "13",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Cabinet%20de%20Kin%C3%A9sith%C3%A9rapie%20K'Sante%20Le%20Cannet&ville=Le Cannet&note=5&avis=13",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Elodie MESTRAU - Psychologue pour enfants et adultes",
+    "mobile": "33623320109",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "13",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Elodie%20MESTRAU%20-%20Psychologue%20pour%20enfants%20et%20adultes&ville=Antibes&note=5&avis=13",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "OSTEOPATHE DO CANNES LE CANNET FRANCOIS GANDOLFO",
+    "mobile": "33684759638",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "12",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=OSTEOPATHE%20DO%20CANNES%20LE%20CANNET%20FRANCOIS%20GANDOLFO&ville=Le Cannet&note=5&avis=12",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Claudia Galera - Psychologue - Saint-Laurent-du-Var",
+    "mobile": "33659325143",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "12",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Claudia%20Galera%20-%20Psychologue%20-%20Saint-Laurent-du-Var&ville=Saint-Laurent-du-Var&note=5&avis=12",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Dr TALEB Zied et Dr PERDIGON Corinne",
+    "mobile": "33493725797",
+    "city": "Nice",
+    "note": "4.6",
+    "avis": "11",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Dr%20TALEB%20Zied%20et%20Dr%20PERDIGON%20Corinne&ville=Nice&note=4.6&avis=11",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Docteur Christophe Caumel",
+    "mobile": "33493830637",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "11",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Docteur%20Christophe%20Caumel&ville=Nice&note=5&avis=11",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Astoux Romain",
+    "mobile": "33622027334",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "11",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Astoux%20Romain&ville=Grasse&note=5&avis=11",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Kinésithérapéute Silviu Stanescu",
+    "mobile": "33493747398",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "11",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Kin%C3%A9sith%C3%A9rap%C3%A9ute%20Silviu%20Stanescu&ville=Antibes&note=5&avis=11",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Gaetti Delphine",
+    "mobile": "33614502456",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.9",
+    "avis": "11",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Gaetti%20Delphine&ville=Cagnes-sur-Mer&note=4.9&avis=11",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Docteur Léonor Ceretti",
+    "mobile": "33493364687",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "10",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Docteur%20L%C3%A9onor%20Ceretti&ville=Grasse&note=5&avis=10",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Docteur Domergue Elisabeth",
+    "mobile": "33489810707",
+    "city": "Le Cannet",
+    "note": "4.5",
+    "avis": "10",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Docteur%20Domergue%20Elisabeth&ville=Le Cannet&note=4.5&avis=10",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Laville Jessica",
+    "mobile": "33493311139",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.9",
+    "avis": "10",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Laville%20Jessica&ville=Saint-Laurent-du-Var&note=4.9&avis=10",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Foissard William",
+    "mobile": "33664171008",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "10",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Foissard%20William&ville=Saint-Laurent-du-Var&note=5&avis=10",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Jordane LAUNAY",
+    "mobile": "33664460683",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "10",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Jordane%20LAUNAY&ville=Cannes&note=5&avis=10",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Motte Thomas",
+    "mobile": "33614303606",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "10",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Motte%20Thomas&ville=Grasse&note=5&avis=10",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Kinésithérapeute Thomas ROUGER \"Résidence Marianne : Bat A\"",
+    "mobile": "33609021185",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "10",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Kin%C3%A9sith%C3%A9rapeute%20Thomas%20ROUGER%20%22R%C3%A9sidence%20Marianne%20%3A%20Bat%20A%22&ville=Saint-Laurent-du-Var&note=5&avis=10",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Alexandre Borne",
+    "mobile": "33699367006",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "10",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Alexandre%20Borne&ville=Cannes&note=5&avis=10",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "BERENGERE LEMOINE",
+    "mobile": "33977198252",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "10",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=BERENGERE%20LEMOINE&ville=Antibes&note=5&avis=10",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Elian DI MEGLIO - Ostéopathe DO",
+    "mobile": "33603170053",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "9",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Elian%20DI%20MEGLIO%20-%20Ost%C3%A9opathe%20DO&ville=Cagnes-sur-Mer&note=5&avis=9",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Cloé RIGAL",
+    "mobile": "33492102274",
+    "city": "Menton",
+    "note": "4.9",
+    "avis": "9",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Clo%C3%A9%20RIGAL&ville=Menton&note=4.9&avis=9",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Cabinet de Kinésithérapie",
+    "mobile": "33493435003",
+    "city": "Le Cannet",
+    "note": "4.6",
+    "avis": "9",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Cabinet%20de%20Kin%C3%A9sith%C3%A9rapie&ville=Le Cannet&note=4.6&avis=9",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Julia GARCIA",
+    "mobile": "33677495770",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "9",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Julia%20GARCIA&ville=Antibes&note=5&avis=9",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Dr Elie Brami - Dentiste",
+    "mobile": "33493077583",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Dr%20Elie%20Brami%20-%20Dentiste&ville=Cagnes-sur-Mer&note=5&avis=8",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Cabinet Dentaire du dr Lanniée Julie",
+    "mobile": "33493454778",
+    "city": "Le Cannet",
+    "note": "4.4",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Cabinet%20Dentaire%20du%20dr%20Lanni%C3%A9e%20Julie&ville=Le Cannet&note=4.4&avis=8",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Revel Emmanuelle",
+    "mobile": "33493318700",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.5",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/dentiste?nom=Revel%20Emmanuelle&ville=Saint-Laurent-du-Var&note=4.5&avis=8",
+    "category": "SANTE",
+    "subcategory": "dentiste"
+  },
+  {
+    "name": "Kinédou",
+    "mobile": "33493830649",
+    "city": "Nice",
+    "note": "4.1",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Kin%C3%A9dou&ville=Nice&note=4.1&avis=8",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Zghikh Ali",
+    "mobile": "33489970853",
+    "city": "Menton",
+    "note": "4.5",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Zghikh%20Ali&ville=Menton&note=4.5&avis=8",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Lamperiere Aurelie",
+    "mobile": "33626113356",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Lamperiere%20Aurelie&ville=Cagnes-sur-Mer&note=5&avis=8",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Angelou Gregoire",
+    "mobile": "33492041754",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.5",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Angelou%20Gregoire&ville=Saint-Laurent-du-Var&note=4.5&avis=8",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Cabinet de kinésithérapie",
+    "mobile": "33963537335",
+    "city": "Menton",
+    "note": "4.4",
+    "avis": "7",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Cabinet%20de%20kin%C3%A9sith%C3%A9rapie&ville=Menton&note=4.4&avis=7",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Pinet",
+    "mobile": "33492128232",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "7",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Pinet&ville=Cagnes-sur-Mer&note=5&avis=7",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Jorge ESTEBAN",
+    "mobile": "33782800452",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.8",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Jorge%20ESTEBAN&ville=Saint-Laurent-du-Var&note=4.8&avis=6",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "VERDIANI Valérie Kinésithérapeute",
+    "mobile": "33493705823",
+    "city": "Grasse",
+    "note": "4.3",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=VERDIANI%20Val%C3%A9rie%20Kin%C3%A9sith%C3%A9rapeute&ville=Grasse&note=4.3&avis=6",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Lukasz BANIAK - Masseur Kinésithérapeute",
+    "mobile": "33493315063",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.3",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Lukasz%20BANIAK%20-%20Masseur%20Kin%C3%A9sith%C3%A9rapeute&ville=Saint-Laurent-du-Var&note=4.3&avis=6",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Erwann LE PITRE",
+    "mobile": "33620427341",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Erwann%20LE%20PITRE&ville=Saint-Laurent-du-Var&note=5&avis=6",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Stéphanie ALLAMANDI CHAUVIN",
+    "mobile": "33603171640",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=St%C3%A9phanie%20ALLAMANDI%20CHAUVIN&ville=Menton&note=5&avis=6",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Elie KAHN Ostéopathe Saint Laurent du Var",
+    "mobile": "33611462353",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "5",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Elie%20KAHN%20Ost%C3%A9opathe%20Saint%20Laurent%20du%20Var&ville=Saint-Laurent-du-Var&note=5&avis=5",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Cabinet de Kinésithérapie Antoine Boucher-Thouveny",
+    "mobile": "33493862500",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "5",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Cabinet%20de%20Kin%C3%A9sith%C3%A9rapie%20Antoine%20Boucher-Thouveny&ville=Nice&note=5&avis=5",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Séverine Maggiulli : Thérapeute PNL, cabinet Colibri à Antibes",
+    "mobile": "33666238753",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "5",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=S%C3%A9verine%20Maggiulli%20%3A%20Th%C3%A9rapeute%20PNL%2C%20cabinet%20Colibri%20%C3%A0%20Antibes&ville=Antibes&note=5&avis=5",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Alice Miloni, Psychologue",
+    "mobile": "33662866513",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "5",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Alice%20Miloni%2C%20Psychologue&ville=Menton&note=5&avis=5",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Jonathan Nuvolone - Ostéopathe",
+    "mobile": "33608935106",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "4",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Jonathan%20Nuvolone%20-%20Ost%C3%A9opathe&ville=Menton&note=5&avis=4",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Sophie PIGOT - Ostéopathe",
+    "mobile": "33493661254",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.0",
+    "avis": "4",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Sophie%20PIGOT%20-%20Ost%C3%A9opathe&ville=Saint-Laurent-du-Var&note=4&avis=4",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Kiné à domicile Cannes",
+    "mobile": "33661650850",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "4",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Kin%C3%A9%20%C3%A0%20domicile%20Cannes&ville=Cannes&note=5&avis=4",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Marine Gallo kinésithérapeute",
+    "mobile": "33630883492",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "4",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Marine%20Gallo%20kin%C3%A9sith%C3%A9rapeute&ville=Menton&note=5&avis=4",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Sophie GOMEZ - Psychologue clinicienne",
+    "mobile": "33768731906",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Sophie%20GOMEZ%20-%20Psychologue%20clinicienne&ville=Nice&note=5&avis=3",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Osteopathe Grasse",
+    "mobile": "33685038217",
+    "city": "Grasse",
+    "note": "4.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Osteopathe%20Grasse&ville=Grasse&note=4&avis=2",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "Constance EVRARD - Ostéopathe Grasse Saint Jacques",
+    "mobile": "33682890197",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/osteopathe?nom=Constance%20EVRARD%20-%20Ost%C3%A9opathe%20Grasse%20Saint%20Jacques&ville=Grasse&note=5&avis=2",
+    "category": "SANTE",
+    "subcategory": "osteopathe"
+  },
+  {
+    "name": "cabinet kinésithérapie Menton LACROIX et POMMIER",
+    "mobile": "33744838753",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=cabinet%20kin%C3%A9sith%C3%A9rapie%20Menton%20LACROIX%20et%20POMMIER&ville=Menton&note=5&avis=2",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Claire Cellini Psychologue",
+    "mobile": "33675186984",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Claire%20Cellini%20Psychologue&ville=Menton&note=5&avis=2",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "CHAUVIN Frédérick",
+    "mobile": "33623670352",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=CHAUVIN%20Fr%C3%A9d%C3%A9rick&ville=Menton&note=5&avis=2",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Liliana FERREIRA OLIVEIRA",
+    "mobile": "33749103323",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Liliana%20FERREIRA%20OLIVEIRA&ville=Grasse&note=5&avis=1",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Heddy FERCHICHI",
+    "mobile": "33779423395",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Heddy%20FERCHICHI&ville=Grasse&note=5&avis=1",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Constantin Marian",
+    "mobile": "33493573415",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Constantin%20Marian&ville=Menton&note=5&avis=1",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Pozzi Andrea",
+    "mobile": "33678229841",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Pozzi%20Andrea&ville=Menton&note=5&avis=1",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Margaux CORSALETTI Kinésithérapeute Maxillo-faciale",
+    "mobile": "33492102274",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Margaux%20CORSALETTI%20Kin%C3%A9sith%C3%A9rapeute%20Maxillo-faciale&ville=Menton&note=5&avis=1",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Huertas Maria Kinesitherapeute",
+    "mobile": "33645074168",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Huertas%20Maria%20Kinesitherapeute&ville=Cagnes-sur-Mer&note=5&avis=1",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Macaudière Cécile",
+    "mobile": "33493314201",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Macaudi%C3%A8re%20C%C3%A9cile&ville=Saint-Laurent-du-Var&note=5&avis=1",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Llona BEJGA - Kinésithérapeute",
+    "mobile": "33493315063",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Llona%20BEJGA%20-%20Kin%C3%A9sith%C3%A9rapeute&ville=Saint-Laurent-du-Var&note=5&avis=1",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "Loïc CLAVEL - Kinésithérapeute",
+    "mobile": "33492041754",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/kinesitherapeute?nom=Lo%C3%AFc%20CLAVEL%20-%20Kin%C3%A9sith%C3%A9rapeute&ville=Saint-Laurent-du-Var&note=5&avis=1",
+    "category": "SANTE",
+    "subcategory": "kinesitherapeute"
+  },
+  {
+    "name": "CABINET HERBLIN Psychologue clinicienne à Cagnes-sur-Mer",
+    "mobile": "33497100376",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=CABINET%20HERBLIN%20Psychologue%20clinicienne%20%C3%A0%20Cagnes-sur-Mer&ville=Cagnes-sur-Mer&note=5&avis=1",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  },
+  {
+    "name": "Cabinet de Psychologie",
+    "mobile": "33665606456",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/psychologue?nom=Cabinet%20de%20Psychologie&ville=Saint-Laurent-du-Var&note=5&avis=1",
+    "category": "SANTE",
+    "subcategory": "psychologue"
+  }
+];
+
+        let currentIndex = 0;
+        const sentList = new Set();
+
+        function getMessage(lead) {
+            return `Bonjour ! 👋
+
+Je me permets de vous contacter car je suis tombée sur votre fiche Google et j'ai remarqué que vous aviez d'excellents avis (${lead.note}★ avec ${lead.avis} avis) !
+
+Je travaille avec des ${lead.subcategory}s dans le 06 et j'ai fait un rapide audit personnalisé pour ${lead.name}.
+
+L'idée n'est pas de vous déranger - c'est un diagnostic gratuit qui montre comment vous pourriez capter plus de clients à ${lead.city} grâce à votre réputation.
+
+Votre audit gratuit est ici :
+${lead.url}
+
+Bonne journée !
+Indiana - IndHack
+📞 06 61 13 97 48`;
+        }
+
+        function updateUI() {
+            if (currentIndex >= leads.length) {
+                document.getElementById('prospect-card').classList.add('hidden');
+                document.getElementById('finished-card').classList.remove('hidden');
+                return;
+            }
+
+            const lead = leads[currentIndex];
+            document.getElementById('lead-name').textContent = lead.name;
+            document.getElementById('lead-city').textContent = lead.city + ' • ' + lead.mobile.replace(/^33/, '0').replace(/(\d{2})(?=\d)/g, '$1 ');
+            document.getElementById('lead-note').textContent = lead.note + '★ (' + lead.avis + ' avis)';
+            document.getElementById('lead-subcategory').textContent = lead.subcategory;
+            document.getElementById('lead-message').textContent = getMessage(lead);
+
+            document.getElementById('count-sent').textContent = sentList.size;
+            document.getElementById('count-remaining').textContent = leads.length - currentIndex;
+
+            const progress = (currentIndex / leads.length) * 100;
+            document.getElementById('progress-bar').style.width = progress + '%';
+
+            document.getElementById('btn-prev').disabled = currentIndex === 0;
+        }
+
+        function sendLead() {
+            const lead = leads[currentIndex];
+            const msg = getMessage(lead);
+            const url = `https://wa.me/${lead.mobile}?text=${encodeURIComponent(msg)}`;
+
+            window.open(url, '_blank');
+            sentList.add(currentIndex);
+
+            setTimeout(() => nextLead(), 1000);
+        }
+
+        function nextLead() {
+            if (currentIndex < leads.length) {
+                currentIndex++;
+                updateUI();
+            }
+        }
+
+        function prevLead() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateUI();
+            }
+        }
+
+        function reset() {
+            currentIndex = 0;
+            sentList.clear();
+            document.getElementById('prospect-card').classList.remove('hidden');
+            document.getElementById('finished-card').classList.add('hidden');
+            updateUI();
+        }
+
+        updateUI();
+    </script>
+</body>
+</html>

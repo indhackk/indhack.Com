@@ -640,6 +640,527 @@ export const metiersData: Record<string, MetierData> = {
 
     averageTicket: 120,
   },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // RESTAURANT (nouveau pour prospection)
+  // ─────────────────────────────────────────────────────────────────────────────
+  restaurant: {
+    slug: 'restaurant',
+    label: 'Restaurant',
+    labelPlural: 'Restaurants',
+
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/seo-dashboard.png',
+
+    accentColor: '#D97706', // Orange chaleureux
+
+    heroTitle: 'Vos clients adorent votre cuisine.',
+    heroSubtitle: 'Mais les affamés qui cherchent sur Google ne vous trouvent pas.',
+    problemStatement: 'Quand quelqu\'un cherche "restaurant Nice" ou "où manger à Nice", ce sont d\'autres établissements qui apparaissent.',
+
+    keywords: {
+      principal: [
+        { keyword: 'restaurant nice', volume: 8100, difficulty: 'difficile', type: 'principal' },
+        { keyword: 'ou manger nice', volume: 2400, difficulty: 'difficile', type: 'principal' },
+        { keyword: 'meilleur restaurant nice', volume: 1900, difficulty: 'difficile', type: 'principal' },
+      ],
+      niches: [
+        { keyword: 'restaurant italien nice', volume: 1400, difficulty: 'moyen', type: 'niche' },
+        { keyword: 'restaurant vieux nice', volume: 1200, difficulty: 'moyen', type: 'niche' },
+        { keyword: 'restaurant terrasse nice', volume: 880, difficulty: 'moyen', type: 'niche' },
+        { keyword: 'restaurant gastronomique nice', volume: 720, difficulty: 'moyen', type: 'niche' },
+        { keyword: 'restaurant livraison nice', volume: 590, difficulty: 'facile', type: 'niche' },
+      ],
+      longueTraine: [
+        { keyword: 'restaurant ouvert dimanche nice', volume: 320, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'restaurant pas cher nice', volume: 480, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'restaurant romantique nice', volume: 210, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'restaurant groupe nice', volume: 170, difficulty: 'facile', type: 'longue-traine' },
+      ]
+    },
+
+    ghostPageExamples: [
+      'Restaurant Vieux Nice',
+      'Restaurant Terrasse Nice',
+      'Meilleur Restaurant Nice',
+      'Restaurant Livraison Nice',
+      'Restaurant Groupe Nice',
+    ],
+
+    clientQuestions: [
+      'Prenez-vous les réservations en ligne ?',
+      'Faites-vous la livraison ?',
+      'Êtes-vous ouvert le dimanche ?',
+      'Avez-vous une terrasse ?',
+    ],
+
+    services: [
+      'Déjeuner',
+      'Dîner',
+      'Terrasse',
+      'Livraison',
+      'Click & Collect',
+      'Privatisation',
+      'Menu groupe',
+    ],
+
+    averageTicket: 35,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // BOULANGERIE (nouveau pour prospection)
+  // ─────────────────────────────────────────────────────────────────────────────
+  boulangerie: {
+    slug: 'boulangerie',
+    label: 'Boulangerie',
+    labelPlural: 'Boulangeries',
+
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/seo-dashboard.png',
+
+    accentColor: '#92400E', // Brun pain
+
+    heroTitle: 'Vos clients font la queue chaque matin.',
+    heroSubtitle: 'Mais ceux qui cherchent sur Google ne vous trouvent pas.',
+    problemStatement: 'Quand quelqu\'un cherche "boulangerie ouverte dimanche" ou "meilleur pain Nice", vous n\'apparaissez pas.',
+
+    keywords: {
+      principal: [
+        { keyword: 'boulangerie nice', volume: 3200, difficulty: 'difficile', type: 'principal' },
+        { keyword: 'boulanger nice', volume: 1400, difficulty: 'moyen', type: 'principal' },
+        { keyword: 'patisserie nice', volume: 1800, difficulty: 'moyen', type: 'principal' },
+      ],
+      niches: [
+        { keyword: 'boulangerie artisanale nice', volume: 590, difficulty: 'moyen', type: 'niche' },
+        { keyword: 'croissant nice', volume: 480, difficulty: 'facile', type: 'niche' },
+        { keyword: 'pain bio nice', volume: 320, difficulty: 'facile', type: 'niche' },
+        { keyword: 'gateau anniversaire nice', volume: 720, difficulty: 'moyen', type: 'niche' },
+        { keyword: 'boulangerie ouverte dimanche nice', volume: 390, difficulty: 'facile', type: 'niche' },
+      ],
+      longueTraine: [
+        { keyword: 'meilleure boulangerie nice', volume: 210, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'boulangerie vieux nice', volume: 170, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'pain au levain nice', volume: 140, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'boulangerie sans gluten nice', volume: 90, difficulty: 'facile', type: 'longue-traine' },
+      ]
+    },
+
+    ghostPageExamples: [
+      'Boulangerie Artisanale Nice',
+      'Pain Bio Nice',
+      'Gâteau Anniversaire Nice',
+      'Boulangerie Ouverte Dimanche Nice',
+      'Meilleure Boulangerie Nice',
+    ],
+
+    clientQuestions: [
+      'Êtes-vous ouvert le dimanche ?',
+      'Faites-vous les gâteaux de commande ?',
+      'Avez-vous du pain sans gluten ?',
+      'À quelle heure êtes-vous ouvert ?',
+    ],
+
+    services: [
+      'Pain artisanal',
+      'Viennoiseries',
+      'Pâtisseries',
+      'Gâteaux sur commande',
+      'Sandwichs',
+      'Traiteur',
+    ],
+
+    averageTicket: 8,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // TRAITEUR (nouveau pour prospection)
+  // ─────────────────────────────────────────────────────────────────────────────
+  traiteur: {
+    slug: 'traiteur',
+    label: 'Traiteur',
+    labelPlural: 'Traiteurs',
+
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/seo-dashboard.png',
+
+    accentColor: '#7C3AED', // Violet événementiel
+
+    heroTitle: 'Vos clients vous recommandent pour leurs événements.',
+    heroSubtitle: 'Mais ceux qui organisent leur mariage ou soirée ne vous trouvent pas.',
+    problemStatement: 'Quand quelqu\'un cherche "traiteur mariage Nice" ou "buffet entreprise", ce sont vos concurrents qui décrochent.',
+
+    keywords: {
+      principal: [
+        { keyword: 'traiteur nice', volume: 1200, difficulty: 'moyen', type: 'principal' },
+        { keyword: 'traiteur mariage nice', volume: 880, difficulty: 'moyen', type: 'principal' },
+        { keyword: 'traiteur evenementiel nice', volume: 480, difficulty: 'moyen', type: 'principal' },
+      ],
+      niches: [
+        { keyword: 'buffet entreprise nice', volume: 320, difficulty: 'facile', type: 'niche' },
+        { keyword: 'cocktail dinatoire nice', volume: 280, difficulty: 'facile', type: 'niche' },
+        { keyword: 'traiteur anniversaire nice', volume: 210, difficulty: 'facile', type: 'niche' },
+        { keyword: 'plateaux repas nice', volume: 170, difficulty: 'facile', type: 'niche' },
+        { keyword: 'traiteur italien nice', volume: 140, difficulty: 'facile', type: 'niche' },
+      ],
+      longueTraine: [
+        { keyword: 'traiteur pas cher nice', volume: 170, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'traiteur livraison nice', volume: 140, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'devis traiteur nice', volume: 90, difficulty: 'facile', type: 'longue-traine' },
+      ]
+    },
+
+    ghostPageExamples: [
+      'Traiteur Mariage Nice',
+      'Buffet Entreprise Nice',
+      'Cocktail Dinatoire Nice',
+      'Traiteur Anniversaire Nice',
+      'Plateaux Repas Nice',
+    ],
+
+    clientQuestions: [
+      'Faites-vous les mariages ?',
+      'Quel est le prix par personne ?',
+      'Livrez-vous le jour même ?',
+      'Proposez-vous des menus végétariens ?',
+    ],
+
+    services: [
+      'Mariage',
+      'Événement entreprise',
+      'Anniversaire',
+      'Cocktail',
+      'Buffet',
+      'Plateaux repas',
+      'Box déjeuner',
+    ],
+
+    averageTicket: 250,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // OSTÉOPATHE (nouveau pour prospection)
+  // ─────────────────────────────────────────────────────────────────────────────
+  osteopathe: {
+    slug: 'osteopathe',
+    label: 'Ostéopathe',
+    labelPlural: 'Ostéopathes',
+
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/nice-data-flow.png',
+
+    accentColor: '#059669', // Vert santé
+
+    heroTitle: 'Vos patients vous recommandent.',
+    heroSubtitle: 'Mais ceux qui souffrent cherchent sur Google et ne vous trouvent pas.',
+    problemStatement: 'Quand quelqu\'un a mal au dos et cherche "ostéopathe Nice", ce sont vos confrères qui apparaissent.',
+
+    keywords: {
+      principal: [
+        { keyword: 'osteopathe nice', volume: 2800, difficulty: 'difficile', type: 'principal' },
+        { keyword: 'osteopathie nice', volume: 720, difficulty: 'moyen', type: 'principal' },
+        { keyword: 'osteo nice', volume: 1400, difficulty: 'moyen', type: 'principal' },
+      ],
+      niches: [
+        { keyword: 'osteopathe sportif nice', volume: 320, difficulty: 'facile', type: 'niche' },
+        { keyword: 'osteopathe bebe nice', volume: 390, difficulty: 'facile', type: 'niche' },
+        { keyword: 'osteopathe femme enceinte nice', volume: 280, difficulty: 'facile', type: 'niche' },
+        { keyword: 'osteopathe urgence nice', volume: 210, difficulty: 'facile', type: 'niche' },
+        { keyword: 'osteopathe dos nice', volume: 170, difficulty: 'facile', type: 'niche' },
+      ],
+      longueTraine: [
+        { keyword: 'osteopathe nice centre', volume: 140, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'osteopathe rdv rapide nice', volume: 90, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'tarif osteopathe nice', volume: 110, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'osteopathe samedi nice', volume: 70, difficulty: 'facile', type: 'longue-traine' },
+      ]
+    },
+
+    ghostPageExamples: [
+      'Ostéopathe Sportif Nice',
+      'Ostéopathe Bébé Nice',
+      'Ostéopathe Femme Enceinte Nice',
+      'Ostéopathe Urgence Nice',
+      'Ostéopathe Nice Centre',
+    ],
+
+    clientQuestions: [
+      'Prenez-vous de nouveaux patients ?',
+      'Quel est le tarif d\'une séance ?',
+      'Êtes-vous remboursé par la mutuelle ?',
+      'Combien de séances sont nécessaires ?',
+    ],
+
+    services: [
+      'Ostéopathie générale',
+      'Ostéopathie sportive',
+      'Ostéopathie pédiatrique',
+      'Ostéopathie périnatale',
+      'Douleurs dorsales',
+      'Migraines',
+    ],
+
+    averageTicket: 60,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // KINÉSITHÉRAPEUTE (nouveau pour prospection)
+  // ─────────────────────────────────────────────────────────────────────────────
+  kinesitherapeute: {
+    slug: 'kinesitherapeute',
+    label: 'Kinésithérapeute',
+    labelPlural: 'Kinésithérapeutes',
+
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/nice-data-flow.png',
+
+    accentColor: '#0891B2', // Bleu médical
+
+    heroTitle: 'Vos patients progressent grâce à vous.',
+    heroSubtitle: 'Mais ceux qui ont besoin de rééducation ne vous trouvent pas.',
+    problemStatement: 'Quand quelqu\'un cherche "kiné Nice" après une opération, ce sont d\'autres cabinets qui apparaissent.',
+
+    keywords: {
+      principal: [
+        { keyword: 'kine nice', volume: 3400, difficulty: 'difficile', type: 'principal' },
+        { keyword: 'kinesitherapeute nice', volume: 1400, difficulty: 'moyen', type: 'principal' },
+        { keyword: 'cabinet kine nice', volume: 590, difficulty: 'moyen', type: 'principal' },
+      ],
+      niches: [
+        { keyword: 'kine sportif nice', volume: 480, difficulty: 'moyen', type: 'niche' },
+        { keyword: 'kine respiratoire nice', volume: 320, difficulty: 'facile', type: 'niche' },
+        { keyword: 'kine du sport nice', volume: 390, difficulty: 'facile', type: 'niche' },
+        { keyword: 'reeducation nice', volume: 280, difficulty: 'facile', type: 'niche' },
+        { keyword: 'massage kine nice', volume: 210, difficulty: 'facile', type: 'niche' },
+      ],
+      longueTraine: [
+        { keyword: 'kine domicile nice', volume: 170, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'kine nice centre', volume: 140, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'kine rdv rapide nice', volume: 90, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'kine post operatoire nice', volume: 110, difficulty: 'facile', type: 'longue-traine' },
+      ]
+    },
+
+    ghostPageExamples: [
+      'Kiné Sportif Nice',
+      'Kiné Respiratoire Nice',
+      'Rééducation Nice',
+      'Kiné à Domicile Nice',
+      'Kiné Nice Centre',
+    ],
+
+    clientQuestions: [
+      'Prenez-vous de nouveaux patients ?',
+      'Faites-vous les visites à domicile ?',
+      'Êtes-vous spécialisé sport ?',
+      'Quel délai pour un RDV ?',
+    ],
+
+    services: [
+      'Rééducation',
+      'Kinésithérapie sportive',
+      'Kinésithérapie respiratoire',
+      'Massage thérapeutique',
+      'Rééducation post-opératoire',
+      'Kinésithérapie à domicile',
+    ],
+
+    averageTicket: 45,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // PSYCHOLOGUE (nouveau pour prospection)
+  // ─────────────────────────────────────────────────────────────────────────────
+  psychologue: {
+    slug: 'psychologue',
+    label: 'Psychologue',
+    labelPlural: 'Psychologues',
+
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/nice-data-flow.png',
+
+    accentColor: '#7C3AED', // Violet apaisant
+
+    heroTitle: 'Vos patients vous font confiance.',
+    heroSubtitle: 'Mais ceux qui cherchent de l\'aide ne vous trouvent pas.',
+    problemStatement: 'Quand quelqu\'un cherche "psychologue Nice" pour commencer une thérapie, ce sont d\'autres cabinets qui apparaissent.',
+
+    keywords: {
+      principal: [
+        { keyword: 'psychologue nice', volume: 2200, difficulty: 'difficile', type: 'principal' },
+        { keyword: 'psy nice', volume: 1400, difficulty: 'moyen', type: 'principal' },
+        { keyword: 'therapeute nice', volume: 590, difficulty: 'moyen', type: 'principal' },
+      ],
+      niches: [
+        { keyword: 'psychologue couple nice', volume: 390, difficulty: 'facile', type: 'niche' },
+        { keyword: 'psychologue enfant nice', volume: 480, difficulty: 'moyen', type: 'niche' },
+        { keyword: 'psychologue anxiete nice', volume: 280, difficulty: 'facile', type: 'niche' },
+        { keyword: 'psychologue depression nice', volume: 210, difficulty: 'facile', type: 'niche' },
+        { keyword: 'psychologue tcc nice', volume: 170, difficulty: 'facile', type: 'niche' },
+      ],
+      longueTraine: [
+        { keyword: 'psychologue nice centre', volume: 140, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'consultation psy nice', volume: 110, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'tarif psychologue nice', volume: 90, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'psychologue en ligne nice', volume: 70, difficulty: 'facile', type: 'longue-traine' },
+      ]
+    },
+
+    ghostPageExamples: [
+      'Psychologue Couple Nice',
+      'Psychologue Enfant Nice',
+      'Psychologue Anxiété Nice',
+      'Thérapie Cognitive Nice',
+      'Psychologue Nice Centre',
+    ],
+
+    clientQuestions: [
+      'Prenez-vous de nouveaux patients ?',
+      'Quel est le tarif d\'une séance ?',
+      'Êtes-vous remboursé ?',
+      'Faites-vous les consultations en ligne ?',
+    ],
+
+    services: [
+      'Thérapie individuelle',
+      'Thérapie de couple',
+      'Psychologie enfant/ado',
+      'TCC',
+      'Gestion du stress',
+      'Accompagnement deuil',
+    ],
+
+    averageTicket: 70,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // PEINTRE (nouveau pour prospection)
+  // ─────────────────────────────────────────────────────────────────────────────
+  peintre: {
+    slug: 'peintre',
+    label: 'Peintre en bâtiment',
+    labelPlural: 'Peintres en bâtiment',
+
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/creation-site.png',
+
+    accentColor: '#EA580C', // Orange BTP
+
+    heroTitle: 'Vos clients recommandent votre travail.',
+    heroSubtitle: 'Mais ceux qui veulent refaire leur intérieur ne vous trouvent pas.',
+    problemStatement: 'Quand quelqu\'un cherche "peintre Nice" pour rafraîchir son appartement, ce sont vos concurrents qui décrochent.',
+
+    keywords: {
+      principal: [
+        { keyword: 'peintre nice', volume: 1800, difficulty: 'difficile', type: 'principal' },
+        { keyword: 'peintre batiment nice', volume: 590, difficulty: 'moyen', type: 'principal' },
+        { keyword: 'entreprise peinture nice', volume: 480, difficulty: 'moyen', type: 'principal' },
+      ],
+      niches: [
+        { keyword: 'peinture appartement nice', volume: 390, difficulty: 'facile', type: 'niche' },
+        { keyword: 'peinture interieure nice', volume: 320, difficulty: 'facile', type: 'niche' },
+        { keyword: 'peinture facade nice', volume: 280, difficulty: 'facile', type: 'niche' },
+        { keyword: 'peintre decorateur nice', volume: 210, difficulty: 'facile', type: 'niche' },
+        { keyword: 'ravalement facade nice', volume: 170, difficulty: 'facile', type: 'niche' },
+      ],
+      longueTraine: [
+        { keyword: 'peintre pas cher nice', volume: 140, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'devis peinture nice', volume: 170, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'artisan peintre nice', volume: 110, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'peintre agree nice', volume: 70, difficulty: 'facile', type: 'longue-traine' },
+      ]
+    },
+
+    ghostPageExamples: [
+      'Peinture Appartement Nice',
+      'Peinture Intérieure Nice',
+      'Ravalement Façade Nice',
+      'Peintre Décorateur Nice',
+      'Devis Peinture Nice',
+    ],
+
+    clientQuestions: [
+      'Faites-vous des devis gratuits ?',
+      'Quel délai pour les travaux ?',
+      'Êtes-vous assuré ?',
+      'Faites-vous les façades ?',
+    ],
+
+    services: [
+      'Peinture intérieure',
+      'Peinture extérieure',
+      'Ravalement façade',
+      'Papier peint',
+      'Décoration',
+      'Rénovation',
+    ],
+
+    averageTicket: 2500,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // CARRELEUR (nouveau pour prospection)
+  // ─────────────────────────────────────────────────────────────────────────────
+  carreleur: {
+    slug: 'carreleur',
+    label: 'Carreleur',
+    labelPlural: 'Carreleurs',
+
+    heroImage: '/images/nice-seo-hero.png',
+    mockupImage: '/images/creation-site.png',
+
+    accentColor: '#64748B', // Gris carrelage
+
+    heroTitle: 'Vos clients sont satisfaits de votre travail.',
+    heroSubtitle: 'Mais ceux qui refont leur salle de bain ne vous trouvent pas.',
+    problemStatement: 'Quand quelqu\'un cherche "carreleur Nice" pour sa rénovation, ce sont vos concurrents qui obtiennent le chantier.',
+
+    keywords: {
+      principal: [
+        { keyword: 'carreleur nice', volume: 1200, difficulty: 'moyen', type: 'principal' },
+        { keyword: 'pose carrelage nice', volume: 590, difficulty: 'moyen', type: 'principal' },
+        { keyword: 'carrelage nice', volume: 880, difficulty: 'moyen', type: 'principal' },
+      ],
+      niches: [
+        { keyword: 'carreleur salle de bain nice', volume: 320, difficulty: 'facile', type: 'niche' },
+        { keyword: 'faience nice', volume: 280, difficulty: 'facile', type: 'niche' },
+        { keyword: 'carreleur cuisine nice', volume: 210, difficulty: 'facile', type: 'niche' },
+        { keyword: 'pose parquet nice', volume: 390, difficulty: 'facile', type: 'niche' },
+        { keyword: 'carrelage terrasse nice', volume: 170, difficulty: 'facile', type: 'niche' },
+      ],
+      longueTraine: [
+        { keyword: 'carreleur pas cher nice', volume: 140, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'devis carrelage nice', volume: 110, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'artisan carreleur nice', volume: 90, difficulty: 'facile', type: 'longue-traine' },
+        { keyword: 'carreleur agree nice', volume: 50, difficulty: 'facile', type: 'longue-traine' },
+      ]
+    },
+
+    ghostPageExamples: [
+      'Carreleur Salle de Bain Nice',
+      'Pose Carrelage Nice',
+      'Faïence Cuisine Nice',
+      'Carrelage Terrasse Nice',
+      'Devis Carrelage Nice',
+    ],
+
+    clientQuestions: [
+      'Faites-vous des devis gratuits ?',
+      'Quel délai pour les travaux ?',
+      'Posez-vous aussi le parquet ?',
+      'Êtes-vous assuré décennale ?',
+    ],
+
+    services: [
+      'Pose carrelage sol',
+      'Faïence murale',
+      'Carrelage salle de bain',
+      'Carrelage cuisine',
+      'Carrelage terrasse',
+      'Pose parquet',
+    ],
+
+    averageTicket: 3000,
+  },
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════

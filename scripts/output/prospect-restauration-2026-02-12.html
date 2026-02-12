@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prospection RESTAURATION - 157 leads</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #D97706;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container { width: 100%; max-width: 800px; }
+        header { text-align: center; margin-bottom: 3rem; }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stats {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: var(--card-bg);
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            border: 1px solid #334155;
+            text-align: center;
+        }
+        .stat-value { font-size: 1.5rem; font-weight: 700; display: block; }
+        .stat-label { color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; }
+        .lead-card {
+            background: var(--card-bg);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .lead-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary);
+        }
+        .lead-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        .lead-name { font-size: 1.5rem; font-weight: 700; margin: 0; }
+        .lead-info { color: var(--text-dim); font-size: 1rem; margin-bottom: 0.5rem; }
+        .badge {
+            background: #D9770622;
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .message-box {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            color: #cbd5e1;
+        }
+        .actions { display: flex; gap: 1rem; }
+        button {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        .btn-primary {
+            background: #25D366;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #22c55e;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.3);
+        }
+        .btn-secondary { background: #334155; color: white; }
+        .btn-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #334155;
+            border-radius: 4px;
+            margin-top: 2rem;
+            overflow: hidden;
+        }
+        .progress-inner {
+            height: 100%;
+            background: var(--primary);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        .hidden { display: none; }
+        .finished { text-align: center; padding: 3rem; }
+        .subcategory-tag {
+            background: #334155;
+            color: var(--text-dim);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Prospection RESTAURATION 🚀</h1>
+            <p style="color: var(--text-dim)">Entreprises SANS SITE - Cliquez pour envoyer sur WhatsApp</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-value" id="count-total">157</span>
+                <span class="stat-label">Total Leads</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="count-sent">0</span>
+                <span class="stat-label">Envoyés</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="count-remaining">157</span>
+                <span class="stat-label">Restants</span>
+            </div>
+        </div>
+
+        <div id="prospect-card" class="lead-card">
+            <div class="lead-header">
+                <div>
+                    <h2 class="lead-name" id="lead-name">Chargement...</h2>
+                    <div class="lead-info" id="lead-city">Ville</div>
+                </div>
+                <div>
+                    <div class="badge" id="lead-note">5.0★</div>
+                    <span class="subcategory-tag" id="lead-subcategory">métier</span>
+                </div>
+            </div>
+
+            <div class="message-box" id="lead-message">Message...</div>
+
+            <div class="actions">
+                <button class="btn-secondary" onclick="prevLead()" id="btn-prev" disabled>← Précédent</button>
+                <button class="btn-primary" onclick="sendLead()" id="btn-send">📱 ENVOYER WHATSAPP</button>
+                <button class="btn-secondary" onclick="nextLead()" id="btn-next">Suivant →</button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-inner" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <div id="finished-card" class="lead-card hidden finished">
+            <h2>🎉 Terminé !</h2>
+            <p>Tu as parcouru tous les prospects.</p>
+            <button class="btn-primary" onclick="reset()">Recommencer</button>
+        </div>
+    </div>
+
+    <script>
+        const leads = [
+  {
+    "name": "L'arrêt au Port",
+    "mobile": "33610901578",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.5",
+    "avis": "1385",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=L'arr%C3%AAt%20au%20Port&ville=Cagnes-sur-Mer&note=4.5&avis=1385",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Pizza Nono",
+    "mobile": "33493413465",
+    "city": "Nice",
+    "note": "4.9",
+    "avis": "1317",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Pizza%20Nono&ville=Nice&note=4.9&avis=1317",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Le Saint Antoine | Boulangerie/Pâtisserie",
+    "mobile": "33493993451",
+    "city": "Cannes",
+    "note": "4.1",
+    "avis": "1291",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Le%20Saint%20Antoine%20%7C%20Boulangerie%2FP%C3%A2tisserie&ville=Cannes&note=4.1&avis=1291",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "L'Instant",
+    "mobile": "33950068977",
+    "city": "Nice",
+    "note": "4.6",
+    "avis": "1278",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=L'Instant&ville=Nice&note=4.6&avis=1278",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Cheer Mamma",
+    "mobile": "33483282751",
+    "city": "Cannes",
+    "note": "4.7",
+    "avis": "824",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Cheer%20Mamma&ville=Cannes&note=4.7&avis=824",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Jérôme Tradition",
+    "mobile": "33489685051",
+    "city": "Antibes",
+    "note": "4.6",
+    "avis": "820",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=J%C3%A9r%C3%B4me%20Tradition&ville=Antibes&note=4.6&avis=820",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "L'épicurieux",
+    "mobile": "33615493075",
+    "city": "Cannes",
+    "note": "4.6",
+    "avis": "765",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=L'%C3%A9picurieux&ville=Cannes&note=4.6&avis=765",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Atelier Boulanger",
+    "mobile": "33493981726",
+    "city": "Menton",
+    "note": "4.5",
+    "avis": "742",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Atelier%20Boulanger&ville=Menton&note=4.5&avis=742",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "La Brasserie Des Artistes",
+    "mobile": "33493400718",
+    "city": "Grasse",
+    "note": "4.3",
+    "avis": "741",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20Brasserie%20Des%20Artistes&ville=Grasse&note=4.3&avis=741",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Sini",
+    "mobile": "33489987177",
+    "city": "Menton",
+    "note": "4.5",
+    "avis": "712",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Sini&ville=Menton&note=4.5&avis=712",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "L'AVENUE",
+    "mobile": "33493864881",
+    "city": "Menton",
+    "note": "4.7",
+    "avis": "707",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=L'AVENUE&ville=Menton&note=4.7&avis=707",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Boulangerie Roy Le Capitole",
+    "mobile": "33422167321",
+    "city": "Nice",
+    "note": "4.6",
+    "avis": "679",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20Roy%20Le%20Capitole&ville=Nice&note=4.6&avis=679",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "La Princesse Boulangerie",
+    "mobile": "33493832056",
+    "city": "Nice",
+    "note": "4.0",
+    "avis": "668",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=La%20Princesse%20Boulangerie&ville=Nice&note=4&avis=668",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "La Route du Miam",
+    "mobile": "33616363322",
+    "city": "Nice",
+    "note": "4.7",
+    "avis": "660",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20Route%20du%20Miam&ville=Nice&note=4.7&avis=660",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "L'Angle des Saveurs - Restaurant Cannes",
+    "mobile": "33983715944",
+    "city": "Cannes",
+    "note": "4.4",
+    "avis": "635",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=L'Angle%20des%20Saveurs%20-%20Restaurant%20Cannes&ville=Cannes&note=4.4&avis=635",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Brasserie Le Square...restaurant",
+    "mobile": "33493388830",
+    "city": "Le Cannet",
+    "note": "4.3",
+    "avis": "607",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Brasserie%20Le%20Square...restaurant&ville=Le Cannet&note=4.3&avis=607",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "La trattoria",
+    "mobile": "33422109196",
+    "city": "Antibes",
+    "note": "4.7",
+    "avis": "577",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20trattoria&ville=Antibes&note=4.7&avis=577",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "La Terrasse",
+    "mobile": "33493619418",
+    "city": "Antibes",
+    "note": "4.4",
+    "avis": "577",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20Terrasse&ville=Antibes&note=4.4&avis=577",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "La casa di nonna",
+    "mobile": "33497063351",
+    "city": "Cannes",
+    "note": "4.4",
+    "avis": "576",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20casa%20di%20nonna&ville=Cannes&note=4.4&avis=576",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "La Fleur de Lys",
+    "mobile": "33783596552",
+    "city": "Grasse",
+    "note": "4.7",
+    "avis": "563",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20Fleur%20de%20Lys&ville=Grasse&note=4.7&avis=563",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "La Mezzanine",
+    "mobile": "33493072020",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.7",
+    "avis": "560",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20Mezzanine&ville=Saint-Laurent-du-Var&note=4.7&avis=560",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Le P'tit Resto",
+    "mobile": "33493413707",
+    "city": "Menton",
+    "note": "4.6",
+    "avis": "545",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Le%20P'tit%20Resto&ville=Menton&note=4.6&avis=545",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Papa Pizza",
+    "mobile": "33983282828",
+    "city": "Nice",
+    "note": "4.5",
+    "avis": "539",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Papa%20Pizza&ville=Nice&note=4.5&avis=539",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Pizza Ludo (Ex Pizza World)",
+    "mobile": "33493560421",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.6",
+    "avis": "515",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Pizza%20Ludo%20(Ex%20Pizza%20World)&ville=Saint-Laurent-du-Var&note=4.6&avis=515",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Boulangerie & Patisserie Napoléon III",
+    "mobile": "33493729311",
+    "city": "Nice",
+    "note": "4.1",
+    "avis": "501",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20%26%20Patisserie%20Napol%C3%A9on%20III&ville=Nice&note=4.1&avis=501",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Amour",
+    "mobile": "33493549821",
+    "city": "Nice",
+    "note": "4.5",
+    "avis": "485",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Amour&ville=Nice&note=4.5&avis=485",
+    "category": "RESTAURATION",
+    "subcategory": "patisserie"
+  },
+  {
+    "name": "La Mandragore",
+    "mobile": "33493354319",
+    "city": "Menton",
+    "note": "4.5",
+    "avis": "479",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20Mandragore&ville=Menton&note=4.5&avis=479",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Pizzeria le Vulcano",
+    "mobile": "33493967860",
+    "city": "Menton",
+    "note": "4.6",
+    "avis": "474",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Pizzeria%20le%20Vulcano&ville=Menton&note=4.6&avis=474",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Le Saint-Laurent Café",
+    "mobile": "33493141481",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.6",
+    "avis": "473",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Le%20Saint-Laurent%20Caf%C3%A9&ville=Saint-Laurent-du-Var&note=4.6&avis=473",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Les Délices de la Lanterne",
+    "mobile": "33699031181",
+    "city": "Nice",
+    "note": "4.1",
+    "avis": "473",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Les%20D%C3%A9lices%20de%20la%20Lanterne&ville=Nice&note=4.1&avis=473",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "La Chaumière",
+    "mobile": "33492981017",
+    "city": "Cannes",
+    "note": "4.2",
+    "avis": "443",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=La%20Chaumi%C3%A8re&ville=Cannes&note=4.2&avis=443",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Pains de Provence",
+    "mobile": "33492980912",
+    "city": "Cannes",
+    "note": "4.1",
+    "avis": "432",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Pains%20de%20Provence&ville=Cannes&note=4.1&avis=432",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "La Lorraine",
+    "mobile": "33493175263",
+    "city": "Nice",
+    "note": "4.6",
+    "avis": "427",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=La%20Lorraine&ville=Nice&note=4.6&avis=427",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Le Méditerranée by Christophe Ferre",
+    "mobile": "33492180227",
+    "city": "Le Cannet",
+    "note": "4.5",
+    "avis": "426",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Le%20M%C3%A9diterran%C3%A9e%20by%20Christophe%20Ferre&ville=Le Cannet&note=4.5&avis=426",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Boulangerie de la Californie",
+    "mobile": "33493453412",
+    "city": "Cannes",
+    "note": "4.4",
+    "avis": "416",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20de%20la%20Californie&ville=Cannes&note=4.4&avis=416",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Boulangerie Veziano",
+    "mobile": "33493340546",
+    "city": "Antibes",
+    "note": "4.6",
+    "avis": "412",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20Veziano&ville=Antibes&note=4.6&avis=412",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Le Grand Large",
+    "mobile": "33493353459",
+    "city": "Menton",
+    "note": "4.2",
+    "avis": "396",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Le%20Grand%20Large&ville=Menton&note=4.2&avis=396",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "la petite escale",
+    "mobile": "33987399498",
+    "city": "Antibes",
+    "note": "4.9",
+    "avis": "389",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=la%20petite%20escale&ville=Antibes&note=4.9&avis=389",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "La Panetière",
+    "mobile": "33493950003",
+    "city": "Antibes",
+    "note": "4.3",
+    "avis": "379",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=La%20Paneti%C3%A8re&ville=Antibes&note=4.3&avis=379",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Boucherie Les Palmiers",
+    "mobile": "33987015526",
+    "city": "Le Cannet",
+    "note": "4.8",
+    "avis": "362",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=Boucherie%20Les%20Palmiers&ville=Le Cannet&note=4.8&avis=362",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "Boulangerie La Madone",
+    "mobile": "33975279156",
+    "city": "Menton",
+    "note": "4.4",
+    "avis": "355",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20La%20Madone&ville=Menton&note=4.4&avis=355",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Boulangerie BM",
+    "mobile": "33497046163",
+    "city": "Antibes",
+    "note": "4.1",
+    "avis": "347",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20BM&ville=Antibes&note=4.1&avis=347",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "La Mamma",
+    "mobile": "33493772554",
+    "city": "Grasse",
+    "note": "4.2",
+    "avis": "339",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20Mamma&ville=Grasse&note=4.2&avis=339",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "PEPIOLE",
+    "mobile": "33493429949",
+    "city": "Grasse",
+    "note": "4.4",
+    "avis": "339",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=PEPIOLE&ville=Grasse&note=4.4&avis=339",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Fleur de Mozza - Pizzeria Menton",
+    "mobile": "33497079590",
+    "city": "Menton",
+    "note": "4.7",
+    "avis": "319",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Fleur%20de%20Mozza%20-%20Pizzeria%20Menton&ville=Menton&note=4.7&avis=319",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Boulangerie Lou",
+    "mobile": "33978804565",
+    "city": "Nice",
+    "note": "4.6",
+    "avis": "308",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20Lou&ville=Nice&note=4.6&avis=308",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Panetti Pizza Club Cagnes-sur-Mer",
+    "mobile": "33492096061",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "281",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Panetti%20Pizza%20Club%20Cagnes-sur-Mer&ville=Cagnes-sur-Mer&note=5&avis=281",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Le Cosy",
+    "mobile": "33493355217",
+    "city": "Menton",
+    "note": "4.5",
+    "avis": "279",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Le%20Cosy&ville=Menton&note=4.5&avis=279",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Best Pizza - Pizzeria Cannoise",
+    "mobile": "33422104389",
+    "city": "Cannes",
+    "note": "4.5",
+    "avis": "278",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Best%20Pizza%20-%20Pizzeria%20Cannoise&ville=Cannes&note=4.5&avis=278",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Da Franci",
+    "mobile": "33962632139",
+    "city": "Menton",
+    "note": "4.7",
+    "avis": "251",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Da%20Franci&ville=Menton&note=4.7&avis=251",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Pizza Sainte Marguerite Nice Ouest",
+    "mobile": "33493721143",
+    "city": "Nice",
+    "note": "4.5",
+    "avis": "251",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Pizza%20Sainte%20Marguerite%20Nice%20Ouest&ville=Nice&note=4.5&avis=251",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Mia Pizza",
+    "mobile": "33606440297",
+    "city": "Nice",
+    "note": "4.9",
+    "avis": "249",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Mia%20Pizza&ville=Nice&note=4.9&avis=249",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Pepiole",
+    "mobile": "33497100120",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.0",
+    "avis": "244",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Pepiole&ville=Cagnes-sur-Mer&note=4&avis=244",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Ruby’s Garden",
+    "mobile": "33493671689",
+    "city": "Antibes",
+    "note": "4.8",
+    "avis": "243",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Ruby%E2%80%99s%20Garden&ville=Antibes&note=4.8&avis=243",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "7dup restaurant",
+    "mobile": "33955395593",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "236",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=7dup%20restaurant&ville=Cagnes-sur-Mer&note=5&avis=236",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Art et Gourmandises",
+    "mobile": "33489009242",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.4",
+    "avis": "233",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Art%20et%20Gourmandises&ville=Cagnes-sur-Mer&note=4.4&avis=233",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "LA BELLA ITALIA",
+    "mobile": "33951539332",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.6",
+    "avis": "231",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=LA%20BELLA%20ITALIA&ville=Saint-Laurent-du-Var&note=4.6&avis=231",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "AVé Pâtisserie",
+    "mobile": "33493717364",
+    "city": "Menton",
+    "note": "4.9",
+    "avis": "221",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=AV%C3%A9%20P%C3%A2tisserie&ville=Menton&note=4.9&avis=221",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Boulangerie la madone des jardins",
+    "mobile": "33493359256",
+    "city": "Menton",
+    "note": "4.5",
+    "avis": "211",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20la%20madone%20des%20jardins&ville=Menton&note=4.5&avis=211",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Boulangerie BM Benjamin Marquis Mougins",
+    "mobile": "33489827266",
+    "city": "Le Cannet",
+    "note": "4.4",
+    "avis": "211",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20BM%20Benjamin%20Marquis%20Mougins&ville=Le Cannet&note=4.4&avis=211",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Boulangerie \"Aux Délices Antibois Fils\"",
+    "mobile": "33493330204",
+    "city": "Antibes",
+    "note": "4.3",
+    "avis": "203",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20%22Aux%20D%C3%A9lices%20Antibois%20Fils%22&ville=Antibes&note=4.3&avis=203",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Le Rouge-gorge",
+    "mobile": "33749534343",
+    "city": "Menton",
+    "note": "4.9",
+    "avis": "199",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Le%20Rouge-gorge&ville=Menton&note=4.9&avis=199",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Boulangerie patisserie Magali",
+    "mobile": "33493463999",
+    "city": "Le Cannet",
+    "note": "4.3",
+    "avis": "199",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20patisserie%20Magali&ville=Le Cannet&note=4.3&avis=199",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Le Hangar Boulangerie Bio (BREAD)",
+    "mobile": "33493266457",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.8",
+    "avis": "189",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Le%20Hangar%20Boulangerie%20Bio%20(BREAD)&ville=Saint-Laurent-du-Var&note=4.8&avis=189",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Le Buggy Restaurant",
+    "mobile": "33613065128",
+    "city": "Nice",
+    "note": "4.8",
+    "avis": "188",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Le%20Buggy%20Restaurant&ville=Nice&note=4.8&avis=188",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Lhamo Sakang ( Tibetan Family Restaurant )",
+    "mobile": "33493205616",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.9",
+    "avis": "186",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Lhamo%20Sakang%20(%20Tibetan%20Family%20Restaurant%20)&ville=Cagnes-sur-Mer&note=4.9&avis=186",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Lou Miedjou",
+    "mobile": "33698103425",
+    "city": "Le Cannet",
+    "note": "4.8",
+    "avis": "168",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Lou%20Miedjou&ville=Le Cannet&note=4.8&avis=168",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Pizza Shop Antibes",
+    "mobile": "33988373333",
+    "city": "Antibes",
+    "note": "4.8",
+    "avis": "167",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Pizza%20Shop%20Antibes&ville=Antibes&note=4.8&avis=167",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Ô grill bleu",
+    "mobile": "33492070875",
+    "city": "Nice",
+    "note": "4.6",
+    "avis": "164",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=%C3%94%20grill%20bleu&ville=Nice&note=4.6&avis=164",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Pizzeria Specialitaly",
+    "mobile": "33493449829",
+    "city": "Menton",
+    "note": "4.2",
+    "avis": "162",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Pizzeria%20Specialitaly&ville=Menton&note=4.2&avis=162",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "RESTAURANT THIEN LOC",
+    "mobile": "33483396747",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.9",
+    "avis": "161",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=RESTAURANT%20THIEN%20LOC&ville=Cagnes-sur-Mer&note=4.9&avis=161",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Le Pain des Acacias",
+    "mobile": "33493861504",
+    "city": "Menton",
+    "note": "4.5",
+    "avis": "160",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Le%20Pain%20des%20Acacias&ville=Menton&note=4.5&avis=160",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Maison Mignardise by Abel Bayili Pâtisserie Boulangerie Traiteur Brunch Le Cannet",
+    "mobile": "33493945700",
+    "city": "Le Cannet",
+    "note": "4.2",
+    "avis": "160",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Maison%20Mignardise%20by%20Abel%20Bayili%20P%C3%A2tisserie%20Boulangerie%20Traiteur%20Brunch%20Le%20Cannet&ville=Le Cannet&note=4.2&avis=160",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "L'art Du Pain - Boulangerie",
+    "mobile": "33483149761",
+    "city": "Cannes",
+    "note": "4.2",
+    "avis": "157",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=L'art%20Du%20Pain%20-%20Boulangerie&ville=Cannes&note=4.2&avis=157",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Pizzeria La Planoise",
+    "mobile": "33493099747",
+    "city": "Grasse",
+    "note": "4.8",
+    "avis": "154",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Pizzeria%20La%20Planoise&ville=Grasse&note=4.8&avis=154",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Boulangerie L'amiral",
+    "mobile": "33786338508",
+    "city": "Antibes",
+    "note": "4.2",
+    "avis": "153",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20L'amiral&ville=Antibes&note=4.2&avis=153",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Chez Rosine",
+    "mobile": "33493454599",
+    "city": "Le Cannet",
+    "note": "4.7",
+    "avis": "153",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=Chez%20Rosine&ville=Le Cannet&note=4.7&avis=153",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "La Cigale",
+    "mobile": "33493311237",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.4",
+    "avis": "152",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=La%20Cigale&ville=Saint-Laurent-du-Var&note=4.4&avis=152",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Salentoexpress",
+    "mobile": "33983261060",
+    "city": "Menton",
+    "note": "4.9",
+    "avis": "150",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Salentoexpress&ville=Menton&note=4.9&avis=150",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Boulangerie-Pâtisserie Le Clos Saint Donat",
+    "mobile": "33492992358",
+    "city": "Grasse",
+    "note": "4.7",
+    "avis": "150",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie-P%C3%A2tisserie%20Le%20Clos%20Saint%20Donat&ville=Grasse&note=4.7&avis=150",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Boulangerie Pâtisserie Double J Jerome Jamais",
+    "mobile": "33493090343",
+    "city": "Grasse",
+    "note": "4.4",
+    "avis": "150",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20P%C3%A2tisserie%20Double%20J%20Jerome%20Jamais&ville=Grasse&note=4.4&avis=150",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Le Patio Antibes",
+    "mobile": "33493344266",
+    "city": "Antibes",
+    "note": "4.2",
+    "avis": "145",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Le%20Patio%20Antibes&ville=Antibes&note=4.2&avis=145",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Le fournil des saveurs",
+    "mobile": "33750017406",
+    "city": "Grasse",
+    "note": "4.3",
+    "avis": "145",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Le%20fournil%20des%20saveurs&ville=Grasse&note=4.3&avis=145",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Le 24",
+    "mobile": "33955642145",
+    "city": "Antibes",
+    "note": "4.5",
+    "avis": "144",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Le%2024&ville=Antibes&note=4.5&avis=144",
+    "category": "RESTAURATION",
+    "subcategory": "patisserie"
+  },
+  {
+    "name": "Boulangerie-Pâtisserie-Traiteur : La Canneboise",
+    "mobile": "33493473072",
+    "city": "Cannes",
+    "note": "4.4",
+    "avis": "143",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie-P%C3%A2tisserie-Traiteur%20%3A%20La%20Canneboise&ville=Cannes&note=4.4&avis=143",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Maison Piron",
+    "mobile": "33483261852",
+    "city": "Grasse",
+    "note": "4.1",
+    "avis": "143",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Maison%20Piron&ville=Grasse&note=4.1&avis=143",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "La Piastra camion",
+    "mobile": "33651080545",
+    "city": "Le Cannet",
+    "note": "4.9",
+    "avis": "136",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20Piastra%20camion&ville=Le Cannet&note=4.9&avis=136",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Pizza Chez Ange",
+    "mobile": "33783091961",
+    "city": "Grasse",
+    "note": "4.8",
+    "avis": "131",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Pizza%20Chez%20Ange&ville=Grasse&note=4.8&avis=131",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Au Gourmet Cannois",
+    "mobile": "33493392380",
+    "city": "Cannes",
+    "note": "4.0",
+    "avis": "130",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Au%20Gourmet%20Cannois&ville=Cannes&note=4&avis=130",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Pizza Pistou",
+    "mobile": "33493454468",
+    "city": "Le Cannet",
+    "note": "4.7",
+    "avis": "126",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Pizza%20Pistou&ville=Le Cannet&note=4.7&avis=126",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "École Niçoise de la pizza Italienne",
+    "mobile": "33617591291",
+    "city": "Antibes",
+    "note": "4.9",
+    "avis": "125",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=%C3%89cole%20Ni%C3%A7oise%20de%20la%20pizza%20Italienne&ville=Antibes&note=4.9&avis=125",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Maison SAINT JALME - Antibes",
+    "mobile": "33493950003",
+    "city": "Antibes",
+    "note": "4.0",
+    "avis": "121",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Maison%20SAINT%20JALME%20-%20Antibes&ville=Antibes&note=4&avis=121",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Pizza PéPiole",
+    "mobile": "33682248741",
+    "city": "Le Cannet",
+    "note": "4.7",
+    "avis": "112",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Pizza%20P%C3%A9Piole&ville=Le Cannet&note=4.7&avis=112",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "La Régal",
+    "mobile": "33493260803",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.7",
+    "avis": "111",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20R%C3%A9gal&ville=Cagnes-sur-Mer&note=4.7&avis=111",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "L'ENVOL Pizzeria",
+    "mobile": "33493847951",
+    "city": "Menton",
+    "note": "4.8",
+    "avis": "108",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=L'ENVOL%20Pizzeria&ville=Menton&note=4.8&avis=108",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Da Nino Pizza al Taglio Cagnes sur Mer - Pizza Et Socca sur place et à emporter",
+    "mobile": "33629664774",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.6",
+    "avis": "106",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Da%20Nino%20Pizza%20al%20Taglio%20Cagnes%20sur%20Mer%20-%20Pizza%20Et%20Socca%20sur%20place%20et%20%C3%A0%20emporter&ville=Cagnes-sur-Mer&note=4.6&avis=106",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Boulangerie Chez Ornetti Antibes",
+    "mobile": "33493337889",
+    "city": "Antibes",
+    "note": "4.0",
+    "avis": "105",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20Chez%20Ornetti%20Antibes&ville=Antibes&note=4&avis=105",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Venturini Fougassettes",
+    "mobile": "33493362047",
+    "city": "Grasse",
+    "note": "4.7",
+    "avis": "105",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Venturini%20Fougassettes&ville=Grasse&note=4.7&avis=105",
+    "category": "RESTAURATION",
+    "subcategory": "patisserie"
+  },
+  {
+    "name": "Matimello",
+    "mobile": "33493357624",
+    "city": "Menton",
+    "note": "4.5",
+    "avis": "103",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Matimello&ville=Menton&note=4.5&avis=103",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Boulangerie Patissserie Carnot",
+    "mobile": "33493999463",
+    "city": "Cannes",
+    "note": "4.3",
+    "avis": "101",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20Patissserie%20Carnot&ville=Cannes&note=4.3&avis=101",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Artisanal Pizza",
+    "mobile": "33953972055",
+    "city": "Le Cannet",
+    "note": "4.5",
+    "avis": "99",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Artisanal%20Pizza&ville=Le Cannet&note=4.5&avis=99",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Pain Chaud du Jardin",
+    "mobile": "33663882834",
+    "city": "Menton",
+    "note": "4.6",
+    "avis": "98",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Pain%20Chaud%20du%20Jardin&ville=Menton&note=4.6&avis=98",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Café lorette",
+    "mobile": "33950379420",
+    "city": "Antibes",
+    "note": "4.8",
+    "avis": "98",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=Caf%C3%A9%20lorette&ville=Antibes&note=4.8&avis=98",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "Ciao Pizza",
+    "mobile": "33695420811",
+    "city": "Antibes",
+    "note": "4.8",
+    "avis": "95",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Ciao%20Pizza&ville=Antibes&note=4.8&avis=95",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Boulangerie Pâtisserie Jounna Riou",
+    "mobile": "33651759911",
+    "city": "Cannes",
+    "note": "4.5",
+    "avis": "94",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20P%C3%A2tisserie%20Jounna%20Riou&ville=Cannes&note=4.5&avis=94",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Nos P'tits Gourmands SCARDINO",
+    "mobile": "33983881016",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.3",
+    "avis": "91",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Nos%20P'tits%20Gourmands%20SCARDINO&ville=Saint-Laurent-du-Var&note=4.3&avis=91",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Al C'anto",
+    "mobile": "33492132217",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.6",
+    "avis": "84",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Al%20C'anto&ville=Cagnes-sur-Mer&note=4.6&avis=84",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Boulangerie-pâtisserie BARAKA",
+    "mobile": "33642265303",
+    "city": "Nice",
+    "note": "4.2",
+    "avis": "83",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie-p%C3%A2tisserie%20BARAKA&ville=Nice&note=4.2&avis=83",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "A picca a picca",
+    "mobile": "33483392061",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.9",
+    "avis": "82",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=A%20picca%20a%20picca&ville=Cagnes-sur-Mer&note=4.9&avis=82",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Boulangerie Les traditions du Cannet",
+    "mobile": "33988411424",
+    "city": "Le Cannet",
+    "note": "4.3",
+    "avis": "82",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20Les%20traditions%20du%20Cannet&ville=Le Cannet&note=4.3&avis=82",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "L'Instant Gourmand",
+    "mobile": "33497140252",
+    "city": "Menton",
+    "note": "4.2",
+    "avis": "79",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=L'Instant%20Gourmand&ville=Menton&note=4.2&avis=79",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "SAS PIZZERIA DEL GUSTO ( ex MOZART )",
+    "mobile": "33983650665",
+    "city": "Grasse",
+    "note": "4.7",
+    "avis": "76",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=SAS%20PIZZERIA%20DEL%20GUSTO%20(%20ex%20MOZART%20)&ville=Grasse&note=4.7&avis=76",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Ok pizza",
+    "mobile": "33493467555",
+    "city": "Le Cannet",
+    "note": "4.6",
+    "avis": "72",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Ok%20pizza&ville=Le Cannet&note=4.6&avis=72",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "dolce vita",
+    "mobile": "33981339454",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.6",
+    "avis": "71",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=dolce%20vita&ville=Cagnes-sur-Mer&note=4.6&avis=71",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "La Table des Suds",
+    "mobile": "33489038755",
+    "city": "Nice",
+    "note": "4.2",
+    "avis": "67",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20Table%20des%20Suds&ville=Nice&note=4.2&avis=67",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "MAISON SMEP",
+    "mobile": "33985076499",
+    "city": "Le Cannet",
+    "note": "4.8",
+    "avis": "66",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=MAISON%20SMEP&ville=Le Cannet&note=4.8&avis=66",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "L’instant gourmand",
+    "mobile": "33493096241",
+    "city": "Grasse",
+    "note": "4.4",
+    "avis": "65",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=L%E2%80%99instant%20gourmand&ville=Grasse&note=4.4&avis=65",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Cup’Cakes & Confettis",
+    "mobile": "33672529945",
+    "city": "Grasse",
+    "note": "4.9",
+    "avis": "65",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Cup%E2%80%99Cakes%20%26%20Confettis&ville=Grasse&note=4.9&avis=65",
+    "category": "RESTAURATION",
+    "subcategory": "patisserie"
+  },
+  {
+    "name": "Il faró - Pizzeria",
+    "mobile": "33422167447",
+    "city": "Menton",
+    "note": "4.9",
+    "avis": "60",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Il%20far%C3%B3%20-%20Pizzeria&ville=Menton&note=4.9&avis=60",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "L’aube des jours",
+    "mobile": "33422912507",
+    "city": "Le Cannet",
+    "note": "4.4",
+    "avis": "59",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=L%E2%80%99aube%20des%20jours&ville=Le Cannet&note=4.4&avis=59",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "LAZARO",
+    "mobile": "33633068413",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "58",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=LAZARO&ville=Antibes&note=5&avis=58",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Au Palais de la Friandise",
+    "mobile": "33493611643",
+    "city": "Antibes",
+    "note": "4.9",
+    "avis": "58",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Au%20Palais%20de%20la%20Friandise&ville=Antibes&note=4.9&avis=58",
+    "category": "RESTAURATION",
+    "subcategory": "patisserie"
+  },
+  {
+    "name": "Maison Caverivière",
+    "mobile": "33493965820",
+    "city": "Menton",
+    "note": "4.5",
+    "avis": "57",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=Maison%20Caverivi%C3%A8re&ville=Menton&note=4.5&avis=57",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "Pizza Mariololo",
+    "mobile": "33764175279",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.8",
+    "avis": "55",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Pizza%20Mariololo&ville=Cagnes-sur-Mer&note=4.8&avis=55",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "Goldy Traiteur",
+    "mobile": "33666546124",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "52",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=Goldy%20Traiteur&ville=Antibes&note=5&avis=52",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "REgalebox_06",
+    "mobile": "33627263464",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "49",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=REgalebox_06&ville=Grasse&note=5&avis=49",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "Pâtisserie Hiriart",
+    "mobile": "33493369975",
+    "city": "Grasse",
+    "note": "4.5",
+    "avis": "46",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=P%C3%A2tisserie%20Hiriart&ville=Grasse&note=4.5&avis=46",
+    "category": "RESTAURATION",
+    "subcategory": "patisserie"
+  },
+  {
+    "name": "CASA DI GIU",
+    "mobile": "33493074853",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.5",
+    "avis": "44",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=CASA%20DI%20GIU&ville=Saint-Laurent-du-Var&note=4.5&avis=44",
+    "category": "RESTAURATION",
+    "subcategory": "pizzeria"
+  },
+  {
+    "name": "KOZY",
+    "mobile": "33767130614",
+    "city": "Antibes",
+    "note": "4.5",
+    "avis": "43",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=KOZY&ville=Antibes&note=4.5&avis=43",
+    "category": "RESTAURATION",
+    "subcategory": "patisserie"
+  },
+  {
+    "name": "Boulangerie pâtisserie de la mer",
+    "mobile": "33629830012",
+    "city": "Nice",
+    "note": "4.3",
+    "avis": "42",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20p%C3%A2tisserie%20de%20la%20mer&ville=Nice&note=4.3&avis=42",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Boulangerie des Maronniers",
+    "mobile": "33493708711",
+    "city": "Grasse",
+    "note": "4.5",
+    "avis": "42",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20des%20Maronniers&ville=Grasse&note=4.5&avis=42",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Les cookies de JUJU",
+    "mobile": "33626313386",
+    "city": "Menton",
+    "note": "4.8",
+    "avis": "41",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Les%20cookies%20de%20JUJU&ville=Menton&note=4.8&avis=41",
+    "category": "RESTAURATION",
+    "subcategory": "patisserie"
+  },
+  {
+    "name": "Boulangerie Epi",
+    "mobile": "33781897182",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.8",
+    "avis": "40",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20Epi&ville=Saint-Laurent-du-Var&note=4.8&avis=40",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Boulangerie Pâtisserie Passeron",
+    "mobile": "33493081162",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.7",
+    "avis": "39",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20P%C3%A2tisserie%20Passeron&ville=Cagnes-sur-Mer&note=4.7&avis=39",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "LA BOULANGE - Saint Laurent du Var",
+    "mobile": "33493316303",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.7",
+    "avis": "39",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=LA%20BOULANGE%20-%20Saint%20Laurent%20du%20Var&ville=Cagnes-sur-Mer&note=4.7&avis=39",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Pentola",
+    "mobile": "33493567844",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "37",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=Pentola&ville=Nice&note=5&avis=37",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "Traiteur Pour Vos Papilles",
+    "mobile": "33493073668",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.6",
+    "avis": "37",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=Traiteur%20Pour%20Vos%20Papilles&ville=Cagnes-sur-Mer&note=4.6&avis=37",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "Le Pain Des Moulins",
+    "mobile": "33950275551",
+    "city": "Nice",
+    "note": "4.5",
+    "avis": "33",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Le%20Pain%20Des%20Moulins&ville=Nice&note=4.5&avis=33",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Fratelli",
+    "mobile": "33493070339",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.8",
+    "avis": "32",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=Fratelli&ville=Saint-Laurent-du-Var&note=4.8&avis=32",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Maison Mera",
+    "mobile": "33493838476",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "31",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=Maison%20Mera&ville=Nice&note=5&avis=31",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "SP La Mammina",
+    "mobile": "33953910503",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "29",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=SP%20La%20Mammina&ville=Antibes&note=5&avis=29",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "Les fournil des moulins",
+    "mobile": "33489146157",
+    "city": "Nice",
+    "note": "4.4",
+    "avis": "28",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Les%20fournil%20des%20moulins&ville=Nice&note=4.4&avis=28",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Amira pâtisserie fine à Cannes (domicile)",
+    "mobile": "33783890245",
+    "city": "Cannes",
+    "note": "4.8",
+    "avis": "25",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Amira%20p%C3%A2tisserie%20fine%20%C3%A0%20Cannes%20(domicile)&ville=Cannes&note=4.8&avis=25",
+    "category": "RESTAURATION",
+    "subcategory": "patisserie"
+  },
+  {
+    "name": "Noisette Pâtisserie",
+    "mobile": "33765230016",
+    "city": "Menton",
+    "note": "4.9",
+    "avis": "24",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Noisette%20P%C3%A2tisserie&ville=Menton&note=4.9&avis=24",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "COCQ & COOK",
+    "mobile": "33772318894",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "24",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=COCQ%20%26%20COOK&ville=Menton&note=5&avis=24",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "La piccola Sicilia",
+    "mobile": "33749090032",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "23",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20piccola%20Sicilia&ville=Cagnes-sur-Mer&note=5&avis=23",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Belliccino",
+    "mobile": "33763752892",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "16",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Belliccino&ville=Cagnes-sur-Mer&note=5&avis=16",
+    "category": "RESTAURATION",
+    "subcategory": "patisserie"
+  },
+  {
+    "name": "La Taverne",
+    "mobile": "33988408967",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "15",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20Taverne&ville=Saint-Laurent-du-Var&note=5&avis=15",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "La Marquise Grill Restaurant grillade",
+    "mobile": "33483934722",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "12",
+    "url": "https://indhack.com/diagnostic/restaurant?nom=La%20Marquise%20Grill%20Restaurant%20grillade&ville=Cagnes-sur-Mer&note=5&avis=12",
+    "category": "RESTAURATION",
+    "subcategory": "restaurant"
+  },
+  {
+    "name": "Moulin d’Antibes",
+    "mobile": "33753100835",
+    "city": "Antibes",
+    "note": "4.9",
+    "avis": "12",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Moulin%20d%E2%80%99Antibes&ville=Antibes&note=4.9&avis=12",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "My-Tho",
+    "mobile": "33493146905",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.5",
+    "avis": "12",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=My-Tho&ville=Cagnes-sur-Mer&note=4.5&avis=12",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "Gilles Pizzanelli",
+    "mobile": "33493073668",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.4",
+    "avis": "10",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=Gilles%20Pizzanelli&ville=Saint-Laurent-du-Var&note=4.4&avis=10",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  },
+  {
+    "name": "L'instant gourmand",
+    "mobile": "33699432430",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=L'instant%20gourmand&ville=Saint-Laurent-du-Var&note=5&avis=8",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Mariegourmets",
+    "mobile": "33623128517",
+    "city": "Le Cannet",
+    "note": "4.5",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Mariegourmets&ville=Le Cannet&note=4.5&avis=8",
+    "category": "RESTAURATION",
+    "subcategory": "patisserie"
+  },
+  {
+    "name": "Boulangerie l’oasis",
+    "mobile": "33758606710",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Boulangerie%20l%E2%80%99oasis&ville=Cagnes-sur-Mer&note=5&avis=3",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Madame Tartine",
+    "mobile": "33493311855",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/boulangerie?nom=Madame%20Tartine&ville=Saint-Laurent-du-Var&note=5&avis=3",
+    "category": "RESTAURATION",
+    "subcategory": "boulangerie"
+  },
+  {
+    "name": "Le temps d'un repas",
+    "mobile": "33604520396",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/traiteur?nom=Le%20temps%20d'un%20repas&ville=Cagnes-sur-Mer&note=5&avis=2",
+    "category": "RESTAURATION",
+    "subcategory": "traiteur"
+  }
+];
+
+        let currentIndex = 0;
+        const sentList = new Set();
+
+        function getMessage(lead) {
+            return `Bonjour ! 👋
+
+Je me permets de vous contacter car je suis tombée sur votre fiche Google et j'ai remarqué que vous aviez d'excellents avis (${lead.note}★ avec ${lead.avis} avis) !
+
+Je travaille avec des ${lead.subcategory}s dans le 06 et j'ai fait un rapide audit personnalisé pour ${lead.name}.
+
+L'idée n'est pas de vous déranger - c'est un diagnostic gratuit qui montre comment vous pourriez capter plus de clients à ${lead.city} grâce à votre réputation.
+
+Votre audit gratuit est ici :
+${lead.url}
+
+Bonne journée !
+Indiana - IndHack
+📞 06 61 13 97 48`;
+        }
+
+        function updateUI() {
+            if (currentIndex >= leads.length) {
+                document.getElementById('prospect-card').classList.add('hidden');
+                document.getElementById('finished-card').classList.remove('hidden');
+                return;
+            }
+
+            const lead = leads[currentIndex];
+            document.getElementById('lead-name').textContent = lead.name;
+            document.getElementById('lead-city').textContent = lead.city + ' • ' + lead.mobile.replace(/^33/, '0').replace(/(\d{2})(?=\d)/g, '$1 ');
+            document.getElementById('lead-note').textContent = lead.note + '★ (' + lead.avis + ' avis)';
+            document.getElementById('lead-subcategory').textContent = lead.subcategory;
+            document.getElementById('lead-message').textContent = getMessage(lead);
+
+            document.getElementById('count-sent').textContent = sentList.size;
+            document.getElementById('count-remaining').textContent = leads.length - currentIndex;
+
+            const progress = (currentIndex / leads.length) * 100;
+            document.getElementById('progress-bar').style.width = progress + '%';
+
+            document.getElementById('btn-prev').disabled = currentIndex === 0;
+        }
+
+        function sendLead() {
+            const lead = leads[currentIndex];
+            const msg = getMessage(lead);
+            const url = `https://wa.me/${lead.mobile}?text=${encodeURIComponent(msg)}`;
+
+            window.open(url, '_blank');
+            sentList.add(currentIndex);
+
+            setTimeout(() => nextLead(), 1000);
+        }
+
+        function nextLead() {
+            if (currentIndex < leads.length) {
+                currentIndex++;
+                updateUI();
+            }
+        }
+
+        function prevLead() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateUI();
+            }
+        }
+
+        function reset() {
+            currentIndex = 0;
+            sentList.clear();
+            document.getElementById('prospect-card').classList.remove('hidden');
+            document.getElementById('finished-card').classList.add('hidden');
+            updateUI();
+        }
+
+        updateUI();
+    </script>
+</body>
+</html>

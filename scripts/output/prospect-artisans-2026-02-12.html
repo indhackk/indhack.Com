@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prospection ARTISANS - 139 leads</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #F59E0B;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container { width: 100%; max-width: 800px; }
+        header { text-align: center; margin-bottom: 3rem; }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stats {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: var(--card-bg);
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            border: 1px solid #334155;
+            text-align: center;
+        }
+        .stat-value { font-size: 1.5rem; font-weight: 700; display: block; }
+        .stat-label { color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; }
+        .lead-card {
+            background: var(--card-bg);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            border: 1px solid #334155;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .lead-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary);
+        }
+        .lead-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        .lead-name { font-size: 1.5rem; font-weight: 700; margin: 0; }
+        .lead-info { color: var(--text-dim); font-size: 1rem; margin-bottom: 0.5rem; }
+        .badge {
+            background: #F59E0B22;
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .message-box {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            color: #cbd5e1;
+        }
+        .actions { display: flex; gap: 1rem; }
+        button {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        .btn-primary {
+            background: #25D366;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #22c55e;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.3);
+        }
+        .btn-secondary { background: #334155; color: white; }
+        .btn-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #334155;
+            border-radius: 4px;
+            margin-top: 2rem;
+            overflow: hidden;
+        }
+        .progress-inner {
+            height: 100%;
+            background: var(--primary);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        .hidden { display: none; }
+        .finished { text-align: center; padding: 3rem; }
+        .subcategory-tag {
+            background: #334155;
+            color: var(--text-dim);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Prospection ARTISANS 🚀</h1>
+            <p style="color: var(--text-dim)">Entreprises SANS SITE - Cliquez pour envoyer sur WhatsApp</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-value" id="count-total">139</span>
+                <span class="stat-label">Total Leads</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="count-sent">0</span>
+                <span class="stat-label">Envoyés</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="count-remaining">139</span>
+                <span class="stat-label">Restants</span>
+            </div>
+        </div>
+
+        <div id="prospect-card" class="lead-card">
+            <div class="lead-header">
+                <div>
+                    <h2 class="lead-name" id="lead-name">Chargement...</h2>
+                    <div class="lead-info" id="lead-city">Ville</div>
+                </div>
+                <div>
+                    <div class="badge" id="lead-note">5.0★</div>
+                    <span class="subcategory-tag" id="lead-subcategory">métier</span>
+                </div>
+            </div>
+
+            <div class="message-box" id="lead-message">Message...</div>
+
+            <div class="actions">
+                <button class="btn-secondary" onclick="prevLead()" id="btn-prev" disabled>← Précédent</button>
+                <button class="btn-primary" onclick="sendLead()" id="btn-send">📱 ENVOYER WHATSAPP</button>
+                <button class="btn-secondary" onclick="nextLead()" id="btn-next">Suivant →</button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-inner" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <div id="finished-card" class="lead-card hidden finished">
+            <h2>🎉 Terminé !</h2>
+            <p>Tu as parcouru tous les prospects.</p>
+            <button class="btn-primary" onclick="reset()">Recommencer</button>
+        </div>
+    </div>
+
+    <script>
+        const leads = [
+  {
+    "name": "DEPANN' SERRURES",
+    "mobile": "33661457057",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "156",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=DEPANN'%20SERRURES&ville=Grasse&note=5&avis=156",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Miky-key",
+    "mobile": "33616899955",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "143",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Miky-key&ville=Cannes&note=5&avis=143",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Sos plombier dépannage",
+    "mobile": "33695176023",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "119",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Sos%20plombier%20d%C3%A9pannage&ville=Cagnes-sur-Mer&note=5&avis=119",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "MF Services clés minute cordonnerie",
+    "mobile": "33489024473",
+    "city": "Antibes",
+    "note": "4.8",
+    "avis": "116",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=MF%20Services%20cl%C3%A9s%20minute%20cordonnerie&ville=Antibes&note=4.8&avis=116",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "A.G.I.E.L.O.R électricien cagnes-sur-mer dépannage électricité",
+    "mobile": "33781840931",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "104",
+    "url": "https://indhack.com/diagnostic/electricien?nom=A.G.I.E.L.O.R%20%C3%A9lectricien%20cagnes-sur-mer%20d%C3%A9pannage%20%C3%A9lectricit%C3%A9&ville=Cagnes-sur-Mer&note=5&avis=104",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "SAINT ENERGIE",
+    "mobile": "33493146966",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.9",
+    "avis": "88",
+    "url": "https://indhack.com/diagnostic/electricien?nom=SAINT%20ENERGIE&ville=Saint-Laurent-du-Var&note=4.9&avis=88",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Rapid' Service Clés",
+    "mobile": "33788023713",
+    "city": "Grasse",
+    "note": "4.2",
+    "avis": "71",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Rapid'%20Service%20Cl%C3%A9s&ville=Grasse&note=4.2&avis=71",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Rick Peintures",
+    "mobile": "33615446375",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "69",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Rick%20Peintures&ville=Nice&note=5&avis=69",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Plomberie Edouard",
+    "mobile": "33618305492",
+    "city": "Nice",
+    "note": "4.6",
+    "avis": "65",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Plomberie%20Edouard&ville=Nice&note=4.6&avis=65",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "Loic Zeller",
+    "mobile": "33762460732",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "64",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Loic%20Zeller&ville=Cagnes-sur-Mer&note=5&avis=64",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "Atelier du Cordonnier",
+    "mobile": "33492277616",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.7",
+    "avis": "62",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Atelier%20du%20Cordonnier&ville=Saint-Laurent-du-Var&note=4.7&avis=62",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "MAZIERE & PANSIER ÉLECTRICITÉ",
+    "mobile": "33662900627",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "61",
+    "url": "https://indhack.com/diagnostic/electricien?nom=MAZIERE%20%26%20PANSIER%20%C3%89LECTRICIT%C3%89&ville=Menton&note=5&avis=61",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "GSE RIVIERA",
+    "mobile": "33788326218",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "56",
+    "url": "https://indhack.com/diagnostic/electricien?nom=GSE%20RIVIERA&ville=Saint-Laurent-du-Var&note=5&avis=56",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Sécurité des Collines",
+    "mobile": "33648484234",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "51",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=S%C3%A9curit%C3%A9%20des%20Collines&ville=Nice&note=5&avis=51",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "AB Bruno Serrurerie",
+    "mobile": "33493340173",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "51",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=AB%20Bruno%20Serrurerie&ville=Antibes&note=5&avis=51",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "URGENCE PLOMBERIE 7/24, RÉNOVATION INTERIEUR SAS DODORENOV",
+    "mobile": "33615364695",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "50",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=URGENCE%20PLOMBERIE%207%2F24%2C%20R%C3%89NOVATION%20INTERIEUR%20SAS%20DODORENOV&ville=Saint-Laurent-du-Var&note=5&avis=50",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "SERRURIER ANTIBES - JUAN LES PINS",
+    "mobile": "33664736775",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "45",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=SERRURIER%20ANTIBES%20-%20JUAN%20LES%20PINS&ville=Antibes&note=5&avis=45",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "EYROLLE RENOVATION",
+    "mobile": "33669011042",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "42",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=EYROLLE%20RENOVATION&ville=Le Cannet&note=5&avis=42",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "Menton Serrurerie",
+    "mobile": "33660938783",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "40",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Menton%20Serrurerie&ville=Menton&note=5&avis=40",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "HD PLOMBERIE",
+    "mobile": "33662484685",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.8",
+    "avis": "38",
+    "url": "https://indhack.com/diagnostic/plombier?nom=HD%20PLOMBERIE&ville=Cagnes-sur-Mer&note=4.8&avis=38",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "Techni couleurs",
+    "mobile": "33663838190",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "38",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Techni%20couleurs&ville=Grasse&note=5&avis=38",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Renovation Project",
+    "mobile": "33667660967",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "37",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Renovation%20Project&ville=Cagnes-sur-Mer&note=5&avis=37",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Axial Plomberie",
+    "mobile": "33981062796",
+    "city": "Cannes",
+    "note": "4.1",
+    "avis": "36",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Axial%20Plomberie&ville=Cannes&note=4.1&avis=36",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "Entreprise Vautrin",
+    "mobile": "33492271113",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.1",
+    "avis": "36",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Entreprise%20Vautrin&ville=Saint-Laurent-du-Var&note=4.1&avis=36",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "BMP Bâtiment",
+    "mobile": "33652954982",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "36",
+    "url": "https://indhack.com/diagnostic/peintre?nom=BMP%20B%C3%A2timent&ville=Cannes&note=5&avis=36",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Home Master Renov & Design / Azur Sanitaire",
+    "mobile": "33761982002",
+    "city": "Antibes",
+    "note": "4.6",
+    "avis": "36",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=Home%20Master%20Renov%20%26%20Design%20%2F%20Azur%20Sanitaire&ville=Antibes&note=4.6&avis=36",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "SAM RENOV",
+    "mobile": "33760555065",
+    "city": "Nice",
+    "note": "4.3",
+    "avis": "35",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=SAM%20RENOV&ville=Nice&note=4.3&avis=35",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "Prestatech",
+    "mobile": "33610854669",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "32",
+    "url": "https://indhack.com/diagnostic/electricien?nom=Prestatech&ville=Nice&note=5&avis=32",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "H.A plomberie",
+    "mobile": "33769615291",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.9",
+    "avis": "24",
+    "url": "https://indhack.com/diagnostic/plombier?nom=H.A%20plomberie&ville=Cagnes-sur-Mer&note=4.9&avis=24",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "H.E.G électricité générale",
+    "mobile": "33626509195",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "24",
+    "url": "https://indhack.com/diagnostic/electricien?nom=H.E.G%20%C3%A9lectricit%C3%A9%20g%C3%A9n%C3%A9rale&ville=Le Cannet&note=5&avis=24",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "AA ACTION ANTIVOL",
+    "mobile": "33611830253",
+    "city": "Nice",
+    "note": "4.8",
+    "avis": "24",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=AA%20ACTION%20ANTIVOL&ville=Nice&note=4.8&avis=24",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "LMC serrurerie",
+    "mobile": "33672947644",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "24",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=LMC%20serrurerie&ville=Antibes&note=5&avis=24",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Les Artisans Azuréens",
+    "mobile": "33497049793",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "24",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Les%20Artisans%20Azur%C3%A9ens&ville=Antibes&note=5&avis=24",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "JC Serrurier",
+    "mobile": "33493413335",
+    "city": "Menton",
+    "note": "4.5",
+    "avis": "24",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=JC%20Serrurier&ville=Menton&note=4.5&avis=24",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Uniq’ renov 06",
+    "mobile": "33640728010",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "23",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Uniq%E2%80%99%20renov%2006&ville=Saint-Laurent-du-Var&note=5&avis=23",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "S.a.r.l GIARRA Moreno Rénovation Maçonnerie Paca Carrelage et Peinture",
+    "mobile": "33785793277",
+    "city": "Antibes",
+    "note": "4.7",
+    "avis": "23",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=S.a.r.l%20GIARRA%20Moreno%20R%C3%A9novation%20Ma%C3%A7onnerie%20Paca%20Carrelage%20et%20Peinture&ville=Antibes&note=4.7&avis=23",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "M06 serrurerie dépannage Markiewicz lionel",
+    "mobile": "33695127480",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "22",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=M06%20serrurerie%20d%C3%A9pannage%20Markiewicz%20lionel&ville=Le Cannet&note=5&avis=22",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "RG ELEC",
+    "mobile": "33698209743",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "21",
+    "url": "https://indhack.com/diagnostic/electricien?nom=RG%20ELEC&ville=Grasse&note=5&avis=21",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "G.H.J Plomberie",
+    "mobile": "33783832056",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.8",
+    "avis": "20",
+    "url": "https://indhack.com/diagnostic/plombier?nom=G.H.J%20Plomberie&ville=Cagnes-sur-Mer&note=4.8&avis=20",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "Azur Elec Menton",
+    "mobile": "33610023071",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "20",
+    "url": "https://indhack.com/diagnostic/electricien?nom=Azur%20Elec%20Menton&ville=Menton&note=5&avis=20",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Viali Sanitaire",
+    "mobile": "33634550115",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "17",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Viali%20Sanitaire&ville=Antibes&note=5&avis=17",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "FE2C｜Climatisation & Plomberie à Antibes – Installation, Entretien & Maintenance",
+    "mobile": "33643137086",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "17",
+    "url": "https://indhack.com/diagnostic/plombier?nom=FE2C%EF%BD%9CClimatisation%20%26%20Plomberie%20%C3%A0%20Antibes%20%E2%80%93%20Installation%2C%20Entretien%20%26%20Maintenance&ville=Antibes&note=5&avis=17",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "Fabrice Borreli Plombier",
+    "mobile": "33613662128",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "17",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Fabrice%20Borreli%20Plombier&ville=Grasse&note=5&avis=17",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "Polycard Multiservices",
+    "mobile": "33492103890",
+    "city": "Menton",
+    "note": "4.8",
+    "avis": "17",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Polycard%20Multiservices&ville=Menton&note=4.8&avis=17",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Plombier Antibes Urgence",
+    "mobile": "33973053371",
+    "city": "Antibes",
+    "note": "4.7",
+    "avis": "14",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Plombier%20Antibes%20Urgence&ville=Antibes&note=4.7&avis=14",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "AEG 06",
+    "mobile": "33660425976",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "14",
+    "url": "https://indhack.com/diagnostic/electricien?nom=AEG%2006&ville=Cannes&note=5&avis=14",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "EGE Paca",
+    "mobile": "33647773640",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "13",
+    "url": "https://indhack.com/diagnostic/electricien?nom=EGE%20Paca&ville=Cannes&note=5&avis=13",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Malatesta et fils",
+    "mobile": "33611810361",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "13",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Malatesta%20et%20fils&ville=Menton&note=5&avis=13",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Riviera Plomberie 06",
+    "mobile": "33679265738",
+    "city": "Le Cannet",
+    "note": "4.9",
+    "avis": "12",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Riviera%20Plomberie%2006&ville=Le Cannet&note=4.9&avis=12",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "MD Plomberie 06",
+    "mobile": "33668527754",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "12",
+    "url": "https://indhack.com/diagnostic/plombier?nom=MD%20Plomberie%2006&ville=Le Cannet&note=5&avis=12",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "riviera bhm services - Volets roulants, Vitrerie, Serrurerie",
+    "mobile": "33622189652",
+    "city": "Antibes",
+    "note": "4.9",
+    "avis": "12",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=riviera%20bhm%20services%20-%20Volets%20roulants%2C%20Vitrerie%2C%20Serrurerie&ville=Antibes&note=4.9&avis=12",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Couleurs et Peintures du Midi CPM",
+    "mobile": "33492121912",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.6",
+    "avis": "12",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Couleurs%20et%20Peintures%20du%20Midi%20CPM&ville=Saint-Laurent-du-Var&note=4.6&avis=12",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "French Riviera Elec",
+    "mobile": "33665238645",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "11",
+    "url": "https://indhack.com/diagnostic/electricien?nom=French%20Riviera%20Elec&ville=Le Cannet&note=5&avis=11",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Ent TASSERIE",
+    "mobile": "33668501079",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "11",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Ent%20TASSERIE&ville=Antibes&note=5&avis=11",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "N P R",
+    "mobile": "33625976360",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "11",
+    "url": "https://indhack.com/diagnostic/peintre?nom=N%20P%20R&ville=Cagnes-sur-Mer&note=5&avis=11",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Groupe Milane peinture de façade",
+    "mobile": "33422138628",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "11",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Groupe%20Milane%20peinture%20de%20fa%C3%A7ade&ville=Saint-Laurent-du-Var&note=5&avis=11",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Plomberie Canino",
+    "mobile": "33493208507",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "10",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Plomberie%20Canino&ville=Cagnes-sur-Mer&note=5&avis=10",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "Paca Fermetures Solutions",
+    "mobile": "33767831619",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "10",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Paca%20Fermetures%20Solutions&ville=Nice&note=5&avis=10",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "S Electricité",
+    "mobile": "33645878528",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "9",
+    "url": "https://indhack.com/diagnostic/electricien?nom=S%20Electricit%C3%A9&ville=Cagnes-sur-Mer&note=5&avis=9",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "ML Services Plombier Chauffagiste",
+    "mobile": "33649435741",
+    "city": "Cannes",
+    "note": "4.9",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/plombier?nom=ML%20Services%20Plombier%20Chauffagiste&ville=Cannes&note=4.9&avis=8",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "Baudin Stanislas",
+    "mobile": "33678097981",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Baudin%20Stanislas&ville=Menton&note=5&avis=8",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "T.H.E service",
+    "mobile": "33767675163",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/peintre?nom=T.H.E%20service&ville=Cannes&note=5&avis=8",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Renov Paca",
+    "mobile": "33634094736",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Renov%20Paca&ville=Antibes&note=5&avis=8",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "HFP",
+    "mobile": "33645260936",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/peintre?nom=HFP&ville=Grasse&note=5&avis=8",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "MBR Déco (Mombru Vincent)",
+    "mobile": "33618946123",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.5",
+    "avis": "8",
+    "url": "https://indhack.com/diagnostic/peintre?nom=MBR%20D%C3%A9co%20(Mombru%20Vincent)&ville=Cagnes-sur-Mer&note=4.5&avis=8",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "CHACON ELECTRICITE",
+    "mobile": "33640587486",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/electricien?nom=CHACON%20ELECTRICITE&ville=Cagnes-sur-Mer&note=5&avis=6",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "MEMMI ÉLECTRICITÉ GÉNÉRALE",
+    "mobile": "33626789187",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/electricien?nom=MEMMI%20%C3%89LECTRICIT%C3%89%20G%C3%89N%C3%89RALE&ville=Le Cannet&note=5&avis=6",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "SBA ELEC",
+    "mobile": "33770013404",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/electricien?nom=SBA%20ELEC&ville=Saint-Laurent-du-Var&note=5&avis=6",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Serrurerie",
+    "mobile": "33493733756",
+    "city": "Cagnes-sur-Mer",
+    "note": "4.7",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Serrurerie&ville=Cagnes-sur-Mer&note=4.7&avis=6",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Ferm'Services / Installateur Hörmann / Rideaux métalliques",
+    "mobile": "33493210949",
+    "city": "Saint-Laurent-du-Var",
+    "note": "4.3",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Ferm'Services%20%2F%20Installateur%20H%C3%B6rmann%20%2F%20Rideaux%20m%C3%A9talliques&ville=Saint-Laurent-du-Var&note=4.3&avis=6",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Maison Multi-services",
+    "mobile": "33641475647",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Maison%20Multi-services&ville=Cannes&note=5&avis=6",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Sarl MIGNONE",
+    "mobile": "33609690175",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Sarl%20MIGNONE&ville=Cannes&note=5&avis=6",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Corrado Ets",
+    "mobile": "33493357105",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Corrado%20Ets&ville=Menton&note=5&avis=6",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Cr Clés en Main",
+    "mobile": "33782338084",
+    "city": "Menton",
+    "note": "4.3",
+    "avis": "6",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Cr%20Cl%C3%A9s%20en%20Main&ville=Menton&note=4.3&avis=6",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Neosud Elec",
+    "mobile": "33674858685",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "5",
+    "url": "https://indhack.com/diagnostic/electricien?nom=Neosud%20Elec&ville=Saint-Laurent-du-Var&note=5&avis=5",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Batiment Peinture Maconnerie - toituresdenice.com/",
+    "mobile": "33981006411",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "5",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Batiment%20Peinture%20Maconnerie%20-%20toituresdenice.com%2F&ville=Antibes&note=5&avis=5",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Ets Gerace Peinture",
+    "mobile": "33493092218",
+    "city": "Grasse",
+    "note": "4.0",
+    "avis": "5",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Ets%20Gerace%20Peinture&ville=Grasse&note=4&avis=5",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "TEAM",
+    "mobile": "33489156736",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "5",
+    "url": "https://indhack.com/diagnostic/peintre?nom=TEAM&ville=Menton&note=5&avis=5",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Peintre en bâtiment Entreprise Dubois rénovation façade toiture en La Gaude 06610",
+    "mobile": "33646323300",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "5",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Peintre%20en%20b%C3%A2timent%20Entreprise%20Dubois%20r%C3%A9novation%20fa%C3%A7ade%20toiture%20en%20La%20Gaude%2006610&ville=Saint-Laurent-du-Var&note=5&avis=5",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Manchon Bati France - Carrelage Renovation Etancheite - Mougins Cannes Antibes",
+    "mobile": "33422219035",
+    "city": "Antibes",
+    "note": "4.8",
+    "avis": "5",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=Manchon%20Bati%20France%20-%20Carrelage%20Renovation%20Etancheite%20-%20Mougins%20Cannes%20Antibes&ville=Antibes&note=4.8&avis=5",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "Laurenzi Elec",
+    "mobile": "33660740602",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "4",
+    "url": "https://indhack.com/diagnostic/electricien?nom=Laurenzi%20Elec&ville=Saint-Laurent-du-Var&note=5&avis=4",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Ferronnerie mouansoise Hachani",
+    "mobile": "33614019301",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "4",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Ferronnerie%20mouansoise%20Hachani&ville=Grasse&note=5&avis=4",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Rey Nov Services",
+    "mobile": "33493939393",
+    "city": "Le Cannet",
+    "note": "4.0",
+    "avis": "4",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Rey%20Nov%20Services&ville=Le Cannet&note=4&avis=4",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Foti Pascal Ambiance Peinture",
+    "mobile": "33661734674",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "4",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Foti%20Pascal%20Ambiance%20Peinture&ville=Cagnes-sur-Mer&note=5&avis=4",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "CDSP Peinture",
+    "mobile": "33493393714",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "4",
+    "url": "https://indhack.com/diagnostic/peintre?nom=CDSP%20Peinture&ville=Le Cannet&note=5&avis=4",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Entreprise Roland BESSIERE",
+    "mobile": "33609074214",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "4",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Entreprise%20Roland%20BESSIERE&ville=Saint-Laurent-du-Var&note=5&avis=4",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Daver Fluide Energie",
+    "mobile": "33660912876",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Daver%20Fluide%20Energie&ville=Cannes&note=5&avis=3",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "O.P.S électricité",
+    "mobile": "33620840118",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/electricien?nom=O.P.S%20%C3%A9lectricit%C3%A9&ville=Grasse&note=5&avis=3",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Philippe élec 06, électricien pour particuliers - secteur 06 et 83",
+    "mobile": "33785906302",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/electricien?nom=Philippe%20%C3%A9lec%2006%2C%20%C3%A9lectricien%20pour%20particuliers%20-%20secteur%2006%20et%2083&ville=Cagnes-sur-Mer&note=5&avis=3",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Serrurerie Protection Azuréenne",
+    "mobile": "33493141840",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Serrurerie%20Protection%20Azur%C3%A9enne&ville=Saint-Laurent-du-Var&note=5&avis=3",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "A.M Peinture Rénovation",
+    "mobile": "33613236637",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/peintre?nom=A.M%20Peinture%20R%C3%A9novation&ville=Nice&note=5&avis=3",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Couleurs du Temps",
+    "mobile": "33493664394",
+    "city": "Grasse",
+    "note": "4.3",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Couleurs%20du%20Temps&ville=Grasse&note=4.3&avis=3",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Sebastien Dalmasso",
+    "mobile": "33630702447",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Sebastien%20Dalmasso&ville=Le Cannet&note=5&avis=3",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "BM Rénovation 83 Couvreur",
+    "mobile": "33973739512",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/peintre?nom=BM%20R%C3%A9novation%2083%20Couvreur&ville=Le Cannet&note=5&avis=3",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Tsk construction",
+    "mobile": "33749656486",
+    "city": "Antibes",
+    "note": "4.7",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=Tsk%20construction&ville=Antibes&note=4.7&avis=3",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "Rémus Vasiloni ( Batirem06)",
+    "mobile": "33650423767",
+    "city": "Menton",
+    "note": "4.7",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=R%C3%A9mus%20Vasiloni%20(%20Batirem06)&ville=Menton&note=4.7&avis=3",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "V.A Carrelage & Rénovation",
+    "mobile": "33662913035",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "3",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=V.A%20Carrelage%20%26%20R%C3%A9novation&ville=Le Cannet&note=5&avis=3",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "BC SANIT R",
+    "mobile": "33611476468",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/plombier?nom=BC%20SANIT%20R&ville=Menton&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "Elsen'Elec",
+    "mobile": "33622320483",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/electricien?nom=Elsen'Elec&ville=Grasse&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "️ - Electricien Cagne-sur-Mer",
+    "mobile": "33972010034",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/electricien?nom=%EF%B8%8F%20-%20Electricien%20Cagne-sur-Mer&ville=Cagnes-sur-Mer&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Vuillerme Sud Elec",
+    "mobile": "33492180720",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/electricien?nom=Vuillerme%20Sud%20Elec&ville=Le Cannet&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "SA 2AB",
+    "mobile": "33954802133",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=SA%202AB&ville=Grasse&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Mathias KHATIB",
+    "mobile": "33646323806",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Mathias%20KHATIB&ville=Nice&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Déco project",
+    "mobile": "33633582595",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/peintre?nom=D%C3%A9co%20project&ville=Nice&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Chatti Peinture",
+    "mobile": "33609744860",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Chatti%20Peinture&ville=Grasse&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "NC BAT",
+    "mobile": "33662379869",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/peintre?nom=NC%20BAT&ville=Cagnes-sur-Mer&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Etienne Peinture",
+    "mobile": "33679897634",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Etienne%20Peinture&ville=Le Cannet&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Carreleurs de Provence",
+    "mobile": "33603838841",
+    "city": "Cannes",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=Carreleurs%20de%20Provence&ville=Cannes&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "Les Maîtres du Bain Par Dalmasso",
+    "mobile": "33492380350",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=Les%20Ma%C3%AEtres%20du%20Bain%20Par%20Dalmasso&ville=Antibes&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "renovation et carrelages",
+    "mobile": "33650073279",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=renovation%20et%20carrelages&ville=Cagnes-sur-Mer&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "Art et Carrelage",
+    "mobile": "33493210942",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=Art%20et%20Carrelage&ville=Cagnes-sur-Mer&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "MGP, Entreprise de Maçonnerie Générale | Peinture Bâtiment , Tailleur de Pierre et Carrelage",
+    "mobile": "33751696200",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=MGP%2C%20Entreprise%20de%20Ma%C3%A7onnerie%20G%C3%A9n%C3%A9rale%20%7C%20Peinture%20B%C3%A2timent%20%2C%20Tailleur%20de%20Pierre%20et%20Carrelage&ville=Le Cannet&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "AMM RENOV",
+    "mobile": "33660594347",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "2",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=AMM%20RENOV&ville=Saint-Laurent-du-Var&note=5&avis=2",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "Chassain Christophe",
+    "mobile": "33664909971",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Chassain%20Christophe&ville=Grasse&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "Axe Déco",
+    "mobile": "33493355888",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/plombier?nom=Axe%20D%C3%A9co&ville=Menton&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "GPC Azur, Alexandre Etcheverry",
+    "mobile": "33662126905",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/plombier?nom=GPC%20Azur%2C%20Alexandre%20Etcheverry&ville=Cagnes-sur-Mer&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "GO Plomberie",
+    "mobile": "33678503648",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/plombier?nom=GO%20Plomberie&ville=Saint-Laurent-du-Var&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "plombier"
+  },
+  {
+    "name": "Electricité Générale Geisler Eric",
+    "mobile": "33493631457",
+    "city": "Antibes",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/electricien?nom=Electricit%C3%A9%20G%C3%A9n%C3%A9rale%20Geisler%20Eric&ville=Antibes&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Top Electricite",
+    "mobile": "33493288935",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/electricien?nom=Top%20Electricite&ville=Menton&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Entreprise Lambert électricité 06",
+    "mobile": "33616903950",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/electricien?nom=Entreprise%20Lambert%20%C3%A9lectricit%C3%A9%2006&ville=Cagnes-sur-Mer&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "C'L'ELECTRICITE DE A A Z",
+    "mobile": "33767437295",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/electricien?nom=C'L'ELECTRICITE%20DE%20A%20A%20Z&ville=Cagnes-sur-Mer&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "ATE",
+    "mobile": "33612180362",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/electricien?nom=ATE&ville=Le Cannet&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "electricien"
+  },
+  {
+    "name": "Azur serrures",
+    "mobile": "33699181689",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Azur%20serrures&ville=Grasse&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Poulain Gérard",
+    "mobile": "33493313922",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Poulain%20G%C3%A9rard&ville=Saint-Laurent-du-Var&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "Serrurerie Dépannage la Plaine du Var",
+    "mobile": "33646103192",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/serrurier?nom=Serrurerie%20D%C3%A9pannage%20la%20Plaine%20du%20Var&ville=Saint-Laurent-du-Var&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "serrurier"
+  },
+  {
+    "name": "FP06 PEINTURE RENOVATION GENERALE",
+    "mobile": "33613511604",
+    "city": "Nice",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/peintre?nom=FP06%20PEINTURE%20RENOVATION%20GENERALE&ville=Nice&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "HOME DÉCORATION",
+    "mobile": "33616848948",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/peintre?nom=HOME%20D%C3%89CORATION&ville=Grasse&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Azur Décoration Peinture",
+    "mobile": "33493402914",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Azur%20D%C3%A9coration%20Peinture&ville=Grasse&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "BG Décoration",
+    "mobile": "33611527756",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/peintre?nom=BG%20D%C3%A9coration&ville=Menton&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Sarrat Christophe",
+    "mobile": "33493268737",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Sarrat%20Christophe&ville=Cagnes-sur-Mer&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "La Couleur de la Vie",
+    "mobile": "33677773105",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/peintre?nom=La%20Couleur%20de%20la%20Vie&ville=Le Cannet&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "RCD DESIGN",
+    "mobile": "33757573802",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/peintre?nom=RCD%20DESIGN&ville=Le Cannet&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Quality Maintenance Rap",
+    "mobile": "33492270014",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Quality%20Maintenance%20Rap&ville=Saint-Laurent-du-Var&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "Paca Bâtiment",
+    "mobile": "33650225758",
+    "city": "Saint-Laurent-du-Var",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/peintre?nom=Paca%20B%C3%A2timent&ville=Saint-Laurent-du-Var&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "peintre batiment"
+  },
+  {
+    "name": "renove azur",
+    "mobile": "33643874384",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=renove%20azur&ville=Grasse&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "JDC Maçonnerie Générale",
+    "mobile": "33629961582",
+    "city": "Grasse",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=JDC%20Ma%C3%A7onnerie%20G%C3%A9n%C3%A9rale&ville=Grasse&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "DE SIMONE LOÏC MAÇONNERIE",
+    "mobile": "33684793926",
+    "city": "Menton",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=DE%20SIMONE%20LO%C3%8FC%20MA%C3%87ONNERIE&ville=Menton&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "Sud rolland Carrelage",
+    "mobile": "33650073279",
+    "city": "Cagnes-sur-Mer",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=Sud%20rolland%20Carrelage&ville=Cagnes-sur-Mer&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  },
+  {
+    "name": "Franze Antoine",
+    "mobile": "33603024251",
+    "city": "Le Cannet",
+    "note": "5.0",
+    "avis": "1",
+    "url": "https://indhack.com/diagnostic/carreleur?nom=Franze%20Antoine&ville=Le Cannet&note=5&avis=1",
+    "category": "ARTISANS",
+    "subcategory": "carreleur"
+  }
+];
+
+        let currentIndex = 0;
+        const sentList = new Set();
+
+        function getMessage(lead) {
+            return `Bonjour ! 👋
+
+Je me permets de vous contacter car je suis tombée sur votre fiche Google et j'ai remarqué que vous aviez d'excellents avis (${lead.note}★ avec ${lead.avis} avis) !
+
+Je travaille avec des ${lead.subcategory}s dans le 06 et j'ai fait un rapide audit personnalisé pour ${lead.name}.
+
+L'idée n'est pas de vous déranger - c'est un diagnostic gratuit qui montre comment vous pourriez capter plus de clients à ${lead.city} grâce à votre réputation.
+
+Votre audit gratuit est ici :
+${lead.url}
+
+Bonne journée !
+Indiana - IndHack
+📞 06 61 13 97 48`;
+        }
+
+        function updateUI() {
+            if (currentIndex >= leads.length) {
+                document.getElementById('prospect-card').classList.add('hidden');
+                document.getElementById('finished-card').classList.remove('hidden');
+                return;
+            }
+
+            const lead = leads[currentIndex];
+            document.getElementById('lead-name').textContent = lead.name;
+            document.getElementById('lead-city').textContent = lead.city + ' • ' + lead.mobile.replace(/^33/, '0').replace(/(\d{2})(?=\d)/g, '$1 ');
+            document.getElementById('lead-note').textContent = lead.note + '★ (' + lead.avis + ' avis)';
+            document.getElementById('lead-subcategory').textContent = lead.subcategory;
+            document.getElementById('lead-message').textContent = getMessage(lead);
+
+            document.getElementById('count-sent').textContent = sentList.size;
+            document.getElementById('count-remaining').textContent = leads.length - currentIndex;
+
+            const progress = (currentIndex / leads.length) * 100;
+            document.getElementById('progress-bar').style.width = progress + '%';
+
+            document.getElementById('btn-prev').disabled = currentIndex === 0;
+        }
+
+        function sendLead() {
+            const lead = leads[currentIndex];
+            const msg = getMessage(lead);
+            const url = `https://wa.me/${lead.mobile}?text=${encodeURIComponent(msg)}`;
+
+            window.open(url, '_blank');
+            sentList.add(currentIndex);
+
+            setTimeout(() => nextLead(), 1000);
+        }
+
+        function nextLead() {
+            if (currentIndex < leads.length) {
+                currentIndex++;
+                updateUI();
+            }
+        }
+
+        function prevLead() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateUI();
+            }
+        }
+
+        function reset() {
+            currentIndex = 0;
+            sentList.clear();
+            document.getElementById('prospect-card').classList.remove('hidden');
+            document.getElementById('finished-card').classList.add('hidden');
+            updateUI();
+        }
+
+        updateUI();
+    </script>
+</body>
+</html>
