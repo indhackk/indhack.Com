@@ -206,6 +206,10 @@ const nextConfig = {
             },
             {
                 protocol: "https",
+                hostname: "images.pexels.com",
+            },
+            {
+                protocol: "https",
                 hostname: "*.googleusercontent.com",
             },
             {
@@ -259,20 +263,21 @@ const nextConfig = {
                         key: "Cross-Origin-Opener-Policy",
                         value: "same-origin-allow-popups",
                     },
-                    // Content Security Policy
+                    // Content Security Policy - Hardened
                     {
                         key: "Content-Security-Policy",
                         value: [
                             "default-src 'self'",
-                            "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+                            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
                             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
                             "font-src 'self' https://fonts.gstatic.com",
-                            "img-src 'self' data: blob: https://images.unsplash.com https://www.google-analytics.com https://www.googletagmanager.com https://api.dicebear.com",
+                            "img-src 'self' data: blob: https://images.unsplash.com https://images.pexels.com https://www.google-analytics.com https://www.googletagmanager.com https://api.dicebear.com",
                             "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://formsubmit.co https://api.web3forms.com",
                             "frame-ancestors 'self'",
                             "form-action 'self' https://formsubmit.co https://api.web3forms.com",
                             "base-uri 'self'",
                             "object-src 'none'",
+                            "upgrade-insecure-requests",
                         ].join("; "),
                     },
                 ],

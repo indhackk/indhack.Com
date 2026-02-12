@@ -9,7 +9,7 @@ import { MapPin, TrendingUp, Users, Search, ArrowRight, CheckCircle2, Zap, Targe
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
-import { CityData, FRENCH_CITIES, SERVICES_FOR_CITIES } from "@/lib/cities-data";
+import { CityData, FRENCH_CITIES } from "@/lib/cities-data";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 
 interface CityPageProps {

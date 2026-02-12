@@ -32,6 +32,7 @@ import {
   Smartphone
 } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
+import Image from 'next/image'
 import type { MetierData, KeywordData } from '@/lib/diagnostic-data'
 import { getTotalSearchVolume, getEasyWinsCount } from '@/lib/diagnostic-data'
 
@@ -295,11 +296,13 @@ export default function ProspectLandingTemplate({
                     </div>
                   </div>
                   <div className="relative">
-                    <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-[#F5F5F5]">
-                      <img
+                    <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-[#F5F5F5] relative">
+                      <Image
                         src={metier.mockupImage}
                         alt="Aperçu"
-                        className="w-full h-full object-cover"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover"
                       />
                     </div>
                     {/* Floating card */}
@@ -353,11 +356,13 @@ export default function ProspectLandingTemplate({
                       <span className="text-xs font-medium">{prospect.nom}</span>
                       <Menu className="w-4 h-4" />
                     </div>
-                    <div className="aspect-square rounded-xl overflow-hidden bg-[#F5F5F5] mb-4">
-                      <img
+                    <div className="aspect-square rounded-xl overflow-hidden bg-[#F5F5F5] mb-4 relative">
+                      <Image
                         src={metier.mockupImage}
                         alt="Mobile"
-                        className="w-full h-full object-cover"
+                        fill
+                        sizes="200px"
+                        className="object-cover"
                       />
                     </div>
                     <div className="bg-[#111111] text-white text-xs py-2.5 rounded-full text-center">
@@ -525,8 +530,8 @@ export default function ProspectLandingTemplate({
               className="bg-white rounded-2xl p-6 shadow-lg border border-[#E5E5E5]"
             >
               <div className="flex gap-4">
-                <div className="w-24 h-24 rounded-xl bg-[#F5F5F5] overflow-hidden flex-shrink-0">
-                  <img src={metier.mockupImage} alt="Business" className="w-full h-full object-cover" />
+                <div className="w-24 h-24 rounded-xl bg-[#F5F5F5] overflow-hidden flex-shrink-0 relative">
+                  <Image src={metier.mockupImage} alt="Business" fill sizes="96px" className="object-cover" />
                 </div>
                 <div className="flex-1">
                   <h4 className="font-medium text-lg">{prospect.nom}</h4>

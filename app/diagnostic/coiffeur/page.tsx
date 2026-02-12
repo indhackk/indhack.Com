@@ -74,10 +74,12 @@ function DiagnosticContent() {
 
         {/* Colonne droite - Image */}
         <div className="relative h-[50vh] lg:h-auto">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=85"
             alt={`Salon ${nom}`}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:bg-gradient-to-r lg:from-[#FDFCFB] lg:via-transparent lg:to-transparent"></div>
         </div>
@@ -250,11 +252,12 @@ function DiagnosticContent() {
             </div>
 
             {/* Contenu site */}
-            <div className="relative">
-              <img
+            <div className="relative h-[400px] md:h-[500px]">
+              <Image
                 src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1400&q=85"
                 alt="Aperçu site"
-                className="w-full h-[400px] md:h-[500px] object-cover"
+                fill
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 
@@ -498,9 +501,11 @@ function DiagnosticContent() {
 
             <div className="order-1 md:order-2">
               <div className="relative">
-                <img
+                <Image
                   src="/images/indiana-aflalo.jpg"
                   alt="Indiana Aflalo - Consultante digitale"
+                  width={320}
+                  height={400}
                   className="w-full max-w-xs mx-auto rounded-3xl shadow-xl"
                 />
                 <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-4 shadow-lg">

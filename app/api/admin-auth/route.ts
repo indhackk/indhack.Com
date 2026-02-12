@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
         const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
         if (!ADMIN_PASSWORD) {
-            console.error('ADMIN_PASSWORD non configuré');
+            // ADMIN_PASSWORD not configured - logged server-side only in dev
             return NextResponse.json(
                 { success: false, error: 'Configuration serveur manquante' },
                 { status: 500, headers: securityHeaders }
@@ -97,8 +97,8 @@ export async function POST(request: NextRequest) {
 
         return response;
 
-    } catch (error) {
-        console.error('Erreur API admin-auth:', error);
+    } catch {
+        // Error logged server-side only - no details exposed to client
         return NextResponse.json(
             { success: false, error: 'Erreur serveur' },
             { status: 500, headers: securityHeaders }
