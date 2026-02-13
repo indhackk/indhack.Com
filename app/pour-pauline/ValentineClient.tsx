@@ -126,7 +126,6 @@ export default function ValentineClient() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
-    const [showPlayer, setShowPlayer] = useState(false);
     const [currentTrack, setCurrentTrack] = useState(0);
 
     // Bouton "Non" qui s'enfuit
@@ -239,7 +238,6 @@ export default function ValentineClient() {
     };
 
     const prevTrack = () => {
-        // Si on est à plus de 3 secondes, revenir au début de la piste
         if (currentTime > 3) {
             if (audioRef.current) {
                 audioRef.current.currentTime = 0;
@@ -257,30 +255,26 @@ export default function ValentineClient() {
         }
     };
 
-    // Auto-play next track when current ends
     const handleEnded = () => {
         nextTrack();
     };
 
-    // Show player when quiz starts
-    useEffect(() => {
-        if (stage !== "question" && !showPlayer) {
-            setShowPlayer(true);
-            if (audioRef.current) {
-                audioRef.current.play().catch(() => {});
-                setIsPlaying(true);
-            }
-        }
-    }, [stage, showPlayer]);
-
     return (
-        <div className="min-h-screen bg-gradient-to-br from-pink-100 via-red-50 to-pink-200 flex items-center justify-center p-4 overflow-hidden">
-            {/* Floating hearts background */}
+        <div className="min-h-screen bg-gradient-to-br from-rose-100 via-pink-50 to-rose-200 flex items-center justify-center p-4 pb-28 overflow-hidden relative">
+            {/* Elegant background pattern */}
+            <div className="fixed inset-0 opacity-30 pointer-events-none">
+                <div className="absolute inset-0" style={{
+                    backgroundImage: `radial-gradient(circle at 25% 25%, rgba(255,182,193,0.4) 0%, transparent 50%),
+                                      radial-gradient(circle at 75% 75%, rgba(255,105,180,0.3) 0%, transparent 50%)`
+                }} />
+            </div>
+
+            {/* Floating hearts - more subtle */}
             <div className="fixed inset-0 pointer-events-none overflow-hidden">
-                {[...Array(20)].map((_, i) => (
+                {[...Array(12)].map((_, i) => (
                     <motion.div
                         key={i}
-                        className="absolute text-4xl"
+                        className="absolute text-2xl opacity-40"
                         initial={{
                             x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
                             y: (typeof window !== 'undefined' ? window.innerHeight : 800) + 50
@@ -290,30 +284,34 @@ export default function ValentineClient() {
                             x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
                         }}
                         transition={{
-                            duration: 10 + Math.random() * 10,
+                            duration: 15 + Math.random() * 10,
                             repeat: Infinity,
-                            delay: Math.random() * 5,
+                            delay: Math.random() * 8,
                         }}
                     >
-                        {["❤️", "💕", "💖", "💗", "💝"][Math.floor(Math.random() * 5)]}
+                        {["♥", "♡", "❤"][Math.floor(Math.random() * 3)]}
                     </motion.div>
                 ))}
             </div>
 
             {/* Confetti */}
             {showConfetti && (
-                <div className="fixed inset-0 pointer-events-none">
-                    {[...Array(50)].map((_, i) => (
+                <div className="fixed inset-0 pointer-events-none z-40">
+                    {[...Array(60)].map((_, i) => (
                         <motion.div
                             key={i}
-                            className="absolute w-3 h-3 rounded-full"
+                            className="absolute w-2 h-2 rounded-full"
                             style={{
-                                backgroundColor: ["#ff6b6b", "#ff8787", "#ffa8a8", "#ffc9c9", "#ffe3e3", "#ff69b4", "#ff1493"][Math.floor(Math.random() * 7)],
+                                backgroundColor: ["#f9a8d4", "#f472b6", "#ec4899", "#db2777", "#be185d", "#fda4af", "#fb7185"][Math.floor(Math.random() * 7)],
                                 left: `${Math.random() * 100}%`,
                             }}
-                            initial={{ y: -20, opacity: 1 }}
-                            animate={{ y: (typeof window !== 'undefined' ? window.innerHeight : 800) + 20, opacity: 0 }}
-                            transition={{ duration: 3 + Math.random() * 2, delay: Math.random() * 0.5 }}
+                            initial={{ y: -20, opacity: 1, rotate: 0 }}
+                            animate={{
+                                y: (typeof window !== 'undefined' ? window.innerHeight : 800) + 20,
+                                opacity: 0,
+                                rotate: 360 * (Math.random() > 0.5 ? 1 : -1)
+                            }}
+                            transition={{ duration: 4 + Math.random() * 2, delay: Math.random() * 0.8 }}
                         />
                     ))}
                 </div>
@@ -324,40 +322,60 @@ export default function ValentineClient() {
                 {stage === "question" && (
                     <motion.div
                         key="question"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.8 }}
-                        className="text-center"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -30 }}
+                        transition={{ duration: 0.6 }}
+                        className="text-center relative z-10"
                     >
-                        <motion.h1
-                            className="text-5xl md:text-7xl font-bold text-pink-600 mb-12"
-                            animate={{ scale: [1, 1.05, 1] }}
-                            transition={{ duration: 2, repeat: Infinity }}
+                        <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ delay: 0.2, type: "spring" }}
+                            className="text-8xl mb-8"
                         >
-                            Pauline... 💕
+                            💝
+                        </motion.div>
+                        <motion.h1
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.4 }}
+                            className="text-5xl md:text-7xl font-light text-rose-600 mb-6 tracking-tight"
+                        >
+                            Pauline...
                         </motion.h1>
-                        <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-16">
+                        <motion.h2
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.6 }}
+                            className="text-2xl md:text-4xl font-light text-gray-700 mb-16"
+                        >
                             Tu veux être ma Valentine ?
-                        </h2>
-                        <div className="flex gap-8 justify-center items-center relative h-32">
+                        </motion.h2>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.8 }}
+                            className="flex gap-6 justify-center items-center relative h-24"
+                        >
                             <motion.button
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.95 }}
+                                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(236,72,153,0.3)" }}
+                                whileTap={{ scale: 0.98 }}
                                 onClick={() => setStage("quiz")}
-                                className="px-12 py-6 bg-gradient-to-r from-pink-500 to-red-500 text-white text-2xl font-bold rounded-full shadow-lg hover:shadow-xl transition-all"
+                                className="px-14 py-5 bg-gradient-to-r from-rose-400 to-pink-500 text-white text-xl font-medium rounded-full shadow-xl transition-all"
                             >
-                                Oui ! 💖
+                                Oui ! 💕
                             </motion.button>
                             <motion.button
                                 animate={{ x: noButtonPos.x, y: noButtonPos.y }}
                                 onMouseEnter={handleNoHover}
                                 onTouchStart={handleNoHover}
-                                className="px-12 py-6 bg-gray-300 text-gray-600 text-2xl font-bold rounded-full shadow-lg absolute"
-                                style={{ right: "-150px" }}
+                                className="px-14 py-5 bg-gray-200 text-gray-500 text-xl font-medium rounded-full shadow-lg absolute"
+                                style={{ right: "-140px" }}
                             >
-                                Non 😢
+                                Non
                             </motion.button>
-                        </div>
+                        </motion.div>
                     </motion.div>
                 )}
 
@@ -365,48 +383,50 @@ export default function ValentineClient() {
                 {stage === "quiz" && (
                     <motion.div
                         key="quiz"
-                        initial={{ opacity: 0, x: 100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -100 }}
-                        className="w-full max-w-2xl bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.95 }}
+                        transition={{ duration: 0.5 }}
+                        className="w-full max-w-xl bg-white/80 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/50 relative z-10"
                     >
                         <div className="text-center mb-8">
-                            <p className="text-pink-500 font-bold text-sm uppercase tracking-wider mb-2">
-                                Question {quizIndex + 1} / {QUIZ.length}
-                            </p>
-                            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-                                🎯 Tu me connais vraiment ?
+                            <span className="inline-block px-4 py-1 bg-rose-100 text-rose-600 rounded-full text-sm font-medium mb-4">
+                                Question {quizIndex + 1} sur {QUIZ.length}
+                            </span>
+                            <h2 className="text-2xl font-light text-gray-800">
+                                Tu me connais vraiment ? 🎯
                             </h2>
-                            <div className="w-full bg-gray-200 rounded-full h-2 mt-4">
-                                <div
-                                    className="bg-gradient-to-r from-pink-500 to-red-500 h-2 rounded-full transition-all"
-                                    style={{ width: `${((quizIndex + 1) / QUIZ.length) * 100}%` }}
+                            <div className="w-full bg-rose-100 rounded-full h-1.5 mt-6">
+                                <motion.div
+                                    className="bg-gradient-to-r from-rose-400 to-pink-500 h-1.5 rounded-full"
+                                    initial={{ width: 0 }}
+                                    animate={{ width: `${((quizIndex + 1) / QUIZ.length) * 100}%` }}
+                                    transition={{ duration: 0.5 }}
                                 />
                             </div>
                         </div>
 
-                        <h3 className="text-xl md:text-2xl font-semibold text-gray-700 mb-8 text-center">
+                        <h3 className="text-xl font-medium text-gray-700 mb-8 text-center">
                             {QUIZ[quizIndex].question}
                         </h3>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="space-y-3">
                             {QUIZ[quizIndex].options.map((option, i) => (
                                 <motion.button
                                     key={i}
-                                    whileHover={{ scale: 1.03 }}
-                                    whileTap={{ scale: 0.97 }}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: i * 0.1 }}
+                                    whileHover={{ scale: 1.02, x: 5 }}
+                                    whileTap={{ scale: 0.98 }}
                                     onClick={() => handleAnswer(i)}
-                                    className="p-4 bg-gradient-to-r from-pink-100 to-red-100 hover:from-pink-200 hover:to-red-200 rounded-xl text-gray-800 font-medium text-lg transition-all text-left"
+                                    className="w-full p-4 bg-gradient-to-r from-rose-50 to-pink-50 hover:from-rose-100 hover:to-pink-100 rounded-2xl text-gray-700 font-medium transition-all text-left border border-rose-100 hover:border-rose-200"
                                 >
-                                    <span className="font-bold text-pink-600 mr-2">{String.fromCharCode(65 + i)})</span>
+                                    <span className="text-rose-400 mr-3">{String.fromCharCode(65 + i)}.</span>
                                     {option}
                                 </motion.button>
                             ))}
                         </div>
-
-                        <p className="text-center mt-6 text-gray-500">
-                            Score: {score} / {quizIndex}
-                        </p>
                     </motion.div>
                 )}
 
@@ -417,29 +437,36 @@ export default function ValentineClient() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="w-full max-w-lg"
+                        className="w-full max-w-md relative z-10"
                     >
-                        <div className="text-center mb-8">
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-                                Notre Wrapped 2024 💕
+                        <div className="text-center mb-10">
+                            <motion.div
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                className="text-6xl mb-4"
+                            >
+                                ✨
+                            </motion.div>
+                            <h2 className="text-3xl font-light text-gray-800 mb-2">
+                                Notre année ensemble
                             </h2>
-                            <p className="text-gray-500">Pauline x Indiana</p>
+                            <p className="text-rose-400 font-medium">Pauline & Indiana • 2024</p>
                         </div>
 
                         <div className="space-y-4">
                             {WRAPPED_STATS.slice(0, wrappedIndex).map((stat, i) => (
                                 <motion.div
                                     key={i}
-                                    initial={{ opacity: 0, x: -50 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    className="bg-gradient-to-r from-pink-500 to-red-500 rounded-2xl p-5 text-white shadow-lg"
+                                    initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                                    className="bg-gradient-to-r from-rose-400 via-pink-500 to-rose-500 rounded-2xl p-5 text-white shadow-xl"
                                 >
                                     <div className="flex items-center gap-4">
                                         <span className="text-4xl">{stat.emoji}</span>
                                         <div className="flex-1">
-                                            <p className="text-white/80 text-sm">{stat.label}</p>
+                                            <p className="text-white/70 text-sm">{stat.label}</p>
                                             <p className="text-2xl font-bold">{stat.value}</p>
-                                            {stat.sub && <p className="text-white/60 text-xs">{stat.sub}</p>}
+                                            {stat.sub && <p className="text-white/50 text-xs">{stat.sub}</p>}
                                         </div>
                                     </div>
                                 </motion.div>
@@ -450,9 +477,9 @@ export default function ValentineClient() {
                             <motion.p
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
-                                className="text-center mt-8 text-gray-600 text-lg"
+                                className="text-center mt-10 text-gray-500 text-lg font-light"
                             >
-                                Et ce n'est que le début... ❤️
+                                Et ce n'est que le début... 💫
                             </motion.p>
                         )}
                     </motion.div>
@@ -465,14 +492,14 @@ export default function ValentineClient() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="w-full max-w-2xl bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl"
+                        className="w-full max-w-2xl bg-white/90 backdrop-blur-xl rounded-3xl p-10 md:p-14 shadow-2xl border border-white/50 relative z-10"
                     >
-                        <div className="text-center mb-6">
-                            <span className="text-6xl">💌</span>
+                        <div className="text-center mb-8">
+                            <span className="text-5xl">💌</span>
                         </div>
-                        <div className="font-mono text-gray-800 text-lg md:text-xl leading-relaxed whitespace-pre-wrap">
+                        <div className="font-serif text-gray-700 text-lg md:text-xl leading-relaxed whitespace-pre-wrap italic">
                             {typedText}
-                            <span className="animate-pulse">|</span>
+                            <span className="animate-pulse text-rose-400">|</span>
                         </div>
                     </motion.div>
                 )}
@@ -483,23 +510,23 @@ export default function ValentineClient() {
                         key="photos"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="w-full max-w-4xl"
+                        className="w-full max-w-3xl relative z-10"
                     >
                         <div className="text-center mb-8">
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-                                Nos plus beaux moments 📸
+                            <h2 className="text-3xl font-light text-gray-800 mb-2">
+                                Nos plus beaux moments
                             </h2>
-                            <p className="text-gray-500">Je t'aime ma bouclette ❤️</p>
+                            <p className="text-rose-400">Je t'aime ma bouclette ❤️</p>
                         </div>
 
-                        <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-black">
+                        <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-black/5">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={currentPhoto}
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ duration: 0.5 }}
+                                    initial={{ opacity: 0, scale: 1.1 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.95 }}
+                                    transition={{ duration: 0.7 }}
                                     className="absolute inset-0"
                                 >
                                     <Image
@@ -513,23 +540,26 @@ export default function ValentineClient() {
                             </AnimatePresence>
                         </div>
 
-                        <div className="flex justify-center gap-2 mt-6 flex-wrap">
+                        <div className="flex justify-center gap-1.5 mt-6 flex-wrap">
                             {PHOTOS.map((_, i) => (
                                 <button
                                     key={i}
                                     onClick={() => setCurrentPhoto(i)}
-                                    className={`w-3 h-3 rounded-full transition-all ${
-                                        i === currentPhoto ? "bg-pink-500 scale-125" : "bg-gray-300"
+                                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                        i === currentPhoto ? "bg-rose-500 w-6" : "bg-rose-200 hover:bg-rose-300"
                                     }`}
                                 />
                             ))}
                         </div>
 
-                        <div className="text-center mt-8">
-                            <p className="text-2xl font-bold text-pink-600">
-                                Bonne Saint-Valentin mon amour 💕
-                            </p>
-                        </div>
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 1 }}
+                            className="text-center mt-10 text-2xl font-light text-rose-500"
+                        >
+                            Bonne Saint-Valentin mon amour 💕
+                        </motion.p>
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -543,122 +573,115 @@ export default function ValentineClient() {
                 onEnded={handleEnded}
             />
 
-            {/* Spotify-style music player */}
-            <AnimatePresence>
-                {showPlayer && (
-                    <motion.div
-                        initial={{ y: 100, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: 100, opacity: 0 }}
-                        className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-[#1DB954] via-[#1ed760] to-[#1DB954] shadow-2xl z-50"
-                    >
-                        <div className="max-w-4xl mx-auto px-4 py-3">
-                            <div className="flex items-center gap-4">
-                                {/* Album art with photo */}
-                                <div className="relative w-14 h-14 flex-shrink-0">
-                                    <Image
-                                        src={PLAYLIST[currentTrack].cover}
-                                        alt="Album cover"
-                                        fill
-                                        className="object-cover rounded-lg shadow-lg"
-                                    />
-                                    {isPlaying && (
-                                        <motion.div
-                                            className="absolute inset-0 rounded-lg border-2 border-white/50"
-                                            animate={{ scale: [1, 1.05, 1] }}
-                                            transition={{ duration: 1, repeat: Infinity }}
-                                        />
-                                    )}
-                                </div>
+            {/* Elegant music player - always visible, no auto-play */}
+            <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1, duration: 0.6 }}
+                className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-xl shadow-2xl z-50 border-t border-rose-100"
+            >
+                <div className="max-w-2xl mx-auto px-6 py-4">
+                    <div className="flex items-center gap-5">
+                        {/* Album art */}
+                        <div className="relative w-16 h-16 flex-shrink-0 rounded-xl overflow-hidden shadow-lg">
+                            <Image
+                                src={PLAYLIST[currentTrack].cover}
+                                alt="Album cover"
+                                fill
+                                className="object-cover"
+                            />
+                            {isPlaying && (
+                                <motion.div
+                                    className="absolute inset-0 bg-black/10"
+                                    animate={{ opacity: [0.1, 0.2, 0.1] }}
+                                    transition={{ duration: 1, repeat: Infinity }}
+                                />
+                            )}
+                        </div>
 
-                                {/* Track info */}
-                                <div className="flex-1 min-w-0">
-                                    <p className="text-white font-bold text-sm truncate">
-                                        {PLAYLIST[currentTrack].title}
-                                    </p>
-                                    <p className="text-white/70 text-xs">
-                                        Pauline & Indiana • {currentTrack + 1}/{PLAYLIST.length}
-                                    </p>
+                        {/* Track info & progress */}
+                        <div className="flex-1 min-w-0">
+                            <p className="text-gray-800 font-medium text-sm truncate">
+                                {PLAYLIST[currentTrack].title}
+                            </p>
+                            <p className="text-rose-400 text-xs mb-2">
+                                Coco & Coline • {currentTrack + 1}/{PLAYLIST.length}
+                            </p>
 
-                                    {/* Progress bar */}
-                                    <div className="flex items-center gap-2 mt-1">
-                                        <span className="text-white/60 text-[10px] w-8">
-                                            {formatTime(currentTime)}
-                                        </span>
-                                        <input
-                                            type="range"
-                                            min="0"
-                                            max={duration || 100}
-                                            value={currentTime}
-                                            onChange={handleSeek}
-                                            className="flex-1 h-1 bg-white/30 rounded-full appearance-none cursor-pointer
-                                                [&::-webkit-slider-thumb]:appearance-none
-                                                [&::-webkit-slider-thumb]:w-3
-                                                [&::-webkit-slider-thumb]:h-3
-                                                [&::-webkit-slider-thumb]:bg-white
-                                                [&::-webkit-slider-thumb]:rounded-full
-                                                [&::-webkit-slider-thumb]:shadow-md
-                                                [&::-webkit-slider-thumb]:hover:scale-110
-                                                [&::-webkit-slider-thumb]:transition-transform"
-                                            style={{
-                                                background: `linear-gradient(to right, white ${(currentTime / (duration || 1)) * 100}%, rgba(255,255,255,0.3) ${(currentTime / (duration || 1)) * 100}%)`
-                                            }}
-                                        />
-                                        <span className="text-white/60 text-[10px] w-8 text-right">
-                                            {formatTime(duration)}
-                                        </span>
-                                    </div>
-                                </div>
-
-                                {/* Controls */}
-                                <div className="flex items-center gap-2">
-                                    {/* Previous */}
-                                    <motion.button
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        onClick={prevTrack}
-                                        className="w-8 h-8 flex items-center justify-center text-white/80 hover:text-white"
-                                    >
-                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
-                                        </svg>
-                                    </motion.button>
-
-                                    {/* Play/Pause */}
-                                    <motion.button
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        onClick={togglePlay}
-                                        className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg"
-                                    >
-                                        {isPlaying ? (
-                                            <svg className="w-5 h-5 text-[#1DB954]" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
-                                            </svg>
-                                        ) : (
-                                            <svg className="w-5 h-5 text-[#1DB954] ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M8 5v14l11-7z" />
-                                            </svg>
-                                        )}
-                                    </motion.button>
-
-                                    {/* Next */}
-                                    <motion.button
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        onClick={nextTrack}
-                                        className="w-8 h-8 flex items-center justify-center text-white/80 hover:text-white"
-                                    >
-                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
-                                        </svg>
-                                    </motion.button>
-                                </div>
+                            {/* Progress bar */}
+                            <div className="flex items-center gap-3">
+                                <span className="text-gray-400 text-[10px] w-8 font-mono">
+                                    {formatTime(currentTime)}
+                                </span>
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max={duration || 100}
+                                    value={currentTime}
+                                    onChange={handleSeek}
+                                    className="flex-1 h-1 bg-rose-100 rounded-full appearance-none cursor-pointer
+                                        [&::-webkit-slider-thumb]:appearance-none
+                                        [&::-webkit-slider-thumb]:w-3
+                                        [&::-webkit-slider-thumb]:h-3
+                                        [&::-webkit-slider-thumb]:bg-rose-500
+                                        [&::-webkit-slider-thumb]:rounded-full
+                                        [&::-webkit-slider-thumb]:shadow-md
+                                        [&::-webkit-slider-thumb]:hover:scale-125
+                                        [&::-webkit-slider-thumb]:transition-transform"
+                                    style={{
+                                        background: `linear-gradient(to right, #f43f5e ${(currentTime / (duration || 1)) * 100}%, #fce7f3 ${(currentTime / (duration || 1)) * 100}%)`
+                                    }}
+                                />
+                                <span className="text-gray-400 text-[10px] w-8 text-right font-mono">
+                                    {formatTime(duration)}
+                                </span>
                             </div>
                         </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+
+                        {/* Controls */}
+                        <div className="flex items-center gap-1">
+                            <motion.button
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                onClick={prevTrack}
+                                className="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-rose-500 transition-colors"
+                            >
+                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
+                                </svg>
+                            </motion.button>
+
+                            <motion.button
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                onClick={togglePlay}
+                                className="w-14 h-14 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full flex items-center justify-center shadow-xl"
+                            >
+                                {isPlaying ? (
+                                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+                                    </svg>
+                                ) : (
+                                    <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                )}
+                            </motion.button>
+
+                            <motion.button
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                onClick={nextTrack}
+                                className="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-rose-500 transition-colors"
+                            >
+                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+                                </svg>
+                            </motion.button>
+                        </div>
+                    </div>
+                </div>
+            </motion.div>
         </div>
     );
 }
