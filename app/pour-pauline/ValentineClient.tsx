@@ -198,7 +198,7 @@ export default function ValentineClient() {
         } else if (stage === "message" && typedText.length >= LOVE_MESSAGE.length) {
             setShowConfetti(true);
             const timer = setTimeout(() => {
-                setStage("montage");
+                setStage("startsound");
             }, 3000);
             return () => clearTimeout(timer);
         }
@@ -608,7 +608,44 @@ export default function ValentineClient() {
                     </motion.div>
                 )}
 
-                {/* STAGE 5: Photo Montage with Track 1 */}
+                {/* STAGE 5: Start Sound */}
+                {stage === "startsound" && (
+                    <motion.div
+                        key="startsound"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        className="text-center relative z-10"
+                    >
+                        <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ type: "spring", delay: 0.2 }}
+                            className="text-8xl mb-8"
+                        >
+                            🎬
+                        </motion.div>
+                        <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-4">
+                            Prête pour la suite ?
+                        </h2>
+                        <p className="text-gray-500 mb-10 text-lg">
+                            Monte le son 🔊
+                        </p>
+                        <motion.button
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.5 }}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={() => setStage("montage")}
+                            className="px-12 py-5 bg-gradient-to-r from-rose-400 to-pink-500 text-white text-xl font-medium rounded-full shadow-xl"
+                        >
+                            ▶️ Lancer le montage
+                        </motion.button>
+                    </motion.div>
+                )}
+
+                {/* STAGE 6: Photo Montage with Track 1 */}
                 {stage === "montage" && (
                     <motion.div
                         key="montage"
