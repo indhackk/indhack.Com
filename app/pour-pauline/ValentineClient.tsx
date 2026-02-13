@@ -742,92 +742,124 @@ export default function ValentineClient() {
                     </motion.div>
                 )}
 
-                {/* STAGE 6: Player Interface */}
+                {/* STAGE 7: Player Interface */}
                 {stage === "player" && (
                     <motion.div
                         key="player"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="w-full max-w-sm relative z-10"
+                        className="w-full max-w-md relative z-10"
                     >
-                        {/* Big cover art */}
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ type: "spring" }}
-                            className="relative aspect-square w-full rounded-3xl overflow-hidden shadow-2xl mb-8"
-                        >
-                            <Image
-                                src={PLAYLIST[currentTrack].cover}
-                                alt="Cover"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
-                            {isPlaying && (
+                        <div className="text-center mb-6">
+                            <h2 className="text-2xl font-light text-gray-800 mb-1">
+                                🎵 Notre playlist
+                            </h2>
+                            <p className="text-rose-400 text-sm">Les aventures de Coco & Coline</p>
+                        </div>
+
+                        {/* Tracks as cards with big covers */}
+                        <div className="space-y-4 mb-6">
+                            {PLAYLIST.map((track, i) => (
                                 <motion.div
-                                    className="absolute inset-0 bg-black/10 flex items-end justify-center pb-6"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
+                                    key={i}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: i * 0.15 }}
+                                    onClick={() => selectTrack(i)}
+                                    className={`bg-white/90 backdrop-blur-xl rounded-2xl p-4 shadow-xl border cursor-pointer transition-all ${
+                                        i === currentTrack
+                                            ? "border-rose-300 ring-2 ring-rose-200"
+                                            : "border-white/50 hover:border-rose-200"
+                                    }`}
                                 >
-                                    <div className="flex gap-1.5 items-end">
-                                        {[...Array(5)].map((_, i) => (
-                                            <motion.div
-                                                key={i}
-                                                className="w-1.5 bg-white rounded-full"
-                                                animate={{ height: [12, 32, 12] }}
-                                                transition={{ duration: 0.5, repeat: Infinity, delay: i * 0.1 }}
+                                    <div className="flex items-center gap-4">
+                                        {/* Cover */}
+                                        <div className="relative w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 shadow-lg">
+                                            <Image
+                                                src={track.cover}
+                                                alt={track.title}
+                                                fill
+                                                className="object-cover"
                                             />
-                                        ))}
+                                            {i === currentTrack && isPlaying && (
+                                                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                                    <div className="flex gap-1 items-end">
+                                                        {[...Array(4)].map((_, j) => (
+                                                            <motion.div
+                                                                key={j}
+                                                                className="w-1 bg-white rounded-full"
+                                                                animate={{ height: [8, 20, 8] }}
+                                                                transition={{ duration: 0.4, repeat: Infinity, delay: j * 0.1 }}
+                                                            />
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
+
+                                        {/* Info */}
+                                        <div className="flex-1 min-w-0">
+                                            <p className={`font-semibold truncate ${i === currentTrack ? "text-rose-500" : "text-gray-800"}`}>
+                                                {track.title}
+                                            </p>
+                                            <p className="text-gray-400 text-sm">Coco & Coline</p>
+                                            {i === currentTrack && (
+                                                <div className="mt-2">
+                                                    <div className="h-1 bg-rose-100 rounded-full overflow-hidden">
+                                                        <div
+                                                            className="h-full bg-rose-500 transition-all"
+                                                            style={{ width: `${(currentTime / (duration || 1)) * 100}%` }}
+                                                        />
+                                                    </div>
+                                                    <div className="flex justify-between text-[10px] text-gray-400 mt-1">
+                                                        <span>{formatTime(currentTime)}</span>
+                                                        <span>{formatTime(duration)}</span>
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
+
+                                        {/* Play indicator or button */}
+                                        <div className="flex-shrink-0">
+                                            {i === currentTrack ? (
+                                                <motion.button
+                                                    whileHover={{ scale: 1.1 }}
+                                                    whileTap={{ scale: 0.9 }}
+                                                    onClick={(e) => { e.stopPropagation(); togglePlay(); }}
+                                                    className="w-12 h-12 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full flex items-center justify-center shadow-lg"
+                                                >
+                                                    {isPlaying ? (
+                                                        <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+                                                        </svg>
+                                                    ) : (
+                                                        <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                                            <path d="M8 5v14l11-7z" />
+                                                        </svg>
+                                                    )}
+                                                </motion.button>
+                                            ) : (
+                                                <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center">
+                                                    <svg className="w-5 h-5 text-gray-400 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z" />
+                                                    </svg>
+                                                </div>
+                                            )}
+                                        </div>
                                     </div>
                                 </motion.div>
-                            )}
-                        </motion.div>
-
-                        {/* Track info */}
-                        <div className="text-center mb-6">
-                            <h2 className="text-xl font-semibold text-gray-800 mb-1">
-                                {PLAYLIST[currentTrack].title}
-                            </h2>
-                            <p className="text-rose-400">Coco & Coline</p>
+                            ))}
                         </div>
 
-                        {/* Progress bar */}
-                        <div className="mb-6 px-2">
-                            <input
-                                type="range"
-                                min="0"
-                                max={duration || 100}
-                                value={currentTime}
-                                onChange={handleSeek}
-                                className="w-full h-2 bg-rose-100 rounded-full appearance-none cursor-pointer
-                                    [&::-webkit-slider-thumb]:appearance-none
-                                    [&::-webkit-slider-thumb]:w-4
-                                    [&::-webkit-slider-thumb]:h-4
-                                    [&::-webkit-slider-thumb]:bg-rose-500
-                                    [&::-webkit-slider-thumb]:rounded-full
-                                    [&::-webkit-slider-thumb]:shadow-lg
-                                    [&::-webkit-slider-thumb]:hover:scale-110
-                                    [&::-webkit-slider-thumb]:transition-transform"
-                                style={{
-                                    background: `linear-gradient(to right, #f43f5e ${(currentTime / (duration || 1)) * 100}%, #fce7f3 ${(currentTime / (duration || 1)) * 100}%)`
-                                }}
-                            />
-                            <div className="flex justify-between text-xs text-gray-400 mt-2">
-                                <span>{formatTime(currentTime)}</span>
-                                <span>{formatTime(duration)}</span>
-                            </div>
-                        </div>
-
-                        {/* Controls */}
-                        <div className="flex items-center justify-center gap-8 mb-8">
+                        {/* Global controls */}
+                        <div className="flex items-center justify-center gap-6 mb-6">
                             <motion.button
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                                 onClick={prevTrack}
-                                className="w-14 h-14 flex items-center justify-center text-gray-400 hover:text-rose-500 transition-colors"
+                                className="w-12 h-12 flex items-center justify-center text-gray-400 hover:text-rose-500 transition-colors bg-white/80 rounded-full shadow-lg"
                             >
-                                <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
                                 </svg>
                             </motion.button>
@@ -836,14 +868,14 @@ export default function ValentineClient() {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 onClick={togglePlay}
-                                className="w-20 h-20 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full flex items-center justify-center shadow-2xl"
+                                className="w-16 h-16 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full flex items-center justify-center shadow-xl"
                             >
                                 {isPlaying ? (
-                                    <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
                                     </svg>
                                 ) : (
-                                    <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
                                 )}
@@ -853,63 +885,12 @@ export default function ValentineClient() {
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                                 onClick={nextTrack}
-                                className="w-14 h-14 flex items-center justify-center text-gray-400 hover:text-rose-500 transition-colors"
+                                className="w-12 h-12 flex items-center justify-center text-gray-400 hover:text-rose-500 transition-colors bg-white/80 rounded-full shadow-lg"
                             >
-                                <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
                                 </svg>
                             </motion.button>
-                        </div>
-
-                        {/* Playlist mini */}
-                        <div className="bg-white/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/50">
-                            <p className="text-gray-500 text-xs uppercase tracking-wider px-4 py-3 border-b border-rose-100 flex items-center gap-2">
-                                <span>🎵</span> Playlist
-                            </p>
-                            {PLAYLIST.map((track, i) => (
-                                <motion.button
-                                    key={i}
-                                    whileHover={{ backgroundColor: "rgba(244,63,94,0.05)" }}
-                                    onClick={() => selectTrack(i)}
-                                    className={`w-full flex items-center gap-4 p-4 transition-colors ${
-                                        i === currentTrack ? "bg-rose-50" : ""
-                                    } ${i < PLAYLIST.length - 1 ? "border-b border-rose-50" : ""}`}
-                                >
-                                    <div className="relative w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 shadow-md">
-                                        <Image
-                                            src={track.cover}
-                                            alt={track.title}
-                                            fill
-                                            className="object-cover"
-                                        />
-                                        {i === currentTrack && isPlaying && (
-                                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                                <div className="flex gap-0.5 items-end">
-                                                    {[...Array(3)].map((_, j) => (
-                                                        <motion.div
-                                                            key={j}
-                                                            className="w-1 bg-white rounded-full"
-                                                            animate={{ height: [6, 16, 6] }}
-                                                            transition={{ duration: 0.4, repeat: Infinity, delay: j * 0.1 }}
-                                                        />
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
-                                    </div>
-                                    <div className="flex-1 text-left">
-                                        <p className={`font-medium ${i === currentTrack ? "text-rose-500" : "text-gray-700"}`}>
-                                            {track.title}
-                                        </p>
-                                        <p className="text-gray-400 text-xs">Coco & Coline</p>
-                                    </div>
-                                    {i === currentTrack && (
-                                        <div className="flex items-center gap-1 text-rose-400">
-                                            <span className="text-xs">En cours</span>
-                                        </div>
-                                    )}
-                                </motion.button>
-                            ))}
                         </div>
 
                         {/* Final message */}
@@ -917,7 +898,7 @@ export default function ValentineClient() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 1 }}
-                            className="text-center mt-8 text-rose-400 font-light text-lg"
+                            className="text-center text-rose-400 font-light text-lg"
                         >
                             Je t'aime ma bouclette ❤️
                         </motion.p>
