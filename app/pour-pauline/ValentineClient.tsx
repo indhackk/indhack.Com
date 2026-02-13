@@ -152,7 +152,8 @@ export default function ValentineClient() {
     const [duration, setDuration] = useState(0);
     const [currentTrack, setCurrentTrack] = useState(0);
     const [montageStarted, setMontageStarted] = useState(false);
-    const [photoInterval, setPhotoInterval] = useState(4000);
+    const [photoInterval, setPhotoInterval] = useState(6000);
+    const [showPhoto, setShowPhoto] = useState(true);
 
     // Bouton "Non" qui s'enfuit
     const handleNoHover = () => {
@@ -236,17 +237,29 @@ export default function ValentineClient() {
         }
     }, [stage, montageStarted]);
 
-    // Photo montage slideshow - synced with music duration
+    // Photo montage slideshow - with black screen transition
     useEffect(() => {
         if (stage === "montage" && isPlaying && photoInterval > 0) {
+            // Photo visible for 80% of interval, black screen for 20%
+            const photoTime = photoInterval * 0.8;
+            const blackTime = photoInterval * 0.2;
+
             const timer = setInterval(() => {
-                setCurrentPhoto((prev) => {
-                    if (prev >= PHOTOS.length - 1) {
-                        return 0; // Loop back
-                    }
-                    return prev + 1;
-                });
+                // First fade to black
+                setShowPhoto(false);
+
+                // After black screen, change photo and show it
+                setTimeout(() => {
+                    setCurrentPhoto((prev) => {
+                        if (prev >= PHOTOS.length - 1) {
+                            return 0;
+                        }
+                        return prev + 1;
+                    });
+                    setShowPhoto(true);
+                }, blackTime);
             }, photoInterval);
+
             return () => clearInterval(timer);
         }
     }, [stage, isPlaying, photoInterval]);
@@ -654,25 +667,22 @@ export default function ValentineClient() {
                         exit={{ opacity: 0 }}
                         className="fixed inset-0 bg-black z-50 flex items-center justify-center"
                     >
-                        {/* Cinematic photo display */}
-                        <AnimatePresence mode="wait">
-                            <motion.div
-                                key={currentPhoto}
-                                initial={{ opacity: 0, scale: 1.1 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.95 }}
-                                transition={{ duration: 1.5, ease: "easeInOut" }}
-                                className="absolute inset-0"
-                            >
-                                <Image
-                                    src={PHOTOS[currentPhoto]}
-                                    alt="Notre moment"
-                                    fill
-                                    className="object-contain"
-                                    priority
-                                />
-                            </motion.div>
-                        </AnimatePresence>
+                        {/* Cinematic photo display with black transitions */}
+                        <motion.div
+                            key={currentPhoto}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: showPhoto ? 1 : 0 }}
+                            transition={{ duration: 0.8, ease: "easeInOut" }}
+                            className="absolute inset-0"
+                        >
+                            <Image
+                                src={PHOTOS[currentPhoto]}
+                                alt="Notre moment"
+                                fill
+                                className="object-contain"
+                                priority
+                            />
+                        </motion.div>
 
                         {/* Vignette overlay */}
                         <div className="absolute inset-0 pointer-events-none" style={{
