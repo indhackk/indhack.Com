@@ -7,7 +7,7 @@ import { CookieConsent } from "@/components/CookieConsent";
 import { FloatingCTA } from "@/components/ui/FloatingCTA";
 
 // Routes where we hide the main site layout (Navbar, Footer, etc.)
-const ISOLATED_ROUTES = ["/login", "/app", "/diagnostic"];
+const ISOLATED_ROUTES = ["/login", "/app", "/diagnostic", "/pour-pauline"];
 
 function isIsolatedRoute(pathname: string): boolean {
     return ISOLATED_ROUTES.some(route =>

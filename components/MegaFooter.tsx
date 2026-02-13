@@ -45,6 +45,7 @@ const CITIES = [
 // COLONNE 3 — Ressources
 // ══════════════════════════════════════════════════════════════
 const RESOURCES = [
+    { title: "Outils SEO Gratuits", href: "/outils" },
     { title: "Blog SEO", href: "/blog" },
     { title: "Études de cas", href: "/etudes-de-cas" },
     { title: "FAQ", href: "/faq" },
