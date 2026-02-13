@@ -492,7 +492,7 @@ export default function ValentineClient() {
                             <h2 className="text-3xl font-light text-gray-800 mb-2">
                                 Notre année ensemble
                             </h2>
-                            <p className="text-rose-400 font-medium">Pauline & Indiana • 2024</p>
+                            <p className="text-rose-400 font-medium">Pauline & Indiana • 2025</p>
                         </div>
 
                         <div className="space-y-4">
