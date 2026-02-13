@@ -36,6 +36,9 @@ module.exports = {
         // Pages d'erreur
         '/404',
         '/500',
+
+        // Page privée Valentine
+        '/pour-pauline',
     ],
 
     // Robotstxt options optimisées
