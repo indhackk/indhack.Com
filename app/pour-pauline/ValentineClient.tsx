@@ -112,7 +112,7 @@ Bonne Saint-Valentin ma coquine.
 Ton coco, pour toujours. ❤️`;
 
 export default function ValentineClient() {
-    const [stage, setStage] = useState<"question" | "quiz" | "wrapped" | "message" | "photos">("question");
+    const [stage, setStage] = useState<"question" | "quiz" | "wrapped" | "message" | "montage" | "player">("question");
     const [noButtonPos, setNoButtonPos] = useState({ x: 0, y: 0 });
     const [quizIndex, setQuizIndex] = useState(0);
     const [score, setScore] = useState(0);
@@ -127,6 +127,7 @@ export default function ValentineClient() {
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
     const [currentTrack, setCurrentTrack] = useState(0);
+    const [montageEnded, setMontageEnded] = useState(false);
 
     // Bouton "Non" qui s'enfuit
     const handleNoHover = () => {
@@ -172,21 +173,53 @@ export default function ValentineClient() {
         } else if (stage === "message" && typedText.length >= LOVE_MESSAGE.length) {
             setShowConfetti(true);
             const timer = setTimeout(() => {
-                setStage("photos");
+                setStage("montage");
             }, 3000);
             return () => clearTimeout(timer);
         }
     }, [stage, typedText]);
 
-    // Photo slideshow
+    // Start montage with music
     useEffect(() => {
-        if (stage === "photos") {
+        if (stage === "montage" && audioRef.current && !isPlaying) {
+            setCurrentTrack(0);
+            audioRef.current.src = PLAYLIST[0].src;
+            audioRef.current.load();
+            audioRef.current.play().catch(() => {});
+            setIsPlaying(true);
+        }
+    }, [stage, isPlaying]);
+
+    // Photo montage slideshow - faster for cinematic feel
+    useEffect(() => {
+        if (stage === "montage") {
             const timer = setInterval(() => {
-                setCurrentPhoto((prev) => (prev + 1) % PHOTOS.length);
-            }, 3000);
+                setCurrentPhoto((prev) => {
+                    if (prev >= PHOTOS.length - 1) {
+                        return prev;
+                    }
+                    return prev + 1;
+                });
+            }, 4000);
             return () => clearInterval(timer);
         }
     }, [stage]);
+
+    // When track 1 ends, go to player stage
+    const handleTrack1Ended = () => {
+        if (stage === "montage") {
+            setMontageEnded(true);
+            setIsPlaying(false);
+            setCurrentTrack(1);
+            setCurrentTime(0);
+            setTimeout(() => {
+                setStage("player");
+            }, 1000);
+        } else {
+            // Normal next track behavior in player stage
+            nextTrack();
+        }
+    };
 
     // Music player handlers
     const togglePlay = () => {
@@ -255,12 +288,19 @@ export default function ValentineClient() {
         }
     };
 
-    const handleEnded = () => {
-        nextTrack();
+    const selectTrack = (index: number) => {
+        setCurrentTrack(index);
+        setCurrentTime(0);
+        if (audioRef.current) {
+            audioRef.current.src = PLAYLIST[index].src;
+            audioRef.current.load();
+            audioRef.current.play();
+            setIsPlaying(true);
+        }
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-rose-100 via-pink-50 to-rose-200 flex items-center justify-center p-4 pb-28 overflow-hidden relative">
+        <div className="min-h-screen bg-gradient-to-br from-rose-100 via-pink-50 to-rose-200 flex items-center justify-center p-4 overflow-hidden relative">
             {/* Elegant background pattern */}
             <div className="fixed inset-0 opacity-30 pointer-events-none">
                 <div className="absolute inset-0" style={{
@@ -270,29 +310,31 @@ export default function ValentineClient() {
             </div>
 
             {/* Floating hearts - more subtle */}
-            <div className="fixed inset-0 pointer-events-none overflow-hidden">
-                {[...Array(12)].map((_, i) => (
-                    <motion.div
-                        key={i}
-                        className="absolute text-2xl opacity-40"
-                        initial={{
-                            x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-                            y: (typeof window !== 'undefined' ? window.innerHeight : 800) + 50
-                        }}
-                        animate={{
-                            y: -100,
-                            x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-                        }}
-                        transition={{
-                            duration: 15 + Math.random() * 10,
-                            repeat: Infinity,
-                            delay: Math.random() * 8,
-                        }}
-                    >
-                        {["♥", "♡", "❤"][Math.floor(Math.random() * 3)]}
-                    </motion.div>
-                ))}
-            </div>
+            {stage !== "montage" && (
+                <div className="fixed inset-0 pointer-events-none overflow-hidden">
+                    {[...Array(12)].map((_, i) => (
+                        <motion.div
+                            key={i}
+                            className="absolute text-2xl opacity-40"
+                            initial={{
+                                x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
+                                y: (typeof window !== 'undefined' ? window.innerHeight : 800) + 50
+                            }}
+                            animate={{
+                                y: -100,
+                                x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
+                            }}
+                            transition={{
+                                duration: 15 + Math.random() * 10,
+                                repeat: Infinity,
+                                delay: Math.random() * 8,
+                            }}
+                        >
+                            {["♥", "♡", "❤"][Math.floor(Math.random() * 3)]}
+                        </motion.div>
+                    ))}
+                </div>
+            )}
 
             {/* Confetti */}
             {showConfetti && (
@@ -504,61 +546,296 @@ export default function ValentineClient() {
                     </motion.div>
                 )}
 
-                {/* STAGE 5: Photo Gallery */}
-                {stage === "photos" && (
+                {/* STAGE 5: Photo Montage with Track 1 */}
+                {stage === "montage" && (
                     <motion.div
-                        key="photos"
+                        key="montage"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="w-full max-w-3xl relative z-10"
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 bg-black z-50 flex items-center justify-center"
+                    >
+                        {/* Cinematic photo display */}
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={currentPhoto}
+                                initial={{ opacity: 0, scale: 1.1 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.95 }}
+                                transition={{ duration: 1.5, ease: "easeInOut" }}
+                                className="absolute inset-0"
+                            >
+                                <Image
+                                    src={PHOTOS[currentPhoto]}
+                                    alt="Notre moment"
+                                    fill
+                                    className="object-contain"
+                                    priority
+                                />
+                            </motion.div>
+                        </AnimatePresence>
+
+                        {/* Vignette overlay */}
+                        <div className="absolute inset-0 pointer-events-none" style={{
+                            background: "radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.4) 100%)"
+                        }} />
+
+                        {/* Now playing indicator */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 1 }}
+                            className="absolute bottom-8 left-8 right-8 flex items-center gap-4 bg-black/60 backdrop-blur-xl rounded-2xl p-4"
+                        >
+                            <div className="relative w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden">
+                                <Image
+                                    src={PLAYLIST[0].cover}
+                                    alt="Cover"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                            <div className="flex-1">
+                                <p className="text-white/60 text-xs uppercase tracking-wider">En écoute</p>
+                                <p className="text-white font-medium">{PLAYLIST[0].title}</p>
+                                <div className="flex items-center gap-2 mt-1">
+                                    <div className="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
+                                        <motion.div
+                                            className="h-full bg-rose-500"
+                                            style={{ width: `${(currentTime / (duration || 1)) * 100}%` }}
+                                        />
+                                    </div>
+                                    <span className="text-white/40 text-xs">{formatTime(currentTime)}</span>
+                                </div>
+                            </div>
+                            <div className="flex gap-2">
+                                {[...Array(3)].map((_, i) => (
+                                    <motion.div
+                                        key={i}
+                                        className="w-1 bg-rose-500 rounded-full"
+                                        animate={{ height: [12, 24, 12] }}
+                                        transition={{ duration: 0.5, repeat: Infinity, delay: i * 0.1 }}
+                                    />
+                                ))}
+                            </div>
+                        </motion.div>
+
+                        {/* Skip button */}
+                        <motion.button
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 3 }}
+                            onClick={() => {
+                                if (audioRef.current) audioRef.current.pause();
+                                setIsPlaying(false);
+                                setCurrentTrack(1);
+                                setStage("player");
+                            }}
+                            className="absolute top-8 right-8 text-white/40 hover:text-white text-sm transition-colors"
+                        >
+                            Passer →
+                        </motion.button>
+
+                        {/* Photo counter */}
+                        <div className="absolute top-8 left-8 text-white/40 text-sm">
+                            {currentPhoto + 1} / {PHOTOS.length}
+                        </div>
+                    </motion.div>
+                )}
+
+                {/* STAGE 6: Player Interface */}
+                {stage === "player" && (
+                    <motion.div
+                        key="player"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="w-full max-w-md relative z-10"
                     >
                         <div className="text-center mb-8">
-                            <h2 className="text-3xl font-light text-gray-800 mb-2">
-                                Nos plus beaux moments
+                            <motion.div
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                transition={{ type: "spring" }}
+                                className="text-6xl mb-4"
+                            >
+                                🎵
+                            </motion.div>
+                            <h2 className="text-2xl font-light text-gray-800 mb-2">
+                                Notre playlist
                             </h2>
-                            <p className="text-rose-400">Je t'aime ma bouclette ❤️</p>
+                            <p className="text-rose-400 text-sm">Les aventures de Coco & Coline</p>
                         </div>
 
-                        <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-black/5">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={currentPhoto}
-                                    initial={{ opacity: 0, scale: 1.1 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.95 }}
-                                    transition={{ duration: 0.7 }}
-                                    className="absolute inset-0"
-                                >
+                        {/* Current track display */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="bg-white/90 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/50 mb-6"
+                        >
+                            <div className="flex items-center gap-5 mb-6">
+                                <div className="relative w-24 h-24 rounded-2xl overflow-hidden shadow-xl flex-shrink-0">
                                     <Image
-                                        src={PHOTOS[currentPhoto]}
-                                        alt="Notre photo"
+                                        src={PLAYLIST[currentTrack].cover}
+                                        alt="Cover"
                                         fill
-                                        className="object-contain"
-                                        priority
+                                        className="object-cover"
                                     />
-                                </motion.div>
-                            </AnimatePresence>
-                        </div>
+                                    {isPlaying && (
+                                        <motion.div
+                                            className="absolute inset-0 bg-black/20 flex items-center justify-center"
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                        >
+                                            <div className="flex gap-1">
+                                                {[...Array(3)].map((_, i) => (
+                                                    <motion.div
+                                                        key={i}
+                                                        className="w-1 bg-white rounded-full"
+                                                        animate={{ height: [8, 20, 8] }}
+                                                        transition={{ duration: 0.4, repeat: Infinity, delay: i * 0.1 }}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </div>
+                                <div className="flex-1">
+                                    <p className="text-gray-800 font-semibold text-lg">
+                                        {PLAYLIST[currentTrack].title}
+                                    </p>
+                                    <p className="text-rose-400 text-sm">
+                                        Coco & Coline
+                                    </p>
+                                </div>
+                            </div>
 
-                        <div className="flex justify-center gap-1.5 mt-6 flex-wrap">
-                            {PHOTOS.map((_, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => setCurrentPhoto(i)}
-                                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                                        i === currentPhoto ? "bg-rose-500 w-6" : "bg-rose-200 hover:bg-rose-300"
-                                    }`}
+                            {/* Progress bar */}
+                            <div className="mb-4">
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max={duration || 100}
+                                    value={currentTime}
+                                    onChange={handleSeek}
+                                    className="w-full h-2 bg-rose-100 rounded-full appearance-none cursor-pointer
+                                        [&::-webkit-slider-thumb]:appearance-none
+                                        [&::-webkit-slider-thumb]:w-4
+                                        [&::-webkit-slider-thumb]:h-4
+                                        [&::-webkit-slider-thumb]:bg-rose-500
+                                        [&::-webkit-slider-thumb]:rounded-full
+                                        [&::-webkit-slider-thumb]:shadow-lg
+                                        [&::-webkit-slider-thumb]:hover:scale-110
+                                        [&::-webkit-slider-thumb]:transition-transform"
+                                    style={{
+                                        background: `linear-gradient(to right, #f43f5e ${(currentTime / (duration || 1)) * 100}%, #fce7f3 ${(currentTime / (duration || 1)) * 100}%)`
+                                    }}
                                 />
+                                <div className="flex justify-between text-xs text-gray-400 mt-1">
+                                    <span>{formatTime(currentTime)}</span>
+                                    <span>{formatTime(duration)}</span>
+                                </div>
+                            </div>
+
+                            {/* Controls */}
+                            <div className="flex items-center justify-center gap-6">
+                                <motion.button
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    onClick={prevTrack}
+                                    className="w-12 h-12 flex items-center justify-center text-gray-400 hover:text-rose-500 transition-colors"
+                                >
+                                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
+                                    </svg>
+                                </motion.button>
+
+                                <motion.button
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    onClick={togglePlay}
+                                    className="w-16 h-16 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full flex items-center justify-center shadow-xl"
+                                >
+                                    {isPlaying ? (
+                                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+                                        </svg>
+                                    ) : (
+                                        <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                    )}
+                                </motion.button>
+
+                                <motion.button
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    onClick={nextTrack}
+                                    className="w-12 h-12 flex items-center justify-center text-gray-400 hover:text-rose-500 transition-colors"
+                                >
+                                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+                                    </svg>
+                                </motion.button>
+                            </div>
+                        </motion.div>
+
+                        {/* Playlist */}
+                        <div className="bg-white/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/50">
+                            <p className="text-gray-500 text-xs uppercase tracking-wider px-4 py-3 border-b border-rose-100">
+                                Playlist
+                            </p>
+                            {PLAYLIST.map((track, i) => (
+                                <motion.button
+                                    key={i}
+                                    whileHover={{ backgroundColor: "rgba(244,63,94,0.05)" }}
+                                    onClick={() => selectTrack(i)}
+                                    className={`w-full flex items-center gap-4 p-4 transition-colors ${
+                                        i === currentTrack ? "bg-rose-50" : ""
+                                    } ${i < PLAYLIST.length - 1 ? "border-b border-rose-50" : ""}`}
+                                >
+                                    <div className="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+                                        <Image
+                                            src={track.cover}
+                                            alt={track.title}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        {i === currentTrack && isPlaying && (
+                                            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                                <div className="flex gap-0.5">
+                                                    {[...Array(3)].map((_, j) => (
+                                                        <motion.div
+                                                            key={j}
+                                                            className="w-0.5 bg-white rounded-full"
+                                                            animate={{ height: [4, 12, 4] }}
+                                                            transition={{ duration: 0.4, repeat: Infinity, delay: j * 0.1 }}
+                                                        />
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                    <div className="flex-1 text-left">
+                                        <p className={`font-medium ${i === currentTrack ? "text-rose-500" : "text-gray-700"}`}>
+                                            {track.title}
+                                        </p>
+                                        <p className="text-gray-400 text-xs">Coco & Coline</p>
+                                    </div>
+                                    {i === currentTrack && (
+                                        <span className="text-rose-400 text-xs">En cours</span>
+                                    )}
+                                </motion.button>
                             ))}
                         </div>
 
+                        {/* Final message */}
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 1 }}
-                            className="text-center mt-10 text-2xl font-light text-rose-500"
+                            className="text-center mt-8 text-rose-400 font-light"
                         >
-                            Bonne Saint-Valentin mon amour 💕
+                            Je t'aime ma bouclette ❤️
                         </motion.p>
                     </motion.div>
                 )}
@@ -570,118 +847,8 @@ export default function ValentineClient() {
                 src={PLAYLIST[currentTrack].src}
                 onTimeUpdate={handleTimeUpdate}
                 onLoadedMetadata={handleLoadedMetadata}
-                onEnded={handleEnded}
+                onEnded={handleTrack1Ended}
             />
-
-            {/* Elegant music player - always visible, no auto-play */}
-            <motion.div
-                initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1, duration: 0.6 }}
-                className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-xl shadow-2xl z-50 border-t border-rose-100"
-            >
-                <div className="max-w-2xl mx-auto px-6 py-4">
-                    <div className="flex items-center gap-5">
-                        {/* Album art */}
-                        <div className="relative w-16 h-16 flex-shrink-0 rounded-xl overflow-hidden shadow-lg">
-                            <Image
-                                src={PLAYLIST[currentTrack].cover}
-                                alt="Album cover"
-                                fill
-                                className="object-cover"
-                            />
-                            {isPlaying && (
-                                <motion.div
-                                    className="absolute inset-0 bg-black/10"
-                                    animate={{ opacity: [0.1, 0.2, 0.1] }}
-                                    transition={{ duration: 1, repeat: Infinity }}
-                                />
-                            )}
-                        </div>
-
-                        {/* Track info & progress */}
-                        <div className="flex-1 min-w-0">
-                            <p className="text-gray-800 font-medium text-sm truncate">
-                                {PLAYLIST[currentTrack].title}
-                            </p>
-                            <p className="text-rose-400 text-xs mb-2">
-                                Coco & Coline • {currentTrack + 1}/{PLAYLIST.length}
-                            </p>
-
-                            {/* Progress bar */}
-                            <div className="flex items-center gap-3">
-                                <span className="text-gray-400 text-[10px] w-8 font-mono">
-                                    {formatTime(currentTime)}
-                                </span>
-                                <input
-                                    type="range"
-                                    min="0"
-                                    max={duration || 100}
-                                    value={currentTime}
-                                    onChange={handleSeek}
-                                    className="flex-1 h-1 bg-rose-100 rounded-full appearance-none cursor-pointer
-                                        [&::-webkit-slider-thumb]:appearance-none
-                                        [&::-webkit-slider-thumb]:w-3
-                                        [&::-webkit-slider-thumb]:h-3
-                                        [&::-webkit-slider-thumb]:bg-rose-500
-                                        [&::-webkit-slider-thumb]:rounded-full
-                                        [&::-webkit-slider-thumb]:shadow-md
-                                        [&::-webkit-slider-thumb]:hover:scale-125
-                                        [&::-webkit-slider-thumb]:transition-transform"
-                                    style={{
-                                        background: `linear-gradient(to right, #f43f5e ${(currentTime / (duration || 1)) * 100}%, #fce7f3 ${(currentTime / (duration || 1)) * 100}%)`
-                                    }}
-                                />
-                                <span className="text-gray-400 text-[10px] w-8 text-right font-mono">
-                                    {formatTime(duration)}
-                                </span>
-                            </div>
-                        </div>
-
-                        {/* Controls */}
-                        <div className="flex items-center gap-1">
-                            <motion.button
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
-                                onClick={prevTrack}
-                                className="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-rose-500 transition-colors"
-                            >
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
-                                </svg>
-                            </motion.button>
-
-                            <motion.button
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
-                                onClick={togglePlay}
-                                className="w-14 h-14 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full flex items-center justify-center shadow-xl"
-                            >
-                                {isPlaying ? (
-                                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
-                                    </svg>
-                                ) : (
-                                    <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                )}
-                            </motion.button>
-
-                            <motion.button
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}
-                                onClick={nextTrack}
-                                className="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-rose-500 transition-colors"
-                            >
-                                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
-                                </svg>
-                            </motion.button>
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
         </div>
     );
 }
