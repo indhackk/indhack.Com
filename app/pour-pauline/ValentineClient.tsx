@@ -4,6 +4,20 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
+// Playlist avec pochettes photos
+const PLAYLIST = [
+    {
+        title: "Les aventures de COCO & COLINE #1",
+        src: "/valentine-photos/coco-coline.mp3",
+        cover: "/valentine-photos/coco-coline-cover-1.jpg",
+    },
+    {
+        title: "Les aventures de COCO & COLINE #2",
+        src: "/valentine-photos/coco-coline-2.mp3",
+        cover: "/valentine-photos/coco-coline-cover-2.jpg",
+    },
+];
+
 // Photos disponibles
 const PHOTOS = [
     "/valentine-photos/IMG_0794.jpg",
@@ -108,6 +122,13 @@ export default function ValentineClient() {
     const [currentPhoto, setCurrentPhoto] = useState(0);
     const audioRef = useRef<HTMLAudioElement>(null);
 
+    // Music player state
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [currentTime, setCurrentTime] = useState(0);
+    const [duration, setDuration] = useState(0);
+    const [showPlayer, setShowPlayer] = useState(false);
+    const [currentTrack, setCurrentTrack] = useState(0);
+
     // Bouton "Non" qui s'enfuit
     const handleNoHover = () => {
         const x = Math.random() * 200 - 100;
@@ -167,6 +188,90 @@ export default function ValentineClient() {
             return () => clearInterval(timer);
         }
     }, [stage]);
+
+    // Music player handlers
+    const togglePlay = () => {
+        if (audioRef.current) {
+            if (isPlaying) {
+                audioRef.current.pause();
+            } else {
+                audioRef.current.play();
+            }
+            setIsPlaying(!isPlaying);
+        }
+    };
+
+    const handleTimeUpdate = () => {
+        if (audioRef.current) {
+            setCurrentTime(audioRef.current.currentTime);
+        }
+    };
+
+    const handleLoadedMetadata = () => {
+        if (audioRef.current) {
+            setDuration(audioRef.current.duration);
+        }
+    };
+
+    const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const time = parseFloat(e.target.value);
+        if (audioRef.current) {
+            audioRef.current.currentTime = time;
+            setCurrentTime(time);
+        }
+    };
+
+    const formatTime = (time: number) => {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
+        return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+    };
+
+    const nextTrack = () => {
+        const next = (currentTrack + 1) % PLAYLIST.length;
+        setCurrentTrack(next);
+        setCurrentTime(0);
+        if (audioRef.current) {
+            audioRef.current.src = PLAYLIST[next].src;
+            audioRef.current.load();
+            if (isPlaying) audioRef.current.play();
+        }
+    };
+
+    const prevTrack = () => {
+        // Si on est à plus de 3 secondes, revenir au début de la piste
+        if (currentTime > 3) {
+            if (audioRef.current) {
+                audioRef.current.currentTime = 0;
+                setCurrentTime(0);
+            }
+        } else {
+            const prev = (currentTrack - 1 + PLAYLIST.length) % PLAYLIST.length;
+            setCurrentTrack(prev);
+            setCurrentTime(0);
+            if (audioRef.current) {
+                audioRef.current.src = PLAYLIST[prev].src;
+                audioRef.current.load();
+                if (isPlaying) audioRef.current.play();
+            }
+        }
+    };
+
+    // Auto-play next track when current ends
+    const handleEnded = () => {
+        nextTrack();
+    };
+
+    // Show player when quiz starts
+    useEffect(() => {
+        if (stage !== "question" && !showPlayer) {
+            setShowPlayer(true);
+            if (audioRef.current) {
+                audioRef.current.play().catch(() => {});
+                setIsPlaying(true);
+            }
+        }
+    }, [stage, showPlayer]);
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-pink-100 via-red-50 to-pink-200 flex items-center justify-center p-4 overflow-hidden">
@@ -429,8 +534,131 @@ export default function ValentineClient() {
                 )}
             </AnimatePresence>
 
-            {/* Audio player (invisible) */}
-            <audio ref={audioRef} loop />
+            {/* Hidden audio element */}
+            <audio
+                ref={audioRef}
+                src={PLAYLIST[currentTrack].src}
+                onTimeUpdate={handleTimeUpdate}
+                onLoadedMetadata={handleLoadedMetadata}
+                onEnded={handleEnded}
+            />
+
+            {/* Spotify-style music player */}
+            <AnimatePresence>
+                {showPlayer && (
+                    <motion.div
+                        initial={{ y: 100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: 100, opacity: 0 }}
+                        className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-[#1DB954] via-[#1ed760] to-[#1DB954] shadow-2xl z-50"
+                    >
+                        <div className="max-w-4xl mx-auto px-4 py-3">
+                            <div className="flex items-center gap-4">
+                                {/* Album art with photo */}
+                                <div className="relative w-14 h-14 flex-shrink-0">
+                                    <Image
+                                        src={PLAYLIST[currentTrack].cover}
+                                        alt="Album cover"
+                                        fill
+                                        className="object-cover rounded-lg shadow-lg"
+                                    />
+                                    {isPlaying && (
+                                        <motion.div
+                                            className="absolute inset-0 rounded-lg border-2 border-white/50"
+                                            animate={{ scale: [1, 1.05, 1] }}
+                                            transition={{ duration: 1, repeat: Infinity }}
+                                        />
+                                    )}
+                                </div>
+
+                                {/* Track info */}
+                                <div className="flex-1 min-w-0">
+                                    <p className="text-white font-bold text-sm truncate">
+                                        {PLAYLIST[currentTrack].title}
+                                    </p>
+                                    <p className="text-white/70 text-xs">
+                                        Pauline & Indiana • {currentTrack + 1}/{PLAYLIST.length}
+                                    </p>
+
+                                    {/* Progress bar */}
+                                    <div className="flex items-center gap-2 mt-1">
+                                        <span className="text-white/60 text-[10px] w-8">
+                                            {formatTime(currentTime)}
+                                        </span>
+                                        <input
+                                            type="range"
+                                            min="0"
+                                            max={duration || 100}
+                                            value={currentTime}
+                                            onChange={handleSeek}
+                                            className="flex-1 h-1 bg-white/30 rounded-full appearance-none cursor-pointer
+                                                [&::-webkit-slider-thumb]:appearance-none
+                                                [&::-webkit-slider-thumb]:w-3
+                                                [&::-webkit-slider-thumb]:h-3
+                                                [&::-webkit-slider-thumb]:bg-white
+                                                [&::-webkit-slider-thumb]:rounded-full
+                                                [&::-webkit-slider-thumb]:shadow-md
+                                                [&::-webkit-slider-thumb]:hover:scale-110
+                                                [&::-webkit-slider-thumb]:transition-transform"
+                                            style={{
+                                                background: `linear-gradient(to right, white ${(currentTime / (duration || 1)) * 100}%, rgba(255,255,255,0.3) ${(currentTime / (duration || 1)) * 100}%)`
+                                            }}
+                                        />
+                                        <span className="text-white/60 text-[10px] w-8 text-right">
+                                            {formatTime(duration)}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {/* Controls */}
+                                <div className="flex items-center gap-2">
+                                    {/* Previous */}
+                                    <motion.button
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        onClick={prevTrack}
+                                        className="w-8 h-8 flex items-center justify-center text-white/80 hover:text-white"
+                                    >
+                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
+                                        </svg>
+                                    </motion.button>
+
+                                    {/* Play/Pause */}
+                                    <motion.button
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        onClick={togglePlay}
+                                        className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg"
+                                    >
+                                        {isPlaying ? (
+                                            <svg className="w-5 h-5 text-[#1DB954]" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+                                            </svg>
+                                        ) : (
+                                            <svg className="w-5 h-5 text-[#1DB954] ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M8 5v14l11-7z" />
+                                            </svg>
+                                        )}
+                                    </motion.button>
+
+                                    {/* Next */}
+                                    <motion.button
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        onClick={nextTrack}
+                                        className="w-8 h-8 flex items-center justify-center text-white/80 hover:text-white"
+                                    >
+                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+                                        </svg>
+                                    </motion.button>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }
