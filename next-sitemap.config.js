@@ -82,8 +82,16 @@ module.exports = {
             '/consultant-seo-strasbourg', '/consultant-seo-grenoble', '/consultant-seo-boulogne-billancourt'
         ];
 
-        // Pages outils (valeur ajoutée)
-        const toolPages = ['/tools/gmb-autopilot'];
+        // Pages outils SEO (valeur ajoutée forte)
+        const toolPages = [
+            '/outils',
+            '/outils/testeur-visibilite-ia',
+            '/outils/audit-seo-gratuit',
+            '/outils/generateur-robots-txt',
+            '/outils/generateur-schema-json-ld',
+            '/outils/simulateur-visibilite-locale',
+            '/tools/gmb-autopilot'
+        ];
 
         let priority = config.priority;
         let changefreq = config.changefreq;
@@ -102,7 +110,8 @@ module.exports = {
             priority = 0.8;
             changefreq = 'weekly';
         } else if (toolPages.includes(path)) {
-            priority = 0.85;
+            // Outils SEO gratuits - haute priorité
+            priority = 0.9;
             changefreq = 'weekly';
         } else if (path === '/contact' || path === '/a-propos') {
             priority = 0.6;

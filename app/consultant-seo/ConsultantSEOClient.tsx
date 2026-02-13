@@ -561,6 +561,12 @@ export default function ConsultantSEOClient() {
                                 contact@indhack.com
                             </span>
                         </div>
+
+                        <div className="mt-8 pt-6 border-t border-white/10">
+                            <Link href="/outils" className="text-white/50 hover:text-sauge transition-colors text-sm">
+                                Testez d'abord nos <span className="underline">outils SEO gratuits</span> →
+                            </Link>
+                        </div>
                     </motion.div>
                 </div>
             </section>

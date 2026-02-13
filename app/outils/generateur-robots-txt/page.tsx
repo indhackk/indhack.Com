@@ -37,7 +37,7 @@ const RELATED_TOOLS = [
         description: "Analysez votre site en 1 clic",
         href: "/outils/audit-seo-gratuit",
         icon: Search,
-        status: "coming" as const,
+        status: "live" as const,
     },
 ];
 
@@ -166,6 +166,77 @@ export default function GenerateurRobotsTxtPage() {
                 <section className="py-12">
                     <div className="container mx-auto px-4">
                         <RobotsGenerator />
+                    </div>
+                </section>
+
+                {/* IA Crawlers Explained */}
+                <section className="py-16">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-3xl font-heading font-bold text-ink mb-8 text-center">
+                                Comprendre les crawlers IA en 2026
+                            </h2>
+
+                            <div className="prose prose-lg max-w-none text-soft mb-12">
+                                <p>
+                                    En 2026, votre fichier <code className="bg-gray-100 px-2 py-1 rounded">robots.txt</code> ne gère plus seulement Googlebot. <strong className="text-ink">Une dizaine de crawlers IA</strong> parcourent le web pour alimenter ChatGPT, Gemini, Perplexity et d'autres. Chacun a un rôle différent.
+                                </p>
+                                <p>
+                                    La bonne stratégie dépend de vos objectifs : voulez-vous <strong className="text-ink">être cité par les IA</strong> (excellent pour la visibilité) ou <strong className="text-ink">protéger votre contenu</strong> de l'entraînement des modèles ?
+                                </p>
+                            </div>
+
+                            <div className="overflow-x-auto">
+                                <table className="w-full border-collapse bg-white rounded-xl overflow-hidden">
+                                    <thead>
+                                        <tr className="bg-gray-50">
+                                            <th className="px-6 py-4 text-left font-bold text-ink">Crawler</th>
+                                            <th className="px-6 py-4 text-left font-bold text-ink">Éditeur</th>
+                                            <th className="px-6 py-4 text-left font-bold text-ink">Usage</th>
+                                            <th className="px-6 py-4 text-left font-bold text-ink">Recommandation</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-line">
+                                        <tr>
+                                            <td className="px-6 py-4 font-medium text-ink">GPTBot</td>
+                                            <td className="px-6 py-4 text-soft">OpenAI</td>
+                                            <td className="px-6 py-4 text-soft">Entraînement des modèles</td>
+                                            <td className="px-6 py-4"><span className="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs font-medium">À bloquer si protection souhaitée</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td className="px-6 py-4 font-medium text-ink">ChatGPT-User</td>
+                                            <td className="px-6 py-4 text-soft">OpenAI</td>
+                                            <td className="px-6 py-4 text-soft">Navigation temps réel</td>
+                                            <td className="px-6 py-4"><span className="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs font-medium">Autoriser pour être cité</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td className="px-6 py-4 font-medium text-ink">Claude-Web</td>
+                                            <td className="px-6 py-4 text-soft">Anthropic</td>
+                                            <td className="px-6 py-4 text-soft">Navigation Claude</td>
+                                            <td className="px-6 py-4"><span className="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs font-medium">Autoriser</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td className="px-6 py-4 font-medium text-ink">PerplexityBot</td>
+                                            <td className="px-6 py-4 text-soft">Perplexity</td>
+                                            <td className="px-6 py-4 text-soft">Moteur de recherche IA</td>
+                                            <td className="px-6 py-4"><span className="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs font-medium">Autoriser</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td className="px-6 py-4 font-medium text-ink">Google-Extended</td>
+                                            <td className="px-6 py-4 text-soft">Google</td>
+                                            <td className="px-6 py-4 text-soft">Entraînement Gemini</td>
+                                            <td className="px-6 py-4"><span className="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs font-medium">À bloquer si protection souhaitée</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div className="mt-8 bg-cyan-50 rounded-2xl p-6 border border-cyan-100">
+                                <p className="text-soft">
+                                    <strong className="text-ink">Notre recommandation :</strong> Autorisez les crawlers de navigation (ChatGPT-User, Claude-Web, PerplexityBot) pour être cité dans les réponses. Bloquez les crawlers d'entraînement (GPTBot, Google-Extended) si vous souhaitez protéger votre contenu original.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </section>
 

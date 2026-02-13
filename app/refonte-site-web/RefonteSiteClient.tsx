@@ -151,7 +151,7 @@ export default function RefonteSiteClient() {
                         <div className="lg:w-1/2 relative">
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="/images/seo-dashboard.png"
+                                    src="/images/seo-dashboard.webp"
                                     alt="Monitoring SEO"
                                     width={800}
                                     height={600}

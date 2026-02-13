@@ -1,7 +1,7 @@
 ---
 title: "SEO vs SEA : que choisir pour votre entreprise ?"
 description: "Référencement naturel ou publicité Google Ads ? Comparatif complet SEO vs SEA : coûts, délais, ROI. Guide pour faire le bon choix selon votre situation."
-date: "2026-01-20"
+date: "2026-02-10"
 category: "Stratégie"
 image: "/images/blog/seo-vs-sea.jpg"
 author: "Indiana Aflalo"
@@ -9,6 +9,8 @@ keywords: ["SEO vs SEA", "référencement naturel vs payant", "Google Ads vs SEO
 ---
 
 SEO ou SEA ? Référencement naturel ou publicité Google Ads ? C'est LA question que me posent 90% de mes prospects. Et la réponse n'est pas "l'un ou l'autre" — c'est souvent **les deux, mais pas au même moment**.
+
+> **Nouveau en 2026 :** L'équation change avec l'IA. Le SEO inclut désormais le **GEO** (visibilité sur ChatGPT/Perplexity), tandis que le SEA reste limité à Google. [Testez votre visibilité IA gratuitement →](/outils/testeur-visibilite-ia)
 
 En tant que consultante SEO chez [INDHACK](/), je vous explique les **vraies différences** et comment choisir selon votre situation.
 

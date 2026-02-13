@@ -70,7 +70,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
             "url": "https://indhack.com",
             "telephone": "+33661139748",
             "priceRange": "€€",
-            "image": "https://indhack.com/images/logo-indhack.png",
+            "image": "https://indhack.com/images/logo-indhack.webp",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": city,

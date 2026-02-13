@@ -10,6 +10,8 @@ keywords: ["consultant SEO", "pourquoi consultant SEO", "expert référencement 
 
 Vous avez lu quelques articles sur le SEO. Vous avez installé Yoast. Vous avez même écrit des "articles optimisés". Et pourtant... votre **site reste invisible sur Google**. C'est normal. Le **référencement naturel** en 2026, ce n'est plus une affaire d'amateurs. C'est là qu'intervient un **[expert en visibilité organique](/consultant-seo)**.
 
+> **Faites le test vous-même :** [Audit SEO Gratuit — Score /100 en 30 secondes](/outils/audit-seo-gratuit) — Découvrez en 1 clic les problèmes qui plombent votre visibilité.
+
 ## Qu'est-ce qu'un consultant SEO exactement ?
 
 Un **consultant SEO** est un expert en **référencement naturel** qui aide les entreprises à améliorer leur visibilité sur les moteurs de recherche. Contrairement à une agence classique, le consultant travaille en direct avec vous, comme un partenaire intégré à votre équipe.

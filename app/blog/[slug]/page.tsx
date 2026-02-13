@@ -124,7 +124,7 @@ export default function BlogPostPage({ params }: PageProps) {
                                 "url": "https://indhack.com",
                                 "logo": {
                                     "@type": "ImageObject",
-                                    "url": "https://indhack.com/images/logo-indhack.png",
+                                    "url": "https://indhack.com/images/logo-indhack.webp",
                                     "width": 200,
                                     "height": 60
                                 }

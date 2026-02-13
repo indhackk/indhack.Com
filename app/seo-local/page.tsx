@@ -229,6 +229,27 @@ export default function SeoLocalPage() {
                 </div>
             </section>
 
+            {/* Outil gratuit - Maillage */}
+            <section className="py-12 bg-sauge/5 border-y border-sauge/10">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-3xl mx-auto text-center">
+                        <p className="text-sauge font-bold text-sm uppercase tracking-wider mb-3">Outil Gratuit</p>
+                        <h2 className="text-2xl font-heading font-bold text-ink mb-4">
+                            Qui domine votre ville ?
+                        </h2>
+                        <p className="text-soft mb-6">
+                            Découvrez en temps réel qui sont les leaders SEO dans votre secteur et votre ville.
+                        </p>
+                        <Link href="/outils/simulateur-visibilite-locale" className="inline-flex items-center gap-2 bg-sauge text-white px-6 py-3 rounded-xl font-semibold hover:bg-ink transition-all">
+                            Lancer le simulateur <ArrowRight className="w-4 h-4" />
+                        </Link>
+                        <p className="text-sm text-soft mt-4">
+                            <Link href="/outils" className="text-sauge hover:underline">Voir tous nos outils SEO gratuits →</Link>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
             {/* CTA */}
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4 max-w-3xl text-center">

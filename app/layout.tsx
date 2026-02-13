@@ -85,11 +85,11 @@ const organizationSchema = {
     "url": "https://indhack.com",
     "logo": {
         "@type": "ImageObject",
-        "url": "https://indhack.com/images/logo-indhack.png",
+        "url": "https://indhack.com/images/logo-indhack.webp",
         "width": 512,
         "height": 512
     },
-    "image": "https://indhack.com/images/logo-indhack.png",
+    "image": "https://indhack.com/images/logo-indhack.webp",
     "description": "Consultante SEO et experte en acquisition digitale. Accompagnement personnalisé pour PME et startups : audit SEO, référencement naturel, création de sites web optimisés.",
     "founder": {
         "@type": "Person",

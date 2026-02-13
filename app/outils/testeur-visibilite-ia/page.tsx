@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { TesteurVisibiliteIA } from "./TesteurVisibiliteIA";
-import { ArrowRight, Bot, Shield, Code2, FileCode, Search, Sparkles } from "lucide-react";
+import { ArrowRight, Bot, Shield, Code2, FileCode, Search, Sparkles, TrendingUp, AlertTriangle, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Testeur Visibilité IA Gratuit — ChatGPT, Perplexity, Claude | INDHACK",
@@ -62,6 +62,25 @@ const FAQ_ITEMS = [
         question: "Pourquoi bloquer certains crawlers IA ?",
         answer: "Vous pouvez choisir de bloquer GPTBot (entraînement) pour protéger votre contenu tout en autorisant ChatGPT-User (navigation) pour rester citable. Google-Extended contrôle l'entraînement de Gemini. Notre générateur robots.txt vous aide à configurer ces options selon votre stratégie."
     },
+    {
+        question: "ChatGPT peut-il citer mon site même si je bloque GPTBot ?",
+        answer: "Oui, et c'est crucial de comprendre la distinction. GPTBot sert à l'entraînement des modèles, tandis que ChatGPT-User est utilisé quand ChatGPT navigue sur le web en temps réel pour répondre aux utilisateurs. Vous pouvez bloquer le premier et autoriser le second pour protéger votre contenu tout en restant citable."
+    },
+    {
+        question: "Quelle différence entre SEO et GEO ?",
+        answer: "Le SEO vise à apparaître dans les liens bleus de Google. Le GEO vise à être cité comme source dans les réponses générées par les IA. Les deux sont complémentaires : un bon SEO renforce généralement le GEO, mais des optimisations spécifiques (schema JSON-LD, format Q&A, signaux E-E-A-T) sont nécessaires pour maximiser la visibilité IA."
+    },
+    {
+        question: "Les IA citent-elles vraiment leurs sources ?",
+        answer: "Oui, de plus en plus. Perplexity affiche systématiquement les sources. ChatGPT avec browsing cite les sites consultés. Gemini intègre des liens vers les sources. Être cité augmente votre trafic et renforce votre autorité. C'est pourquoi l'optimisation GEO devient stratégique."
+    },
+];
+
+const STATS = [
+    { value: "40%", label: "des 18-34 ans utilisent ChatGPT pour rechercher" },
+    { value: "65%", label: "font confiance aux réponses des IA" },
+    { value: "+900%", label: "croissance des requêtes 'selon ChatGPT'" },
+    { value: "8", label: "crawlers IA analysés par notre outil" },
 ];
 
 export default function TesteurVisibiliteIAPage() {
@@ -174,6 +193,127 @@ export default function TesteurVisibiliteIAPage() {
                 <section className="py-12">
                     <div className="container mx-auto px-4">
                         <TesteurVisibiliteIA />
+                    </div>
+                </section>
+
+                {/* Stats Section */}
+                <section className="py-12 bg-violet-900">
+                    <div className="container mx-auto px-4">
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                            {STATS.map((stat) => (
+                                <div key={stat.label} className="text-center">
+                                    <div className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">
+                                        {stat.value}
+                                    </div>
+                                    <div className="text-violet-200 text-sm">
+                                        {stat.label}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Why AI Visibility Matters */}
+                <section className="py-16 bg-white">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-3xl font-heading font-bold text-ink mb-8 text-center">
+                                Pourquoi la visibilité IA est cruciale en 2026
+                            </h2>
+
+                            <div className="prose prose-lg max-w-none text-soft mb-12">
+                                <p>
+                                    <strong className="text-ink">Le SEO seul ne suffit plus.</strong> En 2026, une part croissante de vos clients potentiels ne tapent plus de requêtes dans Google — ils posent des questions à <strong className="text-ink">ChatGPT</strong>, <strong className="text-ink">Perplexity</strong> ou <strong className="text-ink">Gemini</strong>.
+                                </p>
+                                <p>
+                                    Quand une IA répond à une question comme <em>"Quel consultant SEO recommandes-tu à Nice ?"</em> ou <em>"Comment optimiser son site pour Google ?"</em>, elle cite des sources. <strong className="text-ink">Si votre site n'est pas visible par ces IA, vous n'existez pas</strong> pour cette nouvelle génération d'utilisateurs.
+                                </p>
+                                <p>
+                                    C'est là qu'intervient le <strong className="text-ink">GEO (Generative Engine Optimization)</strong> : l'ensemble des techniques pour être cité par les moteurs de recherche IA. Notre outil est le <strong className="text-ink">premier en France</strong> à analyser gratuitement vos signaux GEO.
+                                </p>
+                            </div>
+
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div className="bg-red-50 rounded-2xl p-6 border border-red-100">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <AlertTriangle className="w-6 h-6 text-red-500" />
+                                        <h3 className="font-bold text-ink">Si vous ignorez le GEO</h3>
+                                    </div>
+                                    <ul className="space-y-2 text-sm text-soft">
+                                        <li>• Invisible dans les réponses ChatGPT et Perplexity</li>
+                                        <li>• Perte de trafic qualifié vers vos concurrents</li>
+                                        <li>• Contenu potentiellement utilisé sans citation</li>
+                                        <li>• Retard stratégique difficile à rattraper</li>
+                                    </ul>
+                                </div>
+                                <div className="bg-emerald-50 rounded-2xl p-6 border border-emerald-100">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <CheckCircle2 className="w-6 h-6 text-emerald-500" />
+                                        <h3 className="font-bold text-ink">En optimisant pour le GEO</h3>
+                                    </div>
+                                    <ul className="space-y-2 text-sm text-soft">
+                                        <li>• Cité comme source dans les réponses IA</li>
+                                        <li>• Nouveau canal d'acquisition de trafic</li>
+                                        <li>• Renforcement de votre autorité d'expert</li>
+                                        <li>• Avantage concurrentiel durable</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* How It Works */}
+                <section className="py-16">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-3xl font-heading font-bold text-ink mb-8 text-center">
+                                Comment fonctionne notre testeur
+                            </h2>
+
+                            <div className="grid md:grid-cols-3 gap-8">
+                                <div className="text-center">
+                                    <div className="w-12 h-12 rounded-full bg-violet-100 text-violet-600 font-bold text-xl flex items-center justify-center mx-auto mb-4">
+                                        1
+                                    </div>
+                                    <h3 className="font-bold text-ink mb-2">Analyse robots.txt</h3>
+                                    <p className="text-sm text-soft">
+                                        On vérifie si les 8 crawlers IA majeurs (GPTBot, Claude-Web, PerplexityBot...) sont autorisés à accéder à votre site.
+                                    </p>
+                                </div>
+                                <div className="text-center">
+                                    <div className="w-12 h-12 rounded-full bg-violet-100 text-violet-600 font-bold text-xl flex items-center justify-center mx-auto mb-4">
+                                        2
+                                    </div>
+                                    <h3 className="font-bold text-ink mb-2">Scan des signaux GEO</h3>
+                                    <p className="text-sm text-soft">
+                                        On analyse vos données structurées (JSON-LD), votre format de contenu (FAQ, listes) et vos signaux E-E-A-T.
+                                    </p>
+                                </div>
+                                <div className="text-center">
+                                    <div className="w-12 h-12 rounded-full bg-violet-100 text-violet-600 font-bold text-xl flex items-center justify-center mx-auto mb-4">
+                                        3
+                                    </div>
+                                    <h3 className="font-bold text-ink mb-2">Score et recommandations</h3>
+                                    <p className="text-sm text-soft">
+                                        Vous recevez un score /100 avec des actions concrètes pour améliorer votre visibilité auprès des IA.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="mt-12 bg-violet-50 rounded-2xl p-8 border border-violet-100">
+                                <div className="flex items-start gap-4">
+                                    <TrendingUp className="w-8 h-8 text-violet-500 flex-shrink-0 mt-1" />
+                                    <div>
+                                        <h3 className="font-bold text-ink mb-2">Pourquoi notre outil est unique</h3>
+                                        <p className="text-soft">
+                                            La plupart des outils SEO ignorent complètement la visibilité IA. Les quelques outils qui existent sont payants et souvent en anglais. <strong className="text-ink">Notre testeur est le premier outil français gratuit</strong> qui combine analyse SEO classique et analyse GEO. Nous l'utilisons nous-mêmes pour nos clients chez <Link href="/" className="text-violet-600 hover:underline">INDHACK</Link>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 

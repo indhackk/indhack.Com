@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { AuditSEO } from "./AuditSEO";
-import { ArrowRight, Search, Bot, Code2, FileCode, Gauge } from "lucide-react";
+import { ArrowRight, Search, Bot, Code2, FileCode, Gauge, TrendingUp, Zap, Target } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Audit SEO Gratuit en 1 Clic — Score /100 | INDHACK",
@@ -23,7 +23,7 @@ const RELATED_TOOLS = [
         description: "Votre site est-il visible par ChatGPT ?",
         href: "/outils/testeur-visibilite-ia",
         icon: Bot,
-        status: "coming" as const,
+        status: "live" as const,
     },
     {
         title: "Générateur Schema JSON-LD",
@@ -218,8 +218,68 @@ export default function AuditSEOPage() {
                     </div>
                 </section>
 
+                {/* Why Audit Section */}
+                <section className="py-16">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-3xl font-heading font-bold text-ink mb-8 text-center">
+                                Pourquoi auditer votre site SEO ?
+                            </h2>
+
+                            <div className="prose prose-lg max-w-none text-soft mb-12">
+                                <p>
+                                    <strong className="text-ink">90% des sites web ont des problèmes SEO invisibles</strong> qui plombent leur visibilité Google. Balises title mal optimisées, images sans attribut alt, vitesse de chargement trop lente, absence de sitemap... Ces erreurs passent inaperçues mais coûtent cher en trafic perdu.
+                                </p>
+                                <p>
+                                    Un audit SEO révèle ces problèmes et vous donne une <strong className="text-ink">roadmap claire</strong> pour les corriger. Notre outil analyse 15 critères essentiels en moins de 30 secondes — et contrairement aux autres outils, il vérifie aussi votre <strong className="text-ink">compatibilité avec les crawlers IA</strong> (ChatGPT, Perplexity, Claude).
+                                </p>
+                            </div>
+
+                            <div className="grid md:grid-cols-3 gap-6">
+                                <div className="bg-emerald-50 rounded-2xl p-6 border border-emerald-100 text-center">
+                                    <Zap className="w-10 h-10 text-emerald-500 mx-auto mb-4" />
+                                    <h3 className="font-bold text-ink mb-2">Résultats en 30 sec</h3>
+                                    <p className="text-sm text-soft">
+                                        Pas d'attente, pas de file. Entrez votre URL et obtenez votre score immédiatement.
+                                    </p>
+                                </div>
+                                <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100 text-center">
+                                    <Bot className="w-10 h-10 text-blue-500 mx-auto mb-4" />
+                                    <h3 className="font-bold text-ink mb-2">Analyse IA incluse</h3>
+                                    <p className="text-sm text-soft">
+                                        Le seul audit gratuit qui vérifie si GPTBot, Claude et Perplexity peuvent accéder à votre site.
+                                    </p>
+                                </div>
+                                <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 text-center">
+                                    <Target className="w-10 h-10 text-amber-500 mx-auto mb-4" />
+                                    <h3 className="font-bold text-ink mb-2">Actions concrètes</h3>
+                                    <p className="text-sm text-soft">
+                                        Chaque problème détecté est accompagné d'une recommandation claire et actionnable.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="mt-12 bg-gray-50 rounded-2xl p-8 border border-line">
+                                <div className="flex items-start gap-4">
+                                    <TrendingUp className="w-8 h-8 text-sauge flex-shrink-0 mt-1" />
+                                    <div>
+                                        <h3 className="font-bold text-ink mb-2">Après l'audit : passez à l'action</h3>
+                                        <p className="text-soft mb-4">
+                                            Cet outil gratuit vous donne un aperçu. Pour un <strong className="text-ink">audit SEO professionnel complet</strong> avec analyse concurrentielle, étude sémantique et roadmap priorisée par ROI, découvrez notre accompagnement expert.
+                                        </p>
+                                        <Link href="/audit-seo" className="text-sauge font-medium hover:underline inline-flex items-center gap-2">
+                                            Découvrir l'audit SEO professionnel
+                                            <ArrowRight className="w-4 h-4" />
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Related Tools */}
-                <section className="py-12">
+                <section className="py-12 bg-white">
                     <div className="container mx-auto px-4">
                         <h2 className="text-2xl font-heading font-bold text-ink mb-8">
                             Outils complémentaires

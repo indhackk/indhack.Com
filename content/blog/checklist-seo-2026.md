@@ -47,6 +47,8 @@ Google utilise l'**indexation Mobile-First** depuis 2021. La version mobile de v
 
 Le fichier **robots.txt** indique à Google quelles pages crawler. Une erreur fréquente : bloquer accidentellement des ressources essentielles (CSS, JavaScript) qui empêchent Google de rendre correctement vos pages. Vérifiez votre fichier via la Search Console.
 
+> **Outil gratuit :** [Générateur robots.txt 2026 — Configurez vos crawlers IA](/outils/generateur-robots-txt) — Le seul générateur qui inclut les 12 crawlers IA (GPTBot, Claude, Perplexity...).
+
 ### ✅ Point 5 : Sitemap XML à jour et soumis
 
 Votre **sitemap XML** doit lister toutes les pages importantes de votre site et être soumis dans Google Search Console. Assurez-vous qu'il se met à jour automatiquement lors de l'ajout de nouvelles pages.
@@ -151,6 +153,8 @@ Découvrez notre approche du [SEO local](/seo-local) pour les entreprises franç
 
 Implémentez le **schéma LocalBusiness** en JSON-LD sur vos pages locales. Ces données structurées aident Google à comprendre votre activité et peuvent générer des rich snippets (horaires, avis, téléphone) dans les résultats.
 
+> **Outil gratuit :** [Générateur Schema JSON-LD — Créez vos données structurées](/outils/generateur-schema-json-ld) — 9 types de schema supportés, validation intégrée.
+
 ---
 
 ## 4. Backlinks & Autorité : Construire Votre Réputation
@@ -207,6 +211,8 @@ Les **Large Language Models** (LLMs) privilégient les contenus :
 - Formulés en réponses directes aux questions
 - Sourcés et vérifiables
 - Mis à jour récemment
+
+> **Outil gratuit :** [Testeur de Visibilité IA — Êtes-vous visible par ChatGPT ?](/outils/testeur-visibilite-ia) — Analysez vos signaux GEO et découvrez si les IA peuvent vous citer.
 
 Découvrez notre article complet sur la [visibilité dans l'IA générative](/blog/visibilite-ia-geo).
 

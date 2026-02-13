@@ -141,7 +141,7 @@ export function MegaFooter() {
                         {/* Logo + Description */}
                         <Link href="/" className="inline-flex items-center gap-2 mb-4 group">
                             <Image
-                                src="/images/logo-indhack.png"
+                                src="/images/logo-indhack.webp"
                                 alt="IndHack - Consultante SEO"
                                 width={32}
                                 height={32}

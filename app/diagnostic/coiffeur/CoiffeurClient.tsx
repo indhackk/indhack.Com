@@ -70,7 +70,7 @@ function DiagnosticContent() {
 
         <div className="relative h-[50vh] lg:h-auto">
           <Image
-            src="/images/nice-seo-hero.png"
+            src="/images/nice-seo-hero.webp"
             alt={`Salon de coiffure ${nom}`}
             fill
             className="object-cover"

@@ -11,7 +11,7 @@ const ORGANIZATION_DATA = {
     name: "IndHack",
     legalName: "IndHack - Indiana Aflalo",
     url: "https://indhack.com",
-    logo: "https://indhack.com/images/logo-indhack.png",
+    logo: "https://indhack.com/images/logo-indhack.webp",
     email: "contact@indhack.com",
     telephone: "+33661139748",
     address: {

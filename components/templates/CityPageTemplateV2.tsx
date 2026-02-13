@@ -38,7 +38,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
         "url": `https://indhack.com/${cityData.slug}`,
         "telephone": "+33661139748",
         "email": "contact@indhack.com",
-        "image": "https://indhack.com/images/logo-indhack.png",
+        "image": "https://indhack.com/images/logo-indhack.webp",
         "priceRange": "€€",
         "address": {
             "@type": "PostalAddress",
@@ -371,19 +371,16 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.05 }}
-                                    className={`p-5 rounded-xl border transition-all group h-full ${
-                                        (service as any).isPrimary
+                                    className={`p-5 rounded-xl border transition-all group h-full ${(service as any).isPrimary
                                             ? 'bg-sauge text-white border-sauge hover:bg-ink'
                                             : 'bg-gray-50 border-gray-100 hover:shadow-lg hover:border-sauge/30'
-                                    }`}
+                                        }`}
                                 >
-                                    <h3 className={`font-bold text-sm mb-1 transition-colors ${
-                                        (service as any).isPrimary ? 'text-white' : 'text-ink group-hover:text-sauge'
-                                    }`}>{service.title}</h3>
+                                    <h3 className={`font-bold text-sm mb-1 transition-colors ${(service as any).isPrimary ? 'text-white' : 'text-ink group-hover:text-sauge'
+                                        }`}>{service.title}</h3>
                                     <p className={`text-xs ${(service as any).isPrimary ? 'text-white/80' : 'text-soft'}`}>{service.desc}</p>
-                                    <span className={`mt-3 inline-flex items-center text-xs font-bold ${
-                                        (service as any).isPrimary ? 'text-white' : 'text-sauge'
-                                    }`}>
+                                    <span className={`mt-3 inline-flex items-center text-xs font-bold ${(service as any).isPrimary ? 'text-white' : 'text-sauge'
+                                        }`}>
                                         Découvrir <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                                     </span>
                                 </motion.div>

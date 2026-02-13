@@ -10,6 +10,8 @@ keywords: ["GEO", "Generative Engine Optimization", "IA SEO", "ChatGPT SEO", "Ge
 
 Le **SEO classique** ne suffit plus. En 2026, vos clients ne cherchent plus seulement sur **Google**, ils posent des questions à **ChatGPT**, **Gemini** ou **Perplexity**. C'est là qu'intervient le **GEO (Generative Engine Optimization)**. En tant que consultante SEO à la pointe des évolutions, je vous explique cette **nouvelle discipline SEO**.
 
+> **Découvrez également notre outil gratuit :** [Testeur de Visibilité IA — Êtes-vous visible par ChatGPT ?](/outils/testeur-visibilite-ia) — Le seul outil français qui analyse si votre site peut être cité par les IA génératives.
+
 ## Qu'est-ce que le GEO exactement ?
 
 Le **GEO** (Generative Engine Optimization) est l'ensemble des techniques visant à optimiser votre contenu pour être cité par les **moteurs de recherche IA** :

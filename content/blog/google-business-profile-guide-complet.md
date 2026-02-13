@@ -10,6 +10,8 @@ keywords: ["Google Business Profile", "fiche Google", "SEO local", "Google My Bu
 
 Votre **fiche Google Business Profile** (anciennement Google My Business) est souvent le **premier contact** entre votre entreprise et vos futurs clients. 46% des recherches Google ont une intention locale. Si votre fiche est mal optimisée, vous perdez des clients chaque jour.
 
+> **Analysez votre concurrence locale :** [Simulateur de Visibilité Locale — Qui domine Google dans votre ville ?](/outils/simulateur-visibilite-locale) — Identifiez les opportunités SEO local pour votre métier.
+
 En tant que consultante [SEO local](/seo-local) chez [INDHACK](/), je vous livre le guide complet pour **dominer le pack local** dans votre ville.
 
 ## Qu'est-ce que Google Business Profile ?

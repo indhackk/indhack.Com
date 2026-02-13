@@ -119,7 +119,7 @@ export default function LoginPage() {
                         <div className="flex items-center gap-3">
                             <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
                                 <Image
-                                    src="/images/logo-indhack.png"
+                                    src="/images/logo-indhack.webp"
                                     alt="IndHack"
                                     width={32}
                                     height={32}
@@ -211,7 +211,7 @@ export default function LoginPage() {
                     >
                         <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-500/20">
                             <Image
-                                src="/images/logo-indhack.png"
+                                src="/images/logo-indhack.webp"
                                 alt="IndHack"
                                 width={40}
                                 height={40}
