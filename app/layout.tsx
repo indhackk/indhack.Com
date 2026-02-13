@@ -4,6 +4,7 @@ import "./globals.css";
 import { ModalProvider } from "@/components/providers/ModalProvider";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
 import { CookieConsent } from "@/components/CookieConsent";
+import { Analytics } from "@vercel/analytics/next";
 
 import Script from "next/script";
 
@@ -178,6 +179,7 @@ export default function RootLayout({
                     </ConditionalLayout>
                     <CookieConsent />
                 </ModalProvider>
+                <Analytics />
             </body>
         </html>
     );
