@@ -112,7 +112,13 @@ Bonne Saint-Valentin ma coquine.
 Ton coco, pour toujours. ❤️`;
 
 export default function ValentineClient() {
+    const [mounted, setMounted] = useState(false);
     const [stage, setStage] = useState<"question" | "quiz" | "wrapped" | "message" | "montage" | "player">("question");
+
+    // Fix hydration issues with window
+    useEffect(() => {
+        setMounted(true);
+    }, []);
     const [noButtonPos, setNoButtonPos] = useState({ x: 0, y: 0 });
     const [quizIndex, setQuizIndex] = useState(0);
     const [score, setScore] = useState(0);
@@ -352,50 +358,46 @@ export default function ValentineClient() {
             </div>
 
             {/* Floating hearts - more subtle */}
-            {stage !== "montage" && (
+            {mounted && stage !== "montage" && (
                 <div className="fixed inset-0 pointer-events-none overflow-hidden">
                     {[...Array(12)].map((_, i) => (
                         <motion.div
                             key={i}
                             className="absolute text-2xl opacity-40"
-                            initial={{
-                                x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-                                y: (typeof window !== 'undefined' ? window.innerHeight : 800) + 50
-                            }}
-                            animate={{
-                                y: -100,
-                                x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-                            }}
+                            style={{ left: `${(i * 8) % 100}%` }}
+                            initial={{ y: "110vh" }}
+                            animate={{ y: "-10vh" }}
                             transition={{
-                                duration: 15 + Math.random() * 10,
+                                duration: 15 + (i % 5) * 3,
                                 repeat: Infinity,
-                                delay: Math.random() * 8,
+                                delay: i * 0.8,
+                                ease: "linear"
                             }}
                         >
-                            {["♥", "♡", "❤"][Math.floor(Math.random() * 3)]}
+                            {["♥", "♡", "❤"][i % 3]}
                         </motion.div>
                     ))}
                 </div>
             )}
 
             {/* Confetti */}
-            {showConfetti && (
+            {showConfetti && mounted && (
                 <div className="fixed inset-0 pointer-events-none z-40">
                     {[...Array(60)].map((_, i) => (
                         <motion.div
                             key={i}
                             className="absolute w-2 h-2 rounded-full"
                             style={{
-                                backgroundColor: ["#f9a8d4", "#f472b6", "#ec4899", "#db2777", "#be185d", "#fda4af", "#fb7185"][Math.floor(Math.random() * 7)],
-                                left: `${Math.random() * 100}%`,
+                                backgroundColor: ["#f9a8d4", "#f472b6", "#ec4899", "#db2777", "#be185d", "#fda4af", "#fb7185"][i % 7],
+                                left: `${(i * 1.7) % 100}%`,
                             }}
                             initial={{ y: -20, opacity: 1, rotate: 0 }}
                             animate={{
-                                y: (typeof window !== 'undefined' ? window.innerHeight : 800) + 20,
+                                y: "110vh",
                                 opacity: 0,
-                                rotate: 360 * (Math.random() > 0.5 ? 1 : -1)
+                                rotate: 360 * (i % 2 === 0 ? 1 : -1)
                             }}
-                            transition={{ duration: 4 + Math.random() * 2, delay: Math.random() * 0.8 }}
+                            transition={{ duration: 3 + (i % 3), delay: (i % 10) * 0.1 }}
                         />
                     ))}
                 </div>
