@@ -127,7 +127,8 @@ export default function ValentineClient() {
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
     const [currentTrack, setCurrentTrack] = useState(0);
-    const [montageEnded, setMontageEnded] = useState(false);
+    const [montageStarted, setMontageStarted] = useState(false);
+    const [photoInterval, setPhotoInterval] = useState(4000);
 
     // Bouton "Non" qui s'enfuit
     const handleNoHover = () => {
@@ -179,42 +180,68 @@ export default function ValentineClient() {
         }
     }, [stage, typedText]);
 
-    // Start montage with music
+    // Start montage with music - wait for metadata to get duration
     useEffect(() => {
-        if (stage === "montage" && audioRef.current && !isPlaying) {
+        if (stage === "montage" && audioRef.current && !montageStarted) {
+            setMontageStarted(true);
             setCurrentTrack(0);
+            setCurrentPhoto(0);
             audioRef.current.src = PLAYLIST[0].src;
             audioRef.current.load();
-            audioRef.current.play().catch(() => {});
-            setIsPlaying(true);
-        }
-    }, [stage, isPlaying]);
 
-    // Photo montage slideshow - faster for cinematic feel
+            // Wait for audio to be ready then play
+            const playAudio = () => {
+                if (audioRef.current) {
+                    const trackDuration = audioRef.current.duration;
+                    if (trackDuration && trackDuration > 0) {
+                        // Calculate interval: track duration / number of photos
+                        const interval = (trackDuration * 1000) / PHOTOS.length;
+                        setPhotoInterval(interval);
+                        setDuration(trackDuration);
+                    }
+                    audioRef.current.play().catch(() => {});
+                    setIsPlaying(true);
+                }
+            };
+
+            audioRef.current.addEventListener('loadedmetadata', playAudio, { once: true });
+            // Fallback if already loaded
+            if (audioRef.current.readyState >= 1) {
+                playAudio();
+            }
+        }
+    }, [stage, montageStarted]);
+
+    // Photo montage slideshow - synced with music duration
     useEffect(() => {
-        if (stage === "montage") {
+        if (stage === "montage" && isPlaying && photoInterval > 0) {
             const timer = setInterval(() => {
                 setCurrentPhoto((prev) => {
                     if (prev >= PHOTOS.length - 1) {
-                        return prev;
+                        return 0; // Loop back
                     }
                     return prev + 1;
                 });
-            }, 4000);
+            }, photoInterval);
             return () => clearInterval(timer);
         }
-    }, [stage]);
+    }, [stage, isPlaying, photoInterval]);
 
     // When track 1 ends, go to player stage
     const handleTrack1Ended = () => {
         if (stage === "montage") {
-            setMontageEnded(true);
             setIsPlaying(false);
-            setCurrentTrack(1);
             setCurrentTime(0);
+            // Go to player with track 1 (index 1 = second track)
             setTimeout(() => {
+                setCurrentTrack(1);
                 setStage("player");
-            }, 1000);
+                // Load the next track
+                if (audioRef.current) {
+                    audioRef.current.src = PLAYLIST[1].src;
+                    audioRef.current.load();
+                }
+            }, 500);
         } else {
             // Normal next track behavior in player stage
             nextTrack();
@@ -298,6 +325,21 @@ export default function ValentineClient() {
             setIsPlaying(true);
         }
     };
+
+    // Load correct track when entering player stage
+    useEffect(() => {
+        if (stage === "player" && audioRef.current) {
+            audioRef.current.src = PLAYLIST[currentTrack].src;
+            audioRef.current.load();
+            // Get duration once loaded
+            const handleLoaded = () => {
+                if (audioRef.current) {
+                    setDuration(audioRef.current.duration);
+                }
+            };
+            audioRef.current.addEventListener('loadedmetadata', handleLoaded, { once: true });
+        }
+    }, [stage]);
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-rose-100 via-pink-50 to-rose-200 flex items-center justify-center p-4 overflow-hidden relative">
