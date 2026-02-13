@@ -310,6 +310,24 @@ export default function CreationSiteClient() {
                 </div>
             </section>
 
+            {/* Outils SEO Gratuits */}
+            <section className="py-16 bg-white border-t border-gray-100">
+                <div className="container mx-auto px-4 text-center">
+                    <h2 className="text-2xl font-heading font-bold text-ink mb-6">
+                        Testez vos performances <span className="text-sauge">gratuitement</span>
+                    </h2>
+                    <p className="text-soft mb-8 max-w-2xl mx-auto">
+                        Avant de vous engager, utilisez mes outils d'analyse pour faire un état des lieux de votre site.
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4">
+                        <Link href="/outils" className="inline-flex items-center justify-center px-6 py-3 border border-gray-200 rounded-full text-ink font-bold hover:border-sauge hover:text-sauge transition-colors bg-gray-50">
+                            <span className="mr-2">🛠️</span> Voir tous les outils SEO
+                            <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
             <FAQ items={CREATION_FAQ} title="Questions sur la Création de Site" />
 
             {/* Services complémentaires */}

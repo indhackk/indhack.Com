@@ -4,17 +4,24 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-// Playlist avec pochettes photos
+// Piste du montage (jouée pendant les photos)
+const MONTAGE_TRACK = {
+    title: "Les aventures de COCO & COLINE #1",
+    src: "/valentine-photos/coco-coline.mp3",
+    cover: "/valentine-photos/coco-coline-cover-1.jpg",
+};
+
+// Playlist pour le player (après le montage)
 const PLAYLIST = [
-    {
-        title: "Les aventures de COCO & COLINE #1",
-        src: "/valentine-photos/coco-coline.mp3",
-        cover: "/valentine-photos/coco-coline-cover-1.jpg",
-    },
     {
         title: "Les aventures de COCO & COLINE #2",
         src: "/valentine-photos/coco-coline-2.mp3",
         cover: "/valentine-photos/coco-coline-cover-2.jpg",
+    },
+    {
+        title: "Les aventures de COCO & COLINE #3",
+        src: "/valentine-photos/coco-coline-3.mp3",
+        cover: "/valentine-photos/coco-coline-cover-3.jpg",
     },
 ];
 
@@ -209,9 +216,8 @@ export default function ValentineClient() {
     useEffect(() => {
         if (stage === "montage" && audioRef.current && !montageStarted) {
             setMontageStarted(true);
-            setCurrentTrack(0);
             setCurrentPhoto(0);
-            audioRef.current.src = PLAYLIST[0].src;
+            audioRef.current.src = MONTAGE_TRACK.src;
             audioRef.current.load();
 
             // Wait for audio to be ready then play
@@ -264,18 +270,18 @@ export default function ValentineClient() {
         }
     }, [stage, isPlaying, photoInterval]);
 
-    // When track 1 ends, go to player stage
-    const handleTrack1Ended = () => {
+    // When montage track ends, go to player stage
+    const handleTrackEnded = () => {
         if (stage === "montage") {
             setIsPlaying(false);
             setCurrentTime(0);
-            // Go to player with track 1 (index 1 = second track)
+            // Go to player with first track in playlist (track #2)
             setTimeout(() => {
-                setCurrentTrack(1);
+                setCurrentTrack(0);
                 setStage("player");
-                // Load the next track
+                // Load the first track of the player playlist
                 if (audioRef.current) {
-                    audioRef.current.src = PLAYLIST[1].src;
+                    audioRef.current.src = PLAYLIST[0].src;
                     audioRef.current.load();
                 }
             }, 500);
@@ -698,7 +704,7 @@ export default function ValentineClient() {
                         >
                             <div className="relative w-14 h-14 flex-shrink-0 rounded-xl overflow-hidden">
                                 <Image
-                                    src={PLAYLIST[0].cover}
+                                    src={MONTAGE_TRACK.cover}
                                     alt="Cover"
                                     fill
                                     className="object-cover"
@@ -706,7 +712,7 @@ export default function ValentineClient() {
                             </div>
                             <div className="flex-1">
                                 <p className="text-white/60 text-xs uppercase tracking-wider">En écoute</p>
-                                <p className="text-white font-medium">{PLAYLIST[0].title}</p>
+                                <p className="text-white font-medium">{MONTAGE_TRACK.title}</p>
                                 <div className="flex items-center gap-2 mt-1">
                                     <div className="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
                                         <motion.div
@@ -737,7 +743,7 @@ export default function ValentineClient() {
                             onClick={() => {
                                 if (audioRef.current) audioRef.current.pause();
                                 setIsPlaying(false);
-                                setCurrentTrack(1);
+                                setCurrentTrack(0);
                                 setStage("player");
                             }}
                             className="absolute top-8 right-8 text-white/40 hover:text-white text-sm transition-colors"
@@ -919,10 +925,9 @@ export default function ValentineClient() {
             {/* Hidden audio element */}
             <audio
                 ref={audioRef}
-                src={PLAYLIST[currentTrack].src}
                 onTimeUpdate={handleTimeUpdate}
                 onLoadedMetadata={handleLoadedMetadata}
-                onEnded={handleTrack1Ended}
+                onEnded={handleTrackEnded}
             />
         </div>
     );

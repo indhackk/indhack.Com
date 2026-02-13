@@ -161,7 +161,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                 category="Référencement Local"
             />
 
-            {/* Introduction Compacte + Stats */}
+            {/* Introduction Compacte + Stats - Enrichie avec Context */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto">
@@ -173,11 +173,27 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                 </h2>
                                 <div className="prose prose-sm text-soft space-y-3">
                                     <p>{cityData.description}</p>
+
+                                    <div className="bg-gray-50 border-l-4 border-sauge p-4 my-4 rounded-r-lg">
+                                        <h4 className="font-bold text-ink text-sm mb-1">Le saviez-vous ?</h4>
+                                        <p className="text-xs italic text-ink/80">
+                                            "{cityData.context.localInsight}"
+                                        </p>
+                                    </div>
+
                                     <p>
-                                        <strong className="text-ink">46% des recherches Google ont une intention locale.</strong> Si votre entreprise n'apparaît pas quand un habitant de {city} ou des zones {cityData.nearbyAreas.slice(0, 2).join(", ")} cherche vos services, vous laissez ces clients à vos concurrents.
+                                        À {city}, la compétition est {cityData.context.competitionLevel === 'extreme' ? 'féroce' : 'forte'}.
+                                        Vos futurs clients sont des {cityData.context.targetClients}.
+                                        <strong className="text-ink"> 46% des recherches Google ont une intention locale.</strong> Si votre entreprise n'apparaît pas quand ils cherchent vos services, vous laissez ces clients à vos concurrents.
                                     </p>
+
                                     <p>
-                                        En tant que <Link href="/consultant-seo" className="text-sauge hover:underline font-semibold">consultante SEO spécialisée</Link> sur le marché {cityData.region}, je vous accompagne pour conquérir les premières positions Google et Google Maps. Une approche personnalisée, des résultats mesurables.
+                                        En tant que <Link href="/consultant-seo" className="text-sauge hover:underline font-semibold">consultante SEO spécialisée</Link> sur le marché {cityData.region}, je vous accompagne pour conquérir les premières positions Google et Google Maps. Une approche personnalisée pour répondre aux défis de {city} :
+                                        <ul className="mt-2 space-y-1 list-disc list-inside">
+                                            {cityData.context.specificChallenges.map((challenge, i) => (
+                                                <li key={i} className="text-xs">{challenge}</li>
+                                            ))}
+                                        </ul>
                                     </p>
                                 </div>
 
@@ -372,8 +388,8 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.05 }}
                                     className={`p-5 rounded-xl border transition-all group h-full ${(service as any).isPrimary
-                                            ? 'bg-sauge text-white border-sauge hover:bg-ink'
-                                            : 'bg-gray-50 border-gray-100 hover:shadow-lg hover:border-sauge/30'
+                                        ? 'bg-sauge text-white border-sauge hover:bg-ink'
+                                        : 'bg-gray-50 border-gray-100 hover:shadow-lg hover:border-sauge/30'
                                         }`}
                                 >
                                     <h3 className={`font-bold text-sm mb-1 transition-colors ${(service as any).isPrimary ? 'text-white' : 'text-ink group-hover:text-sauge'

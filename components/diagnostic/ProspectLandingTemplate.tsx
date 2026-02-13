@@ -299,7 +299,7 @@ export default function ProspectLandingTemplate({
                     <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-[#F5F5F5] relative">
                       <Image
                         src={metier.mockupImage}
-                        alt="Aperçu"
+                        alt={`Aperçu du site web pour ${prospect.nom} - ${metier.label} à ${prospect.ville}`}
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover"
@@ -359,7 +359,7 @@ export default function ProspectLandingTemplate({
                     <div className="aspect-square rounded-xl overflow-hidden bg-[#F5F5F5] mb-4 relative">
                       <Image
                         src={metier.mockupImage}
-                        alt="Mobile"
+                        alt={`Version mobile du site web pour ${prospect.nom}`}
                         fill
                         sizes="200px"
                         className="object-cover"
@@ -531,7 +531,7 @@ export default function ProspectLandingTemplate({
             >
               <div className="flex gap-4">
                 <div className="w-24 h-24 rounded-xl bg-[#F5F5F5] overflow-hidden flex-shrink-0 relative">
-                  <Image src={metier.mockupImage} alt="Business" fill sizes="96px" className="object-cover" />
+                  <Image src={metier.mockupImage} alt={`Fiche Google Business Profile de ${prospect.nom}`} fill sizes="96px" className="object-cover" />
                 </div>
                 <div className="flex-1">
                   <h4 className="font-medium text-lg">{prospect.nom}</h4>
