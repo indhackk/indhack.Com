@@ -28,6 +28,11 @@ const PLAYLIST = [
         src: "/valentine-photos/coco-coline-4.mp3",
         cover: "/valentine-photos/coco-coline-cover-4.jpg",
     },
+    {
+        title: "Les aventures de COCO & COLINE #5",
+        src: "/valentine-photos/coco-coline-5.mp3",
+        cover: "/valentine-photos/coco-coline-cover-5.jpg",
+    },
 ];
 
 // Photos disponibles (41 photos)
@@ -779,7 +784,7 @@ export default function ValentineClient() {
                         </div>
 
                         {/* Tracks as cards with big covers - Grid layout */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                             {PLAYLIST.map((track, i) => (
                                 <motion.div
                                     key={i}
