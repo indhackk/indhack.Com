@@ -23,6 +23,11 @@ const PLAYLIST = [
         src: "/valentine-photos/coco-coline-3.mp3",
         cover: "/valentine-photos/coco-coline-cover-3.jpg",
     },
+    {
+        title: "Les aventures de COCO & COLINE #4",
+        src: "/valentine-photos/coco-coline-4.mp3",
+        cover: "/valentine-photos/coco-coline-cover-4.jpg",
+    },
 ];
 
 // Photos disponibles (41 photos)
@@ -764,105 +769,109 @@ export default function ValentineClient() {
                         key="player"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="w-full max-w-md relative z-10"
+                        className="w-full max-w-4xl px-4 relative z-10"
                     >
-                        <div className="text-center mb-6">
-                            <h2 className="text-2xl font-light text-gray-800 mb-1">
+                        <div className="text-center mb-8">
+                            <h2 className="text-3xl font-light text-gray-800 mb-2">
                                 🎵 Notre playlist
                             </h2>
-                            <p className="text-rose-400 text-sm">Les aventures de Coco & Coline</p>
+                            <p className="text-rose-400">Les aventures de Coco & Coline</p>
                         </div>
 
-                        {/* Tracks as cards with big covers */}
-                        <div className="space-y-4 mb-6">
+                        {/* Tracks as cards with big covers - Grid layout */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                             {PLAYLIST.map((track, i) => (
                                 <motion.div
                                     key={i}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: i * 0.15 }}
                                     onClick={() => selectTrack(i)}
-                                    className={`bg-white/90 backdrop-blur-xl rounded-2xl p-4 shadow-xl border cursor-pointer transition-all ${
+                                    className={`bg-white/90 backdrop-blur-xl rounded-3xl p-5 shadow-xl border cursor-pointer transition-all ${
                                         i === currentTrack
                                             ? "border-rose-300 ring-2 ring-rose-200"
                                             : "border-white/50 hover:border-rose-200"
                                     }`}
                                 >
-                                    <div className="flex items-center gap-4">
-                                        {/* Cover */}
-                                        <div className="relative w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 shadow-lg">
-                                            <Image
-                                                src={track.cover}
-                                                alt={track.title}
-                                                fill
-                                                className="object-cover"
-                                            />
-                                            {i === currentTrack && isPlaying && (
-                                                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                                    <div className="flex gap-1 items-end">
-                                                        {[...Array(4)].map((_, j) => (
-                                                            <motion.div
-                                                                key={j}
-                                                                className="w-1 bg-white rounded-full"
-                                                                animate={{ height: [8, 20, 8] }}
-                                                                transition={{ duration: 0.4, repeat: Infinity, delay: j * 0.1 }}
-                                                            />
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            )}
-                                        </div>
-
-                                        {/* Info */}
-                                        <div className="flex-1 min-w-0">
-                                            <p className={`font-semibold truncate ${i === currentTrack ? "text-rose-500" : "text-gray-800"}`}>
-                                                {track.title}
-                                            </p>
-                                            <p className="text-gray-400 text-sm">Coco & Coline</p>
-                                            {i === currentTrack && (
-                                                <div className="mt-2">
-                                                    <div className="h-1 bg-rose-100 rounded-full overflow-hidden">
-                                                        <div
-                                                            className="h-full bg-rose-500 transition-all"
-                                                            style={{ width: `${(currentTime / (duration || 1)) * 100}%` }}
+                                    {/* Big Cover */}
+                                    <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-4 shadow-lg">
+                                        <Image
+                                            src={track.cover}
+                                            alt={track.title}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        {i === currentTrack && isPlaying && (
+                                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                                <div className="flex gap-2 items-end">
+                                                    {[...Array(5)].map((_, j) => (
+                                                        <motion.div
+                                                            key={j}
+                                                            className="w-2 bg-white rounded-full"
+                                                            animate={{ height: [16, 40, 16] }}
+                                                            transition={{ duration: 0.4, repeat: Infinity, delay: j * 0.1 }}
                                                         />
-                                                    </div>
-                                                    <div className="flex justify-between text-[10px] text-gray-400 mt-1">
-                                                        <span>{formatTime(currentTime)}</span>
-                                                        <span>{formatTime(duration)}</span>
-                                                    </div>
+                                                    ))}
                                                 </div>
-                                            )}
-                                        </div>
-
-                                        {/* Play indicator or button */}
-                                        <div className="flex-shrink-0">
-                                            {i === currentTrack ? (
-                                                <motion.button
-                                                    whileHover={{ scale: 1.1 }}
-                                                    whileTap={{ scale: 0.9 }}
-                                                    onClick={(e) => { e.stopPropagation(); togglePlay(); }}
-                                                    className="w-12 h-12 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full flex items-center justify-center shadow-lg"
-                                                >
-                                                    {isPlaying ? (
-                                                        <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                                            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
-                                                        </svg>
-                                                    ) : (
-                                                        <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                                                            <path d="M8 5v14l11-7z" />
-                                                        </svg>
-                                                    )}
-                                                </motion.button>
-                                            ) : (
-                                                <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center">
-                                                    <svg className="w-5 h-5 text-gray-400 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                            </div>
+                                        )}
+                                        {/* Play overlay on hover */}
+                                        {i !== currentTrack && (
+                                            <div className="absolute inset-0 bg-black/0 hover:bg-black/30 transition-all flex items-center justify-center opacity-0 hover:opacity-100">
+                                                <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center">
+                                                    <svg className="w-8 h-8 text-rose-500 ml-1" fill="currentColor" viewBox="0 0 24 24">
                                                         <path d="M8 5v14l11-7z" />
                                                     </svg>
                                                 </div>
-                                            )}
-                                        </div>
+                                            </div>
+                                        )}
                                     </div>
+
+                                    {/* Info */}
+                                    <div className="flex items-center gap-3">
+                                        <div className="flex-1 min-w-0">
+                                            <p className={`font-bold text-lg truncate ${i === currentTrack ? "text-rose-500" : "text-gray-800"}`}>
+                                                {track.title}
+                                            </p>
+                                            <p className="text-gray-400 text-sm">Coco & Coline</p>
+                                        </div>
+
+                                        {/* Play button */}
+                                        {i === currentTrack && (
+                                            <motion.button
+                                                whileHover={{ scale: 1.1 }}
+                                                whileTap={{ scale: 0.9 }}
+                                                onClick={(e) => { e.stopPropagation(); togglePlay(); }}
+                                                className="w-14 h-14 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full flex items-center justify-center shadow-lg flex-shrink-0"
+                                            >
+                                                {isPlaying ? (
+                                                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+                                                    </svg>
+                                                ) : (
+                                                    <svg className="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z" />
+                                                    </svg>
+                                                )}
+                                            </motion.button>
+                                        )}
+                                    </div>
+
+                                    {/* Progress bar for current track */}
+                                    {i === currentTrack && (
+                                        <div className="mt-3">
+                                            <div className="h-1.5 bg-rose-100 rounded-full overflow-hidden">
+                                                <div
+                                                    className="h-full bg-gradient-to-r from-rose-400 to-pink-500 transition-all"
+                                                    style={{ width: `${(currentTime / (duration || 1)) * 100}%` }}
+                                                />
+                                            </div>
+                                            <div className="flex justify-between text-xs text-gray-400 mt-1">
+                                                <span>{formatTime(currentTime)}</span>
+                                                <span>{formatTime(duration)}</span>
+                                            </div>
+                                        </div>
+                                    )}
                                 </motion.div>
                             ))}
                         </div>
