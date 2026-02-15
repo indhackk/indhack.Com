@@ -8,7 +8,7 @@ author: "Indiana Aflalo"
 keywords: ["SEO Nice", "référencement local Nice", "Alpes-Maritimes", "Google Maps Nice", "consultant SEO Nice", "Google Business Profile Nice"]
 ---
 
-Pour une entreprise locale, être visible sur des recherches comme "**consultant SEO Nice**" ou "**expert référencement Alpes-Maritimes**" est plus important que d'être visible au niveau national sans intention d'achat. En tant qu'[experte en visibilité de proximité](/seo-local), je vous partage les clés du **référencement** sur la Côte d'Azur.
+Pour une entreprise locale, être visible sur des recherches comme "**consultant SEO Nice**" ou "**expert référencement Alpes-Maritimes**" est plus important que d'être visible au niveau national sans intention d'achat. En tant que [consultante SEO à Nice](/consultant-seo-nice) et [experte en visibilité de proximité](/seo-local), je vous partage les clés du **référencement** sur la Côte d'Azur.
 
 > **Outil gratuit :** [Simulateur de Visibilité Locale — Analysez la SERP de votre ville](/outils/simulateur-visibilite-locale) — Découvrez qui domine Google pour votre métier à Nice, Cannes ou Monaco.
 
@@ -75,7 +75,7 @@ Ces **backlinks locaux** envoient un signal fort à Google sur votre implantatio
 
 ## Mes services SEO local sur la Côte d'Azur
 
-Native de la région, j'aide les **PME de Nice**, Cannes, Antibes et Monaco à transformer leur site web en un véritable aimant à clients locaux.
+Native de la région, j'aide les **PME de Nice**, [Cannes](/consultant-seo-cannes), [Antibes](/consultant-seo-antibes) et Monaco à transformer leur site web en un véritable aimant à clients locaux.
 
 **Mon accompagnement en [visibilité de proximité](/seo-local) comprend :**
 - [Diagnostic complet](/audit-seo) de votre présence locale actuelle

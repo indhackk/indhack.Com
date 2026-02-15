@@ -111,4 +111,10 @@ Un audit SEO vous permet de :
 
 ---
 
-**Envie d'aller plus loin ?** Découvrez [les missions complètes d'un consultant SEO](/blog/missions-consultant-seo) ou [demandez votre diagnostic gratuit](/contact) à [INDHACK](/), votre consultante SEO sur Nice, Marseille et toute la France.
+**Envie d'aller plus loin ?** Découvrez [les missions complètes d'un consultant SEO](/blog/missions-consultant-seo) ou [demandez votre diagnostic gratuit](/contact).
+
+**Services d'audit SEO par ville :**
+- [Audit technique SEO à Nice](/consultant-seo-nice/audit-technique)
+- [Audit SEO à Lyon](/consultant-seo-lyon/audit-technique)
+- [Audit SEO à Bordeaux](/consultant-seo-bordeaux/audit-technique)
+- [Audit SEO à Marseille](/consultant-seo-marseille/audit-technique)

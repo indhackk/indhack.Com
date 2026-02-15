@@ -32,9 +32,9 @@ Ce template contient des *variables* (comme `{ville}`, `{code_postal}`, `{monume
 
 Ensuite, vous connectez ce template à une base de données (Google Sheets ou Airtable) qui contient la liste de vos 50 villes cibles.
 Le script génère automatiquement 50 pages uniques :
-- `plombier-nice.html`
-- `plombier-cannes.html`
-- `plombier-antibes.html`
+- `plombier-nice.html` (comme ma page [consultant SEO Nice](/consultant-seo-nice))
+- `plombier-cannes.html` (comme ma page [consultant SEO Cannes](/consultant-seo-cannes))
+- `plombier-antibes.html` (comme ma page [consultant SEO Antibes](/consultant-seo-antibes))
 ...etc.
 
 C'est la méthode utilisée par **TripAdvisor**, **Airbnb** ou **Yelp** pour avoir des millions de pages.

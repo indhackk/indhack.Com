@@ -275,3 +275,5 @@ Chaque point de cette checklist contribue à construire une **visibilité durabl
 ---
 
 **Envie d'aller plus loin ?** Découvrez [pourquoi l'audit SEO est le point de départ de votre croissance](/blog/importance-audit-seo) ou explorez nos guides sur le [SEO local](/seo-local) pour les entreprises françaises.
+
+**Besoin d'un accompagnement local ?** Je propose mes services de consultant SEO dans toute la France : [Nice](/consultant-seo-nice), [Paris](/consultant-seo-paris), [Lyon](/consultant-seo-lyon), [Marseille](/consultant-seo-marseille), [Bordeaux](/consultant-seo-bordeaux) et [Strasbourg](/consultant-seo-strasbourg).

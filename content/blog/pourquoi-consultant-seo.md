@@ -142,4 +142,11 @@ Le meilleur moment pour investir dans le SEO, c'était il y a 5 ans. Le deuxièm
 
 ---
 
-Prêt à transformer votre visibilité ? Que vous soyez à Nice, Marseille, Lyon ou ailleurs en France, [INDHACK](/), votre consultante SEO freelance, vous accompagne. [Contactez-moi](/contact) pour un premier échange gratuit.
+Prêt à transformer votre visibilité ? [Contactez-moi](/contact) pour un premier échange gratuit.
+
+**Consultante SEO dans votre région :**
+- [Consultant SEO Nice](/consultant-seo-nice) — Côte d'Azur, Alpes-Maritimes
+- [Consultant SEO Lyon](/consultant-seo-lyon) — Rhône-Alpes
+- [Consultant SEO Paris](/consultant-seo-paris) — Île-de-France
+- [Consultant SEO Marseille](/consultant-seo-marseille) — Bouches-du-Rhône
+- [Consultant SEO Bordeaux](/consultant-seo-bordeaux) — Nouvelle-Aquitaine

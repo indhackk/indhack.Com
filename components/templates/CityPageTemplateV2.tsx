@@ -72,33 +72,82 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
         }
     };
 
-    // FAQ enrichie
-    const FAQ_ITEMS = [
-        {
-            question: `Pourquoi choisir une consultante SEO à ${city} plutôt qu'une agence parisienne ?`,
-            answer: `Une experte locale connaît les spécificités du marché ${city} : comportements de recherche, concurrents directs, partenaires locaux pour le netlinking. Je peux vous rencontrer physiquement, visiter votre établissement et adapter ma stratégie à votre réalité terrain. Cette proximité génère des résultats plus rapides et pertinents.`
-        },
-        {
-            question: `Quels résultats SEO attendre sur ${city} et les ${cityData.department} ?`,
-            answer: `Sur des requêtes locales type "votre métier + ${city}", les premiers résultats apparaissent en 1 à 3 mois. Pour les secteurs très concurrentiels (immobilier, restauration, avocats), comptez 4 à 6 mois. L'objectif : apparaître dans le Pack Local Google Maps et générer un flux régulier de prospects qualifiés.`
-        },
-        {
-            question: `Quel budget prévoir pour du SEO local à ${city} ?`,
-            answer: `L'audit SEO initial est 100% gratuit et sans engagement. Il permet de définir votre potentiel. Ensuite, nous définissons ensemble une stratégie adaptée à vos objectifs de croissance. Chaque projet est unique : commençons par l'audit offert pour voir ce qu'il est possible de faire.`
-        },
-        {
-            question: `Comment fonctionne le référencement local sur Google à ${city} ?`,
-            answer: `Le SEO local repose sur 3 piliers : votre fiche Google Business Profile, les citations locales (annuaires, Pages Jaunes, Yelp...) et les avis clients. Mon travail consiste à optimiser ces éléments pour vous faire apparaître dans le Pack Local de 3 résultats affichés en haut des recherches géolocalisées.`
-        },
-        {
-            question: `Quels services proposez-vous au-delà du SEO à ${city} ?`,
-            answer: `Expertise complète : audit technique approfondi, stratégie de contenu, netlinking national/local, création de sites web optimisés SEO, refonte sans perte de trafic, et gestion de réseaux sociaux. Une approche 360° pour maximiser votre visibilité digitale.`
-        },
-        {
-            question: `Intervenez-vous sur ${cityData.nearbyAreas.slice(0, 3).join(", ")} et alentours ?`,
-            answer: `Oui, j'interviens sur toute la zone ${cityData.department} : ${cityData.nearbyAreas.join(", ")}. La proximité géographique est un atout pour le SEO local, mais les outils modernes permettent aussi un accompagnement à distance très efficace.`
-        }
-    ];
+    // FAQ enrichie et diversifiée par type de marché
+    const getContextualFAQ = () => {
+        const baseFAQ = [
+            {
+                question: `Pourquoi choisir une consultante SEO à ${city} plutôt qu'une agence parisienne ?`,
+                answer: `Une experte locale connaît les spécificités du marché ${city} : comportements de recherche, concurrents directs, partenaires locaux pour le netlinking. Je peux vous rencontrer physiquement, visiter votre établissement et adapter ma stratégie à votre réalité terrain. Cette proximité génère des résultats plus rapides et pertinents.`
+            },
+            {
+                question: `Quels résultats SEO attendre sur ${city} et les ${cityData.department} ?`,
+                answer: `Sur des requêtes locales type "votre métier + ${city}", les premiers résultats apparaissent en 1 à 3 mois. Pour les secteurs très concurrentiels (immobilier, restauration, avocats), comptez 4 à 6 mois. L'objectif : apparaître dans le Pack Local Google Maps et générer un flux régulier de prospects qualifiés.`
+            },
+            {
+                question: `Intervenez-vous sur ${cityData.nearbyAreas.slice(0, 3).join(", ")} et alentours ?`,
+                answer: `Oui, j'interviens sur toute la zone ${cityData.department} : ${cityData.nearbyAreas.join(", ")}. La proximité géographique est un atout pour le SEO local, mais les outils modernes permettent aussi un accompagnement à distance très efficace.`
+            }
+        ];
+
+        // FAQ spécifiques par type de marché
+        const contextFAQ: Record<string, { question: string; answer: string }[]> = {
+            luxury: [
+                {
+                    question: `Comment le SEO peut-il attirer une clientèle haut de gamme à ${city} ?`,
+                    answer: `Les clients premium recherchent différemment : requêtes en anglais, comparaisons de services exclusifs, recherche de témoignages. Je cible ces comportements spécifiques avec du contenu premium, un site au design irréprochable et une stratégie de réputation en ligne. L'objectif : être trouvé par ceux qui ont les moyens d'investir.`
+                },
+                {
+                    question: `Proposez-vous du SEO multilingue pour la clientèle internationale de ${city} ?`,
+                    answer: `Absolument. Sur ${city}, ${cityData.context.localInsight}. Je mets en place une stratégie multilingue (FR/EN/IT) avec des balises hreflang, du contenu traduit par des natifs et une optimisation des fiches Google Business Profile dans plusieurs langues.`
+                }
+            ],
+            tech: [
+                {
+                    question: `Quel type de SEO pour les startups tech de ${city} ?`,
+                    answer: `Le SEO B2B tech requiert du contenu technique de haut niveau : études de cas, whitepapers, comparatifs produits. Je travaille sur des cycles de vente longs avec du content marketing qui éduque et convertit sur 6-12 mois. Les mots-clés techniques à faible volume mais forte intention sont ma spécialité.`
+                },
+                {
+                    question: `Comment rivaliser avec les géants américains sur les requêtes tech ?`,
+                    answer: `La clé est le positionnement de niche et l'ancrage local. Plutôt que "CRM logiciel", on cible "CRM PME française" ou "solution SaaS RGPD". Je combine SEO technique avancé (Core Web Vitals, PWA) et autorité thématique pour vous positionner comme référence sur votre segment.`
+                }
+            ],
+            volume: [
+                {
+                    question: `Comment se démarquer dans un marché très concurrentiel comme ${city} ?`,
+                    answer: `Avec ${cityData.population} habitants, la concurrence est féroce. Ma stratégie : identifier des niches sous-exploitées (quartiers spécifiques, services complémentaires), créer du contenu hyper-localisé et accumuler des avis Google plus vite que vos concurrents. Le volume se gagne par l'exhaustivité.`
+                },
+                {
+                    question: `Le SEO peut-il remplacer Google Ads à ${city} ?`,
+                    answer: `Le SEO et Google Ads sont complémentaires. Sur une grande métropole comme ${city}, le SEO offre un meilleur ROI long terme (x5 en moyenne) tandis que Ads génère du trafic immédiat. Je recommande souvent de commencer par les deux puis de réduire Ads progressivement quand le SEO prend le relais.`
+                }
+            ],
+            premium: [
+                {
+                    question: `Comment toucher à la fois la clientèle locale et touristique de ${city} ?`,
+                    answer: `${city} a un double marché : locaux et visiteurs. Je crée deux types de contenus : pages locales en français ciblant les résidents, et pages optimisées EN/IT pour les touristes. Les stratégies d'avis et de Google Maps diffèrent aussi selon ces cibles.`
+                },
+                {
+                    question: `La saisonnalité impacte-t-elle le SEO à ${city} ?`,
+                    answer: `Oui, mais c'est une opportunité ! Je prépare votre visibilité 3 mois avant la haute saison pour que vous soyez en pole position quand l'afflux arrive. Hors saison, on travaille le contenu et la technique. Cette anticipation fait toute la différence.`
+                }
+            ],
+            local: [
+                {
+                    question: `Quel budget prévoir pour du SEO local à ${city} ?`,
+                    answer: `L'audit SEO initial est 100% gratuit et sans engagement. Il permet de définir votre potentiel. Ensuite, nous définissons ensemble une stratégie adaptée à vos objectifs de croissance. Chaque projet est unique : commençons par l'audit offert pour voir ce qu'il est possible de faire.`
+                },
+                {
+                    question: `Comment fonctionne le référencement local sur Google à ${city} ?`,
+                    answer: `Le SEO local repose sur 3 piliers : votre fiche Google Business Profile, les citations locales (annuaires, Pages Jaunes, Yelp...) et les avis clients. Mon travail consiste à optimiser ces éléments pour vous faire apparaître dans le Pack Local de 3 résultats affichés en haut des recherches géolocalisées.`
+                }
+            ]
+        };
+
+        const marketFAQ = contextFAQ[cityData.context.marketType] || contextFAQ.local;
+        return [...baseFAQ, ...marketFAQ];
+    };
+
+    const FAQ_ITEMS = getContextualFAQ();
 
     // Méthodologie compacte
     const METHODOLOGY = [
@@ -117,12 +166,40 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
         { title: "Création site SEO-ready", href: "/creation-site-web", desc: "Site optimisé Google" }
     ];
 
-    // Articles blog connexes pour le maillage
-    const RELATED_BLOG_POSTS = [
-        { title: "Pourquoi faire appel à un consultant SEO ?", href: "/blog/pourquoi-consultant-seo", desc: "Les avantages d'un expert SEO" },
-        { title: "Comment créer un site visible sur Google", href: "/blog/comment-creer-site-visible-google", desc: "Guide pratique SEO" },
-        { title: "L'importance d'un audit SEO", href: "/blog/importance-audit-seo", desc: "Diagnostic complet" }
-    ];
+    // Articles blog connexes diversifiés par type de marché
+    const getRelatedBlogPosts = () => {
+        const blogByMarket: Record<string, { title: string; href: string; desc: string }[]> = {
+            luxury: [
+                { title: "Comment dominer Google Maps face aux concurrents", href: "/blog/google-maps-voler-clients-concurrents", desc: "Stratégies SEO local avancées" },
+                { title: "L'importance d'un audit SEO", href: "/blog/importance-audit-seo", desc: "Diagnostic complet" },
+                { title: "Google Business Profile : Guide complet", href: "/blog/google-business-profile-guide-complet", desc: "Optimisation fiche Google" }
+            ],
+            tech: [
+                { title: "Comment créer 50 pages locales en 10 min", href: "/blog/programmatic-seo-50-pages-locales", desc: "Programmatic SEO B2B" },
+                { title: "Checklist SEO 2026 : 30 points essentiels", href: "/blog/checklist-seo-2026", desc: "Audit technique complet" },
+                { title: "5 erreurs SEO qui coûtent 10 000€/an", href: "/blog/audit-seo-erreurs-qui-coutent-cher", desc: "Corrections prioritaires" }
+            ],
+            volume: [
+                { title: "Checklist SEO 2026 : 30 points essentiels", href: "/blog/checklist-seo-2026", desc: "Audit technique complet" },
+                { title: "SEO vs SEA : que choisir ?", href: "/blog/seo-vs-sea-que-choisir", desc: "Comparatif stratégique" },
+                { title: "L'importance d'un audit SEO", href: "/blog/importance-audit-seo", desc: "Diagnostic complet" }
+            ],
+            premium: [
+                { title: "SEO Local Nice : dominer le marché azuréen", href: "/blog/seo-local-nice", desc: "Guide régional Côte d'Azur" },
+                { title: "Google Business Profile : Guide complet", href: "/blog/google-business-profile-guide-complet", desc: "Optimisation fiche Google" },
+                { title: "Comment dominer Google Maps", href: "/blog/google-maps-voler-clients-concurrents", desc: "Stratégies avancées" }
+            ],
+            local: [
+                { title: "Pourquoi faire appel à un consultant SEO ?", href: "/blog/pourquoi-consultant-seo", desc: "Les avantages d'un expert SEO" },
+                { title: "Comment créer un site visible sur Google", href: "/blog/comment-creer-site-visible-google", desc: "Guide pratique SEO" },
+                { title: "L'importance d'un audit SEO", href: "/blog/importance-audit-seo", desc: "Diagnostic complet" }
+            ]
+        };
+
+        return blogByMarket[cityData.context.marketType] || blogByMarket.local;
+    };
+
+    const RELATED_BLOG_POSTS = getRelatedBlogPosts();
 
     // Avantages différenciants
     const ADVANTAGES = [

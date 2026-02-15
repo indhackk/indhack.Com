@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Award, Target, Zap } from "lucide-react";
+import { ArrowRight, Award, Target, Zap, CheckCircle, Users, Clock, Star, Globe, GraduationCap, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -79,6 +79,53 @@ export function AboutContent() {
                                     className="w-full h-auto object-cover"
                                 />
                             </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* E-E-A-T Stats - Trust Signals */}
+            <section className="py-12 bg-gray-50 border-b border-gray-100">
+                <div className="container mx-auto px-4">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-center"
+                        >
+                            <div className="text-3xl md:text-4xl font-bold text-sauge mb-1">7+</div>
+                            <div className="text-xs text-soft uppercase tracking-wider">Années d'expérience</div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="text-center"
+                        >
+                            <div className="text-3xl md:text-4xl font-bold text-sauge mb-1">50+</div>
+                            <div className="text-xs text-soft uppercase tracking-wider">Clients accompagnés</div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="text-center"
+                        >
+                            <div className="text-3xl md:text-4xl font-bold text-sauge mb-1">4.9</div>
+                            <div className="text-xs text-soft uppercase tracking-wider">Note moyenne</div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                            className="text-center"
+                        >
+                            <div className="text-3xl md:text-4xl font-bold text-sauge mb-1">17</div>
+                            <div className="text-xs text-soft uppercase tracking-wider">Villes couvertes</div>
                         </motion.div>
                     </div>
                 </div>
@@ -166,8 +213,76 @@ export function AboutContent() {
                 </div>
             </section>
 
-            {/* Services proposés */}
+            {/* Expertise & Compétences */}
             <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="text-center mb-10">
+                            <h2 className="text-2xl font-heading font-bold text-ink">
+                                Expertise & <span className="text-sauge">Compétences</span>
+                            </h2>
+                        </div>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            {/* Formation */}
+                            <div className="space-y-4">
+                                <h3 className="font-bold text-ink flex items-center gap-2">
+                                    <GraduationCap className="w-5 h-5 text-sauge" />
+                                    Formation
+                                </h3>
+                                <ul className="space-y-3">
+                                    <li className="flex items-start gap-3 text-soft text-sm">
+                                        <CheckCircle className="w-4 h-4 text-sauge mt-0.5 flex-shrink-0" />
+                                        <span>Double Master en Stratégie Digitale & UX Design</span>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-soft text-sm">
+                                        <CheckCircle className="w-4 h-4 text-sauge mt-0.5 flex-shrink-0" />
+                                        <span>Certification Google Analytics 4</span>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-soft text-sm">
+                                        <CheckCircle className="w-4 h-4 text-sauge mt-0.5 flex-shrink-0" />
+                                        <span>Formation continue SEO technique (Semrush Academy)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            {/* Compétences techniques */}
+                            <div className="space-y-4">
+                                <h3 className="font-bold text-ink flex items-center gap-2">
+                                    <Briefcase className="w-5 h-5 text-sauge" />
+                                    Compétences Techniques
+                                </h3>
+                                <ul className="space-y-3">
+                                    <li className="flex items-start gap-3 text-soft text-sm">
+                                        <CheckCircle className="w-4 h-4 text-sauge mt-0.5 flex-shrink-0" />
+                                        <span>SEO technique : Core Web Vitals, JavaScript SEO, Crawl Budget</span>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-soft text-sm">
+                                        <CheckCircle className="w-4 h-4 text-sauge mt-0.5 flex-shrink-0" />
+                                        <span>Développement web : Next.js, React, WordPress avancé</span>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-soft text-sm">
+                                        <CheckCircle className="w-4 h-4 text-sauge mt-0.5 flex-shrink-0" />
+                                        <span>Data : Google Search Console, Analytics, Looker Studio</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        {/* Outils */}
+                        <div className="mt-10 pt-8 border-t border-gray-100">
+                            <h3 className="font-bold text-ink text-center mb-6">Outils maîtrisés</h3>
+                            <div className="flex flex-wrap justify-center gap-3">
+                                {["Semrush", "Ahrefs", "Screaming Frog", "Google Search Console", "Google Analytics 4", "Looker Studio", "Figma", "WordPress", "Next.js", "Vercel"].map((tool) => (
+                                    <span key={tool} className="px-4 py-2 bg-gray-50 rounded-full text-xs font-medium text-ink">
+                                        {tool}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Services proposés */}
+            <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-10">
                         <h2 className="text-2xl font-heading font-bold text-ink">
