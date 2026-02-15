@@ -98,6 +98,12 @@ const nextConfig = {
                 destination: '/referencement-naturel',
                 permanent: true,
             },
+            // Page generate (ancienne fonctionnalité) → outils
+            {
+                source: '/generate',
+                destination: '/outils',
+                permanent: true,
+            },
             // ══════════════════════════════════════════════════════════════
             // REDIRECTIONS VILLES SUPPRIMEES → Villes proches
             // ══════════════════════════════════════════════════════════════
