@@ -455,8 +455,20 @@
     "https://indhack.com/pour-pauline": {
       "lastIndexed": "2026-02-13T22:23:39.024Z",
       "success": true
+    },
+    "https://indhack.com/blog/audit-seo-erreurs-qui-coutent-cher": {
+      "lastIndexed": "2026-02-15T20:41:16.720Z",
+      "success": true
+    },
+    "https://indhack.com/blog/google-maps-voler-clients-concurrents": {
+      "lastIndexed": "2026-02-15T20:41:17.503Z",
+      "success": true
+    },
+    "https://indhack.com/blog/programmatic-seo-50-pages-locales": {
+      "lastIndexed": "2026-02-15T20:41:18.223Z",
+      "success": true
     }
   },
-  "dailyCount": 1,
-  "lastReset": "Fri Feb 13 2026"
+  "dailyCount": 3,
+  "lastReset": "Sun Feb 15 2026"
 }

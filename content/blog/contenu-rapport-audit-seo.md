@@ -1,7 +1,7 @@
 ---
 title: "Audit SEO : que contient le rapport ?"
 description: "Découvrez en détail ce que contient un rapport d'audit SEO professionnel : analyses techniques, sémantiques, recommandations priorisées et plan d'action."
-date: "2026-01-28"
+date: "2026-01-18"
 category: "Audit"
 image: "/images/blog/rapport-audit-seo.jpg"
 author: "Indiana Aflalo"

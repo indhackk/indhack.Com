@@ -1,7 +1,7 @@
 ---
 title: "5 Erreurs SEO Invisibles Qui Vous Coûtent 10 000€ par An (À Corriger Ce Soir)"
 description: "Votre site perd de l'argent. Découvrez les 5 erreurs techniques invisibles (canonical, vitesse, indexation) qui tuent votre chiffre d'affaires. Guide correctif express."
-date: "2026-02-20"
+date: "2026-02-15"
 category: "Audit SEO"
 image: "/images/blog/seo-audit-money-flying-2026-02-15.webp"
 author: "Indiana Aflalo"

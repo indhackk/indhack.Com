@@ -1,7 +1,7 @@
 ---
 title: "Refonte de site web : comment ne pas perdre son SEO ?"
 description: "Guide complet pour réussir votre refonte de site sans perdre vos positions Google. Checklist, redirections, erreurs à éviter, planning."
-date: "2026-01-12"
+date: "2026-01-07"
 category: "Refonte"
 image: "/images/blog/refonte-site-seo.jpg"
 author: "Indiana Aflalo"

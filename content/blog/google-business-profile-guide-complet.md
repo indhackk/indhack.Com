@@ -1,7 +1,7 @@
 ---
 title: "Google Business Profile : le guide complet 2026"
 description: "Optimisez votre fiche Google Business Profile pour dominer le pack local. Guide étape par étape : création, optimisation, avis, posts, FAQ."
-date: "2026-01-18"
+date: "2026-01-11"
 category: "SEO Local"
 image: "/images/blog/google-business-profile.jpg"
 author: "Indiana Aflalo"

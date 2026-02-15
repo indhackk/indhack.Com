@@ -1,7 +1,7 @@
 ---
 title: "GEO : Comment être cité par ChatGPT et Gemini en 2026 ?"
 description: "Découvrez le Generative Engine Optimization (GEO), la nouvelle discipline indispensable pour dominer les réponses des IA génératives comme ChatGPT, Gemini et Perplexity."
-date: "2026-01-28"
+date: "2026-01-21"
 category: "IA & SEO"
 image: "/images/blog/geo-ia-seo.jpg"
 author: "Indiana Aflalo"

@@ -1,7 +1,7 @@
 ---
 title: "SEO vs SEA : que choisir pour votre entreprise ?"
 description: "Référencement naturel ou publicité Google Ads ? Comparatif complet SEO vs SEA : coûts, délais, ROI. Guide pour faire le bon choix selon votre situation."
-date: "2026-02-10"
+date: "2026-02-06"
 category: "Stratégie"
 image: "/images/blog/seo-vs-sea.jpg"
 author: "Indiana Aflalo"

@@ -1,7 +1,7 @@
 ---
 title: "Quelles sont les missions d'un consultant SEO ? Guide complet 2026"
 description: "Découvrez les missions principales d'un consultant SEO : audit technique, stratégie de contenu, netlinking, suivi des performances. Tout ce qu'un expert SEO fait pour votre site."
-date: "2026-02-01"
+date: "2026-01-25"
 category: "Métier"
 image: "/images/blog/missions-consultant-seo.jpg"
 author: "Indiana Aflalo"

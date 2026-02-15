@@ -1,7 +1,7 @@
 ---
 title: "SEO Local à Nice : Dominer le marché azuréen en 2026"
 description: "Comment apparaître en tête des recherches locales à Nice et dans les Alpes-Maritimes ? Guide complet du référencement local par une consultante SEO native de la région."
-date: "2026-01-20"
+date: "2026-01-14"
 category: "SEO Local"
 image: "/images/blog/seo-local-nice.jpg"
 author: "Indiana Aflalo"

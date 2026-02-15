@@ -1,7 +1,7 @@
 ---
 title: "Pourquoi faire appel à un consultant SEO en 2026 ?"
 description: "Investir dans un consultant SEO, c'est rentable ? Découvrez les 8 raisons concrètes de confier votre référencement à un expert plutôt que de tout faire seul."
-date: "2026-02-04"
+date: "2026-02-01"
 category: "Stratégie"
 image: "/images/blog/pourquoi-consultant-seo.jpg"
 author: "Indiana Aflalo"
