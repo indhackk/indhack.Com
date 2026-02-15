@@ -6,8 +6,8 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-antibes")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO Antibes | INDHACK, Consultante SEO`,
-    description: `Boostez votre visibilité sur Google à Antibes et Juan-les-Pins. Consultante SEO freelance experte. Audit gratuit pour PME, commerces et artisans. ✆ 06 61 13 97 48`,
+    title: `Consultant SEO Antibes | Expert Référencement Port Vauban - INDHACK`,
+    description: `Consultant SEO à Antibes : boostez votre visibilité Google. Experte référencement pour yachting, artisans et commerces du Vieil Antibes. Audit gratuit ✆ 06 61 13 97 48`,
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`
     },

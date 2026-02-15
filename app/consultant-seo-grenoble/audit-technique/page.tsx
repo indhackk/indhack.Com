@@ -7,8 +7,8 @@ const cityData = getCityBySlug("consultant-seo-grenoble")!;
 const serviceData = getServiceContent("audit-technique", "consultant-seo-grenoble")!;
 
 export const metadata: Metadata = {
-    title: "Audit Technique SEO Grenoble 38 | INDHACK, Consultante SEO",
-    description: "Expert SEO Grenoble. Audit technique chirurgical pour sites tech et e-commerce. Indexation, vitesse, architecture. Freelance indépendante.",
+    title: "Audit de Site Grenoble | Audit SEO Technique 38 - INDHACK",
+    description: "Audit de site à Grenoble : analyse technique complète pour sites tech et e-commerce. Indexation, vitesse, architecture. Consultante SEO freelance Isère.",
     openGraph: {
         title: "Audit Technique SEO Grenoble 38 | INDHACK, Consultante SEO",
         description: "Consultante SEO Grenoble. Analyse technique pointue de votre site.",

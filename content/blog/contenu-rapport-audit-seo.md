@@ -1,16 +1,18 @@
 ---
-title: "Audit SEO : que contient le rapport ?"
-description: "Découvrez en détail ce que contient un rapport d'audit SEO professionnel : analyses techniques, sémantiques, recommandations priorisées et plan d'action."
+title: "Rapport Audit SEO : Contenu Complet d'un Audit Professionnel [+ PDF]"
+description: "Que contient un rapport d'audit SEO professionnel ? Découvrez le contenu détaillé : analyse technique, sémantique, backlinks, plan d'action priorisé. Téléchargez notre exemple PDF."
 date: "2026-01-18"
 category: "Audit"
 image: "/images/blog/rapport-audit-seo.jpg"
 author: "Indiana Aflalo"
-keywords: ["rapport audit SEO", "audit SEO complet", "analyse SEO", "livrables audit", "recommandations SEO", "diagnostic site web"]
+keywords: ["rapport audit SEO", "rapport d'audit seo", "audit SEO complet", "rapport audit site web pdf", "contenu audit seo", "exemple rapport audit", "analyse SEO", "diagnostic site web"]
 ---
 
-Vous avez commandé un audit SEO, ou vous y pensez. Mais concrètement, **qu'allez-vous recevoir ?** Un PDF de 3 pages généré automatiquement, ou un vrai document stratégique ?
+Vous avez commandé un **rapport d'audit SEO**, ou vous y pensez. Mais concrètement, **qu'allez-vous recevoir ?** Un PDF de 3 pages généré automatiquement, ou un vrai document stratégique ?
 
 En tant que consultante SEO chez [INDHACK](/), je vous explique ce que doit contenir un **rapport d'audit professionnel** — et ce qui fait la différence entre un audit utile et un audit qui finit dans un tiroir.
+
+> **Télécharger un exemple :** [Checklist SEO 2026 en PDF](https://issuu.com/indhack/docs/checklist_seo_2026_les_30_points_essentiels_in) — Un aperçu des points analysés dans un rapport d'audit complet.
 
 ## La structure d'un rapport d'audit SEO complet
 

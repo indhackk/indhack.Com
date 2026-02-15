@@ -6,8 +6,8 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-cannes")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO Cannes | INDHACK, Consultante SEO`,
-    description: `Boostez votre visibilité sur Google à Cannes. Consultante SEO freelance experte de la Côte d'Azur. Audit gratuit pour PME, commerces et professions libérales. ✆ 06 61 13 97 48`,
+    title: `Consultant SEO Cannes | Expert Référencement Côte d'Azur - INDHACK`,
+    description: `Consultant SEO à Cannes : boostez votre visibilité Google. Experte référencement freelance Côte d'Azur. Audit gratuit PME, commerces, professions libérales ✆ 06 61 13 97 48`,
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`
     },

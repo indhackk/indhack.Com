@@ -129,6 +129,34 @@ export const FRENCH_CITIES: CityData[] = [
         }
     },
     {
+        name: "Juan-les-Pins",
+        slug: "consultant-seo-juan-les-pins",
+        zipCode: "06160",
+        lat: "43.5667",
+        lng: "7.1083",
+        region: "Provence-Alpes-Côte d'Azur",
+        department: "Alpes-Maritimes",
+        deptCode: "06",
+        population: "15 000",
+        description: "Juan-les-Pins, c'est le Saint-Tropez de la Côte d'Azur accessible : plages privées, clubs de nuit légendaires et le festival Jazz à Juan qui attire 70 000 visiteurs chaque été. Ici, la saison dure 4 mois mais génère le CA d'une année. Être invisible sur Google en juin, c'est perdre sa saison. IndHack positionne les établissements AVANT l'afflux estival.",
+        keyPoints: ["Jazz à Juan (70 000 visiteurs)", "Nightlife & beach clubs", "Pic saisonnier été"],
+        nearbyAreas: ["Antibes", "Golfe-Juan", "Vallauris", "Cannes"],
+        landmarks: ["Plage de Juan", "Pinède Gould", "Casino Eden", "Port Gallice"],
+        images: {
+            hero: { src: "/images/cities/juan-les-pins-plage.jpg", alt: "Consultant SEO Juan-les-Pins plage", title: "SEO Juan-les-Pins 06", keywords: ["SEO Juan-les-Pins", "référencement Juan-les-Pins"] },
+            workspace: { src: "/images/cities/juan-les-pins-festival.jpg", alt: "Expert SEO Juan-les-Pins Jazz", title: "Référencement naturel Juan-les-Pins", keywords: ["audit SEO Juan-les-Pins", "Jazz à Juan"] },
+            landmark: { src: "/images/cities/juan-les-pins-pinede.jpg", alt: "SEO local Juan-les-Pins Pinède", title: "SEO local Juan-les-Pins 06", keywords: ["SEO local Juan-les-Pins", "beach club"] }
+        },
+        context: {
+            marketType: "premium",
+            competitionLevel: "high",
+            targetClients: "gérants de plages privées, hôteliers saisonniers, restaurateurs, clubs de nuit et organisateurs d'événements",
+            localInsight: "75% du CA annuel se fait entre juin et septembre — le référencement doit être prêt AVANT la saison",
+            specificChallenges: ["Ultra-saisonnalité (4 mois)", "Concurrence Cannes et Saint-Tropez", "Clientèle jeune et internationale"],
+            businessTypes: ["Beach clubs", "Hôtellerie", "Nightlife", "Restauration estivale"]
+        }
+    },
+    {
         name: "Monaco",
         slug: "consultant-seo-monaco",
         zipCode: "98000",
