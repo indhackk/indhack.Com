@@ -26,7 +26,9 @@ export default function BrainCanvas() {
         let scene: THREE.Scene, camera: THREE.PerspectiveCamera, renderer: THREE.WebGLRenderer;
         let points: THREE.Points, lines: THREE.LineSegments;
         let frameId: number;
-        let run = true;
+        let run = true, drag = false;
+        let prev = { x: 0, y: 0 };
+        let dragOffsetX = 0, dragOffsetY = 0;
 
         const initThree = () => {
             if (cont.firstChild) cont.removeChild(cont.firstChild);
@@ -103,21 +105,52 @@ export default function BrainCanvas() {
             camera.position.z = 4;
 
             // Position initiale : vue de dessus (comme image cible)
-            // Inclinaison sur X pour voir les deux hémisphères par-dessus
             points.rotation.x = -Math.PI / 2;
             lines.rotation.x = -Math.PI / 2;
 
-            // Compteur pour la rotation
+            // Compteur pour la rotation automatique
             let rotationZ = 0;
+
+            // Interaction drag
+            const down = (e: MouseEvent | TouchEvent) => {
+                drag = true;
+                const p = 'touches' in e ? e.touches[0] : e;
+                prev.x = p.clientX; prev.y = p.clientY;
+            };
+
+            const move = (e: MouseEvent | TouchEvent) => {
+                if (!drag) return;
+                const p = 'touches' in e ? e.touches[0] : e;
+                const cx = p.clientX, cy = p.clientY;
+                dragOffsetX += (cy - prev.y) * 0.008;
+                dragOffsetY += (cx - prev.x) * 0.008;
+                prev.x = cx; prev.y = cy;
+            };
+
+            const up = () => { drag = false; };
+
+            cont.addEventListener('mousedown', down);
+            window.addEventListener('mousemove', move);
+            window.addEventListener('mouseup', up);
+            cont.addEventListener('touchstart', down, { passive: true });
+            window.addEventListener('touchmove', move, { passive: true });
+            window.addEventListener('touchend', up, { passive: true });
 
             const animate = () => {
                 if (!run) { frameId = requestAnimationFrame(animate); return; }
 
-                // Rotation lente sur l'axe Z (tourne sur lui-même vu de dessus)
-                rotationZ += 0.001;
+                // Rotation automatique très lente sur Z (1 tour en ~350 secondes)
+                rotationZ += 0.0003;
 
-                points.rotation.z = rotationZ;
-                lines.rotation.z = rotationZ;
+                // Appliquer rotation de base + drag
+                points.rotation.x = -Math.PI / 2 + dragOffsetX;
+                points.rotation.z = rotationZ + dragOffsetY;
+                lines.rotation.x = points.rotation.x;
+                lines.rotation.z = points.rotation.z;
+
+                // Friction pour retour progressif après drag
+                dragOffsetX *= 0.98;
+                dragOffsetY *= 0.98;
 
                 // Floating effect
                 const t = Date.now() * 0.001;
@@ -143,6 +176,12 @@ export default function BrainCanvas() {
 
             return () => {
                 window.removeEventListener('resize', handleResize);
+                cont.removeEventListener('mousedown', down);
+                window.removeEventListener('mousemove', move);
+                window.removeEventListener('mouseup', up);
+                cont.removeEventListener('touchstart', down);
+                window.removeEventListener('touchmove', move);
+                window.removeEventListener('touchend', up);
                 cancelAnimationFrame(frameId);
                 renderer.dispose();
             };
