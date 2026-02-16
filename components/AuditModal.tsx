@@ -176,7 +176,7 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                                     <Button
                                         type="submit"
                                         disabled={isSubmitting || submitStatus === 'success'}
-                                        className="w-full bg-sauge hover:bg-soft text-white transition-colors disabled:opacity-70"
+                                        className="w-full bg-accent hover:bg-accent-hover text-white transition-all hover:-translate-y-0.5 shadow-lg shadow-accent/20 disabled:opacity-70 disabled:hover:translate-y-0"
                                     >
                                         {isSubmitting ? (
                                             <>

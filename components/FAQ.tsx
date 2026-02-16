@@ -67,9 +67,9 @@ export function FAQ({ items = defaultFaqs, title = "Questions Fréquentes" }: FA
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.05 }}
-                            className={`rounded-3xl border transition-all duration-500 overflow-hidden ${openIndex === index
-                                ? 'bg-gray-50 border-sauge/20 shadow-xl'
-                                : 'bg-white border-gray-100 hover:border-gray-200'
+                            className={`rounded-3xl border transition-all duration-300 overflow-hidden ${openIndex === index
+                                ? 'bg-fond-clair border-sauge/30 shadow-xl shadow-ink/5'
+                                : 'bg-white border-line hover:border-sauge/20 hover:shadow-lg hover:shadow-ink/5'
                                 }`}
                         >
                             <button

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, IBM_Plex_Sans } from "next/font/google";
+import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import { ModalProvider } from "@/components/providers/ModalProvider";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
@@ -15,10 +15,10 @@ const spaceGrotesk = Space_Grotesk({
     display: "swap",
 });
 
-const ibmPlexSans = IBM_Plex_Sans({
+const inter = Inter({
     subsets: ["latin"],
-    variable: "--font-ibm-plex",
-    weight: ["300", "400", "500", "600"],
+    variable: "--font-inter",
+    weight: ["300", "400", "500", "600", "700"],
     display: "swap",
 });
 
@@ -138,7 +138,7 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
                 />
             </head>
-            <body className={`${spaceGrotesk.variable} ${ibmPlexSans.variable} font-body antialiased text-ink bg-white`}>
+            <body className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased text-ink bg-white`}>
                 {/* Google AdSense - loaded after content */}
                 <Script
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4620859186405862"

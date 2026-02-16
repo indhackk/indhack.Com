@@ -7,18 +7,20 @@
   --foreground: #2A3830;
 
   --ink: #2A3830;
-  --sauge: #8FA89A;
-  --soft: #6B7D74;
+  --sauge: #7BA393;
+  --soft: #556962;
   --line: #E4EBE7;
   --fond-clair: #FAFBFA;
+  --accent: #D4A853;
 }
 
 body {
-  font-family: var(--font-ibm-plex), sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
   color: #2A3830;
   background-color: #FFFFFF;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -27,19 +29,37 @@ h3,
 h4,
 .font-heading {
   font-family: var(--font-space-grotesk), sans-serif;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.03em;
 }
 
-/* Glassmorphism utility */
-.glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+/* Typography Scale - Plus imposant */
+h1 {
+  font-size: clamp(2.75rem, 8vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Body text légèrement plus grand */
+p, .text-base {
+  font-size: 1.0625rem;
+  line-height: 1.7;
 }
 
 /* Custom Selection */
 ::selection {
-  background: #8FA89A;
+  background: var(--sauge);
   color: white;
 }
 
@@ -53,26 +73,179 @@ h4,
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(143, 168, 154, 0.4);
+  background: rgba(123, 163, 147, 0.4);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(143, 168, 154, 0.6);
+  background: rgba(123, 163, 147, 0.6);
 }
 
-/* Typography Scale */
-h1 {
-  font-size: clamp(2.5rem, 7vw, 4.5rem);
-  font-weight: 700;
-  line-height: 1.1;
+/* ========================================
+   MICRO-INTERACTIONS & HOVER EFFECTS
+   ======================================== */
+
+/* Boutons - Effet lift + scale */
+.btn-primary {
+  @apply relative overflow-hidden transition-all duration-300 ease-out;
+  @apply hover:shadow-lg hover:shadow-sauge/20 hover:-translate-y-0.5;
+  @apply active:translate-y-0 active:shadow-md;
 }
 
-h2 {
-  font-size: clamp(1.75rem, 5vw, 3rem);
-  font-weight: 700;
-  line-height: 1.2;
+.btn-accent {
+  @apply relative overflow-hidden transition-all duration-300 ease-out;
+  @apply bg-accent text-white hover:bg-accent-hover;
+  @apply hover:shadow-lg hover:shadow-accent/30 hover:-translate-y-0.5;
+  @apply active:translate-y-0 active:shadow-md;
 }
+
+/* Cards - Lift effect élégant */
+.card-hover {
+  @apply transition-all duration-300 ease-out;
+  @apply hover:shadow-xl hover:shadow-ink/5 hover:-translate-y-1;
+  @apply hover:border-sauge/30;
+}
+
+/* Liens - Underline animé */
+.link-underline {
+  @apply relative inline-block;
+}
+
+.link-underline::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-0.5 bg-sauge;
+  @apply origin-left scale-x-0 transition-transform duration-300 ease-out;
+}
+
+.link-underline:hover::after {
+  @apply scale-x-100;
+}
+
+/* Glassmorphism amélioré */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(57, 72, 67, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   ANIMATIONS AU SCROLL
+   ======================================== */
+
+/* Fade in up - pour les sections */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children animation */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stagger-children.is-visible > *:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(5) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+.stagger-children.is-visible > *:nth-child(6) { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+
+.stagger-children > * {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* ========================================
+   GRADIENT & VISUAL EFFECTS
+   ======================================== */
+
+/* Hero gradient subtil */
+.hero-gradient {
+  background: linear-gradient(
+    180deg,
+    #394843 0%,
+    #3D4E48 50%,
+    #425550 100%
+  );
+}
+
+/* Accent gradient pour CTA spéciaux */
+.gradient-accent {
+  background: linear-gradient(135deg, #D4A853 0%, #E8C078 100%);
+}
+
+/* Glow effect sur hover */
+.glow-on-hover {
+  @apply transition-shadow duration-300;
+}
+
+.glow-on-hover:hover {
+  box-shadow: 0 0 30px rgba(212, 168, 83, 0.3);
+}
+
+/* Border gradient */
+.border-gradient {
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+}
+
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--sauge), var(--accent));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.border-gradient:hover::before {
+  opacity: 1;
+}
+
+/* ========================================
+   BOUTONS SPECIAL STYLES
+   ======================================== */
+
+/* CTA Principal - Ambre avec effet */
+.cta-primary {
+  @apply inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold;
+  @apply bg-accent text-white;
+  @apply transition-all duration-300 ease-out;
+  @apply hover:bg-accent-hover hover:shadow-xl hover:shadow-accent/25;
+  @apply hover:-translate-y-0.5;
+  @apply active:translate-y-0;
+}
+
+/* CTA Secondaire - Outline avec fill on hover */
+.cta-secondary {
+  @apply inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold;
+  @apply border-2 border-sauge text-sauge bg-transparent;
+  @apply transition-all duration-300 ease-out;
+  @apply hover:bg-sauge hover:text-white hover:shadow-lg hover:shadow-sauge/20;
+  @apply hover:-translate-y-0.5;
+  @apply active:translate-y-0;
+}
+
+/* ========================================
+   UTILITIES
+   ======================================== */
 
 /* Subtle Noise Effect */
 body::after {
@@ -83,7 +256,7 @@ body::after {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  opacity: 0.015;
+  opacity: 0.012;
   z-index: 9999;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
@@ -110,4 +283,28 @@ body::after {
 /* Smooth Scroll */
 html {
   scroll-behavior: smooth;
+}
+
+/* Focus visible pour accessibilité */
+*:focus-visible {
+  @apply outline-2 outline-offset-2 outline-sauge;
+}
+
+/* Image hover zoom subtil */
+.img-zoom {
+  @apply overflow-hidden;
+}
+
+.img-zoom img {
+  @apply transition-transform duration-500 ease-out;
+}
+
+.img-zoom:hover img {
+  @apply scale-105;
+}
+
+/* Text gradient */
+.text-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(135deg, var(--sauge) 0%, var(--accent) 100%);
 }

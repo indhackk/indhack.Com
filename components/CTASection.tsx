@@ -45,7 +45,7 @@ export function CTASection() {
                         <Button
                             size="lg"
                             onClick={openAuditModal}
-                            className="bg-sauge text-white hover:bg-white hover:text-ink rounded-full px-12 py-9 text-xl font-bold shadow-2xl shadow-sauge/30 group transition-all"
+                            className="bg-accent text-white hover:bg-accent-hover rounded-full px-12 py-9 text-xl font-bold shadow-2xl shadow-accent/30 group transition-all hover:-translate-y-0.5"
                         >
                             DÉBUTER L'AUDIT
                             <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />

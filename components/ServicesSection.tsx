@@ -92,7 +92,7 @@ export function ServicesSection() {
                                 href={service.href}
                                 className="group block h-full"
                             >
-                                <div className="relative h-full bg-gray-50 rounded-3xl p-10 hover:bg-white hover:shadow-2xl hover:shadow-sauge/10 border border-transparent hover:border-sauge/20 transition-all duration-500">
+                                <div className="relative h-full bg-fond-clair rounded-3xl p-10 hover:bg-white hover:shadow-2xl hover:shadow-ink/5 border border-line hover:border-sauge/30 transition-all duration-300 hover:-translate-y-1">
 
                                     {/* Icône */}
                                     <div className="mb-8 w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-sauge shadow-sm group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">

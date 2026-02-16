@@ -178,7 +178,7 @@ export function SEOScoreChecker() {
                                         <div className="flex flex-col gap-4 max-w-md mx-auto">
                                             <Button
                                                 onClick={openAuditModal}
-                                                className="w-full bg-sauge text-white hover:bg-white hover:text-ink rounded-full px-8 py-6 font-bold text-lg shadow-xl shadow-sauge/30"
+                                                className="w-full bg-accent text-white hover:bg-accent-hover rounded-full px-8 py-6 font-bold text-lg shadow-xl shadow-accent/30 transition-all hover:-translate-y-0.5"
                                             >
                                                 Recevoir mon Audit Complet (Gratuit)
                                                 <ArrowRight className="ml-2 w-5 h-5" />

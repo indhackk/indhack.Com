@@ -27,6 +27,8 @@ module.exports = {
                 'ink': '#2A3830',           // Texte principal, moins noir
                 'soft': '#556962',          // Texte secondaire - assombri pour WCAG AA
                 'line': '#E4EBE7',          // Bordures
+                'accent': '#D4A853',        // Ambre/doré pour CTA
+                'accent-hover': '#C49A47',  // Hover state
 
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
@@ -69,8 +71,8 @@ module.exports = {
             },
             fontFamily: {
                 heading: ['var(--font-space-grotesk)', 'sans-serif'],
-                body: ['var(--font-ibm-plex)', 'sans-serif'],
-                sans: ['var(--font-ibm-plex)', 'sans-serif'], // Default sans to body font
+                body: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+                sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
             },
             keyframes: {
                 "accordion-down": {
@@ -89,7 +91,28 @@ module.exports = {
                     to: { transform: "scaleX(1)" }
                 },
                 "fade-up": {
+                    from: { opacity: "0", transform: "translateY(20px)" },
                     to: { opacity: "1", transform: "translateY(0)" }
+                },
+                "fade-in": {
+                    from: { opacity: "0" },
+                    to: { opacity: "1" }
+                },
+                "slide-up": {
+                    from: { opacity: "0", transform: "translateY(30px)" },
+                    to: { opacity: "1", transform: "translateY(0)" }
+                },
+                "scale-in": {
+                    from: { opacity: "0", transform: "scale(0.95)" },
+                    to: { opacity: "1", transform: "scale(1)" }
+                },
+                "shimmer": {
+                    "0%": { backgroundPosition: "-200% 0" },
+                    "100%": { backgroundPosition: "200% 0" }
+                },
+                "pulse-soft": {
+                    "0%, 100%": { opacity: "1" },
+                    "50%": { opacity: "0.7" }
                 }
             },
             animation: {
@@ -97,7 +120,15 @@ module.exports = {
                 "accordion-up": "accordion-up 0.2s ease-out",
                 "float-final": "float-final 40s infinite alternate ease-in-out",
                 "underline-grow": "underline-grow 1s ease 0.4s forwards",
-                "fade-up": "fade-up 0.7s ease 0.35s forwards",
+                "fade-up": "fade-up 0.6s ease-out forwards",
+                "fade-in": "fade-in 0.4s ease-out forwards",
+                "slide-up": "slide-up 0.5s ease-out forwards",
+                "scale-in": "scale-in 0.3s ease-out forwards",
+                "shimmer": "shimmer 2s linear infinite",
+                "pulse-soft": "pulse-soft 2s ease-in-out infinite",
+            },
+            transitionTimingFunction: {
+                'bounce-soft': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
             },
         },
     },
