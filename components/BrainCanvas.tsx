@@ -9,7 +9,6 @@ export default function BrainCanvas() {
     useEffect(() => {
         if (!containerRef.current) return;
 
-        // Safety check if still on mobile (though parent should handle this)
         if (window.matchMedia("(max-width: 768px)").matches) return;
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
@@ -27,9 +26,7 @@ export default function BrainCanvas() {
         let scene: THREE.Scene, camera: THREE.PerspectiveCamera, renderer: THREE.WebGLRenderer;
         let points: THREE.Points, lines: THREE.LineSegments;
         let frameId: number;
-        let run = true, drag = false;
-        let prev = { x: 0, y: 0 };
-        let dragOffsetX = 0, dragOffsetY = 0;
+        let run = true;
 
         const initThree = () => {
             if (cont.firstChild) cont.removeChild(cont.firstChild);
@@ -49,8 +46,7 @@ export default function BrainCanvas() {
             d.position.set(5, 10, 8);
             scene.add(d);
 
-            const mobile = window.matchMedia('(max-width:768px)').matches;
-            const N = mobile ? 1200 : 2800;
+            const N = 2800;
 
             const geo = new THREE.BufferGeometry();
             const pos = new Float32Array(N * 3);
@@ -104,50 +100,19 @@ export default function BrainCanvas() {
             lines = new THREE.LineSegments(g2, m2);
             scene.add(lines);
 
-            // Position initiale : incliné vers l'arrière pour voir les deux hémisphères par-dessus
-            points.rotation.x = -0.5;
-            lines.rotation.x = -0.5;
-
             camera.position.z = 4;
 
-            const down = (e: MouseEvent | TouchEvent) => {
-                drag = true;
-                const p = 'touches' in e ? e.touches[0] : e;
-                prev.x = p.clientX; prev.y = p.clientY;
-            };
-
-            const move = (e: MouseEvent | TouchEvent) => {
-                if (!drag) return;
-                const p = 'touches' in e ? e.touches[0] : e;
-                const cx = p.clientX, cy = p.clientY;
-                dragOffsetY += (cx - prev.x) * 0.008;
-                dragOffsetX += (cy - prev.y) * 0.008;
-                prev.x = cx; prev.y = cy;
-            };
-
-            const up = () => { drag = false; };
-
-            cont.addEventListener('mousedown', down);
-            window.addEventListener('mousemove', move);
-            window.addEventListener('mouseup', up);
-            cont.addEventListener('touchstart', down, { passive: true });
-            window.addEventListener('touchmove', move, { passive: true });
-            window.addEventListener('touchend', up, { passive: true });
+            // Compteur pour la rotation
+            let rotationY = 0;
 
             const animate = () => {
                 if (!run) { frameId = requestAnimationFrame(animate); return; }
 
-                // Rotation automatique lente 360° (1 tour en ~100 secondes)
-                points.rotation.y += 0.001;
-                lines.rotation.y += 0.001;
+                // Rotation lente sur l'axe Y (tourne sur lui-même)
+                rotationY += 0.001;
 
-                // Interaction drag
-                points.rotation.x += (dragOffsetX - points.rotation.x) * 0.05;
-                points.rotation.y += (dragOffsetY) * 0.05;
-                dragOffsetY *= 0.95;
-
-                lines.rotation.x = points.rotation.x;
-                lines.rotation.y = points.rotation.y;
+                points.rotation.y = rotationY;
+                lines.rotation.y = rotationY;
 
                 // Floating effect
                 const t = Date.now() * 0.001;
@@ -173,12 +138,6 @@ export default function BrainCanvas() {
 
             return () => {
                 window.removeEventListener('resize', handleResize);
-                cont.removeEventListener('mousedown', down);
-                window.removeEventListener('mousemove', move);
-                window.removeEventListener('mouseup', up);
-                cont.removeEventListener('touchstart', down);
-                window.removeEventListener('touchmove', move);
-                window.removeEventListener('touchend', up);
                 cancelAnimationFrame(frameId);
                 renderer.dispose();
             };
