@@ -104,7 +104,10 @@ export default function BrainCanvas() {
             lines = new THREE.LineSegments(g2, m2);
             scene.add(lines);
 
-            // Position initiale : pas de rotation, la caméra voit les deux hémisphères
+            // Position initiale : incliné vers l'arrière pour voir les deux hémisphères par-dessus
+            points.rotation.x = -0.5;
+            lines.rotation.x = -0.5;
+
             camera.position.z = 4;
 
             const down = (e: MouseEvent | TouchEvent) => {
