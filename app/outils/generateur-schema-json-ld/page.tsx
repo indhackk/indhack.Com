@@ -4,13 +4,13 @@ import { SchemaGenerator } from "./SchemaGenerator";
 import { ArrowRight, Code2, Bot, FileCode, Search } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Générateur Schema JSON-LD Gratuit — Données Structurées | IndHack",
+    title: "Générateur Schema JSON-LD Gratuit — Données Structurées",
     description: "Créez vos données structurées en quelques clics. LocalBusiness, FAQPage, Article, Product... Générateur gratuit avec prévisualisation et validation.",
     alternates: {
         canonical: "https://indhack.com/outils/generateur-schema-json-ld"
     },
     openGraph: {
-        title: "Générateur Schema JSON-LD Gratuit | IndHack",
+        title: "Générateur Schema JSON-LD Gratuit",
         description: "Créez vos données structurées Schema.org en quelques clics. 9 types de schema supportés. Gratuit, sans inscription.",
         url: "https://indhack.com/outils/generateur-schema-json-ld",
         type: "website",
@@ -162,6 +162,78 @@ export default function GenerateurSchemaPage() {
                 <section className="py-12">
                     <div className="container mx-auto px-4">
                         <SchemaGenerator />
+                    </div>
+                </section>
+
+                {/* Why Schema Section */}
+                <section className="py-16">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-3xl font-heading font-bold text-ink mb-8 text-center">
+                                Les données structurées au service de votre visibilité
+                            </h2>
+                            <div className="prose prose-lg max-w-none text-soft mb-12">
+                                <p>
+                                    Les schémas JSON-LD permettent aux moteurs de recherche et aux <strong className="text-ink">IA génératives</strong> de comprendre précisément le contenu de vos pages. C'est l'un des piliers d'une <Link href="/referencement-naturel" className="text-sauge hover:underline">stratégie de référencement naturel</Link> efficace.
+                                </p>
+                                <p>
+                                    Un <Link href="/audit-seo" className="text-sauge hover:underline">audit SEO professionnel</Link> vérifie systématiquement la présence et la validité de ces balises. Vous pouvez aussi utiliser notre <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">testeur de visibilité IA</Link> pour voir si vos schémas sont correctement détectés.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Maillage Section */}
+                <section className="py-12 bg-gray-50">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                                Ressources SEO IndHack
+                            </h2>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h3 className="font-bold text-ink mb-4">Articles SEO & données structurées</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/blog/importance-audit-seo" className="text-sauge hover:underline">
+                                                L'importance d'un audit SEO pour votre site
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog/contenu-rapport-audit-seo" className="text-sauge hover:underline">
+                                                Que contient un rapport d'audit SEO ?
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog/pourquoi-consultant-seo" className="text-sauge hover:underline">
+                                                Pourquoi travailler avec un consultant SEO
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-ink mb-4">Expertise SEO locale</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/consultant-seo-nice" className="text-sauge hover:underline">
+                                                Consultante SEO à Nice
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-cannes" className="text-sauge hover:underline">
+                                                Consultante SEO à Cannes
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-antibes" className="text-sauge hover:underline">
+                                                Consultante SEO à Antibes
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 

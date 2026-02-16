@@ -7,6 +7,7 @@ import {
     Loader2,
     CheckCircle2,
     XCircle,
+    MinusCircle,
     ExternalLink,
     Copy,
     Check,
@@ -20,6 +21,7 @@ import {
     Award,
     Layout,
     AlertTriangle,
+    Zap,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -28,13 +30,24 @@ interface CrawlerStatus {
     agent: string;
     description: string;
     company: string;
-    allowed: boolean;
+    status: "allowed" | "blocked" | "not_mentioned";
+    critical: boolean;
+}
+
+interface CheckItem {
+    label: string;
+    status: "success" | "warning" | "error";
+    detail: string;
+    points: number;
+    maxPoints: number;
+    fixUrl?: string;
+    fixLabel?: string;
 }
 
 interface CategoryScore {
     score: number;
     maxScore: number;
-    details: string[];
+    checks: CheckItem[];
 }
 
 interface VisibilityResult {
@@ -42,7 +55,7 @@ interface VisibilityResult {
     timestamp: string;
     score: number;
     maxScore: number;
-    level: "invisible" | "partial" | "visible" | "optimized";
+    level: "invisible" | "partial" | "visible" | "excellent";
     levelLabel: string;
     categories: {
         accessibilite: CategoryScore;
@@ -51,23 +64,27 @@ interface VisibilityResult {
         format: CategoryScore;
     };
     crawlers: CrawlerStatus[];
-    recommendations: string[];
+    recommendations: { text: string; fixUrl?: string; fixLabel?: string; priority: number }[];
     pageTitle: string;
+    metaDescription: string;
+    wordCount: number;
+    responseTime: number;
+    hasLlmsTxt: boolean;
     cached?: boolean;
 }
 
 const LEVEL_CONFIG = {
-    invisible: { color: "text-red-500", bg: "bg-red-500", bgLight: "bg-red-50", border: "border-red-200", icon: EyeOff },
-    partial: { color: "text-amber-500", bg: "bg-amber-500", bgLight: "bg-amber-50", border: "border-amber-200", icon: Eye },
-    visible: { color: "text-emerald-500", bg: "bg-emerald-500", bgLight: "bg-emerald-50", border: "border-emerald-200", icon: Eye },
-    optimized: { color: "text-violet-500", bg: "bg-violet-500", bgLight: "bg-violet-50", border: "border-violet-200", icon: Sparkles },
+    invisible: { color: "text-red-500", bg: "bg-red-500", bgLight: "bg-red-50", border: "border-red-200", gradient: "from-red-500 to-red-600", icon: EyeOff },
+    partial: { color: "text-amber-500", bg: "bg-amber-500", bgLight: "bg-amber-50", border: "border-amber-200", gradient: "from-amber-500 to-orange-500", icon: Eye },
+    visible: { color: "text-emerald-500", bg: "bg-emerald-500", bgLight: "bg-emerald-50", border: "border-emerald-200", gradient: "from-emerald-500 to-green-500", icon: Eye },
+    excellent: { color: "text-violet-500", bg: "bg-violet-500", bgLight: "bg-violet-50", border: "border-violet-200", gradient: "from-violet-500 to-purple-600", icon: Sparkles },
 };
 
 const CATEGORY_CONFIG = {
-    accessibilite: { label: "Accessibilité IA", icon: Shield, color: "text-blue-500", bg: "bg-blue-500" },
-    semantique: { label: "Richesse Sémantique", icon: FileText, color: "text-emerald-500", bg: "bg-emerald-500" },
-    eeat: { label: "Signaux E-E-A-T", icon: Award, color: "text-amber-500", bg: "bg-amber-500" },
-    format: { label: "Format IA-Friendly", icon: Layout, color: "text-violet-500", bg: "bg-violet-500" },
+    accessibilite: { label: "Accessibilité IA", icon: Shield, color: "text-blue-500", bg: "bg-blue-500", bgLight: "bg-blue-50" },
+    semantique: { label: "Richesse Sémantique", icon: FileText, color: "text-emerald-500", bg: "bg-emerald-500", bgLight: "bg-emerald-50" },
+    eeat: { label: "Signaux E-E-A-T", icon: Award, color: "text-amber-500", bg: "bg-amber-500", bgLight: "bg-amber-50" },
+    format: { label: "Format IA-Friendly", icon: Layout, color: "text-violet-500", bg: "bg-violet-500", bgLight: "bg-violet-50" },
 };
 
 function VisibilityGauge({ score, level, levelLabel }: { score: number; level: VisibilityResult["level"]; levelLabel: string }) {
@@ -77,24 +94,29 @@ function VisibilityGauge({ score, level, levelLabel }: { score: number; level: V
     const strokeDashoffset = circumference - (score / 100) * circumference;
 
     return (
-        <div className="relative w-52 h-52 mx-auto">
-            <svg className="w-full h-full transform -rotate-90">
-                <circle cx="104" cy="104" r="90" stroke="currentColor" strokeWidth="14" fill="none" className="text-gray-200" />
+        <div className="relative w-56 h-56 mx-auto">
+            <svg className="w-full h-full transform -rotate-90" viewBox="0 0 208 208">
+                <circle cx="104" cy="104" r="90" stroke="currentColor" strokeWidth="12" fill="none" className="text-gray-100" />
                 <motion.circle
                     cx="104" cy="104" r="90"
-                    stroke="currentColor"
-                    strokeWidth="14"
+                    stroke="url(#gaugeGradient)"
+                    strokeWidth="12"
                     fill="none"
                     strokeLinecap="round"
-                    className={config.color}
                     strokeDasharray={circumference}
                     initial={{ strokeDashoffset: circumference }}
                     animate={{ strokeDashoffset }}
                     transition={{ duration: 1.5, ease: "easeOut" }}
                 />
+                <defs>
+                    <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" className={`${config.color}`} stopColor="currentColor" />
+                        <stop offset="100%" className={`${config.color}`} stopColor="currentColor" />
+                    </linearGradient>
+                </defs>
             </svg>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <Icon className={`w-8 h-8 ${config.color} mb-1`} />
+                <Icon className={`w-8 h-8 ${config.color} mb-2`} />
                 <motion.span
                     className={`text-5xl font-bold ${config.color}`}
                     initial={{ scale: 0 }}
@@ -103,38 +125,76 @@ function VisibilityGauge({ score, level, levelLabel }: { score: number; level: V
                 >
                     {score}
                 </motion.span>
-                <span className="text-sm text-soft">/100</span>
-                <span className={`text-sm font-bold mt-1 ${config.color}`}>{levelLabel}</span>
+                <span className="text-sm text-soft font-medium">/100</span>
             </div>
         </div>
     );
 }
 
 function CrawlerCard({ crawler, index }: { crawler: CrawlerStatus; index: number }) {
+    const statusConfig = {
+        allowed: { icon: CheckCircle2, color: "text-emerald-500", bg: "bg-emerald-50", border: "border-emerald-200", label: "Autorisé" },
+        blocked: { icon: XCircle, color: "text-red-500", bg: "bg-red-50", border: "border-red-200", label: "Bloqué" },
+        not_mentioned: { icon: MinusCircle, color: "text-gray-400", bg: "bg-gray-50", border: "border-gray-200", label: "Non spécifié" },
+    };
+    const config = statusConfig[crawler.status];
+    const Icon = config.icon;
+
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.05 }}
-            className={`p-3 rounded-xl border ${crawler.allowed
-                    ? "bg-emerald-50 border-emerald-200"
-                    : "bg-red-50 border-red-200"
-                }`}
+            className={`p-3 rounded-xl border ${config.bg} ${config.border}`}
         >
             <div className="flex items-center gap-3">
-                {crawler.allowed ? (
-                    <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
-                ) : (
-                    <XCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
-                )}
+                <Icon className={`w-5 h-5 ${config.color} flex-shrink-0`} />
                 <div className="min-w-0 flex-1">
-                    <div className="font-bold text-ink text-sm">{crawler.name}</div>
-                    <div className="text-xs text-soft truncate">{crawler.description}</div>
+                    <div className="flex items-center gap-2">
+                        <span className="font-bold text-ink text-sm">{crawler.name}</span>
+                        {crawler.critical && (
+                            <span className="text-[10px] bg-violet-100 text-violet-600 px-1.5 py-0.5 rounded font-medium">Critique</span>
+                        )}
+                    </div>
+                    <div className="text-xs text-soft truncate">{crawler.company}</div>
                 </div>
-                <span className={`text-xs font-medium px-2 py-1 rounded-full ${crawler.allowed ? "bg-emerald-100 text-emerald-700" : "bg-red-100 text-red-700"
-                    }`}>
-                    {crawler.allowed ? "Autorisé" : "Bloqué"}
+                <span className={`text-xs font-medium px-2 py-1 rounded-full ${crawler.status === "allowed" ? "bg-emerald-100 text-emerald-700" : crawler.status === "blocked" ? "bg-red-100 text-red-700" : "bg-gray-100 text-gray-600"}`}>
+                    {config.label}
                 </span>
+            </div>
+        </motion.div>
+    );
+}
+
+function CheckItemRow({ check, index }: { check: CheckItem; index: number }) {
+    const statusConfig = {
+        success: { icon: CheckCircle2, color: "text-emerald-500" },
+        warning: { icon: AlertTriangle, color: "text-amber-500" },
+        error: { icon: XCircle, color: "text-red-500" },
+    };
+    const config = statusConfig[check.status];
+    const Icon = config.icon;
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.05 }}
+            className="flex items-start gap-3 py-2"
+        >
+            <Icon className={`w-4 h-4 ${config.color} flex-shrink-0 mt-0.5`} />
+            <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between gap-2">
+                    <span className="text-sm font-medium text-ink">{check.label}</span>
+                    <span className="text-xs text-soft">{check.points}/{check.maxPoints} pts</span>
+                </div>
+                <p className="text-xs text-soft mt-0.5">{check.detail}</p>
+                {check.fixUrl && (
+                    <Link href={check.fixUrl} className="inline-flex items-center gap-1 text-xs text-violet-600 hover:underline mt-1">
+                        {check.fixLabel || "Corriger"}
+                        <ArrowRight className="w-3 h-3" />
+                    </Link>
+                )}
             </div>
         </motion.div>
     );
@@ -146,17 +206,20 @@ function CategoryCard({ category, data }: { category: keyof typeof CATEGORY_CONF
     const percentage = Math.round((data.score / data.maxScore) * 100);
 
     return (
-        <div className="bg-white rounded-xl border border-line p-5">
+        <div className={`rounded-2xl border border-line bg-white p-5 hover:shadow-lg transition-shadow`}>
             <div className="flex items-center gap-3 mb-4">
-                <div className={`w-10 h-10 rounded-lg ${config.bg}/10 flex items-center justify-center`}>
+                <div className={`w-10 h-10 rounded-xl ${config.bgLight} flex items-center justify-center`}>
                     <Icon className={`w-5 h-5 ${config.color}`} />
                 </div>
                 <div className="flex-1">
                     <div className="font-bold text-ink">{config.label}</div>
                     <div className="text-sm text-soft">{data.score}/{data.maxScore} points</div>
                 </div>
+                <div className={`text-2xl font-bold ${percentage >= 80 ? "text-emerald-500" : percentage >= 50 ? "text-amber-500" : "text-red-500"}`}>
+                    {percentage}%
+                </div>
             </div>
-            <div className="h-2 bg-gray-100 rounded-full overflow-hidden mb-3">
+            <div className="h-2 bg-gray-100 rounded-full overflow-hidden mb-4">
                 <motion.div
                     className={`h-full ${config.bg}`}
                     initial={{ width: 0 }}
@@ -164,14 +227,11 @@ function CategoryCard({ category, data }: { category: keyof typeof CATEGORY_CONF
                     transition={{ duration: 1, delay: 0.3 }}
                 />
             </div>
-            <ul className="space-y-1">
-                {data.details.map((detail, i) => (
-                    <li key={i} className="text-xs text-soft flex items-start gap-2">
-                        <span className={`w-1.5 h-1.5 rounded-full ${config.bg} mt-1.5 flex-shrink-0`} />
-                        {detail}
-                    </li>
+            <div className="divide-y divide-gray-100">
+                {data.checks.map((check, i) => (
+                    <CheckItemRow key={i} check={check} index={i} />
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }
@@ -209,7 +269,7 @@ export function TesteurVisibiliteIA() {
     };
 
     const handleCopyUrl = () => {
-        const shareUrl = `${window.location.origin}/outils/testeur-visibilite-ia?url=${encodeURIComponent(result?.url || "")}`;
+        const shareUrl = `${window.location.origin}/outils/testeur-visibilite-ia?score=${result?.score}`;
         navigator.clipboard.writeText(shareUrl);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
@@ -221,7 +281,8 @@ export function TesteurVisibiliteIA() {
         setError(null);
     };
 
-    const allowedCount = result?.crawlers.filter(c => c.allowed).length || 0;
+    const allowedCount = result?.crawlers.filter(c => c.status === "allowed" || c.status === "not_mentioned").length || 0;
+    const blockedCount = result?.crawlers.filter(c => c.status === "blocked").length || 0;
     const totalCrawlers = result?.crawlers.length || 0;
 
     return (
@@ -265,7 +326,7 @@ export function TesteurVisibiliteIA() {
                         <button
                             type="submit"
                             disabled={loading || !url.trim()}
-                            className="w-full bg-violet-600 text-white py-4 px-8 rounded-xl font-bold text-lg hover:bg-violet-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-3"
+                            className="w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white py-4 px-8 rounded-xl font-bold text-lg hover:from-violet-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-3 shadow-lg shadow-violet-500/25"
                         >
                             {loading ? (
                                 <>
@@ -274,14 +335,14 @@ export function TesteurVisibiliteIA() {
                                 </>
                             ) : (
                                 <>
-                                    <Bot className="w-5 h-5" />
+                                    <Zap className="w-5 h-5" />
                                     Tester ma visibilité IA
                                 </>
                             )}
                         </button>
 
                         <p className="text-center text-sm text-soft">
-                            Gratuit • Sans inscription • Analyse 8 crawlers IA + 4 catégories de signaux GEO
+                            Gratuit • Sans inscription • 8 crawlers IA + 16 signaux GEO analysés
                         </p>
                     </form>
 
@@ -293,12 +354,12 @@ export function TesteurVisibiliteIA() {
                                 exit={{ opacity: 0 }}
                                 className="mt-8 space-y-3"
                             >
-                                {["Connexion au site...", "Analyse du robots.txt...", "Vérification des crawlers IA...", "Analyse sémantique..."].map((text, i) => (
+                                {["Connexion au site...", "Analyse du robots.txt et llms.txt...", "Vérification des 8 crawlers IA...", "Analyse sémantique et E-E-A-T...", "Calcul du score GEO..."].map((text, i) => (
                                     <motion.div
                                         key={text}
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: i * 0.8 }}
+                                        transition={{ delay: i * 0.6 }}
                                         className="flex items-center gap-3 text-soft"
                                     >
                                         <div className="w-2 h-2 bg-violet-500 rounded-full animate-pulse" />
@@ -314,78 +375,103 @@ export function TesteurVisibiliteIA() {
             {/* Results */}
             {result && (
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8">
-                    {/* Header */}
-                    <div className={`rounded-2xl shadow-xl border p-8 ${LEVEL_CONFIG[result.level].bgLight} ${LEVEL_CONFIG[result.level].border}`}>
-                        <div className="flex flex-col lg:flex-row items-center gap-8">
-                            <VisibilityGauge score={result.score} level={result.level} levelLabel={result.levelLabel} />
-                            <div className="flex-1 text-center lg:text-left">
-                                <h2 className="text-2xl font-bold text-ink mb-2">{result.pageTitle}</h2>
-                                <a
-                                    href={result.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-violet-600 hover:underline flex items-center justify-center lg:justify-start gap-1"
-                                >
-                                    {result.url}
-                                    <ExternalLink className="w-4 h-4" />
-                                </a>
-                                {result.cached && (
-                                    <p className="text-xs text-soft mt-2">Résultat mis en cache</p>
-                                )}
-                                <div className="flex items-center justify-center lg:justify-start gap-3 mt-4">
-                                    <button
-                                        onClick={handleCopyUrl}
-                                        className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors border border-line"
+                    {/* Score Header */}
+                    <div className={`rounded-3xl overflow-hidden shadow-2xl border ${LEVEL_CONFIG[result.level].border}`}>
+                        <div className={`bg-gradient-to-br ${LEVEL_CONFIG[result.level].gradient} p-8 text-white`}>
+                            <div className="flex flex-col lg:flex-row items-center gap-8">
+                                <div className="bg-white/10 backdrop-blur rounded-2xl p-6">
+                                    <VisibilityGauge score={result.score} level={result.level} levelLabel={result.levelLabel} />
+                                </div>
+                                <div className="flex-1 text-center lg:text-left">
+                                    {(() => {
+                                        const LevelIcon = LEVEL_CONFIG[result.level].icon;
+                                        return (
+                                            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur px-3 py-1 rounded-full text-sm font-medium mb-3">
+                                                {LevelIcon && <LevelIcon className="w-4 h-4" />}
+                                                {result.levelLabel}
+                                            </div>
+                                        );
+                                    })()}
+                                    <h2 className="text-2xl font-bold mb-2 line-clamp-1">{result.pageTitle}</h2>
+                                    <a
+                                        href={result.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-white/80 hover:text-white flex items-center justify-center lg:justify-start gap-1 text-sm"
                                     >
-                                        {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                                        {copied ? "Copié !" : "Partager"}
-                                    </button>
-                                    <button
-                                        onClick={handleNewTest}
-                                        className="flex items-center gap-2 px-4 py-2 bg-violet-600 text-white rounded-lg text-sm font-medium hover:bg-violet-700 transition-colors"
-                                    >
-                                        <RefreshCw className="w-4 h-4" />
-                                        Nouveau test
-                                    </button>
+                                        {result.url}
+                                        <ExternalLink className="w-4 h-4" />
+                                    </a>
+                                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mt-4 text-sm text-white/70">
+                                        <span>{result.wordCount} mots</span>
+                                        <span>•</span>
+                                        <span>{result.responseTime}ms</span>
+                                        {result.hasLlmsTxt && (
+                                            <>
+                                                <span>•</span>
+                                                <span className="text-white flex items-center gap-1">
+                                                    <CheckCircle2 className="w-3 h-3" /> llms.txt
+                                                </span>
+                                            </>
+                                        )}
+                                        {result.cached && (
+                                            <>
+                                                <span>•</span>
+                                                <span>Cache</span>
+                                            </>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                        <div className="bg-white p-4 flex items-center justify-center gap-3">
+                            <button
+                                onClick={handleCopyUrl}
+                                className="flex items-center gap-2 px-5 py-2.5 bg-gray-100 rounded-xl text-sm font-medium hover:bg-gray-200 transition-colors"
+                            >
+                                {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                                {copied ? "Copié !" : "Partager mes résultats"}
+                            </button>
+                            <button
+                                onClick={handleNewTest}
+                                className="flex items-center gap-2 px-5 py-2.5 bg-violet-600 text-white rounded-xl text-sm font-medium hover:bg-violet-700 transition-colors"
+                            >
+                                <RefreshCw className="w-4 h-4" />
+                                Nouveau test
+                            </button>
                         </div>
                     </div>
 
                     {/* AI Crawlers */}
                     <div className="bg-white rounded-2xl shadow-xl border border-line p-6 md:p-8">
                         <div className="flex items-center justify-between mb-6">
-                            <h3 className="text-xl font-bold text-ink">Crawlers IA</h3>
-                            <span className={`px-3 py-1 rounded-full text-sm font-medium ${allowedCount >= 6 ? "bg-emerald-100 text-emerald-700" :
-                                    allowedCount >= 4 ? "bg-amber-100 text-amber-700" :
-                                        "bg-red-100 text-red-700"
-                                }`}>
-                                {allowedCount}/{totalCrawlers} autorisés
-                            </span>
+                            <h3 className="text-xl font-bold text-ink">Crawlers IA ({allowedCount}/{totalCrawlers} accessibles)</h3>
+                            {blockedCount > 0 && (
+                                <Link
+                                    href="/outils/generateur-robots-txt"
+                                    className="text-sm text-violet-600 hover:underline flex items-center gap-1"
+                                >
+                                    Configurer robots.txt
+                                    <ArrowRight className="w-3 h-3" />
+                                </Link>
+                            )}
                         </div>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
                             {result.crawlers.map((crawler, i) => (
                                 <CrawlerCard key={crawler.agent} crawler={crawler} index={i} />
                             ))}
                         </div>
-                        {allowedCount < totalCrawlers && (
+                        {blockedCount > 0 && (
                             <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-xl">
                                 <div className="flex items-start gap-3">
                                     <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
                                     <div>
                                         <p className="text-sm text-amber-800 font-medium">
-                                            {totalCrawlers - allowedCount} crawler(s) bloqué(s)
+                                            {blockedCount} crawler(s) bloqué(s) dans votre robots.txt
                                         </p>
                                         <p className="text-xs text-amber-700 mt-1">
-                                            Configurez votre robots.txt pour autoriser ces crawlers
+                                            Ces IA ne peuvent pas accéder à votre contenu. Utilisez notre générateur pour les autoriser.
                                         </p>
-                                        <Link
-                                            href="/outils/generateur-robots-txt"
-                                            className="inline-flex items-center gap-1 text-xs text-amber-700 font-medium hover:underline mt-2"
-                                        >
-                                            Utiliser le générateur robots.txt
-                                            <ArrowRight className="w-3 h-3" />
-                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -404,7 +490,7 @@ export function TesteurVisibiliteIA() {
                         <div className="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl border border-violet-200 p-6 md:p-8">
                             <h3 className="text-xl font-bold text-ink mb-6 flex items-center gap-2">
                                 <Sparkles className="w-5 h-5 text-violet-500" />
-                                Recommandations prioritaires
+                                Actions prioritaires pour améliorer votre score
                             </h3>
                             <div className="space-y-3">
                                 {result.recommendations.map((rec, i) => (
@@ -413,12 +499,23 @@ export function TesteurVisibiliteIA() {
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: i * 0.1 }}
-                                        className="flex items-start gap-3 bg-white p-4 rounded-xl border border-violet-100"
+                                        className="flex items-start gap-4 bg-white p-4 rounded-xl border border-violet-100"
                                     >
-                                        <span className="w-6 h-6 rounded-full bg-violet-500 text-white text-sm font-bold flex items-center justify-center flex-shrink-0">
+                                        <span className="w-7 h-7 rounded-full bg-violet-500 text-white text-sm font-bold flex items-center justify-center flex-shrink-0">
                                             {i + 1}
                                         </span>
-                                        <span className="text-ink">{rec}</span>
+                                        <div className="flex-1">
+                                            <p className="text-ink">{rec.text}</p>
+                                            {rec.fixUrl && (
+                                                <Link
+                                                    href={rec.fixUrl}
+                                                    className="inline-flex items-center gap-1 text-sm text-violet-600 font-medium hover:underline mt-2"
+                                                >
+                                                    {rec.fixLabel || "Corriger maintenant"}
+                                                    <ArrowRight className="w-3 h-3" />
+                                                </Link>
+                                            )}
+                                        </div>
                                     </motion.div>
                                 ))}
                             </div>
@@ -426,48 +523,55 @@ export function TesteurVisibiliteIA() {
                     )}
 
                     {/* CTA */}
-                    {result.score < 70 && (
-                        <div className="bg-gradient-to-br from-violet-600 to-purple-600 rounded-2xl p-8 text-center text-white">
-                            <h3 className="text-2xl font-bold mb-3">
-                                Les IA ne vous trouvent pas encore
-                            </h3>
-                            <p className="text-white/80 mb-6 max-w-xl mx-auto">
-                                Je peux optimiser votre visibilité GEO (Generative Engine Optimization)
-                                sur ChatGPT, Perplexity et les autres moteurs IA.
-                            </p>
+                    <div className="bg-gradient-to-br from-ink to-fond-sombre rounded-2xl p-8 text-center text-white">
+                        <h3 className="text-2xl font-bold mb-3">
+                            {result.score >= 70 ? "Optimisez encore votre visibilité GEO" : "Passez à l'action avec un expert"}
+                        </h3>
+                        <p className="text-white/70 mb-6 max-w-xl mx-auto">
+                            Le GEO (Generative Engine Optimization) est la prochaine révolution du référencement.
+                            Je vous accompagne pour apparaître dans les réponses de ChatGPT, Perplexity et Claude.
+                        </p>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center gap-2 bg-white text-violet-600 px-8 py-4 rounded-full font-bold hover:bg-white/90 transition-colors"
+                                className="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-colors"
                             >
-                                Demander un audit GEO complet
+                                Demander un audit GEO gratuit
                                 <ArrowRight className="w-5 h-5" />
                             </Link>
+                            <Link
+                                href="/audit-seo"
+                                className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+                            >
+                                En savoir plus sur l'audit SEO
+                                <ArrowRight className="w-4 h-4" />
+                            </Link>
                         </div>
-                    )}
+                    </div>
 
                     {/* Related Tools */}
                     <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                        <h3 className="text-lg font-bold text-ink mb-4">Outils complémentaires</h3>
+                        <h3 className="text-lg font-bold text-ink mb-4">Améliorez votre score avec nos outils gratuits</h3>
                         <div className="grid md:grid-cols-3 gap-4">
                             <Link
                                 href="/outils/generateur-robots-txt"
-                                className="p-4 bg-white rounded-xl border border-line hover:border-violet-300 transition-all group"
+                                className="p-4 bg-white rounded-xl border border-line hover:border-violet-300 hover:shadow-lg transition-all group"
                             >
                                 <Shield className="w-6 h-6 text-cyan-500 mb-2" />
                                 <div className="font-bold text-ink group-hover:text-violet-600 transition-colors">Générateur robots.txt</div>
-                                <p className="text-sm text-soft">Configurez vos crawlers IA</p>
+                                <p className="text-sm text-soft">Autorisez les crawlers IA en 1 clic</p>
                             </Link>
                             <Link
                                 href="/outils/generateur-schema-json-ld"
-                                className="p-4 bg-white rounded-xl border border-line hover:border-violet-300 transition-all group"
+                                className="p-4 bg-white rounded-xl border border-line hover:border-violet-300 hover:shadow-lg transition-all group"
                             >
                                 <FileText className="w-6 h-6 text-blue-500 mb-2" />
-                                <div className="font-bold text-ink group-hover:text-violet-600 transition-colors">Générateur Schema</div>
+                                <div className="font-bold text-ink group-hover:text-violet-600 transition-colors">Générateur Schema JSON-LD</div>
                                 <p className="text-sm text-soft">Créez vos données structurées</p>
                             </Link>
                             <Link
                                 href="/outils/audit-seo-gratuit"
-                                className="p-4 bg-white rounded-xl border border-line hover:border-violet-300 transition-all group"
+                                className="p-4 bg-white rounded-xl border border-line hover:border-violet-300 hover:shadow-lg transition-all group"
                             >
                                 <Award className="w-6 h-6 text-emerald-500 mb-2" />
                                 <div className="font-bold text-ink group-hover:text-violet-600 transition-colors">Audit SEO Gratuit</div>

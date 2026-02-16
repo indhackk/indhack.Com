@@ -7,10 +7,10 @@ const cityData = getCityBySlug("consultant-seo-paris")!;
 const serviceData = getServiceContent("audit-technique", "consultant-seo-paris")!;
 
 export const metadata: Metadata = {
-    title: "Audit Technique SEO Paris 75 | IndHack, Consultante SEO",
+    title: "Audit Technique SEO Paris 75",
     description: "Expert SEO Paris. Audit technique avancé pour sites ambitieux : crawl Screaming Frog, Core Web Vitals, indexation. Consultante freelance.",
     openGraph: {
-        title: "Audit Technique SEO Paris 75 | IndHack, Consultante SEO",
+        title: "Audit Technique SEO Paris 75",
         description: "Consultante SEO Paris. Diagnostic technique haut de gamme pour votre référencement.",
         url: "https://indhack.com/consultant-seo-paris/audit-technique",
         type: "website",

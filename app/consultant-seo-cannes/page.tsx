@@ -13,7 +13,7 @@ export const metadata: Metadata = {
         canonical: `https://indhack.com/${cityData.slug}`
     },
     openGraph: {
-        title: `Consultant SEO Cannes | Expert Marché Luxe Côte d'Azur - IndHack`,
+        title: `Consultant SEO Cannes | Expert Marché Luxe Côte d'Azur`,
         description: `Dominez Google sur le marché premium cannois. SEO immobilier prestige, yachting, événementiel. Stratégie multilingue pour clientèle internationale.`,
         url: `https://indhack.com/${cityData.slug}`,
     }

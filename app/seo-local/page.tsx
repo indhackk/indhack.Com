@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/seo-local"
     },
     openGraph: {
-        title: "SEO Local France | Indiana Aflalo - IndHack",
+        title: "SEO Local France | Indiana Aflalo",
         description: "Expertise en référencement local sur toute la France. Boostez votre visibilité Google dans votre ville.",
         url: "https://indhack.com/seo-local",
         type: "website",
@@ -24,12 +24,12 @@ export const metadata: Metadata = {
             url: "https://indhack.com/api/og?title=SEO%20Local%20France&subtitle=Dominez%20Google%20Maps%20dans%20votre%20ville",
             width: 1200,
             height: 630,
-            alt: "SEO Local France - IndHack"
+            alt: "SEO Local France"
         }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "SEO Local France | IndHack",
+        title: "SEO Local France",
         description: "Dominez les résultats Google dans votre ville. 18+ villes couvertes.",
         images: ["https://indhack.com/api/og?title=SEO%20Local%20France&subtitle=18%2B%20villes%20couvertes"],
     },

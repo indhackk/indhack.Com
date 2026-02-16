@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Politique de Confidentialité | IndHack",
+    title: "Politique de Confidentialité",
     description: "Politique de confidentialité et gestion des données personnelles du site indhack.com - Consultante SEO Indiana Aflalo. Conforme RGPD.",
     alternates: {
         canonical: "https://indhack.com/confidentialite"

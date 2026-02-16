@@ -7,10 +7,10 @@ const cityData = getCityBySlug("consultant-seo-antibes")!;
 const serviceData = getServiceContent("audit-technique", "consultant-seo-antibes")!;
 
 export const metadata: Metadata = {
-    title: "Audit Technique SEO Antibes 06 | IndHack, Consultante SEO",
+    title: "Audit Technique SEO Antibes 06",
     description: "Spécialiste SEO à Antibes. J'audite la technique de votre site pour révéler les freins à votre référencement. Premier diagnostic offert.",
     openGraph: {
-        title: "Audit Technique SEO Antibes 06 | IndHack, Consultante SEO",
+        title: "Audit Technique SEO Antibes 06",
         description: "Freelance SEO à Antibes. Audit technique approfondi de votre site web.",
         url: "https://indhack.com/consultant-seo-antibes/audit-technique",
         type: "website",

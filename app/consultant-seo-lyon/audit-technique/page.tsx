@@ -7,10 +7,10 @@ const cityData = getCityBySlug("consultant-seo-lyon")!;
 const serviceData = getServiceContent("audit-technique", "consultant-seo-lyon")!;
 
 export const metadata: Metadata = {
-    title: "Audit Technique SEO Lyon 69 | IndHack, Consultante SEO",
+    title: "Audit Technique SEO Lyon 69",
     description: "Référencement naturel Lyon. Mon audit technique SEO révèle les freins à votre visibilité Google. Consultante indépendante, diagnostic offert.",
     openGraph: {
-        title: "Audit Technique SEO Lyon 69 | IndHack, Consultante SEO",
+        title: "Audit Technique SEO Lyon 69",
         description: "Freelance SEO Lyon. Audit technique complet pour optimiser votre référencement.",
         url: "https://indhack.com/consultant-seo-lyon/audit-technique",
         type: "website",

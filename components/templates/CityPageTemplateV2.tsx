@@ -536,25 +536,114 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             {/* FAQ */}
             <FAQ items={FAQ_ITEMS} title={`Questions Fréquentes - SEO ${city}`} />
 
-            {/* Maillage autres villes */}
-            <section className="py-10 bg-white border-t border-gray-100">
-                <div className="container mx-auto px-4 text-center">
-                    <h3 className="font-bold text-ink mb-4">J'interviens également sur</h3>
-                    <div className="flex flex-wrap justify-center gap-3 text-sm max-w-3xl mx-auto">
-                        {nearbyCities.map((c) => (
-                            <Link
-                                key={c.name}
-                                href={`/${c.slug}`}
-                                className="px-4 py-2 bg-gray-50 hover:bg-sauge hover:text-white rounded-full transition-all text-soft font-medium"
-                            >
-                                Consultant SEO {c.name}
-                            </Link>
-                        ))}
-                    </div>
-                    <div className="mt-6">
-                        <Link href="/seo-local" className="text-sauge font-bold text-sm hover:underline">
-                            ← Toutes mes zones d'intervention
-                        </Link>
+            {/* Maillage interne enrichi */}
+            <section className="py-12 bg-white border-t border-gray-100">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-5xl mx-auto">
+                        <div className="grid md:grid-cols-3 gap-8">
+                            {/* Outils gratuits */}
+                            <div>
+                                <h3 className="font-bold text-ink mb-4 flex items-center gap-2">
+                                    <Zap className="w-4 h-4 text-sauge" />
+                                    Outils SEO gratuits
+                                </h3>
+                                <ul className="space-y-2 text-sm">
+                                    <li>
+                                        <Link href="/outils/audit-seo-gratuit" className="text-soft hover:text-sauge transition-colors flex items-center gap-2">
+                                            <ArrowRight className="w-3 h-3" />
+                                            Audit SEO gratuit /100
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/outils/testeur-visibilite-ia" className="text-soft hover:text-sauge transition-colors flex items-center gap-2">
+                                            <ArrowRight className="w-3 h-3" />
+                                            Testeur visibilité IA (GEO)
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/outils/generateur-schema-json-ld" className="text-soft hover:text-sauge transition-colors flex items-center gap-2">
+                                            <ArrowRight className="w-3 h-3" />
+                                            Générateur Schema JSON-LD
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                            {/* Articles SEO */}
+                            <div>
+                                <h3 className="font-bold text-ink mb-4 flex items-center gap-2">
+                                    <FileSearch className="w-4 h-4 text-sauge" />
+                                    Articles SEO
+                                </h3>
+                                <ul className="space-y-2 text-sm">
+                                    <li>
+                                        <Link href="/blog/seo-local-nice" className="text-soft hover:text-sauge transition-colors flex items-center gap-2">
+                                            <ArrowRight className="w-3 h-3" />
+                                            SEO local : dominer votre marché
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/blog/importance-audit-seo" className="text-soft hover:text-sauge transition-colors flex items-center gap-2">
+                                            <ArrowRight className="w-3 h-3" />
+                                            L'audit SEO : point de départ
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/blog/pourquoi-consultant-seo" className="text-soft hover:text-sauge transition-colors flex items-center gap-2">
+                                            <ArrowRight className="w-3 h-3" />
+                                            Pourquoi un consultant SEO ?
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                            {/* Services */}
+                            <div>
+                                <h3 className="font-bold text-ink mb-4 flex items-center gap-2">
+                                    <Target className="w-4 h-4 text-sauge" />
+                                    Services SEO
+                                </h3>
+                                <ul className="space-y-2 text-sm">
+                                    <li>
+                                        <Link href="/audit-seo" className="text-soft hover:text-sauge transition-colors flex items-center gap-2">
+                                            <ArrowRight className="w-3 h-3" />
+                                            Audit SEO complet
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/referencement-naturel" className="text-soft hover:text-sauge transition-colors flex items-center gap-2">
+                                            <ArrowRight className="w-3 h-3" />
+                                            Référencement naturel
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/creation-site-web" className="text-soft hover:text-sauge transition-colors flex items-center gap-2">
+                                            <ArrowRight className="w-3 h-3" />
+                                            Création de site web SEO
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Villes proches */}
+                        <div className="mt-10 pt-8 border-t border-gray-100 text-center">
+                            <h3 className="font-bold text-ink mb-4">Consultant SEO également disponible sur</h3>
+                            <div className="flex flex-wrap justify-center gap-3 text-sm max-w-3xl mx-auto">
+                                {nearbyCities.map((c) => (
+                                    <Link
+                                        key={c.name}
+                                        href={`/${c.slug}`}
+                                        className="px-4 py-2 bg-gray-50 hover:bg-sauge hover:text-white rounded-full transition-all text-soft font-medium"
+                                    >
+                                        {c.name}
+                                    </Link>
+                                ))}
+                            </div>
+                            <div className="mt-6">
+                                <Link href="/seo-local" className="text-sauge font-bold text-sm hover:underline">
+                                    ← Toutes mes zones d'intervention
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

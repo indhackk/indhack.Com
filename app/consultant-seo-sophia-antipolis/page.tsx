@@ -13,7 +13,7 @@ export const metadata: Metadata = {
         canonical: `https://indhack.com/${cityData.slug}`
     },
     openGraph: {
-        title: `Consultant SEO Sophia Antipolis | Expert Technopole B2B - IndHack`,
+        title: `Consultant SEO Sophia Antipolis | Expert Technopole B2B`,
         description: `Dominez Google sur le marché tech de Sophia Antipolis. SEO B2B, content marketing SaaS, stratégie de visibilité pour startups, ESN et scale-ups de la technopole.`,
         url: `https://indhack.com/${cityData.slug}`,
     }

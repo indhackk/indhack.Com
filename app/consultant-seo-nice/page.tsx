@@ -6,13 +6,13 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-nice")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO Nice | IndHack, Consultante SEO`,
+    title: `Consultant SEO Nice`,
     description: `Boostez votre visibilité sur Google à Nice avec une experte SEO locale. Audit gratuit, stratégie sur-mesure, accompagnement personnalisé pour PME et entrepreneurs niçois. ✆ 06 61 13 97 48`,
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`
     },
     openGraph: {
-        title: `Consultante SEO Nice | Indiana Aflalo - IndHack`,
+        title: `Consultante SEO Nice | Indiana Aflalo`,
         description: `Dominez les résultats Google à Nice. Référencement local, audit SEO et stratégie digitale sur-mesure pour entreprises des Alpes-Maritimes.`,
         url: `https://indhack.com/${cityData.slug}`,
     }

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Mentions Légales | IndHack",
+    title: "Mentions Légales",
     description: "Mentions légales du site indhack.com édité par Indiana Aflalo, consultante SEO et experte en acquisition digitale.",
     alternates: {
         canonical: "https://indhack.com/mentions-legales"

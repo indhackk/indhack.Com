@@ -4,13 +4,13 @@ import { TesteurVisibiliteIA } from "./TesteurVisibiliteIA";
 import { ArrowRight, Bot, Shield, Code2, FileCode, Search, Sparkles, TrendingUp, AlertTriangle, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Testeur Visibilité IA Gratuit — ChatGPT, Perplexity, Claude | IndHack",
+    title: "Testeur Visibilité IA Gratuit — ChatGPT, Perplexity, Claude",
     description: "Votre site est-il visible par ChatGPT et Perplexity ? Testez gratuitement vos signaux GEO : crawlers IA, schema JSON-LD, signaux E-E-A-T. Le seul outil français gratuit.",
     alternates: {
         canonical: "https://indhack.com/outils/testeur-visibilite-ia"
     },
     openGraph: {
-        title: "Testeur Visibilité IA — Êtes-vous visible par ChatGPT ? | IndHack",
+        title: "Testeur Visibilité IA — Êtes-vous visible par ChatGPT ?",
         description: "Analysez vos signaux GEO (Generative Engine Optimization). 8 crawlers IA vérifiés, 4 catégories de signaux. Gratuit, sans inscription.",
         url: "https://indhack.com/outils/testeur-visibilite-ia",
         type: "website",
@@ -224,13 +224,13 @@ export default function TesteurVisibiliteIAPage() {
 
                             <div className="prose prose-lg max-w-none text-soft mb-12">
                                 <p>
-                                    <strong className="text-ink">Le SEO seul ne suffit plus.</strong> En 2026, une part croissante de vos clients potentiels ne tapent plus de requêtes dans Google — ils posent des questions à <strong className="text-ink">ChatGPT</strong>, <strong className="text-ink">Perplexity</strong> ou <strong className="text-ink">Gemini</strong>.
+                                    <strong className="text-ink">Le <Link href="/referencement-naturel" className="text-violet-600 hover:underline">SEO traditionnel</Link> ne suffit plus.</strong> En 2026, une part croissante de vos clients potentiels ne tapent plus de requêtes dans Google — ils posent des questions à <strong className="text-ink">ChatGPT</strong>, <strong className="text-ink">Perplexity</strong> ou <strong className="text-ink">Gemini</strong>.
                                 </p>
                                 <p>
-                                    Quand une IA répond à une question comme <em>"Quel consultant SEO recommandes-tu à Nice ?"</em> ou <em>"Comment optimiser son site pour Google ?"</em>, elle cite des sources. <strong className="text-ink">Si votre site n'est pas visible par ces IA, vous n'existez pas</strong> pour cette nouvelle génération d'utilisateurs.
+                                    Quand une IA répond à une question comme <em>"Quel <Link href="/consultant-seo-nice" className="text-violet-600 hover:underline">consultant SEO à Nice</Link> recommandes-tu ?"</em> ou <em>"Comment optimiser son site pour Google ?"</em>, elle cite des sources. <strong className="text-ink">Si votre site n'est pas visible par ces IA, vous n'existez pas</strong> pour cette nouvelle génération d'utilisateurs.
                                 </p>
                                 <p>
-                                    C'est là qu'intervient le <strong className="text-ink">GEO (Generative Engine Optimization)</strong> : l'ensemble des techniques pour être cité par les moteurs de recherche IA. Cet outil est le <strong className="text-ink">premier en France</strong> à analyser gratuitement vos signaux GEO.
+                                    C'est là qu'intervient le <strong className="text-ink">GEO (Generative Engine Optimization)</strong> : l'ensemble des techniques pour être cité par les moteurs de recherche IA. Pour savoir où vous en êtes, commencez par un <Link href="/audit-seo" className="text-violet-600 hover:underline">audit SEO complet</Link>. Cet outil est le <strong className="text-ink">premier en France</strong> à analyser gratuitement vos signaux GEO.
                                 </p>
                             </div>
 
@@ -412,6 +412,68 @@ export default function TesteurVisibiliteIAPage() {
                                     </Link>
                                 );
                             })}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Internal Links Section */}
+                <section className="py-12 bg-gray-50">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto">
+                            <div className="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h3 className="font-bold text-ink mb-4">Articles SEO & GEO</h3>
+                                    <ul className="space-y-2">
+                                        <li>
+                                            <Link href="/blog/pourquoi-consultant-seo" className="text-soft hover:text-violet-600 transition-colors flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Pourquoi faire appel à un consultant SEO ?
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog/importance-audit-seo" className="text-soft hover:text-violet-600 transition-colors flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                L'audit SEO : point de départ de votre croissance
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog/missions-consultant-seo" className="text-soft hover:text-violet-600 transition-colors flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Les missions d'un consultant SEO
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-ink mb-4">Consultant SEO par ville</h3>
+                                    <ul className="space-y-2">
+                                        <li>
+                                            <Link href="/consultant-seo-nice" className="text-soft hover:text-violet-600 transition-colors flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Consultant SEO Nice
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-cannes" className="text-soft hover:text-violet-600 transition-colors flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Consultant SEO Cannes
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-sophia-antipolis" className="text-soft hover:text-violet-600 transition-colors flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Consultant SEO Sophia Antipolis
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-paris" className="text-soft hover:text-violet-600 transition-colors flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Consultant SEO Paris
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -4,13 +4,13 @@ import { RobotsGenerator } from "./RobotsGenerator";
 import { ArrowRight, FileCode, Bot, Code2, Search } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Générateur robots.txt avec Crawlers IA 2026 — Gratuit | IndHack",
+    title: "Générateur robots.txt avec Crawlers IA 2026 — Gratuit",
     description: "Créez votre fichier robots.txt avec les crawlers IA de 2026 : GPTBot, Claude-Web, PerplexityBot... Configurez la visibilité de votre site pour les IA en quelques clics.",
     alternates: {
         canonical: "https://indhack.com/outils/generateur-robots-txt"
     },
     openGraph: {
-        title: "Générateur robots.txt avec Crawlers IA 2026 | IndHack",
+        title: "Générateur robots.txt avec Crawlers IA 2026",
         description: "Le seul générateur robots.txt français incluant tous les crawlers IA : GPTBot, Claude, Perplexity... Gratuit, sans inscription.",
         url: "https://indhack.com/outils/generateur-robots-txt",
         type: "website",
@@ -179,10 +179,10 @@ export default function GenerateurRobotsTxtPage() {
 
                             <div className="prose prose-lg max-w-none text-soft mb-12">
                                 <p>
-                                    En 2026, votre fichier <code className="bg-gray-100 px-2 py-1 rounded">robots.txt</code> ne gère plus seulement Googlebot. <strong className="text-ink">Une dizaine de crawlers IA</strong> parcourent le web pour alimenter ChatGPT, Gemini, Perplexity et d'autres. Chacun a un rôle différent.
+                                    En 2026, votre fichier <code className="bg-gray-100 px-2 py-1 rounded">robots.txt</code> ne gère plus seulement Googlebot. <strong className="text-ink">Une dizaine de crawlers IA</strong> parcourent le web pour alimenter ChatGPT, Gemini, Perplexity et d'autres. Chacun a un rôle différent. Pour vérifier si ces crawlers accèdent déjà à votre site, utilisez notre <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">testeur de visibilité IA</Link>.
                                 </p>
                                 <p>
-                                    La bonne stratégie dépend de vos objectifs : voulez-vous <strong className="text-ink">être cité par les IA</strong> (excellent pour la visibilité) ou <strong className="text-ink">protéger votre contenu</strong> de l'entraînement des modèles ?
+                                    La bonne stratégie dépend de vos objectifs : voulez-vous <strong className="text-ink">être cité par les IA</strong> (excellent pour la visibilité) ou <strong className="text-ink">protéger votre contenu</strong> de l'entraînement des modèles ? Cette configuration fait partie d'une <Link href="/referencement-naturel" className="text-sauge hover:underline">stratégie SEO complète</Link> qui doit être pensée globalement.
                                 </p>
                             </div>
 
@@ -277,6 +277,59 @@ export default function GenerateurRobotsTxtPage() {
                                     </div>
                                 );
                             })}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Maillage Section */}
+                <section className="py-12 bg-gray-50">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                                Aller plus loin avec IndHack
+                            </h2>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h3 className="font-bold text-ink mb-4">Articles pour optimiser votre SEO</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/blog/pourquoi-consultant-seo" className="text-sauge hover:underline">
+                                                Pourquoi faire appel à un consultant SEO ?
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog/importance-audit-seo" className="text-sauge hover:underline">
+                                                Pourquoi un audit SEO est essentiel
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog/seo-local-nice" className="text-sauge hover:underline">
+                                                Guide du SEO local à Nice
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-ink mb-4">Consultant SEO près de chez vous</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/consultant-seo-nice" className="text-sauge hover:underline">
+                                                Consultante SEO à Nice
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-sophia-antipolis" className="text-sauge hover:underline">
+                                                Consultante SEO à Sophia-Antipolis
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-cannes" className="text-sauge hover:underline">
+                                                Consultante SEO à Cannes
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

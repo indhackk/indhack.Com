@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { ServicesSection } from "@/components/ServicesSection";
 import { AboutSection } from "@/components/AboutSection";
@@ -8,15 +9,16 @@ import { SEOScoreChecker } from "@/components/SEOScoreChecker";
 import { CityCarousel } from "@/components/sections/CityCarousel";
 import { TrustSignals } from "@/components/sections/TrustSignals";
 import { HomepageSchemas } from "@/components/seo/JsonLdSchemas";
+import { Search, Bot, Code2, FileCode, ArrowRight, MapPin, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO & Experte Référencement Naturel | IndHack",
+    title: "Consultante SEO & Experte Référencement Naturel",
     description: "Consultante SEO freelance spécialisée en référencement naturel, SEO local et création de site web. Audit SEO gratuit. Nice & toute la France. ✆ 06 61 13 97 48",
     alternates: {
         canonical: "https://indhack.com"
     },
     openGraph: {
-        title: "Consultante SEO & Experte Référencement Naturel | IndHack",
+        title: "Consultante SEO & Experte Référencement Naturel",
         description: "Dominez Google avec une stratégie SEO sur-mesure. Audit gratuit, accompagnement personnalisé.",
         url: "https://indhack.com",
         type: "website",
@@ -66,6 +68,127 @@ export default function Home() {
                     title="J'interviens partout en France"
                     subtitle="Consultante SEO à votre service"
                 />
+
+                {/* Section Maillage - Outils, Articles, Villes */}
+                <section className="py-20 bg-white">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-6xl mx-auto">
+                            <div className="text-center mb-12">
+                                <h2 className="text-3xl font-heading font-bold text-ink mb-4">
+                                    Ressources <span className="text-sauge">gratuites</span> pour votre SEO
+                                </h2>
+                                <p className="text-soft max-w-2xl mx-auto">
+                                    Outils en ligne, guides pratiques et expertise locale pour booster votre visibilité.
+                                </p>
+                            </div>
+
+                            <div className="grid md:grid-cols-3 gap-8">
+                                {/* Outils gratuits */}
+                                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                                    <div className="w-12 h-12 bg-sauge/10 rounded-xl flex items-center justify-center mb-4">
+                                        <Search className="w-6 h-6 text-sauge" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-ink mb-4">Outils SEO gratuits</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Audit SEO en 30 secondes
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Testeur visibilité IA (ChatGPT, Perplexity)
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/outils/generateur-schema-json-ld" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Générateur données structurées
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/outils/generateur-robots-txt" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Générateur robots.txt IA
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                {/* Articles */}
+                                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                                    <div className="w-12 h-12 bg-sauge/10 rounded-xl flex items-center justify-center mb-4">
+                                        <BookOpen className="w-6 h-6 text-sauge" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-ink mb-4">Articles SEO</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/blog/pourquoi-consultant-seo" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Pourquoi engager un consultant SEO
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog/importance-audit-seo" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                L'importance de l'audit SEO
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog/seo-local-nice" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Guide du SEO local à Nice
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog" className="text-ink font-medium hover:text-sauge inline-flex items-center gap-1">
+                                                Voir tous les articles
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                {/* Villes */}
+                                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                                    <div className="w-12 h-12 bg-sauge/10 rounded-xl flex items-center justify-center mb-4">
+                                        <MapPin className="w-6 h-6 text-sauge" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-ink mb-4">Expertise locale</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/consultant-seo-nice" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Consultante SEO à Nice
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-cannes" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Consultante SEO à Cannes
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-sophia-antipolis" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Consultante SEO Sophia-Antipolis
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-antibes" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Consultante SEO à Antibes
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <AboutSection />
                 <CTASection />
                 <FAQ items={HOMEPAGE_FAQ} title="Questions Fréquentes" />

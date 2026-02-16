@@ -10,7 +10,7 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/refonte-site-web"
     },
     openGraph: {
-        title: "Refonte de Site Web SEO | IndHack",
+        title: "Refonte de Site Web SEO",
         description: "Changez de design sans perdre vos positions Google. Migration technique experte et sécurisée.",
         url: "https://indhack.com/refonte-site-web",
     }

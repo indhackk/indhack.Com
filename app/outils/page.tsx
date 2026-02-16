@@ -15,13 +15,13 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Outils SEO Gratuits 2026 — Audit, Visibilité IA, Schema | IndHack",
+    title: "Outils SEO Gratuits 2026 — Audit, Visibilité IA, Schema",
     description: "5 outils SEO gratuits et uniques : audit SEO avec analyse IA, testeur visibilité ChatGPT/Perplexity, générateur robots.txt crawlers IA, schema JSON-LD. Sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils"
     },
     openGraph: {
-        title: "Outils SEO Gratuits 2026 — Audit, Visibilité IA, Schema | IndHack",
+        title: "Outils SEO Gratuits 2026 — Audit, Visibilité IA, Schema",
         description: "5 outils SEO gratuits incluant le seul testeur de visibilité IA français. Analysez votre site pour Google ET pour ChatGPT.",
         url: "https://indhack.com/outils",
         type: "website",

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
         canonical: `https://indhack.com/${cityData.slug}`
     },
     openGraph: {
-        title: `Consultant SEO Antibes | Expert Yachting & Commerce Local - IndHack`,
+        title: `Consultant SEO Antibes | Expert Yachting & Commerce Local`,
         description: `Dominez Google à Antibes : SEO yachting Port Vauban, référencement restaurateurs et artisans Vieil Antibes. Stratégie adaptée à la saisonnalité.`,
         url: `https://indhack.com/${cityData.slug}`,
     }

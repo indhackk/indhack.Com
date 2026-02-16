@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, FileText, Globe, Settings, MapPin, Layout } from "lucide-react";
 
 export const metadata = {
-    title: "Tableau de Bord - IndHack",
+    title: "Tableau de Bord",
     robots: "noindex, nofollow" // On cache cette page de Google
 };
 

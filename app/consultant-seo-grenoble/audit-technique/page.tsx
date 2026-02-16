@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Audit de Site Grenoble | Audit SEO Technique 38 - INDHACK",
     description: "Audit de site à Grenoble : analyse technique complète pour sites tech et e-commerce. Indexation, vitesse, architecture. Consultante SEO freelance Isère.",
     openGraph: {
-        title: "Audit Technique SEO Grenoble 38 | IndHack, Consultante SEO",
+        title: "Audit Technique SEO Grenoble 38",
         description: "Consultante SEO Grenoble. Analyse technique pointue de votre site.",
         url: "https://indhack.com/consultant-seo-grenoble/audit-technique",
         type: "website",

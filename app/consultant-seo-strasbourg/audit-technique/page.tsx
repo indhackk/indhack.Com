@@ -7,10 +7,10 @@ const cityData = getCityBySlug("consultant-seo-strasbourg")!;
 const serviceData = getServiceContent("audit-technique", "consultant-seo-strasbourg")!;
 
 export const metadata: Metadata = {
-    title: "Audit Technique SEO Strasbourg 67 | IndHack, Consultante SEO",
+    title: "Audit Technique SEO Strasbourg 67",
     description: "Référencement naturel Strasbourg. Audit technique SEO rigoureux : Screaming Frog, Search Console, Core Web Vitals. Consultante indépendante.",
     openGraph: {
-        title: "Audit Technique SEO Strasbourg 67 | IndHack, Consultante SEO",
+        title: "Audit Technique SEO Strasbourg 67",
         description: "Spécialiste SEO Strasbourg. Diagnostic technique pour votre référencement.",
         url: "https://indhack.com/consultant-seo-strasbourg/audit-technique",
         type: "website",

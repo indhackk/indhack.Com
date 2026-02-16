@@ -10,7 +10,7 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/audit-seo"
     },
     openGraph: {
-        title: "Audit SEO Complet | IndHack",
+        title: "Audit SEO Complet",
         description: "Diagnostic technique et sémantique de votre site. Identifiez vos freins SEO et obtenez un plan d'action priorisé.",
         url: "https://indhack.com/audit-seo",
         type: "website",
@@ -20,12 +20,12 @@ export const metadata: Metadata = {
             url: "https://indhack.com/api/og?title=Audit%20SEO%20Complet&subtitle=Diagnostic%20technique%20et%20s%C3%A9mantique%20de%20votre%20site",
             width: 1200,
             height: 630,
-            alt: "Audit SEO Complet - IndHack"
+            alt: "Audit SEO Complet"
         }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Audit SEO Complet | IndHack",
+        title: "Audit SEO Complet",
         description: "Identifiez les freins SEO de votre site en 48h. +150 points analysés.",
         images: ["https://indhack.com/api/og?title=Audit%20SEO%20Complet&subtitle=%2B150%20points%20analys%C3%A9s"],
     },

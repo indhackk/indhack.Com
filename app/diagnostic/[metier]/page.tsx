@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Ne pas générer de métadonnées pour les métiers avec pages dédiées
   if (EXCLUDED_METIERS.includes(params.metier)) {
     return {
-      title: 'Diagnostic SEO | IndHack',
+      title: 'Diagnostic SEO',
       description: 'Diagnostic SEO gratuit pour votre entreprise',
     }
   }
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!metierData) {
     return {
-      title: 'Diagnostic SEO | IndHack',
+      title: 'Diagnostic SEO',
       description: 'Diagnostic SEO gratuit pour votre entreprise',
     }
   }

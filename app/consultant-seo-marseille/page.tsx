@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         canonical: `https://indhack.com/${cityData.slug}`
     },
     openGraph: {
-        title: `Consultant SEO ${cityData.name} | Indiana Aflalo - IndHack`,
+        title: `Consultant SEO ${cityData.name} | Indiana Aflalo`,
         description: `Dominez les résultats Google à ${cityData.name}. Référencement local, audit SEO et stratégie digitale sur-mesure pour entreprises des ${cityData.department}.`,
         url: `https://indhack.com/${cityData.slug}`,
     }

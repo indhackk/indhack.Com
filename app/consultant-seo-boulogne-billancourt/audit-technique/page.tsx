@@ -7,10 +7,10 @@ const cityData = getCityBySlug("consultant-seo-boulogne-billancourt")!;
 const serviceData = getServiceContent("audit-technique", "consultant-seo-boulogne-billancourt")!;
 
 export const metadata: Metadata = {
-    title: "Audit Technique SEO Boulogne-Billancourt 92 | IndHack, Consultante SEO",
+    title: "Audit Technique SEO Boulogne-Billancourt 92",
     description: "Audit SEO Boulogne-Billancourt. Analyse technique approfondie pour entreprises corporate. Consultante freelance, diagnostic offert.",
     openGraph: {
-        title: "Audit Technique SEO Boulogne-Billancourt 92 | IndHack, Consultante SEO",
+        title: "Audit Technique SEO Boulogne-Billancourt 92",
         description: "Consultante référencement Boulogne. Audit technique pour votre visibilité Google.",
         url: "https://indhack.com/consultant-seo-boulogne-billancourt/audit-technique",
         type: "website",

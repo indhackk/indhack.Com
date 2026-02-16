@@ -7,10 +7,10 @@ const cityData = getCityBySlug("consultant-seo-toulouse")!;
 const serviceData = getServiceContent("audit-technique", "consultant-seo-toulouse")!;
 
 export const metadata: Metadata = {
-    title: "Audit Technique SEO Toulouse 31 | IndHack, Consultante SEO",
+    title: "Audit Technique SEO Toulouse 31",
     description: "Expert référencement Toulouse. Audit technique SEO complet : crawl, indexation, Core Web Vitals. Consultante freelance indépendante.",
     openGraph: {
-        title: "Audit Technique SEO Toulouse 31 | IndHack, Consultante SEO",
+        title: "Audit Technique SEO Toulouse 31",
         description: "Consultante SEO Toulouse. Diagnostic technique pour optimiser votre visibilité Google.",
         url: "https://indhack.com/consultant-seo-toulouse/audit-technique",
         type: "website",

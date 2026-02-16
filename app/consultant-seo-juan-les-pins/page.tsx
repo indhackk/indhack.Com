@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         canonical: `https://indhack.com/${cityData.slug}`
     },
     openGraph: {
-        title: `Consultant SEO Juan-les-Pins | Indiana Aflalo - IndHack`,
+        title: `Consultant SEO Juan-les-Pins | Indiana Aflalo`,
         description: `Dominez Google à Juan-les-Pins avant l'été. SEO pour beach clubs, hôtels, restaurants et vie nocturne de la Côte d'Azur.`,
         url: `https://indhack.com/${cityData.slug}`,
     }

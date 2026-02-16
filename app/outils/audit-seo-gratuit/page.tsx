@@ -4,13 +4,13 @@ import { AuditSEO } from "./AuditSEO";
 import { ArrowRight, Search, Bot, Code2, FileCode, Gauge, TrendingUp, Zap, Target } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Audit SEO Gratuit en 1 Clic — Score /100 | IndHack",
+    title: "Audit SEO Gratuit en 1 Clic — Score /100",
     description: "Analysez gratuitement le SEO de votre site en 1 clic. Score /100, 15 critères vérifiés dont la compatibilité IA. Recommandations actionnables pour PME.",
     alternates: {
         canonical: "https://indhack.com/outils/audit-seo-gratuit"
     },
     openGraph: {
-        title: "Audit SEO Gratuit — Score /100 en 30 secondes | IndHack",
+        title: "Audit SEO Gratuit — Score /100 en 30 secondes",
         description: "15 critères analysés dont la visibilité IA. Gratuit, sans inscription. L'outil SEO français de référence.",
         url: "https://indhack.com/outils/audit-seo-gratuit",
         type: "website",
@@ -228,10 +228,10 @@ export default function AuditSEOPage() {
 
                             <div className="prose prose-lg max-w-none text-soft mb-12">
                                 <p>
-                                    <strong className="text-ink">90% des sites web ont des problèmes SEO invisibles</strong> qui plombent leur visibilité Google. Balises title mal optimisées, images sans attribut alt, vitesse de chargement trop lente, absence de sitemap... Ces erreurs passent inaperçues mais coûtent cher en trafic perdu.
+                                    <strong className="text-ink">90% des sites web ont des problèmes SEO invisibles</strong> qui plombent leur visibilité Google. Balises title mal optimisées, images sans attribut alt, vitesse de chargement trop lente, absence de sitemap... Ces erreurs passent inaperçues mais coûtent cher en trafic perdu. Découvrez <Link href="/blog/contenu-rapport-audit-seo" className="text-sauge hover:underline">ce que contient un rapport d'audit SEO complet</Link>.
                                 </p>
                                 <p>
-                                    Un audit SEO révèle ces problèmes et vous donne une <strong className="text-ink">roadmap claire</strong> pour les corriger. Cet outil analyse 15 critères essentiels en moins de 30 secondes — et contrairement aux autres outils, il vérifie aussi votre <strong className="text-ink">compatibilité avec les crawlers IA</strong> (ChatGPT, Perplexity, Claude).
+                                    Un audit SEO révèle ces problèmes et vous donne une <strong className="text-ink">roadmap claire</strong> pour les corriger. Cet outil analyse 15 critères essentiels en moins de 30 secondes — et contrairement aux autres outils, il vérifie aussi votre <strong className="text-ink">compatibilité avec les crawlers IA</strong> (ChatGPT, Perplexity, Claude). Pour une analyse encore plus poussée de votre visibilité IA, utilisez notre <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">testeur de visibilité IA dédié</Link>.
                                 </p>
                             </div>
 
@@ -315,6 +315,59 @@ export default function AuditSEOPage() {
                                     </div>
                                 );
                             })}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Maillage Section */}
+                <section className="py-12 bg-gray-50">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                                Approfondir votre stratégie SEO
+                            </h2>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h3 className="font-bold text-ink mb-4">Lectures recommandées</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/blog/importance-audit-seo" className="text-sauge hover:underline">
+                                                Pourquoi un audit SEO est indispensable
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog/contenu-rapport-audit-seo" className="text-sauge hover:underline">
+                                                Décryptage d'un rapport d'audit SEO
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog/pourquoi-consultant-seo" className="text-sauge hover:underline">
+                                                Pourquoi s'entourer d'un consultant SEO
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-ink mb-4">Audit SEO par ville</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/consultant-seo-nice" className="text-sauge hover:underline">
+                                                Audit SEO à Nice
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-sophia-antipolis" className="text-sauge hover:underline">
+                                                Audit SEO à Sophia-Antipolis
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-marseille" className="text-sauge hover:underline">
+                                                Audit SEO à Marseille
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

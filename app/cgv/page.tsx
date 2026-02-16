@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Conditions Générales de Vente | IndHack",
+    title: "Conditions Générales de Vente",
     description: "Conditions générales de vente des prestations de consulting SEO et création de sites web par Indiana Aflalo - IndHack.",
     alternates: {
         canonical: "https://indhack.com/cgv"

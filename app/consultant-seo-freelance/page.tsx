@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import ConsultantSEOFreelanceClient from "./ConsultantSEOFreelanceClient";
 
 export const metadata: Metadata = {
-    title: "Consultant SEO Freelance | IndHack, Consultante SEO",
+    title: "Consultant SEO Freelance",
     description: "Consultante SEO freelance disponible pour vos projets. Expertise technique, flexibilité totale, tarifs compétitifs. Audit gratuit et accompagnement sur-mesure.",
     keywords: ["consultant SEO freelance", "SEO freelance", "référenceur freelance", "expert SEO indépendant", "consultant référencement freelance"],
     alternates: {

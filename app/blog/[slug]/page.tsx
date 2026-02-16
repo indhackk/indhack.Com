@@ -30,12 +30,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     if (!post) {
         return {
-            title: "Article non trouvé | IndHack",
+            title: "Article non trouvé",
         };
     }
 
     return {
-        title: `${post.title} | Blog IndHack`,
+        title: `${post.title}`,
         description: post.description,
         keywords: post.keywords,
         authors: [{ name: post.author || "Indiana Aflalo" }],
