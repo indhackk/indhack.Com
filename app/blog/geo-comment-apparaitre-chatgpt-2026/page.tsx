@@ -191,17 +191,9 @@ export default function GEOArticlePage() {
                             GEO : Comment Rendre Votre Site Visible dans ChatGPT, Perplexity et Google AI en 2026
                         </h1>
 
-                        <p className="lead text-xl text-soft leading-relaxed italic border-l-4 border-violet-500 pl-6 mb-10">
+                        <p className="lead text-xl text-soft leading-relaxed italic border-l-4 border-violet-500 pl-6">
                             Le Generative Engine Optimization (GEO) expliqué simplement. Guide pratique pour être cité par les IA quand vos clients posent des questions.
                         </p>
-
-                        <div className="relative h-[300px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-violet-600 to-purple-800 flex items-center justify-center">
-                            <div className="text-center text-white p-8">
-                                <Bot className="w-24 h-24 mx-auto mb-6 opacity-90" />
-                                <div className="text-3xl font-bold">GEO 2026</div>
-                                <div className="text-white/70 mt-2">Generative Engine Optimization</div>
-                            </div>
-                        </div>
                     </header>
 
                     {/* Content Grid */}
