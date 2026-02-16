@@ -51,17 +51,17 @@ interface AuditResult {
 }
 
 const CATEGORY_INFO = {
-    technique: { label: "Technique", icon: Shield, color: "text-blue-500", bg: "bg-blue-500" },
-    contenu: { label: "Contenu", icon: FileText, color: "text-emerald-500", bg: "bg-emerald-500" },
-    accessibilite: { label: "Accessibilité", icon: Accessibility, color: "text-amber-500", bg: "bg-amber-500" },
-    ia: { label: "IA-Ready", icon: Bot, color: "text-violet-500", bg: "bg-violet-500" },
+    technique: { label: "Technique", icon: Shield, color: "text-blue-400", bg: "bg-blue-500" },
+    contenu: { label: "Contenu", icon: FileText, color: "text-emerald-400", bg: "bg-emerald-500" },
+    accessibilite: { label: "Accessibilité", icon: Accessibility, color: "text-amber-400", bg: "bg-amber-500" },
+    ia: { label: "IA-Ready", icon: Bot, color: "text-violet-400", bg: "bg-violet-500" },
 };
 
 function ScoreGauge({ score }: { score: number }) {
     const getColor = () => {
-        if (score >= 80) return "text-emerald-500";
-        if (score >= 50) return "text-amber-500";
-        return "text-red-500";
+        if (score >= 80) return "text-emerald-400";
+        if (score >= 50) return "text-amber-400";
+        return "text-red-400";
     };
 
     const getGradient = () => {
@@ -91,7 +91,7 @@ function ScoreGauge({ score }: { score: number }) {
                     stroke="currentColor"
                     strokeWidth="12"
                     fill="none"
-                    className="text-gray-200"
+                    className="text-white/10"
                 />
                 {/* Progress circle */}
                 <motion.circle
@@ -123,7 +123,7 @@ function ScoreGauge({ score }: { score: number }) {
                 >
                     {score}
                 </motion.span>
-                <span className="text-sm text-soft">/100</span>
+                <span className="text-sm text-white/50">/100</span>
                 <span className={`text-sm font-medium mt-1 ${getColor()}`}>{getLabel()}</span>
             </div>
         </div>
@@ -136,17 +136,17 @@ function CategoryScore({ category, score, maxScore }: { category: keyof typeof C
     const percentage = Math.round((score / maxScore) * 100);
 
     return (
-        <div className="bg-white rounded-xl border border-line p-4">
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-4">
             <div className="flex items-center gap-3 mb-3">
-                <div className={`w-10 h-10 rounded-lg ${info.bg}/10 flex items-center justify-center`}>
+                <div className={`w-10 h-10 rounded-lg ${info.bg}/20 flex items-center justify-center`}>
                     <Icon className={`w-5 h-5 ${info.color}`} />
                 </div>
                 <div>
-                    <div className="font-bold text-ink">{info.label}</div>
-                    <div className="text-sm text-soft">{score}/{maxScore} points</div>
+                    <div className="font-bold text-white">{info.label}</div>
+                    <div className="text-sm text-white/50">{score}/{maxScore} points</div>
                 </div>
             </div>
-            <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+            <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                 <motion.div
                     className={`h-full ${info.bg}`}
                     initial={{ width: 0 }}
@@ -163,15 +163,15 @@ function CriteriaCard({ criteria, index }: { criteria: CriteriaResult; index: nu
     const categoryInfo = CATEGORY_INFO[criteria.category];
 
     const statusIcon = {
-        success: <CheckCircle2 className="w-5 h-5 text-emerald-500" />,
-        warning: <AlertCircle className="w-5 h-5 text-amber-500" />,
-        error: <XCircle className="w-5 h-5 text-red-500" />,
+        success: <CheckCircle2 className="w-5 h-5 text-emerald-400" />,
+        warning: <AlertCircle className="w-5 h-5 text-amber-400" />,
+        error: <XCircle className="w-5 h-5 text-red-400" />,
     };
 
     const statusBg = {
-        success: "bg-emerald-50 border-emerald-200",
-        warning: "bg-amber-50 border-amber-200",
-        error: "bg-red-50 border-red-200",
+        success: "bg-emerald-500/10 border-emerald-500/20",
+        warning: "bg-amber-500/10 border-amber-500/20",
+        error: "bg-red-500/10 border-red-500/20",
     };
 
     return (
@@ -179,19 +179,19 @@ function CriteriaCard({ criteria, index }: { criteria: CriteriaResult; index: nu
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.05 }}
-            className={`rounded-xl border p-4 cursor-pointer transition-all hover:shadow-md ${statusBg[criteria.status]}`}
+            className={`rounded-xl border p-4 cursor-pointer transition-all hover:bg-white/5 ${statusBg[criteria.status]}`}
             onClick={() => setExpanded(!expanded)}
         >
             <div className="flex items-start gap-4">
                 {statusIcon[criteria.status]}
                 <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
-                        <span className="font-bold text-ink">{criteria.name}</span>
-                        <span className={`text-xs px-2 py-0.5 rounded-full ${categoryInfo.bg}/10 ${categoryInfo.color}`}>
+                        <span className="font-bold text-white">{criteria.name}</span>
+                        <span className={`text-xs px-2 py-0.5 rounded-full ${categoryInfo.bg}/20 ${categoryInfo.color}`}>
                             {categoryInfo.label}
                         </span>
                     </div>
-                    <p className="text-sm text-soft mt-1">{criteria.message}</p>
+                    <p className="text-sm text-white/60 mt-1">{criteria.message}</p>
 
                     <AnimatePresence>
                         {expanded && (
@@ -202,14 +202,14 @@ function CriteriaCard({ criteria, index }: { criteria: CriteriaResult; index: nu
                                 className="overflow-hidden"
                             >
                                 {criteria.details && (
-                                    <p className="text-xs text-soft mt-3 p-2 bg-white/50 rounded-lg font-mono break-all">
+                                    <p className="text-xs text-white/50 mt-3 p-2 bg-white/5 rounded-lg font-mono break-all">
                                         {criteria.details}
                                     </p>
                                 )}
                                 {criteria.fix && (
                                     <div className="mt-3 flex items-start gap-2 text-sm">
                                         <Sparkles className="w-4 h-4 text-sauge flex-shrink-0 mt-0.5" />
-                                        <span className="text-ink">{criteria.fix}</span>
+                                        <span className="text-white/80">{criteria.fix}</span>
                                     </div>
                                 )}
                             </motion.div>
@@ -217,8 +217,8 @@ function CriteriaCard({ criteria, index }: { criteria: CriteriaResult; index: nu
                     </AnimatePresence>
                 </div>
                 <div className="text-right">
-                    <span className="font-bold text-ink">{criteria.score}</span>
-                    <span className="text-soft">/{criteria.maxScore}</span>
+                    <span className="font-bold text-white">{criteria.score}</span>
+                    <span className="text-white/50">/{criteria.maxScore}</span>
                 </div>
             </div>
         </motion.div>
@@ -281,11 +281,11 @@ export function AuditSEO() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-white rounded-2xl shadow-xl border border-line p-8 md:p-12"
+                    className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 md:p-12"
                 >
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div>
-                            <label htmlFor="url" className="block text-sm font-bold text-ink mb-2">
+                            <label htmlFor="url" className="block text-sm font-bold text-white mb-2">
                                 URL de votre site
                             </label>
                             <div className="relative">
@@ -295,10 +295,10 @@ export function AuditSEO() {
                                     value={url}
                                     onChange={(e) => setUrl(e.target.value)}
                                     placeholder="https://votresite.fr"
-                                    className="w-full px-6 py-4 text-lg border-2 border-line rounded-xl focus:border-sauge focus:ring-0 transition-colors pr-12"
+                                    className="w-full px-6 py-4 text-lg bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:border-sauge/50 focus:ring-0 focus:bg-white/10 transition-all pr-12"
                                     disabled={loading}
                                 />
-                                <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-soft" />
+                                <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30" />
                             </div>
                         </div>
 
@@ -306,7 +306,7 @@ export function AuditSEO() {
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                className="p-4 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm"
+                                className="p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm"
                             >
                                 {error}
                             </motion.div>
@@ -315,7 +315,7 @@ export function AuditSEO() {
                         <button
                             type="submit"
                             disabled={loading || !url.trim()}
-                            className="w-full bg-sauge text-white py-4 px-8 rounded-xl font-bold text-lg hover:bg-sauge/90 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-3"
+                            className="w-full bg-white text-ink py-4 px-8 rounded-full font-bold text-lg hover:bg-sauge hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-3"
                         >
                             {loading ? (
                                 <>
@@ -330,7 +330,7 @@ export function AuditSEO() {
                             )}
                         </button>
 
-                        <p className="text-center text-sm text-soft">
+                        <p className="text-center text-sm text-white/50">
                             Gratuit • Sans inscription • 15 critères analysés dont la compatibilité IA
                         </p>
                     </form>
@@ -350,7 +350,7 @@ export function AuditSEO() {
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: i * 1 }}
-                                        className="flex items-center gap-3 text-soft"
+                                        className="flex items-center gap-3 text-white/60"
                                     >
                                         <div className="w-2 h-2 bg-sauge rounded-full animate-pulse" />
                                         {text}
@@ -370,11 +370,11 @@ export function AuditSEO() {
                     className="space-y-8"
                 >
                     {/* Header */}
-                    <div className="bg-white rounded-2xl shadow-xl border border-line p-8">
+                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
                         <div className="flex flex-col lg:flex-row items-center gap-8">
                             <ScoreGauge score={result.score} />
                             <div className="flex-1 text-center lg:text-left">
-                                <h2 className="text-2xl font-bold text-ink mb-2">{result.pageTitle}</h2>
+                                <h2 className="text-2xl font-bold text-white mb-2">{result.pageTitle}</h2>
                                 <a
                                     href={result.url}
                                     target="_blank"
@@ -385,19 +385,19 @@ export function AuditSEO() {
                                     <ExternalLink className="w-4 h-4" />
                                 </a>
                                 {result.cached && (
-                                    <p className="text-xs text-soft mt-2">Résultat mis en cache (analysé récemment)</p>
+                                    <p className="text-xs text-white/50 mt-2">Résultat mis en cache (analysé récemment)</p>
                                 )}
                                 <div className="flex items-center justify-center lg:justify-start gap-3 mt-4">
                                     <button
                                         onClick={handleCopyUrl}
-                                        className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
+                                        className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-sm font-medium text-white hover:bg-white/20 transition-colors"
                                     >
                                         {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                                         {copied ? "Copié !" : "Partager"}
                                     </button>
                                     <button
                                         onClick={handleNewAudit}
-                                        className="flex items-center gap-2 px-4 py-2 bg-sauge text-white rounded-lg text-sm font-medium hover:bg-sauge/90 transition-colors"
+                                        className="flex items-center gap-2 px-4 py-2 bg-white text-ink rounded-full text-sm font-medium hover:bg-sauge hover:text-white transition-colors"
                                     >
                                         <RefreshCw className="w-4 h-4" />
                                         Nouvel audit
@@ -420,8 +420,8 @@ export function AuditSEO() {
                     </div>
 
                     {/* Criteria Details */}
-                    <div className="bg-white rounded-2xl shadow-xl border border-line p-6 md:p-8">
-                        <h3 className="text-xl font-bold text-ink mb-6">Détail des 15 critères</h3>
+                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 md:p-8">
+                        <h3 className="text-xl font-bold text-white mb-6">Détail des 15 critères</h3>
                         <div className="space-y-3">
                             {result.criteria.map((c, i) => (
                                 <CriteriaCard key={c.id} criteria={c} index={i} />
@@ -431,16 +431,16 @@ export function AuditSEO() {
 
                     {/* CTA */}
                     {result.score < 80 && (
-                        <div className="bg-gradient-to-br from-sauge to-emerald-600 rounded-2xl p-8 text-center text-white">
-                            <h3 className="text-2xl font-bold mb-3">
+                        <div className="bg-gradient-to-br from-sauge/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl border border-sauge/20 p-8 text-center">
+                            <h3 className="text-2xl font-bold text-white mb-3">
                                 Votre score est de {result.score}/100
                             </h3>
-                            <p className="text-white/80 mb-6 max-w-xl mx-auto">
+                            <p className="text-white/60 mb-6 max-w-xl mx-auto">
                                 Je peux améliorer votre score et booster votre visibilité sur Google et les IA.
                             </p>
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center gap-2 bg-white text-sauge px-8 py-4 rounded-full font-bold hover:bg-white/90 transition-colors"
+                                className="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-colors"
                             >
                                 Demander un devis gratuit
                                 <ArrowRight className="w-5 h-5" />
@@ -449,32 +449,38 @@ export function AuditSEO() {
                     )}
 
                     {/* Related Tools */}
-                    <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                        <h3 className="text-lg font-bold text-ink mb-4">Outils complémentaires</h3>
+                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 md:p-8">
+                        <h3 className="text-lg font-bold text-white mb-4">Outils complémentaires</h3>
                         <div className="grid md:grid-cols-3 gap-4">
                             <Link
                                 href="/outils/testeur-visibilite-ia"
-                                className="p-4 bg-white rounded-xl border border-line hover:border-sauge/30 transition-all group"
+                                className="p-4 bg-white/5 rounded-xl border border-white/10 hover:border-sauge/30 hover:bg-white/10 transition-all group"
                             >
-                                <Bot className="w-6 h-6 text-violet-500 mb-2" />
-                                <div className="font-bold text-ink group-hover:text-sauge transition-colors">Testeur Visibilité IA</div>
-                                <p className="text-sm text-soft">Votre site est-il visible par ChatGPT ?</p>
+                                <div className="w-10 h-10 rounded-lg bg-violet-500/20 flex items-center justify-center mb-3">
+                                    <Bot className="w-5 h-5 text-violet-400" />
+                                </div>
+                                <div className="font-bold text-white group-hover:text-sauge transition-colors">Testeur Visibilité IA</div>
+                                <p className="text-sm text-white/60">Votre site est-il visible par ChatGPT ?</p>
                             </Link>
                             <Link
                                 href="/outils/generateur-schema-json-ld"
-                                className="p-4 bg-white rounded-xl border border-line hover:border-sauge/30 transition-all group"
+                                className="p-4 bg-white/5 rounded-xl border border-white/10 hover:border-sauge/30 hover:bg-white/10 transition-all group"
                             >
-                                <FileText className="w-6 h-6 text-blue-500 mb-2" />
-                                <div className="font-bold text-ink group-hover:text-sauge transition-colors">Générateur Schema</div>
-                                <p className="text-sm text-soft">Créez vos données structurées</p>
+                                <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mb-3">
+                                    <FileText className="w-5 h-5 text-blue-400" />
+                                </div>
+                                <div className="font-bold text-white group-hover:text-sauge transition-colors">Générateur Schema</div>
+                                <p className="text-sm text-white/60">Créez vos données structurées</p>
                             </Link>
                             <Link
                                 href="/outils/generateur-robots-txt"
-                                className="p-4 bg-white rounded-xl border border-line hover:border-sauge/30 transition-all group"
+                                className="p-4 bg-white/5 rounded-xl border border-white/10 hover:border-sauge/30 hover:bg-white/10 transition-all group"
                             >
-                                <Shield className="w-6 h-6 text-cyan-500 mb-2" />
-                                <div className="font-bold text-ink group-hover:text-sauge transition-colors">Générateur robots.txt</div>
-                                <p className="text-sm text-soft">Configurez vos crawlers IA</p>
+                                <div className="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center mb-3">
+                                    <Shield className="w-5 h-5 text-cyan-400" />
+                                </div>
+                                <div className="font-bold text-white group-hover:text-sauge transition-colors">Générateur robots.txt</div>
+                                <p className="text-sm text-white/60">Configurez vos crawlers IA</p>
                             </Link>
                         </div>
                     </div>

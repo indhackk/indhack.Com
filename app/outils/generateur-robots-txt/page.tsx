@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { RobotsGenerator } from "./RobotsGenerator";
-import { ArrowRight, FileCode, Bot, Code2, Search } from "lucide-react";
+import { ArrowRight, FileCode, Bot, Code2, Search, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Générateur robots.txt avec Crawlers IA 2026 — Gratuit",
@@ -23,21 +23,21 @@ const RELATED_TOOLS = [
         description: "Votre site est-il visible par ChatGPT ?",
         href: "/outils/testeur-visibilite-ia",
         icon: Bot,
-        status: "live" as const,
+        gradient: "from-violet-500 to-purple-600",
     },
     {
         title: "Générateur Schema JSON-LD",
         description: "Créez vos données structurées",
         href: "/outils/generateur-schema-json-ld",
         icon: Code2,
-        status: "live" as const,
+        gradient: "from-blue-500 to-cyan-600",
     },
     {
         title: "Audit SEO Gratuit",
         description: "Analysez votre site en 1 clic",
         href: "/outils/audit-seo-gratuit",
         icon: Search,
-        status: "live" as const,
+        gradient: "from-emerald-500 to-teal-600",
     },
 ];
 
@@ -62,6 +62,14 @@ const FAQ_ITEMS = [
         question: "Où placer le fichier robots.txt ?",
         answer: "Le fichier robots.txt doit être placé à la racine de votre domaine, accessible via votresite.com/robots.txt. Il doit être nommé exactement 'robots.txt' (minuscules). Sur WordPress, vous pouvez le gérer via Yoast SEO ou un plugin dédié."
     },
+];
+
+const CRAWLER_INFO = [
+    { name: "GPTBot", editor: "OpenAI", usage: "Entraînement des modèles", recommendation: "warning", text: "À bloquer si protection souhaitée" },
+    { name: "ChatGPT-User", editor: "OpenAI", usage: "Navigation temps réel", recommendation: "success", text: "Autoriser pour être cité" },
+    { name: "Claude-Web", editor: "Anthropic", usage: "Navigation Claude", recommendation: "success", text: "Autoriser" },
+    { name: "PerplexityBot", editor: "Perplexity", usage: "Moteur de recherche IA", recommendation: "success", text: "Autoriser" },
+    { name: "Google-Extended", editor: "Google", usage: "Entraînement Gemini", recommendation: "warning", text: "À bloquer si protection souhaitée" },
 ];
 
 export default function GenerateurRobotsTxtPage() {
@@ -123,158 +131,170 @@ export default function GenerateurRobotsTxtPage() {
                 }}
             />
 
-            <main className="min-h-screen bg-fond-clair">
+            <main className="min-h-screen bg-ink">
                 {/* Hero */}
-                <section className="relative pt-32 pb-12 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-fond-sombre via-fond-sombre to-cyan-900/30" />
-                    <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />
+                <section className="relative pt-32 pb-16 overflow-hidden">
+                    {/* Background effects */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-fond-sombre via-ink to-ink" />
+                    <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-500/20 rounded-full blur-[150px]" />
+                    <div className="absolute top-40 right-20 w-72 h-72 bg-violet-500/20 rounded-full blur-[120px]" />
+
+                    {/* Dot grid */}
+                    <div
+                        className="absolute inset-0 opacity-[0.03]"
+                        style={{
+                            backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+                            backgroundSize: '24px 24px'
+                        }}
+                    />
 
                     <div className="container mx-auto px-4 relative z-10">
                         {/* Breadcrumb */}
                         <nav className="mb-8" aria-label="Fil d'Ariane">
-                            <ol className="flex items-center gap-2 text-sm text-texte-moyen">
+                            <ol className="flex items-center gap-2 text-sm text-white/50">
                                 <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
-                                <li>/</li>
+                                <li className="text-white/30">/</li>
                                 <li><Link href="/outils" className="hover:text-white transition-colors">Outils SEO</Link></li>
-                                <li>/</li>
+                                <li className="text-white/30">/</li>
                                 <li className="text-white font-medium">Générateur robots.txt</li>
                             </ol>
                         </nav>
 
-                        <div className="flex items-start gap-6">
-                            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
+                        <div className="flex flex-col md:flex-row items-start gap-6">
+                            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-cyan-500/20">
                                 <FileCode className="w-8 h-8 text-white" />
                             </div>
                             <div>
-                                <div className="inline-flex items-center gap-2 px-3 py-1 bg-violet-500/20 rounded-full text-violet-300 text-sm font-medium mb-4">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 text-sauge text-sm font-medium mb-4">
                                     <Bot className="w-4 h-4" />
                                     Inclut les 12 crawlers IA de 2026
                                 </div>
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-4">
                                     Générateur robots.txt
                                 </h1>
-                                <p className="text-lg text-texte-moyen max-w-2xl">
+                                <p className="text-lg text-white/60 max-w-2xl">
                                     Configurez la visibilité de votre site pour les moteurs de recherche et les IA.
                                     GPTBot, Claude, Perplexity... tous les crawlers 2026 inclus.
                                 </p>
+
+                                {/* Stats badges */}
+                                <div className="flex flex-wrap gap-4 mt-8">
+                                    <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+                                        <span className="text-white font-bold">12</span>
+                                        <span className="text-white/60 ml-2">crawlers IA</span>
+                                    </div>
+                                    <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+                                        <span className="text-white font-bold">4</span>
+                                        <span className="text-white/60 ml-2">configs prêtes</span>
+                                    </div>
+                                    <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+                                        <span className="text-white font-bold">100%</span>
+                                        <span className="text-white/60 ml-2">gratuit</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {/* Generator */}
-                <section className="py-12">
+                <section className="py-12 relative">
                     <div className="container mx-auto px-4">
                         <RobotsGenerator />
                     </div>
                 </section>
 
                 {/* IA Crawlers Explained */}
-                <section className="py-16">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <h2 className="text-3xl font-heading font-bold text-ink mb-8 text-center">
-                                Comprendre les crawlers IA en 2026
-                            </h2>
+                <section className="py-16 bg-fond-sombre relative">
+                    <div className="absolute inset-0 bg-gradient-to-b from-ink via-fond-sombre to-fond-sombre" />
+                    <div className="container mx-auto px-4 relative z-10">
+                        <div className="max-w-5xl mx-auto">
+                            <div className="text-center mb-12">
+                                <span className="px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 text-sauge text-xs font-semibold uppercase tracking-[0.2em]">
+                                    Guide
+                                </span>
+                                <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mt-6 mb-4">
+                                    Comprendre les crawlers IA en 2026
+                                </h2>
+                            </div>
 
-                            <div className="prose prose-lg max-w-none text-soft mb-12">
-                                <p>
-                                    En 2026, votre fichier <code className="bg-gray-100 px-2 py-1 rounded">robots.txt</code> ne gère plus seulement Googlebot. <strong className="text-ink">Une dizaine de crawlers IA</strong> parcourent le web pour alimenter ChatGPT, Gemini, Perplexity et d'autres. Chacun a un rôle différent. Pour vérifier si ces crawlers accèdent déjà à votre site, utilisez notre <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">testeur de visibilité IA</Link>.
+                            <div className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 mb-12">
+                                <p className="text-white/70 text-lg leading-relaxed mb-6">
+                                    En 2026, votre fichier <code className="bg-white/10 px-2 py-1 rounded text-sauge">robots.txt</code> ne gère plus seulement Googlebot. <strong className="text-white">Une dizaine de crawlers IA</strong> parcourent le web pour alimenter ChatGPT, Gemini, Perplexity et d'autres. Pour vérifier si ces crawlers accèdent déjà à votre site, utilisez notre <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">testeur de visibilité IA</Link>.
                                 </p>
-                                <p>
-                                    La bonne stratégie dépend de vos objectifs : voulez-vous <strong className="text-ink">être cité par les IA</strong> (excellent pour la visibilité) ou <strong className="text-ink">protéger votre contenu</strong> de l'entraînement des modèles ? Cette configuration fait partie d'une <Link href="/referencement-naturel" className="text-sauge hover:underline">stratégie SEO complète</Link> qui doit être pensée globalement.
+                                <p className="text-white/70 text-lg leading-relaxed">
+                                    La bonne stratégie dépend de vos objectifs : voulez-vous <strong className="text-white">être cité par les IA</strong> (excellent pour la visibilité) ou <strong className="text-white">protéger votre contenu</strong> de l'entraînement des modèles ? Cette configuration fait partie d'une <Link href="/referencement-naturel" className="text-sauge hover:underline">stratégie SEO complète</Link>.
                                 </p>
                             </div>
 
+                            {/* Crawler Table - Dark theme */}
                             <div className="overflow-x-auto">
-                                <table className="w-full border-collapse bg-white rounded-xl overflow-hidden">
+                                <table className="w-full border-collapse">
                                     <thead>
-                                        <tr className="bg-gray-50">
-                                            <th className="px-6 py-4 text-left font-bold text-ink">Crawler</th>
-                                            <th className="px-6 py-4 text-left font-bold text-ink">Éditeur</th>
-                                            <th className="px-6 py-4 text-left font-bold text-ink">Usage</th>
-                                            <th className="px-6 py-4 text-left font-bold text-ink">Recommandation</th>
+                                        <tr className="border-b border-white/10">
+                                            <th className="px-6 py-4 text-left font-bold text-white">Crawler</th>
+                                            <th className="px-6 py-4 text-left font-bold text-white">Éditeur</th>
+                                            <th className="px-6 py-4 text-left font-bold text-white">Usage</th>
+                                            <th className="px-6 py-4 text-left font-bold text-white">Recommandation</th>
                                         </tr>
                                     </thead>
-                                    <tbody className="divide-y divide-line">
-                                        <tr>
-                                            <td className="px-6 py-4 font-medium text-ink">GPTBot</td>
-                                            <td className="px-6 py-4 text-soft">OpenAI</td>
-                                            <td className="px-6 py-4 text-soft">Entraînement des modèles</td>
-                                            <td className="px-6 py-4"><span className="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs font-medium">À bloquer si protection souhaitée</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td className="px-6 py-4 font-medium text-ink">ChatGPT-User</td>
-                                            <td className="px-6 py-4 text-soft">OpenAI</td>
-                                            <td className="px-6 py-4 text-soft">Navigation temps réel</td>
-                                            <td className="px-6 py-4"><span className="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs font-medium">Autoriser pour être cité</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td className="px-6 py-4 font-medium text-ink">Claude-Web</td>
-                                            <td className="px-6 py-4 text-soft">Anthropic</td>
-                                            <td className="px-6 py-4 text-soft">Navigation Claude</td>
-                                            <td className="px-6 py-4"><span className="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs font-medium">Autoriser</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td className="px-6 py-4 font-medium text-ink">PerplexityBot</td>
-                                            <td className="px-6 py-4 text-soft">Perplexity</td>
-                                            <td className="px-6 py-4 text-soft">Moteur de recherche IA</td>
-                                            <td className="px-6 py-4"><span className="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs font-medium">Autoriser</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td className="px-6 py-4 font-medium text-ink">Google-Extended</td>
-                                            <td className="px-6 py-4 text-soft">Google</td>
-                                            <td className="px-6 py-4 text-soft">Entraînement Gemini</td>
-                                            <td className="px-6 py-4"><span className="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs font-medium">À bloquer si protection souhaitée</span></td>
-                                        </tr>
+                                    <tbody className="divide-y divide-white/5">
+                                        {CRAWLER_INFO.map((crawler) => (
+                                            <tr key={crawler.name} className="hover:bg-white/5 transition-colors">
+                                                <td className="px-6 py-4 font-medium text-white">{crawler.name}</td>
+                                                <td className="px-6 py-4 text-white/60">{crawler.editor}</td>
+                                                <td className="px-6 py-4 text-white/60">{crawler.usage}</td>
+                                                <td className="px-6 py-4">
+                                                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                                                        crawler.recommendation === 'success'
+                                                            ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+                                                            : 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
+                                                    }`}>
+                                                        {crawler.text}
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        ))}
                                     </tbody>
                                 </table>
                             </div>
 
-                            <div className="mt-8 bg-cyan-50 rounded-2xl p-6 border border-cyan-100">
-                                <p className="text-soft">
-                                    <strong className="text-ink">Ma recommandation :</strong> Autorisez les crawlers de navigation (ChatGPT-User, Claude-Web, PerplexityBot) pour être cité dans les réponses. Bloquez les crawlers d'entraînement (GPTBot, Google-Extended) si vous souhaitez protéger votre contenu original.
-                                </p>
+                            {/* Recommendation box */}
+                            <div className="mt-8 bg-gradient-to-r from-sauge/10 to-transparent rounded-2xl p-6 border border-sauge/20">
+                                <div className="flex gap-4">
+                                    <Sparkles className="w-6 h-6 text-sauge flex-shrink-0" />
+                                    <p className="text-white/80">
+                                        <strong className="text-white">Ma recommandation :</strong> Autorisez les crawlers de navigation (ChatGPT-User, Claude-Web, PerplexityBot) pour être cité dans les réponses. Bloquez les crawlers d'entraînement (GPTBot, Google-Extended) si vous souhaitez protéger votre contenu original.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {/* Related Tools */}
-                <section className="py-12 bg-white">
+                <section className="py-16 bg-ink">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-2xl font-heading font-bold text-ink mb-8">
+                        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-8 text-center">
                             Outils complémentaires
                         </h2>
-                        <div className="grid md:grid-cols-3 gap-6">
+                        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                             {RELATED_TOOLS.map((tool) => {
                                 const Icon = tool.icon;
-                                const isLive = tool.status === "live";
-                                const content = (
-                                    <>
-                                        <Icon className="w-8 h-8 text-sauge mb-4" />
-                                        <h3 className="font-bold text-ink mb-2 group-hover:text-sauge transition-colors">
-                                            {tool.title}
-                                            {!isLive && <span className="ml-2 text-xs text-soft">(Bientôt)</span>}
-                                        </h3>
-                                        <p className="text-sm text-soft">{tool.description}</p>
-                                    </>
-                                );
-                                return isLive ? (
+                                return (
                                     <Link
                                         key={tool.href}
                                         href={tool.href}
-                                        className="group p-6 bg-gray-50 rounded-2xl border border-line hover:border-sauge/30 transition-all"
+                                        className="group p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-sauge/30 transition-all hover:bg-white/10"
                                     >
-                                        {content}
+                                        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                                            <Icon className="w-6 h-6 text-white" />
+                                        </div>
+                                        <h3 className="font-bold text-white mb-2 group-hover:text-sauge transition-colors">
+                                            {tool.title}
+                                        </h3>
+                                        <p className="text-sm text-white/60">{tool.description}</p>
                                     </Link>
-                                ) : (
-                                    <div
-                                        key={tool.href}
-                                        className="p-6 bg-gray-50 rounded-2xl border border-line opacity-60"
-                                    >
-                                        {content}
-                                    </div>
                                 );
                             })}
                         </div>
@@ -282,15 +302,15 @@ export default function GenerateurRobotsTxtPage() {
                 </section>
 
                 {/* Maillage Section */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-16 bg-fond-sombre">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-8 text-center">
                                 Aller plus loin avec IndHack
                             </h2>
                             <div className="grid md:grid-cols-2 gap-8">
-                                <div>
-                                    <h3 className="font-bold text-ink mb-4">Articles pour optimiser votre SEO</h3>
+                                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
+                                    <h3 className="font-bold text-white mb-4">Articles pour optimiser votre SEO</h3>
                                     <ul className="space-y-3">
                                         <li>
                                             <Link href="/blog/pourquoi-consultant-seo" className="text-sauge hover:underline">
@@ -309,8 +329,8 @@ export default function GenerateurRobotsTxtPage() {
                                         </li>
                                     </ul>
                                 </div>
-                                <div>
-                                    <h3 className="font-bold text-ink mb-4">Consultant SEO près de chez vous</h3>
+                                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
+                                    <h3 className="font-bold text-white mb-4">Consultant SEO près de chez vous</h3>
                                     <ul className="space-y-3">
                                         <li>
                                             <Link href="/consultant-seo-nice" className="text-sauge hover:underline">
@@ -335,18 +355,33 @@ export default function GenerateurRobotsTxtPage() {
                 </section>
 
                 {/* FAQ */}
-                <section className="py-16">
+                <section className="py-16 bg-ink">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto">
-                            <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-8 text-center">
                                 Questions Fréquentes
                             </h2>
-                            <div className="space-y-6">
+                            <div className="space-y-4">
                                 {FAQ_ITEMS.map((item, index) => (
-                                    <div key={index} className="bg-white rounded-xl border border-line p-6">
-                                        <h3 className="font-bold text-ink mb-3">{item.question}</h3>
-                                        <p className="text-soft leading-relaxed">{item.answer}</p>
-                                    </div>
+                                    <details
+                                        key={index}
+                                        className="group bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden"
+                                    >
+                                        <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                                            <h3 className="font-bold text-white pr-4">{item.question}</h3>
+                                            <svg
+                                                className="w-5 h-5 text-white/50 flex-shrink-0 transition-transform group-open:rotate-180"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                            >
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </summary>
+                                        <div className="px-6 pb-6 pt-0">
+                                            <p className="text-white/60 leading-relaxed">{item.answer}</p>
+                                        </div>
+                                    </details>
                                 ))}
                             </div>
                         </div>
@@ -354,18 +389,25 @@ export default function GenerateurRobotsTxtPage() {
                 </section>
 
                 {/* CTA */}
-                <section className="py-16 bg-fond-sombre">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-2xl font-heading font-bold text-white mb-4">
+                <section className="py-20 bg-fond-sombre relative overflow-hidden">
+                    {/* Background effects */}
+                    <div className="absolute top-0 left-1/4 w-96 h-96 bg-sauge/20 rounded-full blur-[150px]" />
+                    <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-violet-500/10 rounded-full blur-[120px]" />
+
+                    <div className="container mx-auto px-4 text-center relative z-10">
+                        <span className="px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 text-sauge text-xs font-semibold uppercase tracking-[0.2em]">
+                            Prochaine étape
+                        </span>
+                        <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mt-6 mb-4">
                             Votre site est-il visible par les IA ?
                         </h2>
-                        <p className="text-texte-moyen mb-8 max-w-xl mx-auto">
+                        <p className="text-white/60 mb-8 max-w-xl mx-auto text-lg">
                             Le robots.txt est la première étape. Pour une stratégie GEO complète
                             (Generative Engine Optimization), je vous accompagne.
                         </p>
                         <Link
                             href="/contact"
-                            className="inline-flex items-center gap-2 bg-sauge text-white px-8 py-4 rounded-full font-bold hover:bg-sauge/90 transition-colors"
+                            className="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-all shadow-2xl shadow-white/10"
                         >
                             Demander un audit GEO
                             <ArrowRight className="w-5 h-5" />

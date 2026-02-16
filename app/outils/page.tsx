@@ -200,17 +200,27 @@ export default function OutilsPage() {
                 }}
             />
 
-            <main className="min-h-screen bg-fond-clair">
+            <main className="min-h-screen bg-ink">
                 {/* Hero Section */}
                 <section className="relative pt-32 pb-20 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-fond-sombre via-fond-sombre to-sauge/30" />
-                    <div className="absolute top-20 left-10 w-72 h-72 bg-sauge/20 rounded-full blur-3xl" />
-                    <div className="absolute bottom-10 right-10 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl" />
+                    {/* Background Effects */}
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-sauge/5 via-transparent to-transparent" />
+                    <div className="absolute top-20 left-10 w-72 h-72 bg-sauge/20 rounded-full blur-[150px]" />
+                    <div className="absolute bottom-10 right-10 w-96 h-96 bg-violet-500/10 rounded-full blur-[150px]" />
+
+                    {/* Dot Grid */}
+                    <div
+                        className="absolute inset-0 opacity-20"
+                        style={{
+                            backgroundImage: `radial-gradient(circle, rgba(99, 133, 118, 0.3) 1px, transparent 1px)`,
+                            backgroundSize: '24px 24px'
+                        }}
+                    />
 
                     <div className="container mx-auto px-4 relative z-10">
                         {/* Breadcrumb */}
                         <nav className="mb-8" aria-label="Fil d'Ariane">
-                            <ol className="flex items-center gap-2 text-sm text-texte-moyen">
+                            <ol className="flex items-center gap-2 text-sm text-white/50">
                                 <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
                                 <li>/</li>
                                 <li className="text-white font-medium">Outils SEO</li>
@@ -218,7 +228,7 @@ export default function OutilsPage() {
                         </nav>
 
                         <div className="max-w-3xl">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/20 rounded-full text-violet-300 text-sm font-medium mb-6">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/10 border border-sauge/20 rounded-full text-sauge text-sm font-medium mb-6">
                                 <Sparkles className="w-4 h-4" />
                                 {TOOLS.length} outils gratuits • Orientés IA & GEO
                             </div>
@@ -227,11 +237,11 @@ export default function OutilsPage() {
                                 Outils SEO Gratuits 2026
                             </h1>
 
-                            <p className="text-xl text-texte-moyen leading-relaxed mb-4">
+                            <p className="text-xl text-white/60 leading-relaxed mb-4">
                                 Les <strong className="text-white">seuls outils SEO français</strong> qui analysent votre visibilité sur Google <strong className="text-white">ET</strong> sur les IA génératives (ChatGPT, Perplexity, Claude).
                             </p>
 
-                            <p className="text-lg text-texte-moyen leading-relaxed">
+                            <p className="text-lg text-white/60 leading-relaxed">
                                 <span className="text-white font-medium">100% gratuits, sans inscription.</span> Préparez votre site pour le référencement de demain.
                             </p>
                         </div>
@@ -239,19 +249,19 @@ export default function OutilsPage() {
                 </section>
 
                 {/* Benefits Bar */}
-                <section className="py-8 bg-white border-b border-line">
+                <section className="py-8 bg-white/5 backdrop-blur-sm border-y border-white/10">
                     <div className="container mx-auto px-4">
                         <div className="grid md:grid-cols-3 gap-6">
                             {BENEFITS.map((benefit) => {
                                 const Icon = benefit.icon;
                                 return (
                                     <div key={benefit.title} className="flex items-start gap-4">
-                                        <div className="w-10 h-10 rounded-lg bg-sauge/10 flex items-center justify-center flex-shrink-0">
+                                        <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center flex-shrink-0">
                                             <Icon className="w-5 h-5 text-sauge" />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-ink">{benefit.title}</h3>
-                                            <p className="text-sm text-soft">{benefit.description}</p>
+                                            <h3 className="font-bold text-white">{benefit.title}</h3>
+                                            <p className="text-sm text-white/60">{benefit.description}</p>
                                         </div>
                                     </div>
                                 );
@@ -261,17 +271,17 @@ export default function OutilsPage() {
                 </section>
 
                 {/* Tools Grid */}
-                <section className="py-20">
+                <section className="py-20 relative">
                     <div className="container mx-auto px-4">
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {TOOLS.map((tool) => {
                                 const Icon = tool.icon;
                                 return (
                                     <Link key={tool.id} href={tool.href} className="group">
-                                        <div className="relative bg-white rounded-2xl p-6 border border-line shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full">
+                                        <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 h-full">
                                             {/* Badge */}
                                             {tool.badge && (
-                                                <span className="absolute top-4 right-4 px-3 py-1 bg-violet-100 text-violet-700 text-xs font-bold rounded-full">
+                                                <span className="absolute top-4 right-4 px-3 py-1 bg-violet-500/20 text-violet-300 text-xs font-bold rounded-full border border-violet-500/20">
                                                     {tool.badge}
                                                 </span>
                                             )}
@@ -282,18 +292,18 @@ export default function OutilsPage() {
                                             </div>
 
                                             {/* Content */}
-                                            <h2 className="text-lg font-heading font-bold text-ink mb-2 group-hover:text-sauge transition-colors">
+                                            <h2 className="text-lg font-heading font-bold text-white mb-2 group-hover:text-sauge transition-colors">
                                                 {tool.title}
                                             </h2>
 
-                                            <p className="text-soft text-sm leading-relaxed mb-4">
+                                            <p className="text-white/60 text-sm leading-relaxed mb-4">
                                                 {tool.longDescription}
                                             </p>
 
                                             {/* Features */}
                                             <ul className="space-y-2 mb-4">
                                                 {tool.features.map((feature) => (
-                                                    <li key={feature} className="flex items-center gap-2 text-sm text-ink">
+                                                    <li key={feature} className="flex items-center gap-2 text-sm text-white/80">
                                                         <CheckCircle2 className="w-4 h-4 text-sauge flex-shrink-0" />
                                                         {feature}
                                                     </li>
@@ -314,20 +324,21 @@ export default function OutilsPage() {
                 </section>
 
                 {/* Why These Tools Section */}
-                <section className="py-20 bg-white">
-                    <div className="container mx-auto px-4">
+                <section className="py-20 relative">
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent" />
+                    <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-3xl mx-auto">
-                            <h2 className="text-3xl font-heading font-bold text-ink mb-6 text-center">
+                            <h2 className="text-3xl font-heading font-bold text-white mb-8 text-center">
                                 Pourquoi ces outils sont différents
                             </h2>
 
-                            <div className="prose prose-lg max-w-none text-soft">
+                            <div className="space-y-6 text-lg text-white/60 leading-relaxed">
                                 <p>
-                                    En 2026, <strong className="text-ink">le SEO ne se limite plus à Google</strong>. Vos clients utilisent ChatGPT, Perplexity et Gemini pour trouver des réponses. Si votre site n'est pas optimisé pour ces IA, vous êtes invisible pour une partie croissante de votre audience.
+                                    En 2026, <strong className="text-white">le SEO ne se limite plus à Google</strong>. Vos clients utilisent ChatGPT, Perplexity et Gemini pour trouver des réponses. Si votre site n'est pas optimisé pour ces IA, vous êtes invisible pour une partie croissante de votre audience.
                                 </p>
 
                                 <p>
-                                    C'est pourquoi j'ai créé <strong className="text-ink">les premiers outils SEO français orientés GEO</strong> (Generative Engine Optimization). Chaque outil analyse non seulement les critères SEO classiques, mais aussi votre compatibilité avec les crawlers IA.
+                                    C'est pourquoi j'ai créé <strong className="text-white">les premiers outils SEO français orientés GEO</strong> (Generative Engine Optimization). Chaque outil analyse non seulement les critères SEO classiques, mais aussi votre compatibilité avec les crawlers IA.
                                 </p>
 
                                 <p>
@@ -342,46 +353,146 @@ export default function OutilsPage() {
                 <section className="py-20">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto">
-                            <h2 className="text-3xl font-heading font-bold text-ink mb-12 text-center">
+                            <h2 className="text-3xl font-heading font-bold text-white mb-12 text-center">
                                 Questions Fréquentes
                             </h2>
 
-                            <div className="space-y-6">
+                            <div className="space-y-4">
                                 {FAQ_ITEMS.map((item, index) => (
-                                    <div key={index} className="bg-white rounded-xl border border-line p-6">
-                                        <h3 className="text-lg font-bold text-ink mb-3">
-                                            {item.question}
-                                        </h3>
-                                        <p className="text-soft leading-relaxed">
-                                            {item.answer}
-                                        </p>
-                                    </div>
+                                    <details key={index} className="group bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">
+                                        <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                                            <h3 className="text-lg font-bold text-white pr-4">
+                                                {item.question}
+                                            </h3>
+                                            <span className="text-white/50 group-open:rotate-180 transition-transform duration-200 flex-shrink-0">
+                                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                </svg>
+                                            </span>
+                                        </summary>
+                                        <div className="px-6 pb-6 pt-0">
+                                            <p className="text-white/60 leading-relaxed">
+                                                {item.answer}
+                                            </p>
+                                        </div>
+                                    </details>
                                 ))}
                             </div>
                         </div>
                     </div>
                 </section>
 
+                {/* Maillage Section */}
+                <section className="py-16 border-t border-white/10">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-2xl font-heading font-bold text-white mb-8 text-center">
+                                Complétez votre stratégie SEO
+                            </h2>
+
+                            <div className="grid md:grid-cols-3 gap-6">
+                                {/* Services */}
+                                <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
+                                    <h3 className="font-bold text-white mb-4">Services SEO</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/audit-seo" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Audit SEO complet
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/referencement-naturel" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Référencement naturel
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/creation-site-web" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Création de site web
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                {/* Blog */}
+                                <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
+                                    <h3 className="font-bold text-white mb-4">Articles SEO</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/blog/visibilite-ia-geo" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Guide complet du GEO
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog/google-search-console" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Maîtriser Google Search Console
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Tous les articles
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                {/* Local */}
+                                <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
+                                    <h3 className="font-bold text-white mb-4">SEO Local</h3>
+                                    <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/consultant-seo-nice" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Consultante SEO Nice
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-cannes" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Consultante SEO Cannes
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/consultant-seo-sophia-antipolis" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3" />
+                                                Consultante SEO Sophia-Antipolis
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* CTA Section */}
-                <section className="py-20 bg-fond-sombre">
-                    <div className="container mx-auto px-4 text-center">
+                <section className="py-20 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-sauge/10 to-emerald-600/5" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-sauge/20 rounded-full blur-[150px]" />
+
+                    <div className="container mx-auto px-4 text-center relative z-10">
                         <h2 className="text-3xl font-heading font-bold text-white mb-6">
                             Besoin d'aller plus loin ?
                         </h2>
-                        <p className="text-texte-moyen text-lg mb-8 max-w-2xl mx-auto">
+                        <p className="text-white/60 text-lg mb-8 max-w-2xl mx-auto">
                             Ces outils vous donnent un aperçu. Pour une stratégie SEO et GEO complète avec accompagnement personnalisé, je suis là pour vous.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center justify-center gap-2 bg-sauge text-white px-8 py-4 rounded-full font-bold hover:bg-sauge/90 transition-colors"
+                                className="inline-flex items-center justify-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-colors"
                             >
                                 Demander un audit personnalisé
                                 <ArrowRight className="w-5 h-5" />
                             </Link>
                             <Link
                                 href="/blog/visibilite-ia-geo"
-                                className="inline-flex items-center justify-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-colors"
+                                className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-colors"
                             >
                                 En savoir plus sur le GEO
                             </Link>

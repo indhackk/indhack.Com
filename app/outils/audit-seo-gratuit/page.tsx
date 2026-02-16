@@ -23,21 +23,21 @@ const RELATED_TOOLS = [
         description: "Votre site est-il visible par ChatGPT ?",
         href: "/outils/testeur-visibilite-ia",
         icon: Bot,
-        status: "live" as const,
+        gradient: "from-violet-500 to-purple-600",
     },
     {
         title: "Générateur Schema JSON-LD",
         description: "Créez vos données structurées",
         href: "/outils/generateur-schema-json-ld",
         icon: Code2,
-        status: "live" as const,
+        gradient: "from-blue-500 to-cyan-600",
     },
     {
         title: "Générateur robots.txt",
         description: "Configurez vos crawlers IA",
         href: "/outils/generateur-robots-txt",
         icon: FileCode,
-        status: "live" as const,
+        gradient: "from-cyan-500 to-teal-600",
     },
 ];
 
@@ -62,6 +62,13 @@ const FAQ_ITEMS = [
         question: "Que signifie IA-Ready ?",
         answer: "La catégorie IA-Ready analyse si votre site est accessible aux crawlers des IA génératives : GPTBot (OpenAI), Claude-Web (Anthropic), PerplexityBot, etc. Si vous bloquez ces crawlers dans votre robots.txt, votre contenu ne pourra pas être cité par ChatGPT ou Perplexity."
     },
+];
+
+const FEATURES = [
+    { title: "Technique", description: "HTTPS, viewport, vitesse, sitemap, robots.txt, Open Graph", gradient: "from-blue-500 to-blue-600", icon: Search },
+    { title: "Contenu", description: "Title, meta description, H1, structure Hn, ratio texte/HTML", gradient: "from-emerald-500 to-emerald-600", icon: Code2 },
+    { title: "Accessibilité", description: "Images alt, attributs ARIA, labels de formulaires", gradient: "from-amber-500 to-amber-600", icon: FileCode },
+    { title: "IA-Ready", description: "Crawlers GPTBot, Claude-Web, PerplexityBot, Google-Extended", gradient: "from-violet-500 to-violet-600", icon: Bot },
 ];
 
 export default function AuditSEOPage() {
@@ -132,140 +139,162 @@ export default function AuditSEOPage() {
                 }}
             />
 
-            <main className="min-h-screen bg-fond-clair">
+            <main className="min-h-screen bg-ink">
                 {/* Hero */}
-                <section className="relative pt-32 pb-12 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-fond-sombre via-fond-sombre to-emerald-900/30" />
-                    <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/20 rounded-full blur-3xl" />
-                    <div className="absolute bottom-10 right-10 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl" />
+                <section className="relative pt-32 pb-16 overflow-hidden">
+                    {/* Background effects */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-fond-sombre via-ink to-ink" />
+                    <div className="absolute top-20 left-10 w-96 h-96 bg-emerald-500/20 rounded-full blur-[150px]" />
+                    <div className="absolute bottom-10 right-10 w-72 h-72 bg-teal-500/20 rounded-full blur-[120px]" />
+
+                    {/* Dot grid */}
+                    <div
+                        className="absolute inset-0 opacity-[0.03]"
+                        style={{
+                            backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+                            backgroundSize: '24px 24px'
+                        }}
+                    />
 
                     <div className="container mx-auto px-4 relative z-10">
                         {/* Breadcrumb */}
                         <nav className="mb-8" aria-label="Fil d'Ariane">
-                            <ol className="flex items-center gap-2 text-sm text-texte-moyen">
+                            <ol className="flex items-center gap-2 text-sm text-white/50">
                                 <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
-                                <li>/</li>
+                                <li className="text-white/30">/</li>
                                 <li><Link href="/outils" className="hover:text-white transition-colors">Outils SEO</Link></li>
-                                <li>/</li>
+                                <li className="text-white/30">/</li>
                                 <li className="text-white font-medium">Audit SEO Gratuit</li>
                             </ol>
                         </nav>
 
-                        <div className="flex items-start gap-6">
-                            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center flex-shrink-0">
+                        <div className="flex flex-col md:flex-row items-start gap-6">
+                            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/20">
                                 <Search className="w-8 h-8 text-white" />
                             </div>
                             <div>
-                                <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/20 rounded-full text-emerald-300 text-sm font-medium mb-4">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 text-sauge text-sm font-medium mb-4">
                                     <Gauge className="w-4 h-4" />
                                     Score /100 en 30 secondes
                                 </div>
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-4">
                                     Audit SEO Gratuit
                                 </h1>
-                                <p className="text-lg text-texte-moyen max-w-2xl">
+                                <p className="text-lg text-white/60 max-w-2xl">
                                     Analysez votre site en 1 clic. 15 critères vérifiés dont la compatibilité avec les crawlers IA.
                                     Recommandations actionnables pour améliorer votre référencement.
                                 </p>
+
+                                {/* Stats badges */}
+                                <div className="flex flex-wrap gap-4 mt-8">
+                                    <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+                                        <span className="text-white font-bold">15</span>
+                                        <span className="text-white/60 ml-2">critères</span>
+                                    </div>
+                                    <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+                                        <span className="text-white font-bold">4</span>
+                                        <span className="text-white/60 ml-2">catégories</span>
+                                    </div>
+                                    <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+                                        <span className="text-white font-bold">100%</span>
+                                        <span className="text-white/60 ml-2">gratuit</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {/* Audit Tool */}
-                <section className="py-12">
+                <section className="py-12 relative">
                     <div className="container mx-auto px-4">
                         <AuditSEO />
                     </div>
                 </section>
 
                 {/* Features */}
-                <section className="py-12 bg-white">
-                    <div className="container mx-auto px-4">
-                        <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                <section className="py-16 bg-fond-sombre relative">
+                    <div className="absolute inset-0 bg-gradient-to-b from-ink via-fond-sombre to-fond-sombre" />
+                    <div className="container mx-auto px-4 relative z-10">
+                        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-8 text-center">
                             15 critères analysés en 4 catégories
                         </h2>
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                            <div className="p-6 bg-blue-50 rounded-2xl border border-blue-100">
-                                <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
-                                    <Search className="w-5 h-5 text-white" />
-                                </div>
-                                <h3 className="font-bold text-ink mb-2">Technique</h3>
-                                <p className="text-sm text-soft">HTTPS, viewport, vitesse, sitemap, robots.txt, Open Graph, Twitter Cards</p>
-                            </div>
-                            <div className="p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
-                                <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center mb-4">
-                                    <Code2 className="w-5 h-5 text-white" />
-                                </div>
-                                <h3 className="font-bold text-ink mb-2">Contenu</h3>
-                                <p className="text-sm text-soft">Title, meta description, H1, structure Hn, ratio texte/HTML</p>
-                            </div>
-                            <div className="p-6 bg-amber-50 rounded-2xl border border-amber-100">
-                                <div className="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center mb-4">
-                                    <FileCode className="w-5 h-5 text-white" />
-                                </div>
-                                <h3 className="font-bold text-ink mb-2">Accessibilité</h3>
-                                <p className="text-sm text-soft">Images alt, attributs ARIA, labels de formulaires</p>
-                            </div>
-                            <div className="p-6 bg-violet-50 rounded-2xl border border-violet-100">
-                                <div className="w-10 h-10 bg-violet-500 rounded-lg flex items-center justify-center mb-4">
-                                    <Bot className="w-5 h-5 text-white" />
-                                </div>
-                                <h3 className="font-bold text-ink mb-2">IA-Ready</h3>
-                                <p className="text-sm text-soft">Crawlers GPTBot, Claude-Web, PerplexityBot, Google-Extended</p>
-                            </div>
+                            {FEATURES.map((feature) => {
+                                const Icon = feature.icon;
+                                return (
+                                    <div key={feature.title} className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
+                                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-4`}>
+                                            <Icon className="w-5 h-5 text-white" />
+                                        </div>
+                                        <h3 className="font-bold text-white mb-2">{feature.title}</h3>
+                                        <p className="text-sm text-white/60">{feature.description}</p>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </section>
 
                 {/* Why Audit Section */}
-                <section className="py-16">
+                <section className="py-16 bg-ink">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-3xl font-heading font-bold text-ink mb-8 text-center">
-                                Pourquoi auditer votre site SEO ?
-                            </h2>
+                            <div className="text-center mb-12">
+                                <span className="px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 text-sauge text-xs font-semibold uppercase tracking-[0.2em]">
+                                    Guide
+                                </span>
+                                <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mt-6 mb-4">
+                                    Pourquoi auditer votre site SEO ?
+                                </h2>
+                            </div>
 
-                            <div className="prose prose-lg max-w-none text-soft mb-12">
-                                <p>
-                                    <strong className="text-ink">90% des sites web ont des problèmes SEO invisibles</strong> qui plombent leur visibilité Google. Balises title mal optimisées, images sans attribut alt, vitesse de chargement trop lente, absence de sitemap... Ces erreurs passent inaperçues mais coûtent cher en trafic perdu. Découvrez <Link href="/blog/contenu-rapport-audit-seo" className="text-sauge hover:underline">ce que contient un rapport d'audit SEO complet</Link>.
+                            <div className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 mb-12">
+                                <p className="text-white/70 text-lg leading-relaxed mb-6">
+                                    <strong className="text-white">90% des sites web ont des problèmes SEO invisibles</strong> qui plombent leur visibilité Google. Balises title mal optimisées, images sans attribut alt, vitesse de chargement trop lente, absence de sitemap... Ces erreurs passent inaperçues mais coûtent cher en trafic perdu. Découvrez <Link href="/blog/contenu-rapport-audit-seo" className="text-sauge hover:underline">ce que contient un rapport d'audit SEO complet</Link>.
                                 </p>
-                                <p>
-                                    Un audit SEO révèle ces problèmes et vous donne une <strong className="text-ink">roadmap claire</strong> pour les corriger. Cet outil analyse 15 critères essentiels en moins de 30 secondes — et contrairement aux autres outils, il vérifie aussi votre <strong className="text-ink">compatibilité avec les crawlers IA</strong> (ChatGPT, Perplexity, Claude). Pour une analyse encore plus poussée de votre visibilité IA, utilisez notre <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">testeur de visibilité IA dédié</Link>.
+                                <p className="text-white/70 text-lg leading-relaxed">
+                                    Un audit SEO révèle ces problèmes et vous donne une <strong className="text-white">roadmap claire</strong> pour les corriger. Cet outil analyse 15 critères essentiels en moins de 30 secondes — et contrairement aux autres outils, il vérifie aussi votre <strong className="text-white">compatibilité avec les crawlers IA</strong> (ChatGPT, Perplexity, Claude). Pour une analyse encore plus poussée de votre visibilité IA, utilisez notre <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">testeur de visibilité IA dédié</Link>.
                                 </p>
                             </div>
 
                             <div className="grid md:grid-cols-3 gap-6">
-                                <div className="bg-emerald-50 rounded-2xl p-6 border border-emerald-100 text-center">
-                                    <Zap className="w-10 h-10 text-emerald-500 mx-auto mb-4" />
-                                    <h3 className="font-bold text-ink mb-2">Résultats en 30 sec</h3>
-                                    <p className="text-sm text-soft">
+                                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
+                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center mx-auto mb-4">
+                                        <Zap className="w-6 h-6 text-white" />
+                                    </div>
+                                    <h3 className="font-bold text-white mb-2">Résultats en 30 sec</h3>
+                                    <p className="text-sm text-white/60">
                                         Pas d'attente, pas de file. Entrez votre URL et obtenez votre score immédiatement.
                                     </p>
                                 </div>
-                                <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100 text-center">
-                                    <Bot className="w-10 h-10 text-blue-500 mx-auto mb-4" />
-                                    <h3 className="font-bold text-ink mb-2">Analyse IA incluse</h3>
-                                    <p className="text-sm text-soft">
+                                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
+                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center mx-auto mb-4">
+                                        <Bot className="w-6 h-6 text-white" />
+                                    </div>
+                                    <h3 className="font-bold text-white mb-2">Analyse IA incluse</h3>
+                                    <p className="text-sm text-white/60">
                                         Le seul audit gratuit qui vérifie si GPTBot, Claude et Perplexity peuvent accéder à votre site.
                                     </p>
                                 </div>
-                                <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 text-center">
-                                    <Target className="w-10 h-10 text-amber-500 mx-auto mb-4" />
-                                    <h3 className="font-bold text-ink mb-2">Actions concrètes</h3>
-                                    <p className="text-sm text-soft">
+                                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
+                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center mx-auto mb-4">
+                                        <Target className="w-6 h-6 text-white" />
+                                    </div>
+                                    <h3 className="font-bold text-white mb-2">Actions concrètes</h3>
+                                    <p className="text-sm text-white/60">
                                         Chaque problème détecté est accompagné d'une recommandation claire et actionnable.
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="mt-12 bg-gray-50 rounded-2xl p-8 border border-line">
+                            <div className="mt-12 bg-gradient-to-r from-sauge/10 to-transparent rounded-2xl p-8 border border-sauge/20">
                                 <div className="flex items-start gap-4">
                                     <TrendingUp className="w-8 h-8 text-sauge flex-shrink-0 mt-1" />
                                     <div>
-                                        <h3 className="font-bold text-ink mb-2">Après l'audit : passez à l'action</h3>
-                                        <p className="text-soft mb-4">
-                                            Cet outil gratuit vous donne un aperçu. Pour un <strong className="text-ink">audit SEO professionnel complet</strong> avec analyse concurrentielle, étude sémantique et roadmap priorisée par ROI, découvrez mon accompagnement expert.
+                                        <h3 className="font-bold text-white mb-2">Après l'audit : passez à l'action</h3>
+                                        <p className="text-white/70 mb-4">
+                                            Cet outil gratuit vous donne un aperçu. Pour un <strong className="text-white">audit SEO professionnel complet</strong> avec analyse concurrentielle, étude sémantique et roadmap priorisée par ROI, découvrez mon accompagnement expert.
                                         </p>
                                         <Link href="/audit-seo" className="text-sauge font-medium hover:underline inline-flex items-center gap-2">
                                             Découvrir l'audit SEO professionnel
@@ -279,40 +308,28 @@ export default function AuditSEOPage() {
                 </section>
 
                 {/* Related Tools */}
-                <section className="py-12 bg-white">
+                <section className="py-16 bg-fond-sombre">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-2xl font-heading font-bold text-ink mb-8">
+                        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-8 text-center">
                             Outils complémentaires
                         </h2>
-                        <div className="grid md:grid-cols-3 gap-6">
+                        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                             {RELATED_TOOLS.map((tool) => {
                                 const Icon = tool.icon;
-                                const isLive = tool.status === "live";
-                                const content = (
-                                    <>
-                                        <Icon className="w-8 h-8 text-sauge mb-4" />
-                                        <h3 className="font-bold text-ink mb-2 group-hover:text-sauge transition-colors">
-                                            {tool.title}
-                                            {!isLive && <span className="ml-2 text-xs text-soft">(Bientôt)</span>}
-                                        </h3>
-                                        <p className="text-sm text-soft">{tool.description}</p>
-                                    </>
-                                );
-                                return isLive ? (
+                                return (
                                     <Link
                                         key={tool.href}
                                         href={tool.href}
-                                        className="group p-6 bg-white rounded-2xl border border-line hover:border-sauge/30 transition-all"
+                                        className="group p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-sauge/30 transition-all hover:bg-white/10"
                                     >
-                                        {content}
+                                        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                                            <Icon className="w-6 h-6 text-white" />
+                                        </div>
+                                        <h3 className="font-bold text-white mb-2 group-hover:text-sauge transition-colors">
+                                            {tool.title}
+                                        </h3>
+                                        <p className="text-sm text-white/60">{tool.description}</p>
                                     </Link>
-                                ) : (
-                                    <div
-                                        key={tool.href}
-                                        className="p-6 bg-white rounded-2xl border border-line opacity-60"
-                                    >
-                                        {content}
-                                    </div>
                                 );
                             })}
                         </div>
@@ -320,15 +337,15 @@ export default function AuditSEOPage() {
                 </section>
 
                 {/* Maillage Section */}
-                <section className="py-12 bg-gray-50">
+                <section className="py-16 bg-ink">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-8 text-center">
                                 Approfondir votre stratégie SEO
                             </h2>
                             <div className="grid md:grid-cols-2 gap-8">
-                                <div>
-                                    <h3 className="font-bold text-ink mb-4">Lectures recommandées</h3>
+                                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
+                                    <h3 className="font-bold text-white mb-4">Lectures recommandées</h3>
                                     <ul className="space-y-3">
                                         <li>
                                             <Link href="/blog/importance-audit-seo" className="text-sauge hover:underline">
@@ -347,8 +364,8 @@ export default function AuditSEOPage() {
                                         </li>
                                     </ul>
                                 </div>
-                                <div>
-                                    <h3 className="font-bold text-ink mb-4">Audit SEO par ville</h3>
+                                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
+                                    <h3 className="font-bold text-white mb-4">Audit SEO par ville</h3>
                                     <ul className="space-y-3">
                                         <li>
                                             <Link href="/consultant-seo-nice" className="text-sauge hover:underline">
@@ -373,18 +390,33 @@ export default function AuditSEOPage() {
                 </section>
 
                 {/* FAQ */}
-                <section className="py-16 bg-white">
+                <section className="py-16 bg-fond-sombre">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto">
-                            <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-8 text-center">
                                 Questions Fréquentes
                             </h2>
-                            <div className="space-y-6">
+                            <div className="space-y-4">
                                 {FAQ_ITEMS.map((item, index) => (
-                                    <div key={index} className="bg-gray-50 rounded-xl border border-line p-6">
-                                        <h3 className="font-bold text-ink mb-3">{item.question}</h3>
-                                        <p className="text-soft leading-relaxed">{item.answer}</p>
-                                    </div>
+                                    <details
+                                        key={index}
+                                        className="group bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden"
+                                    >
+                                        <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                                            <h3 className="font-bold text-white pr-4">{item.question}</h3>
+                                            <svg
+                                                className="w-5 h-5 text-white/50 flex-shrink-0 transition-transform group-open:rotate-180"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                            >
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </summary>
+                                        <div className="px-6 pb-6 pt-0">
+                                            <p className="text-white/60 leading-relaxed">{item.answer}</p>
+                                        </div>
+                                    </details>
                                 ))}
                             </div>
                         </div>
@@ -392,18 +424,25 @@ export default function AuditSEOPage() {
                 </section>
 
                 {/* CTA */}
-                <section className="py-16 bg-fond-sombre">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-2xl font-heading font-bold text-white mb-4">
+                <section className="py-20 bg-ink relative overflow-hidden">
+                    {/* Background effects */}
+                    <div className="absolute top-0 left-1/4 w-96 h-96 bg-sauge/20 rounded-full blur-[150px]" />
+                    <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-emerald-500/10 rounded-full blur-[120px]" />
+
+                    <div className="container mx-auto px-4 text-center relative z-10">
+                        <span className="px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 text-sauge text-xs font-semibold uppercase tracking-[0.2em]">
+                            Prochaine étape
+                        </span>
+                        <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mt-6 mb-4">
                             Besoin d'un audit SEO approfondi ?
                         </h2>
-                        <p className="text-texte-moyen mb-8 max-w-xl mx-auto">
+                        <p className="text-white/60 mb-8 max-w-xl mx-auto text-lg">
                             Cet outil gratuit vous donne un aperçu. Pour une analyse complète avec recommandations personnalisées,
                             je vous accompagne.
                         </p>
                         <Link
                             href="/contact"
-                            className="inline-flex items-center gap-2 bg-sauge text-white px-8 py-4 rounded-full font-bold hover:bg-sauge/90 transition-colors"
+                            className="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-all shadow-2xl shadow-white/10"
                         >
                             Demander un audit complet
                             <ArrowRight className="w-5 h-5" />

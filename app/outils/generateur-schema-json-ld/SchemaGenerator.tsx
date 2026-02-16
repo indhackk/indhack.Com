@@ -16,7 +16,7 @@ import {
     ExternalLink,
     Plus,
     Trash2,
-    ChevronDown,
+    Eye,
 } from "lucide-react";
 
 // Types de schema supportés
@@ -398,7 +398,7 @@ export function SchemaGenerator() {
             {/* Left: Form */}
             <div className="space-y-6">
                 {/* Schema Type Tabs */}
-                <div className="bg-white rounded-2xl border border-line p-4">
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-4">
                     <div className="flex flex-wrap gap-2">
                         {SCHEMA_TYPES.map((type) => {
                             const Icon = type.icon;
@@ -410,7 +410,7 @@ export function SchemaGenerator() {
                                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                                         isActive
                                             ? "bg-sauge text-white"
-                                            : "bg-gray-50 text-soft hover:bg-gray-100"
+                                            : "bg-white/5 text-white/60 hover:bg-white/10 hover:text-white"
                                     }`}
                                 >
                                     <Icon className="w-4 h-4" />
@@ -423,8 +423,8 @@ export function SchemaGenerator() {
 
                 {/* Sector Templates */}
                 {activeType === "LocalBusiness" && (
-                    <div className="bg-white rounded-2xl border border-line p-4">
-                        <label className="block text-sm font-bold text-ink mb-3">
+                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-4">
+                        <label className="block text-sm font-bold text-white mb-3">
                             Templates sectoriels
                         </label>
                         <div className="flex flex-wrap gap-2">
@@ -432,7 +432,7 @@ export function SchemaGenerator() {
                                 <button
                                     key={template.id}
                                     onClick={() => applyTemplate(template.id)}
-                                    className="px-3 py-1.5 bg-gray-50 hover:bg-sauge/10 text-soft hover:text-sauge rounded-lg text-sm transition-colors"
+                                    className="px-3 py-1.5 bg-white/5 hover:bg-sauge/20 text-white/60 hover:text-sauge rounded-lg text-sm transition-colors border border-white/10 hover:border-sauge/30"
                                 >
                                     {template.label}
                                 </button>
@@ -442,7 +442,7 @@ export function SchemaGenerator() {
                 )}
 
                 {/* Dynamic Form */}
-                <div className="bg-white rounded-2xl border border-line p-6 space-y-4">
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 space-y-4">
                     {activeType === "LocalBusiness" && (
                         <>
                             <FormField label="Nom de l'entreprise *" value={businessName} onChange={setBusinessName} placeholder="Ma Super Entreprise" />
@@ -467,15 +467,15 @@ export function SchemaGenerator() {
 
                     {activeType === "FAQPage" && (
                         <>
-                            <p className="text-sm text-soft mb-4">Ajoutez vos questions et réponses pour créer une page FAQ structurée.</p>
+                            <p className="text-sm text-white/60 mb-4">Ajoutez vos questions et réponses pour créer une page FAQ structurée.</p>
                             {faqItems.map((item, index) => (
-                                <div key={index} className="p-4 bg-gray-50 rounded-xl space-y-3">
+                                <div key={index} className="p-4 bg-white/5 rounded-xl space-y-3 border border-white/10">
                                     <div className="flex items-center justify-between">
-                                        <span className="text-sm font-bold text-ink">Question {index + 1}</span>
+                                        <span className="text-sm font-bold text-white">Question {index + 1}</span>
                                         {faqItems.length > 1 && (
                                             <button
                                                 onClick={() => setFaqItems(faqItems.filter((_, i) => i !== index))}
-                                                className="text-red-500 hover:text-red-600"
+                                                className="text-red-400 hover:text-red-300"
                                             >
                                                 <Trash2 className="w-4 h-4" />
                                             </button>
@@ -490,7 +490,7 @@ export function SchemaGenerator() {
                                             setFaqItems(newItems);
                                         }}
                                         placeholder="Votre question ?"
-                                        className="w-full px-4 py-3 border border-line rounded-xl focus:ring-2 focus:ring-sauge/20 focus:border-sauge transition-all"
+                                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:ring-2 focus:ring-sauge/50 focus:border-sauge/50"
                                     />
                                     <textarea
                                         value={item.answer}
@@ -501,7 +501,7 @@ export function SchemaGenerator() {
                                         }}
                                         placeholder="La réponse..."
                                         rows={3}
-                                        className="w-full px-4 py-3 border border-line rounded-xl focus:ring-2 focus:ring-sauge/20 focus:border-sauge transition-all resize-none"
+                                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:ring-2 focus:ring-sauge/50 focus:border-sauge/50 resize-none"
                                     />
                                 </div>
                             ))}
@@ -535,7 +535,7 @@ export function SchemaGenerator() {
                             <FormField label="URL du site" value={orgUrl} onChange={setOrgUrl} placeholder="https://indhack.com" type="url" />
                             <FormField label="URL du logo" value={orgLogo} onChange={setOrgLogo} placeholder="https://indhack.com/logo.png" type="url" />
                             <div className="space-y-2">
-                                <label className="block text-sm font-bold text-ink">Réseaux sociaux</label>
+                                <label className="block text-sm font-bold text-white">Réseaux sociaux</label>
                                 {orgSameAs.map((url, index) => (
                                     <div key={index} className="flex gap-2">
                                         <input
@@ -547,10 +547,10 @@ export function SchemaGenerator() {
                                                 setOrgSameAs(newUrls);
                                             }}
                                             placeholder="https://linkedin.com/company/..."
-                                            className="flex-1 px-4 py-3 border border-line rounded-xl focus:ring-2 focus:ring-sauge/20 focus:border-sauge transition-all"
+                                            className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:ring-2 focus:ring-sauge/50 focus:border-sauge/50"
                                         />
                                         {orgSameAs.length > 1 && (
-                                            <button onClick={() => setOrgSameAs(orgSameAs.filter((_, i) => i !== index))} className="text-red-500">
+                                            <button onClick={() => setOrgSameAs(orgSameAs.filter((_, i) => i !== index))} className="text-red-400 hover:text-red-300">
                                                 <Trash2 className="w-4 h-4" />
                                             </button>
                                         )}
@@ -583,15 +583,15 @@ export function SchemaGenerator() {
                             <div className="grid grid-cols-2 gap-4">
                                 <FormField label="Prix" value={productPrice} onChange={setProductPrice} placeholder="1199" />
                                 <div>
-                                    <label className="block text-sm font-bold text-ink mb-2">Disponibilité</label>
+                                    <label className="block text-sm font-bold text-white mb-2">Disponibilité</label>
                                     <select
                                         value={productAvailability}
                                         onChange={(e) => setProductAvailability(e.target.value)}
-                                        className="w-full px-4 py-3 border border-line rounded-xl focus:ring-2 focus:ring-sauge/20 focus:border-sauge"
+                                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:ring-2 focus:ring-sauge/50 focus:border-sauge/50"
                                     >
-                                        <option value="InStock">En stock</option>
-                                        <option value="OutOfStock">Rupture</option>
-                                        <option value="PreOrder">Précommande</option>
+                                        <option value="InStock" className="bg-ink">En stock</option>
+                                        <option value="OutOfStock" className="bg-ink">Rupture</option>
+                                        <option value="PreOrder" className="bg-ink">Précommande</option>
                                     </select>
                                 </div>
                             </div>
@@ -602,13 +602,13 @@ export function SchemaGenerator() {
                         <>
                             <FormField label="Titre du tutoriel *" value={howToName} onChange={setHowToName} placeholder="Comment installer WordPress" />
                             <FormField label="Description" value={howToDescription} onChange={setHowToDescription} placeholder="Guide étape par étape pour..." multiline />
-                            <p className="text-sm font-bold text-ink mt-4">Étapes :</p>
+                            <p className="text-sm font-bold text-white mt-4">Étapes :</p>
                             {howToSteps.map((step, index) => (
-                                <div key={index} className="p-4 bg-gray-50 rounded-xl space-y-3">
+                                <div key={index} className="p-4 bg-white/5 rounded-xl space-y-3 border border-white/10">
                                     <div className="flex items-center justify-between">
-                                        <span className="text-sm font-bold text-ink">Étape {index + 1}</span>
+                                        <span className="text-sm font-bold text-white">Étape {index + 1}</span>
                                         {howToSteps.length > 1 && (
-                                            <button onClick={() => setHowToSteps(howToSteps.filter((_, i) => i !== index))} className="text-red-500">
+                                            <button onClick={() => setHowToSteps(howToSteps.filter((_, i) => i !== index))} className="text-red-400 hover:text-red-300">
                                                 <Trash2 className="w-4 h-4" />
                                             </button>
                                         )}
@@ -622,7 +622,7 @@ export function SchemaGenerator() {
                                             setHowToSteps(newSteps);
                                         }}
                                         placeholder="Nom de l'étape"
-                                        className="w-full px-4 py-3 border border-line rounded-xl"
+                                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30"
                                     />
                                     <textarea
                                         value={step.text}
@@ -633,7 +633,7 @@ export function SchemaGenerator() {
                                         }}
                                         placeholder="Instructions..."
                                         rows={2}
-                                        className="w-full px-4 py-3 border border-line rounded-xl resize-none"
+                                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 resize-none"
                                     />
                                 </div>
                             ))}
@@ -659,10 +659,10 @@ export function SchemaGenerator() {
 
                     {activeType === "BreadcrumbList" && (
                         <>
-                            <p className="text-sm text-soft mb-4">Configurez votre fil d'Ariane (breadcrumb) pour améliorer la navigation et le SEO.</p>
+                            <p className="text-sm text-white/60 mb-4">Configurez votre fil d'Ariane (breadcrumb) pour améliorer la navigation et le SEO.</p>
                             {breadcrumbs.map((item, index) => (
                                 <div key={index} className="flex gap-2 items-center">
-                                    <span className="text-sm text-soft w-8">{index + 1}.</span>
+                                    <span className="text-sm text-white/50 w-8">{index + 1}.</span>
                                     <input
                                         type="text"
                                         value={item.name}
@@ -672,7 +672,7 @@ export function SchemaGenerator() {
                                             setBreadcrumbs(newItems);
                                         }}
                                         placeholder="Nom"
-                                        className="flex-1 px-4 py-3 border border-line rounded-xl"
+                                        className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30"
                                     />
                                     <input
                                         type="url"
@@ -683,10 +683,10 @@ export function SchemaGenerator() {
                                             setBreadcrumbs(newItems);
                                         }}
                                         placeholder="URL"
-                                        className="flex-1 px-4 py-3 border border-line rounded-xl"
+                                        className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30"
                                     />
                                     {breadcrumbs.length > 1 && (
-                                        <button onClick={() => setBreadcrumbs(breadcrumbs.filter((_, i) => i !== index))} className="text-red-500">
+                                        <button onClick={() => setBreadcrumbs(breadcrumbs.filter((_, i) => i !== index))} className="text-red-400 hover:text-red-300">
                                             <Trash2 className="w-4 h-4" />
                                         </button>
                                     )}
@@ -703,60 +703,98 @@ export function SchemaGenerator() {
             {/* Right: Preview */}
             <div className="space-y-6">
                 {/* Completeness Score */}
-                <div className="bg-white rounded-2xl border border-line p-6">
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
                     <div className="flex items-center justify-between mb-4">
-                        <span className="font-bold text-ink">Complétude</span>
-                        <span className={`text-2xl font-bold ${score >= 70 ? 'text-green-600' : score >= 40 ? 'text-amber-500' : 'text-red-500'}`}>
+                        <span className="font-bold text-white">Complétude</span>
+                        <span className={`text-2xl font-bold ${score >= 70 ? 'text-emerald-400' : score >= 40 ? 'text-amber-400' : 'text-red-400'}`}>
                             {score}%
                         </span>
                     </div>
-                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="h-2 bg-white/10 rounded-full overflow-hidden">
                         <div
-                            className={`h-full transition-all duration-500 ${score >= 70 ? 'bg-green-500' : score >= 40 ? 'bg-amber-500' : 'bg-red-500'}`}
+                            className={`h-full transition-all duration-500 ${score >= 70 ? 'bg-gradient-to-r from-emerald-500 to-emerald-400' : score >= 40 ? 'bg-gradient-to-r from-amber-500 to-amber-400' : 'bg-gradient-to-r from-red-500 to-red-400'}`}
                             style={{ width: `${score}%` }}
                         />
                     </div>
-                    <p className="text-sm text-soft mt-2">
+                    <p className="text-sm text-white/60 mt-2">
                         {score >= 70 ? "Excellent ! Votre schema est bien rempli." : score >= 40 ? "Bon début. Complétez les champs recommandés." : "Ajoutez plus d'informations pour un schema efficace."}
                     </p>
                 </div>
 
                 {/* JSON Preview */}
-                <div className="bg-white rounded-2xl border border-line overflow-hidden">
-                    <div className="flex items-center justify-between p-4 border-b border-line bg-gray-50">
-                        <span className="font-bold text-ink">Code JSON-LD</span>
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden sticky top-24">
+                    <div className="flex items-center justify-between p-4 border-b border-white/10 bg-white/5">
+                        <div className="flex items-center gap-2">
+                            <div className="flex gap-1.5">
+                                <span className="w-3 h-3 rounded-full bg-red-500" />
+                                <span className="w-3 h-3 rounded-full bg-amber-500" />
+                                <span className="w-3 h-3 rounded-full bg-emerald-500" />
+                            </div>
+                            <span className="font-mono text-sm text-white/60 ml-2">schema.json</span>
+                        </div>
                         <div className="flex gap-2">
                             <a
-                                href={`https://search.google.com/test/rich-results`}
+                                href="https://search.google.com/test/rich-results"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 px-3 py-1.5 text-sm text-soft hover:text-sauge transition-colors"
+                                className="flex items-center gap-2 px-3 py-1.5 text-sm text-white/60 hover:text-white transition-colors"
                             >
                                 <ExternalLink className="w-4 h-4" />
                                 Tester
                             </a>
                             <button
                                 onClick={handleCopy}
-                                className="flex items-center gap-2 px-4 py-1.5 bg-sauge text-white rounded-lg text-sm font-medium hover:bg-sauge/90 transition-colors"
+                                className="flex items-center gap-2 px-4 py-1.5 bg-sauge text-white rounded-lg text-sm font-medium hover:bg-sauge/80 transition-colors"
                             >
                                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                                 {copied ? "Copié !" : "Copier"}
                             </button>
                         </div>
                     </div>
-                    <pre className="p-4 text-sm overflow-x-auto max-h-[500px] bg-gray-900 text-gray-100">
-                        <code>{`<script type="application/ld+json">\n${schemaString}\n</script>`}</code>
+                    <pre className="p-4 text-sm overflow-x-auto max-h-[500px] font-mono">
+                        <code className="text-white/80">
+                            {`<script type="application/ld+json">\n${schemaString}\n</script>`.split('\n').map((line, i) => (
+                                <div key={i} className="leading-relaxed">
+                                    {line.includes('"@') ? (
+                                        <span className="text-violet-400">{line}</span>
+                                    ) : line.includes('":') ? (
+                                        <>
+                                            <span className="text-cyan-400">{line.split('":')[0]}"</span>
+                                            <span className="text-white">:</span>
+                                            <span className="text-emerald-400">{line.split('":')[1]}</span>
+                                        </>
+                                    ) : (
+                                        <span>{line}</span>
+                                    )}
+                                </div>
+                            ))}
+                        </code>
                     </pre>
                 </div>
 
                 {/* Instructions */}
-                <div className="bg-sauge/10 rounded-2xl p-6">
-                    <h3 className="font-bold text-ink mb-3">Comment utiliser ce code ?</h3>
-                    <ol className="space-y-2 text-sm text-soft">
-                        <li>1. Copiez le code JSON-LD ci-dessus</li>
-                        <li>2. Collez-le dans le <code className="bg-white px-1.5 py-0.5 rounded">&lt;head&gt;</code> de votre page HTML</li>
-                        <li>3. Testez avec l'outil <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer" className="text-sauge underline">Rich Results Test</a></li>
-                        <li>4. Attendez que Google recrawle votre page</li>
+                <div className="bg-sauge/10 rounded-2xl p-6 border border-sauge/20">
+                    <h3 className="font-bold text-white mb-3 flex items-center gap-2">
+                        <Eye className="w-5 h-5 text-sauge" />
+                        Comment utiliser ce code ?
+                    </h3>
+                    <ol className="space-y-2 text-sm text-white/70">
+                        <li className="flex gap-3">
+                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-sauge flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
+                            <span>Copiez le code JSON-LD ci-dessus</span>
+                        </li>
+                        <li className="flex gap-3">
+                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-sauge flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
+                            <span>Collez-le dans le <code className="bg-white/10 px-1.5 py-0.5 rounded text-sauge">&lt;head&gt;</code> de votre page</span>
+                        </li>
+                        <li className="flex gap-3">
+                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-sauge flex items-center justify-center text-xs font-bold flex-shrink-0">3</span>
+                            <span>Testez avec <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer" className="text-sauge underline">Rich Results Test</a></span>
+                        </li>
+                        <li className="flex gap-3">
+                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-sauge flex items-center justify-center text-xs font-bold flex-shrink-0">4</span>
+                            <span>Attendez que Google recrawle votre page</span>
+                        </li>
                     </ol>
                 </div>
             </div>
@@ -782,14 +820,14 @@ function FormField({
 }) {
     return (
         <div>
-            <label className="block text-sm font-bold text-ink mb-2">{label}</label>
+            <label className="block text-sm font-bold text-white mb-2">{label}</label>
             {multiline ? (
                 <textarea
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
                     placeholder={placeholder}
                     rows={3}
-                    className="w-full px-4 py-3 border border-line rounded-xl focus:ring-2 focus:ring-sauge/20 focus:border-sauge transition-all resize-none"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:ring-2 focus:ring-sauge/50 focus:border-sauge/50 transition-all resize-none"
                 />
             ) : (
                 <input
@@ -797,7 +835,7 @@ function FormField({
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
                     placeholder={placeholder}
-                    className="w-full px-4 py-3 border border-line rounded-xl focus:ring-2 focus:ring-sauge/20 focus:border-sauge transition-all"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:ring-2 focus:ring-sauge/50 focus:border-sauge/50 transition-all"
                 />
             )}
         </div>
