@@ -102,17 +102,22 @@ export default function BrainCanvas() {
 
             camera.position.z = 4;
 
+            // Position initiale : vue de dessus (comme image cible)
+            // Inclinaison sur X pour voir les deux hémisphères par-dessus
+            points.rotation.x = -Math.PI / 2;
+            lines.rotation.x = -Math.PI / 2;
+
             // Compteur pour la rotation
-            let rotationY = 0;
+            let rotationZ = 0;
 
             const animate = () => {
                 if (!run) { frameId = requestAnimationFrame(animate); return; }
 
-                // Rotation lente sur l'axe Y (tourne sur lui-même)
-                rotationY += 0.001;
+                // Rotation lente sur l'axe Z (tourne sur lui-même vu de dessus)
+                rotationZ += 0.001;
 
-                points.rotation.y = rotationY;
-                lines.rotation.y = rotationY;
+                points.rotation.z = rotationZ;
+                lines.rotation.z = rotationZ;
 
                 // Floating effect
                 const t = Date.now() * 0.001;
