@@ -28,7 +28,7 @@ La plupart des agences web se concentrent sur le design et les fonctionnalités.
 
 ## Avant la refonte : l'audit préalable
 
-### 1. Inventorier l'existant
+### Inventorier l'existant
 
 Avant de toucher à quoi que ce soit, documentez **tout** ce qui fonctionne :
 
@@ -40,7 +40,7 @@ Avant de toucher à quoi que ce soit, documentez **tout** ce qui fonctionne :
 | **Backlinks** | Ahrefs, Majestic |
 | **Structure de liens internes** | Screaming Frog |
 
-### 2. Identifier vos pages stars
+### Identifier vos pages stars
 
 Toutes vos pages n'ont pas la même valeur. Identifiez les **20% qui génèrent 80% du trafic** :
 
@@ -51,7 +51,7 @@ Toutes vos pages n'ont pas la même valeur. Identifiez les **20% qui génèrent 
 
 Ces pages sont **prioritaires** : elles ne doivent subir aucune régression.
 
-### 3. Cartographier les redirections
+### Cartographier les redirections
 
 Créez un **tableau de correspondance** entre anciennes et nouvelles URLs :
 

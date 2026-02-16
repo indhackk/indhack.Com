@@ -3,7 +3,7 @@ title: "Comment Créer 50 Pages Locales Uniques en 10 Minutes (Sans Être Pénal
 description: "Découvrez le Programmatic SEO : la méthode pour générer des centaines de landing pages locales uniques instantanément. Guide technique 2026 pour scaler votre trafic."
 date: "2026-02-13"
 category: "SEO Technique"
-image: "/images/blog/seo-local-nice.jpg"
+image: "/images/blog/programmatic-seo-robot-map-2026-02-15.webp"
 author: "Indiana Aflalo"
 keywords: ["programmatic seo", "générer pages locales", "seo scalabilité", "landing pages dynamiques", "doorway pages google"]
 ---

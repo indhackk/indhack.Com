@@ -30,7 +30,7 @@ Cette checklist vous permet de **n'oublier aucun point critique** et de garder u
 
 ## Phase 1 : Avant la refonte (Audit & Préparation)
 
-### 1.1 Inventaire de l'existant
+### Inventaire de l'existant
 
 L'objectif est de documenter tout ce qui fonctionne actuellement pour ne rien perdre.
 
@@ -45,7 +45,7 @@ L'objectif est de documenter tout ce qui fonctionne actuellement pour ne rien pe
 | 7 | **Backlinks** exportés (Ahrefs, Majestic, Search Console) | ☐ |
 | 8 | **Données structurées** actuelles listées (FAQ, Article, LocalBusiness...) | ☐ |
 
-### 1.2 Identification des pages prioritaires
+### Identification des pages prioritaires
 
 Toutes les pages n'ont pas la même valeur. Identifiez celles qui ne doivent subir aucune régression.
 
@@ -57,7 +57,7 @@ Toutes les pages n'ont pas la même valeur. Identifiez celles qui ne doivent sub
 | 12 | **Pages de conversion** marquées comme prioritaires | ☐ |
 | 13 | **Contenu evergreen** identifié (articles qui rankent depuis longtemps) | ☐ |
 
-### 1.3 Plan de redirections
+### Plan de redirections
 
 C'est LE document le plus important de votre migration.
 
@@ -69,7 +69,7 @@ C'est LE document le plus important de votre migration.
 | 17 | **Règles regex** préparées pour les patterns d'URL récurrents | ☐ |
 | 18 | **Redirections testées** sur environnement de staging | ☐ |
 
-### 1.4 Préparation technique
+### Préparation technique
 
 | # | Point à vérifier | Statut |
 |---|-----------------|--------|
@@ -84,7 +84,7 @@ C'est LE document le plus important de votre migration.
 
 ## Phase 2 : Pendant la refonte (Développement)
 
-### 2.1 Structure et URLs
+### Structure et URLs
 
 | # | Point à vérifier | Statut |
 |---|-----------------|--------|
@@ -94,7 +94,7 @@ C'est LE document le plus important de votre migration.
 | 28 | **Pas de paramètres** inutiles dans les URLs | ☐ |
 | 29 | **Trailing slash** cohérent (avec ou sans, mais pas les deux) | ☐ |
 
-### 2.2 Contenu et On-Page SEO
+### Contenu et On-Page SEO
 
 | # | Point à vérifier | Statut |
 |---|-----------------|--------|
@@ -105,7 +105,7 @@ C'est LE document le plus important de votre migration.
 | 34 | **Attributs alt** des images conservés | ☐ |
 | 35 | **Maillage interne** recréé (liens entre pages) | ☐ |
 
-### 2.3 Performance technique
+### Performance technique
 
 | # | Point à vérifier | Statut |
 |---|-----------------|--------|

@@ -3,7 +3,7 @@ title: "GEO : Comment Rendre Votre Site Visible dans ChatGPT, Perplexity et Goog
 description: "Le Generative Engine Optimization (GEO) expliqué simplement. Guide pratique pour rendre votre site visible dans les réponses des IA. Checklist, outil gratuit et stratégie concrète."
 date: "2026-02-17"
 category: "IA & SEO"
-image: "/images/blog/geo-chatgpt-2026.jpg"
+image: "/images/blog/geo-chatgpt-2026.webp"
 author: "Indiana Aflalo"
 keywords: ["GEO", "Generative Engine Optimization", "ChatGPT SEO", "visibilité IA", "référencement ChatGPT", "Perplexity SEO", "Google AI Overviews", "optimisation IA", "crawlers IA", "GPTBot", "robots.txt IA", "llms.txt"]
 ---

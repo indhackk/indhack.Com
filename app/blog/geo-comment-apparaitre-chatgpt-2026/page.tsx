@@ -285,7 +285,11 @@ export default function GEOArticlePage() {
                             </p>
 
                             <p>
-                                Dans ce guide, je vous explique concrètement ce qu'est le GEO, pourquoi il va impacter votre business, et surtout comment adapter votre site dès aujourd'hui. Et pour aller plus loin, vous pouvez tester la visibilité IA de votre site gratuitement avec notre <Link href="/outils/testeur-visibilite-ia">testeur de visibilité IA</Link>.
+                                Dans ce guide, je vous explique concrètement ce qu'est le GEO, pourquoi il va impacter votre business, et surtout comment adapter votre site dès aujourd'hui.
+                            </p>
+
+                            <p>
+                                <strong>IndHack propose le premier outil de diagnostic GEO gratuit en français.</strong> Notre <Link href="/outils/testeur-visibilite-ia">testeur de visibilité IA</Link> analyse les 8 crawlers IA majeurs, vos données structurées et vos signaux E-E-A-T pour vous donner un score GEO actionnable.
                             </p>
 
                             {/* Section 1 */}
@@ -380,6 +384,13 @@ export default function GEOArticlePage() {
                                 <strong>Vos clients comparent déjà via ChatGPT.</strong> Quand quelqu'un cherche un prestataire, un produit ou un service, il demande souvent à ChatGPT "compare X et Y" ou "quel est le meilleur Z pour mon besoin". Si vous n'apparaissez pas dans ces réponses, c'est votre concurrent qui est recommandé.
                             </p>
 
+                            <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 not-prose my-6">
+                                <div className="font-bold text-ink mb-2">Exemple concret de mon activité de consultante</div>
+                                <p className="text-soft text-sm">
+                                    J'ai récemment audité le site d'un commerce niçois qui bloquait GPTBot sans le savoir — une configuration par défaut de leur hébergeur Cloudflare. Leur robots.txt contenait une ligne <code className="bg-white px-1 rounded">User-agent: GPTBot / Disallow: /</code>. Résultat : quand un client demandait à ChatGPT "meilleur [leur métier] à Nice", ils n'apparaissaient jamais. Leur concurrent direct, lui, était systématiquement cité. Une simple correction du robots.txt a changé la donne en quelques semaines.
+                                </p>
+                            </div>
+
                             <p>
                                 <strong>Le GEO impacte particulièrement les requêtes à forte intention d'achat</strong> : comparatifs, choix de prestataire, shortlists. Ce sont les requêtes les plus précieuses commercialement.
                             </p>
@@ -399,7 +410,6 @@ export default function GEOArticlePage() {
                                     </div>
                                     <div>
                                         <div className="font-heading font-bold text-ink text-lg">Pilier 1 — Accessibilité technique aux crawlers IA</div>
-                                        <div className="text-sm text-soft">30% du score GEO</div>
                                     </div>
                                 </div>
                             </div>
@@ -441,7 +451,7 @@ export default function GEOArticlePage() {
                             </ol>
 
                             <blockquote>
-                                <strong>Actions immédiates :</strong> Vérifiez si votre site bloque les crawlers IA avec notre <Link href="/outils/testeur-visibilite-ia">testeur de visibilité IA gratuit</Link>. Si vous devez corriger votre robots.txt, utilisez notre <Link href="/outils/generateur-robots-txt">générateur de robots.txt optimisé IA</Link>.
+                                <strong>Actions immédiates :</strong> Vérifiez si votre site bloque les crawlers IA (voir le testeur en sidebar). Si vous devez corriger votre robots.txt, utilisez notre <Link href="/outils/generateur-robots-txt">générateur de robots.txt optimisé IA</Link>.
                             </blockquote>
 
                             {/* Pilier 2 */}
@@ -452,7 +462,6 @@ export default function GEOArticlePage() {
                                     </div>
                                     <div>
                                         <div className="font-heading font-bold text-ink text-lg">Pilier 2 — Richesse sémantique et données structurées</div>
-                                        <div className="text-sm text-soft">30% du score GEO</div>
                                     </div>
                                 </div>
                             </div>
@@ -497,7 +506,6 @@ export default function GEOArticlePage() {
                                     </div>
                                     <div>
                                         <div className="font-heading font-bold text-ink text-lg">Pilier 3 — Signaux E-E-A-T</div>
-                                        <div className="text-sm text-soft">20% du score GEO</div>
                                     </div>
                                 </div>
                             </div>
@@ -556,7 +564,6 @@ export default function GEOArticlePage() {
                                     </div>
                                     <div>
                                         <div className="font-heading font-bold text-ink text-lg">Pilier 4 — Format "AI-friendly" du contenu</div>
-                                        <div className="text-sm text-soft">20% du score GEO</div>
                                     </div>
                                 </div>
                             </div>
@@ -599,7 +606,7 @@ export default function GEOArticlePage() {
                             </ol>
 
                             <p>
-                                Pour optimiser votre référencement local, <Link href="/seo-nice">découvrez nos services SEO à Nice et sur la Côte d'Azur</Link>.
+                                Pour optimiser votre référencement local, <Link href="/consultant-seo-nice">découvrez nos services SEO à Nice et sur la Côte d'Azur</Link>.
                             </p>
 
                             {/* Checklist */}
@@ -617,17 +624,7 @@ export default function GEOArticlePage() {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="mt-6 pt-6 border-t border-violet-200">
-                                    <Link
-                                        href="/outils/testeur-visibilite-ia"
-                                        className="inline-flex items-center gap-2 bg-violet-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-violet-700 transition-colors"
-                                    >
-                                        <Bot className="w-5 h-5" />
-                                        Tester ma visibilité IA maintenant
-                                        <ArrowRight className="w-4 h-4" />
-                                    </Link>
-                                </div>
-                            </div>
+                                                            </div>
 
                             {/* FAQ */}
                             <h2 id="faq">Questions Fréquentes sur le GEO</h2>
@@ -712,12 +709,6 @@ export default function GEOArticlePage() {
                                 <h3 className="font-bold text-ink mb-4">Outils gratuits</h3>
                                 <ul className="space-y-3">
                                     <li>
-                                        <Link href="/outils/testeur-visibilite-ia" className="text-violet-600 hover:text-violet-800 font-medium flex items-center gap-2 text-sm">
-                                            <ArrowRight className="w-3 h-3" />
-                                            Testeur Visibilité IA
-                                        </Link>
-                                    </li>
-                                    <li>
                                         <Link href="/outils/generateur-robots-txt" className="text-violet-600 hover:text-violet-800 font-medium flex items-center gap-2 text-sm">
                                             <ArrowRight className="w-3 h-3" />
                                             Générateur robots.txt IA
@@ -733,6 +724,12 @@ export default function GEOArticlePage() {
                                         <Link href="/outils/audit-seo-gratuit" className="text-violet-600 hover:text-violet-800 font-medium flex items-center gap-2 text-sm">
                                             <ArrowRight className="w-3 h-3" />
                                             Audit SEO Gratuit
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/outils" className="text-violet-600 hover:text-violet-800 font-medium flex items-center gap-2 text-sm">
+                                            <ArrowRight className="w-3 h-3" />
+                                            Tous nos outils SEO
                                         </Link>
                                     </li>
                                 </ul>

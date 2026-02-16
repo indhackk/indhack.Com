@@ -3,7 +3,7 @@ title: "Comment 'Voler' les Clients de Vos Concurrents sur Google Maps (Légalem
 description: "Découvrez la méthode étape par étape pour détourner légalement le trafic de vos concurrents sur Google Maps. Analyse des avis, failles SEO et optimisation de fiche GBP."
 date: "2026-02-11"
 category: "SEO Local"
-image: "/images/blog/google-business-profile.jpg"
+image: "/images/blog/google-maps-competitor-hack-2026-02-15.webp"
 author: "Indiana Aflalo"
 keywords: ["seo local google maps", "voler clients concurrents", "optimisation google business profile", "hack seo local", "google maps 2026"]
 ---
