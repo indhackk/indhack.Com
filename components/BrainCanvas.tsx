@@ -26,12 +26,10 @@ export default function BrainCanvas() {
 
         let scene: THREE.Scene, camera: THREE.PerspectiveCamera, renderer: THREE.WebGLRenderer;
         let points: THREE.Points, lines: THREE.LineSegments;
-        let brainGroup: THREE.Group;
         let frameId: number;
         let run = true, drag = false;
         let prev = { x: 0, y: 0 };
-        let targetRotationX = 0, targetRotationY = 0;
-        let autoRotationSpeed = 0.001; // Vitesse de rotation automatique (1 tour complet en ~105 secondes)
+        let dragOffsetX = 0, dragOffsetY = 0;
 
         const initThree = () => {
             if (cont.firstChild) cont.removeChild(cont.firstChild);
@@ -41,30 +39,21 @@ export default function BrainCanvas() {
             renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 
             renderer.setSize(cont.clientWidth, cont.clientHeight);
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+            renderer.setPixelRatio(window.devicePixelRatio || 1);
             cont.appendChild(renderer.domElement);
 
-            // Éclairage amélioré
-            scene.add(new THREE.AmbientLight(0xffffff, 0.5));
-            const hemisphereLight = new THREE.HemisphereLight(0xB8C4BC, 0x5A665F, 0.6);
+            scene.add(new THREE.AmbientLight(0xffffff, 0.4));
+            const hemisphereLight = new THREE.HemisphereLight(0xA3B1AA, 0x5A665F, 0.5);
             scene.add(hemisphereLight);
-            const d1 = new THREE.DirectionalLight(0xffffff, 0.9);
-            d1.position.set(5, 10, 8);
-            scene.add(d1);
-            // Lumière arrière pour effet de profondeur
-            const d2 = new THREE.DirectionalLight(0x638576, 0.3);
-            d2.position.set(-5, -5, -5);
-            scene.add(d2);
+            const d = new THREE.DirectionalLight(0xffffff, 0.8);
+            d.position.set(5, 10, 8);
+            scene.add(d);
 
-            const N = 3200; // Plus de particules pour un effet plus dense
-
-            // Groupe pour contenir le cerveau (facilite les rotations)
-            brainGroup = new THREE.Group();
-            scene.add(brainGroup);
+            const mobile = window.matchMedia('(max-width:768px)').matches;
+            const N = mobile ? 1200 : 2800;
 
             const geo = new THREE.BufferGeometry();
             const pos = new Float32Array(N * 3);
-            const sizes = new Float32Array(N); // Tailles variables
 
             for (let i = 0; i < N; i++) {
                 const t = Math.random() * Math.PI * 2;
@@ -73,75 +62,51 @@ export default function BrainCanvas() {
                 let y = 0.9 * Math.cos(s);
                 let z = 1.3 * Math.sin(s) * Math.sin(t);
 
-                // Forme de cerveau avec sillons
                 const n = 0.15 * Math.sin(8 * t) * Math.sin(8 * s);
-                x += n; z += n;
-                // Séparation des deux hémisphères
-                x += x > 0 ? 0.35 : -0.35;
+                x += n; z += n; x += x > 0 ? 0.3 : -0.3;
 
                 pos[i * 3] = x;
                 pos[i * 3 + 1] = y;
                 pos[i * 3 + 2] = z;
-
-                // Variation de taille pour plus de profondeur
-                sizes[i] = 0.02 + Math.random() * 0.025;
             }
 
             geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-            geo.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
 
             const mat = new THREE.PointsMaterial({
-                color: 0xA3B1AA,
-                size: 0.035,
+                color: 0x98A69C,
+                size: 0.03,
                 transparent: true,
-                opacity: 0.8,
-                sizeAttenuation: true,
-                blending: THREE.AdditiveBlending, // Effet de glow subtil
+                opacity: 0.7,
+                sizeAttenuation: true
             });
 
             points = new THREE.Points(geo, mat);
-            brainGroup.add(points);
+            scene.add(points);
 
-            // Connexions neuronales (plus nombreuses et subtiles)
             const g2 = new THREE.BufferGeometry();
-            const numConnections = 120;
-            const p2 = new Float32Array(numConnections * 6);
+            const p2 = new Float32Array(500);
 
-            for (let i = 0; i < numConnections; i++) {
+            for (let i = 0; i < 80; i++) {
                 const a = Math.floor(Math.random() * N) * 3;
                 const b = Math.floor(Math.random() * N) * 3;
 
-                // Ne connecter que les points proches pour un effet plus réaliste
-                const dist = Math.sqrt(
-                    Math.pow(pos[a] - pos[b], 2) +
-                    Math.pow(pos[a + 1] - pos[b + 1], 2) +
-                    Math.pow(pos[a + 2] - pos[b + 2], 2)
-                );
+                p2[i * 6] = pos[a];
+                p2[i * 6 + 1] = pos[a + 1];
+                p2[i * 6 + 2] = pos[a + 2];
 
-                if (dist < 1.2) { // Seulement les connexions courtes
-                    p2[i * 6] = pos[a];
-                    p2[i * 6 + 1] = pos[a + 1];
-                    p2[i * 6 + 2] = pos[a + 2];
-                    p2[i * 6 + 3] = pos[b];
-                    p2[i * 6 + 4] = pos[b + 1];
-                    p2[i * 6 + 5] = pos[b + 2];
-                }
+                p2[i * 6 + 3] = pos[b];
+                p2[i * 6 + 4] = pos[b + 1];
+                p2[i * 6 + 5] = pos[b + 2];
             }
 
             g2.setAttribute('position', new THREE.BufferAttribute(p2, 3));
-            const m2 = new THREE.LineBasicMaterial({
-                color: 0xB8C4BC,
-                transparent: true,
-                opacity: 0.12,
-                blending: THREE.AdditiveBlending
-            });
+            const m2 = new THREE.LineBasicMaterial({ color: 0xA3B1AA, transparent: true, opacity: 0.15 });
             lines = new THREE.LineSegments(g2, m2);
-            brainGroup.add(lines);
+            scene.add(lines);
 
-            // Position initiale: vue de face (les deux hémisphères visibles)
-            brainGroup.rotation.y = Math.PI / 2;
-            // Légère inclinaison pour plus de dynamisme
-            brainGroup.rotation.x = 0.15;
+            // Position initiale : vue de face (deux hémisphères visibles)
+            points.rotation.y = Math.PI / 2;
+            lines.rotation.y = Math.PI / 2;
 
             camera.position.z = 4;
 
@@ -155,8 +120,8 @@ export default function BrainCanvas() {
                 if (!drag) return;
                 const p = 'touches' in e ? e.touches[0] : e;
                 const cx = p.clientX, cy = p.clientY;
-                targetRotationY += (cx - prev.x) * 0.005;
-                targetRotationX += (cy - prev.y) * 0.005;
+                dragOffsetY += (cx - prev.x) * 0.008;
+                dragOffsetX += (cy - prev.y) * 0.008;
                 prev.x = cx; prev.y = cy;
             };
 
@@ -172,24 +137,24 @@ export default function BrainCanvas() {
             const animate = () => {
                 if (!run) { frameId = requestAnimationFrame(animate); return; }
 
-                // Rotation automatique continue 360° (très lente)
-                brainGroup.rotation.y += autoRotationSpeed;
+                // Rotation automatique lente 360° (1 tour en ~100 secondes)
+                points.rotation.y += 0.001;
+                lines.rotation.y += 0.001;
 
-                // Interaction utilisateur (s'ajoute à la rotation auto)
-                if (drag) {
-                    brainGroup.rotation.x += (targetRotationX - (brainGroup.rotation.x - 0.15)) * 0.08;
-                    brainGroup.rotation.y += (targetRotationY) * 0.08;
-                    targetRotationY *= 0.95; // Friction
-                    targetRotationX *= 0.95;
-                }
+                // Interaction drag
+                points.rotation.x += (dragOffsetX - points.rotation.x) * 0.05;
+                points.rotation.y += (dragOffsetY) * 0.05;
+                dragOffsetY *= 0.95;
 
-                // Effet de flottement élégant
-                const t = Date.now() * 0.0008;
-                const floatingY = Math.sin(t) * 0.06;
-                const floatingX = Math.sin(t * 0.7) * 0.02;
+                lines.rotation.x = points.rotation.x;
+                lines.rotation.y = points.rotation.y;
 
-                brainGroup.position.y = floatingY;
-                brainGroup.position.x = floatingX;
+                // Floating effect
+                const t = Date.now() * 0.001;
+                const floatingY = Math.sin(t) * 0.08;
+
+                points.position.y = floatingY;
+                lines.position.y = floatingY;
 
                 renderer.render(scene, camera);
                 frameId = requestAnimationFrame(animate);
