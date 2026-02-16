@@ -10,7 +10,7 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/creation-boutique-en-ligne"
     },
     openGraph: {
-        title: "Création Boutique E-commerce | INDHACK",
+        title: "Création Boutique E-commerce | IndHack",
         description: "Boutique en ligne optimisée SEO dès la conception. Performance, conversion et visibilité Google.",
         url: "https://indhack.com/creation-boutique-en-ligne",
     }

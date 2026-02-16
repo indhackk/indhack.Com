@@ -7,15 +7,15 @@ const cityData = getCityBySlug("consultant-seo-bordeaux")!;
 const serviceData = getServiceContent("audit-technique", "consultant-seo-bordeaux")!;
 
 export const metadata: Metadata = {
-    title: "Audit Technique SEO Bordeaux 33 | INDHACK, Consultante SEO",
+    title: "Audit Technique SEO Bordeaux 33 | IndHack, Consultante SEO",
     description: "Consultante SEO Bordeaux. Audit technique approfondi pour identifier les blocages de votre référencement naturel. Diagnostic gratuit.",
     openGraph: {
-        title: "Audit Technique SEO Bordeaux 33 | INDHACK, Consultante SEO",
+        title: "Audit Technique SEO Bordeaux 33 | IndHack, Consultante SEO",
         description: "Expert SEO Bordeaux. Analyse technique complète de votre site web.",
         url: "https://indhack.com/consultant-seo-bordeaux/audit-technique",
         type: "website",
         locale: "fr_FR",
-        siteName: "INDHACK"
+        siteName: "IndHack"
     },
     alternates: {
         canonical: "https://indhack.com/consultant-seo-bordeaux/audit-technique"

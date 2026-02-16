@@ -12,7 +12,7 @@ Beaucoup d'entreprises dépensent des **milliers d'euros en publicité** alors q
 
 > **Testez votre site gratuitement :** [Audit SEO Gratuit — Score /100 en 30 secondes](/outils/audit-seo-gratuit) — 15 critères analysés dont la compatibilité avec les crawlers IA.
 
-En tant que consultante SEO chez [INDHACK](/), c'est **toujours la première étape** de mon accompagnement, que ce soit pour des entreprises à Nice, Marseille, Lyon ou dans toute la France.
+En tant que consultante SEO chez [IndHack](/), c'est **toujours la première étape** de mon accompagnement, que ce soit pour des entreprises à Nice, Marseille, Lyon ou dans toute la France.
 
 ## Ce qu'un audit SEO révèle vraiment
 

@@ -74,7 +74,7 @@ export function HomepageBacklink({ variant = "default", className = "", forceInd
                     <span className="text-sm font-bold text-sauge uppercase tracking-wider">IndHack</span>
                 </div>
                 <p className="text-soft text-sm mb-4">
-                    Découvrez toutes nos expertises SEO et stratégies de croissance digitale.
+                    Découvrez toutes mes expertises SEO et stratégies de croissance digitale.
                 </p>
                 <Link
                     href="/"

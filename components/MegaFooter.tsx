@@ -148,7 +148,7 @@ export function MegaFooter() {
                                 height={32}
                                 className="group-hover:scale-110 transition-transform"
                             />
-                            <span className="text-lg font-heading font-bold">INDHACK</span>
+                            <span className="text-lg font-heading font-bold">IndHack</span>
                         </Link>
 
                         {/* Contact Info */}

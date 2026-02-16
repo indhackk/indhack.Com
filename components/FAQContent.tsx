@@ -21,7 +21,7 @@ const FAQ_DATA: FAQItem[] = [
     {
         category: "Tarifs & Budget",
         question: "Proposez-vous des forfaits ou du sur-mesure ?",
-        answer: "Je travaille principalement en <strong>sur-mesure</strong>. Chaque entreprise a des besoins différents : un artisan local n'a pas les mêmes enjeux qu'une startup tech ou un e-commerce. Après notre premier échange, je vous propose une offre adaptée à votre contexte, vos objectifs et votre budget. Pas de packages standardisés qui ne correspondent à personne."
+        answer: "Je travaille principalement en <strong>sur-mesure</strong>. Chaque entreprise a des besoins différents : un artisan local n'a pas les mêmes enjeux qu'une startup tech ou un e-commerce. Après un premier échange, je vous propose une offre adaptée à votre contexte, vos objectifs et votre budget. Pas de packages standardisés qui ne correspondent à personne."
     },
     {
         category: "Tarifs & Budget",

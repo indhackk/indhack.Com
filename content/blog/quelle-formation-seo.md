@@ -192,4 +192,4 @@ Un [diagnostic de votre site actuel](/audit-seo) peut être un excellent point d
 
 ---
 
-Besoin de conseils personnalisés sur votre parcours ? [INDHACK](/), consultante SEO sur Nice, Marseille et toute la France, répond à vos questions. [Contactez-moi](/contact) pour en discuter.
+Besoin de conseils personnalisés sur votre parcours ? [IndHack](/), consultante SEO sur Nice, Marseille et toute la France, répond à vos questions. [Contactez-moi](/contact) pour en discuter.

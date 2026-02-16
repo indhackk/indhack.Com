@@ -3,7 +3,7 @@ import { AboutContent } from "@/components/AboutContent";
 import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "À Propos | INDHACK, Consultante SEO",
+    title: "À Propos | IndHack, Consultante SEO",
     description: "Découvrez mon parcours : consultante SEO indépendante spécialisée en référencement naturel, audit technique et stratégie digitale. Accompagnement personnalisé pour PME et startups.",
     alternates: {
         canonical: "https://indhack.com/a-propos"

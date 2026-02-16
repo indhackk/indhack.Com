@@ -12,7 +12,7 @@ Votre **fiche Google Business Profile** (anciennement Google My Business) est so
 
 > **Analysez votre concurrence locale :** [Simulateur de Visibilité Locale — Qui domine Google dans votre ville ?](/outils/simulateur-visibilite-locale) — Identifiez les opportunités SEO local pour votre métier.
 
-En tant que consultante [SEO local](/seo-local) chez [INDHACK](/), je vous livre le guide complet pour **dominer le pack local** dans votre ville.
+En tant que consultante [SEO local](/seo-local) chez [IndHack](/), je vous livre le guide complet pour **dominer le pack local** dans votre ville.
 
 ## Qu'est-ce que Google Business Profile ?
 
@@ -230,4 +230,4 @@ Votre fiche Google Business Profile est un **levier de croissance gratuit** si e
 
 ---
 
-**Besoin d'aide pour votre SEO local ?** Découvrez mon accompagnement [SEO local](/seo-local) ou [contactez-moi](/contact) pour un audit de votre fiche Google Business Profile. [INDHACK](/) accompagne les entreprises de Nice, Cannes, Monaco et toute la France.
+**Besoin d'aide pour votre SEO local ?** Découvrez mon accompagnement [SEO local](/seo-local) ou [contactez-moi](/contact) pour un audit de votre fiche Google Business Profile. [IndHack](/) accompagne les entreprises de Nice, Cannes, Monaco et toute la France.

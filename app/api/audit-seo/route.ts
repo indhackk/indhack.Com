@@ -322,7 +322,7 @@ async function analyzeURL(url: string): Promise<AuditResult> {
             ? `${schemaTypes.length} schema(s) trouvé(s): ${schemaTypes.join(", ")}`
             : "Aucun schema JSON-LD détecté",
         fix: !hasSchema
-            ? "Ajoutez des données structurées avec notre générateur Schema JSON-LD"
+            ? "Ajoutez des données structurées avec le générateur Schema JSON-LD"
             : undefined,
     });
 
@@ -377,7 +377,7 @@ async function analyzeURL(url: string): Promise<AuditResult> {
                 ? "Robots.txt bloque tout le site !"
                 : "Robots.txt configuré correctement",
         fix: !hasRobotsTxt || blocksAll
-            ? "Configurez votre robots.txt avec notre générateur"
+            ? "Configurez votre robots.txt avec le générateur"
             : undefined,
     });
 
@@ -465,7 +465,7 @@ async function analyzeURL(url: string): Promise<AuditResult> {
         message: `${aiCrawlersAllowed}/${AI_CRAWLERS.length} crawlers IA autorisés`,
         details: aiCrawlerResults.join(" | "),
         fix: aiCrawlersAllowed < AI_CRAWLERS.length
-            ? "Configurez votre robots.txt pour autoriser les crawlers IA avec notre générateur"
+            ? "Configurez votre robots.txt pour autoriser les crawlers IA avec le générateur"
             : undefined,
     });
 

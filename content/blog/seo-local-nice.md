@@ -95,4 +95,4 @@ Le **SEO local** à Nice et sur la Côte d'Azur est un levier puissant pour les 
 - [L'audit SEO : point de départ de votre croissance](/blog/importance-audit-seo)
 - [Comment créer un site visible sur Google ?](/blog/comment-creer-site-visible-google)
 
-[INDHACK](/), votre consultante SEO sur la Côte d'Azur, vous accompagne. [Contactez-moi](/contact) pour un audit gratuit de votre visibilité locale sur la French Riviera.
+[IndHack](/), votre consultante SEO sur la Côte d'Azur, vous accompagne. [Contactez-moi](/contact) pour un audit gratuit de votre visibilité locale sur la French Riviera.

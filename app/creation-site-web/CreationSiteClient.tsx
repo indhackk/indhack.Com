@@ -95,7 +95,7 @@ const CREATION_FAQ = [
     },
     {
         question: "Combien coûte un site web professionnel ?",
-        answer: "Un **site vitrine** démarre à partir de **1 500€**, un **site e-commerce** à partir de **3 000€**. Le tarif dépend de la complexité technique et du design souhaité. Je fournis toujours un devis détaillé après notre premier échange."
+        answer: "Un **site vitrine** démarre à partir de **1 500€**, un **site e-commerce** à partir de **3 000€**. Le tarif dépend de la complexité technique et du design souhaité. Je fournis toujours un devis détaillé après un premier échange."
     },
     {
         question: "Pourquoi ne pas utiliser Wix ou WordPress.com ?",

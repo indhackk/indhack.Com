@@ -164,7 +164,7 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                                     {submitStatus === 'success' && (
                                         <div className="flex items-center gap-2 p-3 bg-green-50 text-green-700 rounded-lg text-sm">
                                             <CheckCircle className="w-5 h-5" />
-                                            <span>Demande envoyée ! Nous vous recontactons sous 24h.</span>
+                                            <span>Demande envoyée ! Je vous recontacte sous 24h.</span>
                                         </div>
                                     )}
                                     {submitStatus === 'error' && (

@@ -197,7 +197,7 @@ async function analyzeVisibility(url: string): Promise<VisibilityResult> {
     categories.accessibilite.details.push(`${allowedCrawlers}/${AI_CRAWLERS.length} crawlers IA autorisés`);
 
     if (allowedCrawlers < AI_CRAWLERS.length) {
-        recommendations.push("Autorisez les crawlers IA dans votre robots.txt avec notre générateur");
+        recommendations.push("Autorisez les crawlers IA dans votre robots.txt avec le générateur");
     }
 
     // Sitemap (4 points)
@@ -268,7 +268,7 @@ async function analyzeVisibility(url: string): Promise<VisibilityResult> {
         categories.semantique.details.push(`Schema JSON-LD: ${schemaTypes.join(", ")}`);
     } else {
         categories.semantique.details.push("Aucun schema JSON-LD détecté");
-        recommendations.push("Ajoutez des données structurées avec notre générateur Schema JSON-LD");
+        recommendations.push("Ajoutez des données structurées avec le générateur Schema JSON-LD");
     }
 
     // FAQ detection (8 points)

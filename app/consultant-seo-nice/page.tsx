@@ -6,7 +6,7 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-nice")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO Nice | INDHACK, Consultante SEO`,
+    title: `Consultant SEO Nice | IndHack, Consultante SEO`,
     description: `Boostez votre visibilité sur Google à Nice avec une experte SEO locale. Audit gratuit, stratégie sur-mesure, accompagnement personnalisé pour PME et entrepreneurs niçois. ✆ 06 61 13 97 48`,
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`

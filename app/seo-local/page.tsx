@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "SEO Local France | INDHACK",
+        title: "SEO Local France | IndHack",
         description: "Dominez les résultats Google dans votre ville. 18+ villes couvertes.",
         images: ["https://indhack.com/api/og?title=SEO%20Local%20France&subtitle=18%2B%20villes%20couvertes"],
     },
@@ -244,7 +244,7 @@ export default function SeoLocalPage() {
                             Lancer le simulateur <ArrowRight className="w-4 h-4" />
                         </Link>
                         <p className="text-sm text-soft mt-4">
-                            <Link href="/outils" className="text-sauge hover:underline">Voir tous nos outils SEO gratuits →</Link>
+                            <Link href="/outils" className="text-sauge hover:underline">Voir tous mes outils SEO gratuits →</Link>
                         </p>
                     </div>
                 </div>

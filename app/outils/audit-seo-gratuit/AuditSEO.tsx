@@ -436,7 +436,7 @@ export function AuditSEO() {
                                 Votre score est de {result.score}/100
                             </h3>
                             <p className="text-white/80 mb-6 max-w-xl mx-auto">
-                                Nos experts SEO peuvent améliorer votre score et booster votre visibilité sur Google et les IA.
+                                Je peux améliorer votre score et booster votre visibilité sur Google et les IA.
                             </p>
                             <Link
                                 href="/contact"

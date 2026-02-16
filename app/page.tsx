@@ -10,13 +10,13 @@ import { TrustSignals } from "@/components/sections/TrustSignals";
 import { HomepageSchemas } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO & Experte Référencement Naturel | INDHACK",
+    title: "Consultante SEO & Experte Référencement Naturel | IndHack",
     description: "Consultante SEO freelance spécialisée en référencement naturel, SEO local et création de site web. Audit SEO gratuit. Nice & toute la France. ✆ 06 61 13 97 48",
     alternates: {
         canonical: "https://indhack.com"
     },
     openGraph: {
-        title: "Consultante SEO & Experte Référencement Naturel | INDHACK",
+        title: "Consultante SEO & Experte Référencement Naturel | IndHack",
         description: "Dominez Google avec une stratégie SEO sur-mesure. Audit gratuit, accompagnement personnalisé.",
         url: "https://indhack.com",
         type: "website",

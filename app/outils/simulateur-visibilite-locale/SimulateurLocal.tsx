@@ -387,7 +387,7 @@ export function SimulateurLocal() {
                             Vous n'apparaissez pas en page 1 ?
                         </h3>
                         <p className="text-white/80 mb-6 max-w-xl mx-auto">
-                            Nos experts en SEO local peuvent vous aider à dominer les résultats
+                            Je peux vous aider à dominer les résultats SEO local
                             pour "{result.metier} {result.ville}" et attirer plus de clients.
                         </p>
                         <Link

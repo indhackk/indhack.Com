@@ -10,7 +10,7 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/referencement-naturel"
     },
     openGraph: {
-        title: "Référencement Naturel (SEO) | INDHACK",
+        title: "Référencement Naturel (SEO) | IndHack",
         description: "Transformez votre site en machine à leads grâce au SEO. Stratégie technique, sémantique et netlinking.",
         url: "https://indhack.com/referencement-naturel",
         type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Référencement Naturel (SEO) | INDHACK",
+        title: "Référencement Naturel (SEO) | IndHack",
         description: "Transformez votre site en machine à leads grâce au SEO.",
         images: ["https://indhack.com/api/og?title=R%C3%A9f%C3%A9rencement%20Naturel%20SEO&subtitle=Machine%20%C3%A0%20leads%20gr%C3%A2ce%20au%20SEO"],
     },

@@ -4,13 +4,13 @@ import { SchemaGenerator } from "./SchemaGenerator";
 import { ArrowRight, Code2, Bot, FileCode, Search } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Générateur Schema JSON-LD Gratuit — Données Structurées | INDHACK",
+    title: "Générateur Schema JSON-LD Gratuit — Données Structurées | IndHack",
     description: "Créez vos données structurées en quelques clics. LocalBusiness, FAQPage, Article, Product... Générateur gratuit avec prévisualisation et validation.",
     alternates: {
         canonical: "https://indhack.com/outils/generateur-schema-json-ld"
     },
     openGraph: {
-        title: "Générateur Schema JSON-LD Gratuit | INDHACK",
+        title: "Générateur Schema JSON-LD Gratuit | IndHack",
         description: "Créez vos données structurées Schema.org en quelques clics. 9 types de schema supportés. Gratuit, sans inscription.",
         url: "https://indhack.com/outils/generateur-schema-json-ld",
         type: "website",
@@ -233,7 +233,7 @@ export default function GenerateurSchemaPage() {
                         </h2>
                         <p className="text-texte-moyen mb-8 max-w-xl mx-auto">
                             Le schema JSON-LD est un élément parmi d'autres. Pour une optimisation SEO globale,
-                            nos experts vous accompagnent.
+                            je vous accompagne.
                         </p>
                         <Link
                             href="/contact"

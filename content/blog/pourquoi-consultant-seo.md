@@ -32,7 +32,7 @@ Un **consultant SEO professionnel** va droit au but. Il sait ce qui fonctionne, 
 
 J'ai vu des sites perdre **80% de leur trafic** à cause d'une mauvaise migration. Des entreprises pénalisées par Google pour du **contenu dupliqué**. Des mois de travail anéantis par une stratégie de **netlinking toxique**.
 
-Un consultant SEO vous protège de ces erreurs. Il connaît les pièges et sait les éviter. C'est particulièrement critique lors d'une refonte de site web. Chez [INDHACK](/), nous avons accompagné des entreprises de Nice, Marseille, Lyon et Paris dans ce type de transitions critiques.
+Un consultant SEO vous protège de ces erreurs. Il connaît les pièges et sait les éviter. C'est particulièrement critique lors d'une refonte de site web. Chez [IndHack](/), j'ai accompagné des entreprises de Nice, Marseille, Lyon et Paris dans ce type de transitions critiques.
 
 ## Avoir une vision stratégique
 

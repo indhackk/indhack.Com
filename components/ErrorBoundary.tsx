@@ -52,7 +52,7 @@ export class ErrorBoundary extends Component<Props, State> {
                             Une erreur est survenue
                         </h2>
                         <p className="text-soft mb-6">
-                            Nous nous excusons pour ce désagrément. Veuillez réessayer ou actualiser la page.
+                            Je m'excuse pour ce désagrément. Veuillez réessayer ou actualiser la page.
                         </p>
                         <div className="flex gap-4 justify-center">
                             <Button

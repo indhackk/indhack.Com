@@ -10,7 +10,7 @@ keywords: ["prix site web", "coût site internet", "tarif création site", "devi
 
 "Combien pour un site web ?" — la question que tous mes clients me posent. Et la réponse honnête, c'est : **ça dépend**. Mais je vais vous donner les vraies fourchettes de prix pour 2026, sans langue de bois.
 
-En tant que consultante SEO et créatrice de sites chez [INDHACK](/), je vois passer des devis allant de 500€ à 50 000€ pour des projets similaires. Voici comment **comprendre les prix** et faire le bon choix.
+En tant que consultante SEO et créatrice de sites chez [IndHack](/), je vois passer des devis allant de 500€ à 50 000€ pour des projets similaires. Voici comment **comprendre les prix** et faire le bon choix.
 
 ## Les fourchettes de prix en 2026
 
@@ -66,7 +66,7 @@ Un site sans SEO est un site invisible. L'optimisation dès la conception coûte
 - **Stratégie de mots-clés** : 300€ - 1 000€
 - **Optimisation complète** : 500€ - 2 000€
 
-Chez [INDHACK](/creation-site-web), le SEO est **inclus dans chaque création** — c'est ma spécialité.
+Chez [IndHack](/creation-site-web), le SEO est **inclus dans chaque création** — c'est ma spécialité.
 
 ## Les différentes options
 
@@ -148,7 +148,7 @@ Le site n'est que le début. Pour qu'il génère des clients :
 3. **Qu'est-ce qui est inclus dans la maintenance ?** — Détaillez chaque poste
 4. **Comment se passe le transfert ?** — Documentation, formation, accès
 
-## Mon approche chez INDHACK
+## Mon approche chez IndHack
 
 Je crée des sites **optimisés SEO dès la conception**. Pas de "on verra le référencement plus tard".
 

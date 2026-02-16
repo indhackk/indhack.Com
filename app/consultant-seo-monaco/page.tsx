@@ -6,7 +6,7 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-monaco")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO Monaco | INDHACK, Consultante SEO`,
+    title: `Consultant SEO Monaco | IndHack, Consultante SEO`,
     description: `Boostez votre visibilité sur Google à Monaco. Consultante SEO freelance experte du marché de luxe monégasque. Audit gratuit pour entreprises premium. ✆ 06 61 13 97 48`,
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`

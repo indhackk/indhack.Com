@@ -64,7 +64,7 @@ C'est là que les choses deviennent intéressantes. En tant qu'**[expert indépe
 | **Senior** (5+ ans) | 450€ - 700€ |
 | **Expert reconnu** | 600€ - 1 000€ |
 
-Le TJM dépend de votre **positionnement**, votre spécialité et votre capacité à négocier. Un expert en SEO technique pointu facture plus qu'un généraliste. Découvrez notre [diagnostic complet de votre présence digitale](/audit-seo).
+Le TJM dépend de votre **positionnement**, votre spécialité et votre capacité à négocier. Un expert en SEO technique pointu facture plus qu'un généraliste. Découvrez mon [diagnostic complet de votre présence digitale](/audit-seo).
 
 ### Revenus annuels potentiels en freelance
 
@@ -202,4 +202,4 @@ Le **salaire d'un consultant SEO** varie de 28K€ (junior) à plus de 100K€ (
 - [Quelles sont les missions d'un consultant SEO ?](/blog/missions-consultant-seo)
 - [Quelle formation SEO choisir ?](/blog/quelle-formation-seo)
 
-Vous cherchez un [accompagnement professionnel en visibilité](/consultant-seo) pour votre projet ? [INDHACK](/) accompagne les entreprises de Nice, Marseille, Lyon, Paris et de toute la France. [Contactez-moi](/contact) pour un audit gratuit.
+Vous cherchez un [accompagnement professionnel en visibilité](/consultant-seo) pour votre projet ? [IndHack](/) accompagne les entreprises de Nice, Marseille, Lyon, Paris et de toute la France. [Contactez-moi](/contact) pour un audit gratuit.

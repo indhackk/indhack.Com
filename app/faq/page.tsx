@@ -3,7 +3,7 @@ import { FAQContent } from "@/components/FAQContent";
 import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "FAQ - Questions Fréquentes SEO | INDHACK",
+    title: "FAQ - Questions Fréquentes SEO | IndHack",
     description: "Réponses à vos questions sur le référencement naturel, l'audit SEO, la création de site web et le community management. Consultante SEO indépendante.",
     alternates: {
         canonical: "https://indhack.com/faq"

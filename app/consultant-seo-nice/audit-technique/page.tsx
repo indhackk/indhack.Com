@@ -21,12 +21,12 @@ export const metadata: Metadata = {
         "indexation Google"
     ],
     openGraph: {
-        title: "Audit Technique SEO Nice 06 | INDHACK, Consultante SEO",
+        title: "Audit Technique SEO Nice 06 | IndHack, Consultante SEO",
         description: "Consultante SEO freelance à Nice. Mon audit technique identifie les blocages qui freinent votre visibilité sur Google.",
         url: "https://indhack.com/consultant-seo-nice/audit-technique",
         type: "website",
         locale: "fr_FR",
-        siteName: "INDHACK",
+        siteName: "IndHack",
         images: [
             {
                 url: "https://indhack.com/images/og-audit-technique.png",

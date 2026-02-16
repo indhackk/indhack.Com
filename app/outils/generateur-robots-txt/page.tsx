@@ -4,13 +4,13 @@ import { RobotsGenerator } from "./RobotsGenerator";
 import { ArrowRight, FileCode, Bot, Code2, Search } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Générateur robots.txt avec Crawlers IA 2026 — Gratuit | INDHACK",
+    title: "Générateur robots.txt avec Crawlers IA 2026 — Gratuit | IndHack",
     description: "Créez votre fichier robots.txt avec les crawlers IA de 2026 : GPTBot, Claude-Web, PerplexityBot... Configurez la visibilité de votre site pour les IA en quelques clics.",
     alternates: {
         canonical: "https://indhack.com/outils/generateur-robots-txt"
     },
     openGraph: {
-        title: "Générateur robots.txt avec Crawlers IA 2026 | INDHACK",
+        title: "Générateur robots.txt avec Crawlers IA 2026 | IndHack",
         description: "Le seul générateur robots.txt français incluant tous les crawlers IA : GPTBot, Claude, Perplexity... Gratuit, sans inscription.",
         url: "https://indhack.com/outils/generateur-robots-txt",
         type: "website",
@@ -52,7 +52,7 @@ const FAQ_ITEMS = [
     },
     {
         question: "Dois-je bloquer les crawlers IA ?",
-        answer: "Cela dépend de votre stratégie. Bloquer GPTBot empêche l'utilisation de votre contenu pour entraîner les modèles, mais ne vous rend pas invisible dans ChatGPT (qui utilise ChatGPT-User pour la navigation). Notre configuration 'Recommandée' équilibre visibilité et protection."
+        answer: "Cela dépend de votre stratégie. Bloquer GPTBot empêche l'utilisation de votre contenu pour entraîner les modèles, mais ne vous rend pas invisible dans ChatGPT (qui utilise ChatGPT-User pour la navigation). La configuration 'Recommandée' équilibre visibilité et protection."
     },
     {
         question: "Le robots.txt protège-t-il vraiment mon contenu ?",
@@ -74,7 +74,7 @@ export default function GenerateurRobotsTxtPage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
-                        "name": "Générateur robots.txt INDHACK",
+                        "name": "Générateur robots.txt IndHack",
                         "description": "Outil gratuit pour créer un fichier robots.txt avec les crawlers IA 2026",
                         "url": "https://indhack.com/outils/generateur-robots-txt",
                         "applicationCategory": "SEO Tool",
@@ -233,7 +233,7 @@ export default function GenerateurRobotsTxtPage() {
 
                             <div className="mt-8 bg-cyan-50 rounded-2xl p-6 border border-cyan-100">
                                 <p className="text-soft">
-                                    <strong className="text-ink">Notre recommandation :</strong> Autorisez les crawlers de navigation (ChatGPT-User, Claude-Web, PerplexityBot) pour être cité dans les réponses. Bloquez les crawlers d'entraînement (GPTBot, Google-Extended) si vous souhaitez protéger votre contenu original.
+                                    <strong className="text-ink">Ma recommandation :</strong> Autorisez les crawlers de navigation (ChatGPT-User, Claude-Web, PerplexityBot) pour être cité dans les réponses. Bloquez les crawlers d'entraînement (GPTBot, Google-Extended) si vous souhaitez protéger votre contenu original.
                                 </p>
                             </div>
                         </div>
@@ -308,7 +308,7 @@ export default function GenerateurRobotsTxtPage() {
                         </h2>
                         <p className="text-texte-moyen mb-8 max-w-xl mx-auto">
                             Le robots.txt est la première étape. Pour une stratégie GEO complète
-                            (Generative Engine Optimization), nos experts vous accompagnent.
+                            (Generative Engine Optimization), je vous accompagne.
                         </p>
                         <Link
                             href="/contact"

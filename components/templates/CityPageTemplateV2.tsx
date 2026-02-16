@@ -134,7 +134,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             local: [
                 {
                     question: `Quel budget prévoir pour du SEO local à ${city} ?`,
-                    answer: `L'audit SEO initial est 100% gratuit et sans engagement. Il permet de définir votre potentiel. Ensuite, nous définissons ensemble une stratégie adaptée à vos objectifs de croissance. Chaque projet est unique : commençons par l'audit offert pour voir ce qu'il est possible de faire.`
+                    answer: `L'audit SEO initial est 100% gratuit et sans engagement. Il permet de définir votre potentiel. Ensuite, je définis avec vous une stratégie adaptée à vos objectifs de croissance. Chaque projet est unique : commençons par l'audit offert pour voir ce qu'il est possible de faire.`
                 },
                 {
                     question: `Comment fonctionne le référencement local sur Google à ${city} ?`,

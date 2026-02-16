@@ -74,7 +74,7 @@ export function Navbar() {
                             />
                         </div>
                         <span className={`font-heading font-bold text-2xl tracking-tighter transition-colors ${useDarkMenu ? 'text-ink' : 'text-white'}`}>
-                            INDHACK
+                            IndHack
                         </span>
                     </Link>
 
@@ -226,7 +226,7 @@ export function Navbar() {
                     >
                         <div className="flex flex-col h-full">
                             <div className="flex items-center justify-between p-6 border-b border-line">
-                                <span className="font-heading font-bold text-2xl tracking-tighter text-ink">INDHACK</span>
+                                <span className="font-heading font-bold text-2xl tracking-tighter text-ink">IndHack</span>
                                 <button onClick={() => setIsMobileMenuOpen(false)} className="p-3 min-w-[48px] min-h-[48px] flex items-center justify-center text-ink" aria-label="Fermer le menu">
                                     <X size={28} />
                                 </button>

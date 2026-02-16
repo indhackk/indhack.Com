@@ -201,8 +201,8 @@ export function AboutContent() {
                                 je me suis spécialisée dans l'optimisation des performances web et le <strong className="text-ink">référencement naturel</strong>.
                             </p>
                             <p className="text-lg leading-relaxed mb-6">
-                                Après plusieurs années au sein d'agences digitales et en tant qu'indépendante,
-                                j'accompagne aujourd'hui des entreprises de toutes tailles dans leur <strong className="text-ink">croissance organique</strong>.
+                                Après avoir fait mes armes en agence, j'ai choisi l'indépendance pour offrir un accompagnement vraiment personnalisé.
+                                Aujourd'hui, j'aide des entreprises de toutes tailles à développer leur <strong className="text-ink">croissance organique</strong>.
                             </p>
                             <p className="text-lg leading-relaxed">
                                 L'objectif : rendre le référencement <strong className="text-ink">accessible et rentable</strong>.

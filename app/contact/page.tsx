@@ -3,7 +3,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "Contact | INDHACK, Consultante SEO",
+    title: "Contact | IndHack, Consultante SEO",
     description: "Contactez Indiana Aflalo, consultante SEO experte. Devis gratuit sous 24h. Audit SEO offert pour votre projet de référencement naturel ou création de site.",
     alternates: {
         canonical: "https://indhack.com/contact"

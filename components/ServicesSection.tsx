@@ -131,7 +131,7 @@ export function ServicesSection() {
                         href="/outils"
                         className="inline-flex items-center gap-2 text-soft hover:text-sauge transition-colors group"
                     >
-                        <span className="font-medium">Découvrez aussi nos <span className="text-sauge font-bold">outils SEO gratuits</span></span>
+                        <span className="font-medium">Découvrez aussi mes <span className="text-sauge font-bold">outils SEO gratuits</span></span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </motion.div>

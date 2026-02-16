@@ -34,8 +34,8 @@ export default function Error({
                     Une erreur est survenue
                 </h1>
                 <p className="text-soft text-lg mb-8 max-w-md mx-auto">
-                    Nous nous excusons pour ce désagrément. Notre équipe a été notifiée
-                    et travaille à résoudre le problème.
+                    Je m'excuse pour ce désagrément. Le problème a été signalé
+                    et sera résolu rapidement.
                 </p>
 
                 {/* Actions */}
@@ -69,7 +69,7 @@ export default function Error({
                         className="inline-flex items-center gap-2 text-sauge hover:underline"
                     >
                         <Phone className="w-4 h-4" />
-                        Contactez-nous
+                        Me contacter
                     </Link>
                 </div>
 

@@ -10,7 +10,7 @@ keywords: ["refonte site web SEO", "migration SEO", "redirections 301", "perdre 
 
 Une refonte de site web mal préparée peut **anéantir des années de travail SEO** en quelques jours. J'ai vu des entreprises perdre 80% de leur trafic organique du jour au lendemain à cause d'erreurs évitables.
 
-En tant que consultante SEO chez [INDHACK](/), je vous livre la **méthode complète** pour réussir votre refonte sans sacrifier vos positions Google.
+En tant que consultante SEO chez [IndHack](/), je vous livre la **méthode complète** pour réussir votre refonte sans sacrifier vos positions Google.
 
 ## Pourquoi les refontes SEO échouent ?
 
@@ -89,7 +89,7 @@ Les redirections 301 indiquent à Google que la page a **définitivement** chang
 Redirect 301 /ancienne-page /nouvelle-page
 ```
 
-Pour Next.js (le framework que j'utilise chez [INDHACK](/creation-site-web)) :
+Pour Next.js (le framework que j'utilise chez [IndHack](/creation-site-web)) :
 
 ```javascript
 // next.config.js
@@ -231,4 +231,4 @@ Une refonte réussie côté SEO repose sur :
 
 ---
 
-**Vous planifiez une refonte ?** Je vous accompagne pour migrer sans perdre une position. Découvrez ma [prestation refonte de site web](/refonte-site-web) ou [contactez-moi](/contact) pour en discuter. [INDHACK](/) sécurise votre SEO pendant et après la migration.
+**Vous planifiez une refonte ?** Je vous accompagne pour migrer sans perdre une position. Découvrez ma [prestation refonte de site web](/refonte-site-web) ou [contactez-moi](/contact) pour en discuter. [IndHack](/) sécurise votre SEO pendant et après la migration.

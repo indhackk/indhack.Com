@@ -166,4 +166,4 @@ L'important est de choisir un consultant qui :
 
 ---
 
-**Envie d'aller plus loin ?** Découvrez [pourquoi faire appel à un consultant SEO](/blog/pourquoi-consultant-seo) ou [demandez un diagnostic gratuit](/contact) à [INDHACK](/). J'interviens sur Nice, Marseille, Lyon, Paris et dans toute la France.
+**Envie d'aller plus loin ?** Découvrez [pourquoi faire appel à un consultant SEO](/blog/pourquoi-consultant-seo) ou [demandez un diagnostic gratuit](/contact) à [IndHack](/). J'interviens sur Nice, Marseille, Lyon, Paris et dans toute la France.

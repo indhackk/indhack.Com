@@ -15,13 +15,13 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Outils SEO Gratuits 2026 — Audit, Visibilité IA, Schema | INDHACK",
+    title: "Outils SEO Gratuits 2026 — Audit, Visibilité IA, Schema | IndHack",
     description: "5 outils SEO gratuits et uniques : audit SEO avec analyse IA, testeur visibilité ChatGPT/Perplexity, générateur robots.txt crawlers IA, schema JSON-LD. Sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils"
     },
     openGraph: {
-        title: "Outils SEO Gratuits 2026 — Audit, Visibilité IA, Schema | INDHACK",
+        title: "Outils SEO Gratuits 2026 — Audit, Visibilité IA, Schema | IndHack",
         description: "5 outils SEO gratuits incluant le seul testeur de visibilité IA français. Analysez votre site pour Google ET pour ChatGPT.",
         url: "https://indhack.com/outils",
         type: "website",
@@ -115,15 +115,15 @@ const BENEFITS = [
 const FAQ_ITEMS = [
     {
         question: "Ces outils sont-ils vraiment gratuits ?",
-        answer: "Oui, 100% gratuits et sans inscription. Notre modèle : vous découvrez notre expertise via ces outils, et si vous avez besoin d'aller plus loin, vous faites appel à nos services de consulting SEO."
+        answer: "Oui, 100% gratuits et sans inscription. Mon modèle : vous découvrez mon expertise via ces outils, et si vous avez besoin d'aller plus loin, vous faites appel à mes services de consulting SEO."
     },
     {
         question: "Pourquoi ces outils sont-ils différents ?",
-        answer: "Nous sommes les seuls en France à intégrer l'analyse de la visibilité IA (GEO - Generative Engine Optimization) dans nos outils. Le SEO de 2026, c'est Google + ChatGPT + Perplexity. Nos outils vous préparent à ce nouveau paradigme."
+        answer: "Je suis la seule en France à intégrer l'analyse de la visibilité IA (GEO - Generative Engine Optimization) dans mes outils. Le SEO de 2026, c'est Google + ChatGPT + Perplexity. Mes outils vous préparent à ce nouveau paradigme."
     },
     {
         question: "Mes données sont-elles stockées ?",
-        answer: "Les résultats sont temporairement mis en cache (24h) pour améliorer les performances, puis supprimés. Nous ne conservons aucune donnée personnelle. Conformité RGPD totale."
+        answer: "Les résultats sont temporairement mis en cache (24h) pour améliorer les performances, puis supprimés. Je ne conserve aucune donnée personnelle. Conformité RGPD totale."
     },
     {
         question: "Qu'est-ce que le GEO (Generative Engine Optimization) ?",
@@ -131,7 +131,7 @@ const FAQ_ITEMS = [
     },
     {
         question: "Puis-je utiliser ces outils pour mes clients ?",
-        answer: "Absolument. Agences SEO, freelances, webmasters : vous pouvez utiliser ces outils pour vos propres audits clients. Une mention INDHACK est toujours appréciée."
+        answer: "Absolument. Agences SEO, freelances, webmasters : vous pouvez utiliser ces outils pour vos propres audits clients. Une mention IndHack est toujours appréciée."
     },
 ];
 
@@ -145,7 +145,7 @@ export default function OutilsPage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "ItemList",
-                        "name": "Outils SEO Gratuits INDHACK",
+                        "name": "Outils SEO gratuits IndHack",
                         "description": "Suite d'outils SEO gratuits incluant l'analyse de visibilité IA",
                         "numberOfItems": TOOLS.length,
                         "itemListElement": TOOLS.map((tool, index) => ({
@@ -327,11 +327,11 @@ export default function OutilsPage() {
                                 </p>
 
                                 <p>
-                                    C'est pourquoi nous avons créé <strong className="text-ink">les premiers outils SEO français orientés GEO</strong> (Generative Engine Optimization). Chaque outil analyse non seulement les critères SEO classiques, mais aussi votre compatibilité avec les crawlers IA.
+                                    C'est pourquoi j'ai créé <strong className="text-ink">les premiers outils SEO français orientés GEO</strong> (Generative Engine Optimization). Chaque outil analyse non seulement les critères SEO classiques, mais aussi votre compatibilité avec les crawlers IA.
                                 </p>
 
                                 <p>
-                                    Notre <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline font-medium">Testeur de Visibilité IA</Link> est unique en France : il vérifie si GPTBot, Claude-Web et PerplexityBot peuvent accéder à votre contenu, et analyse vos signaux E-E-A-T que les IA utilisent pour vous citer.
+                                    Mon <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline font-medium">Testeur de Visibilité IA</Link> est unique en France : il vérifie si GPTBot, Claude-Web et PerplexityBot peuvent accéder à votre contenu, et analyse vos signaux E-E-A-T que les IA utilisent pour vous citer.
                                 </p>
                             </div>
                         </div>
@@ -369,7 +369,7 @@ export default function OutilsPage() {
                             Besoin d'aller plus loin ?
                         </h2>
                         <p className="text-texte-moyen text-lg mb-8 max-w-2xl mx-auto">
-                            Ces outils vous donnent un aperçu. Pour une stratégie SEO et GEO complète avec accompagnement personnalisé, nos experts sont là pour vous.
+                            Ces outils vous donnent un aperçu. Pour une stratégie SEO et GEO complète avec accompagnement personnalisé, je suis là pour vous.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link

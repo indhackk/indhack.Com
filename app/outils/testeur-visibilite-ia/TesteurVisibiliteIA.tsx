@@ -432,7 +432,7 @@ export function TesteurVisibiliteIA() {
                                 Les IA ne vous trouvent pas encore
                             </h3>
                             <p className="text-white/80 mb-6 max-w-xl mx-auto">
-                                Nos experts en GEO (Generative Engine Optimization) peuvent optimiser votre visibilité
+                                Je peux optimiser votre visibilité GEO (Generative Engine Optimization)
                                 sur ChatGPT, Perplexity et les autres moteurs IA.
                             </p>
                             <Link

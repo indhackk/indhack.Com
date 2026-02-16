@@ -254,13 +254,13 @@ export default function AuditSeoClient() {
                             Testez votre site gratuitement
                         </h2>
                         <p className="text-soft mb-6">
-                            Obtenez un premier aperçu de la santé SEO de votre site en 30 secondes avec notre outil d'audit gratuit.
+                            Obtenez un premier aperçu de la santé SEO de votre site en 30 secondes avec mon outil d'audit gratuit.
                         </p>
                         <Link href="/outils/audit-seo-gratuit" className="inline-flex items-center gap-2 bg-sauge text-white px-6 py-3 rounded-xl font-semibold hover:bg-ink transition-all">
                             Lancer l'audit gratuit <ArrowRight className="w-4 h-4" />
                         </Link>
                         <p className="text-sm text-soft mt-4">
-                            <Link href="/outils" className="text-sauge hover:underline">Voir tous nos outils SEO gratuits →</Link>
+                            <Link href="/outils" className="text-sauge hover:underline">Voir tous mes outils SEO gratuits →</Link>
                         </p>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 ---
 title: "Checklist SEO 2026 : Les 30 Points Essentiels pour Optimiser Votre Site Web"
-description: "Téléchargez notre checklist SEO 2026 gratuite. 30 points essentiels pour optimiser votre site web : technique, contenu, SEO local, backlinks et visibilité IA."
+description: "Téléchargez la checklist SEO 2026 gratuite. 30 points essentiels pour optimiser votre site web : technique, contenu, SEO local, backlinks et visibilité IA."
 date: "2026-02-08"
 category: "Guides"
 image: "/images/blog/checklist-seo-2026.jpg"
@@ -10,7 +10,7 @@ keywords: ["checklist SEO 2026", "audit SEO", "référencement naturel", "optimi
 
 Le référencement naturel évolue constamment. Ce qui fonctionnait hier peut devenir obsolète demain. En 2026, les algorithmes de Google intègrent désormais l'intelligence artificielle de manière massive, et la **visibilité dans les moteurs de recherche génératifs** devient un nouvel enjeu stratégique.
 
-Cette **checklist SEO 2026** rassemble les **30 points essentiels** que je vérifie systématiquement lors de mes audits chez [INDHACK](/). Que vous soyez entrepreneur, responsable marketing ou développeur, ces points vous permettront d'identifier rapidement les axes d'amélioration de votre site.
+Cette **checklist SEO 2026** rassemble les **30 points essentiels** que je vérifie systématiquement lors de mes audits chez [IndHack](/). Que vous soyez entrepreneur, responsable marketing ou développeur, ces points vous permettront d'identifier rapidement les axes d'amélioration de votre site.
 
 > **Téléchargez la checklist complète en PDF** pour l'avoir toujours sous la main : [Checklist SEO 2026 – PDF gratuit](https://issuu.com/indhack/docs/checklist_seo_2026_les_30_points_essentiels_in)
 
@@ -117,7 +117,7 @@ Votre **fiche Google Business Profile** (ex-Google My Business) est votre vitrin
 - Photos de qualité (minimum 10)
 - Description avec mots-clés locaux
 
-Consultez notre [guide complet Google Business Profile](/blog/google-business-profile-guide-complet) pour aller plus loin.
+Consultez mon [guide complet Google Business Profile](/blog/google-business-profile-guide-complet) pour aller plus loin.
 
 ### NAP cohérent partout
 
@@ -147,7 +147,7 @@ Les **citations locales** sont des mentions de votre entreprise sur des annuaire
 
 Si vous intervenez sur plusieurs villes, créez des **pages locales dédiées** avec du contenu unique pour chaque zone. Évitez le contenu dupliqué en personnalisant vraiment chaque page avec des références locales.
 
-Découvrez notre approche du [SEO local](/seo-local) pour les entreprises françaises.
+Découvrez mon approche du [SEO local](/seo-local) pour les entreprises françaises.
 
 ### Données structurées LocalBusiness
 
@@ -214,7 +214,7 @@ Les **Large Language Models** (LLMs) privilégient les contenus :
 
 > **Outil gratuit :** [Testeur de Visibilité IA — Êtes-vous visible par ChatGPT ?](/outils/testeur-visibilite-ia) — Analysez vos signaux GEO et découvrez si les IA peuvent vous citer.
 
-Découvrez notre article complet sur la [visibilité dans l'IA générative](/blog/visibilite-ia-geo).
+Découvrez mon article complet sur la [visibilité dans l'IA générative](/blog/visibilite-ia-geo).
 
 ### FAQ structurées avec Schema.org
 
@@ -274,6 +274,6 @@ Chaque point de cette checklist contribue à construire une **visibilité durabl
 
 ---
 
-**Envie d'aller plus loin ?** Découvrez [pourquoi l'audit SEO est le point de départ de votre croissance](/blog/importance-audit-seo) ou explorez nos guides sur le [SEO local](/seo-local) pour les entreprises françaises.
+**Envie d'aller plus loin ?** Découvrez [pourquoi l'audit SEO est le point de départ de votre croissance](/blog/importance-audit-seo) ou explorez mes guides sur le [SEO local](/seo-local) pour les entreprises françaises.
 
 **Besoin d'un accompagnement local ?** Je propose mes services de consultant SEO dans toute la France : [Nice](/consultant-seo-nice), [Paris](/consultant-seo-paris), [Lyon](/consultant-seo-lyon), [Marseille](/consultant-seo-marseille), [Bordeaux](/consultant-seo-bordeaux) et [Strasbourg](/consultant-seo-strasbourg).

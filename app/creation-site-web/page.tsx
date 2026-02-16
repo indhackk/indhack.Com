@@ -10,7 +10,7 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/creation-site-web"
     },
     openGraph: {
-        title: "Création de Site Web SEO | INDHACK",
+        title: "Création de Site Web SEO | IndHack",
         description: "Lancez un site performant qui attire des clients. Design premium, vitesse optimisée et architecture SEO-ready.",
         url: "https://indhack.com/creation-site-web",
     }

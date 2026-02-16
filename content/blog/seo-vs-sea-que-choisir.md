@@ -12,7 +12,7 @@ SEO ou SEA ? Référencement naturel ou publicité Google Ads ? C'est LA questio
 
 > **Nouveau en 2026 :** L'équation change avec l'IA. Le SEO inclut désormais le **GEO** (visibilité sur ChatGPT/Perplexity), tandis que le SEA reste limité à Google. [Testez votre visibilité IA gratuitement →](/outils/testeur-visibilite-ia)
 
-En tant que consultante SEO chez [INDHACK](/), je vous explique les **vraies différences** et comment choisir selon votre situation.
+En tant que consultante SEO chez [IndHack](/), je vous explique les **vraies différences** et comment choisir selon votre situation.
 
 ## SEO et SEA : définitions
 
@@ -163,4 +163,4 @@ La plupart des entreprises devraient **commencer les deux en parallèle**, avec 
 
 ---
 
-**Besoin d'aide pour définir votre stratégie ?** Découvrez mon approche du [référencement naturel](/referencement-naturel) ou [contactez-moi](/contact) pour un diagnostic gratuit. [INDHACK](/) vous accompagne dans votre stratégie d'acquisition digitale.
+**Besoin d'aide pour définir votre stratégie ?** Découvrez mon approche du [référencement naturel](/referencement-naturel) ou [contactez-moi](/contact) pour un diagnostic gratuit. [IndHack](/) vous accompagne dans votre stratégie d'acquisition digitale.

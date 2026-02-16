@@ -131,4 +131,4 @@ Un [diagnostic complet de votre situation](/audit-seo) permet d'identifier préc
 
 ---
 
-Prêt à créer un site qui travaille pour vous 24h/24 ? [INDHACK](/) accompagne les entreprises de Nice, Marseille, Lyon et toute la France. [Demandez votre audit gratuit](/contact) et découvrons ensemble votre potentiel de visibilité.
+Prêt à créer un site qui travaille pour vous 24h/24 ? [IndHack](/) accompagne les entreprises de Nice, Marseille, Lyon et toute la France. [Demandez votre audit gratuit](/contact) et découvrons ensemble votre potentiel de visibilité.

@@ -6,7 +6,7 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-sophia-antipolis")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO Sophia Antipolis | INDHACK, Consultante SEO`,
+    title: `Consultant SEO Sophia Antipolis | IndHack, Consultante SEO`,
     description: `Boostez votre visibilité B2B sur Google à Sophia Antipolis. Consultante SEO freelance experte du marché tech. Audit gratuit pour startups et ESN. ✆ 06 61 13 97 48`,
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`

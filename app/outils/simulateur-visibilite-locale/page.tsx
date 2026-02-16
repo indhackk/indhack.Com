@@ -4,13 +4,13 @@ import { SimulateurLocal } from "./SimulateurLocal";
 import { ArrowRight, MapPin, Search, Bot, Code2, Target, TrendingUp, Users } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Simulateur Visibilité Locale — Analysez la SERP de votre ville | INDHACK",
+    title: "Simulateur Visibilité Locale — Analysez la SERP de votre ville | IndHack",
     description: "Qui domine Google pour votre métier dans votre ville ? Analysez les 10 premiers résultats, identifiez les plateformes vs commerces locaux. Gratuit, sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils/simulateur-visibilite-locale"
     },
     openGraph: {
-        title: "Simulateur Visibilité Locale — Analysez la concurrence Google | INDHACK",
+        title: "Simulateur Visibilité Locale — Analysez la concurrence Google | IndHack",
         description: "Découvrez qui domine la page 1 de Google pour votre activité dans votre ville. Plateformes vs commerces locaux.",
         url: "https://indhack.com/outils/simulateur-visibilite-locale",
         type: "website",
@@ -41,7 +41,7 @@ const RELATED_TOOLS = [
 const FAQ_ITEMS = [
     {
         question: "Comment fonctionne le simulateur de visibilité locale ?",
-        answer: "Notre outil interroge Google avec la requête '[votre métier] [votre ville]' et analyse les 10 premiers résultats organiques. Il classe chaque résultat en catégorie : plateforme nationale (PagesJaunes, Doctolib, TripAdvisor...), annuaire en ligne, ou site local (commerce indépendant). Vous voyez ainsi qui domine réellement la page 1."
+        answer: "L'outil interroge Google avec la requête '[votre métier] [votre ville]' et analyse les 10 premiers résultats organiques. Il classe chaque résultat en catégorie : plateforme nationale (PagesJaunes, Doctolib, TripAdvisor...), annuaire en ligne, ou site local (commerce indépendant). Vous voyez ainsi qui domine réellement la page 1."
     },
     {
         question: "Que signifie le niveau d'opportunité ?",
@@ -57,7 +57,7 @@ const FAQ_ITEMS = [
     },
     {
         question: "Les résultats sont-ils en temps réel ?",
-        answer: "Les résultats Google sont actualisés régulièrement mais mis en cache pendant 7 jours pour optimiser les performances. Les positions peuvent légèrement varier selon l'heure, la localisation et l'historique de recherche. Notre outil donne une vision représentative de la SERP."
+        answer: "Les résultats Google sont actualisés régulièrement mais mis en cache pendant 7 jours pour optimiser les performances. Les positions peuvent légèrement varier selon l'heure, la localisation et l'historique de recherche. L'outil donne une vision représentative de la SERP."
     },
 ];
 
@@ -178,7 +178,7 @@ export default function SimulateurLocalPage() {
                 <section className="py-12 bg-white">
                     <div className="container mx-auto px-4">
                         <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
-                            Ce que notre outil analyse
+                            Ce que l'outil analyse
                         </h2>
                         <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                             <div className="p-6 bg-orange-50 rounded-2xl border border-orange-100 text-center">
@@ -259,14 +259,14 @@ export default function SimulateurLocalPage() {
                             Besoin de dominer votre marché local ?
                         </h2>
                         <p className="text-texte-moyen mb-8 max-w-xl mx-auto">
-                            Notre outil vous montre la situation. Pour une stratégie SEO local complète
-                            (Google Business, citations, backlinks locaux), nos experts vous accompagnent.
+                            Cet outil vous montre la situation. Pour une stratégie SEO local complète
+                            (Google Business, citations, backlinks locaux), je vous accompagne.
                         </p>
                         <Link
                             href="/seo-local"
                             className="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-bold hover:bg-orange-600 transition-colors"
                         >
-                            Découvrir notre offre SEO Local
+                            Découvrir l'offre SEO Local
                             <ArrowRight className="w-5 h-5" />
                         </Link>
                     </div>

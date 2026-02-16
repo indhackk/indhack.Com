@@ -4,13 +4,13 @@ import { TesteurVisibiliteIA } from "./TesteurVisibiliteIA";
 import { ArrowRight, Bot, Shield, Code2, FileCode, Search, Sparkles, TrendingUp, AlertTriangle, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Testeur Visibilité IA Gratuit — ChatGPT, Perplexity, Claude | INDHACK",
+    title: "Testeur Visibilité IA Gratuit — ChatGPT, Perplexity, Claude | IndHack",
     description: "Votre site est-il visible par ChatGPT et Perplexity ? Testez gratuitement vos signaux GEO : crawlers IA, schema JSON-LD, signaux E-E-A-T. Le seul outil français gratuit.",
     alternates: {
         canonical: "https://indhack.com/outils/testeur-visibilite-ia"
     },
     openGraph: {
-        title: "Testeur Visibilité IA — Êtes-vous visible par ChatGPT ? | INDHACK",
+        title: "Testeur Visibilité IA — Êtes-vous visible par ChatGPT ? | IndHack",
         description: "Analysez vos signaux GEO (Generative Engine Optimization). 8 crawlers IA vérifiés, 4 catégories de signaux. Gratuit, sans inscription.",
         url: "https://indhack.com/outils/testeur-visibilite-ia",
         type: "website",
@@ -52,7 +52,7 @@ const FAQ_ITEMS = [
     },
     {
         question: "Quels crawlers IA sont analysés ?",
-        answer: "Notre outil vérifie 8 crawlers IA : GPTBot et ChatGPT-User (OpenAI), OAI-SearchBot (OpenAI Search), Claude-Web (Anthropic), PerplexityBot (Perplexity), Google-Extended (Gemini), Bytespider (ByteDance/TikTok), et CCBot (Common Crawl). Chacun a un rôle différent dans l'écosystème IA."
+        answer: "Cet outil vérifie 8 crawlers IA : GPTBot et ChatGPT-User (OpenAI), OAI-SearchBot (OpenAI Search), Claude-Web (Anthropic), PerplexityBot (Perplexity), Google-Extended (Gemini), Bytespider (ByteDance/TikTok), et CCBot (Common Crawl). Chacun a un rôle différent dans l'écosystème IA."
     },
     {
         question: "Comment améliorer mon score de visibilité IA ?",
@@ -60,7 +60,7 @@ const FAQ_ITEMS = [
     },
     {
         question: "Pourquoi bloquer certains crawlers IA ?",
-        answer: "Vous pouvez choisir de bloquer GPTBot (entraînement) pour protéger votre contenu tout en autorisant ChatGPT-User (navigation) pour rester citable. Google-Extended contrôle l'entraînement de Gemini. Notre générateur robots.txt vous aide à configurer ces options selon votre stratégie."
+        answer: "Vous pouvez choisir de bloquer GPTBot (entraînement) pour protéger votre contenu tout en autorisant ChatGPT-User (navigation) pour rester citable. Google-Extended contrôle l'entraînement de Gemini. Mon générateur robots.txt vous aide à configurer ces options selon votre stratégie."
     },
     {
         question: "ChatGPT peut-il citer mon site même si je bloque GPTBot ?",
@@ -80,7 +80,7 @@ const STATS = [
     { value: "40%", label: "des 18-34 ans utilisent ChatGPT pour rechercher" },
     { value: "65%", label: "font confiance aux réponses des IA" },
     { value: "+900%", label: "croissance des requêtes 'selon ChatGPT'" },
-    { value: "8", label: "crawlers IA analysés par notre outil" },
+    { value: "8", label: "crawlers IA analysés par cet outil" },
 ];
 
 export default function TesteurVisibiliteIAPage() {
@@ -230,7 +230,7 @@ export default function TesteurVisibiliteIAPage() {
                                     Quand une IA répond à une question comme <em>"Quel consultant SEO recommandes-tu à Nice ?"</em> ou <em>"Comment optimiser son site pour Google ?"</em>, elle cite des sources. <strong className="text-ink">Si votre site n'est pas visible par ces IA, vous n'existez pas</strong> pour cette nouvelle génération d'utilisateurs.
                                 </p>
                                 <p>
-                                    C'est là qu'intervient le <strong className="text-ink">GEO (Generative Engine Optimization)</strong> : l'ensemble des techniques pour être cité par les moteurs de recherche IA. Notre outil est le <strong className="text-ink">premier en France</strong> à analyser gratuitement vos signaux GEO.
+                                    C'est là qu'intervient le <strong className="text-ink">GEO (Generative Engine Optimization)</strong> : l'ensemble des techniques pour être cité par les moteurs de recherche IA. Cet outil est le <strong className="text-ink">premier en France</strong> à analyser gratuitement vos signaux GEO.
                                 </p>
                             </div>
 
@@ -269,7 +269,7 @@ export default function TesteurVisibiliteIAPage() {
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-3xl font-heading font-bold text-ink mb-8 text-center">
-                                Comment fonctionne notre testeur
+                                Comment fonctionne le testeur
                             </h2>
 
                             <div className="grid md:grid-cols-3 gap-8">
@@ -306,9 +306,9 @@ export default function TesteurVisibiliteIAPage() {
                                 <div className="flex items-start gap-4">
                                     <TrendingUp className="w-8 h-8 text-violet-500 flex-shrink-0 mt-1" />
                                     <div>
-                                        <h3 className="font-bold text-ink mb-2">Pourquoi notre outil est unique</h3>
+                                        <h3 className="font-bold text-ink mb-2">Pourquoi cet outil est unique</h3>
                                         <p className="text-soft">
-                                            La plupart des outils SEO ignorent complètement la visibilité IA. Les quelques outils qui existent sont payants et souvent en anglais. <strong className="text-ink">Notre testeur est le premier outil français gratuit</strong> qui combine analyse SEO classique et analyse GEO. Nous l'utilisons nous-mêmes pour nos clients chez <Link href="/" className="text-violet-600 hover:underline">INDHACK</Link>.
+                                            La plupart des outils SEO ignorent complètement la visibilité IA. Les quelques outils qui existent sont payants et souvent en anglais. <strong className="text-ink">Ce testeur est le premier outil français gratuit</strong> qui combine analyse SEO classique et analyse GEO. Je l'utilise moi-même pour mes clients chez <Link href="/" className="text-violet-600 hover:underline">IndHack</Link>.
                                         </p>
                                     </div>
                                 </div>
@@ -365,7 +365,7 @@ export default function TesteurVisibiliteIAPage() {
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
-                                Les 8 crawlers IA que nous vérifions
+                                Les 8 crawlers IA analysés
                             </h2>
                             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                                 {[
@@ -443,7 +443,7 @@ export default function TesteurVisibiliteIAPage() {
                         </h2>
                         <p className="text-texte-moyen mb-8 max-w-xl mx-auto">
                             Le GEO (Generative Engine Optimization) est la prochaine frontière du référencement.
-                            Nos experts vous accompagnent pour apparaître dans les réponses de ChatGPT et Perplexity.
+                            Je vous accompagne pour apparaître dans les réponses de ChatGPT et Perplexity.
                         </p>
                         <Link
                             href="/contact"

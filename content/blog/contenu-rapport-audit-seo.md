@@ -1,6 +1,6 @@
 ---
 title: "Rapport Audit SEO : Contenu Complet d'un Audit Professionnel [+ PDF]"
-description: "Que contient un rapport d'audit SEO professionnel ? Découvrez le contenu détaillé : analyse technique, sémantique, backlinks, plan d'action priorisé. Téléchargez notre exemple PDF."
+description: "Que contient un rapport d'audit SEO professionnel ? Découvrez le contenu détaillé : analyse technique, sémantique, backlinks, plan d'action priorisé. Téléchargez un exemple PDF."
 date: "2026-01-18"
 category: "Audit"
 image: "/images/blog/rapport-audit-seo.jpg"
@@ -10,7 +10,7 @@ keywords: ["rapport audit SEO", "rapport d'audit seo", "audit SEO complet", "rap
 
 Vous avez commandé un **rapport d'audit SEO**, ou vous y pensez. Mais concrètement, **qu'allez-vous recevoir ?** Un PDF de 3 pages généré automatiquement, ou un vrai document stratégique ?
 
-En tant que consultante SEO chez [INDHACK](/), je vous explique ce que doit contenir un **rapport d'audit professionnel** — et ce qui fait la différence entre un audit utile et un audit qui finit dans un tiroir.
+En tant que consultante SEO chez [IndHack](/), je vous explique ce que doit contenir un **rapport d'audit professionnel** — et ce qui fait la différence entre un audit utile et un audit qui finit dans un tiroir.
 
 > **Télécharger un exemple :** [Checklist SEO 2026 en PDF](https://issuu.com/indhack/docs/checklist_seo_2026_les_30_points_essentiels_in) — Un aperçu des points analysés dans un rapport d'audit complet.
 
@@ -145,4 +145,4 @@ Un rapport d'audit SEO professionnel doit :
 
 ---
 
-**Besoin d'un audit de qualité ?** Découvrez [l'importance d'un audit SEO](/blog/importance-audit-seo) ou [contactez-moi](/contact) pour un diagnostic gratuit. [INDHACK](/) accompagne les entreprises de toute la France dans leur stratégie SEO.
+**Besoin d'un audit de qualité ?** Découvrez [l'importance d'un audit SEO](/blog/importance-audit-seo) ou [contactez-moi](/contact) pour un diagnostic gratuit. [IndHack](/) accompagne les entreprises de toute la France dans leur stratégie SEO.

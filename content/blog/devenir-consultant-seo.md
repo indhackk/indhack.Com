@@ -211,4 +211,4 @@ Le meilleur moment pour commencer, c'est **maintenant**.
 - [Quelles sont les missions d'un consultant SEO ?](/blog/missions-consultant-seo)
 - [Pourquoi faire appel à un consultant SEO ?](/blog/pourquoi-consultant-seo)
 
-Vous cherchez un [accompagnement professionnel en visibilité](/consultant-seo) pour votre projet ? [INDHACK](/) intervient sur Nice, Marseille, Lyon et toute la France. [Contactez-moi](/contact) pour un diagnostic gratuit.
+Vous cherchez un [accompagnement professionnel en visibilité](/consultant-seo) pour votre projet ? [IndHack](/) intervient sur Nice, Marseille, Lyon et toute la France. [Contactez-moi](/contact) pour un diagnostic gratuit.

@@ -4,13 +4,13 @@ import { AuditSEO } from "./AuditSEO";
 import { ArrowRight, Search, Bot, Code2, FileCode, Gauge, TrendingUp, Zap, Target } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Audit SEO Gratuit en 1 Clic — Score /100 | INDHACK",
+    title: "Audit SEO Gratuit en 1 Clic — Score /100 | IndHack",
     description: "Analysez gratuitement le SEO de votre site en 1 clic. Score /100, 15 critères vérifiés dont la compatibilité IA. Recommandations actionnables pour PME.",
     alternates: {
         canonical: "https://indhack.com/outils/audit-seo-gratuit"
     },
     openGraph: {
-        title: "Audit SEO Gratuit — Score /100 en 30 secondes | INDHACK",
+        title: "Audit SEO Gratuit — Score /100 en 30 secondes | IndHack",
         description: "15 critères analysés dont la visibilité IA. Gratuit, sans inscription. L'outil SEO français de référence.",
         url: "https://indhack.com/outils/audit-seo-gratuit",
         type: "website",
@@ -44,11 +44,11 @@ const RELATED_TOOLS = [
 const FAQ_ITEMS = [
     {
         question: "Qu'est-ce qu'un audit SEO ?",
-        answer: "Un audit SEO est une analyse complète de votre site web pour identifier les problèmes techniques, de contenu et de référencement qui peuvent affecter votre visibilité sur Google et les moteurs de recherche. Notre outil analyse 15 critères essentiels en quelques secondes."
+        answer: "Un audit SEO est une analyse complète de votre site web pour identifier les problèmes techniques, de contenu et de référencement qui peuvent affecter votre visibilité sur Google et les moteurs de recherche. Cet outil analyse 15 critères essentiels en quelques secondes."
     },
     {
         question: "Combien de critères sont analysés ?",
-        answer: "Notre audit analyse 15 critères répartis en 4 catégories : Technique (HTTPS, viewport, vitesse, sitemap, robots.txt, Open Graph, Twitter Cards), Contenu (title, meta description, H1, structure Hn, ratio texte/HTML), Accessibilité (images alt) et IA-Ready (crawlers IA autorisés). C'est le seul outil gratuit français qui vérifie la compatibilité avec les crawlers IA."
+        answer: "L'audit analyse 15 critères répartis en 4 catégories : Technique (HTTPS, viewport, vitesse, sitemap, robots.txt, Open Graph, Twitter Cards), Contenu (title, meta description, H1, structure Hn, ratio texte/HTML), Accessibilité (images alt) et IA-Ready (crawlers IA autorisés). C'est le seul outil gratuit français qui vérifie la compatibilité avec les crawlers IA."
     },
     {
         question: "L'audit est-il vraiment gratuit ?",
@@ -231,7 +231,7 @@ export default function AuditSEOPage() {
                                     <strong className="text-ink">90% des sites web ont des problèmes SEO invisibles</strong> qui plombent leur visibilité Google. Balises title mal optimisées, images sans attribut alt, vitesse de chargement trop lente, absence de sitemap... Ces erreurs passent inaperçues mais coûtent cher en trafic perdu.
                                 </p>
                                 <p>
-                                    Un audit SEO révèle ces problèmes et vous donne une <strong className="text-ink">roadmap claire</strong> pour les corriger. Notre outil analyse 15 critères essentiels en moins de 30 secondes — et contrairement aux autres outils, il vérifie aussi votre <strong className="text-ink">compatibilité avec les crawlers IA</strong> (ChatGPT, Perplexity, Claude).
+                                    Un audit SEO révèle ces problèmes et vous donne une <strong className="text-ink">roadmap claire</strong> pour les corriger. Cet outil analyse 15 critères essentiels en moins de 30 secondes — et contrairement aux autres outils, il vérifie aussi votre <strong className="text-ink">compatibilité avec les crawlers IA</strong> (ChatGPT, Perplexity, Claude).
                                 </p>
                             </div>
 
@@ -265,7 +265,7 @@ export default function AuditSEOPage() {
                                     <div>
                                         <h3 className="font-bold text-ink mb-2">Après l'audit : passez à l'action</h3>
                                         <p className="text-soft mb-4">
-                                            Cet outil gratuit vous donne un aperçu. Pour un <strong className="text-ink">audit SEO professionnel complet</strong> avec analyse concurrentielle, étude sémantique et roadmap priorisée par ROI, découvrez notre accompagnement expert.
+                                            Cet outil gratuit vous donne un aperçu. Pour un <strong className="text-ink">audit SEO professionnel complet</strong> avec analyse concurrentielle, étude sémantique et roadmap priorisée par ROI, découvrez mon accompagnement expert.
                                         </p>
                                         <Link href="/audit-seo" className="text-sauge font-medium hover:underline inline-flex items-center gap-2">
                                             Découvrir l'audit SEO professionnel
@@ -345,8 +345,8 @@ export default function AuditSEOPage() {
                             Besoin d'un audit SEO approfondi ?
                         </h2>
                         <p className="text-texte-moyen mb-8 max-w-xl mx-auto">
-                            Notre outil gratuit vous donne un aperçu. Pour une analyse complète avec recommandations personnalisées,
-                            nos experts SEO vous accompagnent.
+                            Cet outil gratuit vous donne un aperçu. Pour une analyse complète avec recommandations personnalisées,
+                            je vous accompagne.
                         </p>
                         <Link
                             href="/contact"

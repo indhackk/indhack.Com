@@ -90,7 +90,7 @@ export function RelatedServices({ currentService, title = "Services complémenta
                         {title}
                     </h2>
                     <p className="text-soft mt-2">
-                        Optimisez votre présence digitale avec nos autres expertises
+                        Optimisez votre présence digitale avec mes autres expertises
                     </p>
                 </div>
 
