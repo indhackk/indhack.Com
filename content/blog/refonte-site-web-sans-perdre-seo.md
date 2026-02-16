@@ -231,4 +231,14 @@ Une refonte réussie côté SEO repose sur :
 
 ---
 
-**Vous planifiez une refonte ?** Je vous accompagne pour migrer sans perdre une position. Découvrez ma [prestation refonte de site web](/refonte-site-web) ou [contactez-moi](/contact) pour en discuter. [IndHack](/) sécurise votre SEO pendant et après la migration.
+**À lire aussi :**
+- [Checklist SEO Refonte : 45 points à vérifier](/blog/checklist-seo-refonte-site) — La liste complète avant, pendant et après
+- [Contenu d'un rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo) — Ce que doit contenir un audit avant refonte
+- [5 erreurs SEO qui coûtent 10 000€/an](/blog/audit-seo-erreurs-qui-coutent-cher) — Les pièges à éviter
+
+**Vous planifiez une refonte ?** Je vous accompagne pour migrer sans perdre une position. Découvrez ma [prestation refonte de site web](/refonte-site-web) ou [contactez-moi](/contact) pour en discuter.
+
+**Services par ville :**
+- [Consultant SEO Sophia Antipolis](/consultant-seo-sophia-antipolis) — Refontes tech & SaaS
+- [Consultant SEO Cannes](/consultant-seo-cannes) — Refontes luxe & prestige
+- [Consultant SEO Nice](/consultant-seo-nice) — Refontes tous secteurs

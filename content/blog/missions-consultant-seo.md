@@ -137,7 +137,7 @@ En accompagnement mensuel, je fournis :
 Selon vos besoins, un consultant SEO peut également intervenir sur :
 
 ### SEO Local
-Optimisation de votre fiche **Google Business Profile** et positionnement sur les recherches de proximité. Idéal pour les commerces, artisans et professions libérales qui veulent dominer leur zone géographique.
+Optimisation de votre fiche **Google Business Profile** et positionnement sur les recherches de proximité. Idéal pour les commerces, artisans et professions libérales qui veulent [dominer les recherches locales de leur zone géographique](/seo-local).
 
 ### Migration et refonte de site
 Accompagnement lors d'un [renouvellement de votre plateforme web](/refonte-site-web) pour préserver votre référencement existant. Une migration mal gérée peut faire perdre **80% du trafic**.
@@ -167,3 +167,14 @@ L'important est de choisir un consultant qui :
 ---
 
 **Envie d'aller plus loin ?** Découvrez [pourquoi faire appel à un consultant SEO](/blog/pourquoi-consultant-seo) ou [demandez un diagnostic gratuit](/contact) à [IndHack](/). J'interviens sur Nice, Marseille, Lyon, Paris et dans toute la France.
+
+**À lire aussi :**
+- [Contenu d'un rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo)
+- [L'audit SEO : point de départ de votre croissance](/blog/importance-audit-seo)
+- [Checklist SEO Refonte de Site : 45 points à vérifier](/blog/checklist-seo-refonte-site)
+
+**Consultant SEO par spécialité et ville :**
+- [Consultant SEO Sophia Antipolis](/consultant-seo-sophia-antipolis) — Tech, startups, SaaS B2B
+- [Consultant SEO Cannes](/consultant-seo-cannes) — Luxe, immobilier, événementiel
+- [Consultant SEO Antibes](/consultant-seo-antibes) — Yachting, commerce local
+- [Consultant SEO Nice](/consultant-seo-nice) — Tous secteurs Côte d'Azur

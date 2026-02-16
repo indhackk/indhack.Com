@@ -231,3 +231,13 @@ Votre fiche Google Business Profile est un **levier de croissance gratuit** si e
 ---
 
 **Besoin d'aide pour votre SEO local ?** Découvrez mon accompagnement [SEO local](/seo-local) ou [contactez-moi](/contact) pour un audit de votre fiche Google Business Profile. [IndHack](/) accompagne les entreprises de Nice, Cannes, Monaco et toute la France.
+
+**À lire aussi :**
+- [SEO Local à Nice : Dominer le marché azuréen](/blog/seo-local-nice)
+- [Pourquoi faire appel à un consultant SEO ?](/blog/pourquoi-consultant-seo)
+- [L'audit SEO : point de départ de votre croissance](/blog/importance-audit-seo)
+
+**Consultant SEO local par ville :**
+- [Consultant SEO Nice](/consultant-seo-nice) — Côte d'Azur
+- [Consultant SEO Cannes](/consultant-seo-cannes) — Prestige et événementiel
+- [Consultant SEO Antibes](/consultant-seo-antibes) — Port Vauban et commerce local

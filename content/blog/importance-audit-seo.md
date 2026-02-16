@@ -113,8 +113,13 @@ Un audit SEO vous permet de :
 
 **Envie d'aller plus loin ?** Découvrez [les missions complètes d'un consultant SEO](/blog/missions-consultant-seo) ou [demandez votre diagnostic gratuit](/contact).
 
+**À lire aussi :**
+- [Contenu d'un rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo) — Ce que vous recevez concrètement
+- [Checklist SEO Refonte de site](/blog/checklist-seo-refonte-site) — 45 points à vérifier avant migration
+
 **Services d'audit SEO par ville :**
 - [Audit technique SEO à Nice](/consultant-seo-nice/audit-technique)
+- [Audit SEO Sophia Antipolis](/consultant-seo-sophia-antipolis/audit-technique) — Startups & SaaS
+- [Audit SEO à Cannes](/consultant-seo-cannes/audit-technique) — Marché premium
 - [Audit SEO à Lyon](/consultant-seo-lyon/audit-technique)
-- [Audit SEO à Bordeaux](/consultant-seo-bordeaux/audit-technique)
 - [Audit SEO à Marseille](/consultant-seo-marseille/audit-technique)

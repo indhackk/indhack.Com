@@ -32,7 +32,7 @@ Un **consultant SEO professionnel** va droit au but. Il sait ce qui fonctionne, 
 
 J'ai vu des sites perdre **80% de leur trafic** à cause d'une mauvaise migration. Des entreprises pénalisées par Google pour du **contenu dupliqué**. Des mois de travail anéantis par une stratégie de **netlinking toxique**.
 
-Un consultant SEO vous protège de ces erreurs. Il connaît les pièges et sait les éviter. C'est particulièrement critique lors d'une refonte de site web. Chez [IndHack](/), j'ai accompagné des entreprises de Nice, Marseille, Lyon et Paris dans ce type de transitions critiques.
+Un consultant SEO vous protège de ces erreurs. Il connaît les pièges et sait les éviter. C'est particulièrement critique lors d'une [refonte de site web](/blog/refonte-site-web-sans-perdre-seo). Chez [IndHack](/), j'ai accompagné des entreprises de Nice, Marseille, Lyon et Paris dans ce type de transitions critiques.
 
 ## Avoir une vision stratégique
 
@@ -144,8 +144,16 @@ Le meilleur moment pour investir dans le SEO, c'était il y a 5 ans. Le deuxièm
 
 Prêt à transformer votre visibilité ? [Contactez-moi](/contact) pour un premier échange gratuit.
 
+**À lire aussi :**
+- [Les missions complètes d'un consultant SEO](/blog/missions-consultant-seo) — Ce qu'un expert fait concrètement
+- [Pourquoi l'audit SEO est le point de départ de votre croissance](/blog/importance-audit-seo)
+- [SEO local : dominer le marché de votre ville](/blog/seo-local-nice)
+
 **Consultante SEO dans votre région :**
 - [Consultant SEO Nice](/consultant-seo-nice) — Côte d'Azur, Alpes-Maritimes
+- [Consultant SEO Cannes](/consultant-seo-cannes) — Luxe, immobilier, événementiel
+- [Consultant SEO Antibes](/consultant-seo-antibes) — Yachting Port Vauban, commerce local
+- [Consultant SEO Sophia Antipolis](/consultant-seo-sophia-antipolis) — Tech, startups, SaaS
 - [Consultant SEO Lyon](/consultant-seo-lyon) — Rhône-Alpes
 - [Consultant SEO Paris](/consultant-seo-paris) — Île-de-France
 - [Consultant SEO Marseille](/consultant-seo-marseille) — Bouches-du-Rhône
