@@ -253,3 +253,31 @@ Les 4 piliers à retenir :
 - [Consultante SEO Nice](/consultant-seo-nice)
 - [Consultante SEO Cannes](/consultant-seo-cannes)
 - [Consultante SEO Sophia-Antipolis](/consultant-seo-sophia-antipolis)
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GEO : Comment Rendre Votre Site Visible dans ChatGPT, Perplexity et Google AI en 2026",
+  "description": "Le Generative Engine Optimization (GEO) expliqué simplement. Guide pratique pour rendre votre site visible dans les réponses des IA. Checklist, outil gratuit et stratégie concrète.",
+  "image": "https://indhack.com/images/blog/geo-chatgpt-2026.webp",
+  "author": {
+    "@type": "Person",
+    "name": "Indiana Aflalo",
+    "url": "https://indhack.com/consultant-seo"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "IndHack",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://indhack.com/images/logo-indhack.webp"
+    }
+  },
+  "datePublished": "2026-02-17",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://indhack.com/blog/geo-comment-apparaitre-chatgpt-2026"
+  }
+}
+</script>

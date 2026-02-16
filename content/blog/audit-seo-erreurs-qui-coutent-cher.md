@@ -89,3 +89,31 @@ Mais vous arrêterez de **perdre** celui que vous avez déjà.
 
 Vous avez peur de toucher au code ?
 Je réalise un [audit SEO gratuit](/audit-seo) pour identifier ces failles sans risque. Envoyez-moi juste votre URL.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "5 Erreurs SEO Invisibles Qui Vous Coûtent 10 000€ par An (À Corriger Ce Soir)",
+  "description": "Votre site perd de l'argent. Découvrez les 5 erreurs techniques invisibles (canonical, vitesse, indexation) qui tuent votre chiffre d'affaires. Guide correctif express.",
+  "image": "https://indhack.com/images/blog/seo-audit-money-flying-2026-02-15.webp",
+  "author": {
+    "@type": "Person",
+    "name": "Indiana Aflalo",
+    "url": "https://indhack.com/consultant-seo"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "IndHack",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://indhack.com/images/logo-indhack.webp"
+    }
+  },
+  "datePublished": "2026-02-15",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://indhack.com/blog/audit-seo-erreurs-qui-coutent-cher"
+  }
+}
+</script>
