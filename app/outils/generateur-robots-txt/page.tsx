@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { RobotsGenerator } from "./RobotsGenerator";
-import { ArrowRight, FileCode, Bot, Code2, Search, Sparkles } from "lucide-react";
+import { ArrowRight, FileCode, Bot, Code2, Search } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Générateur robots.txt avec Crawlers IA 2026 — Gratuit",
@@ -23,21 +23,18 @@ const RELATED_TOOLS = [
         description: "Votre site est-il visible par ChatGPT ?",
         href: "/outils/testeur-visibilite-ia",
         icon: Bot,
-        gradient: "from-violet-500 to-purple-600",
     },
     {
         title: "Générateur Schema JSON-LD",
         description: "Créez vos données structurées",
         href: "/outils/generateur-schema-json-ld",
         icon: Code2,
-        gradient: "from-blue-500 to-cyan-600",
     },
     {
         title: "Audit SEO Gratuit",
         description: "Analysez votre site en 1 clic",
         href: "/outils/audit-seo-gratuit",
         icon: Search,
-        gradient: "from-emerald-500 to-teal-600",
     },
 ];
 
@@ -133,29 +130,19 @@ export default function GenerateurRobotsTxtPage() {
 
             <main className="min-h-screen bg-ink">
                 {/* Hero */}
-                <section className="relative pt-32 pb-16 overflow-hidden">
+                <section className="pt-28 pb-16 relative overflow-hidden">
                     {/* Background effects */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-fond-sombre via-ink to-ink" />
-                    <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-500/20 rounded-full blur-[150px]" />
-                    <div className="absolute top-40 right-20 w-72 h-72 bg-violet-500/20 rounded-full blur-[120px]" />
-
-                    {/* Dot grid */}
-                    <div
-                        className="absolute inset-0 opacity-[0.03]"
-                        style={{
-                            backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
-                            backgroundSize: '24px 24px'
-                        }}
-                    />
+                    <div className="absolute top-20 left-10 w-[400px] h-[400px] bg-sauge/10 rounded-full blur-[150px] pointer-events-none" />
+                    <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-sauge/5 rounded-full blur-[180px] pointer-events-none" />
 
                     <div className="container mx-auto px-4 relative z-10">
                         {/* Breadcrumb */}
                         <nav className="mb-8" aria-label="Fil d'Ariane">
-                            <ol className="flex items-center gap-2 text-sm text-white/50">
+                            <ol className="flex items-center gap-2 text-sm text-white/40">
                                 <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
-                                <li className="text-white/30">/</li>
+                                <li className="text-white/20">/</li>
                                 <li><Link href="/outils" className="hover:text-white transition-colors">Outils SEO</Link></li>
-                                <li className="text-white/30">/</li>
+                                <li className="text-white/20">/</li>
                                 <li className="text-white font-medium">Générateur robots.txt</li>
                             </ol>
                         </nav>
@@ -205,8 +192,7 @@ export default function GenerateurRobotsTxtPage() {
                 </section>
 
                 {/* IA Crawlers Explained */}
-                <section className="py-16 bg-fond-sombre relative">
-                    <div className="absolute inset-0 bg-gradient-to-b from-ink via-fond-sombre to-fond-sombre" />
+                <section className="py-16 bg-fond-sombre border-t border-white/5">
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
@@ -260,10 +246,10 @@ export default function GenerateurRobotsTxtPage() {
                             </div>
 
                             {/* Recommendation box */}
-                            <div className="mt-8 bg-gradient-to-r from-sauge/10 to-transparent rounded-2xl p-6 border border-sauge/20">
+                            <div className="mt-8 bg-white/5 rounded-xl p-6 border border-white/10">
                                 <div className="flex gap-4">
-                                    <Sparkles className="w-6 h-6 text-sauge flex-shrink-0" />
-                                    <p className="text-white/80">
+                                    <Bot className="w-6 h-6 text-sauge flex-shrink-0" />
+                                    <p className="text-white/60">
                                         <strong className="text-white">Ma recommandation :</strong> Autorisez les crawlers de navigation (ChatGPT-User, Claude-Web, PerplexityBot) pour être cité dans les réponses. Bloquez les crawlers d'entraînement (GPTBot, Google-Extended) si vous souhaitez protéger votre contenu original.
                                     </p>
                                 </div>
@@ -273,27 +259,27 @@ export default function GenerateurRobotsTxtPage() {
                 </section>
 
                 {/* Related Tools */}
-                <section className="py-16 bg-ink">
+                <section className="py-16 bg-ink border-t border-white/5">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-8 text-center">
-                            Outils complémentaires
+                        <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
+                            Outils <span className="text-sauge">complémentaires</span>
                         </h2>
-                        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                        <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
                             {RELATED_TOOLS.map((tool) => {
                                 const Icon = tool.icon;
                                 return (
                                     <Link
                                         key={tool.href}
                                         href={tool.href}
-                                        className="group p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-sauge/30 transition-all hover:bg-white/10"
+                                        className="group bg-white/5 rounded-xl p-5 border border-white/10 hover:border-sauge/30 hover:bg-white/10 transition-all"
                                     >
-                                        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${tool.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                                            <Icon className="w-6 h-6 text-white" />
+                                        <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center mb-3 group-hover:bg-sauge/30 transition-colors">
+                                            <Icon className="w-5 h-5 text-sauge" />
                                         </div>
-                                        <h3 className="font-bold text-white mb-2 group-hover:text-sauge transition-colors">
+                                        <h3 className="font-bold text-white mb-1 group-hover:text-sauge transition-colors">
                                             {tool.title}
                                         </h3>
-                                        <p className="text-sm text-white/60">{tool.description}</p>
+                                        <p className="text-sm text-white/50">{tool.description}</p>
                                     </Link>
                                 );
                             })}
@@ -301,85 +287,71 @@ export default function GenerateurRobotsTxtPage() {
                     </div>
                 </section>
 
-                {/* Maillage Section */}
-                <section className="py-16 bg-fond-sombre">
+                {/* Internal Links */}
+                <section className="py-12 bg-fond-sombre border-t border-white/5">
                     <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-8 text-center">
-                                Aller plus loin avec IndHack
-                            </h2>
-                            <div className="grid md:grid-cols-2 gap-8">
-                                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
-                                    <h3 className="font-bold text-white mb-4">Articles pour optimiser votre SEO</h3>
-                                    <ul className="space-y-3">
-                                        <li>
-                                            <Link href="/blog/pourquoi-consultant-seo" className="text-sauge hover:underline">
-                                                Pourquoi faire appel à un consultant SEO ?
+                        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
+                            <div>
+                                <h3 className="font-bold text-white mb-4">Articles SEO & GEO</h3>
+                                <ul className="space-y-2">
+                                    {[
+                                        { href: "/blog/pourquoi-consultant-seo", text: "Pourquoi faire appel à un consultant SEO ?" },
+                                        { href: "/blog/importance-audit-seo", text: "Pourquoi un audit SEO est essentiel" },
+                                        { href: "/blog/seo-local-nice", text: "Guide du SEO local à Nice" },
+                                    ].map((link) => (
+                                        <li key={link.href}>
+                                            <Link href={link.href} className="text-white/50 hover:text-sauge transition-colors flex items-center gap-2 text-sm">
+                                                <ArrowRight className="w-3 h-3 text-sauge" />
+                                                {link.text}
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link href="/blog/importance-audit-seo" className="text-sauge hover:underline">
-                                                Pourquoi un audit SEO est essentiel
+                                    ))}
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 className="font-bold text-white mb-4">Consultant SEO par ville</h3>
+                                <ul className="space-y-2">
+                                    {[
+                                        { href: "/consultant-seo-nice", text: "Consultant SEO Nice" },
+                                        { href: "/consultant-seo-sophia-antipolis", text: "Consultant SEO Sophia Antipolis" },
+                                        { href: "/consultant-seo-cannes", text: "Consultant SEO Cannes" },
+                                    ].map((link) => (
+                                        <li key={link.href}>
+                                            <Link href={link.href} className="text-white/50 hover:text-sauge transition-colors flex items-center gap-2 text-sm">
+                                                <ArrowRight className="w-3 h-3 text-sauge" />
+                                                {link.text}
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link href="/blog/seo-local-nice" className="text-sauge hover:underline">
-                                                Guide du SEO local à Nice
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
-                                    <h3 className="font-bold text-white mb-4">Consultant SEO près de chez vous</h3>
-                                    <ul className="space-y-3">
-                                        <li>
-                                            <Link href="/consultant-seo-nice" className="text-sauge hover:underline">
-                                                Consultante SEO à Nice
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/consultant-seo-sophia-antipolis" className="text-sauge hover:underline">
-                                                Consultante SEO à Sophia-Antipolis
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/consultant-seo-cannes" className="text-sauge hover:underline">
-                                                Consultante SEO à Cannes
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </div>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {/* FAQ */}
-                <section className="py-16 bg-ink">
+                <section className="py-16 bg-ink border-t border-white/5">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto">
-                            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-8 text-center">
-                                Questions Fréquentes
+                            <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
+                                Questions <span className="text-sauge">Fréquentes</span>
                             </h2>
-                            <div className="space-y-4">
+                            <div className="space-y-3">
                                 {FAQ_ITEMS.map((item, index) => (
                                     <details
                                         key={index}
-                                        className="group bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden"
+                                        className="group bg-white/5 rounded-xl border border-white/10 overflow-hidden"
                                     >
-                                        <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-                                            <h3 className="font-bold text-white pr-4">{item.question}</h3>
-                                            <svg
-                                                className="w-5 h-5 text-white/50 flex-shrink-0 transition-transform group-open:rotate-180"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                            >
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                            </svg>
+                                        <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                                            <span className="font-medium text-white pr-4 text-sm">{item.question}</span>
+                                            <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-open:rotate-180 transition-transform">
+                                                <svg className="w-3 h-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                </svg>
+                                            </span>
                                         </summary>
-                                        <div className="px-6 pb-6 pt-0">
-                                            <p className="text-white/60 leading-relaxed">{item.answer}</p>
+                                        <div className="px-5 pb-5">
+                                            <p className="text-white/60 text-sm leading-relaxed">{item.answer}</p>
                                         </div>
                                     </details>
                                 ))}
@@ -389,25 +361,17 @@ export default function GenerateurRobotsTxtPage() {
                 </section>
 
                 {/* CTA */}
-                <section className="py-20 bg-fond-sombre relative overflow-hidden">
-                    {/* Background effects */}
-                    <div className="absolute top-0 left-1/4 w-96 h-96 bg-sauge/20 rounded-full blur-[150px]" />
-                    <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-violet-500/10 rounded-full blur-[120px]" />
-
-                    <div className="container mx-auto px-4 text-center relative z-10">
-                        <span className="px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 text-sauge text-xs font-semibold uppercase tracking-[0.2em]">
-                            Prochaine étape
-                        </span>
-                        <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mt-6 mb-4">
-                            Votre site est-il visible par les IA ?
+                <section className="py-16 bg-fond-sombre border-t border-white/5">
+                    <div className="container mx-auto px-4 text-center">
+                        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
+                            Besoin d&apos;une stratégie <span className="text-sauge">GEO</span> complète ?
                         </h2>
-                        <p className="text-white/60 mb-8 max-w-xl mx-auto text-lg">
-                            Le robots.txt est la première étape. Pour une stratégie GEO complète
-                            (Generative Engine Optimization), je vous accompagne.
+                        <p className="text-white/50 mb-8 max-w-xl mx-auto">
+                            Le robots.txt est la première étape. Je vous accompagne pour apparaître dans les réponses de ChatGPT et Perplexity.
                         </p>
                         <Link
                             href="/contact"
-                            className="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-all shadow-2xl shadow-white/10"
+                            className="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-all"
                         >
                             Demander un audit GEO
                             <ArrowRight className="w-5 h-5" />

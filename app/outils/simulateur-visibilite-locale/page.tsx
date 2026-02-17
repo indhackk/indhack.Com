@@ -127,105 +127,96 @@ export default function SimulateurLocalPage() {
                 }}
             />
 
-            <main className="min-h-screen bg-fond-clair">
-                {/* Hero */}
-                <section className="relative pt-32 pb-12 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-fond-sombre via-fond-sombre to-orange-900/30" />
-                    <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl" />
-                    <div className="absolute bottom-10 right-10 w-96 h-96 bg-red-500/10 rounded-full blur-3xl" />
+            <main className="min-h-screen bg-ink">
+                {/* Hero + Tool Section */}
+                <section className="pt-28 pb-16 relative overflow-hidden">
+                    <div className="absolute top-20 left-10 w-[400px] h-[400px] bg-sauge/10 rounded-full blur-[150px] pointer-events-none" />
+                    <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-sauge/5 rounded-full blur-[180px] pointer-events-none" />
 
                     <div className="container mx-auto px-4 relative z-10">
                         {/* Breadcrumb */}
                         <nav className="mb-8" aria-label="Fil d'Ariane">
-                            <ol className="flex items-center gap-2 text-sm text-texte-moyen">
+                            <ol className="flex items-center gap-2 text-sm text-white/40">
                                 <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
-                                <li>/</li>
+                                <li className="text-white/20">/</li>
                                 <li><Link href="/outils" className="hover:text-white transition-colors">Outils SEO</Link></li>
-                                <li>/</li>
+                                <li className="text-white/20">/</li>
                                 <li className="text-white font-medium">Simulateur Visibilité Locale</li>
                             </ol>
                         </nav>
 
-                        <div className="flex items-start gap-6">
-                            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center flex-shrink-0">
-                                <MapPin className="w-8 h-8 text-white" />
+                        {/* Header - Compact */}
+                        <div className="max-w-3xl mx-auto text-center mb-10">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/20 border border-sauge/30 rounded-full text-sauge text-sm font-bold mb-4">
+                                <MapPin className="w-4 h-4" />
+                                <span className="uppercase tracking-wider text-xs">Analyse SERP locale</span>
                             </div>
-                            <div>
-                                <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-500/20 rounded-full text-orange-300 text-sm font-medium mb-4">
-                                    <Target className="w-4 h-4" />
-                                    Analyse SERP locale
-                                </div>
-                                <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-4">
-                                    Simulateur Visibilité Locale
-                                </h1>
-                                <p className="text-lg text-texte-moyen max-w-2xl">
-                                    Qui domine la page 1 de Google pour votre métier dans votre ville ?
-                                    Plateformes nationales ou commerces locaux ? Identifiez vos opportunités SEO.
-                                </p>
-                            </div>
+                            <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
+                                Simulateur Visibilité <span className="text-sauge">Locale</span>
+                            </h1>
+                            <p className="text-white/60 text-lg">
+                                Qui domine la page 1 de Google pour votre métier dans votre ville ?
+                                Plateformes nationales ou commerces locaux ? Identifiez vos opportunités SEO.
+                            </p>
                         </div>
-                    </div>
-                </section>
 
-                {/* Tool */}
-                <section className="py-12">
-                    <div className="container mx-auto px-4">
+                        {/* Tool */}
                         <SimulateurLocal />
                     </div>
                 </section>
 
                 {/* Features */}
-                <section className="py-12 bg-white">
+                <section className="py-16 bg-fond-sombre border-t border-white/5">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
-                            Ce que l'outil analyse
+                        <h2 className="text-2xl font-heading font-bold text-white text-center mb-10">
+                            Ce que l&apos;outil <span className="text-sauge">analyse</span>
                         </h2>
-                        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                            <div className="p-6 bg-orange-50 rounded-2xl border border-orange-100 text-center">
-                                <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                    <Search className="w-6 h-6 text-white" />
+                        <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                            <div className="bg-white/5 rounded-xl p-5 border border-white/10 text-center">
+                                <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center mx-auto mb-3">
+                                    <Search className="w-5 h-5 text-sauge" />
                                 </div>
-                                <h3 className="font-bold text-ink mb-2">Top 10 Google</h3>
-                                <p className="text-sm text-soft">Analyse des 10 premiers résultats organiques pour votre requête locale</p>
+                                <h3 className="font-bold text-white text-sm mb-1">Top 10 Google</h3>
+                                <p className="text-xs text-white/50">Analyse des 10 premiers résultats organiques pour votre requête locale</p>
                             </div>
-                            <div className="p-6 bg-red-50 rounded-2xl border border-red-100 text-center">
-                                <div className="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                    <Users className="w-6 h-6 text-white" />
+                            <div className="bg-white/5 rounded-xl p-5 border border-white/10 text-center">
+                                <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center mx-auto mb-3">
+                                    <Users className="w-5 h-5 text-sauge" />
                                 </div>
-                                <h3 className="font-bold text-ink mb-2">Classification</h3>
-                                <p className="text-sm text-soft">Plateformes (PagesJaunes, Doctolib...) vs annuaires vs sites locaux</p>
+                                <h3 className="font-bold text-white text-sm mb-1">Classification</h3>
+                                <p className="text-xs text-white/50">Plateformes (PagesJaunes, Doctolib...) vs annuaires vs sites locaux</p>
                             </div>
-                            <div className="p-6 bg-amber-50 rounded-2xl border border-amber-100 text-center">
-                                <div className="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                                    <TrendingUp className="w-6 h-6 text-white" />
+                            <div className="bg-white/5 rounded-xl p-5 border border-white/10 text-center">
+                                <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center mx-auto mb-3">
+                                    <TrendingUp className="w-5 h-5 text-sauge" />
                                 </div>
-                                <h3 className="font-bold text-ink mb-2">Opportunités</h3>
-                                <p className="text-sm text-soft">Niveau de concurrence et recommandations SEO personnalisées</p>
+                                <h3 className="font-bold text-white text-sm mb-1">Opportunités</h3>
+                                <p className="text-xs text-white/50">Niveau de concurrence et recommandations SEO personnalisées</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {/* Related Tools */}
-                <section className="py-12">
+                <section className="py-16 bg-ink border-t border-white/5">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-2xl font-heading font-bold text-ink mb-8">
-                            Outils complémentaires
+                        <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
+                            Outils <span className="text-sauge">complémentaires</span>
                         </h2>
-                        <div className="grid md:grid-cols-3 gap-6">
+                        <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
                             {RELATED_TOOLS.map((tool) => {
                                 const Icon = tool.icon;
                                 return (
                                     <Link
                                         key={tool.href}
                                         href={tool.href}
-                                        className="group p-6 bg-white rounded-2xl border border-line hover:border-orange-300 transition-all"
+                                        className="group bg-white/5 rounded-xl p-5 border border-white/10 hover:border-sauge/30 hover:bg-white/10 transition-all"
                                     >
-                                        <Icon className="w-8 h-8 text-orange-500 mb-4" />
-                                        <h3 className="font-bold text-ink mb-2 group-hover:text-orange-600 transition-colors">
-                                            {tool.title}
-                                        </h3>
-                                        <p className="text-sm text-soft">{tool.description}</p>
+                                        <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center mb-3 group-hover:bg-sauge/30 transition-colors">
+                                            <Icon className="w-5 h-5 text-sauge" />
+                                        </div>
+                                        <h3 className="font-bold text-white mb-1 group-hover:text-sauge transition-colors">{tool.title}</h3>
+                                        <p className="text-sm text-white/50">{tool.description}</p>
                                     </Link>
                                 );
                             })}
@@ -234,18 +225,30 @@ export default function SimulateurLocalPage() {
                 </section>
 
                 {/* FAQ */}
-                <section className="py-16 bg-white">
+                <section className="py-16 bg-ink border-t border-white/5">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto">
-                            <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
-                                Questions Fréquentes
+                            <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
+                                Questions <span className="text-sauge">Fréquentes</span>
                             </h2>
-                            <div className="space-y-6">
+                            <div className="space-y-3">
                                 {FAQ_ITEMS.map((item, index) => (
-                                    <div key={index} className="bg-gray-50 rounded-xl border border-line p-6">
-                                        <h3 className="font-bold text-ink mb-3">{item.question}</h3>
-                                        <p className="text-soft leading-relaxed">{item.answer}</p>
-                                    </div>
+                                    <details
+                                        key={index}
+                                        className="group bg-white/5 rounded-xl border border-white/10 overflow-hidden"
+                                    >
+                                        <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                                            <span className="font-medium text-white pr-4 text-sm">{item.question}</span>
+                                            <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-open:rotate-180 transition-transform">
+                                                <svg className="w-3 h-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                </svg>
+                                            </span>
+                                        </summary>
+                                        <div className="px-5 pb-5">
+                                            <p className="text-white/60 text-sm leading-relaxed">{item.answer}</p>
+                                        </div>
+                                    </details>
                                 ))}
                             </div>
                         </div>
@@ -253,20 +256,20 @@ export default function SimulateurLocalPage() {
                 </section>
 
                 {/* CTA */}
-                <section className="py-16 bg-fond-sombre">
+                <section className="py-16 bg-fond-sombre border-t border-white/5">
                     <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-2xl font-heading font-bold text-white mb-4">
-                            Besoin de dominer votre marché local ?
+                        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
+                            Besoin de dominer votre <span className="text-sauge">marché local</span> ?
                         </h2>
-                        <p className="text-texte-moyen mb-8 max-w-xl mx-auto">
+                        <p className="text-white/50 mb-8 max-w-xl mx-auto">
                             Cet outil vous montre la situation. Pour une stratégie SEO local complète
                             (Google Business, citations, backlinks locaux), je vous accompagne.
                         </p>
                         <Link
                             href="/seo-local"
-                            className="inline-flex items-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-bold hover:bg-orange-600 transition-colors"
+                            className="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-all"
                         >
-                            Découvrir l'offre SEO Local
+                            Découvrir l&apos;offre SEO Local
                             <ArrowRight className="w-5 h-5" />
                         </Link>
                     </div>
