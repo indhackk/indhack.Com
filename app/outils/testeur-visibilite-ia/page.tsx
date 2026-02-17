@@ -139,45 +139,52 @@ export default function TesteurVisibiliteIAPage() {
                 }}
             />
 
-            <main className="min-h-screen bg-white">
-                {/* Hero + Tool Section - Compact */}
-                <section className="pt-28 pb-16 bg-gray-50">
-                    <div className="container mx-auto px-4">
+            <main className="min-h-screen bg-ink">
+                {/* Hero + Tool Section */}
+                <section className="pt-28 pb-16 relative overflow-hidden">
+                    <div className="absolute top-20 left-10 w-[400px] h-[400px] bg-sauge/10 rounded-full blur-[150px] pointer-events-none" />
+                    <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-sauge/5 rounded-full blur-[180px] pointer-events-none" />
+
+                    <div className="container mx-auto px-4 relative z-10">
                         {/* Breadcrumb */}
-                        <nav className="mb-6" aria-label="Fil d'Ariane">
-                            <ol className="flex items-center gap-2 text-sm text-soft">
-                                <li><Link href="/" className="hover:text-sauge transition-colors">Accueil</Link></li>
-                                <li className="text-gray-300">/</li>
-                                <li><Link href="/outils" className="hover:text-sauge transition-colors">Outils SEO</Link></li>
-                                <li className="text-gray-300">/</li>
-                                <li className="text-ink font-medium">Testeur Visibilité IA</li>
+                        <nav className="mb-8" aria-label="Fil d'Ariane">
+                            <ol className="flex items-center gap-2 text-sm text-white/40">
+                                <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
+                                <li className="text-white/20">/</li>
+                                <li><Link href="/outils" className="hover:text-white transition-colors">Outils SEO</Link></li>
+                                <li className="text-white/20">/</li>
+                                <li className="text-white font-medium">Testeur Visibilité IA</li>
                             </ol>
                         </nav>
 
                         {/* Header - Compact */}
                         <div className="max-w-3xl mx-auto text-center mb-10">
-                            <h1 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-3">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/20 border border-sauge/30 rounded-full text-sauge text-sm font-bold mb-4">
+                                <Bot className="w-4 h-4" />
+                                <span className="uppercase tracking-wider text-xs">Le seul outil français gratuit</span>
+                            </div>
+                            <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
                                 Testeur Visibilité <span className="text-sauge">IA</span>
                             </h1>
-                            <p className="text-soft text-lg">
+                            <p className="text-white/60 text-lg">
                                 Votre site est-il visible par ChatGPT, Perplexity et Claude ?
                             </p>
                         </div>
 
-                        {/* Tool - Central */}
+                        {/* Tool */}
                         <TesteurVisibiliteIA />
                     </div>
                 </section>
 
-                {/* How It Works - Compact */}
-                <section className="py-16 bg-white border-t border-gray-100">
+                {/* How It Works */}
+                <section className="py-16 bg-fond-sombre border-t border-white/5">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-2xl font-heading font-bold text-ink text-center mb-10">
-                                Comment fonctionne le <span className="text-sauge">testeur</span>
+                            <h2 className="text-2xl font-heading font-bold text-white text-center mb-10">
+                                4 catégories de <span className="text-sauge">signaux</span> analysés
                             </h2>
 
-                            <div className="grid md:grid-cols-4 gap-6">
+                            <div className="grid md:grid-cols-4 gap-4">
                                 {[
                                     { icon: Shield, title: "Accessibilité", desc: "Crawlers IA autorisés, sitemap, temps de réponse", points: "/30" },
                                     { icon: Code2, title: "Sémantique", desc: "Schema JSON-LD, FAQ structurées, hiérarchie", points: "/30" },
@@ -186,12 +193,12 @@ export default function TesteurVisibiliteIAPage() {
                                 ].map((cat) => {
                                     const Icon = cat.icon;
                                     return (
-                                        <div key={cat.title} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
-                                            <div className="w-10 h-10 rounded-lg bg-sauge/10 flex items-center justify-center mb-3">
+                                        <div key={cat.title} className="bg-white/5 rounded-xl p-5 border border-white/10">
+                                            <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center mb-3">
                                                 <Icon className="w-5 h-5 text-sauge" />
                                             </div>
-                                            <h3 className="font-bold text-ink text-sm mb-1">{cat.title}</h3>
-                                            <p className="text-xs text-soft mb-2">{cat.desc}</p>
+                                            <h3 className="font-bold text-white text-sm mb-1">{cat.title}</h3>
+                                            <p className="text-xs text-white/50 mb-2">{cat.desc}</p>
                                             <span className="text-xs font-bold text-sauge">{cat.points} pts</span>
                                         </div>
                                     );
@@ -202,25 +209,25 @@ export default function TesteurVisibiliteIAPage() {
                 </section>
 
                 {/* Related Tools */}
-                <section className="py-16 bg-gray-50 border-t border-gray-100">
+                <section className="py-16 bg-ink border-t border-white/5">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-2xl font-heading font-bold text-ink text-center mb-8">
+                        <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
                             Outils <span className="text-sauge">complémentaires</span>
                         </h2>
-                        <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                        <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
                             {RELATED_TOOLS.map((tool) => {
                                 const Icon = tool.icon;
                                 return (
                                     <Link
                                         key={tool.href}
                                         href={tool.href}
-                                        className="group bg-white rounded-xl p-5 border border-gray-100 hover:border-sauge/30 hover:shadow-lg transition-all"
+                                        className="group bg-white/5 rounded-xl p-5 border border-white/10 hover:border-sauge/30 hover:bg-white/10 transition-all"
                                     >
-                                        <div className="w-10 h-10 rounded-lg bg-sauge/10 flex items-center justify-center mb-3 group-hover:bg-sauge/20 transition-colors">
+                                        <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center mb-3 group-hover:bg-sauge/30 transition-colors">
                                             <Icon className="w-5 h-5 text-sauge" />
                                         </div>
-                                        <h3 className="font-bold text-ink mb-1 group-hover:text-sauge transition-colors">{tool.title}</h3>
-                                        <p className="text-sm text-soft">{tool.description}</p>
+                                        <h3 className="font-bold text-white mb-1 group-hover:text-sauge transition-colors">{tool.title}</h3>
+                                        <p className="text-sm text-white/50">{tool.description}</p>
                                     </Link>
                                 );
                             })}
@@ -229,11 +236,11 @@ export default function TesteurVisibiliteIAPage() {
                 </section>
 
                 {/* Internal Links */}
-                <section className="py-12 bg-white border-t border-gray-100">
+                <section className="py-12 bg-fond-sombre border-t border-white/5">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
                             <div>
-                                <h3 className="font-bold text-ink mb-4">Articles SEO & GEO</h3>
+                                <h3 className="font-bold text-white mb-4">Articles SEO & GEO</h3>
                                 <ul className="space-y-2">
                                     {[
                                         { href: "/blog/geo-comment-apparaitre-chatgpt-2026", text: "GEO : Comment apparaître dans ChatGPT en 2026" },
@@ -241,7 +248,7 @@ export default function TesteurVisibiliteIAPage() {
                                         { href: "/blog/importance-audit-seo", text: "L'audit SEO : point de départ de votre croissance" },
                                     ].map((link) => (
                                         <li key={link.href}>
-                                            <Link href={link.href} className="text-soft hover:text-sauge transition-colors flex items-center gap-2 text-sm">
+                                            <Link href={link.href} className="text-white/50 hover:text-sauge transition-colors flex items-center gap-2 text-sm">
                                                 <ArrowRight className="w-3 h-3 text-sauge" />
                                                 {link.text}
                                             </Link>
@@ -250,7 +257,7 @@ export default function TesteurVisibiliteIAPage() {
                                 </ul>
                             </div>
                             <div>
-                                <h3 className="font-bold text-ink mb-4">Consultant SEO par ville</h3>
+                                <h3 className="font-bold text-white mb-4">Consultant SEO par ville</h3>
                                 <ul className="space-y-2">
                                     {[
                                         { href: "/consultant-seo-nice", text: "Consultant SEO Nice" },
@@ -259,7 +266,7 @@ export default function TesteurVisibiliteIAPage() {
                                         { href: "/consultant-seo-sophia-antipolis", text: "Consultant SEO Sophia Antipolis" },
                                     ].map((link) => (
                                         <li key={link.href}>
-                                            <Link href={link.href} className="text-soft hover:text-sauge transition-colors flex items-center gap-2 text-sm">
+                                            <Link href={link.href} className="text-white/50 hover:text-sauge transition-colors flex items-center gap-2 text-sm">
                                                 <MapPin className="w-3 h-3 text-sauge" />
                                                 {link.text}
                                             </Link>
@@ -272,28 +279,28 @@ export default function TesteurVisibiliteIAPage() {
                 </section>
 
                 {/* FAQ */}
-                <section className="py-16 bg-gray-50 border-t border-gray-100">
+                <section className="py-16 bg-ink border-t border-white/5">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto">
-                            <h2 className="text-2xl font-heading font-bold text-ink text-center mb-8">
+                            <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
                                 Questions <span className="text-sauge">Fréquentes</span>
                             </h2>
                             <div className="space-y-3">
                                 {FAQ_ITEMS.map((item, index) => (
                                     <details
                                         key={index}
-                                        className="group bg-white rounded-xl border border-gray-100 overflow-hidden"
+                                        className="group bg-white/5 rounded-xl border border-white/10 overflow-hidden"
                                     >
                                         <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
-                                            <span className="font-medium text-ink pr-4 text-sm">{item.question}</span>
-                                            <span className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0 group-open:rotate-180 transition-transform">
-                                                <svg className="w-3 h-3 text-soft" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <span className="font-medium text-white pr-4 text-sm">{item.question}</span>
+                                            <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-open:rotate-180 transition-transform">
+                                                <svg className="w-3 h-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                                 </svg>
                                             </span>
                                         </summary>
                                         <div className="px-5 pb-5">
-                                            <p className="text-soft text-sm leading-relaxed">{item.answer}</p>
+                                            <p className="text-white/60 text-sm leading-relaxed">{item.answer}</p>
                                         </div>
                                     </details>
                                 ))}
@@ -303,12 +310,12 @@ export default function TesteurVisibiliteIAPage() {
                 </section>
 
                 {/* CTA */}
-                <section className="py-16 bg-ink">
+                <section className="py-16 bg-fond-sombre border-t border-white/5">
                     <div className="container mx-auto px-4 text-center">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
                             Besoin d&apos;une stratégie <span className="text-sauge">GEO</span> complète ?
                         </h2>
-                        <p className="text-white/60 mb-8 max-w-xl mx-auto">
+                        <p className="text-white/50 mb-8 max-w-xl mx-auto">
                             Je vous accompagne pour apparaître dans les réponses de ChatGPT et Perplexity.
                         </p>
                         <Link
