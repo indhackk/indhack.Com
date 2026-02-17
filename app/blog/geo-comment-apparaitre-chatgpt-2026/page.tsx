@@ -172,7 +172,7 @@ export default function GEOArticlePage() {
                 ]}
             />
 
-            <main className="pt-8 pb-20 bg-white">
+            <main className="pt-28 pb-20 bg-white">
                 <div className="container mx-auto px-4 max-w-4xl">
                     {/* Header */}
                     <header className="mb-12 animate-in fade-in slide-in-from-bottom-4 duration-1000">

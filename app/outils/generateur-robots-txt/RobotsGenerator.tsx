@@ -286,7 +286,7 @@ export function RobotsGenerator() {
             {/* Right: Preview */}
             <div className="space-y-6">
                 {/* Preview */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden sticky top-24">
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden lg:sticky lg:top-28">
                     <div className="flex items-center justify-between p-4 border-b border-white/10 bg-white/5">
                         <div className="flex items-center gap-2">
                             <div className="flex gap-1.5">
