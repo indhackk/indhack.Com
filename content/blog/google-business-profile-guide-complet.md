@@ -12,11 +12,13 @@ Votre **fiche Google Business Profile** (anciennement Google My Business) est so
 
 > **Analysez votre concurrence locale :** [Simulateur de Visibilité Locale — Qui domine Google dans votre ville ?](/outils/simulateur-visibilite-locale) — Identifiez les opportunités SEO local pour votre métier.
 
-En tant que consultante [SEO local](/seo-local) chez [IndHack](/), je vous livre le guide complet pour **dominer le pack local** dans votre ville.
+En tant que consultante [SEO local](/seo-local), je vous livre le guide complet pour **dominer le pack local** dans votre ville.
 
 ## Qu'est-ce que Google Business Profile ?
 
-Google Business Profile (GBP) est l'outil gratuit de Google qui permet aux entreprises d'apparaître dans :
+Google Business Profile (GBP) est l'outil gratuit qui fait apparaître votre entreprise dans les résultats locaux de Google. 46 % des recherches Google ont une intention locale (source : Google). Si votre fiche est mal optimisée, vous perdez des clients chaque jour.
+
+GBP permet aux entreprises d'apparaître dans :
 
 - **Le pack local** : les 3 résultats avec carte qui apparaissent pour les recherches locales
 - **Google Maps** : quand quelqu'un cherche une entreprise proche
@@ -88,7 +90,7 @@ Les attributs permettent de préciser vos services :
 - Services (sur rendez-vous, devis gratuit...)
 - Spécificités (femme propriétaire, LGBTQ+ friendly...)
 
-**Remplissez tous les attributs pertinents** — ils apparaissent dans votre fiche et aident au référencement.
+**Remplissez tous les attributs pertinents** — ils apparaissent dans votre fiche et aident au référencement. Pour des techniques avancées d'espionnage concurrentiel, découvrez comment [analyser les catégories cachées de vos concurrents](/blog/google-maps-voler-clients-concurrents).
 
 ## Gérer les avis clients
 
@@ -230,14 +232,41 @@ Votre fiche Google Business Profile est un **levier de croissance gratuit** si e
 
 ---
 
-**Besoin d'aide pour votre SEO local ?** Découvrez mon accompagnement [SEO local](/seo-local) ou [contactez-moi](/contact) pour un audit de votre fiche Google Business Profile. [IndHack](/) accompagne les entreprises de Nice, Cannes, Monaco et toute la France.
+## Pour aller plus loin
 
-**À lire aussi :**
-- [SEO Local à Nice : Dominer le marché azuréen](/blog/seo-local-nice)
-- [Pourquoi faire appel à un consultant SEO ?](/blog/pourquoi-consultant-seo)
-- [L'audit SEO : point de départ de votre croissance](/blog/importance-audit-seo)
+- [SEO local à Nice : dominer le marché azuréen](/blog/seo-local-nice) — Stratégie complète pour les entreprises de la Côte d'Azur
+- [Comment voler les clients de vos concurrents sur Google Maps](/blog/google-maps-voler-clients-concurrents) — Techniques avancées d'analyse concurrentielle
+- [Checklist SEO 2026](/blog/checklist-seo-2026) — Les 30 points essentiels pour un SEO performant
+
+---
+
+## Questions fréquentes
+
+### Combien de temps pour créer une fiche Google Business Profile ?
+
+La création prend 10-15 minutes. La vérification par Google prend 5 à 14 jours (carte postale) ou est immédiate (téléphone/email si disponible). Utilisez ce temps pour préparer vos photos et votre description.
+
+### Ma fiche peut-elle être suspendue ?
+
+Oui, si vous violez les règles : nom bourré de mots-clés, adresse fictive, multiple fiches pour une même entreprise. Google peut suspendre sans avertissement. Restez dans les guidelines officielles.
+
+### Comment savoir si ma fiche est bien optimisée ?
+
+Utilisez notre [simulateur de visibilité locale](/outils/simulateur-visibilite-locale) pour voir où vous vous situez face à vos concurrents. Vérifiez aussi que 100 % des champs sont remplis dans votre tableau de bord GBP.
+
+### Les Google Posts ont-ils vraiment un impact ?
+
+Oui. Les fiches actives (posts réguliers, réponses aux avis) sont favorisées par l'algorithme. Un post par semaine minimum montre à Google que votre entreprise est active.
+
+---
+
+**Besoin d'aide pour votre SEO local ?** Découvrez mon accompagnement [SEO local](/seo-local) ou [contactez-moi](/contact) pour un audit de votre fiche Google Business Profile.
 
 **Consultant SEO local par ville :**
 - [Consultant SEO Nice](/consultant-seo-nice) — Côte d'Azur
 - [Consultant SEO Cannes](/consultant-seo-cannes) — Prestige et événementiel
 - [Consultant SEO Antibes](/consultant-seo-antibes) — Port Vauban et commerce local
+
+---
+
+**Tags** : #google-business-profile #seo-local #google-maps #fiche-google #avis-clients #pack-local

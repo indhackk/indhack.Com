@@ -104,6 +104,12 @@ const nextConfig = {
                 destination: '/outils',
                 permanent: true,
             },
+            // Ancien /tools/ → /outils/
+            {
+                source: '/tools/:path*',
+                destination: '/outils/:path*',
+                permanent: true,
+            },
             // ══════════════════════════════════════════════════════════════
             // REDIRECTIONS VILLES SUPPRIMEES → Villes proches
             // ══════════════════════════════════════════════════════════════

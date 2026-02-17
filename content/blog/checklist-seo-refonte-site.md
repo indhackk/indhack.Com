@@ -1,5 +1,5 @@
 ---
-title: "Checklist SEO Refonte de Site : 45 Points à Vérifier [2026]"
+title: "Checklist SEO : 45 points à vérifier pour votre refonte de site"
 description: "La checklist complète pour réussir votre refonte de site sans perdre votre SEO. 45 points avant, pendant et après la migration. Téléchargeable et imprimable."
 date: "2026-02-16"
 category: "Refonte"
@@ -10,13 +10,13 @@ keywords: ["checklist seo refonte site", "checklist refonte site web", "refonte 
 
 Vous planifiez une refonte de site web et vous avez peur de perdre votre référencement ? Cette **checklist SEO complète** va vous guider étape par étape pour migrer sans sacrifier vos positions Google.
 
-En tant que consultante SEO chez [IndHack](/), j'ai accompagné des dizaines de refontes. La différence entre une migration réussie et un désastre SEO tient souvent à une **préparation méthodique**. Cette checklist regroupe les 45 points essentiels à vérifier.
+En tant que consultante SEO, j'ai accompagné des dizaines de refontes. La différence entre une migration réussie et un désastre SEO tient souvent à une **préparation méthodique**. Cette checklist regroupe les 45 points essentiels à vérifier.
 
 > **Complément utile** : Pour comprendre le "pourquoi" derrière chaque point, consultez mon guide détaillé sur [comment refondre son site sans perdre son SEO](/blog/refonte-site-web-sans-perdre-seo).
 
 ## Pourquoi cette checklist est indispensable
 
-Chaque année, des entreprises perdent **50 à 80% de leur trafic organique** après une refonte mal préparée. Les causes sont toujours les mêmes :
+Une refonte mal préparée peut faire perdre jusqu'à 80 % du trafic organique en quelques jours. Chaque année, des entreprises perdent **50 à 80% de leur trafic organique** après une refonte mal préparée. Les causes sont toujours les mêmes :
 
 - Redirections oubliées ou mal configurées
 - Contenu performant supprimé par erreur
@@ -288,4 +288,18 @@ Pour un petit site vitrine, cette checklist peut suffire si vous êtes rigoureux
 
 ---
 
-**Vous planifiez une refonte ?** Je vous accompagne pour migrer sans perdre une position. Découvrez [ma prestation refonte de site web](/refonte-site-web) ou [contactez-moi](/contact) pour un diagnostic gratuit. [IndHack](/) sécurise votre SEO pendant et après la migration.
+---
+
+## Pour aller plus loin
+
+- [Refonte de site : comment ne pas perdre son SEO](/blog/refonte-site-web-sans-perdre-seo) — Guide détaillé de migration SEO-safe
+- [Combien coûte un site web en 2026 ?](/blog/cout-site-web-2026) — Budget pour votre refonte
+- [Comment créer un site visible sur Google](/blog/comment-creer-site-visible-google) — Les fondamentaux du SEO dès la conception
+
+---
+
+**Vous planifiez une refonte ?** Testez d'abord votre site actuel avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit). Puis découvrez [ma prestation refonte de site web](/refonte-site-web) ou [contactez-moi](/contact) pour un diagnostic gratuit.
+
+---
+
+**Tags** : #refonte-site #checklist-seo #migration-seo #redirections-301 #core-web-vitals

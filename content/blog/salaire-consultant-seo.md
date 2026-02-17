@@ -64,7 +64,7 @@ C'est là que les choses deviennent intéressantes. En tant qu'**[expert indépe
 | **Senior** (5+ ans) | 450€ - 700€ |
 | **Expert reconnu** | 600€ - 1 000€ |
 
-Le TJM dépend de votre **positionnement**, votre spécialité et votre capacité à négocier. Un expert en SEO technique pointu facture plus qu'un généraliste. Découvrez mon [diagnostic complet de votre présence digitale](/audit-seo).
+Le TJM dépend de votre **positionnement**, votre spécialité et votre capacité à négocier. Un expert en SEO technique pointu facture plus qu'un généraliste. Testez votre niveau avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit) pour voir si vous détectez les mêmes problèmes qu'un expert.
 
 ### Revenus annuels potentiels en freelance
 
@@ -197,9 +197,32 @@ Le **salaire d'un consultant SEO** varie de 28K€ (junior) à plus de 100K€ (
 
 ---
 
-**À lire aussi :**
-- [Comment devenir consultant SEO ?](/blog/devenir-consultant-seo)
-- [Quelles sont les missions d'un consultant SEO ?](/blog/missions-consultant-seo)
-- [Quelle formation SEO choisir ?](/blog/quelle-formation-seo)
+## Pour aller plus loin
 
-Vous cherchez un [accompagnement professionnel en visibilité](/consultant-seo) pour votre projet ? [IndHack](/) accompagne les entreprises de Nice, Marseille, Lyon, Paris et de toute la France. [Contactez-moi](/contact) pour un audit gratuit.
+- [Comment devenir consultant SEO ?](/blog/devenir-consultant-seo) — Le parcours complet pour se lancer
+- [Quelles sont les missions d'un consultant SEO ?](/blog/missions-consultant-seo) — Ce qu'un expert fait concrètement
+- [Quelle formation SEO choisir ?](/blog/quelle-formation-seo) — Comparer les parcours disponibles
+
+---
+
+## Questions fréquentes
+
+### Le freelance gagne-t-il plus qu'un salarié SEO ?
+
+Potentiellement oui. Un freelance senior avec un bon taux d'occupation peut dépasser 100K€/an, contre 70-80K€ max pour un salarié (hors Head of). Mais le freelance assume plus de risques et doit gérer la prospection, l'administratif et les périodes creuses.
+
+### Comment négocier une augmentation en SEO ?
+
+Préparez des preuves de résultats : positions gagnées, trafic augmenté, CA généré. Comparez votre salaire aux grilles du marché (cet article). Demandez lors de l'entretien annuel ou après un succès notable. Si l'augmentation est refusée, envisagez de changer d'employeur.
+
+### Quelles spécialisations SEO paient le mieux ?
+
+Le SEO technique (+10-15%), le SEO international (+10-15%) et le SEO data/IA (+15-20%) sont les spécialisations les mieux rémunérées. Elles demandent des compétences plus rares : développement, langues, ou data science.
+
+---
+
+Vous cherchez un [accompagnement professionnel en visibilité](/consultant-seo) pour votre projet ? [Contactez-moi](/contact) pour un audit gratuit.
+
+---
+
+**Tags** : #salaire-seo #consultant-seo #remuneration #tjm-seo #carriere-seo

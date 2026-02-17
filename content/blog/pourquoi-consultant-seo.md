@@ -32,7 +32,7 @@ Un **consultant SEO professionnel** va droit au but. Il sait ce qui fonctionne, 
 
 J'ai vu des sites perdre **80% de leur trafic** à cause d'une mauvaise migration. Des entreprises pénalisées par Google pour du **contenu dupliqué**. Des mois de travail anéantis par une stratégie de **netlinking toxique**.
 
-Un consultant SEO vous protège de ces erreurs. Il connaît les pièges et sait les éviter. C'est particulièrement critique lors d'une [refonte de site web](/blog/refonte-site-web-sans-perdre-seo). Chez [IndHack](/), j'ai accompagné des entreprises de Nice, Marseille, Lyon et Paris dans ce type de transitions critiques.
+Un consultant SEO vous protège de ces erreurs. Il connaît les pièges et sait les éviter. C'est particulièrement critique lors d'une [refonte de site web](/blog/refonte-site-web-sans-perdre-seo). J'ai accompagné des entreprises de Nice, Marseille, Lyon et Paris dans ce type de transitions critiques.
 
 ## Avoir une vision stratégique
 
@@ -142,19 +142,39 @@ Le meilleur moment pour investir dans le SEO, c'était il y a 5 ans. Le deuxièm
 
 ---
 
-Prêt à transformer votre visibilité ? [Contactez-moi](/contact) pour un premier échange gratuit.
+## Pour aller plus loin
 
-**À lire aussi :**
 - [Les missions complètes d'un consultant SEO](/blog/missions-consultant-seo) — Ce qu'un expert fait concrètement
-- [Pourquoi l'audit SEO est le point de départ de votre croissance](/blog/importance-audit-seo)
-- [SEO local : dominer le marché de votre ville](/blog/seo-local-nice)
+- [Quel salaire pour un consultant SEO ?](/blog/salaire-consultant-seo) — Grilles de rémunération du métier
+- [Comment devenir consultant SEO ?](/blog/devenir-consultant-seo) — Le parcours pour se lancer
+
+---
+
+## Questions fréquentes
+
+### Un consultant SEO peut-il garantir la première position ?
+
+Non, et méfiez-vous de ceux qui promettent. Google seul décide du classement. Un bon consultant garantit une méthodologie rigoureuse, de la transparence et des progrès mesurables, pas une position spécifique.
+
+### Faut-il continuer le SEO une fois bien positionné ?
+
+Oui. Le SEO est une course continue. Vos concurrents travaillent aussi. Sans maintenance, vos positions vont progressivement s'éroder. Un accompagnement allégé (quelques heures/mois) suffit généralement pour maintenir les acquis.
+
+### SEO ou SEA, que choisir ?
+
+Les deux sont complémentaires. Le SEA (Google Ads) donne des résultats immédiats mais s'arrête dès que vous stoppez le budget. Le SEO prend plus de temps mais génère un trafic "gratuit" durable. L'idéal est de démarrer avec les deux, puis réduire le SEA quand le SEO porte ses fruits.
+
+---
+
+Prêt à transformer votre visibilité ? [Contactez-moi](/contact) pour un premier échange gratuit.
 
 **Consultante SEO dans votre région :**
 - [Consultant SEO Nice](/consultant-seo-nice) — Côte d'Azur, Alpes-Maritimes
 - [Consultant SEO Cannes](/consultant-seo-cannes) — Luxe, immobilier, événementiel
-- [Consultant SEO Antibes](/consultant-seo-antibes) — Yachting Port Vauban, commerce local
 - [Consultant SEO Sophia Antipolis](/consultant-seo-sophia-antipolis) — Tech, startups, SaaS
 - [Consultant SEO Lyon](/consultant-seo-lyon) — Rhône-Alpes
 - [Consultant SEO Paris](/consultant-seo-paris) — Île-de-France
-- [Consultant SEO Marseille](/consultant-seo-marseille) — Bouches-du-Rhône
-- [Consultant SEO Bordeaux](/consultant-seo-bordeaux) — Nouvelle-Aquitaine
+
+---
+
+**Tags** : #consultant-seo #pourquoi-seo #investissement-seo #roi-seo #expert-referencement

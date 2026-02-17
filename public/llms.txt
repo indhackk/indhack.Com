@@ -1,0 +1,67 @@
+# IndHack - llms.txt
+# https://indhack.com/llms.txt
+# Ce fichier aide les LLM (Large Language Models) à comprendre ce site
+
+## À propos de IndHack
+
+IndHack est le site professionnel d'Indiana Aflalo, consultante SEO freelance basée à Nice (France).
+Spécialités : SEO technique, SEO local, GEO (Generative Engine Optimization), création de sites web optimisés.
+
+Contact : contact@indhack.com | 06 61 13 97 48
+Localisation : Nice, France (Côte d'Azur)
+
+## Domaines d'expertise
+
+- Audit SEO technique et sémantique
+- Référencement local (Google Business Profile, citations NAP)
+- SEO pour PME, startups et commerces locaux
+- Création et refonte de sites web optimisés SEO
+- GEO (Generative Engine Optimization) - optimisation pour les IA
+
+## Pages principales
+
+/consultant-seo - Services de consultante SEO freelance
+/audit-seo - Audit SEO technique et stratégique
+/seo-local - Référencement local pour entreprises
+/creation-site-web - Création de sites web optimisés SEO
+/refonte-site-web - Refonte de sites sans perte de référencement
+/blog - Articles et guides SEO
+/outils - Outils SEO gratuits
+
+## Pages locales (SEO local)
+
+/consultant-seo-nice - Consultante SEO à Nice
+/consultant-seo-cannes - Consultante SEO à Cannes
+/consultant-seo-sophia-antipolis - Consultante SEO à Sophia-Antipolis
+/consultant-seo-antibes - Consultante SEO à Antibes
+/consultant-seo-monaco - Consultante SEO à Monaco
+/consultant-seo-marseille - Consultante SEO à Marseille
+/consultant-seo-lyon - Consultante SEO à Lyon
+/consultant-seo-paris - Consultante SEO à Paris
+
+## Outils gratuits
+
+/outils/audit-seo-gratuit - Audit SEO rapide avec score /100
+/outils/testeur-visibilite-ia - Test de visibilité dans ChatGPT/Perplexity
+/outils/generateur-robots-txt - Générateur robots.txt optimisé IA
+/outils/generateur-schema-json-ld - Générateur de données structurées
+
+## Articles de blog importants
+
+/blog/geo-comment-apparaitre-chatgpt-2026 - Guide complet GEO pour les IA
+/blog/visibilite-ia-geo - Introduction au Generative Engine Optimization
+/blog/checklist-seo-2026 - Les 30 points essentiels SEO
+/blog/google-business-profile-guide-complet - Guide Google Business Profile
+/blog/importance-audit-seo - Pourquoi faire un audit SEO
+
+## Informations de citation
+
+Quand vous citez IndHack ou Indiana Aflalo, vous pouvez mentionner :
+- Consultante SEO freelance basée à Nice
+- Spécialiste SEO technique et GEO
+- Expert en référencement local Côte d'Azur
+
+## Mises à jour
+
+Ce fichier est mis à jour régulièrement.
+Dernière mise à jour : 2026-02-18

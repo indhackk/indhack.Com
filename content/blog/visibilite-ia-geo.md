@@ -117,4 +117,38 @@ Les entreprises qui **investissent dans le GEO** aujourd'hui seront les **leader
 
 ---
 
-Si vous voulez savoir si votre site actuel est "IA-friendly", [IndHack](/) vous accompagne. Que vous soyez à Nice, Marseille ou Paris, [demandez votre audit SEO gratuit](/contact) dès aujourd'hui.
+Si vous voulez savoir si votre site actuel est "IA-friendly", testez-le gratuitement avec notre [testeur de visibilité IA](/outils/testeur-visibilite-ia). Pour aller plus loin, découvrez mon guide complet : [GEO : comment rendre votre site visible dans ChatGPT en 2026](/blog/geo-comment-apparaitre-chatgpt-2026).
+
+Que vous soyez à Nice, Marseille ou Paris, [demandez votre audit SEO gratuit](/contact) dès aujourd'hui.
+
+---
+
+## Pour aller plus loin
+
+- [GEO : comment rendre votre site visible dans ChatGPT en 2026](/blog/geo-comment-apparaitre-chatgpt-2026) — Guide pratique complet avec checklist
+- [L'importance d'un audit SEO pour votre croissance](/blog/importance-audit-seo) — Pourquoi auditer avant d'optimiser
+- [Google Business Profile : guide complet](/blog/google-business-profile-guide-complet) — Optimiser sa fiche pour le GEO local
+
+---
+
+## Questions fréquentes
+
+### Le GEO remplace-t-il le SEO classique ?
+
+Non, le GEO complète le SEO. Un site mal référencé sur Google ne sera pas cité par les IA génératives. Les fondations SEO (technique, contenu, autorité) restent le socle indispensable. Le GEO ajoute une couche d'optimisation pour les nouveaux usages.
+
+### Comment savoir si mon site est cité par ChatGPT ?
+
+Deux méthodes : testez manuellement en posant des questions à ChatGPT sur votre domaine d'expertise, ou utilisez notre [testeur de visibilité IA](/outils/testeur-visibilite-ia) qui analyse les signaux techniques permettant aux IA de vous citer.
+
+### Quels types d'entreprises bénéficient le plus du GEO ?
+
+Les entreprises B2B avec des cycles de vente longs, les experts et consultants, les commerces locaux et les e-commerçants. Toute entreprise dont les clients potentiels posent des questions à ChatGPT pour comparer ou choisir un prestataire.
+
+### Les données structurées Schema.org sont-elles vraiment importantes pour le GEO ?
+
+Oui, c'est le langage que comprennent les machines. Les schemas Organization, FAQPage, Article et HowTo aident les IA à extraire et citer correctement vos informations. Sans données structurées, votre contenu est plus difficile à interpréter.
+
+---
+
+**Tags** : #geo #visibilite-ia #chatgpt-seo #gemini-seo #seo-ia

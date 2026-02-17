@@ -10,11 +10,11 @@ keywords: ["refonte site web SEO", "migration SEO", "redirections 301", "perdre 
 
 Une refonte de site web mal préparée peut **anéantir des années de travail SEO** en quelques jours. J'ai vu des entreprises perdre 80% de leur trafic organique du jour au lendemain à cause d'erreurs évitables.
 
-En tant que consultante SEO chez [IndHack](/), je vous livre la **méthode complète** pour réussir votre refonte sans sacrifier vos positions Google.
+En tant que consultante SEO, je vous livre la **méthode complète** pour réussir votre refonte sans sacrifier vos positions Google. Avant de commencer, testez votre site actuel avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit).
 
 ## Pourquoi les refontes SEO échouent ?
 
-La plupart des agences web se concentrent sur le design et les fonctionnalités. Le SEO est traité **après coup**, quand le site est déjà en ligne. Résultat :
+Une refonte mal préparée peut faire perdre 50 à 80 % du trafic organique en quelques jours (source : études de cas SEMrush). La plupart des agences web se concentrent sur le design et les fonctionnalités. Le SEO est traité **après coup**, quand le site est déjà en ligne. Résultat :
 
 | Erreur | Conséquence |
 |--------|-------------|
@@ -231,10 +231,29 @@ Une refonte réussie côté SEO repose sur :
 
 ---
 
-**À lire aussi :**
-- [Checklist SEO Refonte : 45 points à vérifier](/blog/checklist-seo-refonte-site) — La liste complète avant, pendant et après
-- [Contenu d'un rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo) — Ce que doit contenir un audit avant refonte
-- [5 erreurs SEO qui coûtent 10 000€/an](/blog/audit-seo-erreurs-qui-coutent-cher) — Les pièges à éviter
+## Pour aller plus loin
+
+- [Checklist SEO : 45 points à vérifier pour votre refonte](/blog/checklist-seo-refonte-site) — La liste complète avant, pendant et après
+- [Combien coûte un site web en 2026 ?](/blog/cout-site-web-2026) — Budget pour votre refonte
+- [Comment créer un site visible sur Google](/blog/comment-creer-site-visible-google) — Les fondamentaux si vous repartez de zéro
+
+---
+
+## Questions fréquentes
+
+### Combien de temps dure une refonte SEO-safe ?
+
+Comptez 2 à 4 semaines pour l'audit préalable et la préparation, puis le temps de développement (variable selon la taille du site), et 4 à 6 semaines de surveillance post-lancement. Une refonte bien préparée prend plus de temps, mais évite des mois de récupération SEO.
+
+### Faut-il un consultant SEO pour une refonte ?
+
+Pour un petit site vitrine (moins de 20 pages), cette checklist peut suffire si vous êtes rigoureux. Pour un site e-commerce ou un blog avec beaucoup de contenu, l'accompagnement d'un expert réduit drastiquement les risques.
+
+### Que faire si j'ai déjà perdu du trafic ?
+
+Agissez immédiatement : vérifiez les erreurs 404 dans Search Console, contrôlez robots.txt, testez les redirections. Chaque jour compte. Plus vous intervenez vite, plus la récupération sera rapide.
+
+---
 
 **Vous planifiez une refonte ?** Je vous accompagne pour migrer sans perdre une position. Découvrez ma [prestation refonte de site web](/refonte-site-web) ou [contactez-moi](/contact) pour en discuter.
 
@@ -242,3 +261,7 @@ Une refonte réussie côté SEO repose sur :
 - [Consultant SEO Sophia Antipolis](/consultant-seo-sophia-antipolis) — Refontes tech & SaaS
 - [Consultant SEO Cannes](/consultant-seo-cannes) — Refontes luxe & prestige
 - [Consultant SEO Nice](/consultant-seo-nice) — Refontes tous secteurs
+
+---
+
+**Tags** : #refonte-site #migration-seo #redirections-301 #perte-trafic #seo-technique

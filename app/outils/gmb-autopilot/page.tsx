@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         title: "GMB AutoPilot - Réponses Automatiques aux Avis Google",
         description: "Automatisez les réponses à vos avis Google avec l'IA. Boostez votre SEO local.",
         type: "website",
-        url: "https://indhack.com/tools/gmb-autopilot"
+        url: "https://indhack.com/outils/gmb-autopilot"
     }
 };
 

@@ -12,7 +12,7 @@ SEO ou SEA ? Référencement naturel ou publicité Google Ads ? C'est LA questio
 
 > **Nouveau en 2026 :** L'équation change avec l'IA. Le SEO inclut désormais le **GEO** (visibilité sur ChatGPT/Perplexity), tandis que le SEA reste limité à Google. [Testez votre visibilité IA gratuitement →](/outils/testeur-visibilite-ia)
 
-En tant que consultante SEO chez [IndHack](/), je vous explique les **vraies différences** et comment choisir selon votre situation.
+En tant que [consultante SEO freelance](/consultant-seo-freelance), je vous explique les **vraies différences** et comment choisir selon votre situation.
 
 ## SEO et SEA : définitions
 
@@ -163,4 +163,36 @@ La plupart des entreprises devraient **commencer les deux en parallèle**, avec 
 
 ---
 
-**Besoin d'aide pour définir votre stratégie ?** Découvrez mon approche du [référencement naturel](/referencement-naturel) ou [contactez-moi](/contact) pour un diagnostic gratuit. [IndHack](/) vous accompagne dans votre stratégie d'acquisition digitale.
+**Besoin d'aide pour définir votre stratégie ?** Découvrez mon approche du [référencement naturel](/referencement-naturel) ou [contactez-moi](/contact) pour un diagnostic gratuit.
+
+---
+
+## Pour aller plus loin
+
+- [L'importance d'un audit SEO pour votre croissance](/blog/importance-audit-seo) — Pourquoi commencer par un diagnostic
+- [Checklist SEO 2026 : les 30 points essentiels](/blog/checklist-seo-2026) — Guide complet pour optimiser votre site
+- [GEO : comment être cité par ChatGPT et Gemini](/blog/visibilite-ia-geo) — Le nouveau terrain de la visibilité
+
+---
+
+## Questions fréquentes
+
+### Le SEO est-il vraiment gratuit ?
+
+Non, le SEO n'est pas gratuit. Il demande un investissement en temps (création de contenu, optimisations) ou en argent (consultant, agence). La différence avec le SEA : le SEO construit un actif durable, alors que le SEA est une location de visibilité qui s'arrête dès que vous coupez le budget.
+
+### Combien de temps avant de voir des résultats en SEO ?
+
+Comptez 3 à 6 mois pour les premiers résultats visibles (positions, trafic). Les résultats significatifs arrivent généralement entre 6 et 12 mois. Le SEO est un investissement moyen terme qui s'apprécie avec le temps.
+
+### Peut-on faire du SEA sans faire de SEO ?
+
+Techniquement oui, mais ce n'est pas recommandé. Un site non optimisé (lent, mal structuré) aura un Quality Score faible sur Google Ads, ce qui augmente vos coûts par clic. De plus, vous manquez l'opportunité de capitaliser sur le trafic organique gratuit.
+
+### Le SEA impacte-t-il le référencement naturel ?
+
+Non directement. Google affirme que les dépenses publicitaires n'influencent pas les positions organiques. Cependant, le SEA génère des données précieuses (mots-clés qui convertissent) pour optimiser votre stratégie SEO.
+
+---
+
+**Tags** : #seo-vs-sea #referencement-naturel #google-ads #strategie-acquisition #seo-sea-comparatif

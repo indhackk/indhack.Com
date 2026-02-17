@@ -483,8 +483,12 @@
     "https://indhack.com/blog/pourquoi-votre-site-est-lent-performance-web-2026": {
       "lastIndexed": "2026-02-17T22:36:27.300Z",
       "success": true
+    },
+    "https://indhack.com/outils/gmb-autopilot": {
+      "lastIndexed": "2026-02-17T23:47:35.325Z",
+      "success": true
     }
   },
-  "dailyCount": 2,
-  "lastReset": "Tue Feb 17 2026"
+  "dailyCount": 1,
+  "lastReset": "Wed Feb 18 2026"
 }

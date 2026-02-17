@@ -10,11 +10,11 @@ keywords: ["prix site web", "coût site internet", "tarif création site", "devi
 
 "Combien pour un site web ?" — la question que tous mes clients me posent. Et la réponse honnête, c'est : **ça dépend**. Mais je vais vous donner les vraies fourchettes de prix pour 2026, sans langue de bois.
 
-En tant que consultante SEO et créatrice de sites chez [IndHack](/), je vois passer des devis allant de 500€ à 50 000€ pour des projets similaires. Voici comment **comprendre les prix** et faire le bon choix.
+En tant que consultante SEO et créatrice de sites, je vois passer des devis allant de 500€ à 50 000€ pour des projets similaires. Voici comment **comprendre les prix** et faire le bon choix.
 
 ## Les fourchettes de prix en 2026
 
-Commençons par les chiffres. Ces tarifs correspondent au marché français pour un travail professionnel :
+Un site vitrine professionnel coûte entre 2 000 € et 8 000 € en 2026 (source : baromètre Sortlist 2025). Commençons par les chiffres. Ces tarifs correspondent au marché français pour un travail professionnel :
 
 | Type de site | Fourchette basse | Fourchette haute |
 |--------------|------------------|------------------|
@@ -100,7 +100,7 @@ Wix, Squarespace, Shopify... **Attention aux faux coûts** :
 | Templates "gratuits" | Limitations SEO |
 | "Facile à utiliser" | 50+ heures d'apprentissage |
 
-Ces solutions conviennent pour tester une idée, pas pour un business sérieux.
+Ces solutions conviennent pour tester une idée, pas pour un business sérieux. Pour comprendre pourquoi la vitesse impacte aussi vos revenus, consultez notre article sur [la performance web et son impact business](/blog/pourquoi-votre-site-est-lent-performance-web-2026).
 
 ## Les coûts cachés à anticiper
 
@@ -172,4 +172,36 @@ Ce qui est inclus dans mes prestations :
 
 ---
 
-**Prêt à investir dans un site qui rapporte ?** Découvrez ma [prestation création de site web](/creation-site-web) ou consultez mon article sur [comment créer un site visible sur Google](/blog/comment-creer-site-visible-google).
+## Pour aller plus loin
+
+- [Comment créer un site visible sur Google](/blog/comment-creer-site-visible-google) — Les étapes pour un site qui génère du trafic
+- [Pourquoi votre site est lent](/blog/pourquoi-votre-site-est-lent-performance-web-2026) — L'impact de la vitesse sur vos conversions
+- [Checklist SEO refonte de site](/blog/checklist-seo-refonte-site) — 45 points à vérifier si vous refaites votre site
+
+---
+
+## Questions fréquentes
+
+### Un site à 500 € peut-il être efficace ?
+
+Non. Un site à 500 € est généralement un template WordPress modifié en 2 heures. Il ne sera pas optimisé pour le SEO, aura des performances médiocres, et vous coûtera plus cher en corrections qu'un site bien fait dès le départ. Utilisez notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit) pour vérifier la qualité d'un site existant.
+
+### Faut-il payer le SEO en plus de la création ?
+
+Non, le SEO doit être inclus dès la conception. Un bon prestataire intègre l'optimisation technique (vitesse, structure, balises) dans le prix de base. La stratégie de contenu peut être facturée séparément, mais les fondations SEO sont non négociables.
+
+### Pourquoi les prix varient-ils autant ?
+
+Les écarts s'expliquent par : le niveau de personnalisation (template vs sur-mesure), les fonctionnalités (formulaire simple vs espace membre), la qualité du code, et l'inclusion ou non du SEO et du contenu. Un devis détaillé permet de comparer.
+
+### Combien prévoir pour la maintenance annuelle ?
+
+Comptez 1 000 € à 3 000 € par an pour un site vitrine (hébergement, mises à jour sécurité, petites modifications). Pour un e-commerce, prévoyez 2 000 € à 5 000 € selon la complexité.
+
+---
+
+**Prêt à investir dans un site qui rapporte ?** Découvrez ma [prestation création de site web](/creation-site-web) ou [contactez-moi](/contact) pour un devis personnalisé.
+
+---
+
+**Tags** : #creation-site-web #prix-site-web #budget-site #devis-site-web #freelance-web

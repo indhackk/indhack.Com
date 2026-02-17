@@ -14,7 +14,7 @@ keywords: ["créer site internet visible Google", "référencement site web", "s
 
 La plupart des entrepreneurs font l'erreur de séparer la création de leur site et leur stratégie **SEO**. Ils pensent d'abord au design, puis "on verra pour Google plus tard". **C'est exactement l'inverse qu'il faut faire.**
 
-Un site construit sans penser à la **[visibilité organique dès la conception](/referencement-naturel)**, c'est comme construire une maison sans fondations. Il faudra tout casser pour recommencer.
+Un site construit sans penser à la **[visibilité organique dès la conception](/referencement-naturel)**, c'est comme construire une maison sans fondations. Il faudra tout casser pour recommencer. Pour vérifier où en est votre site actuel, utilisez notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit).
 
 ### Les erreurs les plus fréquentes
 
@@ -119,7 +119,7 @@ Oubliez les sites à 500€. Un **site réellement optimisé SEO** pour le réf�
 | **Site avec blog SEO** | 3 500€ - 6 000€ |
 | **E-commerce optimisé** | 5 000€ - 15 000€ |
 
-C'est un **investissement**, pas une dépense. Un **site bien référencé** génère des clients **gratuitement** pendant des années.
+C'est un **investissement**, pas une dépense. Un **site bien référencé** génère des clients **gratuitement** pendant des années. Pour plus de détails sur les tarifs, consultez notre article [combien coûte un site web en 2026](/blog/cout-site-web-2026).
 
 ## Ce qu'il faut retenir
 
@@ -131,4 +131,36 @@ Un [diagnostic complet de votre situation](/audit-seo) permet d'identifier préc
 
 ---
 
-Prêt à créer un site qui travaille pour vous 24h/24 ? [IndHack](/) accompagne les entreprises de Nice, Marseille, Lyon et toute la France. [Demandez votre audit gratuit](/contact) et découvrons ensemble votre potentiel de visibilité.
+## Pour aller plus loin
+
+- [Combien coûte un site web en 2026 ?](/blog/cout-site-web-2026) — Guide complet des tarifs de création
+- [Pourquoi votre site est lent](/blog/pourquoi-votre-site-est-lent-performance-web-2026) — L'impact de la vitesse sur vos conversions
+- [Checklist SEO refonte de site](/blog/checklist-seo-refonte-site) — 45 points à vérifier avant de lancer
+
+---
+
+## Questions fréquentes
+
+### Combien de temps pour qu'un site apparaisse sur Google ?
+
+Un nouveau site met 2 à 4 semaines pour être indexé par Google. Pour atteindre la première page sur des requêtes concurrentielles, comptez 3 à 12 mois de travail SEO continu. Un site bien optimisé dès sa création gagne plusieurs mois sur ce délai.
+
+### Vaut-il mieux un site Wix ou un site sur-mesure ?
+
+Pour un projet sérieux, le sur-mesure l'emporte. Wix est limité côté SEO technique (vitesse, structure des URLs, possibilités d'optimisation). Un site Next.js ou WordPress bien configuré offre un contrôle total sur les facteurs de ranking.
+
+### Le référencement coûte-t-il plus cher que la création ?
+
+Non si vous choisissez le bon prestataire. Le SEO technique doit être inclus dans la création. Le budget SEO supplémentaire (contenu, netlinking) dépend de vos objectifs, mais les fondations ne doivent jamais être facturées "en plus".
+
+### Comment savoir si mon prestataire intègre le SEO ?
+
+Posez ces questions : "Quel sera mon score PageSpeed ?", "Comment structurez-vous le maillage interne ?", "Quels schemas JSON-LD intégrez-vous ?". Un prestataire qui ne comprend pas ces termes n'intègre pas le SEO.
+
+---
+
+Prêt à créer un site qui travaille pour vous 24h/24 ? Découvrez ma [prestation création de site web](/creation-site-web) ou [contactez-moi](/contact) pour découvrir votre potentiel de visibilité.
+
+---
+
+**Tags** : #creation-site-web #seo #visibilite-google #referencement-naturel #site-optimise

@@ -12,7 +12,7 @@ Vous envisagez de faire appel à un expert en référencement naturel mais vous 
 
 ## Les 5 piliers du travail d'un consultant SEO
 
-Un **consultant SEO** intervient sur 5 grands domaines pour améliorer votre visibilité sur Google :
+Un [consultant SEO](/consultant-seo) intervient sur 5 grands domaines pour améliorer votre visibilité sur Google :
 
 | Pilier | Mission principale | Impact |
 |--------|-------------------|--------|
@@ -63,7 +63,7 @@ Le **SEO technique**, c'est s'assurer que Google peut crawler, comprendre et ind
 
 Un site lent ou mal structuré sera **pénalisé par Google**. Peu importe la qualité de votre contenu, si les fondations sont bancales, le reste ne tiendra pas.
 
-Les optimisations techniques représentent souvent les **quick wins** les plus rentables : corriger des erreurs peut doubler votre trafic sans créer un seul contenu.
+Les optimisations techniques représentent souvent les **quick wins** les plus rentables : corriger des erreurs peut doubler votre trafic sans créer un seul contenu. Testez votre site gratuitement avec notre [outil d'audit SEO](/outils/audit-seo-gratuit) pour identifier vos problèmes techniques prioritaires.
 
 ## La stratégie de contenu
 
@@ -166,15 +166,37 @@ L'important est de choisir un consultant qui :
 
 ---
 
-**Envie d'aller plus loin ?** Découvrez [pourquoi faire appel à un consultant SEO](/blog/pourquoi-consultant-seo) ou [demandez un diagnostic gratuit](/contact) à [IndHack](/). J'interviens sur Nice, Marseille, Lyon, Paris et dans toute la France.
+## Pour aller plus loin
 
-**À lire aussi :**
-- [Contenu d'un rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo)
-- [L'audit SEO : point de départ de votre croissance](/blog/importance-audit-seo)
-- [Checklist SEO Refonte de Site : 45 points à vérifier](/blog/checklist-seo-refonte-site)
+- [Pourquoi faire appel à un consultant SEO ?](/blog/pourquoi-consultant-seo) — Les 8 raisons de confier votre SEO à un expert
+- [Quel salaire pour un consultant SEO ?](/blog/salaire-consultant-seo) — Grilles de rémunération par niveau
+- [Comment devenir consultant SEO ?](/blog/devenir-consultant-seo) — Le parcours pour se lancer
 
-**Consultant SEO par spécialité et ville :**
+---
+
+## Questions fréquentes
+
+### Combien coûte un consultant SEO par mois ?
+
+Un accompagnement SEO mensuel coûte entre 500 € et 2 500 € selon la taille du site et l'intensité du travail. Un audit ponctuel se situe entre 500 € et 2 000 €. L'important est le retour sur investissement : un consultant qui vous fait gagner 10 clients rentabilise largement ses honoraires.
+
+### Quelle est la différence entre consultant SEO et agence SEO ?
+
+Le consultant travaille en direct avec vous, souvent en solo ou petite équipe. L'agence dispose de plus de ressources mais avec des process plus standardisés. Pour les PME, le consultant offre généralement un meilleur rapport qualité/prix et plus de réactivité.
+
+### Combien de temps dure un accompagnement SEO ?
+
+Un accompagnement SEO efficace dure minimum 6 mois. Les résultats commencent à apparaître vers le 3e mois. Pour des objectifs ambitieux sur des marchés compétitifs, prévoyez 12 à 24 mois de travail continu.
+
+---
+
+**Envie d'aller plus loin ?** [Demandez un diagnostic gratuit](/contact). J'interviens sur Nice, Marseille, Lyon, Paris et dans toute la France.
+
+**Consultant SEO par ville :**
+- [Consultant SEO Nice](/consultant-seo-nice) — Tous secteurs Côte d'Azur
 - [Consultant SEO Sophia Antipolis](/consultant-seo-sophia-antipolis) — Tech, startups, SaaS B2B
 - [Consultant SEO Cannes](/consultant-seo-cannes) — Luxe, immobilier, événementiel
-- [Consultant SEO Antibes](/consultant-seo-antibes) — Yachting, commerce local
-- [Consultant SEO Nice](/consultant-seo-nice) — Tous secteurs Côte d'Azur
+
+---
+
+**Tags** : #consultant-seo #missions-seo #audit-seo #netlinking #strategie-seo
