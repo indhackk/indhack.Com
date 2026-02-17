@@ -283,10 +283,10 @@ export function RobotsGenerator() {
                 </div>
             </div>
 
-            {/* Right: Preview */}
-            <div className="space-y-6">
+            {/* Right: Preview - Sticky container */}
+            <div className="lg:sticky lg:top-28 lg:self-start space-y-6">
                 {/* Preview */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden lg:sticky lg:top-28">
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden">
                     <div className="flex items-center justify-between p-4 border-b border-white/10 bg-white/5">
                         <div className="flex items-center gap-2">
                             <div className="flex gap-1.5">
@@ -313,7 +313,7 @@ export function RobotsGenerator() {
                             </button>
                         </div>
                     </div>
-                    <pre className="p-4 text-sm overflow-x-auto max-h-[500px] font-mono">
+                    <pre className="p-4 text-sm overflow-x-auto overflow-y-auto max-h-[400px] font-mono">
                         <code className="text-white/80">
                             {robotsTxt.split('\n').map((line, i) => (
                                 <div key={i} className="leading-relaxed">
@@ -348,44 +348,26 @@ export function RobotsGenerator() {
                     </pre>
                 </div>
 
-                {/* Instructions */}
-                <div className="bg-sauge/10 rounded-2xl p-6 border border-sauge/20">
-                    <h3 className="font-bold text-white mb-3 flex items-center gap-2">
-                        <Eye className="w-5 h-5 text-sauge" />
+                {/* Instructions - compact */}
+                <div className="bg-sauge/10 rounded-xl p-4 border border-sauge/20">
+                    <h3 className="font-bold text-white text-sm mb-2 flex items-center gap-2">
+                        <Eye className="w-4 h-4 text-sauge" />
                         Comment utiliser ce fichier ?
                     </h3>
-                    <ol className="space-y-2 text-sm text-white/70">
-                        <li className="flex gap-3">
-                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-sauge flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
-                            <span>Téléchargez ou copiez le fichier robots.txt</span>
-                        </li>
-                        <li className="flex gap-3">
-                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-sauge flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
-                            <span>Placez-le à la racine de votre site (ex: example.com/robots.txt)</span>
-                        </li>
-                        <li className="flex gap-3">
-                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-sauge flex items-center justify-center text-xs font-bold flex-shrink-0">3</span>
-                            <span>Vérifiez l'accès : <code className="bg-white/10 px-1.5 py-0.5 rounded text-sauge">votre-site.com/robots.txt</code></span>
-                        </li>
-                        <li className="flex gap-3">
-                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-sauge flex items-center justify-center text-xs font-bold flex-shrink-0">4</span>
-                            <span>Testez dans Google Search Console &gt; robots.txt Tester</span>
-                        </li>
+                    <ol className="space-y-1.5 text-xs text-white/70">
+                        <li>1. Téléchargez ou copiez le fichier</li>
+                        <li>2. Placez-le à la racine de votre site</li>
+                        <li>3. Vérifiez : <code className="bg-white/10 px-1 rounded text-sauge">votresite.com/robots.txt</code></li>
                     </ol>
                 </div>
 
-                {/* Info Box */}
-                <div className="bg-amber-500/10 border border-amber-500/20 rounded-2xl p-6">
-                    <div className="flex gap-3">
-                        <Info className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
-                        <div>
-                            <h4 className="font-bold text-amber-400 mb-2">À savoir</h4>
-                            <p className="text-sm text-white/70">
-                                Le robots.txt est une <strong className="text-white">directive</strong>, pas une obligation. Les bots bien intentionnés le respectent,
-                                mais il ne protège pas contre le scraping malveillant. Pour une vraie protection,
-                                utilisez des solutions techniques (WAF, authentification).
-                            </p>
-                        </div>
+                {/* Info Box - compact */}
+                <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4">
+                    <div className="flex gap-2">
+                        <Info className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                        <p className="text-xs text-white/70">
+                            Le robots.txt est une <strong className="text-white">directive</strong>, pas une protection. Les bots malveillants l&apos;ignorent.
+                        </p>
                     </div>
                 </div>
             </div>
