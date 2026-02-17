@@ -285,6 +285,39 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Performance-optimized fade-in animation (replaces Framer Motion for above-fold) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* Navbar slide down animation (replaces Framer Motion) */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 /* Focus visible pour accessibilité */
 *:focus-visible {
   @apply outline-2 outline-offset-2 outline-sauge;

@@ -1,7 +1,13 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode } from "react";
-import { AuditModal } from "@/components/AuditModal";
+import dynamic from "next/dynamic";
+
+// Lazy load AuditModal - only loaded when user opens it
+const AuditModal = dynamic(() => import("@/components/AuditModal").then(mod => ({ default: mod.AuditModal })), {
+    ssr: false,
+    loading: () => null, // No loading state needed since modal has its own animation
+});
 
 interface ModalContextType {
     openAuditModal: () => void;

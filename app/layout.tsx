@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import dynamic from "next/dynamic";
 import "./globals.css";
 import { ModalProvider } from "@/components/providers/ModalProvider";
 import { ConditionalLayout } from "@/components/ConditionalLayout";
-import { CookieConsent } from "@/components/CookieConsent";
 import { Analytics } from "@vercel/analytics/next";
-
 import Script from "next/script";
+
+// Lazy load CookieConsent (appears after 1.5s delay anyway)
+const CookieConsent = dynamic(() => import("@/components/CookieConsent").then(mod => ({ default: mod.CookieConsent })), {
+    ssr: false,
+});
 
 const spaceGrotesk = Space_Grotesk({
     subsets: ["latin"],

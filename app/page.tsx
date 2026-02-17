@@ -1,15 +1,30 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Hero } from "@/components/Hero";
-import { ServicesSection } from "@/components/ServicesSection";
-import { AboutSection } from "@/components/AboutSection";
-import { FAQ } from "@/components/FAQ";
-import { CTASection } from "@/components/CTASection";
-import { SEOScoreChecker } from "@/components/SEOScoreChecker";
-import { CityCarousel } from "@/components/sections/CityCarousel";
-import { TrustSignals } from "@/components/sections/TrustSignals";
+import { TrustSignalsStatic } from "@/components/sections/TrustSignalsStatic";
 import { HomepageSchemas } from "@/components/seo/JsonLdSchemas";
-import { Search, Bot, Code2, FileCode, ArrowRight, MapPin, BookOpen } from "lucide-react";
+import { Search, ArrowRight, MapPin, BookOpen } from "lucide-react";
+
+// Dynamic imports for below-the-fold components (reduces initial JS bundle)
+const ServicesSection = dynamic(() => import("@/components/ServicesSection").then(mod => ({ default: mod.ServicesSection })), {
+    loading: () => <div className="py-20 bg-white" />,
+});
+const SEOScoreChecker = dynamic(() => import("@/components/SEOScoreChecker").then(mod => ({ default: mod.SEOScoreChecker })), {
+    loading: () => <div className="py-16 bg-ink" />,
+});
+const CityCarousel = dynamic(() => import("@/components/sections/CityCarousel").then(mod => ({ default: mod.CityCarousel })), {
+    loading: () => <div className="py-20 bg-gray-50" />,
+});
+const AboutSection = dynamic(() => import("@/components/AboutSection").then(mod => ({ default: mod.AboutSection })), {
+    loading: () => <div className="py-16 bg-white" />,
+});
+const CTASection = dynamic(() => import("@/components/CTASection").then(mod => ({ default: mod.CTASection })), {
+    loading: () => <div className="py-16 bg-ink" />,
+});
+const FAQ = dynamic(() => import("@/components/FAQ").then(mod => ({ default: mod.FAQ })), {
+    loading: () => <div className="py-14 bg-white" />,
+});
 
 export const metadata: Metadata = {
     title: "Consultante SEO & Experte Référencement Naturel",
@@ -61,7 +76,7 @@ export default function Home() {
 
             <div className="flex flex-col">
                 <Hero />
-                <TrustSignals variant="compact" />
+                <TrustSignalsStatic />
                 <ServicesSection />
                 <SEOScoreChecker />
                 <CityCarousel
