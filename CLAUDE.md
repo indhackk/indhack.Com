@@ -1,185 +1,470 @@
-# CLAUDE.md — IndHack
+# CLAUDE.md — IndHack (indhack.com)
 
-## Projet
+> Ce fichier est la source de vérité pour tout travail sur le site IndHack.
+> Lis-le en entier AVANT de toucher à quoi que ce soit.
 
-IndHack est le site vitrine d'Indiana Aflalo, consultante SEO freelance basée à Nice (06). Le site sert à :
-1. Générer des leads via le référencement naturel (SEO local + informationnel)
-2. Montrer l'expertise technique et stratégique d'Indiana
-3. Convertir les visiteurs en demandes d'audit gratuit / prise de contact
+---
 
-**URL production** : https://indhack.com
-**Stack** : Next.js 14.2 + Vercel
-**Hébergement** : Vercel (auto-deploy depuis Git)
+## 1. Le projet
 
-## Identité
+IndHack est le site vitrine + blog + outils SEO d'Indiana Aflalo, consultante SEO freelance basée à Nice.
+Stack : **Next.js 14+ (App Router)**, Tailwind CSS, déployé sur Vercel.
+Le site génère ~120 pages statiques (SSG) au build.
 
-- **Nom** : IndHack (toujours en camelCase dans les textes marketing — pas INDHACK en full caps, pas Indhack, pas indhack. `indhack` en lowercase uniquement dans le code/URLs)
-- **Fondatrice** : Indiana Aflalo
-- **Titre** : Consultante SEO & Stratégie Digitale
-- **Localisation** : Nice, France (département 06, région PACA / Côte d'Azur)
-- **Téléphone** : 06 61 13 97 48
-- **Email** : contact@indhack.com
-- **Positionnement** : SEO technique + IA (GEO — Generative Engine Optimization) pour PME et commerces locaux du 06 et au-delà
+### Structure des URLs
 
-## Build & Development Commands
-
-```bash
-npm run dev          # Local development server (localhost:3000)
-npm run build        # Production build (always verify after editing)
-npm run lint         # ESLint check
-npm run postbuild    # Auto-generate sitemaps (runs automatically after build)
-git push origin main # Deploy (auto via Vercel)
+```
+/                           → Homepage
+/consultant-seo             → Page mère Expertise
+/audit-seo                  → Service
+/referencement-naturel      → Service
+/seo-local                  → Service (page mère SEO local)
+/creation-site-web          → Service
+/refonte-site-web           → Service
+/creation-boutique-en-ligne → Service
+/consultant-seo-nice        → Page ville (fille de /seo-local)
+/consultant-seo-paris       → Page ville
+/consultant-seo-[ville]     → ~18 pages villes
+/outils                     → Page mère Outils
+/outils/audit-seo-gratuit         → Outil
+/outils/testeur-visibilite-ia     → Outil (GEO)
+/outils/simulateur-visibilite-locale → Outil
+/outils/generateur-robots-txt     → Outil
+/outils/generateur-schema-json-ld → Outil
+/blog                       → Liste articles
+/blog/[slug]                → Articles
+/a-propos                   → À propos
+/contact                    → Contact
+/faq                        → FAQ
+/etudes-de-cas              → Études de cas
+/mentions-legales           → Légal
+/confidentialite            → Légal
+/cgv                        → Légal
 ```
 
-## Architecture Overview
+---
 
-### Tech Stack
-- **Framework**: Next.js 14.2 (App Router, Server/Client Components)
-- **Styling**: Tailwind CSS with custom color palette (sage green theme)
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **CMS**: Keystatic (headless, file-based at `/keystatic`)
-- **3D**: Three.js (BrainCanvas component)
-- **Fonts**: Space Grotesk (headings), Inter (body)
+## 2. Règles typographiques françaises (OBLIGATOIRE)
 
-### Key Patterns
+### Majuscules dans les titres
 
-**Component Architecture**:
-- Server components by default in `page.tsx` files
-- `"use client"` directive at top of interactive components
-- Separate client components (e.g., `ReferencementClient.tsx`) imported by server pages
+En français, contrairement à l'anglais, on ne met PAS de majuscule à chaque mot.
 
-**SEO Structure (Semantic Cocoon)**:
-- **Mère (Mother)**: City hubs → `/consultant-seo-{ville}/`
-- **Fille (Daughter)**: Sub-services → `/consultant-seo-{ville}/audit-technique/`
-- **Petite-fille (Granddaughter)**: Blog posts linking upward with optimized anchors
+**Règle** : majuscule uniquement au premier mot + noms propres.
 
-### Key File Paths
+```
+❌ "Comment Voler Les Clients De Vos Concurrents Sur Google Maps"
+✅ "Comment voler les clients de vos concurrents sur Google Maps"
 
-| Purpose | Path |
-|---------|------|
-| City data (19 cities) | `/lib/cities-data.ts` |
-| Diagnostic professions | `/lib/diagnostic-data.ts` |
-| City hub template | `/components/CityPageTemplateV2.tsx` |
-| Sub-service template | `/components/CityServiceTemplate.tsx` |
-| Route protection | `/middleware.ts` |
+❌ "Le Vrai Coût D'un Site Mal Conçu"
+✅ "Le vrai coût d'un site mal conçu"
 
-## Architecture du site
+❌ "Pourquoi Votre Site Est Lent"
+✅ "Pourquoi votre site est lent"
+```
 
-### Pages locales (SEO local)
-Pattern URL : `/consultant-seo-{ville}`
-Villes couvertes : Nice, Cannes, Antibes, Sophia-Antipolis, Monaco, Marseille, Aix-en-Provence, Montpellier, Grenoble, Lyon, Paris, Bordeaux, Toulouse, Nantes, Lille, Strasbourg, Rennes, et autres.
+Cette règle s'applique à :
+- Tous les H1, H2, H3, H4
+- Les `<title>` et `og:title`
+- Les ancres du sommaire
+- Les titres de cartes dans les sections "Articles complémentaires"
+- Les breadcrumbs
 
-**RÈGLE CRITIQUE** : Chaque page locale DOIT avoir du contenu unique. JAMAIS de template copié-collé avec juste le nom de ville qui change. Chaque page doit mentionner :
-- Les spécificités économiques de la ville (secteurs dominants, entreprises connues)
-- Les quartiers / zones d'activité pertinentes
-- Les villes limitrophes (maillage géographique)
-- Un angle unique (ex: Sophia = startups tech, Cannes = luxe/événementiel, Antibes = tourisme/commerce)
+### Autres règles typo françaises
 
-### Pages services
-- `/audit-seo` — Audit SEO technique
-- `/creation-site-web` — Création de sites
-- `/refonte-site-web` — Refonte SEO-safe
-- `/seo-local` — Référencement local
+- Espace insécable avant : ; ! ? » et après «
+- Guillemets français « » et non "" (dans le contenu visible)
+- Les nombres : espace comme séparateur de milliers (1 000, 10 000)
+- Les pourcentages : 53 % (avec espace)
 
-### Blog
-Pattern URL : `/blog/{slug}`
-Le blog sert à ranker sur des requêtes informationnelles et démontrer l'expertise.
+---
 
-### Outils
-Pattern URL : `/outils/{slug}`
-Micro-outils SEO intégrés au site pour générer des backlinks et capturer des leads.
+## 3. Architecture SEO : le cocon sémantique
 
-## Règles SEO — À TOUJOURS RESPECTER
+### Principe
 
-### Structure HTML
-- UNE SEULE balise `<h1>` par page
-- Hiérarchie stricte : h1 > h2 > h3 (jamais sauter un niveau)
-- Chaque image DOIT avoir un attribut `alt` descriptif
-- Les liens internes doivent avoir des ancres descriptives (jamais "cliquez ici")
+Le site est organisé en **cocon sémantique** : une structure en silo thématique où chaque page a un rôle précis dans la hiérarchie.
 
-### Meta tags
-- Chaque page DOIT avoir un `<title>` unique (50-60 caractères)
-- Chaque page DOIT avoir une `<meta description>` unique (150-160 caractères)
-- Ne JAMAIS dupliquer un title ou une meta description
+```
+HOMEPAGE (/)
+├── PAGE MÈRE : /consultant-seo
+│   └── Pages filles : expertises (/audit-seo, /referencement-naturel, etc.)
+├── PAGE MÈRE : /seo-local
+│   └── Pages filles : villes (/consultant-seo-nice, /consultant-seo-paris, etc.)
+├── PAGE MÈRE : /creation-site-web
+│   └── Pages filles : /refonte-site-web, /creation-boutique-en-ligne
+├── PAGE MÈRE : /outils
+│   └── Pages filles : chaque outil (/outils/audit-seo-gratuit, etc.)
+├── PAGE MÈRE : /blog
+│   └── Pages filles : chaque article (/blog/[slug])
+└── Pages support : /a-propos, /contact, /faq, /mentions-legales
+```
 
-### Schema markup (JSON-LD)
-Chaque page locale doit inclure le schema `ProfessionalService` ou `LocalBusiness`.
-Les articles de blog doivent inclure le schema `Article` ou `BlogPosting`.
-Les pages FAQ doivent inclure le schema `FAQPage`.
+### Rôle de chaque type de page
 
-### Maillage interne
-- Chaque page locale → 2-3 pages villes géographiquement proches
-- Chaque page locale → `/audit-seo` ou `/creation-site-web`
-- Articles blog → pages services correspondantes + `/contact`
-- Homepage → pages villes Côte d'Azur en priorité (Nice, Cannes, Antibes, Sophia)
+| Type | Rôle SEO | Exemple |
+|------|----------|---------|
+| Homepage | Distribue le "jus SEO" vers les pages mères. Cible le mot-clé le plus large ("consultante SEO freelance") | `/` |
+| Page mère | Concentre l'autorité sur un thème. Cible un mot-clé moyen-traîne ("SEO local", "création site web") | `/seo-local` |
+| Page fille | Cible un mot-clé longue-traîne précis ("consultant SEO Nice", "audit SEO gratuit") | `/consultant-seo-nice` |
+| Article blog | Attire du trafic informationnel, distribue du jus vers les pages services | `/blog/[slug]` |
+| Outil | Lead magnet, attire des backlinks, distribue du jus vers les services liés | `/outils/[slug]` |
 
-### Performance
-- Images via `next/image` (lazy loading + WebP automatique)
-- Viser un score Lighthouse > 90
-- Server Components par défaut
+---
 
-### URLs
-- Toujours en lowercase
-- Tirets (-) comme séparateurs
-- Pas de trailing slash
-- Pas d'accents
+## 4. Maillage interne — LES RÈGLES D'OR
 
-## Données Search Console (janv-fév 2026)
+Le maillage interne est LE levier SEO le plus important sur ce site. C'est ce qui permet à Google de comprendre la structure et de distribuer l'autorité entre les pages.
 
-### Métriques globales
-- 655 impressions, 24 clics, CTR 3.66%, position moyenne ~55
-- Tendance : croissance exponentielle (39/sem → 349/sem)
+### Principes fondamentaux
 
-### Pages prioritaires à optimiser
+1. **Chaque page fille DOIT lier vers sa page mère** (et inversement)
+2. **Les pages sœurs se lient entre elles** (articles entre eux, outils entre eux)
+3. **Les articles blog DOIVENT lier vers les pages services** (c'est leur rôle principal)
+4. **Les articles DOIVENT lier vers les outils** (conversion)
+5. **JAMAIS de lien orphelin** : chaque page doit recevoir au moins 3 liens internes
 
-| Page | Impressions | Position | Priorité |
-|------|------------|----------|----------|
-| `/blog/contenu-rapport-audit-seo` | 147 | 55.8 | 🔴 P1 |
-| `/consultant-seo-sophia-antipolis` | 42 | 50.1 | 🔴 P2 |
-| `/consultant-seo-cannes` | 33 | 53.8 | 🟡 P3 |
-| `/consultant-seo-antibes` | 28 | 59.2 | 🟡 P4 |
+### Matrice de maillage obligatoire par type de contenu
 
-### Quick wins (proches du top 10)
-- "pilier technique seo sophia antipolis" → position 9
-- "checklist seo refonte site" → position 14
-- "extraire mots clés d'un texte" → position 14
+#### Article de blog → DOIT contenir :
 
-## Concurrence locale (Nice / Côte d'Azur)
+| Lien vers | Minimum | Comment l'intégrer |
+|-----------|---------|-------------------|
+| Page service principale liée au sujet | 1-2 liens | Naturellement dans le corps du texte |
+| Outils pertinents | 1-2 liens | "Testez vous-même avec notre [outil]" |
+| Autres articles blog | 2-3 liens | Dans le texte + section "Pour aller plus loin" en fin d'article |
+| /contact ou CTA | 1 lien | En conclusion |
+| Page ville SI pertinent | 0-1 lien | Seulement si le contexte est local |
 
-- L'Anthracite, Florian Zorgnotti, Frédéric Kabouche, Bilkher Diakhaté, AdPremier, CKC-NET, Jean SEO
+**Total minimum : 7-10 liens internes par article.**
 
-**Notre avantage** : expertise GEO (Generative Engine Optimization) — optimisation pour les réponses IA.
+#### Page service → DOIT contenir :
 
-## Style de rédaction
+| Lien vers | Minimum |
+|-----------|---------|
+| Homepage | 1 (breadcrumb suffit) |
+| Autres services complémentaires | 2-3 |
+| Articles blog liés | 2-3 |
+| Outils liés | 1-2 |
+| /contact | 1 |
 
-- Ton : professionnel mais accessible
-- VOUVOIEMENT systématique
-- Pas de superlatifs creux
-- Données concrètes plutôt que promesses vagues
-- Phrases courtes et percutantes
+#### Page ville → DOIT contenir :
 
-## Conventions de code
+| Lien vers | Minimum |
+|-----------|---------|
+| /seo-local (page mère) | 1 |
+| /consultant-seo | 1 |
+| 2-3 villes voisines | 2-3 |
+| Articles blog SEO local | 2-3 |
+| Outils (simulateur local, audit) | 1-2 |
 
-- **Langue du code** : anglais
-- **Langue du contenu** : français
-- **Composants** : PascalCase
-- **Commits** : anglais, format conventionnel (`feat:`, `fix:`, `content:`)
+### Règles des ancres de lien
 
-## Ce qu'il ne faut JAMAIS faire
+```
+❌ "Cliquez ici"
+❌ "En savoir plus"
+❌ "Lire l'article"
+✅ "notre outil d'audit SEO gratuit"
+✅ "guide complet Google Business Profile"
+✅ "consultante SEO à Nice"
+✅ "stratégie de référencement naturel"
+```
 
-- ❌ Dupliquer du contenu entre pages locales
-- ❌ Créer des pages sans meta title/description uniques
-- ❌ Utiliser des images sans alt
-- ❌ Casser des URLs existantes sans redirection 301
-- ❌ Supprimer des pages qui ont des impressions dans la Search Console
+- L'ancre doit contenir le mot-clé cible de la page de destination
+- Varier les ancres : ne pas toujours utiliser la même formulation
+- L'ancre doit être naturelle dans la phrase — jamais forcée
 
-## TODO actuel (par priorité)
+### Ce qu'il ne faut JAMAIS faire
 
-1. **P1** : Enrichir `/blog/contenu-rapport-audit-seo` — viser 2500+ mots, schema FAQ
-2. **P2** : Enrichir `/consultant-seo-sophia-antipolis` — contenu unique technopole, 1500+ mots
-3. **P3** : Enrichir `/consultant-seo-cannes` et `/consultant-seo-antibes` — contenu unique
-4. **P4** : Créer article `/blog/checklist-seo-refonte-site` (quick win position 14)
-5. **P5** : Renforcer le maillage interne
-6. **P6** : Vérifier schemas JSON-LD
-7. **P7** : Auditer alt text images
+```
+❌ Mettre des liens vers des pages villes dans l'intro d'un article non-local
+   (Ex : "À Nice, Paris ou Bordeaux" avec liens → bourrage)
+❌ Lier la homepage avec l'ancre "Consultant SEO freelance"
+   (Le mot-clé de la homepage est ciblé par la homepage elle-même)
+❌ Mettre un lien vers un article/page qui N'EXISTE PAS (404)
+   → Toujours vérifier que le slug existe avant de créer un lien
+❌ Avoir un article avec moins de 5 liens internes
+❌ Avoir un article sans lien vers au moins 1 outil
+❌ Avoir un article sans lien vers au moins 1 autre article
+```
+
+---
+
+## 5. Standards de contenu blog
+
+### Structure obligatoire d'un article
+
+```
+1. Title tag (50-60 caractères, mot-clé principal en début)
+2. Meta description (140-155 caractères, avec CTA implicite)
+3. H1 (différent du title, complémentaire)
+4. Chapô / Lead (1-2 phrases d'accroche, italique, bordure gauche)
+5. Image hero (obligatoire, format WebP, avec alt descriptif)
+6. Sommaire (liens d'ancrage vers les H2)
+7. Corps avec H2 > H3 > H4 (hiérarchie respectée)
+8. Encarts/blockquotes (pour les stats clés, citations)
+9. Liens internes (minimum 7-10, répartis naturellement)
+10. Section "Pour aller plus loin" (2-3 liens vers articles existants)
+11. FAQ avec schema FAQPage (3-6 questions)
+12. Tags/mots-clés en bas d'article
+13. CTA final (audit gratuit + contact)
+14. Section "Articles complémentaires" (3 cartes vers articles EXISTANTS)
+```
+
+### Longueur minimale
+
+| Type d'article | Mots minimum | Idéal |
+|---------------|-------------|-------|
+| Article informationnel | 2 000 | 2 500-3 000 |
+| Guide complet | 3 000 | 4 000-5 000 |
+| Article comparatif | 2 500 | 3 000-4 000 |
+| Article local | 1 500 | 2 000-2 500 |
+
+Un article de moins de 1 500 mots ne rankera pas en 2026 sur des mots-clés compétitifs.
+
+### Schema JSON-LD obligatoire par article
+
+Chaque article DOIT avoir dans le `<head>` (géré par le composant, PAS dans le contenu markdown) :
+
+1. **BlogPosting** ou **Article** — avec headline, description, datePublished, dateModified, author, publisher
+2. **FAQPage** — si l'article contient une FAQ
+3. **BreadcrumbList** — UN SEUL (pas de doublon)
+
+**ATTENTION** : ne JAMAIS écrire de `<script type="application/ld+json">` dans le contenu markdown. Le schema est injecté automatiquement par le composant de page. Si du JSON-LD apparaît en texte brut dans l'article rendu, c'est un bug.
+
+### Title tag — Formules qui fonctionnent
+
+```
+[Mot-clé principal] : [bénéfice ou chiffre] ([année])
+→ "Site web lent = clients perdus : comment passer à 93 sur PageSpeed"
+
+[Question] + [promesse]
+→ "Pourquoi votre site est invisible sur Google (et comment y remédier)"
+
+[Chiffre] + [mot-clé] + [angle unique]
+→ "7 techniques SEO local pour dominer Google Maps en 2026"
+```
+
+Longueur : 50-60 caractères max. Google tronque au-delà.
+
+---
+
+## 6. SEO technique
+
+### Core Web Vitals — Objectifs
+
+| Métrique | Objectif | Seuil Google |
+|----------|----------|-------------|
+| LCP (Largest Contentful Paint) | < 2.0s | < 2.5s |
+| INP (Interaction to Next Paint) | < 150ms | < 200ms |
+| CLS (Cumulative Layout Shift) | 0 | < 0.1 |
+| FCP (First Contentful Paint) | < 1.0s | < 1.8s |
+| Score PageSpeed Mobile | 90+ | 50+ (minimum) |
+
+### Images
+
+- Format : **WebP** uniquement (Next.js Image le gère automatiquement)
+- Toujours fournir `width`, `height` et `alt` descriptif
+- Image hero : `priority={true}` et `fetchPriority="high"`
+- Images dans le corps : `loading="lazy"` (par défaut)
+- Nommage fichier : `mot-cle-descriptif-YYYY-MM-DD.webp`
+
+### Balises meta obligatoires par page
+
+```html
+<title>                — 50-60 car., mot-clé en début
+<meta description>     — 140-155 car., incitatif
+<link canonical>       — URL canonique propre (sans trailing slash sauf homepage)
+<meta og:title>        — Peut différer légèrement du title
+<meta og:description>  — Peut différer de la meta description
+<meta og:image>        — Image 1200x630 minimum
+<meta og:type>         — "article" pour blog, "website" pour pages
+<meta twitter:card>    — "summary_large_image"
+```
+
+### Robots / Crawlers IA (2026)
+
+Le fichier `robots.txt` doit autoriser les crawlers IA importants :
+
+```
+# Crawlers IA à autoriser
+User-agent: GPTBot          # OpenAI/ChatGPT
+User-agent: ChatGPT-User    # ChatGPT Browse
+User-agent: Claude-Web       # Anthropic/Claude
+User-agent: PerplexityBot   # Perplexity
+User-agent: Applebot-Extended # Apple Intelligence
+
+# Crawlers IA à bloquer (scraping sans attribution)
+User-agent: CCBot            # Common Crawl
+User-agent: Google-Extended  # Gemini training (pas search)
+```
+
+---
+
+## 7. GEO — Generative Engine Optimization (2026)
+
+Le GEO est le nouveau SEO pour les moteurs de recherche IA (ChatGPT, Perplexity, Claude, Gemini). IndHack se positionne comme pionnière sur ce marché en France.
+
+### Qu'est-ce que le GEO ?
+
+Les utilisateurs posent de plus en plus de questions aux IA au lieu de chercher sur Google. Si votre site est cité par ChatGPT quand quelqu'un demande "meilleur consultant SEO à Nice", vous gagnez un client sans même apparaître dans Google.
+
+### Comment les IA choisissent quelles sources citer
+
+1. **Autorité du domaine** — backlinks, ancienneté, mentions
+2. **Qualité du contenu** — profondeur, sources citées, données originales
+3. **Données structurées** — schema JSON-LD bien implémenté
+4. **Fraîcheur** — contenu mis à jour récemment
+5. **Crawlabilité** — le site doit être rapide et accessible aux bots IA
+6. **Citations et mentions** — être mentionné sur d'autres sites de confiance
+7. **Contenu factuel** — chiffres, études, données vérifiables
+
+### Optimisations GEO à appliquer
+
+#### Sur chaque page / article :
+
+- **Répondre à des questions précises** dans le contenu (les IA adorent le format Q&R)
+- **Citer des sources** avec des données chiffrées (études, statistiques)
+- **Utiliser un ton d'expert** — première personne, expérience réelle, cas concrets
+- **Inclure des listes structurées** pour les processus étape par étape
+- **Schema JSON-LD riche** : Person, Organization, FAQPage, HowTo, Article
+- **dateModified** toujours à jour — les IA privilégient le contenu frais
+- **Contenu E-E-A-T** (Experience, Expertise, Authoritativeness, Trustworthiness)
+
+#### Sur le site globalement :
+
+- **Page /a-propos complète** avec bio, photo, credentials, liens LinkedIn
+- **Schema Person** sur l'auteur avec jobTitle, worksFor, sameAs
+- **Permettre le crawl** par GPTBot, PerplexityBot etc. dans robots.txt
+- **Site rapide** — les bots IA ont un budget de crawl limité
+- **Contenu unique et original** — les IA détectent et ignorent le contenu générique
+
+### Testeur de visibilité IA
+
+IndHack a un outil dédié : `/outils/testeur-visibilite-ia`
+Cet outil teste si un site est visible par 4 catégories d'IA avec 8 crawlers différents.
+Toujours lier vers cet outil quand on parle de GEO ou de visibilité IA.
+
+---
+
+## 8. SEO local — Spécificités
+
+### Pages villes
+
+Chaque page `/consultant-seo-[ville]` DOIT contenir :
+- H1 avec le nom de la ville et le code postal
+- Mention de la population
+- Quartiers/zones d'activité locaux
+- FAQ locale (schema FAQPage)
+- Lien vers /seo-local (page mère)
+- Liens vers 3-5 villes voisines
+- Liens vers articles blog pertinents
+- Intégration de l'outil audit SEO (PageSpeed en live)
+- Schema LocalBusiness ou ProfessionalService
+
+### Google Business Profile
+
+Quand un article parle de GBP/Google Maps/SEO local, toujours lier vers :
+- `/seo-local`
+- `/outils/simulateur-visibilite-locale`
+- L'article GBP guide complet s'il existe
+
+---
+
+## 9. Checklist avant chaque déploiement
+
+### Pour un nouvel article :
+
+- [ ] Title tag ≤ 60 caractères, mot-clé en début
+- [ ] Meta description 140-155 car.
+- [ ] H1 différent du title
+- [ ] Image hero en WebP avec alt
+- [ ] Minimum 2 000 mots
+- [ ] Minimum 7 liens internes dont :
+  - [ ] 1-2 vers pages services
+  - [ ] 1-2 vers outils
+  - [ ] 2-3 vers autres articles EXISTANTS
+  - [ ] 1 vers /contact ou CTA
+- [ ] AUCUN lien vers une URL qui n'existe pas (vérifier les slugs)
+- [ ] FAQ avec schema FAQPage (3-6 questions)
+- [ ] Tags en bas d'article
+- [ ] Section "Articles complémentaires" (3 articles EXISTANTS)
+- [ ] Schema Article + BreadcrumbList (1 seul, pas de doublon)
+- [ ] Pas de schema JSON-LD en texte brut dans le contenu
+- [ ] Conventions typo françaises respectées (majuscules, guillemets)
+- [ ] `npm run build` passe sans erreur
+
+### Pour une modification :
+
+- [ ] Vérifier que les liens internes ajoutés pointent vers des pages existantes
+- [ ] Vérifier que les ancres de liens contiennent des mots-clés pertinents
+- [ ] Mettre à jour dateModified dans le schema
+- [ ] `npm run build` passe sans erreur
+
+---
+
+## 10. Mapping thématique des liens
+
+Ce tableau indique quel article/page devrait lier vers quoi.
+
+### Liens depuis les articles blog :
+
+| Article | DOIT lier vers |
+|---------|---------------|
+| Article SEO local / Google Maps | /seo-local, /outils/simulateur-visibilite-locale, /outils/audit-seo-gratuit, articles GBP et SEO local |
+| Article GBP | /seo-local, /outils/simulateur-visibilite-locale, articles Google Maps |
+| Article performance web | /creation-site-web, /refonte-site-web, /outils/audit-seo-gratuit, /audit-seo |
+| Article GEO / IA | /outils/testeur-visibilite-ia, /referencement-naturel, /outils/generateur-robots-txt |
+| Article audit SEO | /audit-seo, /outils/audit-seo-gratuit, /referencement-naturel |
+| Article création site | /creation-site-web, /refonte-site-web, articles performance |
+
+### Liens depuis les pages outils :
+
+| Outil | DOIT lier vers |
+|-------|---------------|
+| Testeur visibilité IA | /referencement-naturel, article GEO, /outils/generateur-robots-txt |
+| Audit SEO gratuit | /audit-seo, /referencement-naturel, article audit |
+| Simulateur local | /seo-local, articles SEO local, /consultant-seo-nice |
+| Générateur robots.txt | article GEO, /outils/testeur-visibilite-ia |
+| Générateur schema | /audit-seo, /creation-site-web |
+
+---
+
+## 11. Couleurs par catégorie d'article
+
+| Catégorie | Couleur Tailwind | Usage |
+|-----------|-----------------|-------|
+| SEO Local | sauge (couleur brand) | Tag, bordures, liens |
+| Performance Web | emerald | Tag, bordures, liens |
+| GEO / IA | violet/purple | Tag, bordures, liens |
+| Création web | blue | Tag, bordures, liens |
+| Audit SEO | amber/orange | Tag, bordures, liens |
+
+---
+
+## 12. Fichiers importants
+
+```
+src/app/blog/[slug]/page.tsx    → Template article dynamique
+src/app/blog/page.tsx           → Liste articles
+src/content/ ou src/data/       → Contenu des articles (chercher les .mdx ou .tsx)
+src/components/                 → Composants réutilisables
+public/images/blog/             → Images des articles
+next.config.js                  → Config Next.js
+tailwind.config.ts              → Config Tailwind avec couleurs custom
+```
+
+---
+
+## 13. Rappels critiques
+
+1. **TOUJOURS vérifier qu'un slug existe avant de créer un lien interne**
+2. **TOUJOURS respecter les majuscules françaises dans les titres**
+3. **JAMAIS de schema JSON-LD en texte brut dans le contenu d'un article**
+4. **JAMAIS de BreadcrumbList en double**
+5. **JAMAIS d'article sans liens vers outils ET autres articles**
+6. **TOUJOURS lancer `npm run build` après modification**
+7. **Les articles "complémentaires" en bas de page doivent pointer vers des articles EXISTANTS uniquement**
+8. **Minimum 2 000 mots par article sinon ça ne ranke pas**
+9. **Le score PageSpeed mobile doit rester au-dessus de 90**
+10. **Chaque article doit avoir une FAQ avec schema FAQPage**
