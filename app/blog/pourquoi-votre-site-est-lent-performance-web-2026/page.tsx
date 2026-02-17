@@ -6,13 +6,13 @@ import { AuditCTA } from "@/components/blog/AuditCTA";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-    title: "Pourquoi Votre Site Est Lent : 93/100 vs 56/100 — Le Vrai Coût d'un Site Mal Conçu [2026]",
-    description: "57% des sites ne passent pas les Core Web Vitals de Google. Score IndHack : 93/100. Score moyen concurrent WordPress : 56/100. Données réelles et analyse.",
+    title: "Site web lent = clients perdus : comment passer de 56 à 93 sur PageSpeed",
+    description: "Un site lent vous fait perdre des clients. Comparatif réel PageSpeed : 56/100 (WordPress) vs 93/100 (Next.js). Découvrez comment améliorer vos Core Web Vitals.",
     keywords: ["site internet rapide", "création site web performant", "pourquoi mon site est lent", "vitesse site web SEO", "core web vitals 2026", "création site web Nice", "performance web", "PageSpeed Insights"],
     authors: [{ name: "Indiana Aflalo" }],
     openGraph: {
-        title: "Pourquoi Votre Site Est Lent : 93/100 vs 56/100 — Le Vrai Coût d'un Site Mal Conçu",
-        description: "57% des sites ne passent pas les Core Web Vitals de Google. Score IndHack : 93/100. Score moyen concurrent WordPress : 56/100.",
+        title: "Site web lent = clients perdus : comment passer de 56 à 93 sur PageSpeed",
+        description: "Un site lent vous fait perdre des clients. Comparatif réel PageSpeed : 56/100 (WordPress) vs 93/100 (Next.js). Découvrez comment améliorer vos Core Web Vitals.",
         type: "article",
         publishedTime: "2026-02-17",
         authors: ["Indiana Aflalo"],
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Pourquoi Votre Site Est Lent : 93/100 vs 56/100",
-        description: "Données réelles PageSpeed. Le vrai coût d'un site mal optimisé.",
+        title: "Site web lent = clients perdus : comment passer de 56 à 93 sur PageSpeed",
+        description: "Un site lent vous fait perdre des clients. Comparatif réel PageSpeed : 56/100 vs 93/100.",
         images: ["https://indhack.com/images/blog/checklist-seo-2026.jpg"],
     },
     alternates: {
@@ -74,8 +74,8 @@ export default function PerformanceWebArticlePage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Article",
-                        "headline": "Pourquoi Votre Site Est Lent : 93/100 vs 56/100 — Le Vrai Coût d'un Site Mal Conçu",
-                        "description": "57% des sites ne passent pas les Core Web Vitals de Google. Score IndHack : 93/100. Score moyen concurrent WordPress : 56/100. Données réelles et analyse.",
+                        "headline": "Site web lent = clients perdus : comment passer de 56 à 93 sur PageSpeed",
+                        "description": "Un site lent vous fait perdre des clients. Comparatif réel PageSpeed : 56/100 (WordPress) vs 93/100 (Next.js). Découvrez comment améliorer vos Core Web Vitals.",
                         "image": {
                             "@type": "ImageObject",
                             "url": "https://indhack.com/images/blog/checklist-seo-2026.jpg",
@@ -124,26 +124,10 @@ export default function PerformanceWebArticlePage() {
                 }}
             />
 
-            {/* BreadcrumbList Schema */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        "itemListElement": [
-                            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://indhack.com" },
-                            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://indhack.com/blog" },
-                            { "@type": "ListItem", "position": 3, "name": "Pourquoi Votre Site Est Lent", "item": "https://indhack.com/blog/pourquoi-votre-site-est-lent-performance-web-2026" },
-                        ],
-                    }),
-                }}
-            />
-
             <Breadcrumb
                 items={[
                     { label: "Blog", href: "/blog" },
-                    { label: "Pourquoi Votre Site Est Lent", href: "/blog/pourquoi-votre-site-est-lent-performance-web-2026" },
+                    { label: "Site web lent = clients perdus", href: "/blog/pourquoi-votre-site-est-lent-performance-web-2026" },
                 ]}
             />
 
@@ -163,7 +147,7 @@ export default function PerformanceWebArticlePage() {
                         </div>
 
                         <h1 className="text-3xl md:text-5xl font-heading font-bold text-ink mb-6 leading-tight">
-                            Pourquoi Votre Site Est Lent : 93/100 vs 56/100 — Le Vrai Coût d'un Site Mal Conçu
+                            Site web lent = clients perdus : comment passer de 56 à 93 sur PageSpeed
                         </h1>
 
                         <p className="lead text-xl text-soft leading-relaxed italic border-l-4 border-emerald-500 pl-6">
@@ -403,16 +387,28 @@ export default function PerformanceWebArticlePage() {
 
                                     <div>
                                         <div className="text-xs text-soft uppercase tracking-wider mb-2">Desktop</div>
-                                        <div className="grid grid-cols-2 gap-3 opacity-50">
+                                        <div className="grid grid-cols-2 gap-3">
                                             <div className="flex items-center gap-2">
-                                                <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-white font-bold text-sm">—</div>
-                                                <span className="text-xs text-soft">Non testé</span>
+                                                <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-sm">78</div>
+                                                <span className="text-xs text-soft">Performance</span>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-sm">84</div>
+                                                <span className="text-xs text-soft">Accessibilité</span>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold text-sm">96</div>
+                                                <span className="text-xs text-soft">Bonnes pratiques</span>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold text-sm">100</div>
+                                                <span className="text-xs text-soft">SEO</span>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="mt-4 pt-4 border-t border-orange-200 text-xs text-soft">
-                                        <strong className="text-ink">Écart :</strong> -36 points en performance mobile
+                                        <strong className="text-ink">Écart mobile :</strong> -36 points | <strong className="text-ink">Écart desktop :</strong> -18 points
                                     </div>
                                 </div>
                             </div>
@@ -633,9 +629,14 @@ export default function PerformanceWebArticlePage() {
                                 ))}
                             </div>
 
-                            <p>
-                                Pour en savoir plus sur la création de site visible sur Google, consultez également mon guide <Link href="/blog/comment-creer-site-visible-google">Comment créer un site visible sur Google</Link>.
-                            </p>
+                            <h3>Pour aller plus loin</h3>
+
+                            <ul>
+                                <li><Link href="/blog/comment-creer-site-visible-google">Comment créer un site visible sur Google</Link></li>
+                                <li><Link href="/blog/refonte-site-web-sans-perdre-seo">Refaire son site sans perdre son référencement</Link></li>
+                                <li><Link href="/blog/audit-seo-erreurs-qui-coutent-cher">Les erreurs d'audit SEO qui coûtent cher</Link></li>
+                                <li><Link href="/blog/checklist-seo-2026">Checklist SEO 2026 : la liste complète</Link></li>
+                            </ul>
 
                         </article>
                     </div>
@@ -679,6 +680,18 @@ export default function PerformanceWebArticlePage() {
                                         Lire <ArrowRight className="w-3 h-3" />
                                     </span>
                                 </Link>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Tags */}
+                    <div className="mt-12 pt-8 border-t border-gray-100">
+                        <div className="flex flex-wrap items-center gap-2">
+                            <span className="text-sm text-soft font-medium">Tags :</span>
+                            {["Performance web", "Core Web Vitals", "PageSpeed", "Création site web", "SEO technique", "WordPress vs Next.js"].map((tag, index) => (
+                                <span key={index} className="bg-gray-100 text-soft text-xs px-3 py-1 rounded-full">
+                                    {tag}
+                                </span>
                             ))}
                         </div>
                     </div>

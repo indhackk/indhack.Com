@@ -1,6 +1,6 @@
 ---
-title: "Pourquoi Votre Site Est Lent : 93/100 vs 56/100 — Le Vrai Coût d'un Site Mal Conçu"
-description: "57% des sites ne passent pas les Core Web Vitals de Google. Score IndHack : 93/100. Score moyen concurrent WordPress : 56/100. Données réelles et analyse."
+title: "Site web lent = clients perdus : comment passer de 56 à 93 sur PageSpeed"
+description: "Un site lent vous fait perdre des clients. Comparatif réel PageSpeed : 56/100 (WordPress) vs 93/100 (Next.js). Découvrez comment améliorer vos Core Web Vitals."
 date: "2026-02-17"
 category: "Performance Web"
 image: "/images/blog/checklist-seo-2026.jpg"
@@ -158,6 +158,14 @@ Entre 2 et 4 semaines pour un site vitrine, 4 à 8 semaines pour un e-commerce o
 
 **Vous voulez un site qui score 90+ sur Google ?** Discutons de votre projet. [Demandez un devis gratuit](/contact) ou [découvrez mes services de création de site](/creation-site-web).
 
-Pour en savoir plus, consultez également :
+### Pour aller plus loin
+
 - [Combien coûte un site web en 2026 ?](/blog/cout-site-web-2026)
 - [Comment créer un site visible sur Google](/blog/comment-creer-site-visible-google)
+- [GEO : comment apparaître dans ChatGPT en 2026](/blog/geo-comment-apparaitre-chatgpt-2026)
+- [Les erreurs d'audit SEO qui coûtent cher](/blog/audit-seo-erreurs-qui-coutent-cher)
+- [Refaire son site web sans perdre son SEO](/blog/refonte-site-web-sans-perdre-seo)
+
+---
+
+**Tags** : #performance-web #core-web-vitals #pagespeed #creation-site-web #seo-technique #wordpress-vs-nextjs
