@@ -23,6 +23,8 @@ import {
     AlertTriangle,
     Zap,
     Search,
+    Linkedin,
+    AlertCircle,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -77,13 +79,13 @@ interface VisibilityResult {
 const LEVEL_CONFIG = {
     invisible: { color: "text-red-400", bg: "bg-red-500", ring: "ring-red-500/30", gradient: "from-red-500 to-red-600", icon: EyeOff, label: "Invisible pour les IA" },
     partial: { color: "text-amber-400", bg: "bg-amber-500", ring: "ring-amber-500/30", gradient: "from-amber-500 to-orange-500", icon: Eye, label: "Partiellement visible" },
-    visible: { color: "text-emerald-400", bg: "bg-emerald-500", ring: "ring-emerald-500/30", gradient: "from-emerald-500 to-green-500", icon: Eye, label: "Bonne visibilit\u00e9" },
-    excellent: { color: "text-violet-400", bg: "bg-violet-500", ring: "ring-violet-500/30", gradient: "from-violet-500 to-purple-600", icon: Sparkles, label: "Excellent \u2014 Pr\u00eat pour le GEO" },
+    visible: { color: "text-emerald-400", bg: "bg-emerald-500", ring: "ring-emerald-500/30", gradient: "from-emerald-500 to-green-500", icon: Eye, label: "Bonne visibilité" },
+    excellent: { color: "text-violet-400", bg: "bg-violet-500", ring: "ring-violet-500/30", gradient: "from-violet-500 to-purple-600", icon: Sparkles, label: "Excellent — Prêt pour le GEO" },
 };
 
 const CATEGORY_CONFIG = {
-    accessibilite: { label: "Accessibilit\u00e9 IA", icon: Shield, color: "text-cyan-400", bg: "bg-cyan-500", gradient: "from-cyan-500 to-blue-500" },
-    semantique: { label: "Richesse S\u00e9mantique", icon: FileText, color: "text-emerald-400", bg: "bg-emerald-500", gradient: "from-emerald-500 to-teal-500" },
+    accessibilite: { label: "Accessibilité IA", icon: Shield, color: "text-cyan-400", bg: "bg-cyan-500", gradient: "from-cyan-500 to-blue-500" },
+    semantique: { label: "Richesse Sémantique", icon: FileText, color: "text-emerald-400", bg: "bg-emerald-500", gradient: "from-emerald-500 to-teal-500" },
     eeat: { label: "Signaux E-E-A-T", icon: Award, color: "text-amber-400", bg: "bg-amber-500", gradient: "from-amber-500 to-orange-500" },
     format: { label: "Format IA-Friendly", icon: Layout, color: "text-violet-400", bg: "bg-violet-500", gradient: "from-violet-500 to-purple-500" },
 };
@@ -97,8 +99,8 @@ const PLACEHOLDER_URLS = [
 
 const LOADING_STEPS = [
     { text: "Analyse du robots.txt...", icon: Shield },
-    { text: "Scan des donn\u00e9es structur\u00e9es...", icon: FileText },
-    { text: "V\u00e9rification des signaux E-E-A-T...", icon: Award },
+    { text: "Scan des données structurées...", icon: FileText },
+    { text: "Vérification des signaux E-E-A-T...", icon: Award },
     { text: "Calcul du score GEO...", icon: Sparkles },
 ];
 
@@ -127,38 +129,57 @@ function AnimatedPlaceholder() {
     );
 }
 
-function VisibilityGauge({ score, level }: { score: number; level: VisibilityResult["level"] }) {
-    const config = LEVEL_CONFIG[level];
-    const Icon = config.icon;
-    const circumference = 2 * Math.PI * 90;
+function CircularGauge({ score, size = 240, strokeWidth = 10, color }: { score: number; size?: number; strokeWidth?: number; color: string }) {
+    const radius = (size - strokeWidth) / 2;
+    const circumference = 2 * Math.PI * radius;
     const strokeDashoffset = circumference - (score / 100) * circumference;
 
     return (
+        <svg className="transform -rotate-90" width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+            <circle
+                cx={size / 2}
+                cy={size / 2}
+                r={radius}
+                stroke="currentColor"
+                strokeWidth={strokeWidth}
+                fill="none"
+                className="text-white/10"
+            />
+            <motion.circle
+                cx={size / 2}
+                cy={size / 2}
+                r={radius}
+                stroke={color}
+                strokeWidth={strokeWidth}
+                fill="none"
+                strokeLinecap="round"
+                strokeDasharray={circumference}
+                initial={{ strokeDashoffset: circumference }}
+                animate={{ strokeDashoffset }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+            />
+        </svg>
+    );
+}
+
+function VisibilityGauge({ score, level }: { score: number; level: VisibilityResult["level"] }) {
+    const config = LEVEL_CONFIG[level];
+    const Icon = config.icon;
+
+    const getColor = () => {
+        if (score <= 30) return "#ef4444";
+        if (score <= 60) return "#f59e0b";
+        if (score <= 85) return "#10b981";
+        return "#8b5cf6";
+    };
+
+    return (
         <div className="relative w-64 h-64 mx-auto">
-            <svg className="w-full h-full transform -rotate-90" viewBox="0 0 208 208">
-                <circle cx="104" cy="104" r="90" stroke="currentColor" strokeWidth="8" fill="none" className="text-white/10" />
-                <motion.circle
-                    cx="104" cy="104" r="90"
-                    stroke="url(#gaugeGradientDark)"
-                    strokeWidth="8"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeDasharray={circumference}
-                    initial={{ strokeDashoffset: circumference }}
-                    animate={{ strokeDashoffset }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                />
-                <defs>
-                    <linearGradient id="gaugeGradientDark" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor={level === "invisible" ? "#ef4444" : level === "partial" ? "#f59e0b" : level === "visible" ? "#10b981" : "#8b5cf6"} />
-                        <stop offset="100%" stopColor={level === "invisible" ? "#dc2626" : level === "partial" ? "#ea580c" : level === "visible" ? "#059669" : "#7c3aed"} />
-                    </linearGradient>
-                </defs>
-            </svg>
+            <CircularGauge score={score} size={256} strokeWidth={12} color={getColor()} />
             <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <Icon className={`w-10 h-10 ${config.color} mb-3`} />
                 <motion.span
-                    className={`text-6xl font-bold text-white`}
+                    className="text-6xl font-bold text-white"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.5, type: "spring" }}
@@ -166,6 +187,37 @@ function VisibilityGauge({ score, level }: { score: number; level: VisibilityRes
                     {score}
                 </motion.span>
                 <span className="text-white/50 text-sm font-medium mt-1">/100</span>
+            </div>
+        </div>
+    );
+}
+
+function MiniGauge({ score, maxScore, color }: { score: number; maxScore: number; color: string }) {
+    const percentage = Math.round((score / maxScore) * 100);
+    const radius = 20;
+    const circumference = 2 * Math.PI * radius;
+    const strokeDashoffset = circumference - (percentage / 100) * circumference;
+
+    return (
+        <div className="relative w-14 h-14">
+            <svg className="transform -rotate-90" width={56} height={56} viewBox="0 0 56 56">
+                <circle cx="28" cy="28" r={radius} stroke="currentColor" strokeWidth="4" fill="none" className="text-white/10" />
+                <motion.circle
+                    cx="28"
+                    cy="28"
+                    r={radius}
+                    stroke={color}
+                    strokeWidth="4"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeDasharray={circumference}
+                    initial={{ strokeDashoffset: circumference }}
+                    animate={{ strokeDashoffset }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                />
+            </svg>
+            <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-xs font-bold text-white">{percentage}%</span>
             </div>
         </div>
     );
@@ -250,6 +302,12 @@ function CategoryCard({ category, data, index }: { category: keyof typeof CATEGO
     const percentage = Math.round((data.score / data.maxScore) * 100);
     const [isOpen, setIsOpen] = useState(false);
 
+    const getGaugeColor = () => {
+        if (percentage <= 30) return "#ef4444";
+        if (percentage <= 60) return "#f59e0b";
+        return "#10b981";
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -261,23 +319,16 @@ function CategoryCard({ category, data, index }: { category: keyof typeof CATEGO
                 onClick={() => setIsOpen(!isOpen)}
                 className="w-full p-5 flex items-center gap-4 text-left"
             >
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${config.gradient} flex items-center justify-center shadow-lg`}>
-                    <Icon className="w-6 h-6 text-white" />
-                </div>
+                <MiniGauge score={data.score} maxScore={data.maxScore} color={getGaugeColor()} />
                 <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2 mb-1">
+                        <Icon className={`w-4 h-4 ${config.color}`} />
                         <span className="font-bold text-white">{config.label}</span>
-                        <span className={`text-2xl font-bold ${percentage >= 80 ? "text-emerald-400" : percentage >= 50 ? "text-amber-400" : "text-red-400"}`}>
-                            {data.score}<span className="text-white/30 text-base">/{data.maxScore}</span>
-                        </span>
                     </div>
-                    <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
-                        <motion.div
-                            className={`h-full bg-gradient-to-r ${config.gradient}`}
-                            initial={{ width: 0 }}
-                            animate={{ width: `${percentage}%` }}
-                            transition={{ duration: 1, delay: 0.3 + index * 0.1 }}
-                        />
+                    <div className="flex items-center gap-2">
+                        <span className={`text-lg font-bold ${percentage >= 80 ? "text-emerald-400" : percentage >= 50 ? "text-amber-400" : "text-red-400"}`}>
+                            {data.score}<span className="text-white/30 text-sm">/{data.maxScore} pts</span>
+                        </span>
                     </div>
                 </div>
                 <motion.div
@@ -306,6 +357,77 @@ function CategoryCard({ category, data, index }: { category: keyof typeof CATEGO
                     </motion.div>
                 )}
             </AnimatePresence>
+        </motion.div>
+    );
+}
+
+function PriorityBadge({ priority }: { priority: number }) {
+    if (priority === 1) {
+        return (
+            <span className="inline-flex items-center gap-1 px-2 py-1 bg-red-500/20 border border-red-500/30 rounded-lg text-[10px] font-bold text-red-400 uppercase tracking-wide">
+                <AlertCircle className="w-3 h-3" />
+                Critique
+            </span>
+        );
+    }
+    if (priority === 2) {
+        return (
+            <span className="inline-flex items-center gap-1 px-2 py-1 bg-amber-500/20 border border-amber-500/30 rounded-lg text-[10px] font-bold text-amber-400 uppercase tracking-wide">
+                <AlertTriangle className="w-3 h-3" />
+                Important
+            </span>
+        );
+    }
+    return (
+        <span className="inline-flex items-center gap-1 px-2 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded-lg text-[10px] font-bold text-emerald-400 uppercase tracking-wide">
+            <CheckCircle2 className="w-3 h-3" />
+            Bonus
+        </span>
+    );
+}
+
+function RecommendationCard({ rec, index }: { rec: { text: string; fixUrl?: string; fixLabel?: string; priority: number }; index: number }) {
+    return (
+        <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className={`p-5 rounded-2xl backdrop-blur-sm border transition-all ${
+                rec.priority === 1
+                    ? "bg-red-500/10 border-red-500/20 hover:border-red-500/40"
+                    : rec.priority === 2
+                    ? "bg-amber-500/10 border-amber-500/20 hover:border-amber-500/40"
+                    : "bg-emerald-500/10 border-emerald-500/20 hover:border-emerald-500/40"
+            }`}
+        >
+            <div className="flex items-start gap-4">
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                    rec.priority === 1 ? "bg-red-500" : rec.priority === 2 ? "bg-amber-500" : "bg-emerald-500"
+                }`}>
+                    <span className="text-white font-bold text-sm">{index + 1}</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-2">
+                        <PriorityBadge priority={rec.priority} />
+                    </div>
+                    <p className="text-white font-medium leading-relaxed">{rec.text}</p>
+                    {rec.fixUrl && (
+                        <Link
+                            href={rec.fixUrl}
+                            className={`inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-xl text-sm font-bold transition-all ${
+                                rec.priority === 1
+                                    ? "bg-red-500 hover:bg-red-600 text-white"
+                                    : rec.priority === 2
+                                    ? "bg-amber-500 hover:bg-amber-600 text-white"
+                                    : "bg-emerald-500 hover:bg-emerald-600 text-white"
+                            }`}
+                        >
+                            {rec.fixLabel || "Corriger maintenant"}
+                            <ArrowRight className="w-4 h-4" />
+                        </Link>
+                    )}
+                </div>
+            </div>
         </motion.div>
     );
 }
@@ -355,10 +477,17 @@ export function TesteurVisibiliteIA() {
     };
 
     const handleCopyUrl = () => {
-        const shareUrl = `${window.location.origin}/outils/testeur-visibilite-ia?score=${result?.score}`;
+        const shareUrl = `${window.location.origin}/outils/testeur-visibilite-ia`;
         navigator.clipboard.writeText(shareUrl);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
+    };
+
+    const handleLinkedInShare = () => {
+        const shareText = `Mon site a obtenu ${result?.score}/100 au test de visibilité IA ! Découvrez si votre site est visible par ChatGPT, Perplexity et Google AI.`;
+        const shareUrl = `${window.location.origin}/outils/testeur-visibilite-ia`;
+        const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}&summary=${encodeURIComponent(shareText)}`;
+        window.open(linkedInUrl, "_blank", "width=600,height=600");
     };
 
     const handleNewTest = () => {
@@ -380,11 +509,11 @@ export function TesteurVisibiliteIA() {
                     animate={{ opacity: 1, y: 0 }}
                     className="relative"
                 >
-                    <div className="bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-12 shadow-2xl">
+                    <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl border border-white/20 p-8 md:p-12 shadow-2xl">
                         <form onSubmit={handleSubmit} className="space-y-8">
                             <div>
                                 <label htmlFor="url" className="block text-sm font-bold text-white/80 mb-3 uppercase tracking-wider">
-                                    URL de votre site
+                                    URL de votre site ou page
                                 </label>
                                 <div className="relative">
                                     <input
@@ -392,23 +521,27 @@ export function TesteurVisibiliteIA() {
                                         id="url"
                                         value={url}
                                         onChange={(e) => setUrl(e.target.value)}
-                                        className="w-full px-6 py-5 text-lg bg-white/5 border-2 border-white/10 rounded-2xl focus:border-violet-500 focus:ring-0 transition-all text-white placeholder-transparent pr-14"
+                                        className="w-full px-6 py-5 text-lg bg-white/5 border-2 border-white/20 rounded-2xl focus:border-violet-500 focus:ring-0 transition-all text-white placeholder-transparent pr-14"
                                         disabled={loading}
                                         placeholder="https://votre-site.com"
                                     />
                                     {!url && <AnimatedPlaceholder />}
-                                    <div className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-violet-500/20 rounded-xl flex items-center justify-center">
-                                        <Bot className="w-5 h-5 text-violet-400" />
+                                    <div className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                                        <Bot className="w-5 h-5 text-white" />
                                     </div>
                                 </div>
+                                <p className="text-white/40 text-sm mt-2">
+                                    Analysez un domaine (ex: indhack.com) ou une page spécifique (ex: indhack.com/blog/article)
+                                </p>
                             </div>
 
                             {error && (
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    className="p-4 bg-red-500/20 border border-red-500/30 rounded-xl text-red-300 text-sm backdrop-blur-sm"
+                                    className="p-4 bg-red-500/20 border border-red-500/30 rounded-xl text-red-300 text-sm backdrop-blur-sm flex items-center gap-3"
                                 >
+                                    <AlertCircle className="w-5 h-5 flex-shrink-0" />
                                     {error}
                                 </motion.div>
                             )}
@@ -416,7 +549,7 @@ export function TesteurVisibiliteIA() {
                             <button
                                 type="submit"
                                 disabled={loading || !url.trim()}
-                                className="w-full bg-white text-ink py-5 px-8 rounded-2xl font-bold text-lg hover:bg-sauge hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-3 shadow-2xl shadow-white/10 hover:-translate-y-0.5"
+                                className="w-full bg-gradient-to-r from-white to-white/90 text-ink py-5 px-8 rounded-2xl font-bold text-lg hover:from-sauge hover:to-emerald-600 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-3 shadow-2xl shadow-white/10 hover:-translate-y-0.5"
                             >
                                 {loading ? (
                                     <>
@@ -426,13 +559,13 @@ export function TesteurVisibiliteIA() {
                                 ) : (
                                     <>
                                         <Zap className="w-5 h-5" />
-                                        Tester ma visibilit\u00e9 IA
+                                        Tester ma visibilité IA
                                     </>
                                 )}
                             </button>
 
                             <p className="text-center text-sm text-white/40">
-                                Gratuit \u2022 Sans inscription \u2022 8 crawlers IA + 16 signaux GEO analys\u00e9s
+                                Gratuit • Sans inscription • 8 crawlers IA + 16 signaux GEO analysés
                             </p>
                         </form>
 
@@ -494,18 +627,18 @@ export function TesteurVisibiliteIA() {
             {result && (
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-8">
                     {/* Score Header */}
-                    <div className="bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
+                    <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl border border-white/20 overflow-hidden shadow-2xl">
                         <div className="p-8 md:p-12">
                             <div className="flex flex-col lg:flex-row items-center gap-10">
                                 {/* Score Gauge */}
                                 <div className="relative">
-                                    <div className={`absolute inset-0 ${LEVEL_CONFIG[result.level].bg} blur-[80px] opacity-30`} />
+                                    <div className={`absolute inset-0 ${LEVEL_CONFIG[result.level].bg} blur-[100px] opacity-30`} />
                                     <VisibilityGauge score={result.score} level={result.level} />
                                 </div>
 
                                 {/* Info */}
                                 <div className="flex-1 text-center lg:text-left">
-                                    <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r ${LEVEL_CONFIG[result.level].gradient} text-white text-sm font-bold mb-4`}>
+                                    <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r ${LEVEL_CONFIG[result.level].gradient} text-white text-sm font-bold mb-4 shadow-lg`}>
                                         {(() => {
                                             const LevelIcon = LEVEL_CONFIG[result.level].icon;
                                             return <LevelIcon className="w-4 h-4" />;
@@ -534,6 +667,11 @@ export function TesteurVisibiliteIA() {
                                                 <CheckCircle2 className="w-3 h-3" /> llms.txt
                                             </span>
                                         )}
+                                        {result.cached && (
+                                            <span className="px-3 py-1.5 bg-violet-500/20 border border-violet-500/30 rounded-full text-xs text-violet-300 font-medium">
+                                                Résultat en cache
+                                            </span>
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -542,15 +680,22 @@ export function TesteurVisibiliteIA() {
                         {/* Actions */}
                         <div className="bg-white/5 border-t border-white/10 p-5 flex flex-wrap items-center justify-center gap-3">
                             <button
+                                onClick={handleLinkedInShare}
+                                className="flex items-center gap-2 px-5 py-2.5 bg-[#0077B5] hover:bg-[#006097] rounded-xl text-sm font-bold text-white transition-colors"
+                            >
+                                <Linkedin className="w-4 h-4" />
+                                Partager sur LinkedIn
+                            </button>
+                            <button
                                 onClick={handleCopyUrl}
                                 className="flex items-center gap-2 px-5 py-2.5 bg-white/10 border border-white/10 rounded-xl text-sm font-medium text-white hover:bg-white/20 transition-colors"
                             >
                                 {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                                {copied ? "Copi\u00e9 !" : "Partager mes r\u00e9sultats"}
+                                {copied ? "Copié !" : "Copier le lien"}
                             </button>
                             <button
                                 onClick={handleNewTest}
-                                className="flex items-center gap-2 px-5 py-2.5 bg-violet-500 text-white rounded-xl text-sm font-medium hover:bg-violet-600 transition-colors"
+                                className="flex items-center gap-2 px-5 py-2.5 bg-violet-500 text-white rounded-xl text-sm font-bold hover:bg-violet-600 transition-colors"
                             >
                                 <RefreshCw className="w-4 h-4" />
                                 Nouveau test
@@ -558,21 +703,41 @@ export function TesteurVisibiliteIA() {
                         </div>
                     </div>
 
+                    {/* Priority Recommendations */}
+                    {result.recommendations.length > 0 && (
+                        <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-3xl border border-white/20 p-6 md:p-8 backdrop-blur-xl">
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                    <Sparkles className="w-6 h-6 text-white" />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-white">Vos actions prioritaires</h3>
+                                    <p className="text-white/50 text-sm">Corrigez ces points pour améliorer votre score</p>
+                                </div>
+                            </div>
+                            <div className="space-y-4">
+                                {result.recommendations.map((rec, i) => (
+                                    <RecommendationCard key={i} rec={rec} index={i} />
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
                     {/* AI Crawlers Grid */}
-                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 md:p-8">
+                    <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl border border-white/20 p-6 md:p-8">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
                             <div>
                                 <h3 className="text-xl font-bold text-white">Crawlers IA</h3>
                                 <p className="text-white/50 text-sm mt-1">
-                                    {allowedCount}/{totalCrawlers} crawlers peuvent acc\u00e9der \u00e0 votre site
+                                    {allowedCount}/{totalCrawlers} crawlers peuvent accéder à votre site
                                 </p>
                             </div>
                             {blockedCount > 0 && (
                                 <Link
                                     href="/outils/generateur-robots-txt"
-                                    className="inline-flex items-center gap-2 px-4 py-2 bg-violet-500/20 border border-violet-500/30 rounded-xl text-violet-300 text-sm font-medium hover:bg-violet-500/30 transition-colors"
+                                    className="inline-flex items-center gap-2 px-4 py-2.5 bg-red-500 hover:bg-red-600 rounded-xl text-white text-sm font-bold transition-colors shadow-lg"
                                 >
-                                    Configurer robots.txt
+                                    Débloquer les crawlers
                                     <ArrowRight className="w-4 h-4" />
                                 </Link>
                             )}
@@ -583,15 +748,15 @@ export function TesteurVisibiliteIA() {
                             ))}
                         </div>
                         {blockedCount > 0 && (
-                            <div className="mt-5 p-4 bg-amber-500/10 border border-amber-500/20 rounded-xl backdrop-blur-sm">
+                            <div className="mt-5 p-4 bg-red-500/10 border border-red-500/20 rounded-xl backdrop-blur-sm">
                                 <div className="flex items-start gap-3">
-                                    <AlertTriangle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                                    <AlertTriangle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
                                     <div>
-                                        <p className="text-sm text-amber-200 font-medium">
-                                            {blockedCount} crawler(s) bloqu\u00e9(s) dans votre robots.txt
+                                        <p className="text-sm text-red-200 font-medium">
+                                            {blockedCount} crawler(s) bloqué(s) dans votre robots.txt
                                         </p>
-                                        <p className="text-xs text-amber-200/60 mt-1">
-                                            Ces IA ne peuvent pas acc\u00e9der \u00e0 votre contenu. Utilisez notre g\u00e9n\u00e9rateur pour les autoriser.
+                                        <p className="text-xs text-red-200/60 mt-1">
+                                            Ces IA ne peuvent pas accéder à votre contenu et ne vous citeront jamais.
                                         </p>
                                     </div>
                                 </div>
@@ -606,55 +771,16 @@ export function TesteurVisibiliteIA() {
                         ))}
                     </div>
 
-                    {/* Recommendations */}
-                    {result.recommendations.length > 0 && (
-                        <div className="bg-gradient-to-br from-violet-500/20 to-purple-500/10 rounded-2xl border border-violet-500/20 p-6 md:p-8 backdrop-blur-sm">
-                            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                                <div className="w-10 h-10 bg-violet-500 rounded-xl flex items-center justify-center">
-                                    <Sparkles className="w-5 h-5 text-white" />
-                                </div>
-                                Actions prioritaires
-                            </h3>
-                            <div className="space-y-3">
-                                {result.recommendations.map((rec, i) => (
-                                    <motion.div
-                                        key={i}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: i * 0.1 }}
-                                        className="flex items-start gap-4 bg-white/5 border border-white/10 p-4 rounded-xl backdrop-blur-sm"
-                                    >
-                                        <span className="w-8 h-8 rounded-full bg-violet-500 text-white text-sm font-bold flex items-center justify-center flex-shrink-0">
-                                            {i + 1}
-                                        </span>
-                                        <div className="flex-1">
-                                            <p className="text-white">{rec.text}</p>
-                                            {rec.fixUrl && (
-                                                <Link
-                                                    href={rec.fixUrl}
-                                                    className="inline-flex items-center gap-1 text-sm text-violet-400 font-medium hover:text-violet-300 mt-2 transition-colors"
-                                                >
-                                                    {rec.fixLabel || "Corriger maintenant"}
-                                                    <ArrowRight className="w-3 h-3" />
-                                                </Link>
-                                            )}
-                                        </div>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-
                     {/* CTA */}
                     <div className="relative overflow-hidden rounded-3xl">
                         <div className="absolute inset-0 bg-gradient-to-br from-ink via-ink to-fond-sombre" />
                         <div className="absolute top-0 right-0 w-96 h-96 bg-sauge/20 rounded-full blur-[120px]" />
                         <div className="relative p-10 md:p-14 text-center">
                             <h3 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4 uppercase tracking-tight">
-                                Besoin d'une strat\u00e9gie <span className="text-sauge">GEO</span> compl\u00e8te ?
+                                Besoin d&apos;une stratégie <span className="text-sauge">GEO</span> complète ?
                             </h3>
                             <p className="text-white/50 mb-8 max-w-xl mx-auto text-lg">
-                                Le GEO (Generative Engine Optimization) est la prochaine r\u00e9volution du r\u00e9f\u00e9rencement.
+                                Le GEO (Generative Engine Optimization) est la prochaine révolution du référencement.
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                                 <Link
@@ -665,10 +791,10 @@ export function TesteurVisibiliteIA() {
                                     <ArrowRight className="w-5 h-5" />
                                 </Link>
                                 <Link
-                                    href="/audit-seo"
+                                    href="/blog/geo-comment-apparaitre-chatgpt-2026"
                                     className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors font-medium"
                                 >
-                                    En savoir plus sur l'audit SEO
+                                    Comprendre le GEO
                                     <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
@@ -676,12 +802,12 @@ export function TesteurVisibiliteIA() {
                     </div>
 
                     {/* Related Tools */}
-                    <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 md:p-8">
-                        <h3 className="text-lg font-bold text-white mb-5">Am\u00e9liorez votre score avec nos outils gratuits</h3>
+                    <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl border border-white/20 p-6 md:p-8">
+                        <h3 className="text-lg font-bold text-white mb-5">Améliorez votre score avec nos outils gratuits</h3>
                         <div className="grid md:grid-cols-3 gap-4">
                             {[
-                                { href: "/outils/generateur-robots-txt", icon: Shield, color: "from-cyan-500 to-blue-500", title: "G\u00e9n\u00e9rateur robots.txt", desc: "Autorisez les crawlers IA" },
-                                { href: "/outils/generateur-schema-json-ld", icon: FileText, color: "from-blue-500 to-indigo-500", title: "G\u00e9n\u00e9rateur Schema JSON-LD", desc: "Cr\u00e9ez vos donn\u00e9es structur\u00e9es" },
+                                { href: "/outils/generateur-robots-txt", icon: Shield, color: "from-cyan-500 to-blue-500", title: "Générateur robots.txt", desc: "Autorisez les crawlers IA" },
+                                { href: "/outils/generateur-schema-json-ld", icon: FileText, color: "from-blue-500 to-indigo-500", title: "Générateur Schema JSON-LD", desc: "Créez vos données structurées" },
                                 { href: "/outils/audit-seo-gratuit", icon: Search, color: "from-emerald-500 to-teal-500", title: "Audit SEO Gratuit", desc: "Score SEO complet /100" },
                             ].map((tool) => {
                                 const Icon = tool.icon;
@@ -689,9 +815,9 @@ export function TesteurVisibiliteIA() {
                                     <Link
                                         key={tool.href}
                                         href={tool.href}
-                                        className="group p-5 bg-white/5 rounded-xl border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all"
+                                        className="group p-5 bg-white/5 rounded-xl border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all"
                                     >
-                                        <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                                        <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform shadow-lg`}>
                                             <Icon className="w-5 h-5 text-white" />
                                         </div>
                                         <div className="font-bold text-white group-hover:text-violet-300 transition-colors">{tool.title}</div>
