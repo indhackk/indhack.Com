@@ -72,7 +72,7 @@ export function MegaFooter() {
                         COLONNE 1 — Expertises SEO
                     ══════════════════════════════════════════════════════════════ */}
                     <div>
-                        <p className="font-bold text-sm uppercase tracking-wider text-sauge mb-6">
+                        <p className="font-bold text-sm uppercase tracking-wider text-sauge-light mb-6">
                             Expertises SEO
                         </p>
                         <ul className="space-y-3">
@@ -93,7 +93,7 @@ export function MegaFooter() {
                         COLONNE 2 — SEO Local France (20 villes en 2 sous-colonnes)
                     ══════════════════════════════════════════════════════════════ */}
                     <div>
-                        <p className="font-bold text-sm uppercase tracking-wider text-sauge mb-6 flex items-center gap-2">
+                        <p className="font-bold text-sm uppercase tracking-wider text-sauge-light mb-6 flex items-center gap-2">
                             <MapPin className="w-4 h-4" />
                             SEO Local France
                         </p>
@@ -102,7 +102,7 @@ export function MegaFooter() {
                                 <Link
                                     key={city.href}
                                     href={city.href}
-                                    className="text-sm text-white/70 hover:text-sauge transition-colors"
+                                    className="text-sm text-white/70 hover:text-sauge-light transition-colors"
                                 >
                                     {city.name}
                                 </Link>
@@ -114,7 +114,7 @@ export function MegaFooter() {
                         COLONNE 3 — Ressources
                     ══════════════════════════════════════════════════════════════ */}
                     <div>
-                        <p className="font-bold text-sm uppercase tracking-wider text-sauge mb-6">
+                        <p className="font-bold text-sm uppercase tracking-wider text-sauge-light mb-6">
                             Ressources
                         </p>
                         <ul className="space-y-3">
@@ -135,7 +135,7 @@ export function MegaFooter() {
                         COLONNE 4 — Contact
                     ══════════════════════════════════════════════════════════════ */}
                     <div>
-                        <p className="font-bold text-sm uppercase tracking-wider text-sauge mb-6">
+                        <p className="font-bold text-sm uppercase tracking-wider text-sauge-light mb-6">
                             Contact
                         </p>
 
@@ -155,16 +155,16 @@ export function MegaFooter() {
                         <div className="space-y-3 mb-6">
                             <a
                                 href="tel:0661139748"
-                                className="flex items-center gap-3 text-white hover:text-sauge transition-colors"
+                                className="flex items-center gap-3 text-white hover:text-sauge-light transition-colors"
                             >
-                                <Phone className="w-4 h-4 text-sauge" />
+                                <Phone className="w-4 h-4 text-sauge-light" />
                                 <span className="font-bold">06 61 13 97 48</span>
                             </a>
                             <a
                                 href="mailto:contact@indhack.com"
                                 className="flex items-center gap-3 text-white/70 hover:text-white transition-colors text-sm"
                             >
-                                <Mail className="w-4 h-4 text-sauge" />
+                                <Mail className="w-4 h-4 text-sauge-light" />
                                 contact@indhack.com
                             </a>
                         </div>
@@ -221,7 +221,7 @@ export function MegaFooter() {
                         {/* Copyright */}
                         <p className="text-xs text-white/70 text-center">
                             © {new Date().getFullYear()}{" "}
-                            <Link href="/" className="hover:text-sauge transition-colors">
+                            <Link href="/" className="hover:text-sauge-light transition-colors">
                                 IndHack - Consultante SEO
                             </Link>
                             {" "}• Nice, France

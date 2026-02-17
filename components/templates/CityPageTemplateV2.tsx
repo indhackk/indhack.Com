@@ -414,7 +414,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
                         {ADVANTAGES.map((item, i) => (
                             <div key={i} className="text-center">
-                                <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-white/10 flex items-center justify-center text-sauge">
+                                <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-white/10 flex items-center justify-center text-sauge-light">
                                     {item.icon}
                                 </div>
                                 <h4 className="font-bold text-sm mb-1">{item.title}</h4>
@@ -653,7 +653,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                 <div className="container mx-auto px-4 max-w-3xl">
                     <div className="bg-ink p-10 rounded-2xl text-white text-center">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
-                            Prêt à dominer Google à <span className="text-sauge">{city}</span> ?
+                            Prêt à dominer Google à <span className="text-sauge-light">{city}</span> ?
                         </h2>
                         <p className="text-white/60 mb-8 max-w-lg mx-auto text-sm">
                             Audit SEO local offert. Découvrez votre potentiel de croissance en 15 minutes.

@@ -42,7 +42,7 @@ export function Hero() {
                         className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-white"
                     >
                         Dominez Google.<br />
-                        <span className="text-sauge">Devenez le N°1.</span>
+                        <span className="text-sauge-light">Devenez le N°1.</span>
                     </h1>
 
                     <p
@@ -67,7 +67,7 @@ export function Hero() {
                             aria-label="Appeler le 06 61 13 97 48"
                             className="flex items-center justify-center gap-3 h-16 px-10 rounded-full border-2 border-white/30 text-white hover:border-sauge hover:bg-white/5 transition-all duration-300 group min-h-[48px]"
                         >
-                            <Phone className="w-5 h-5 group-hover:text-sauge transition-colors" />
+                            <Phone className="w-5 h-5 group-hover:text-sauge-light transition-colors" />
                             <span className="font-bold text-base">06 61 13 97 48</span>
                         </a>
                     </div>

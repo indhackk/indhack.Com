@@ -27,13 +27,13 @@ export function CTASection() {
                     className="max-w-4xl mx-auto"
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 mb-8">
-                        <Sparkles className="w-4 h-4 text-sauge" />
-                        <span className="text-sauge font-bold text-xs uppercase tracking-[0.2em]">Accélérez votre croissance</span>
+                        <Sparkles className="w-4 h-4 text-sauge-light" />
+                        <span className="text-sauge-light font-bold text-xs uppercase tracking-[0.2em]">Accélérez votre croissance</span>
                     </div>
 
                     <h2 className="text-5xl md:text-7xl font-heading font-bold mb-8 uppercase tracking-tighter leading-[0.95]">
                         Parlons enfin de votre <br />
-                        <span className="text-sauge">Performance Business</span>.
+                        <span className="text-sauge-light">Performance Business</span>.
                     </h2>
 
                     <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed">

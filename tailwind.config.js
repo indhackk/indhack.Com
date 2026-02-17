@@ -24,6 +24,7 @@ module.exports = {
                 'texte-moyen': '#C8D0CC',
                 'accent-clair': '#9DADA4',
                 'sauge': '#2E5E4E',         // Sauge fonce pour WCAG AA 4.5:1 sur blanc ET gray-50
+                'sauge-light': '#8FBFAA',   // Sauge clair pour fonds sombres (WCAG AA sur ink)
                 'ink': '#2A3830',           // Texte principal
                 'soft': '#3D4D46',          // Texte secondaire - WCAG AA
                 'line': '#E4EBE7',          // Bordures
