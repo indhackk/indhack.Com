@@ -143,30 +143,49 @@ export default function RootLayout({
             </head>
             <body className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased text-ink bg-white`}>
 
-                {/* Google Analytics GA4 avec Consent Mode - lazyOnload pour perf */}
-                <Script
-                    src="https://www.googletagmanager.com/gtag/js?id=G-SXXS2G2753"
-                    strategy="lazyOnload"
-                />
-                <Script id="google-analytics" strategy="lazyOnload">
+                {/* Google Analytics GA4 - Chargé après interaction utilisateur pour perf */}
+                <Script id="google-analytics-delayed" strategy="lazyOnload">
                     {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
+                        (function() {
+                            var loaded = false;
+                            function loadGA() {
+                                if (loaded) return;
+                                loaded = true;
 
-                        // Consent Mode v2 - Refus par défaut (RGPD)
-                        gtag('consent', 'default', {
-                            'analytics_storage': 'denied',
-                            'ad_storage': 'denied',
-                            'ad_user_data': 'denied',
-                            'ad_personalization': 'denied',
-                            'wait_for_update': 500
-                        });
+                                var script = document.createElement('script');
+                                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-SXXS2G2753';
+                                script.async = true;
+                                document.head.appendChild(script);
 
-                        gtag('js', new Date());
-                        gtag('config', 'G-SXXS2G2753', {
-                            'anonymize_ip': true,
-                            'cookie_flags': 'SameSite=None;Secure'
-                        });
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag(){dataLayer.push(arguments);}
+                                window.gtag = gtag;
+
+                                gtag('consent', 'default', {
+                                    'analytics_storage': 'denied',
+                                    'ad_storage': 'denied',
+                                    'ad_user_data': 'denied',
+                                    'ad_personalization': 'denied',
+                                    'wait_for_update': 500
+                                });
+
+                                gtag('js', new Date());
+                                gtag('config', 'G-SXXS2G2753', {
+                                    'anonymize_ip': true,
+                                    'cookie_flags': 'SameSite=None;Secure'
+                                });
+
+                                ['click','scroll','touchstart','keydown'].forEach(function(e) {
+                                    document.removeEventListener(e, loadGA, {passive: true, capture: true});
+                                });
+                            }
+
+                            ['click','scroll','touchstart','keydown'].forEach(function(e) {
+                                document.addEventListener(e, loadGA, {passive: true, capture: true, once: true});
+                            });
+
+                            setTimeout(loadGA, 5000);
+                        })();
                     `}
                 </Script>
 
