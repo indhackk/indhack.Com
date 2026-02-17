@@ -293,16 +293,17 @@ const nextConfig = {
                         key: "Cross-Origin-Opener-Policy",
                         value: "same-origin-allow-popups",
                     },
-                    // Content Security Policy - Hardened
+                    // Content Security Policy - Hardened (with AdSense support)
                     {
                         key: "Content-Security-Policy",
                         value: [
                             "default-src 'self'",
-                            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
+                            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net",
                             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
                             "font-src 'self' https://fonts.gstatic.com",
-                            "img-src 'self' data: blob: https://images.unsplash.com https://images.pexels.com https://www.google-analytics.com https://www.googletagmanager.com https://api.dicebear.com",
-                            "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://formsubmit.co https://api.web3forms.com",
+                            "img-src 'self' data: blob: https://images.unsplash.com https://images.pexels.com https://www.google-analytics.com https://www.googletagmanager.com https://api.dicebear.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net",
+                            "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://formsubmit.co https://api.web3forms.com https://pagead2.googlesyndication.com",
+                            "frame-src 'self' https://googleads.g.doubleclick.net https://www.google.com",
                             "frame-ancestors 'self'",
                             "form-action 'self' https://formsubmit.co https://api.web3forms.com",
                             "base-uri 'self'",

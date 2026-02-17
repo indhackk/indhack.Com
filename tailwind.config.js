@@ -23,9 +23,9 @@ module.exports = {
                 'texte-clair': '#F5F7F6',
                 'texte-moyen': '#C8D0CC',
                 'accent-clair': '#9DADA4',
-                'sauge': '#7BA393',         // Sauge plus lumineux pour meilleur contraste WCAG
-                'ink': '#2A3830',           // Texte principal, moins noir
-                'soft': '#556962',          // Texte secondaire - assombri pour WCAG AA
+                'sauge': '#2E5E4E',         // Sauge fonce pour WCAG AA 4.5:1 sur blanc ET gray-50
+                'ink': '#2A3830',           // Texte principal
+                'soft': '#3D4D46',          // Texte secondaire - WCAG AA
                 'line': '#E4EBE7',          // Bordures
                 'accent': '#D4A853',        // Ambre/doré pour CTA
                 'accent-hover': '#C49A47',  // Hover state

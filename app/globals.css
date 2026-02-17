@@ -7,8 +7,8 @@
   --foreground: #2A3830;
 
   --ink: #2A3830;
-  --sauge: #7BA393;
-  --soft: #556962;
+  --sauge: #2E5E4E;  /* Darkened for WCAG AA 4.5:1 on white AND gray-50 backgrounds */
+  --soft: #3D4D46;   /* Darkened for WCAG AA contrast */
   --line: #E4EBE7;
   --fond-clair: #FAFBFA;
   --accent: #D4A853;

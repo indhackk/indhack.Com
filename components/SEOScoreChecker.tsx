@@ -97,7 +97,7 @@ export function SEOScoreChecker() {
                         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
                             Testez votre <span className="text-sauge">Performance SEO</span>
                         </h2>
-                        <p className="text-white/60 max-w-xl mx-auto">
+                        <p className="text-white/70 max-w-xl mx-auto">
                             Interrogation en temps réel des serveurs Google (Lighthouse) pour un diagnostic technique immédiat et réel.
                         </p>
                     </motion.div>
@@ -162,7 +162,7 @@ export function SEOScoreChecker() {
                                             <CheckCircle className="w-8 h-8" />
                                         </div>
                                         <h3 className="text-2xl font-bold mb-4">Site détecté avec succès !</h3>
-                                        <p className="text-white/60 mb-8 max-w-lg mx-auto">
+                                        <p className="text-white/70 mb-8 max-w-lg mx-auto">
                                             Pour obtenir votre <strong>Score SEO réel</strong> et la liste des erreurs techniques à corriger, je dois réaliser un crawl complet de votre site ({url}).
                                         </p>
 

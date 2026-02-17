@@ -72,9 +72,9 @@ export function MegaFooter() {
                         COLONNE 1 — Expertises SEO
                     ══════════════════════════════════════════════════════════════ */}
                     <div>
-                        <h4 className="font-bold text-sm uppercase tracking-wider text-sauge mb-6">
+                        <p className="font-bold text-sm uppercase tracking-wider text-sauge mb-6">
                             Expertises SEO
-                        </h4>
+                        </p>
                         <ul className="space-y-3">
                             {SERVICES.map(service => (
                                 <li key={service.href}>
@@ -93,10 +93,10 @@ export function MegaFooter() {
                         COLONNE 2 — SEO Local France (20 villes en 2 sous-colonnes)
                     ══════════════════════════════════════════════════════════════ */}
                     <div>
-                        <h4 className="font-bold text-sm uppercase tracking-wider text-sauge mb-6 flex items-center gap-2">
+                        <p className="font-bold text-sm uppercase tracking-wider text-sauge mb-6 flex items-center gap-2">
                             <MapPin className="w-4 h-4" />
                             SEO Local France
-                        </h4>
+                        </p>
                         <div className="grid grid-cols-2 gap-x-4 gap-y-2">
                             {CITIES.map(city => (
                                 <Link
@@ -114,9 +114,9 @@ export function MegaFooter() {
                         COLONNE 3 — Ressources
                     ══════════════════════════════════════════════════════════════ */}
                     <div>
-                        <h4 className="font-bold text-sm uppercase tracking-wider text-sauge mb-6">
+                        <p className="font-bold text-sm uppercase tracking-wider text-sauge mb-6">
                             Ressources
-                        </h4>
+                        </p>
                         <ul className="space-y-3">
                             {RESOURCES.map(resource => (
                                 <li key={resource.href}>
@@ -135,9 +135,9 @@ export function MegaFooter() {
                         COLONNE 4 — Contact
                     ══════════════════════════════════════════════════════════════ */}
                     <div>
-                        <h4 className="font-bold text-sm uppercase tracking-wider text-sauge mb-6">
+                        <p className="font-bold text-sm uppercase tracking-wider text-sauge mb-6">
                             Contact
-                        </h4>
+                        </p>
 
                         {/* Logo + Description */}
                         <Link href="/" className="inline-flex items-center gap-2 mb-4 group">
@@ -211,7 +211,7 @@ export function MegaFooter() {
                                 <Link
                                     key={link.href}
                                     href={link.href}
-                                    className="text-xs text-white/50 hover:text-white transition-colors"
+                                    className="text-xs text-white/70 hover:text-white transition-colors"
                                 >
                                     {link.title}
                                 </Link>
@@ -219,7 +219,7 @@ export function MegaFooter() {
                         </div>
 
                         {/* Copyright */}
-                        <p className="text-xs text-white/50 text-center">
+                        <p className="text-xs text-white/70 text-center">
                             © {new Date().getFullYear()}{" "}
                             <Link href="/" className="hover:text-sauge transition-colors">
                                 IndHack - Consultante SEO

@@ -36,7 +36,7 @@ export function CTASection() {
                         <span className="text-sauge">Performance Business</span>.
                     </h2>
 
-                    <p className="text-xl md:text-2xl text-white/50 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed">
                         Le SEO est un moteur de revenus, pas un coût. <br />
                         Échangeons sur votre stratégie lors d'un audit offert.
                     </p>
