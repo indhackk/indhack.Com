@@ -82,9 +82,10 @@ export default function BrainCanvas() {
             scene.add(points);
 
             const g2 = new THREE.BufferGeometry();
-            const p2 = new Float32Array(500);
+            const lineCount = 80;
+            const p2 = new Float32Array(lineCount * 6);
 
-            for (let i = 0; i < 80; i++) {
+            for (let i = 0; i < lineCount; i++) {
                 const a = Math.floor(Math.random() * N) * 3;
                 const b = Math.floor(Math.random() * N) * 3;
 
@@ -98,6 +99,8 @@ export default function BrainCanvas() {
             }
 
             g2.setAttribute('position', new THREE.BufferAttribute(p2, 3));
+            geo.computeBoundingSphere();
+            g2.computeBoundingSphere();
             const m2 = new THREE.LineBasicMaterial({ color: 0xA3B1AA, transparent: true, opacity: 0.15 });
             lines = new THREE.LineSegments(g2, m2);
             scene.add(lines);

@@ -56,7 +56,7 @@ export function Hero() {
                     >
                         <Button
                             onClick={openAuditModal}
-                            className="bg-white text-ink hover:bg-sauge hover:text-white hover:scale-105 shadow-2xl shadow-white/20 rounded-full h-16 px-10 text-base font-bold transition-all duration-300 hover:-translate-y-0.5"
+                            className="bg-white text-black hover:bg-sauge hover:text-white hover:scale-105 shadow-2xl shadow-white/20 rounded-full h-16 px-10 text-base font-bold transition-all duration-300 hover:-translate-y-0.5"
                         >
                             Audit Gratuit
                             <ArrowRight className="ml-2 w-5 h-5" />
