@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         type: "article",
         publishedTime: "2026-02-17",
         authors: ["Indiana Aflalo"],
-        images: [{ url: "https://indhack.com/images/blog/performance-web-2026.webp", width: 1200, height: 630, alt: "Performance Web 2026 - Comparatif PageSpeed" }],
+        images: [{ url: "https://indhack.com/images/blog/checklist-seo-2026.jpg", width: 1200, height: 630, alt: "Performance Web 2026 - Comparatif PageSpeed" }],
         locale: "fr_FR",
         siteName: "IndHack",
     },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Pourquoi Votre Site Est Lent : 93/100 vs 56/100",
         description: "Données réelles PageSpeed. Le vrai coût d'un site mal optimisé.",
-        images: ["https://indhack.com/images/blog/performance-web-2026.webp"],
+        images: ["https://indhack.com/images/blog/checklist-seo-2026.jpg"],
     },
     alternates: {
         canonical: "https://indhack.com/blog/pourquoi-votre-site-est-lent-performance-web-2026",
@@ -78,7 +78,7 @@ export default function PerformanceWebArticlePage() {
                         "description": "57% des sites ne passent pas les Core Web Vitals de Google. Score IndHack : 93/100. Score moyen concurrent WordPress : 56/100. Données réelles et analyse.",
                         "image": {
                             "@type": "ImageObject",
-                            "url": "https://indhack.com/images/blog/performance-web-2026.webp",
+                            "url": "https://indhack.com/images/blog/checklist-seo-2026.jpg",
                             "width": 1200,
                             "height": 630,
                         },

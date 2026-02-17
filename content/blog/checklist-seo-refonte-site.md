@@ -3,7 +3,7 @@ title: "Checklist SEO Refonte de Site : 45 Points à Vérifier [2026]"
 description: "La checklist complète pour réussir votre refonte de site sans perdre votre SEO. 45 points avant, pendant et après la migration. Téléchargeable et imprimable."
 date: "2026-02-16"
 category: "Refonte"
-image: "/images/blog/vitesse-performance-blog-seo.jpg"
+image: "/images/blog/refonte-site-seo.jpg"
 author: "Indiana Aflalo"
 keywords: ["checklist seo refonte site", "checklist refonte site web", "refonte site web sans perdre seo", "migration seo checklist", "checklist migration site", "refonte seo", "liste vérification refonte", "audit pre-migration"]
 ---
