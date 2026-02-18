@@ -1,3 +1,61 @@
+const fs = require('fs');
+const path = require('path');
+const matter = require('gray-matter');
+
+// ══════════════════════════════════════════════════════════════
+// LASTMOD DYNAMIQUES - Récupère les dates des articles blog
+// ══════════════════════════════════════════════════════════════
+function getBlogPostDates() {
+    const blogDir = path.join(process.cwd(), 'content/blog');
+    const dates = {};
+
+    try {
+        const files = fs.readdirSync(blogDir);
+        files.forEach(file => {
+            if (file.endsWith('.md')) {
+                const filePath = path.join(blogDir, file);
+                const fileContent = fs.readFileSync(filePath, 'utf8');
+                const { data } = matter(fileContent);
+                const slug = file.replace('.md', '');
+
+                // Utilise dateModified si présent, sinon date
+                const dateStr = data.dateModified || data.date;
+                if (dateStr) {
+                    dates[`/blog/${slug}`] = new Date(dateStr).toISOString();
+                }
+            }
+        });
+    } catch (error) {
+        console.warn('Could not read blog dates:', error.message);
+    }
+
+    return dates;
+}
+
+// Cache des dates blog (calculé une seule fois au build)
+const blogDates = getBlogPostDates();
+
+// Dates fixes pour les pages principales (dernière mise à jour significative)
+const staticPageDates = {
+    '/': '2026-02-18',
+    '/consultant-seo': '2026-02-15',
+    '/seo-local': '2026-02-18',
+    '/audit-seo': '2026-02-10',
+    '/referencement-naturel': '2026-02-10',
+    '/creation-site-web': '2026-01-20',
+    '/refonte-site-web': '2026-01-20',
+    '/outils': '2026-02-18',
+    '/outils/testeur-visibilite-ia': '2026-02-15',
+    '/outils/audit-seo-gratuit': '2026-02-18',
+    '/outils/extracteur-mots-cles': '2026-02-18',
+    '/outils/generateur-robots-txt': '2026-02-10',
+    '/outils/generateur-schema-json-ld': '2026-01-15',
+    '/outils/simulateur-visibilite-locale': '2026-01-15',
+    '/a-propos': '2026-01-10',
+    '/contact': '2026-01-10',
+    '/faq': '2026-01-15',
+};
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
     siteUrl: 'https://indhack.com',
@@ -101,7 +159,8 @@ module.exports = {
             '/outils/generateur-robots-txt',
             '/outils/generateur-schema-json-ld',
             '/outils/simulateur-visibilite-locale',
-            '/outils/gmb-autopilot'
+            '/outils/gmb-autopilot',
+            '/outils/extracteur-mots-cles'
         ];
 
         let priority = config.priority;
@@ -129,11 +188,33 @@ module.exports = {
             changefreq = 'monthly';
         }
 
+        // ══════════════════════════════════════════════════════════════
+        // LASTMOD DYNAMIQUE
+        // ══════════════════════════════════════════════════════════════
+        let lastmod;
+
+        // 1. Articles blog → date du frontmatter
+        if (blogDates[path]) {
+            lastmod = blogDates[path];
+        }
+        // 2. Pages avec date statique définie
+        else if (staticPageDates[path]) {
+            lastmod = new Date(staticPageDates[path]).toISOString();
+        }
+        // 3. Pages villes → date de dernière mise à jour du template
+        else if (path.startsWith('/consultant-seo-')) {
+            lastmod = new Date('2026-02-18').toISOString();
+        }
+        // 4. Fallback → date du build
+        else {
+            lastmod = new Date().toISOString();
+        }
+
         return {
             loc: path,
             changefreq,
             priority,
-            lastmod: new Date().toISOString(),
+            lastmod,
         };
     },
 };

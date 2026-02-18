@@ -121,11 +121,7 @@ const nextConfig = {
                 destination: '/outils',
                 permanent: true,
             },
-            {
-                source: '/outils/extracteur-mots-cles',
-                destination: '/outils',
-                permanent: true,
-            },
+            // /outils/extracteur-mots-cles - SUPPRIMÉ : page recréée
             // ══════════════════════════════════════════════════════════════
             // REDIRECTIONS VILLES SUPPRIMEES → Villes proches
             // ══════════════════════════════════════════════════════════════

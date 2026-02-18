@@ -64,6 +64,8 @@ Ces chiffres proviennent d'études récentes (Seer Interactive, novembre 2025 po
 
 **Pour les entreprises locales**, l'impact est direct. Les utilisateurs demandent de plus en plus "quel est le meilleur [service] près de [ville]" aux IA. C'est particulièrement vrai pour le [référencement naturel local](/referencement-naturel), où les IA citent de plus en plus les fiches Google Business Profile comme source.
 
+**Pour les entreprises tech et startups B2B**, le GEO est crucial. Les décideurs IT utilisent ChatGPT pour comparer des solutions SaaS, évaluer des prestataires tech ou identifier des partenaires. J'accompagne de nombreuses [startups de Sophia Antipolis](/consultant-seo-sophia-antipolis) sur ce sujet — la technopole compte plus de 2 500 entreprises qui doivent se différencier dans les réponses IA.
+
 ## Les 4 piliers du GEO : comment optimiser votre site pour les IA
 
 ### Pilier 1 — Accessibilité technique aux crawlers IA

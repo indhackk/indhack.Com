@@ -328,8 +328,12 @@ export default function ReferencementClient() {
                         Avant de vous engager, utilisez mes outils d'analyse pour faire un état des lieux de votre site.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
+                        <Link href="/outils/audit-seo-gratuit" className="inline-flex items-center justify-center px-6 py-3 bg-sauge text-white rounded-full font-bold hover:bg-ink transition-colors">
+                            Audit SEO gratuit
+                            <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
                         <Link href="/outils" className="inline-flex items-center justify-center px-6 py-3 border border-gray-200 rounded-full text-ink font-bold hover:border-sauge hover:text-sauge transition-colors bg-gray-50">
-                            <span className="mr-2">🛠️</span> Voir tous les outils SEO
+                            Voir tous les outils
                             <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
                     </div>

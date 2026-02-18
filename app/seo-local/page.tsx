@@ -188,6 +188,46 @@ export default function SeoLocalPage() {
                 </div>
             </section>
 
+            {/* Focus Technopole - Sophia Antipolis */}
+            <section className="py-12 bg-white border-t border-gray-100">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="bg-gradient-to-r from-sauge/5 to-sauge/10 p-8 rounded-2xl border border-sauge/20">
+                            <div className="flex flex-col md:flex-row md:items-center gap-6">
+                                <div className="flex-1">
+                                    <span className="text-sauge font-bold text-xs uppercase tracking-wider">Focus Technopole</span>
+                                    <h3 className="text-xl font-heading font-bold text-ink mt-2 mb-3">
+                                        SEO pour startups tech à Sophia Antipolis
+                                    </h3>
+                                    <p className="text-soft text-sm mb-4">
+                                        Première technopole d'Europe avec plus de 2 500 entreprises tech, Sophia Antipolis nécessite une expertise SEO adaptée aux cycles de financement et à la croissance rapide des startups B2B.
+                                    </p>
+                                    <Link
+                                        href="/consultant-seo-sophia-antipolis"
+                                        className="inline-flex items-center gap-2 text-sauge font-semibold hover:underline"
+                                    >
+                                        Découvrir mon expertise Sophia Antipolis
+                                        <ArrowRight className="w-4 h-4" />
+                                    </Link>
+                                </div>
+                                <div className="flex-shrink-0">
+                                    <div className="grid grid-cols-2 gap-3">
+                                        <div className="bg-white p-4 rounded-xl text-center shadow-sm">
+                                            <p className="text-2xl font-bold text-sauge">2 500+</p>
+                                            <p className="text-xs text-soft">Entreprises tech</p>
+                                        </div>
+                                        <div className="bg-white p-4 rounded-xl text-center shadow-sm">
+                                            <p className="text-2xl font-bold text-sauge">36 000</p>
+                                            <p className="text-xs text-soft">Emplois</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Avantages */}
             <section className="py-16 bg-ink text-white">
                 <div className="container mx-auto px-4">
@@ -229,21 +269,26 @@ export default function SeoLocalPage() {
                 </div>
             </section>
 
-            {/* Outil gratuit - Maillage */}
+            {/* Outils gratuits - Maillage */}
             <section className="py-12 bg-sauge/5 border-y border-sauge/10">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <p className="text-sauge font-bold text-sm uppercase tracking-wider mb-3">Outil Gratuit</p>
+                    <div className="max-w-4xl mx-auto text-center">
+                        <p className="text-sauge font-bold text-sm uppercase tracking-wider mb-3">Outils Gratuits</p>
                         <h2 className="text-2xl font-heading font-bold text-ink mb-4">
-                            Qui domine votre ville ?
+                            Analysez votre SEO local
                         </h2>
                         <p className="text-soft mb-6">
-                            Découvrez en temps réel qui sont les leaders SEO dans votre secteur et votre ville.
+                            Testez gratuitement la visibilité de votre site et identifiez vos opportunités de croissance.
                         </p>
-                        <Link href="/outils/simulateur-visibilite-locale" className="inline-flex items-center gap-2 bg-sauge text-white px-6 py-3 rounded-xl font-semibold hover:bg-ink transition-all">
-                            Lancer le simulateur <ArrowRight className="w-4 h-4" />
-                        </Link>
-                        <p className="text-sm text-soft mt-4">
+                        <div className="flex flex-wrap justify-center gap-4 mb-4">
+                            <Link href="/outils/audit-seo-gratuit" className="inline-flex items-center gap-2 bg-sauge text-white px-6 py-3 rounded-xl font-semibold hover:bg-ink transition-all">
+                                Audit SEO gratuit <ArrowRight className="w-4 h-4" />
+                            </Link>
+                            <Link href="/outils/simulateur-visibilite-locale" className="inline-flex items-center gap-2 bg-ink text-white px-6 py-3 rounded-xl font-semibold hover:bg-sauge transition-all">
+                                Simulateur local <MapPin className="w-4 h-4" />
+                            </Link>
+                        </div>
+                        <p className="text-sm text-soft">
                             <Link href="/outils" className="text-sauge hover:underline">Voir tous mes outils SEO gratuits →</Link>
                         </p>
                     </div>

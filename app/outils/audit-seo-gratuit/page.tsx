@@ -4,14 +4,15 @@ import { AuditSEO } from "./AuditSEO";
 import { ArrowRight, Search, Bot, Code2, FileCode, Gauge, TrendingUp, Zap, Target, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Audit SEO Gratuit en 1 Clic — Score /100",
-    description: "Analysez gratuitement le SEO de votre site en 1 clic. Score /100, 15 critères vérifiés dont la compatibilité IA. Recommandations actionnables pour PME.",
+    title: "Audit SEO Gratuit : Analyse de Site en 1 Clic | Score /100",
+    description: "Analysez votre site avec notre outil d'audit SEO gratuit. Score /100, 15 critères vérifiés dont compatibilité IA. Analyse seo gratuite sans inscription.",
+    keywords: ["audit seo gratuit", "analyse seo gratuit", "audit site gratuit", "analyseur seo", "test seo gratuit", "outil audit seo"],
     alternates: {
         canonical: "https://indhack.com/outils/audit-seo-gratuit"
     },
     openGraph: {
-        title: "Audit SEO Gratuit — Score /100 en 30 secondes",
-        description: "15 critères analysés dont la visibilité IA. Gratuit, sans inscription. L'outil SEO français de référence.",
+        title: "Audit SEO Gratuit — Analyse de Site en 30 Secondes",
+        description: "Outil d'analyse SEO gratuit : 15 critères vérifiés, score /100, compatibilité IA. Sans inscription. L'analyseur SEO français de référence.",
         url: "https://indhack.com/outils/audit-seo-gratuit",
         type: "website",
     }
@@ -268,6 +269,142 @@ export default function AuditSEOPage() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Editorial Content - SEO */}
+                <section className="py-16 bg-ink border-t border-white/5">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto prose prose-invert prose-sauge">
+                            {/* Section 1: Comment fonctionne l'outil */}
+                            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-6">
+                                Comment fonctionne notre outil d&apos;audit SEO gratuit ?
+                            </h2>
+                            <div className="bg-white/5 rounded-xl p-6 border border-white/10 mb-8">
+                                <p className="text-white/70 leading-relaxed mb-4">
+                                    Notre <strong className="text-white">analyseur SEO gratuit</strong> effectue une analyse complète de votre page en quelques secondes. Voici le processus étape par étape :
+                                </p>
+                                <ol className="text-white/70 space-y-3 list-decimal list-inside">
+                                    <li><strong className="text-white">Crawl de la page</strong> — L&apos;outil récupère le code HTML complet de l&apos;URL que vous soumettez, exactement comme le ferait Googlebot.</li>
+                                    <li><strong className="text-white">Analyse des balises</strong> — Extraction et vérification des balises title, meta description, H1, H2-H6, et des attributs alt des images.</li>
+                                    <li><strong className="text-white">Test robots.txt</strong> — Récupération et analyse de votre fichier robots.txt pour vérifier si les crawlers (Google, Bing, IA) peuvent accéder à votre site.</li>
+                                    <li><strong className="text-white">Vérification sitemap</strong> — Détection de la présence d&apos;un sitemap.xml déclaré dans le robots.txt ou à l&apos;URL standard.</li>
+                                    <li><strong className="text-white">Calcul du score</strong> — Chaque critère validé ajoute des points. Le score final /100 reflète la santé SEO technique de votre page.</li>
+                                </ol>
+                                <p className="text-white/70 leading-relaxed mt-4">
+                                    L&apos;analyse complète prend moins de 30 secondes. Les résultats sont mis en cache pendant 24h pour optimiser les performances.
+                                </p>
+                            </div>
+
+                            {/* Section 2: Que vérifie l'analyseur */}
+                            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-6">
+                                Que vérifie notre analyseur SEO ? Les 15 critères détaillés
+                            </h2>
+                            <div className="space-y-4 mb-8">
+                                <div className="bg-white/5 rounded-xl p-5 border border-white/10">
+                                    <h3 className="font-bold text-sauge text-lg mb-3">Critères techniques (6 points)</h3>
+                                    <ul className="text-white/70 space-y-2">
+                                        <li><strong className="text-white">HTTPS</strong> — Votre site est-il sécurisé ? Google pénalise les sites HTTP depuis 2018.</li>
+                                        <li><strong className="text-white">Viewport</strong> — La balise viewport est-elle présente ? Indispensable pour le mobile-first indexing.</li>
+                                        <li><strong className="text-white">Vitesse estimée</strong> — Analyse du poids de page et des ressources bloquantes.</li>
+                                        <li><strong className="text-white">Sitemap.xml</strong> — Présence d&apos;un sitemap pour faciliter le crawl de Google.</li>
+                                        <li><strong className="text-white">Robots.txt</strong> — Le fichier existe-t-il et autorise-t-il le crawl ?</li>
+                                        <li><strong className="text-white">Open Graph / Twitter Cards</strong> — Balises de partage social configurées.</li>
+                                    </ul>
+                                </div>
+                                <div className="bg-white/5 rounded-xl p-5 border border-white/10">
+                                    <h3 className="font-bold text-sauge text-lg mb-3">Critères de contenu (5 points)</h3>
+                                    <ul className="text-white/70 space-y-2">
+                                        <li><strong className="text-white">Title</strong> — Présence, longueur (50-60 caractères), mots-clés. C&apos;est le critère on-page le plus important.</li>
+                                        <li><strong className="text-white">Meta description</strong> — Présence et longueur optimale (140-155 caractères).</li>
+                                        <li><strong className="text-white">H1 unique</strong> — Une seule balise H1 par page, contenant le mot-clé principal.</li>
+                                        <li><strong className="text-white">Structure Hn</strong> — Hiérarchie logique H2 → H3 → H4 sans saut de niveau.</li>
+                                        <li><strong className="text-white">Ratio texte/HTML</strong> — Au moins 10% de contenu textuel vs code HTML.</li>
+                                    </ul>
+                                </div>
+                                <div className="bg-white/5 rounded-xl p-5 border border-white/10">
+                                    <h3 className="font-bold text-sauge text-lg mb-3">Critères d&apos;accessibilité (2 points)</h3>
+                                    <ul className="text-white/70 space-y-2">
+                                        <li><strong className="text-white">Images alt</strong> — Toutes les images ont-elles un attribut alt descriptif ?</li>
+                                        <li><strong className="text-white">Attributs ARIA</strong> — Présence de labels pour les formulaires et éléments interactifs.</li>
+                                    </ul>
+                                </div>
+                                <div className="bg-white/5 rounded-xl p-5 border border-sauge/30">
+                                    <h3 className="font-bold text-sauge text-lg mb-3">Critères IA-Ready (2 points) — Exclusif</h3>
+                                    <ul className="text-white/70 space-y-2">
+                                        <li><strong className="text-white">GPTBot autorisé</strong> — Le crawler d&apos;OpenAI peut-il accéder à votre contenu ? Si oui, vous pouvez apparaître dans les réponses de ChatGPT.</li>
+                                        <li><strong className="text-white">Claude-Web / PerplexityBot</strong> — Vérification pour les autres IA génératives majeures.</li>
+                                    </ul>
+                                    <p className="text-white/50 text-sm mt-3">
+                                        C&apos;est le seul outil d&apos;audit SEO gratuit en France qui vérifie la compatibilité avec les crawlers IA. Pour une analyse plus poussée, utilisez notre <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">testeur de visibilité IA</Link>.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Section 3: Gratuit vs Professionnel */}
+                            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-6">
+                                Quelle différence entre un audit SEO gratuit et un audit professionnel ?
+                            </h2>
+                            <div className="bg-white/5 rounded-xl border border-white/10 overflow-hidden mb-8">
+                                <table className="w-full text-sm">
+                                    <thead className="bg-white/10">
+                                        <tr>
+                                            <th className="text-left p-4 text-white font-bold">Critère</th>
+                                            <th className="text-center p-4 text-white font-bold">Audit gratuit</th>
+                                            <th className="text-center p-4 text-sauge font-bold">Audit professionnel</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="text-white/70">
+                                        <tr className="border-t border-white/10">
+                                            <td className="p-4">Pages analysées</td>
+                                            <td className="text-center p-4">1 page</td>
+                                            <td className="text-center p-4 text-sauge">Site entier (100+ pages)</td>
+                                        </tr>
+                                        <tr className="border-t border-white/10">
+                                            <td className="p-4">Critères vérifiés</td>
+                                            <td className="text-center p-4">15 critères techniques</td>
+                                            <td className="text-center p-4 text-sauge">200+ critères</td>
+                                        </tr>
+                                        <tr className="border-t border-white/10">
+                                            <td className="p-4">Analyse sémantique</td>
+                                            <td className="text-center p-4">❌</td>
+                                            <td className="text-center p-4 text-sauge">✅ Mots-clés, intentions</td>
+                                        </tr>
+                                        <tr className="border-t border-white/10">
+                                            <td className="p-4">Analyse concurrentielle</td>
+                                            <td className="text-center p-4">❌</td>
+                                            <td className="text-center p-4 text-sauge">✅ Top 10 SERP</td>
+                                        </tr>
+                                        <tr className="border-t border-white/10">
+                                            <td className="p-4">Backlinks</td>
+                                            <td className="text-center p-4">❌</td>
+                                            <td className="text-center p-4 text-sauge">✅ Profil complet</td>
+                                        </tr>
+                                        <tr className="border-t border-white/10">
+                                            <td className="p-4">Core Web Vitals</td>
+                                            <td className="text-center p-4">Basique</td>
+                                            <td className="text-center p-4 text-sauge">✅ LCP, INP, CLS détaillés</td>
+                                        </tr>
+                                        <tr className="border-t border-white/10">
+                                            <td className="p-4">Recommandations</td>
+                                            <td className="text-center p-4">Génériques</td>
+                                            <td className="text-center p-4 text-sauge">Personnalisées + priorisées</td>
+                                        </tr>
+                                        <tr className="border-t border-white/10">
+                                            <td className="p-4">Livrables</td>
+                                            <td className="text-center p-4">Score /100</td>
+                                            <td className="text-center p-4 text-sauge">Rapport PDF + roadmap</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p className="text-white/70 leading-relaxed mb-4">
+                                Cet outil d&apos;<strong className="text-white">audit SEO gratuit</strong> est parfait pour un premier diagnostic rapide. Il vous permet d&apos;identifier les erreurs critiques et de vérifier si votre site respecte les fondamentaux du référencement naturel.
+                            </p>
+                            <p className="text-white/70 leading-relaxed mb-6">
+                                Pour une <strong className="text-white">analyse SEO approfondie</strong> incluant l&apos;étude de la concurrence, l&apos;audit sémantique, l&apos;analyse des backlinks et une roadmap d&apos;actions priorisées par ROI, découvrez mon <Link href="/audit-seo" className="text-sauge hover:underline">service d&apos;audit SEO professionnel</Link>. En tant que <Link href="/consultant-seo" className="text-sauge hover:underline">consultante SEO freelance</Link>, j&apos;accompagne les PME et startups dans leur stratégie de <Link href="/referencement-naturel" className="text-sauge hover:underline">référencement naturel</Link>.
+                            </p>
                         </div>
                     </div>
                 </section>

@@ -42,6 +42,8 @@ Une **fiche GBP** bien optimisée peut **doubler votre visibilité locale** en q
 
 Votre site doit cibler les villes de votre **zone de chalandise** avec du contenu unique pour chaque localité. Nice, Cannes, Antibes, Monaco — chaque marché a ses spécificités.
 
+Un cas particulier : [**Sophia Antipolis**](/consultant-seo-sophia-antipolis), première technopole d'Europe avec plus de 2 500 entreprises. Les startups tech et éditeurs SaaS de Sophia ont besoin d'un SEO adapté à leur cycle de croissance rapide et leur cible B2B internationale.
+
 Chaque page doit avoir du **contenu unique**, pas juste un changement de nom de ville. C'est ce qu'on appelle le **cocon sémantique local**.
 
 ## Collecter des avis clients locaux
