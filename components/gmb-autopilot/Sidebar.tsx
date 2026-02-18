@@ -56,7 +56,7 @@ export function Sidebar({
         <aside className="w-64 h-screen bg-white border-r border-gray-100 flex flex-col fixed left-0 top-0">
             {/* Logo */}
             <div className="p-5 border-b border-gray-100">
-                <Link href="/tools/gmb-autopilot" className="flex items-center gap-3">
+                <Link href="/outils/gmb-autopilot" className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-gradient-to-br from-sauge to-sauge/80 rounded-xl flex items-center justify-center shadow-sm">
                         <Zap className="w-5 h-5 text-white" />
                     </div>

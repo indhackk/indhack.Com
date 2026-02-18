@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         canonical: `https://indhack.com/${cityData.slug}`
     },
     openGraph: {
-        title: `Consultante SEO Nice | Indiana Aflalo`,
+        title: `Consultante SEO Nice | IndHack`,
         description: `Dominez les résultats Google à Nice. Référencement local, audit SEO et stratégie digitale sur-mesure pour entreprises des Alpes-Maritimes.`,
         url: `https://indhack.com/${cityData.slug}`,
     }

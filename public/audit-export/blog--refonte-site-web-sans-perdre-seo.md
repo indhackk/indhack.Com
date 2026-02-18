@@ -1,0 +1,94 @@
+# Audit SEO : /blog/refonte-site-web-sans-perdre-seo
+
+## Informations de base
+
+- **URL** : https://indhack.com/blog/refonte-site-web-sans-perdre-seo
+- **Title** : Refonte de site web : comment ne pas perdre son SEO ?
+- **Meta Description** : Guide complet pour réussir votre refonte de site sans perdre vos positions Google. Checklist, redirections, erreurs à éviter, planning.
+- **H1** : Refonte de site web : comment ne pas perdre son SEO ?
+- **Nombre de mots** : 1331
+
+## Structure des titres
+
+- **H2** : Pourquoi les refontes SEO échouent ?
+- **H2** : Avant la refonte : l'audit préalable
+  - **H3** : Inventorier l'existant
+  - **H3** : Identifier vos pages stars
+  - **H3** : Cartographier les redirections
+- **H2** : Pendant la refonte : les règles à respecter
+  - **H3** : Conserver la structure d'URL si possible
+  - **H3** : Implémenter les redirections 301
+  - **H3** : Conserver le contenu performant
+  - **H3** : Optimiser la vitesse
+- **H2** : Le jour J : la mise en ligne
+  - **H3** : Checklist de lancement
+  - **H3** : Actions post-lancement
+- **H2** : Après la refonte : le suivi
+  - **H3** : Semaine 1-2 : surveillance intensive
+  - **H3** : Mois 1-3 : stabilisation
+  - **H3** : Signaux de succès
+- **H2** : Les erreurs fatales à éviter
+  - **H3** : Erreur #1 : Lancer sans redirections
+  - **H3** : Erreur #2 : Noindex accidentel
+  - **H3** : Erreur #3 : Supprimer du contenu performant
+  - **H3** : Erreur #4 : Changer de domaine sans migration
+  - **H3** : Erreur #5 : Oublier les backlinks
+- **H2** : Ce qu'il faut retenir
+- **H2** : Pour aller plus loin
+- **H2** : Questions fréquentes
+  - **H3** : Combien de temps dure une refonte SEO-safe ?
+  - **H3** : Faut-il un consultant SEO pour une refonte ?
+  - **H3** : Que faire si j'ai déjà perdu du trafic ?
+
+## Contenu textuel complet
+
+```
+Une refonte de site web mal préparée peut anéantir des années de travail SEO en quelques jours. J'ai vu des entreprises perdre 80% de leur trafic organique du jour au lendemain à cause d'erreurs évitables. En tant que consultante SEO, je vous livre la méthode complète pour réussir votre refonte sans sacrifier vos positions Google. Avant de commencer, testez votre site actuel avec notre outil d'audit SEO gratuit. Pourquoi les refontes SEO échouent ? Une refonte mal préparée peut faire perdre 50 à 80 % du trafic organique en quelques jours (source : études de cas SEMrush). La plupart des agences web se concentrent sur le design et les fonctionnalités. Le SEO est traité après coup, quand le site est déjà en ligne. Résultat : | Erreur | Conséquence | |--------|-------------| | URLs modifiées sans redirections | Pages introuvables, erreurs 404 | | Structure de site changée | Google perd ses repères | | Contenu supprimé ou modifié | Perte des positions acquises | | Temps de chargement dégradé | Core Web Vitals dans le rouge | | Balises meta oubliées | Indexation compromise | La bonne nouvelle : avec une préparation rigoureuse, vous pouvez refondre votre site ET améliorer votre SEO. Avant la refonte : l'audit préalable Inventorier l'existant Avant de toucher à quoi que ce soit, documentez tout ce qui fonctionne : | Élément à auditer | Outil recommandé | |-------------------|------------------| | Liste des URLs | Screaming Frog (crawl complet) | | Positions actuelles | Ahrefs, SEMrush ou Search Console | | Trafic par page | Google Analytics | | Backlinks | Ahrefs, Majestic | | Structure de liens internes | Screaming Frog | Identifier vos pages stars Toutes vos pages n'ont pas la même valeur. Identifiez les 20% qui génèrent 80% du trafic : Pages les plus visitées (Analytics) Pages les mieux positionnées (Search Console) Pages qui reçoivent des backlinks (Ahrefs) Pages qui convertissent (Analytics → Conversions) Ces pages sont prioritaires : elles ne doivent subir aucune régression. Cartographier les redirections Créez un tableau de correspondance entre anciennes et nouvelles URLs : | Ancienne URL | Nouvelle URL | Statut | |--------------|--------------|--------| | /services/plomberie | /plomberie | Redirect 301 | | /blog/article-1 | /blog/article-1 | Identique | | /contact.html | /contact | Redirect 301 | | /page-obsolete | - | Supprimée (410) | Règle d'or : chaque ancienne URL doit avoir une destination. Pendant la refonte : les règles à respecter Conserver la structure d'URL si possible Le mieux est de garder les mêmes URLs. Si vous devez les modifier : Gardez une logique similaire Évitez les URLs trop longues ou avec paramètres Utilisez des mots-clés pertinents Pas d'accents, pas de majuscules, tirets uniquement | Avant | Après (bon) | Après (mauvais) | |-------|-------------|-----------------| | /plombier-nice | /plombier-nice | /services/plomberie-chauffage-nice-06 | | /blog/seo-2024 | /blog/seo-2025 | /actualites/article-42 | Implémenter les redirections 301 Les redirections 301 indiquent à Google que la page a définitivement changé d'adresse. Le "jus SEO" est transféré à hauteur de ~90%. Pour Next.js (le framework que j'utilise chez IndHack) : Conserver le contenu performant Ne réécrivez pas les pages qui rankent bien. Si vous devez modifier le contenu : Gardez les mots-clés principaux aux mêmes endroits Gardez la structure Hn (H1, H2, H3...) Gardez les paragraphes clés qui matchent l'intention de recherche Améliorez plutôt que de remplacer Optimiser la vitesse Une refonte est l'occasion d'améliorer les performances : | Objectif | Seuil recommandé | |----------|-----------------| | LCP (Largest Contentful Paint) | < 2.5s | | FID (First Input Delay) | < 100ms | | CLS (Cumulative Layout Shift) | < 0.1 | | TTFB (Time To First Byte) | < 800ms | Technologies performantes : Next.js, Nuxt.js (rendu serveur) Images optimisées (WebP, lazy loading) CDN (Cloudflare, Vercel Edge) Cache agressif Le jour J : la mise en ligne Checklist de lancement Avant de basculer en production : [ ] Toutes les redirections sont en place [ ] Sitemap XML mis à jour [ ] Robots.txt vérifié (pas de noindex accidentel) [ ] Balises meta sur toutes les pages [ ] Canonical corrects [ ] Données structurées migrées [ ] Google Analytics et Search Console configurés [ ] Test de crawl sur l'environnement de staging Actions post-lancement Dans les 24h suivant la mise en ligne : Soumettre le nouveau sitemap dans Search Console Demander l'indexation des pages principales Vérifier les erreurs 404 dans Search Console Tester les Core Web Vitals sur PageSpeed Insights Vérifier le suivi Analytics (trafic bien mesuré ?) Après la refonte : le suivi Semaine 1-2 : surveillance intensive Vérifiez quotidiennement : | Métrique | Où vérifier | Alerte si... | |----------|-------------|--------------| | Erreurs 404 | Search Console | > 10 nouvelles erreurs | | Trafic organique | Analytics | Chute > 20% | | Pages indexées | Search Console | Diminution | | Core Web Vitals | Search Console | Passage au rouge | Mois 1-3 : stabilisation Google met 2 à 4 semaines pour réévaluer complètement un site après une refonte. Une légère baisse de trafic est normale. | Situation | Réaction | |-----------|----------| | Baisse < 15% | Normal, surveiller | | Baisse 15-30% | Vérifier les redirections et erreurs | | Baisse > 30% | Audit urgent, problème majeur | Signaux de succès Une refonte réussie se traduit par : Trafic qui revient au niveau initial sous 4-6 semaines Amélioration des Core Web Vitals Taux de rebond stable ou en baisse Pas de chute de positions sur vos mots-clés principaux Les erreurs fatales à éviter Erreur #1 : Lancer sans redirections Impact : Perte immédiate de tout le trafic des anciennes URLs Solution : Préparer le tableau de redirections AVANT le développement Erreur #2 : Noindex accidentel Impact : Google désindexe tout le site Solution : Vérifier le robots.txt et les meta robots sur chaque template Erreur #3 : Supprimer du contenu performant Impact : Perte des positions associées Solution : Auditer le trafic par page avant de supprimer quoi que ce soit Erreur #4 : Changer de domaine sans migration Impact : Repartir de zéro en SEO Solution : Si changement de domaine, faire une migration complète avec Search Console Erreur #5 : Oublier les backlinks Impact : Les liens externes pointent vers des 404 Solution : Vérifier que toutes les pages avec backlinks ont une redirection Ce qu'il faut retenir Une refonte réussie côté SEO repose sur : Audit complet avant de commencer Tableau de redirections exhaustif Conservation du contenu performant Amélioration des performances techniques Surveillance intensive post-lancement -- Pour aller plus loin Checklist SEO : 45 points à vérifier pour votre refonte — La liste complète avant, pendant et après Combien coûte un site web en 2026 ? — Budget pour votre refonte Comment créer un site visible sur Google — Les fondamentaux si vous repartez de zéro -- Questions fréquentes Combien de temps dure une refonte SEO-safe ? Comptez 2 à 4 semaines pour l'audit préalable et la préparation, puis le temps de développement (variable selon la taille du site), et 4 à 6 semaines de surveillance post-lancement. Une refonte bien préparée prend plus de temps, mais évite des mois de récupération SEO. Faut-il un consultant SEO pour une refonte ? Pour un petit site vitrine (moins de 20 pages), cette checklist peut suffire si vous êtes rigoureux. Pour un site e-commerce ou un blog avec beaucoup de contenu, l'accompagnement d'un expert réduit drastiquement les risques. Que faire si j'ai déjà perdu du trafic ? Agissez immédiatement : vérifiez les erreurs 404 dans Search Console, contrôlez robots.txt, testez les redirections. Chaque jour compte. Plus vous intervenez vite, plus la récupération sera rapide. -- Vous planifiez une refonte ? Je vous accompagne pour migrer sans perdre une position. Découvrez ma prestation refonte de site web ou contactez-moi pour en discuter. Services par ville : Consultant SEO Sophia Antipolis — Refontes tech & SaaS Consultant SEO Cannes — Refontes luxe & prestige Consultant SEO Nice — Refontes tous secteurs -- Tags : #refonte-site #migration-seo #redirections-301 #perte-trafic #seo-technique
+```
+
+## Liens internes
+
+| Ancre | URL cible |
+|-------|----------|
+| outil d'audit SEO gratuit | /outils/audit-seo-gratuit |
+| IndHack | /creation-site-web |
+| Checklist SEO : 45 points à vérifier pour votre refonte | /blog/checklist-seo-refonte-site |
+| Combien coûte un site web en 2026 ? | /blog/cout-site-web-2026 |
+| Comment créer un site visible sur Google | /blog/comment-creer-site-visible-google |
+| prestation refonte de site web | /refonte-site-web |
+| contactez-moi | /contact |
+| Consultant SEO Sophia Antipolis | /consultant-seo-sophia-antipolis |
+| Consultant SEO Cannes | /consultant-seo-cannes |
+| Consultant SEO Nice | /consultant-seo-nice |
+
+## Schemas JSON-LD
+
+_Aucun schema JSON-LD détecté_
+
+## FAQ
+
+### Q: Combien de temps dure une refonte SEO-safe ?
+
+Comptez 2 à 4 semaines pour l'audit préalable et la préparation, puis le temps de développement (variable selon la taille du site), et 4 à 6 semaines de surveillance post-lancement. Une refonte bien préparée prend plus de temps, mais évite des mois de récupération SEO.
+
+### Q: Faut-il un consultant SEO pour une refonte ?
+
+Pour un petit site vitrine (moins de 20 pages), cette checklist peut suffire si vous êtes rigoureux. Pour un site e-commerce ou un blog avec beaucoup de contenu, l'accompagnement d'un expert réduit drastiquement les risques.
+
+### Q: Que faire si j'ai déjà perdu du trafic ?
+
+Agissez immédiatement : vérifiez les erreurs 404 dans Search Console, contrôlez robots.txt, testez les redirections. Chaque jour compte. Plus vous intervenez vite, plus la récupération sera rapide.
+
+---
+
+**Vous planifiez une refonte ?** Je vous accompagne pour migrer sans perdre une position. Découvrez ma [prestation refonte de site web](/refonte-site-web) ou [contactez-moi](/contact) pour en discuter.
+
+**Services par ville :**
+- [Consultant SEO Sophia Antipolis](/consultant-seo-sophia-antipolis) — Refontes tech & SaaS
+- [Consultant SEO Cannes](/consultant-seo-cannes) — Refontes luxe & prestige
+- [Consultant SEO Nice](/consultant-seo-nice) — Refontes tous secteurs
+
+---
+
+**Tags** : #refonte-site #migration-seo #redirections-301 #perte-trafic #seo-technique
+

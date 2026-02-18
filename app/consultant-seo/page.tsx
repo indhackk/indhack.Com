@@ -11,7 +11,7 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/consultant-seo"
     },
     openGraph: {
-        title: "Consultant SEO Freelance | Indiana Aflalo",
+        title: "Consultant SEO Freelance | IndHack",
         description: "Consultante SEO freelance expérimentée. Audit, stratégie et optimisation pour booster votre visibilité Google.",
         url: "https://indhack.com/consultant-seo",
         type: "website",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Consultant SEO Freelance | Indiana Aflalo",
+        title: "Consultant SEO Freelance | IndHack",
         description: "Consultante SEO freelance expérimentée. Résultats mesurables et ROI garanti.",
         images: ["https://indhack.com/api/og?title=Consultante%20SEO%20Freelance&subtitle=R%C3%A9sultats%20mesurables%20et%20ROI%20garanti"],
     },

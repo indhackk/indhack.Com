@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/a-propos"
     },
     openGraph: {
-        title: "Indiana Aflalo - Consultante SEO & Experte Digitale",
+        title: "À propos | IndHack - Consultante SEO",
         description: "Spécialiste du référencement naturel, j'aide les entreprises à dominer Google et transformer leur visibilité en clients.",
         url: "https://indhack.com/a-propos",
     }

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         canonical: `https://indhack.com/${cityData.slug}`
     },
     openGraph: {
-        title: `Consultant SEO Monaco | Indiana Aflalo`,
+        title: `Consultant SEO Monaco | IndHack`,
         description: `Dominez les résultats Google à Monaco. Référencement local premium, audit SEO et stratégie digitale haut de gamme.`,
         url: `https://indhack.com/${cityData.slug}`,
     }

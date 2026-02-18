@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         canonical: `https://indhack.com/${cityData.slug}`
     },
     openGraph: {
-        title: `Consultant SEO Aix-en-Provence | Indiana Aflalo`,
+        title: `Consultant SEO Aix-en-Provence | IndHack`,
         description: `Dominez les résultats Google à Aix-en-Provence. Référencement local, audit SEO et stratégie digitale pour entreprises aixoises.`,
         url: `https://indhack.com/${cityData.slug}`,
     }

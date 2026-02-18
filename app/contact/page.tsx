@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/contact"
     },
     openGraph: {
-        title: "Contact | Indiana Aflalo - Consultante SEO",
+        title: "Contact | IndHack - Consultante SEO",
         description: "Discutons de votre projet SEO. Réponse sous 24h garantie, audit offert.",
         url: "https://indhack.com/contact",
     }

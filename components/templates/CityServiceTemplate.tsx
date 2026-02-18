@@ -135,13 +135,13 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
         { icon: <AlertTriangle className="w-6 h-6" />, label: "Erreurs 4xx/5xx", status: "Détection & fix" },
     ];
 
-    // Related services for internal linking (ancres sémantiques liées au mot-clé cible)
+    // Related services for internal linking (ancres sémantiques axées "audit" pour éviter cannibalisation)
     const relatedServices = [
-        { title: "Accompagnement SEO expert", href: "/consultant-seo", desc: "Votre partenaire croissance", icon: <Target className="w-5 h-5" /> },
-        { title: "Diagnostic SEO complet", href: "/audit-seo", desc: "Analyse technique + sémantique", icon: <FileSearch className="w-5 h-5" /> },
-        { title: `Expert SEO ${city}`, href: `/${cityData.slug}`, desc: "Stratégie locale sur-mesure", icon: <Target className="w-5 h-5" /> },
-        { title: "Stratégie SEO globale", href: "/referencement-naturel", desc: "Visibilité nationale durable", icon: <TrendingUp className="w-5 h-5" /> },
-        { title: "Site web optimisé SEO", href: "/creation-site-web", desc: "Création pensée pour Google", icon: <Globe className="w-5 h-5" /> }
+        { title: "Audit SEO complet", href: "/audit-seo", desc: "Diagnostic technique + sémantique", icon: <FileSearch className="w-5 h-5" /> },
+        { title: `Services SEO ${city}`, href: `/${cityData.slug}`, desc: "Stratégie locale sur-mesure", icon: <Target className="w-5 h-5" /> },
+        { title: "Référencement naturel", href: "/referencement-naturel", desc: "Visibilité nationale durable", icon: <TrendingUp className="w-5 h-5" /> },
+        { title: "Site web optimisé SEO", href: "/creation-site-web", desc: "Création pensée pour Google", icon: <Globe className="w-5 h-5" /> },
+        { title: "Accompagnement SEO", href: "/consultant-seo", desc: "Votre partenaire croissance", icon: <Target className="w-5 h-5" /> }
     ];
 
     // Articles blog connexes pour le maillage

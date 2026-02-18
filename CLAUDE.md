@@ -1,14 +1,103 @@
-# CLAUDE.md — IndHack (indhack.com)
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+---
+
+## Development Commands
+
+```bash
+# Development
+npm run dev          # Start dev server at http://localhost:3000
+
+# Build & Deploy
+npm run build        # Build for production (runs postbuild scripts automatically)
+npm run start        # Start production server
+
+# Linting
+npm run lint         # Run ESLint
+
+# Google Indexing (requires .env.local credentials)
+npm run index        # Smart indexing - submit changed pages
+npm run index:status # Check indexing status
+npm run turbo        # Turbo indexing via IndexNow
+npm run turbo:all    # Force reindex all pages
+```
+
+**Important**: Always run `npm run build` after modifications to verify no errors.
+
+---
+
+## Architecture Overview
+
+### Stack
+- **Framework**: Next.js 14+ (App Router) with static site generation (SSG)
+- **Styling**: Tailwind CSS with custom sage green palette
+- **Deployment**: Vercel
+- **CMS**: Keystatic for content management
+
+### Directory Structure
+
+```
+app/                           # Next.js App Router pages
+├── page.tsx                   # Homepage
+├── layout.tsx                 # Root layout with fonts, analytics
+├── globals.css                # Global styles + Tailwind
+├── blog/
+│   ├── page.tsx               # Blog listing
+│   └── [slug]/page.tsx        # Dynamic blog post pages
+├── outils/                    # SEO tools (audit, testeur IA, etc.)
+├── consultant-seo-[ville]/    # ~18 city landing pages
+└── api/                       # API routes (indexnow, contact, etc.)
+
+components/                    # Reusable React components
+├── Breadcrumb.tsx             # Breadcrumb with JSON-LD
+├── MegaFooter.tsx             # Site-wide footer with internal links
+├── NavbarOptimized.tsx        # Main navigation
+├── templates/                 # Page templates for services/cities
+└── ui/                        # shadcn/ui components
+
+content/
+└── blog/                      # Markdown blog posts (.md files)
+
+lib/
+├── blog.ts                    # Blog post parsing (gray-matter)
+├── cities-data.ts             # City data for local SEO pages
+├── city-neighbors.ts          # City proximity relationships
+└── diagnostic-data.ts         # Diagnostic tool data
+
+scripts/                       # Build & automation scripts
+├── smart-indexing.js          # Google Indexing API integration
+├── turbo-indexing.js          # IndexNow protocol
+├── generate-city-pages.js     # City page generator
+└── optimize-blog-images.mjs   # Image optimization
+```
+
+### Key Patterns
+
+**Blog Posts**: Markdown files in `content/blog/` with frontmatter (title, description, date, keywords, category, image). Parsed by `lib/blog.ts`, rendered by `app/blog/[slug]/page.tsx`.
+
+**City Pages**: Static pages generated from `lib/cities-data.ts`. Each city links to neighboring cities via `lib/city-neighbors.ts`.
+
+**JSON-LD Schemas**: Automatically injected via components (BreadcrumbSchema, BlogPosting in blog pages). Never write schema in markdown content.
+
+### Brand Colors (tailwind.config.js)
+
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `sauge` | #2E5E4E | Primary brand color, links, CTAs |
+| `ink` | #2A3830 | Main text |
+| `soft` | #3D4D46 | Secondary text |
+| `accent` | #D4A853 | Gold accent for highlights |
+
+---
+
+## Fichier de référence SEO
 
 > Ce fichier est la source de vérité pour tout travail sur le site IndHack.
 > Lis-le en entier AVANT de toucher à quoi que ce soit.
 
----
-
-## 1. Le projet
-
 IndHack est le site vitrine + blog + outils SEO d'Indiana Aflalo, consultante SEO freelance basée à Nice.
-Stack : **Next.js 14+ (App Router)**, Tailwind CSS, déployé sur Vercel.
 Le site génère ~120 pages statiques (SSG) au build.
 
 ### Structure des URLs
@@ -445,13 +534,15 @@ Ce tableau indique quel article/page devrait lier vers quoi.
 ## 12. Fichiers importants
 
 ```
-src/app/blog/[slug]/page.tsx    → Template article dynamique
-src/app/blog/page.tsx           → Liste articles
-src/content/ ou src/data/       → Contenu des articles (chercher les .mdx ou .tsx)
-src/components/                 → Composants réutilisables
+app/blog/[slug]/page.tsx        → Template article dynamique
+app/blog/page.tsx               → Liste articles
+content/blog/                   → Articles markdown (.md)
+components/                     → Composants réutilisables
 public/images/blog/             → Images des articles
-next.config.js                  → Config Next.js
-tailwind.config.ts              → Config Tailwind avec couleurs custom
+lib/blog.ts                     → Parsing des articles (gray-matter)
+lib/cities-data.ts              → Données des pages villes
+next.config.mjs                 → Config Next.js (redirections, headers)
+tailwind.config.js              → Config Tailwind avec couleurs custom
 ```
 
 ---

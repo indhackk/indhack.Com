@@ -41,9 +41,10 @@ module.exports = {
         '/pour-pauline',
     ],
 
-    // Robotstxt options optimisées
+    // Robotstxt options optimisées avec règles GEO (Generative Engine Optimization)
     robotsTxtOptions: {
         policies: [
+            // Règles par défaut pour tous les crawlers
             {
                 userAgent: '*',
                 allow: '/',
@@ -58,8 +59,15 @@ module.exports = {
                     '/diagnostic/*',
                 ],
             },
-            // Note: Ne plus bloquer les bots SEO pour le tracking
-            // AhrefsBot et SemrushBot sont maintenant autorisés
+            // Crawlers IA à AUTORISER (GEO - pour apparaître dans ChatGPT, Perplexity, etc.)
+            { userAgent: 'GPTBot', allow: '/' },
+            { userAgent: 'ChatGPT-User', allow: '/' },
+            { userAgent: 'Claude-Web', allow: '/' },
+            { userAgent: 'PerplexityBot', allow: '/' },
+            { userAgent: 'Applebot-Extended', allow: '/' },
+            // Crawlers IA à BLOQUER (scraping sans attribution)
+            { userAgent: 'CCBot', disallow: '/' },
+            { userAgent: 'Google-Extended', disallow: '/' },
         ],
         additionalSitemaps: [],
     },
@@ -93,7 +101,7 @@ module.exports = {
             '/outils/generateur-robots-txt',
             '/outils/generateur-schema-json-ld',
             '/outils/simulateur-visibilite-locale',
-            '/tools/gmb-autopilot'
+            '/outils/gmb-autopilot'
         ];
 
         let priority = config.priority;

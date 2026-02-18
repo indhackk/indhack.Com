@@ -14,7 +14,7 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/seo-local"
     },
     openGraph: {
-        title: "SEO Local France | Indiana Aflalo",
+        title: "SEO Local France | IndHack",
         description: "Expertise en référencement local sur toute la France. Boostez votre visibilité Google dans votre ville.",
         url: "https://indhack.com/seo-local",
         type: "website",

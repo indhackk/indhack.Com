@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
 
     // Base redirect URL
     const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-    const redirectUrl = `${baseUrl}/tools/gmb-autopilot`;
+    const redirectUrl = `${baseUrl}/outils/gmb-autopilot`;
 
     // Handle OAuth errors
     if (error) {

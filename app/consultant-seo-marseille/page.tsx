@@ -6,13 +6,13 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-marseille")!;
 
 export const metadata: Metadata = {
-    title: `Consultante SEO Marseille | Indiana Aflalo - Experte Référencement`,
+    title: `Consultante SEO Marseille | Experte Référencement`,
     description: `Consultante SEO à Marseille : boostez votre visibilité Google. Experte en référencement local pour PME et entrepreneurs des Bouches-du-Rhône. Audit gratuit ✆ 06 61 13 97 48`,
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`
     },
     openGraph: {
-        title: `Consultant SEO ${cityData.name} | Indiana Aflalo`,
+        title: `Consultant SEO ${cityData.name} | IndHack`,
         description: `Dominez les résultats Google à ${cityData.name}. Référencement local, audit SEO et stratégie digitale sur-mesure pour entreprises des ${cityData.department}.`,
         url: `https://indhack.com/${cityData.slug}`,
     }

@@ -630,30 +630,40 @@ export interface CityServiceData {
 }
 
 // Fonction pour générer les liens internes avec ancres variées
-function getInternalLinks(city: CityData, serviceType: string): { motherLink: string; homeLink: string } {
+// IMPORTANT: Pour audit-technique, utiliser des ancres axées "audit" et non "consultant SEO [ville]"
+// afin d'éviter la cannibalisation avec la page mère
+function getInternalLinks(city: CityData, serviceType: string): { motherLink: string; homeLink: string; auditLink: string } {
+    // Ancres spécifiques pour audit-technique (éviter cannibalisation)
+    if (serviceType === "audit-technique") {
+        return {
+            motherLink: `<a href="/${city.slug}" class="text-sauge font-semibold hover:underline">mes services SEO à ${city.name}</a>`,
+            homeLink: `<a href="/audit-seo" class="text-sauge font-semibold hover:underline">audit SEO complet</a>`,
+            auditLink: `<a href="/audit-seo" class="text-sauge font-semibold hover:underline">diagnostic SEO approfondi</a>`
+        };
+    }
+
+    // Ancres pour les autres services
     const anchors = {
         mother: [
-            `consultante SEO à ${city.name}`,
             `experte SEO ${city.name}`,
             `spécialiste référencement ${city.name}`,
             `accompagnement SEO ${city.name}`
         ],
         home: [
-            "consultante SEO freelance",
             "experte en référencement naturel",
             "spécialiste SEO",
             "stratégie de visibilité Google"
         ]
     };
 
-    // Varier selon le service pour éviter les ancres identiques
-    const serviceIndex = serviceType === "audit-technique" ? 0 : serviceType === "creation-site-web" ? 1 : 2;
+    const serviceIndex = serviceType === "creation-site-web" ? 0 : 1;
     const motherAnchor = anchors.mother[serviceIndex % anchors.mother.length];
-    const homeAnchor = anchors.home[(serviceIndex + 1) % anchors.home.length];
+    const homeAnchor = anchors.home[serviceIndex % anchors.home.length];
 
     return {
         motherLink: `<a href="/${city.slug}" class="text-sauge font-semibold hover:underline">${motherAnchor}</a>`,
-        homeLink: `<a href="/consultant-seo" class="text-sauge font-semibold hover:underline">${homeAnchor}</a>`
+        homeLink: `<a href="/consultant-seo" class="text-sauge font-semibold hover:underline">${homeAnchor}</a>`,
+        auditLink: `<a href="/audit-seo" class="text-sauge font-semibold hover:underline">audit SEO</a>`
     };
 }
 
@@ -681,38 +691,38 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
             let errorsContent = "";
 
             if (isLuxury) {
-                approachContent = `En tant que ${links.motherLink} et ${links.homeLink}, j'accompagne les ${city.context.targetClients} avec des audits techniques d'une précision chirurgicale.<br/><br/>Sur un marché comme ${city.name} où ${city.context.localInsight.toLowerCase()}, la moindre erreur technique se paie cash. Un temps de chargement supérieur à 2 secondes ? Vos prospects fortunés sont déjà chez votre concurrent. Une page non indexée ? C'est du chiffre d'affaires qui s'évapore.<br/><br/>Mon audit va au-delà des outils automatisés. J'intègre la <strong>dimension premium</strong> de votre marché : expérience utilisateur irréprochable, performances mobiles optimales pour une clientèle exigeante, données structurées adaptées aux recherches haut de gamme.`;
+                approachContent = `Mon <strong>audit technique SEO à ${city.name}</strong> offre un diagnostic complet adapté aux exigences des ${city.context.targetClients}.<br/><br/>Sur un marché premium où ${city.context.localInsight.toLowerCase()}, la moindre <strong>erreur d'indexation</strong> se paie cash. Un <strong>temps de chargement</strong> supérieur à 2 secondes ? Vos prospects fortunés sont déjà chez votre concurrent. Une page bloquée par le <strong>robots.txt</strong> ? C'est du chiffre d'affaires qui s'évapore.<br/><br/>Mon <strong>diagnostic technique</strong> va au-delà des outils automatisés comme Screaming Frog ou PageSpeed. J'analyse les <strong>Core Web Vitals</strong> (LCP, CLS, INP), le crawl de votre site, le <strong>maillage interne</strong>, les <strong>données structurées schema.org</strong> et l'indexation via Google Search Console.`;
 
-                challengesContent = `Le marché ${city.name} a ses exigences propres. ${city.context.specificChallenges.join(". ")}. Mon audit intègre ces spécificités :<br/><br/>J'analyse votre site sous l'angle de votre clientèle ${city.context.targetClients.split(",")[0]} : vitesse perçue, qualité d'affichage des visuels, fluidité de navigation sur les appareils premium. Chaque recommandation est priorisée par <strong>impact sur votre image de marque</strong> autant que sur votre référencement.`;
+                challengesContent = `Le marché ${city.name} a ses exigences propres. ${city.context.specificChallenges.join(". ")}. Mon <strong>audit de référencement</strong> intègre ces spécificités :<br/><br/>J'analyse votre site sous l'angle de votre clientèle ${city.context.targetClients.split(",")[0]} : <strong>vitesse de chargement</strong> perçue, qualité d'affichage via Lighthouse, <strong>mobile-first indexing</strong>. Chaque recommandation est priorisée par <strong>impact business</strong> autant que sur votre positionnement Google.`;
 
-                whyMeContent = `Les agences facturent des audits standards entre <strong>3 000€ et 8 000€</strong> sans comprendre les subtilités d'un marché premium comme ${city.name}. Elles appliquent des grilles génériques inadaptées à votre clientèle.<br/><br/>Je propose une approche sur-mesure avec un tarif ajusté à la taille de votre site et vos enjeux. Premier diagnostic gratuit pour évaluer vos besoins réels.`;
+                whyMeContent = `Les agences facturent des audits standards entre <strong>3 000€ et 8 000€</strong> sans comprendre les subtilités d'un marché premium comme ${city.name}. Elles appliquent des grilles génériques inadaptées à votre clientèle.<br/><br/>Je propose un <strong>diagnostic SEO sur-mesure</strong> avec un tarif ajusté à la taille de votre site. Premier <strong>audit technique gratuit</strong> pour évaluer vos erreurs d'indexation et vos <strong>redirections 301/404</strong>.`;
 
-                errorsContent = `Après des dizaines d'audits pour des entreprises de ${city.name} et ${city.nearbyAreas.slice(0, 2).join(", ")}, j'ai identifié les erreurs récurrentes sur ce marché premium`;
+                errorsContent = `Après des dizaines d'<strong>audits techniques SEO</strong> pour des entreprises de ${city.name} et ${city.nearbyAreas.slice(0, 2).join(", ")}, j'ai identifié les <strong>erreurs de crawl</strong> récurrentes sur ce marché premium`;
             } else if (isTech) {
-                approachContent = `En tant que ${links.motherLink} et ${links.homeLink}, j'accompagne les ${city.context.targetClients} avec une approche technique de haut niveau.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Votre site doit être techniquement irréprochable pour générer des leads B2B qualifiés. Mon audit va au-delà du SEO classique : j'analyse l'architecture de votre stack, l'impact de vos choix technologiques sur le crawl, et je parle le même langage que vos équipes dev.<br/><br/>JavaScript rendering, API-first, SPA/SSR... Je maîtrise les problématiques techniques des sites modernes et je traduis mes recommandations en tickets actionnables pour vos développeurs.`;
+                approachContent = `Mon <strong>audit technique SEO à ${city.name}</strong> est conçu pour les ${city.context.targetClients} qui exigent une expertise pointue.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Votre site doit être techniquement irréprochable pour générer des leads B2B qualifiés. Mon <strong>diagnostic SEO</strong> va au-delà des outils classiques : j'analyse le <strong>rendering JavaScript</strong>, l'impact de votre stack sur le <strong>crawl budget</strong>, les <strong>temps de réponse serveur</strong>.<br/><br/>SPA/SSR, API-first, <strong>sitemap dynamique</strong>... Je maîtrise les problématiques techniques des sites modernes et je traduis mes recommandations <strong>Core Web Vitals</strong> en tickets actionnables pour vos développeurs.`;
 
-                challengesContent = `L'écosystème tech de ${city.name} a ses spécificités. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon audit intègre ces réalités : temps de cycle de vente long impliquant du contenu éducatif indexé, architecture de site adaptée au parcours B2B, données structurées pour les recherches techniques. Je ne fais pas du SEO "marketing" mais du <strong>SEO technique pour équipes tech</strong>.`;
+                challengesContent = `L'écosystème tech de ${city.name} a ses spécificités. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon <strong>audit de référencement</strong> intègre ces réalités : analyse du <strong>maillage interne</strong> pour les cycles de vente longs, vérification de l'<strong>indexation</strong> du contenu éducatif, <strong>données structurées schema.org</strong> (TechArticle, FAQ, SoftwareApplication). Je livre un diagnostic technique aligné avec vos enjeux B2B.`;
 
-                whyMeContent = `Les agences généralistes ne comprennent pas vos enjeux. Elles confondent site vitrine et application SaaS, e-commerce B2C et génération de leads B2B.<br/><br/>Les grandes agences tech facturent entre <strong>5 000€ et 15 000€</strong> des audits parfois surdimensionnés. Je propose un diagnostic adapté à votre maturité technique avec un budget rationnel.`;
+                whyMeContent = `Les agences généralistes ne comprennent pas vos enjeux. Elles confondent site vitrine et application SaaS, e-commerce B2C et génération de leads B2B.<br/><br/>Les grandes agences tech facturent entre <strong>5 000€ et 15 000€</strong> des audits parfois surdimensionnés. Je propose un <strong>diagnostic technique adapté</strong> avec analyse <strong>PageSpeed/Lighthouse</strong>, vérification des <strong>erreurs 404</strong> et optimisation du <strong>robots.txt</strong>.`;
 
-                errorsContent = `Après avoir audité des dizaines de sites tech à ${city.name}, ${city.nearbyAreas[0]} et dans tout le ${city.department}, j'ai identifié les problèmes récurrents`;
+                errorsContent = `Après avoir réalisé des <strong>audits SEO techniques</strong> pour des dizaines de sites tech à ${city.name}, ${city.nearbyAreas[0]} et dans tout le ${city.department}, j'ai identifié les <strong>erreurs d'indexation</strong> récurrentes`;
             } else if (isVolume) {
-                approachContent = `En tant que ${links.motherLink} et ${links.homeLink}, j'accompagne les ${city.context.targetClients} dans un marché où la visibilité est une question de survie.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Avec ${city.population} habitants et une concurrence féroce dans tous les secteurs, les erreurs techniques sont fatales. Pendant que vous perdez des positions, vos concurrents captent vos clients potentiels.<br/><br/>Mon audit est conçu pour ce contexte hyper-concurrentiel : identification rapide des quick wins, priorisation par impact business immédiat, focus sur le SEO local qui fait la différence dans une ville de cette taille.`;
+                approachContent = `Mon <strong>audit technique SEO à ${city.name}</strong> est optimisé pour un marché hyper-concurrentiel où chaque détail compte.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Avec ${city.population} habitants et une concurrence féroce, les <strong>erreurs d'indexation</strong> sont fatales. Pendant que votre <strong>sitemap</strong> est mal configuré, vos concurrents captent vos clients potentiels.<br/><br/>Mon <strong>diagnostic technique</strong> identifie rapidement les quick wins : <strong>Core Web Vitals</strong> à corriger, pages bloquées par le <strong>robots.txt</strong>, <strong>redirections 301</strong> manquantes, <strong>vitesse de chargement</strong> à optimiser via PageSpeed.`;
 
-                challengesContent = `${city.name} est un champ de bataille digital. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon audit intègre la réalité du terrain : analyse comparative avec vos concurrents directs, focus sur le Pack Local Google qui capte 40% des clics, optimisation pour les recherches "près de moi" qui explosent. Pas de théorie, des <strong>actions concrètes pour prendre des parts de marché</strong>.`;
+                challengesContent = `${city.name} est un champ de bataille digital. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon <strong>audit de référencement</strong> intègre la réalité du terrain : analyse du <strong>crawl</strong> avec Screaming Frog, vérification de l'<strong>indexation Google</strong> via Search Console, optimisation des <strong>balises meta</strong> et title. Focus sur le Pack Local qui capte 40% des clics. Pas de théorie, des <strong>corrections techniques concrètes</strong>.`;
 
-                whyMeContent = `À ${city.name}, les agences facturent cher pour des audits génériques. Entre <strong>2 000€ et 6 000€</strong> pour des PDF de 100 pages que personne ne lit.<br/><br/>Je propose un diagnostic focalisé sur vos enjeux réels avec un investissement proportionné à votre situation. L'objectif : des résultats visibles rapidement, pas un rapport qui prend la poussière.`;
+                whyMeContent = `À ${city.name}, les agences facturent cher pour des audits génériques. Entre <strong>2 000€ et 6 000€</strong> pour des PDF de 100 pages que personne ne lit.<br/><br/>Je propose un <strong>diagnostic SEO technique</strong> focalisé sur vos enjeux réels : analyse des <strong>erreurs 404</strong>, vérification du <strong>maillage interne</strong>, test <strong>mobile-first</strong>. L'objectif : corriger les blocages d'<strong>indexation</strong> rapidement.`;
 
-                errorsContent = `Sur un marché aussi concurrentiel que ${city.name}, j'ai identifié les erreurs qui coûtent le plus cher aux entreprises locales`;
+                errorsContent = `Sur un marché aussi concurrentiel que ${city.name}, j'ai identifié les <strong>erreurs techniques</strong> qui coûtent le plus cher aux entreprises locales`;
             } else {
                 // Marché local standard
-                approachContent = `En tant que ${links.motherLink} et ${links.homeLink}, j'accompagne les ${city.context.targetClients} avec un audit technique adapté à votre réalité locale.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Les ${city.population} habitants de votre zone de chalandise recherchent vos services sur Google. Mon audit identifie ce qui vous empêche d'apparaître devant eux.<br/><br/>Pas de jargon inutile ni de recommandations impossibles à mettre en œuvre. Je priorise les actions par <strong>impact sur votre visibilité locale</strong> et votre capacité réelle à les implémenter.`;
+                approachContent = `Mon <strong>audit technique SEO à ${city.name}</strong> est un diagnostic complet adapté aux ${city.context.targetClients}.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Les ${city.population} habitants de votre zone de chalandise recherchent vos services sur Google. Mon <strong>analyse technique</strong> identifie ce qui bloque votre <strong>indexation</strong> : <strong>erreurs de crawl</strong>, <strong>temps de chargement</strong> excessifs, <strong>balises meta</strong> manquantes.<br/><br/>Pas de jargon inutile. Je priorise les corrections par impact : <strong>Core Web Vitals</strong>, <strong>robots.txt</strong>, <strong>sitemap XML</strong>, <strong>maillage interne</strong>. Des recommandations actionnables pour améliorer votre visibilité locale.`;
 
-                challengesContent = `Le marché ${city.name} a ses particularités. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon audit prend en compte ces spécificités : analyse de votre présence sur le Pack Local, optimisation pour les recherches "${city.name} + votre activité", maillage avec les villes proches comme ${city.nearbyAreas.slice(0, 2).join(" et ")}.`;
+                challengesContent = `Le marché ${city.name} a ses particularités. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon <strong>diagnostic SEO</strong> prend en compte ces spécificités : vérification de l'<strong>indexation Google</strong> via Search Console, analyse des <strong>données structurées</strong> LocalBusiness, optimisation des <strong>balises title</strong> pour "${city.name} + votre activité", audit du <strong>maillage interne</strong> vers ${city.nearbyAreas.slice(0, 2).join(" et ")}.`;
 
-                whyMeContent = `Les agences digitales de ${city.region} facturent leurs audits entre <strong>1 500€ et 4 000€</strong>, souvent pour des rapports standardisés qui ne tiennent pas compte de votre marché.<br/><br/>Je propose un diagnostic personnalisé avec un budget adapté à votre structure. Premier échange gratuit pour comprendre vos enjeux.`;
+                whyMeContent = `Les agences digitales de ${city.region} facturent leurs audits entre <strong>1 500€ et 4 000€</strong>, souvent pour des rapports standardisés sans véritable <strong>analyse technique</strong>.<br/><br/>Je propose un <strong>diagnostic SEO personnalisé</strong> : crawl complet avec Screaming Frog, mesure <strong>PageSpeed/Lighthouse</strong>, vérification des <strong>erreurs 404</strong> et <strong>redirections</strong>. Premier audit technique gratuit pour identifier vos priorités.`;
 
-                errorsContent = `Au fil de mes missions auprès d'entreprises de ${city.name} et ${city.nearbyAreas.slice(0, 2).join(", ")}, j'ai identifié les problèmes techniques les plus fréquents`;
+                errorsContent = `Au fil de mes <strong>audits SEO techniques</strong> auprès d'entreprises de ${city.name} et ${city.nearbyAreas.slice(0, 2).join(", ")}, j'ai identifié les <strong>erreurs de crawl</strong> les plus fréquentes`;
             }
 
             // Bullets adaptées au contexte
