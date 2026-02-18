@@ -2,7 +2,6 @@
 
 import { HeroServices } from "@/components/services/HeroServices";
 import { FAQ } from "@/components/FAQ";
-import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import {
@@ -126,14 +125,6 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
         ] : []
     };
 
-    // Breadcrumb items
-    const breadcrumbItems = [
-        { name: "Accueil", url: "https://indhack.com" },
-        { name: "SEO Local", url: "https://indhack.com/seo-local" },
-        { name: `SEO ${city}`, url: `https://indhack.com/${cityData.slug}` },
-        { name: serviceData.title, url: `https://indhack.com/${cityData.slug}/${serviceData.slug}` }
-    ];
-
     // Audit checklist items with icons for visual section
     const auditChecklist = [
         { icon: <Gauge className="w-6 h-6" />, label: "Core Web Vitals", status: "Analyse LCP, FID, CLS" },
@@ -167,7 +158,6 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
             />
-            <BreadcrumbSchema items={breadcrumbItems} />
 
             {/* Breadcrumb Navigation */}
             <div className="bg-ink pt-24 pb-3 px-4">

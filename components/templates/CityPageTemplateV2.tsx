@@ -3,7 +3,6 @@
 import { HeroServices } from "@/components/services/HeroServices";
 import { FAQ } from "@/components/FAQ";
 import { SEOScoreChecker } from "@/components/SEOScoreChecker";
-import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { motion } from "framer-motion";
 import { MapPin, TrendingUp, Users, Search, ArrowRight, CheckCircle2, Zap, Target, BarChart3, Globe, FileSearch, Star, Phone, Clock, Building2, Award, Shield, Rocket } from "lucide-react";
 import Link from "next/link";
@@ -209,23 +208,15 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
         { icon: <Award />, title: "Sans Engagement Long", desc: "3 mois minimum, puis liberté" }
     ];
 
-    // Breadcrumb items pour schema
-    const breadcrumbItems = [
-        { name: "Accueil", url: "https://indhack.com" },
-        { name: "SEO Local", url: "https://indhack.com/seo-local" },
-        { name: `Consultant SEO ${city}`, url: `https://indhack.com/${cityData.slug}` }
-    ];
-
     return (
         <main className="bg-white min-h-screen">
-            {/* JSON-LD Schemas */}
+            {/* JSON-LD Schema */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
             />
-            <BreadcrumbSchema items={breadcrumbItems} />
 
-            {/* Breadcrumb sr-only - le JSON-LD BreadcrumbSchema ci-dessus suffit pour le SEO */}
+            {/* Breadcrumb sr-only (JSON-LD est géré par le composant Breadcrumb dans page.tsx) */}
             <nav className="sr-only" aria-label="Fil d'ariane">
                 <Link href="/">Accueil</Link> / <Link href="/seo-local">SEO Local</Link> / Consultant SEO {city}
             </nav>

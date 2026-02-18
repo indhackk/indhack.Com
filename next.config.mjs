@@ -110,6 +110,22 @@ const nextConfig = {
                 destination: '/outils/:path*',
                 permanent: true,
             },
+            // Anciens outils API-only → page /outils/
+            {
+                source: '/outils/checker-accessibilite',
+                destination: '/outils',
+                permanent: true,
+            },
+            {
+                source: '/outils/analyseur-vitesse-site',
+                destination: '/outils',
+                permanent: true,
+            },
+            {
+                source: '/outils/extracteur-mots-cles',
+                destination: '/outils',
+                permanent: true,
+            },
             // ══════════════════════════════════════════════════════════════
             // REDIRECTIONS VILLES SUPPRIMEES → Villes proches
             // ══════════════════════════════════════════════════════════════
