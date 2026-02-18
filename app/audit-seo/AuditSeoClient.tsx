@@ -273,7 +273,7 @@ export default function AuditSeoClient() {
                         <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
                             Approfondir le sujet
                         </h2>
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid md:grid-cols-3 gap-6">
                             <Link href="/blog/contenu-rapport-audit-seo" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
@@ -290,6 +290,15 @@ export default function AuditSeoClient() {
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
                                     Ne naviguez plus à vue. L'audit est l'investissement le plus rentable.
+                                </p>
+                            </Link>
+                            <Link href="/blog/audit-seo-erreurs-qui-coutent-cher" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    5 erreurs d'audit SEO qui coûtent cher
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    Les erreurs invisibles que je vois sur 90% des sites audités.
                                 </p>
                             </Link>
                         </div>

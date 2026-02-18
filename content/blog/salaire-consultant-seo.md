@@ -53,7 +53,7 @@ Les postes **in-house** (directement chez l'annonceur) sont généralement mieux
 
 ## Salaire consultant SEO freelance
 
-C'est là que les choses deviennent intéressantes. En tant qu'**[expert indépendant en référencement](/consultant-seo-freelance)**, votre **rémunération SEO** dépend de votre **TJM** (Taux Journalier Moyen) et de votre taux d'occupation.
+C'est là que les choses deviennent intéressantes. En tant qu'**[expert indépendant en référencement](/consultant-seo)**, votre **rémunération SEO** dépend de votre **TJM** (Taux Journalier Moyen) et de votre taux d'occupation.
 
 ### Grille des TJM consultants SEO
 
@@ -189,7 +189,7 @@ Le **référencement naturel** est un métier bien rémunéré comparé à d'aut
 - **Prouvez vos résultats** avec des études de cas chiffrées
 - **N'ayez pas peur de changer** d'employeur tous les 2-3 ans
 
-Le statut d'[indépendant spécialisé en référencement](/consultant-seo-freelance) offre le meilleur potentiel de revenus, mais au prix de la sécurité. À vous de trouver l'équilibre qui vous convient.
+Le statut d'[indépendant spécialisé en référencement](/consultant-seo) offre le meilleur potentiel de revenus, mais au prix de la sécurité. À vous de trouver l'équilibre qui vous convient.
 
 ## Ce qu'il faut retenir
 

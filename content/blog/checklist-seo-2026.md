@@ -12,7 +12,7 @@ Le référencement naturel évolue constamment. Ce qui fonctionnait hier peut de
 
 Cette **checklist SEO 2026** rassemble les **30 points essentiels** que je vérifie systématiquement lors de mes [audits SEO](/audit-seo). Que vous soyez entrepreneur, responsable marketing ou développeur, ces points vous permettront d'identifier rapidement les axes d'amélioration de votre site.
 
-> **Téléchargez la checklist complète en PDF** pour l'avoir toujours sous la main : [Checklist SEO 2026 – PDF gratuit](https://issuu.com/indhack/docs/checklist_seo_2026_les_30_points_essentiels_in)
+> **Besoin d'un diagnostic personnalisé ?** Testez votre site gratuitement avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit) pour identifier vos priorités d'optimisation.
 
 ---
 
@@ -250,7 +250,7 @@ Ces **30 points** constituent le socle d'une stratégie de référencement natur
 
 Gardez cette checklist à portée de main pour vos prochains audits :
 
-**[📥 Télécharger la Checklist SEO 2026 (PDF gratuit)](https://issuu.com/indhack/docs/checklist_seo_2026_les_30_points_essentiels_in)**
+**[🔍 Lancez un audit SEO gratuit de votre site](/outils/audit-seo-gratuit)** — Identifiez vos priorités d'optimisation en 30 secondes.
 
 ### Besoin d'un Regard Expert ?
 

@@ -10,7 +10,7 @@ keywords: ["prix site web", "coût site internet", "tarif création site", "devi
 
 "Combien pour un site web ?" — la question que tous mes clients me posent. Et la réponse honnête, c'est : **ça dépend**. Mais je vais vous donner les vraies fourchettes de prix pour 2026, sans langue de bois.
 
-En tant que consultante SEO et créatrice de sites, je vois passer des devis allant de 500€ à 50 000€ pour des projets similaires. Voici comment **comprendre les prix** et faire le bon choix.
+En tant que consultante SEO et experte en [création de site web](/creation-site-web), je vois passer des devis allant de 500€ à 50 000€ pour des projets similaires. Voici comment **comprendre les prix** et faire le bon choix.
 
 ## Les fourchettes de prix en 2026
 

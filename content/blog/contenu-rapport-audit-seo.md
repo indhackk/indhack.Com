@@ -12,7 +12,7 @@ Vous avez commandé un **rapport d'audit SEO**, ou vous y pensez. Mais concrète
 
 En tant que consultante SEO, je réalise des dizaines d'audits chaque année. Je vous explique ce que doit contenir un **rapport d'audit professionnel** — et ce qui fait la différence entre un audit utile et un audit qui finit dans un tiroir. Découvrez également mon [service d'audit SEO complet](/audit-seo) avec plan d'action priorisé.
 
-> **Ressource utile :** [Checklist SEO 2026](https://issuu.com/indhack/docs/checklist_seo_2026_les_30_points_essentiels_in) — Un aperçu des points analysés dans un rapport d'audit complet.
+> **Ressource utile :** [Checklist SEO 2026 : les 30 points essentiels](/blog/checklist-seo-2026) — Un aperçu des points analysés dans un rapport d'audit complet.
 
 ## Qu'est-ce qu'un audit SEO exactement ?
 

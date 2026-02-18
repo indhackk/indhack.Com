@@ -13,7 +13,7 @@ Pourtant, votre téléphone ne sonne pas assez.
 Pourquoi ? Parce que votre site a des "fuites".
 
 Imaginez un seau percé. Vous versez de l'eau (du trafic), mais elle s'échappe avant de remplir le seau (la vente).
-En tant que [Consultante SEO à Nice](/consultant-seo-nice), je vois ces 5 erreurs sur 90% des sites que j'audite.
+En tant que [Consultante SEO à Nice](/consultant-seo-nice), je vois ces 5 erreurs sur 90% des sites que j'audite dans le cadre de mon [service d'audit SEO](/audit-seo).
 
 Chacune d'elle vous coûte probablement un client par mois. Faites le calcul sur l'année : ça dépasse les 10 000€.
 Voici comment les détecter et **les corriger ce soir**. Pour aller plus loin, testez gratuitement votre site avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit).

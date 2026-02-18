@@ -241,6 +241,7 @@ Les 4 piliers à retenir :
 ---
 
 **À lire aussi :**
+- [GEO : Comment être cité par ChatGPT et Gemini ?](/blog/visibilite-ia-geo) — Approfondir la stratégie GEO
 - [Checklist SEO 2026 — Les 30 points essentiels](/blog/checklist-seo-2026)
 - [L'importance d'un audit SEO pour votre croissance](/blog/importance-audit-seo)
 - [Google Business Profile : Guide Complet](/blog/google-business-profile-guide-complet)

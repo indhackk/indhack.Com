@@ -97,6 +97,9 @@ module.exports = {
 
         // Page privée Valentine
         '/pour-pauline',
+
+        // Pages redirigées (de-cannibalisation)
+        '/consultant-seo-freelance',
     ],
 
     // Robotstxt options optimisées avec règles GEO (Generative Engine Optimization)

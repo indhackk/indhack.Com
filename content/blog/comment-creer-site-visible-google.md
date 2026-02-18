@@ -8,7 +8,7 @@ author: "Indiana Aflalo"
 keywords: ["créer site internet visible Google", "référencement site web", "site web premier page Google", "création site SEO", "freelance SEO", "agence web vs freelance"]
 ---
 
-**Créer un site Internet**, c'est facile. **Créer un site Internet visible sur Google**, c'est une autre histoire. En tant que **consultante SEO**, je constate chaque jour des sites magnifiques... mais totalement invisibles. Pourquoi ? Parce que la **visibilité Google ne s'improvise pas**.
+**Créer un site Internet**, c'est facile. **Créer un site Internet visible sur Google**, c'est une autre histoire. En tant que **consultante SEO** spécialisée en [création de site web](/creation-site-web), je constate chaque jour des sites magnifiques... mais totalement invisibles. Pourquoi ? Parce que la **visibilité Google ne s'improvise pas**.
 
 ## Pourquoi 90% des sites ne génèrent aucun trafic organique ?
 

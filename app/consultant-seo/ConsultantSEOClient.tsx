@@ -488,6 +488,46 @@ export default function ConsultantSEOClient() {
                 </div>
             </section>
 
+            {/* Articles liés */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                            Approfondir le sujet
+                        </h2>
+                        <div className="grid md:grid-cols-3 gap-6">
+                            <Link href="/blog/missions-consultant-seo" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Les missions d'un consultant SEO
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    Découvrez les missions concrètes d'un consultant SEO au quotidien.
+                                </p>
+                            </Link>
+                            <Link href="/blog/salaire-consultant-seo" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Combien gagne un consultant SEO ?
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    Salaires, TJM freelance et évolution de carrière.
+                                </p>
+                            </Link>
+                            <Link href="/blog/devenir-consultant-seo" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Comment devenir consultant SEO
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    Le parcours complet pour se lancer dans le métier.
+                                </p>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* SEO Local - Villes */}
             <section className="py-20">
                 <div className="container mx-auto px-4">

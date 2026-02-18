@@ -27,6 +27,14 @@ const nextConfig = {
     // ══════════════════════════════════════════════════════════════
     async redirects() {
         return [
+            // ══════════════════════════════════════════════════════════════
+            // DE-CANNIBALISATION : Pages fusionnées
+            // ══════════════════════════════════════════════════════════════
+            {
+                source: '/consultant-seo-freelance',
+                destination: '/consultant-seo',
+                permanent: true, // 301 - fusion des pages qui ciblent le même mot-clé
+            },
             // Anciennes URLs WordPress → Accueil
             {
                 source: '/index.html',

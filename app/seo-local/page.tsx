@@ -295,8 +295,45 @@ export default function SeoLocalPage() {
                 </div>
             </section>
 
-            {/* CTA */}
+            {/* Articles liés */}
             <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-5xl mx-auto">
+                        <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
+                            Approfondir le sujet
+                        </h2>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <Link href="/blog/seo-local-nice" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-base font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    SEO local à Nice : guide complet
+                                </h3>
+                            </Link>
+                            <Link href="/blog/google-business-profile-guide-complet" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-base font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Guide complet Google Business Profile
+                                </h3>
+                            </Link>
+                            <Link href="/blog/google-maps-voler-clients-concurrents" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-base font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Dominer Google Maps
+                                </h3>
+                            </Link>
+                            <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-base font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Apparaître dans ChatGPT
+                                </h3>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4 max-w-3xl text-center">
                     <h2 className="text-3xl font-heading font-bold text-ink mb-4">
                         Prêt à <span className="text-sauge">dominer</span> votre marché local ?

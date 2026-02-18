@@ -209,22 +209,22 @@ export default function RefonteSiteClient() {
                             Approfondir le sujet
                         </h2>
                         <div className="grid md:grid-cols-2 gap-6">
-                            <Link href="/blog/migration-seo-refonte-site" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                            <Link href="/blog/refonte-site-web-sans-perdre-seo" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    Migration SEO : comment réussir sa refonte ?
+                                    Comment refondre son site sans perdre son SEO
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
                                     Guide complet pour éviter les pièges et conserver vos positions.
                                 </p>
                             </Link>
-                            <Link href="/blog/importance-audit-seo" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                            <Link href="/blog/checklist-seo-refonte-site" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    Pourquoi l'audit SEO est le point de départ
+                                    Checklist SEO : 45 points pour votre refonte
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
-                                    L'audit avant refonte : un investissement indispensable.
+                                    La liste complète avant, pendant et après la migration.
                                 </p>
                             </Link>
                         </div>

@@ -105,7 +105,7 @@ Les **backlinks** (liens d'autres sites vers le vôtre) sont un facteur de ranki
 
 ### Ce qu'un consultant SEO sérieux NE fait PAS
 
-Un [expert SEO indépendant](/consultant-seo-freelance) refuse catégoriquement :
+Un [expert SEO indépendant](/consultant-seo) refuse catégoriquement :
 - L'**achat massif de liens** sur des réseaux douteux
 - Les **PBN** (Private Blog Networks)
 - Les liens dans des **commentaires spam**

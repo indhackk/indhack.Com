@@ -10,7 +10,7 @@ keywords: ["checklist seo refonte site", "checklist refonte site web", "refonte 
 
 Vous planifiez une refonte de site web et vous avez peur de perdre votre référencement ? Cette **checklist SEO complète** va vous guider étape par étape pour migrer sans sacrifier vos positions Google.
 
-En tant que consultante SEO, j'ai accompagné des dizaines de refontes. La différence entre une migration réussie et un désastre SEO tient souvent à une **préparation méthodique**. Cette checklist regroupe les 45 points essentiels à vérifier.
+En tant que consultante SEO experte en [refonte de site web](/refonte-site-web), j'ai accompagné des dizaines de migrations. La différence entre une refonte réussie et un désastre SEO tient souvent à une **préparation méthodique**. Cette checklist regroupe les 45 points essentiels à vérifier.
 
 > **Complément utile** : Pour comprendre le "pourquoi" derrière chaque point, consultez mon guide détaillé sur [comment refondre son site sans perdre son SEO](/blog/refonte-site-web-sans-perdre-seo).
 

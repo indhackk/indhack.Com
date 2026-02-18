@@ -10,7 +10,7 @@ keywords: ["refonte site web SEO", "migration SEO", "redirections 301", "perdre 
 
 Une refonte de site web mal préparée peut **anéantir des années de travail SEO** en quelques jours. J'ai vu des entreprises perdre 80% de leur trafic organique du jour au lendemain à cause d'erreurs évitables.
 
-En tant que consultante SEO, je vous livre la **méthode complète** pour réussir votre refonte sans sacrifier vos positions Google. Avant de commencer, testez votre site actuel avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit).
+En tant que consultante SEO spécialiste en [refonte de site web](/refonte-site-web), je vous livre la **méthode complète** pour réussir votre migration sans sacrifier vos positions Google. Avant de commencer, testez votre site actuel avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit).
 
 ## Pourquoi les refontes SEO échouent ?
 

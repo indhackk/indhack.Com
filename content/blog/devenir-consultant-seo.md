@@ -8,7 +8,7 @@ author: "Indiana Aflalo"
 keywords: ["devenir consultant SEO", "comment devenir consultant SEO", "carrière SEO", "métier consultant SEO", "reconversion SEO", "freelance SEO"]
 ---
 
-Vous souhaitez **devenir [expert en référencement naturel](/consultant-seo)** ? Excellente idée ! Le **référencement naturel** est l'un des **métiers du digital** les plus demandés. Voici mon guide complet basé sur mon propre parcours et mon expérience d'**[experte indépendante en visibilité](/consultant-seo-freelance)**.
+Vous souhaitez **devenir [expert en référencement naturel](/consultant-seo)** ? Excellente idée ! Le **référencement naturel** est l'un des **métiers du digital** les plus demandés. Voici mon guide complet basé sur mon propre parcours et mon expérience d'**[experte indépendante en visibilité](/consultant-seo)**.
 
 ## Pourquoi devenir consultant SEO en 2026 ?
 
@@ -174,7 +174,7 @@ Pour devenir **incontournable** dans votre domaine :
 | Diversité des missions | Isolement possible |
 | Choix des clients | Prospection nécessaire |
 
-**Mon conseil :** Commencez en entreprise ou agence pour acquérir de l'expérience solide, puis passez [en indépendant](/consultant-seo-freelance) si l'indépendance vous attire.
+**Mon conseil :** Commencez en entreprise ou agence pour acquérir de l'expérience solide, puis passez [en indépendant](/consultant-seo) si l'indépendance vous attire.
 
 ## Les erreurs à éviter absolument
 

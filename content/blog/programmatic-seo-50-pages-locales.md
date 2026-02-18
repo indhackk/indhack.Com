@@ -15,7 +15,7 @@ Pour dominer tout un département (ou toute la France), il vous faut une page op
 Problème : Écrire 50 pages à la main prend 2 semaines.
 Solution : Le **Programmatic SEO** permet de le faire en 10 minutes.
 
-En tant que [consultante SEO freelance](/consultant-seo-freelance) experte en technique, j'utilise cette méthode pour faire exploser le trafic local de mes clients sans y passer mes nuits.
+En tant que [consultante SEO](/consultant-seo) experte en technique, j'utilise cette méthode pour faire exploser le trafic local de mes clients sans y passer mes nuits.
 
 **Sommaire :**
 1. [Le concept du Programmatic SEO](#le-concept-du-programmatic-seo)
