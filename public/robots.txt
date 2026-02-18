@@ -1,93 +1,17 @@
-# IndHack - robots.txt
-# https://indhack.com/robots.txt
-
-# ═══════════════════════════════════════════════════════════════
-# CRAWLERS IA — Autorisés pour visibilité GEO
-# ═══════════════════════════════════════════════════════════════
-
-# OpenAI / ChatGPT
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-# Anthropic / Claude
-User-agent: Claude-Web
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-# Perplexity
-User-agent: PerplexityBot
-Allow: /
-
-# Microsoft / Copilot
-User-agent: Bingbot
-Allow: /
-
-# ByteDance / TikTok AI
-User-agent: Bytespider
-Allow: /
-
-# Meta AI
-User-agent: meta-externalagent
-Allow: /
-
-# ═══════════════════════════════════════════════════════════════
-# CRAWLERS IA — Bloqués (entraînement modèles uniquement)
-# ═══════════════════════════════════════════════════════════════
-
-# Common Crawl (données d'entraînement IA)
-User-agent: CCBot
-Disallow: /
-
-# Google Gemini (entraînement uniquement)
-User-agent: Google-Extended
-Disallow: /
-
-# ═══════════════════════════════════════════════════════════════
-# CRAWLER PRINCIPAL — Google
-# ═══════════════════════════════════════════════════════════════
-
-User-agent: Googlebot
-Allow: /
-Disallow: /api/
-Disallow: /keystatic/
-Disallow: /admin-login
-Disallow: /login
-Disallow: /dashboard
-Disallow: /app/
-Disallow: /diagnostic/
-
-# ═══════════════════════════════════════════════════════════════
-# TOUS LES AUTRES BOTS
-# ═══════════════════════════════════════════════════════════════
-
+# *
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /keystatic/
+Disallow: /api/*
+Disallow: /keystatic/*
 Disallow: /admin-login
 Disallow: /login
 Disallow: /dashboard
-Disallow: /app/
+Disallow: /app/*
 Disallow: /*.json
-Disallow: /diagnostic/
+Disallow: /diagnostic/*
 
-# ═══════════════════════════════════════════════════════════════
-# MÉTADONNÉES
-# ═══════════════════════════════════════════════════════════════
-
-# Host canonique
+# Host
 Host: https://indhack.com
 
 # Sitemaps
 Sitemap: https://indhack.com/sitemap.xml
-
-# LLMs.txt — Guide pour les modèles de langage
-# https://indhack.com/llms.txt
