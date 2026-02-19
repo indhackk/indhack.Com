@@ -247,6 +247,12 @@ const nextConfig = {
                 destination: '/consultant-seo-:city/:service',
                 permanent: true,
             },
+            // Pattern catch-all pour anciennes URLs /seo-[ville] (safety net)
+            {
+                source: '/seo-:city',
+                destination: '/consultant-seo-:city',
+                permanent: true,
+            },
         ];
     },
 

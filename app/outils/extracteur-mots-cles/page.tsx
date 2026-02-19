@@ -2,20 +2,20 @@ import { Metadata } from "next";
 import ExtracteurClient from "./ExtracteurClient";
 
 export const metadata: Metadata = {
-    title: "Extracteur de Mots-Clés Gratuit | Densité & N-grammes – INDHACK",
+    title: "Extracteur de Mots-Clés Gratuit | Densité & N-grammes – IndHack",
     description: "Analysez un texte : extraction mots-clés, densité, bi-grammes, tri-grammes. Outil SEO gratuit sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils/extracteur-mots-cles"
     },
     openGraph: {
-        title: "Extracteur de Mots-Clés Gratuit | Densité & N-grammes – INDHACK",
+        title: "Extracteur de Mots-Clés Gratuit | Densité & N-grammes – IndHack",
         description: "Analysez un texte : extraction mots-clés, densité, bi-grammes, tri-grammes. Outil SEO gratuit sans inscription.",
         url: "https://indhack.com/outils/extracteur-mots-cles",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Extracteur de Mots-Clés Gratuit | Densité & N-grammes – INDHACK",
+        title: "Extracteur de Mots-Clés Gratuit | Densité & N-grammes – IndHack",
         description: "Analysez un texte : extraction mots-clés, densité, bi-grammes, tri-grammes. Outil SEO gratuit sans inscription.",
     }
 };

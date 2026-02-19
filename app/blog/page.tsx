@@ -9,20 +9,20 @@ import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Blog SEO & GEO | Conseils Référencement 2026 – INDHACK",
+    title: "Blog SEO & GEO | Conseils Référencement 2026 – IndHack",
     description: "Articles experts sur le SEO, GEO, IA générative et stratégies digitales. Guides pratiques d'une consultante SEO freelance.",
     alternates: {
         canonical: "https://indhack.com/blog"
     },
     openGraph: {
-        title: "Blog SEO & GEO | Conseils Référencement 2026 – INDHACK",
+        title: "Blog SEO & GEO | Conseils Référencement 2026 – IndHack",
         description: "Articles experts sur le SEO, GEO, IA générative et stratégies digitales. Guides pratiques d'une consultante SEO freelance.",
         url: "https://indhack.com/blog",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Blog SEO & GEO | Conseils Référencement 2026 – INDHACK",
+        title: "Blog SEO & GEO | Conseils Référencement 2026 – IndHack",
         description: "Articles experts sur le SEO, GEO, IA générative et stratégies digitales. Guides pratiques d'une consultante SEO freelance.",
     }
 };
