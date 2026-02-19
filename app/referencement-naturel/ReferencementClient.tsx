@@ -336,48 +336,6 @@ export default function ReferencementClient() {
                 </div>
             </section>
 
-            {/* Services complémentaires au référencement */}
-            <section className="py-16 bg-white border-t border-gray-100">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto">
-                        <h2 className="text-2xl font-heading font-bold text-ink mb-6 text-center">
-                            Services <span className="text-sauge">complémentaires</span>
-                        </h2>
-                        <p className="text-soft mb-8 max-w-2xl mx-auto text-center">
-                            Le référencement naturel s'intègre dans une stratégie digitale globale. Découvrez mes autres expertises.
-                        </p>
-                        <div className="grid md:grid-cols-2 gap-6 mb-8">
-                            <Link href="/audit-seo" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
-                                <h3 className="text-lg font-bold text-ink group-hover:text-sauge transition-colors">
-                                    Audit SEO complet
-                                </h3>
-                                <p className="text-soft text-sm mt-2">
-                                    Un diagnostic technique et sémantique complet de votre site, avec une roadmap d'actions priorisée par impact business.
-                                </p>
-                            </Link>
-                            <Link href="/refonte-site-web" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
-                                <h3 className="text-lg font-bold text-ink group-hover:text-sauge transition-colors">
-                                    Refonte de site sans perte de SEO
-                                </h3>
-                                <p className="text-soft text-sm mt-2">
-                                    Changez de design ou de technologie sans perdre votre positionnement. Migration sécurisée et redirections 301 incluses.
-                                </p>
-                            </Link>
-                        </div>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            <Link href="/outils/audit-seo-gratuit" className="inline-flex items-center justify-center px-6 py-3 bg-sauge text-white rounded-full font-bold hover:bg-ink transition-colors">
-                                Audit SEO gratuit
-                                <ArrowRight className="ml-2 w-4 h-4" />
-                            </Link>
-                            <Link href="/outils" className="inline-flex items-center justify-center px-6 py-3 border border-gray-200 rounded-full text-ink font-bold hover:border-sauge hover:text-sauge transition-colors bg-gray-50">
-                                Voir tous les outils
-                                <ArrowRight className="ml-2 w-4 h-4" />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <FAQ items={SEO_FAQ} title="Questions sur le Référencement Naturel" />
 
             {/* Services complémentaires */}
