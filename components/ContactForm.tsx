@@ -48,7 +48,7 @@ export function ContactForm() {
                 setIsSubmitted(true);
                 setFormData({ name: "", email: "", phone: "", company: "", website: "", message: "", budget: "" });
             } else {
-                setError("Une erreur est survenue. Réessayez ou appelez-moi au 06 61 13 97 48.");
+                setError(result.error || "Une erreur est survenue. Réessayez ou appelez-moi au 06 61 13 97 48.");
             }
         } catch {
             setError("Erreur de connexion. Appelez-moi au 06 61 13 97 48.");
