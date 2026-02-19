@@ -171,7 +171,7 @@ La plupart des entreprises devraient **commencer les deux en parallèle**, avec 
 
 - [L'importance d'un audit SEO pour votre croissance](/blog/importance-audit-seo) — Pourquoi commencer par un diagnostic
 - [Checklist SEO 2026 : les 30 points essentiels](/blog/checklist-seo-2026) — Guide complet pour optimiser votre site
-- [GEO : comment être cité par ChatGPT et Gemini](/blog/visibilite-ia-geo) — Le nouveau terrain de la visibilité
+- [GEO : comment être cité par ChatGPT, Perplexity et les IA](/blog/geo-comment-apparaitre-chatgpt-2026) — Le nouveau terrain de la visibilité
 
 ---
 

@@ -35,6 +35,11 @@ const nextConfig = {
                 destination: '/consultant-seo',
                 permanent: true, // 301 - fusion des pages qui ciblent le même mot-clé
             },
+            {
+                source: '/blog/visibilite-ia-geo',
+                destination: '/blog/geo-comment-apparaitre-chatgpt-2026',
+                permanent: true, // 301 - fusion articles GEO (cannibalisation)
+            },
             // Anciennes URLs WordPress → Accueil
             {
                 source: '/index.html',

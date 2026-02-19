@@ -216,7 +216,7 @@ Les **Large Language Models** (LLMs) privilégient les contenus :
 
 > **Outil gratuit :** [Testeur de Visibilité IA — Êtes-vous visible par ChatGPT ?](/outils/testeur-visibilite-ia) — Analysez vos signaux GEO et découvrez si les IA peuvent vous citer.
 
-Découvrez mon article complet sur la [visibilité dans l'IA générative](/blog/visibilite-ia-geo).
+Découvrez mon article complet sur le [GEO et la visibilité dans l'IA générative](/blog/geo-comment-apparaitre-chatgpt-2026).
 
 ### FAQ structurées avec Schema.org
 

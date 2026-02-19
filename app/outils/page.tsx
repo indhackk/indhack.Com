@@ -432,7 +432,7 @@ export default function OutilsPage() {
                                     <h3 className="font-bold text-white mb-4">Articles SEO</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/blog/visibilite-ia-geo" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                            <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
                                                 <ArrowRight className="w-3 h-3" />
                                                 Guide complet du GEO
                                             </Link>
@@ -502,7 +502,7 @@ export default function OutilsPage() {
                                 <ArrowRight className="w-5 h-5" />
                             </Link>
                             <Link
-                                href="/blog/visibilite-ia-geo"
+                                href="/blog/geo-comment-apparaitre-chatgpt-2026"
                                 className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-colors"
                             >
                                 En savoir plus sur le GEO

@@ -42,6 +42,21 @@ Point essentiel : le GEO s'appuie largement sur les signaux SEO classiques. Les 
 
 Selon Gartner, le volume de recherche sur les moteurs classiques devrait baisser de **25% d'ici fin 2026** à cause des chatbots IA. Le SEO reste vital, mais il ne suffit plus.
 
+### GEO vs SEO : tableau comparatif
+
+| Critère | SEO classique | GEO |
+|---------|--------------|-----|
+| **Objectif** | Apparaître dans les 10 liens bleus | Être cité comme source dans les réponses IA |
+| **Support** | Google, Bing (moteurs traditionnels) | ChatGPT, Perplexity, Gemini, Claude, Copilot |
+| **Format résultat** | Liste de liens cliquables | Réponse synthétique avec sources citées |
+| **Métriques** | Positions, CTR, trafic organique | Citations, mentions, visibilité IA |
+| **Optimisation technique** | Crawl Googlebot, Core Web Vitals | Crawl GPTBot/PerplexityBot, llms.txt |
+| **Contenu** | Mots-clés, balises Hn, maillage | Format Q&A, données structurées, sources |
+| **Temporalité** | Index mis à jour régulièrement | Données d'entraînement + browse temps réel |
+| **Comportement utilisateur** | Clique sur un lien, visite le site | Reçoit une réponse directe, peut citer la source |
+
+Les deux disciplines sont **complémentaires**. Un site mal référencé sur Google ne sera pas cité par les IA car il manque d'autorité. Inversement, un site bien référencé mais bloquant les crawlers IA sera invisible dans ChatGPT.
+
 ## Pourquoi le GEO est devenu incontournable en 2026
 
 ### Les chiffres qui changent la donne
@@ -179,7 +194,7 @@ Les IA répondent de plus en plus aux requêtes locales. "Quel restaurant italie
 
 4. **Citations NAP cohérentes** — Nom, Adresse, Téléphone identiques partout sur le web. Les incohérences créent de la méfiance.
 
-> Pour optimiser votre référencement local, [découvrez nos services SEO local](/seo-local) ou consultez notre guide [GEO et visibilité IA pour les entreprises](/blog/visibilite-ia-geo).
+> Pour optimiser votre référencement local, [découvrez nos services SEO local](/seo-local).
 
 ## Checklist GEO — 10 actions à faire aujourd'hui
 
@@ -241,10 +256,10 @@ Les 4 piliers à retenir :
 ---
 
 **À lire aussi :**
-- [GEO : Comment être cité par ChatGPT et Gemini ?](/blog/visibilite-ia-geo) — Approfondir la stratégie GEO
 - [Checklist SEO 2026 — Les 30 points essentiels](/blog/checklist-seo-2026)
 - [L'importance d'un audit SEO pour votre croissance](/blog/importance-audit-seo)
 - [Google Business Profile : Guide Complet](/blog/google-business-profile-guide-complet)
+- [SEO vs SEA : que choisir pour votre acquisition ?](/blog/seo-vs-sea-que-choisir)
 
 **Outils gratuits :**
 - [Testeur Visibilité IA](/outils/testeur-visibilite-ia)

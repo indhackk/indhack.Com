@@ -161,8 +161,159 @@ export default function AuditSeoClient() {
                 </div>
             </section>
 
-            {/* Experience Section */}
+            {/* Section Éducative - Pourquoi un audit SEO en 2026 */}
             <section className="py-24 bg-gray-50 border-t border-gray-100">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="text-center mb-12">
+                            <p className="text-sauge font-bold tracking-[0.2em] uppercase mb-4 text-sm">Contexte 2026</p>
+                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink">
+                                Pourquoi votre site a besoin d'un <span className="text-sauge">audit SEO</span> aujourd'hui
+                            </h2>
+                        </div>
+
+                        <div className="prose prose-lg max-w-none text-soft">
+                            <p>
+                                Google fait plus de <strong>4 000 mises à jour de son algorithme par an</strong>. Ce qui fonctionnait en 2023 peut vous rendre invisible en 2026. Les IA comme ChatGPT et Perplexity changent la façon dont les gens cherchent l'information. Sans audit, vous naviguez à vue.
+                            </p>
+                            <p>
+                                <strong>68 % des expériences en ligne commencent par un moteur de recherche</strong>. Si votre site a des blocages techniques (indexation, vitesse, structure), vous perdez ce trafic avant même de le savoir. Pire : vous investissez peut-être dans du contenu ou de la publicité pour des pages qui ne pourront jamais ranker.
+                            </p>
+                            <p>
+                                Un diagnostic SEO n'est pas une dépense, c'est un investissement. Il révèle les fuites invisibles de votre site : les erreurs techniques qui empêchent Google de vous comprendre, les mots-clés mal ciblés qui attirent le mauvais trafic, les pages cannibalisées qui se battent entre elles.
+                            </p>
+                            <p>
+                                C'est pourquoi je recommande toujours de <Link href="/blog/importance-audit-seo" className="text-sauge hover:underline">commencer par un audit</Link> avant d'investir dans une stratégie de <Link href="/referencement-naturel" className="text-sauge hover:underline">référencement naturel</Link>. Sans diagnostic, on risque de soigner les mauvais symptômes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section Freelance vs Agence */}
+            <section className="py-24 bg-white border-t border-gray-100">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-5xl mx-auto">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink">
+                                Audit SEO : <span className="text-sauge">freelance ou agence</span> ?
+                            </h2>
+                            <p className="text-lg text-soft mt-4 max-w-2xl mx-auto">
+                                La question revient souvent. Voici une comparaison honnête pour vous aider à choisir.
+                            </p>
+                        </div>
+
+                        <div className="overflow-x-auto mb-8">
+                            <table className="w-full text-left border-collapse">
+                                <thead>
+                                    <tr className="border-b-2 border-gray-200">
+                                        <th className="py-4 px-4 font-bold text-ink">Critère</th>
+                                        <th className="py-4 px-4 font-bold text-sauge">Freelance</th>
+                                        <th className="py-4 px-4 font-bold text-ink">Agence</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-soft">
+                                    <tr className="border-b border-gray-100">
+                                        <td className="py-4 px-4 font-medium">Prix audit complet</td>
+                                        <td className="py-4 px-4">500 - 2 000 €</td>
+                                        <td className="py-4 px-4">1 500 - 5 000 €</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-100">
+                                        <td className="py-4 px-4 font-medium">Interlocuteur</td>
+                                        <td className="py-4 px-4">Expert unique, direct</td>
+                                        <td className="py-4 px-4">Account manager + équipe</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-100">
+                                        <td className="py-4 px-4 font-medium">Délai de livraison</td>
+                                        <td className="py-4 px-4">5-10 jours</td>
+                                        <td className="py-4 px-4">2-4 semaines</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-100">
+                                        <td className="py-4 px-4 font-medium">Personnalisation</td>
+                                        <td className="py-4 px-4">Haute (approche sur-mesure)</td>
+                                        <td className="py-4 px-4">Variable (process standardisés)</td>
+                                    </tr>
+                                    <tr className="border-b border-gray-100">
+                                        <td className="py-4 px-4 font-medium">Qui fait le travail ?</td>
+                                        <td className="py-4 px-4">L'expert senior lui-même</td>
+                                        <td className="py-4 px-4">Souvent un junior supervisé</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div className="bg-gray-50 p-8 rounded-2xl">
+                            <p className="text-soft">
+                                <strong className="text-ink">Pourquoi j'ai choisi le freelance :</strong> Un seul interlocuteur expert, pas de process corporate, pas de junior qui apprend sur votre dossier. Quand vous me confiez un audit, c'est moi qui le réalise. Je connais votre site, votre marché, vos concurrents. Et je suis disponible directement si vous avez des questions.
+                            </p>
+                            <p className="text-soft mt-4">
+                                Pour en savoir plus sur mon approche, découvrez <Link href="/consultant-seo" className="text-sauge hover:underline">mon profil de consultante SEO</Link>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section Processus en 5 étapes */}
+            <section className="py-24 bg-gray-50 border-t border-gray-100">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink">
+                                Mon processus d'audit <span className="text-sauge">en 5 étapes</span>
+                            </h2>
+                            <p className="text-lg text-soft mt-4">
+                                Chaque audit suit une méthodologie rigoureuse pour ne rien laisser au hasard.
+                            </p>
+                        </div>
+
+                        <div className="space-y-6">
+                            <div className="flex gap-6 items-start bg-white p-6 rounded-2xl border border-gray-100">
+                                <div className="w-12 h-12 bg-sauge text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-ink mb-2">Crawl technique approfondi</h3>
+                                    <p className="text-soft">Screaming Frog + Google Search Console pour scanner chaque URL : indexation, redirections, erreurs 4xx/5xx, vitesse de chargement, Core Web Vitals.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-6 items-start bg-white p-6 rounded-2xl border border-gray-100">
+                                <div className="w-12 h-12 bg-sauge text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-ink mb-2">Analyse sémantique</h3>
+                                    <p className="text-soft">Identification des mots-clés sur lesquels vous devriez ranker, analyse des positions actuelles, détection des cannibalisations et des opportunités manquées.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-6 items-start bg-white p-6 rounded-2xl border border-gray-100">
+                                <div className="w-12 h-12 bg-sauge text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-ink mb-2">Audit de popularité</h3>
+                                    <p className="text-soft">Analyse de votre profil de backlinks (qualité, toxicité, ancres), comparaison avec vos concurrents, identification des opportunités de netlinking.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-6 items-start bg-white p-6 rounded-2xl border border-gray-100">
+                                <div className="w-12 h-12 bg-sauge text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">4</div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-ink mb-2">Benchmark concurrentiel</h3>
+                                    <p className="text-soft">Décryptage de la stratégie de 3 à 5 concurrents directs : sur quels mots-clés ils rankent, d'où viennent leurs backlinks, quels contenus performent.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-6 items-start bg-white p-6 rounded-2xl border border-gray-100">
+                                <div className="w-12 h-12 bg-sauge text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">5</div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-ink mb-2">Roadmap priorisée par ROI</h3>
+                                    <p className="text-soft">Le cœur du rapport : une matrice effort/impact qui classe chaque recommandation. Vous savez exactement par où commencer pour maximiser votre retour sur investissement.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="text-center text-soft mt-8">
+                            Découvrez <Link href="/blog/contenu-rapport-audit-seo" className="text-sauge hover:underline">ce que contient concrètement un rapport d'audit SEO</Link>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Experience Section */}
+            <section className="py-24 bg-white border-t border-gray-100">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-ink mb-16 uppercase tracking-tighter">
                         Pourquoi IndHack pour votre <span className="text-sauge">Audit</span> ?

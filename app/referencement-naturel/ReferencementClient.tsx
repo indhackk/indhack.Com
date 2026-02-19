@@ -294,11 +294,11 @@ export default function ReferencementClient() {
                         <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
                             Approfondir le sujet
                         </h2>
-                        <div className="grid md:grid-cols-3 gap-6">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                             <Link href="/blog/checklist-seo-2026" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    Checklist SEO 2026 : 30 points essentiels
+                                    Checklist SEO 2026 : les 30 fondamentaux
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
                                     Les 30 points à vérifier pour optimiser votre site.
@@ -316,10 +316,19 @@ export default function ReferencementClient() {
                             <Link href="/blog/programmatic-seo-50-pages-locales" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    Programmatic SEO : créer 50 pages locales
+                                    Programmatic SEO : scaler votre trafic local
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
                                     Génération de pages locales optimisées à grande échelle.
+                                </p>
+                            </Link>
+                            <Link href="/blog/importance-audit-seo" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Pourquoi l'audit est le point de départ
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    Comprendre pourquoi tout projet SEO commence par un audit.
                                 </p>
                             </Link>
                         </div>
