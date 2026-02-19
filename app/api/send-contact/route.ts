@@ -41,38 +41,7 @@ export async function POST(request: NextRequest) {
 
         const { name, email, phone, company, website, budget, message } = validation.data;
 
-        // PRIORITÉ: Web3Forms (clé API via variable d'environnement uniquement)
-        const WEB3FORMS_KEY = process.env.WEB3FORMS_ACCESS_KEY || process.env.WEBFORM;
-        if (WEB3FORMS_KEY) {
-            const web3Response = await fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    access_key: WEB3FORMS_KEY,
-                    subject: `🚀 Nouveau contact - ${name}${company ? ` (${company})` : ''}`,
-                    from_name: name,
-                    replyto: email,
-                    Nom: name,
-                    Email: email,
-                    Telephone: phone || 'Non renseigné',
-                    Entreprise: company || 'Non renseigné',
-                    Site_Web: website || 'Non renseigné',
-                    Budget: budget || 'Non renseigné',
-                    Message: message,
-                })
-            });
-
-            const web3Result = await web3Response.json();
-            if (web3Result.success) {
-                return NextResponse.json(
-                    { success: true, message: 'Message envoyé avec succès !' },
-                    { status: 200, headers: securityHeaders }
-                );
-            }
-            // Web3Forms failed, try fallback
-        }
-
-        // FALLBACK: FormSubmit
+        // FormSubmit (fallback si Web3Forms côté client échoue)
         const FORMSUBMIT_EMAIL = 'contact@indhack.com';
         const response = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_EMAIL}`, {
             method: 'POST',
@@ -95,9 +64,9 @@ export async function POST(request: NextRequest) {
         });
 
         const isJson = response.headers.get("content-type")?.includes("application/json");
-        const result = isJson ? await response.json() : null;
+        const result = isJson ? await response.json() : await response.text();
 
-        if (response.ok && result?.success) {
+        if (response.ok && (typeof result === 'object' && result?.success)) {
             return NextResponse.json(
                 { success: true, message: 'Message envoyé avec succès !' },
                 { status: 200, headers: securityHeaders }
@@ -105,12 +74,12 @@ export async function POST(request: NextRequest) {
         }
 
         return NextResponse.json(
-            { success: false, error: 'Erreur lors de l\'envoi. Appelez-nous au 06 61 13 97 48.' },
+            { success: false, error: `Erreur d'envoi. Appelez-nous au 06 61 13 97 48.` },
             { status: 500, headers: securityHeaders }
         );
 
-    } catch {
-        // Error logged server-side only
+    } catch (error) {
+        console.error('Contact form error:', error);
         return NextResponse.json(
             { success: false, error: 'Erreur serveur. Veuillez réessayer.' },
             { status: 500, headers: securityHeaders }

@@ -148,18 +148,19 @@ export function validateContactForm(data: Record<string, unknown>): {
         return { success: false, error: 'Email invalide' };
     }
 
-    if (!message || typeof message !== 'string' || message.trim().length < 10) {
-        return { success: false, error: 'Message requis (minimum 10 caractères)' };
+    if (!message || typeof message !== 'string' || message.trim().length < 1) {
+        return { success: false, error: 'Message requis' };
     }
 
-    // Vérifications optionnelles
-    if (phone && typeof phone === 'string' && phone.trim() && !isValidPhone(phone)) {
-        return { success: false, error: 'Numéro de téléphone invalide' };
+    // Vérifications optionnelles - téléphone seulement si renseigné et format très flexible
+    if (phone && typeof phone === 'string' && phone.trim().length > 0) {
+        const cleanPhone = (phone as string).replace(/[\s.\-()]/g, '');
+        if (cleanPhone.length > 0 && !/^[\d+]{6,20}$/.test(cleanPhone)) {
+            return { success: false, error: 'Numéro de téléphone invalide' };
+        }
     }
 
-    if (website && typeof website === 'string' && website.trim() && !isValidUrl(website)) {
-        return { success: false, error: 'URL de site web invalide' };
-    }
+    // URL - pas de validation stricte, on accepte tout
 
     // Vérification des patterns suspects
     const allText = `${name} ${email} ${message} ${company || ''} ${website || ''}`;

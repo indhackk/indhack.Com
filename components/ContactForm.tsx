@@ -26,20 +26,49 @@ export function ContactForm() {
         setIsLoading(true);
         setError("");
 
+        const payload = {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone || 'Non renseigné',
+            company: formData.company || 'Non renseigné',
+            website: formData.website || 'Non renseigné',
+            budget: formData.budget || 'Non renseigné',
+            message: formData.message
+        };
+
         try {
-            // Send via secure API route (API key not exposed client-side)
-            const response = await fetch('/api/send-contact', {
+            // Web3Forms - appel côté client (leur usage prévu, gratuit)
+            const web3Response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    name: formData.name,
-                    email: formData.email,
-                    phone: formData.phone || 'Non renseigné',
-                    company: formData.company || 'Non renseigné',
-                    website: formData.website || 'Non renseigné',
-                    budget: formData.budget || 'Non renseigné',
-                    message: formData.message
+                    access_key: 'dbf0dae2-86ac-495e-a670-c4fc028ce036',
+                    subject: `🚀 Nouveau contact - ${formData.name}${formData.company ? ` (${formData.company})` : ''}`,
+                    from_name: formData.name,
+                    replyto: formData.email,
+                    Nom: payload.name,
+                    Email: payload.email,
+                    Telephone: payload.phone,
+                    Entreprise: payload.company,
+                    Site_Web: payload.website,
+                    Budget: payload.budget,
+                    Message: payload.message,
                 })
+            });
+
+            const web3Result = await web3Response.json();
+
+            if (web3Result.success) {
+                setIsSubmitted(true);
+                setFormData({ name: "", email: "", phone: "", company: "", website: "", message: "", budget: "" });
+                return;
+            }
+
+            // Fallback: FormSubmit via API route
+            const response = await fetch('/api/send-contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
             });
 
             const result = await response.json();
