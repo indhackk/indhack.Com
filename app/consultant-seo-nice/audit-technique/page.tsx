@@ -8,7 +8,7 @@ const cityData = getCityBySlug("consultant-seo-nice")!;
 const serviceData = getServiceContent("audit-technique", "consultant-seo-nice")!;
 
 export const metadata: Metadata = {
-    title: "Audit Site Internet Nice | Audit SEO Technique 06 - INDHACK",
+    title: "Audit Site Internet Nice | Audit SEO Technique 06 – IndHack",
     description: "Audit de site internet à Nice : analyse technique complète de votre site web. Indexation, vitesse, Core Web Vitals. Consultante SEO freelance. Diagnostic gratuit.",
     keywords: [
         "audit site internet nice",
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
                 url: "https://indhack.com/images/og-audit-technique.png",
                 width: 1200,
                 height: 630,
-                alt: "Audit Technique SEO - INDHACK Consultante SEO"
+                alt: "Audit Technique SEO – IndHack Consultante SEO"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "Audit Technique SEO Nice 06 - INDHACK",
+        title: "Audit Technique SEO Nice 06 – IndHack",
         description: "Consultante SEO freelance. Audit technique pour débloquer votre visibilité Google."
     },
     alternates: {

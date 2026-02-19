@@ -6,8 +6,8 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-strasbourg")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO Strasbourg`,
-    description: `Boostez votre visibilité sur Google à ${cityData.name}. Consultante SEO freelance experte en référencement local pour PME et entreprises du ${cityData.department}. Audit gratuit ✆ 06 61 13 97 48`,
+    title: "Consultante SEO Strasbourg — Référencement Alsace",
+    description: "Consultante SEO freelance à Strasbourg. Référencement local pour PME et entreprises du Bas-Rhin. Audit technique gratuit.",
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`
     },

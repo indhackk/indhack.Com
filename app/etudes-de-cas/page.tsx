@@ -4,13 +4,13 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Études de Cas SEO | Résultats Clients Concrets – INDHACK",
-    description: "Découvrez les résultats SEO obtenus pour mes clients : trafic multiplié, leads qualifiés, positions Google. Études de cas détaillées et chiffrées. ✆ 06 61 13 97 48",
+    title: "Études de Cas SEO | Résultats Clients Concrets – IndHack",
+    description: "Résultats SEO obtenus pour mes clients : trafic multiplié, leads qualifiés, positions Google. Études de cas chiffrées.",
     alternates: {
         canonical: "https://indhack.com/etudes-de-cas"
     },
     openGraph: {
-        title: "Études de Cas SEO | Résultats Clients – INDHACK",
+        title: "Études de Cas SEO | Résultats Clients – IndHack",
         description: "Résultats concrets : trafic organique multiplié, positions Google gagnées. Découvrez mes études de cas.",
         url: "https://indhack.com/etudes-de-cas",
     }

@@ -7,8 +7,8 @@ import { CannesContent } from "./CannesContent";
 const cityData = getCityBySlug("consultant-seo-cannes")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO Cannes | Expert Référencement Luxe & Prestige`,
-    description: `Consultante SEO spécialisée marché premium à Cannes. Immobilier prestige, yachting, événementiel. Référencement multilingue FR/EN. Audit gratuit. ✆ 06 61 13 97 48`,
+    title: "Consultante SEO Cannes (06) — Référencement Premium",
+    description: "Consultante SEO spécialisée marché premium à Cannes. Immobilier prestige, yachting, événementiel. Référencement multilingue FR/EN.",
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`
     },

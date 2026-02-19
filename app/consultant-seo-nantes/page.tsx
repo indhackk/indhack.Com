@@ -6,8 +6,8 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-nantes")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO Nantes`,
-    description: `Boostez votre visibilité sur Google à ${cityData.name}. Consultante SEO freelance experte en référencement local pour PME et entrepreneurs de ${cityData.department}. Audit gratuit ✆ 06 61 13 97 48`,
+    title: "Consultante SEO Nantes — Référencement & Visibilité",
+    description: "Consultante SEO freelance à Nantes. Référencement local pour PME et entrepreneurs de Loire-Atlantique. Audit gratuit.",
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`
     },

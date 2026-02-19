@@ -8,8 +8,8 @@ import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "SEO Local | Dominez Google Maps & le Pack Local – INDHACK",
-    description: "Consultante SEO locale experte sur toutes les grandes villes françaises. Nice, Cannes, Marseille, Paris, Lyon, Bordeaux, Toulouse, Rennes, Nantes, Lille... Référencement géolocalisé pour PME. ✆ 06 61 13 97 48",
+    title: "SEO Local | Dominez Google Maps & le Pack Local – IndHack",
+    description: "Consultante SEO locale experte sur toutes les grandes villes françaises. Référencement géolocalisé pour PME. Audit gratuit.",
     alternates: {
         canonical: "https://indhack.com/seo-local"
     },

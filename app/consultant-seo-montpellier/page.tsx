@@ -6,8 +6,8 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-montpellier")!;
 
 export const metadata: Metadata = {
-    title: `Consultante SEO Montpellier | Experte Référencement`,
-    description: `Consultante SEO à Montpellier : boostez votre visibilité Google. Experte en référencement local pour PME et startups de l'Hérault. Audit gratuit ✆ 06 61 13 97 48`,
+    title: "Consultante SEO Montpellier — Référencement Local",
+    description: "Consultante SEO à Montpellier. Référencement local pour PME et startups de l'Hérault. Audit technique gratuit.",
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`
     },

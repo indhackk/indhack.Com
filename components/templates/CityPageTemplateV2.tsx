@@ -63,12 +63,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             "Google Business Profile",
             "Création de Site Web",
             "Community Management"
-        ],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "47"
-        }
+        ]
     };
 
     // FAQ enrichie et diversifiée par type de marché

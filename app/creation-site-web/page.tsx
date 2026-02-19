@@ -4,8 +4,8 @@ import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Création de Site Web Optimisé SEO | Sites Performants – INDHACK",
-    description: "Sites WordPress et Next.js ultra-rapides, conçus pour la conversion et le référencement. Design sur-mesure, sécurité maximale. Devis gratuit. ✆ 06 61 13 97 48",
+    title: "Création de Site Web Optimisé SEO | Sites Performants – IndHack",
+    description: "Sites WordPress et Next.js ultra-rapides, conçus pour la conversion et le référencement. Design sur-mesure. Devis gratuit.",
     alternates: {
         canonical: "https://indhack.com/creation-site-web"
     },

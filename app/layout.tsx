@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         template: "%s",
         default: "Consultante SEO & Experte Référencement",
     },
-    description: "Boostez votre visibilité Google avec une experte SEO. Audit gratuit, +200% de trafic organique en 6 mois. Résultats garantis. ✆ 06 61 13 97 48",
+    description: "Boostez votre visibilité Google avec une experte SEO. Audit gratuit, +200% de trafic organique en 6 mois. Résultats garantis.",
     keywords: ["SEO", "GEO", "Acquisition Digitale", "Referencement naturel", "Audit SEO", "Visibilité IA", "Next.js SEO", "Consultant SEO", "SEO Local", "Référencement Local"],
     authors: [{ name: "Indiana Aflalo" }],
     creator: "Indiana Aflalo",

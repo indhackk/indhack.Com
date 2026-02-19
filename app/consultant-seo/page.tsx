@@ -4,8 +4,8 @@ import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Freelance | Experte Référencement Naturel – INDHACK",
-    description: "Consultante SEO freelance expérimentée. Audit technique, stratégie de contenu, netlinking. Résultats mesurables et ROI garanti. Devis gratuit. ✆ 06 61 13 97 48",
+    title: "Consultante SEO Freelance | Experte Référencement Naturel – IndHack",
+    description: "Consultante SEO freelance expérimentée. Audit technique, stratégie de contenu, netlinking. Résultats mesurables. Devis gratuit.",
     keywords: ["consultant SEO", "consultant SEO freelance", "consultante SEO", "expert référencement naturel", "consultant référencement", "SEO freelance"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo"

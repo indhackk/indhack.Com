@@ -7,8 +7,8 @@ import { AntibesContent } from "./AntibesContent";
 const cityData = getCityBySlug("consultant-seo-antibes")!;
 
 export const metadata: Metadata = {
-    title: `Consultant SEO Antibes | Expert Yachting & Commerce Local`,
-    description: `Consultante SEO spécialisée yachting Port Vauban et commerces Vieil Antibes. Référencement local, stratégie saisonnière. Audit gratuit. ✆ 06 61 13 97 48`,
+    title: "Consultante SEO Antibes (06) — Référencement Local",
+    description: "Consultante SEO spécialisée yachting Port Vauban et commerces Vieil Antibes. Référencement local, stratégie saisonnière.",
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`
     },

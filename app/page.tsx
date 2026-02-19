@@ -28,7 +28,7 @@ const FAQ = dynamic(() => import("@/components/FAQ").then(mod => ({ default: mod
 
 export const metadata: Metadata = {
     title: "Consultante SEO & Experte Référencement Naturel",
-    description: "Consultante SEO freelance spécialisée en référencement naturel, SEO local et création de site web. Audit SEO gratuit. Nice & toute la France. ✆ 06 61 13 97 48",
+    description: "Consultante SEO freelance spécialisée en référencement naturel, SEO local et création de site web. Audit SEO gratuit. Nice et toute la France.",
     alternates: {
         canonical: "https://indhack.com"
     },

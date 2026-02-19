@@ -4,8 +4,8 @@ import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Refonte de Site Web | Migration SEO Sécurisée – INDHACK",
-    description: "Refonte de site sans perte de trafic. Migration SEO sécurisée, redirection 301 et optimisation technique. Sécurisez votre visibilité. ✆ 06 61 13 97 48",
+    title: "Refonte de Site Web | Migration SEO Sécurisée – IndHack",
+    description: "Refonte de site sans perte de trafic. Migration SEO sécurisée, redirection 301 et optimisation technique.",
     alternates: {
         canonical: "https://indhack.com/refonte-site-web"
     },

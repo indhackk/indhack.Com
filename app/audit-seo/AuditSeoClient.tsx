@@ -206,7 +206,7 @@ export default function AuditSeoClient() {
                                 <h3 className="text-xl font-bold text-ink mb-3">Audit Technique Complet</h3>
                                 <p className="text-soft mb-4">
                                     Analyse en profondeur de l'architecture, de la vitesse, de l'indexation et des Core Web Vitals.
-                                    Idéal avant une <Link href="/refonte-site-web" className="text-sauge hover:underline">refonte de site</Link>.
+                                    Idéal avant une <Link href="/refonte-site-web" className="text-sauge hover:underline">refonte de site</Link> ou une <Link href="/creation-site-web" className="text-sauge hover:underline">création de site web optimisé SEO</Link>.
                                 </p>
                                 <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline inline-flex items-center gap-2">
                                     En savoir plus sur mes services <ArrowRight className="w-4 h-4" />

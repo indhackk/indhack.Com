@@ -4,8 +4,8 @@ import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Création Boutique en Ligne | E-commerce SEO Optimisé – INDHACK",
-    description: "Création de boutique en ligne optimisée SEO. WooCommerce, Shopify, PrestaShop. Sites e-commerce performants et visibles sur Google. Devis gratuit. ✆ 06 61 13 97 48",
+    title: "Création Boutique en Ligne | E-commerce SEO Optimisé – IndHack",
+    description: "Création de boutique en ligne optimisée SEO. WooCommerce, Shopify, PrestaShop. Sites e-commerce performants et visibles sur Google.",
     alternates: {
         canonical: "https://indhack.com/creation-boutique-en-ligne"
     },
