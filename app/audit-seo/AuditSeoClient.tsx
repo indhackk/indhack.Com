@@ -446,7 +446,7 @@ export default function AuditSeoClient() {
                             <Link href="/blog/audit-seo-erreurs-qui-coutent-cher" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    5 erreurs d'audit SEO qui coûtent cher
+                                    9 erreurs SEO qui coûtent cher
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
                                     Les erreurs invisibles que je vois sur 90% des sites audités.

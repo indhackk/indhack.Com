@@ -56,7 +56,7 @@ L'**audit concurrentiel** vous situe sur votre marché :
 - **Gap analysis** — Quels mots-clés ils ciblent et pas vous ?
 - **Backlinks** — D'où viennent leurs liens ? Pouvez-vous les obtenir aussi ?
 
-Pour savoir précisément [ce que doit contenir un rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo), consultez mon guide détaillé qui décrit chaque section du livrable. Et pour connaître les [erreurs SEO les plus coûteuses](/blog/audit-seo-erreurs-qui-coutent-cher), découvrez les 5 erreurs techniques les plus fréquentes.
+Pour savoir précisément [ce que doit contenir un rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo), consultez mon guide détaillé qui décrit chaque section du livrable. Et pour connaître les [erreurs SEO les plus coûteuses](/blog/audit-seo-erreurs-qui-coutent-cher), découvrez les 9 erreurs techniques les plus fréquentes.
 
 ## L'approche IndHack : Prioriser pour le ROI
 
@@ -117,7 +117,7 @@ Un audit SEO vous permet de :
 
 ## Pour aller plus loin
 
-- [Les erreurs d'audit SEO qui coûtent cher](/blog/audit-seo-erreurs-qui-coutent-cher) — Les 5 erreurs techniques les plus fréquentes et comment les corriger
+- [Les erreurs d'audit SEO qui coûtent cher](/blog/audit-seo-erreurs-qui-coutent-cher) — Les 9 erreurs techniques les plus fréquentes et comment les corriger
 - [Que contient un rapport d'audit SEO professionnel ?](/blog/contenu-rapport-audit-seo) — Tout ce que vous devez attendre d'un audit complet
 - [Checklist SEO : refonte de site](/blog/checklist-seo-refonte-site) — 45 points à vérifier avant migration
 
@@ -153,5 +153,3 @@ Un audit complet est recommandé une fois par an minimum. Des mini-audits trimes
 - [Audit SEO à Marseille](/consultant-seo-marseille/audit-technique)
 
 ---
-
-**Tags** : #audit-seo #erreurs-seo #diagnostic-site #optimisation-seo #strategie-seo

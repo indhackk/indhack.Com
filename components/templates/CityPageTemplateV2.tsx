@@ -171,7 +171,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             tech: [
                 { title: "Comment créer 50 pages locales en 10 min", href: "/blog/programmatic-seo-50-pages-locales", desc: "Programmatic SEO B2B" },
                 { title: "Checklist SEO 2026 : 30 points essentiels", href: "/blog/checklist-seo-2026", desc: "Audit technique complet" },
-                { title: "5 erreurs SEO qui coûtent 10 000€/an", href: "/blog/audit-seo-erreurs-qui-coutent-cher", desc: "Corrections prioritaires" }
+                { title: "9 erreurs SEO qui coûtent 10 000€/an", href: "/blog/audit-seo-erreurs-qui-coutent-cher", desc: "Corrections prioritaires" }
             ],
             volume: [
                 { title: "Checklist SEO 2026 : 30 points essentiels", href: "/blog/checklist-seo-2026", desc: "Audit technique complet" },
