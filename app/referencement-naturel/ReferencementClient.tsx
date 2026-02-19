@@ -294,23 +294,32 @@ export default function ReferencementClient() {
                         <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
                             Approfondir le sujet
                         </h2>
-                        <div className="grid md:grid-cols-2 gap-6">
+                        <div className="grid md:grid-cols-3 gap-6">
+                            <Link href="/blog/checklist-seo-2026" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Checklist SEO 2026 : 30 points essentiels
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    Les 30 points à vérifier pour optimiser votre site.
+                                </p>
+                            </Link>
                             <Link href="/blog/seo-vs-sea-que-choisir" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
                                     SEO vs SEA : que choisir ?
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
-                                    Comparatif complet : coûts, délais, ROI. Guide pour faire le bon choix.
+                                    Comparatif complet : coûts, délais, ROI.
                                 </p>
                             </Link>
-                            <Link href="/blog/google-business-profile-guide-complet" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                            <Link href="/blog/programmatic-seo-50-pages-locales" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    Google Business Profile : guide complet
+                                    Programmatic SEO : créer 50 pages locales
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
-                                    Optimisez votre fiche pour dominer le pack local.
+                                    Génération de pages locales optimisées à grande échelle.
                                 </p>
                             </Link>
                         </div>

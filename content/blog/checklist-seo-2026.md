@@ -250,6 +250,8 @@ Ces **30 points** constituent le socle d'une stratégie de référencement natur
 
 Gardez cette checklist à portée de main pour vos prochains audits :
 
+**[📥 Télécharger la Checklist SEO 2026 (PDF)](/downloads/checklist-seo-2026.pdf)** — Les 30 points essentiels en une page.
+
 **[🔍 Lancez un audit SEO gratuit de votre site](/outils/audit-seo-gratuit)** — Identifiez vos priorités d'optimisation en 30 secondes.
 
 ### Besoin d'un Regard Expert ?

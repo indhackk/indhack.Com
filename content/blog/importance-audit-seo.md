@@ -56,7 +56,7 @@ L'**audit concurrentiel** vous situe sur votre marché :
 - **Gap analysis** — Quels mots-clés ils ciblent et pas vous ?
 - **Backlinks** — D'où viennent leurs liens ? Pouvez-vous les obtenir aussi ?
 
-Pour connaître les [erreurs SEO les plus coûteuses](/blog/audit-seo-erreurs-qui-coutent-cher) et comment les corriger, consultez mon article dédié.
+Pour savoir précisément [ce que doit contenir un rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo), consultez mon guide détaillé qui décrit chaque section du livrable. Et pour connaître les [erreurs SEO les plus coûteuses](/blog/audit-seo-erreurs-qui-coutent-cher), découvrez les 5 erreurs techniques les plus fréquentes.
 
 ## L'approche IndHack : Prioriser pour le ROI
 

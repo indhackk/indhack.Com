@@ -505,13 +505,13 @@ export default function ConsultantSEOClient() {
                                     Découvrez les missions concrètes d'un consultant SEO au quotidien.
                                 </p>
                             </Link>
-                            <Link href="/blog/salaire-consultant-seo" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                            <Link href="/blog/pourquoi-consultant-seo" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    Combien gagne un consultant SEO ?
+                                    Pourquoi faire appel à un consultant SEO ?
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
-                                    Salaires, TJM freelance et évolution de carrière.
+                                    Les 8 raisons concrètes de confier votre SEO à un expert.
                                 </p>
                             </Link>
                             <Link href="/blog/devenir-consultant-seo" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
