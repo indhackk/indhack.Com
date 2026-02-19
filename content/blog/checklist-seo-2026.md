@@ -1,6 +1,6 @@
 ---
-title: "Checklist SEO 2026 : les 30 points essentiels pour optimiser votre site"
-description: "Téléchargez la checklist SEO 2026 gratuite. 30 points essentiels pour optimiser votre site web : technique, contenu, SEO local, backlinks et visibilité IA."
+title: "Checklist SEO 2026 : 30 points pour optimiser votre site"
+description: "Checklist SEO 2026 gratuite : 30 points essentiels pour optimiser votre site web. Technique, contenu, SEO local, backlinks et visibilité IA."
 date: "2026-02-08"
 category: "Guides"
 image: "/images/blog/checklist-seo-2026.jpg"
@@ -13,6 +13,8 @@ Le référencement naturel évolue constamment. Ce qui fonctionnait hier peut de
 Cette **checklist SEO 2026** rassemble les **30 points essentiels** que je vérifie systématiquement lors de mes [audits SEO](/audit-seo). Que vous soyez entrepreneur, responsable marketing ou développeur, ces points vous permettront d'identifier rapidement les axes d'amélioration de votre site.
 
 > **Besoin d'un diagnostic personnalisé ?** Testez votre site gratuitement avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit) pour identifier vos priorités d'optimisation.
+
+Cette checklist complète ma stratégie de [référencement naturel](/referencement-naturel) pour les entreprises qui veulent dominer Google.
 
 ---
 

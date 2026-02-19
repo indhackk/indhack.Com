@@ -118,15 +118,15 @@ const nextConfig = {
                 destination: '/outils/:path*',
                 permanent: true,
             },
-            // Anciens outils API-only → page /outils/
+            // Anciens outils API-only → audit-seo-gratuit (outil de remplacement)
             {
                 source: '/outils/checker-accessibilite',
-                destination: '/outils',
+                destination: '/outils/audit-seo-gratuit',
                 permanent: true,
             },
             {
                 source: '/outils/analyseur-vitesse-site',
-                destination: '/outils',
+                destination: '/outils/audit-seo-gratuit',
                 permanent: true,
             },
             // /outils/extracteur-mots-cles - SUPPRIMÉ : page recréée

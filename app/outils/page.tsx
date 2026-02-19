@@ -11,12 +11,13 @@ import {
     Sparkles,
     CheckCircle2,
     Zap,
-    Shield
+    Shield,
+    Hash
 } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Outils SEO Gratuits 2026 — Audit, Visibilité IA, Schema",
-    description: "5 outils SEO gratuits et uniques : audit SEO avec analyse IA, testeur visibilité ChatGPT/Perplexity, générateur robots.txt crawlers IA, schema JSON-LD. Sans inscription.",
+    description: "6 outils SEO gratuits : audit SEO, testeur visibilité IA ChatGPT/Perplexity, générateur robots.txt, schema JSON-LD, extracteur mots-clés. Sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils"
     },
@@ -91,6 +92,16 @@ const TOOLS: Tool[] = [
         href: "/outils/simulateur-visibilite-locale",
         color: "from-orange-500 to-red-500",
         features: ["Analyse SERP locale", "Classification plateformes/locaux", "Score d'opportunité"],
+    },
+    {
+        id: "extracteur-mots-cles",
+        title: "Extracteur de Mots-Clés",
+        description: "Analysez la densité et les n-grammes d'un texte.",
+        longDescription: "Collez un texte et obtenez instantanément les mots-clés principaux, leur densité, et les expressions 2-3 mots les plus fréquentes. Idéal pour analyser vos contenus ou ceux de vos concurrents.",
+        icon: Hash,
+        href: "/outils/extracteur-mots-cles",
+        color: "from-amber-500 to-orange-600",
+        features: ["Densité de mots-clés", "Bi-grammes et tri-grammes", "Analyse 100% côté client"],
     },
 ];
 
