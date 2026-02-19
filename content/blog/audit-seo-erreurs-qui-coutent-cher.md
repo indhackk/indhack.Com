@@ -1,6 +1,6 @@
 ---
-title: "5 erreurs SEO qui vous coûtent cher (et comment les corriger)"
-description: "Votre site perd de l'argent. Découvrez les erreurs techniques invisibles (canonical, vitesse, indexation) qui tuent votre chiffre d'affaires. Guide correctif express."
+title: "9 erreurs SEO qui vous coûtent cher (et comment les corriger)"
+description: "Votre site perd de l'argent. Les 9 erreurs techniques invisibles (canonical, vitesse, cannibalisation) qui tuent votre CA. Corrections express."
 date: "2026-02-15"
 category: "Audit SEO"
 image: "/images/blog/seo-audit-money-flying-2026-02-15.webp"
@@ -253,7 +253,3 @@ Ces erreurs sont invisibles à l'œil nu, mais elles crient "amateur" aux robots
 Le SEO technique est la fondation. Sans elle, tout le reste (contenu, backlinks, [référencement naturel](/referencement-naturel)) s'écroule.
 
 Vous avez peur de toucher au code ? Je réalise un [audit SEO professionnel](/audit-seo) pour identifier ces failles sans risque. Testez d'abord avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit) ou [contactez-moi](/contact) directement.
-
----
-
-**Tags** : #audit-seo #erreurs-seo #canonical #core-web-vitals #cannibalisation #redirections-301 #robots-txt #optimisation-technique
