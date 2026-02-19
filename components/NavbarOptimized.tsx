@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, Phone, ArrowRight, ChevronDown, Search, Bot, Code2, MapPin, FileCode } from "lucide-react";
+import { Menu, X, Phone, ArrowRight, ChevronDown, Search, Bot, Code2, MapPin, FileCode, Type } from "lucide-react";
 import { useModal } from "@/components/providers/ModalProvider";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -20,6 +20,7 @@ const SERVICES = [
 const TOOLS = [
     { title: "Testeur Visibilité IA", href: "/outils/testeur-visibilite-ia", desc: "ChatGPT vous trouve-t-il ?", icon: Bot, status: "live" },
     { title: "Audit SEO Gratuit", href: "/outils/audit-seo-gratuit", desc: "Score /100 en 30 secondes", icon: Search, status: "live" },
+    { title: "Extracteur Mots-clés", href: "/outils/extracteur-mots-cles", desc: "Analysez densité et n-grammes", icon: Type, status: "live" },
     { title: "Générateur robots.txt", href: "/outils/generateur-robots-txt", desc: "Crawlers IA 2026 inclus", icon: FileCode, status: "live" },
     { title: "Générateur Schema", href: "/outils/generateur-schema-json-ld", desc: "Données structurées en 1 clic", icon: Code2, status: "live" },
     { title: "Simulateur Local", href: "/outils/simulateur-visibilite-locale", desc: "Qui domine votre ville ?", icon: MapPin, status: "live" },
