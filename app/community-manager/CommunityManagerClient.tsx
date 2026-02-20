@@ -79,7 +79,7 @@ const CommunityManagerFAQ = [
     },
     {
         question: "Combien coûte un community manager ?",
-        answer: "Les forfaits démarrent à **400€/mois** pour une gestion basique (1 réseau, 3 posts/semaine). Un accompagnement complet multi-plateformes avec création de contenu vidéo se situe entre **800€ et 1 500€/mois**."
+        answer: "Les forfaits démarrent à partir de **150€** pour des interventions ponctuelles. Un accompagnement complet multi-plateformes avec création de contenu vidéo est réalisé **sur devis**, en fonction de vos besoins."
     },
     {
         question: "Comment se passe la collaboration au quotidien ?",

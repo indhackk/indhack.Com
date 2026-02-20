@@ -63,7 +63,7 @@ H3 :
   - "Besoin d'un audit dans votre ville ?"
   - "Audit SEO : que contient le rapport ?"
   - "Pourquoi l'audit SEO est le point de départ"
-  - "5 erreurs d'audit SEO qui coûtent cher"
+  - "9 erreurs d'audit SEO qui coûtent cher"
 ```
 
 ### URL
@@ -180,7 +180,7 @@ Voir tous mes outils SEO gratuits →
 
 - **Audit SEO : que contient le rapport ?** — Découvrez en détail ce que contient un rapport d'audit SEO professionnel.
 - **Pourquoi l'audit SEO est le point de départ** — Ne naviguez plus à vue. L'audit est l'investissement le plus rentable.
-- **5 erreurs d'audit SEO qui coûtent cher** — Les erreurs invisibles que je vois sur 90% des sites audités.
+- **9 erreurs d'audit SEO qui coûtent cher** — Les erreurs invisibles que je vois sur 90% des sites audités.
 
 **[Section Outils]**
 
@@ -293,7 +293,7 @@ E-E-A-T signaux :
 | 10 | /outils | Voir tous mes outils SEO gratuits → | Section outil gratuit | CTA |
 | 11 | /blog/contenu-rapport-audit-seo | Audit SEO : que contient le rapport ? | Section articles | Bloc bas |
 | 12 | /blog/importance-audit-seo | Pourquoi l'audit SEO est le point de départ | Section articles | Bloc bas |
-| 13 | /blog/audit-seo-erreurs-qui-coutent-cher | 5 erreurs d'audit SEO qui coûtent cher | Section articles | Bloc bas |
+| 13 | /blog/audit-seo-erreurs-qui-coutent-cher | 9 erreurs d'audit SEO qui coûtent cher | Section articles | Bloc bas |
 | 14 | /outils | Voir tous les outils SEO | Section outils bas | CTA |
 
 **Total liens sortants contextuels : 14**
@@ -742,7 +742,7 @@ Les corrections techniques (erreurs d'indexation, vitesse) montrent souvent des 
 ## Pour aller plus loin
 
 - [Pourquoi l'audit SEO est le point de départ de votre croissance](/blog/importance-audit-seo) — Comprendre l'importance d'un diagnostic complet
-- [Les erreurs d'audit SEO qui coûtent cher](/blog/audit-seo-erreurs-qui-coutent-cher) — Les 5 erreurs techniques les plus fréquentes
+- [Les erreurs d'audit SEO qui coûtent cher](/blog/audit-seo-erreurs-qui-coutent-cher) — Les 9 erreurs techniques les plus fréquentes
 - [Checklist SEO : refonte de site](/blog/checklist-seo-refonte-site) — 45 points à vérifier avant migration
 
 ---
@@ -1041,7 +1041,7 @@ L'**audit concurrentiel** vous situe sur votre marché :
 - **Gap analysis** — Quels mots-clés ils ciblent et pas vous ?
 - **Backlinks** — D'où viennent leurs liens ? Pouvez-vous les obtenir aussi ?
 
-Pour savoir précisément [ce que doit contenir un rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo), consultez mon guide détaillé qui décrit chaque section du livrable. Et pour connaître les [erreurs SEO les plus coûteuses](/blog/audit-seo-erreurs-qui-coutent-cher), découvrez les 5 erreurs techniques les plus fréquentes.
+Pour savoir précisément [ce que doit contenir un rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo), consultez mon guide détaillé qui décrit chaque section du livrable. Et pour connaître les [erreurs SEO les plus coûteuses](/blog/audit-seo-erreurs-qui-coutent-cher), découvrez les 9 erreurs techniques les plus fréquentes.
 
 ## L'approche IndHack : Prioriser pour le ROI
 
@@ -1102,7 +1102,7 @@ Un audit SEO vous permet de :
 
 ## Pour aller plus loin
 
-- [Les erreurs d'audit SEO qui coûtent cher](/blog/audit-seo-erreurs-qui-coutent-cher) — Les 5 erreurs techniques les plus fréquentes et comment les corriger
+- [Les erreurs d'audit SEO qui coûtent cher](/blog/audit-seo-erreurs-qui-coutent-cher) — Les 9 erreurs techniques les plus fréquentes et comment les corriger
 - [Que contient un rapport d'audit SEO professionnel ?](/blog/contenu-rapport-audit-seo) — Tout ce que vous devez attendre d'un audit complet
 - [Checklist SEO : refonte de site](/blog/checklist-seo-refonte-site) — 45 points à vérifier avant migration
 
@@ -1281,7 +1281,7 @@ Fichier source   : content/blog/audit-seo-erreurs-qui-coutent-cher.md
 
 ### Title
 ```
-Valeur exacte   : 5 erreurs SEO qui vous coûtent cher (et comment les corriger)
+Valeur exacte   : 9 erreurs SEO qui vous coûtent cher (et comment les corriger)
 Longueur        : 60 caractères
 Statut          : ✅ ≤60 car.
 Contient le KW  : oui — "erreurs SEO"
@@ -1290,7 +1290,7 @@ Commence par KW : oui (chiffre accrocheur)
 
 ### Meta Description
 ```
-Valeur exacte   : Votre site perd de l'argent. Découvrez les 5 erreurs techniques invisibles (canonical, vitesse, indexation) qui tuent votre chiffre d'affaires. Guide correctif express.
+Valeur exacte   : Votre site perd de l'argent. Découvrez les 9 erreurs techniques invisibles (canonical, vitesse, indexation) qui tuent votre chiffre d'affaires. Guide correctif express.
 Longueur        : 174 caractères
 Statut          : 🔴 >165 car. (tronquée)
 Contient le KW  : oui — "erreurs techniques"
@@ -1299,7 +1299,7 @@ Contient CTA    : oui — "Découvrez", "Guide correctif"
 
 ### H1
 ```
-Valeur exacte   : 5 erreurs SEO qui vous coûtent cher (et comment les corriger)
+Valeur exacte   : 9 erreurs SEO qui vous coûtent cher (et comment les corriger)
 Longueur        : 60 caractères
 Contient le KW  : oui — "erreurs SEO"
 Unique sur page : oui
@@ -1344,7 +1344,7 @@ Pourtant, votre téléphone ne sonne pas assez.
 Pourquoi ? Parce que votre site a des "fuites".
 
 Imaginez un seau percé. Vous versez de l'eau (du trafic), mais elle s'échappe avant de remplir le seau (la vente).
-En tant que [Consultante SEO à Nice](/consultant-seo-nice), je vois ces 5 erreurs sur 90% des sites que j'audite dans le cadre de mon [service d'audit SEO](/audit-seo). C'est [la raison pour laquelle l'audit SEO est le premier investissement](/blog/importance-audit-seo) que je recommande à toute entreprise qui veut arrêter de perdre de l'argent.
+En tant que [Consultante SEO à Nice](/consultant-seo-nice), je vois ces 9 erreurs sur 90% des sites que j'audite dans le cadre de mon [service d'audit SEO](/audit-seo). C'est [la raison pour laquelle l'audit SEO est le premier investissement](/blog/importance-audit-seo) que je recommande à toute entreprise qui veut arrêter de perdre de l'argent.
 
 Chacune d'elle vous coûte probablement un client par mois. Faites le calcul sur l'année : ça dépasse les 10 000€.
 Voici comment les détecter et **les corriger ce soir**. Pour aller plus loin, testez gratuitement votre site avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit).
@@ -1430,7 +1430,7 @@ Le moyen le plus simple est d'utiliser un [outil d'audit SEO gratuit](/outils/au
 
 ### Ces erreurs sont-elles graves pour le référencement ?
 
-Oui. Chacune de ces 5 erreurs peut réduire votre visibilité Google de 20 à 50 %. Cumulées, elles peuvent vous rendre quasi invisible sur des requêtes importantes. La bonne nouvelle : elles sont toutes corrigeables, souvent en moins d'une heure.
+Oui. Chacune de ces 9 erreurs peut réduire votre visibilité Google de 20 à 50 %. Cumulées, elles peuvent vous rendre quasi invisible sur des requêtes importantes. La bonne nouvelle : elles sont toutes corrigeables, souvent en moins d'une heure.
 
 ### Puis-je corriger ces erreurs moi-même ?
 
@@ -1444,7 +1444,7 @@ Les corrections techniques montrent des effets en 2 à 4 semaines, le temps que 
 
 **Conclusion**
 
-Ces erreurs sont invisibles à l'œil nu, mais elles crient "amateur" aux robots de Google. En corrigeant ces 5 points ce soir, vous ne gagnerez pas forcément plus de trafic demain, mais vous arrêterez de **perdre** celui que vous avez déjà.
+Ces erreurs sont invisibles à l'œil nu, mais elles crient "amateur" aux robots de Google. En corrigeant ces 9 points ce soir, vous ne gagnerez pas forcément plus de trafic demain, mais vous arrêterez de **perdre** celui que vous avez déjà.
 
 Vous avez peur de toucher au code ? Je réalise un [audit SEO professionnel](/audit-seo) pour identifier ces failles sans risque. Testez d'abord avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit) ou [contactez-moi](/contact) directement.
 
@@ -1493,7 +1493,7 @@ Questions traitées (intent matching) :
 Ton / registre : direct, actionnable, urgence (perte d'argent)
 
 E-E-A-T signaux :
-- Expérience démontrée : oui — "je vois ces 5 erreurs sur 90% des sites que j'audite"
+- Expérience démontrée : oui — "je vois ces 9 erreurs sur 90% des sites que j'audite"
 - Expertise           : oui — solutions techniques concrètes
 - Autorité            : partiel
 - Fiabilité           : oui — source Google citée
@@ -1558,7 +1558,7 @@ Mentions sans lien : Screaming Frog, TinyPNG, SEO META in 1 CLICK (outils extern
 - Title parfait (60 car., chiffre accrocheur, KW)
 - H1 = Title (cohérent)
 - Score KW on-page : 6/6
-- Structure listicle efficace (5 erreurs)
+- Structure listicle efficace (9 erreurs)
 - Solutions actionnables ("Le Fix")
 - Maillage interne correct (14 liens)
 - Liens vers pilier /audit-seo (3x)
@@ -1585,7 +1585,7 @@ Mentions sans lien : Screaming Frog, TinyPNG, SEO META in 1 CLICK (outils extern
 
 | DEPUIS ↓ / VERS → | /audit-seo (pilier) | /blog/contenu-rapport-audit-seo | /blog/importance-audit-seo | /blog/audit-seo-erreurs-qui-coutent-cher | /outils/audit-seo-gratuit |
 |-------------------|---------------------|--------------------------------|---------------------------|----------------------------------------|--------------------------|
-| **/audit-seo** | — | "Audit SEO : que contient le rapport ?" | "Pourquoi l'audit SEO est le point de départ" | "5 erreurs d'audit SEO qui coûtent cher" | "Lancer l'audit gratuit" |
+| **/audit-seo** | — | "Audit SEO : que contient le rapport ?" | "Pourquoi l'audit SEO est le point de départ" | "9 erreurs d'audit SEO qui coûtent cher" | "Lancer l'audit gratuit" |
 | **/blog/contenu-rapport-audit-seo** | "service d'audit SEO complet", "service d'audit SEO professionnel" | — | "pourquoi un audit SEO est indispensable" | "erreurs SEO les plus coûteuses" | "outil d'audit SEO gratuit" (2x) |
 | **/blog/importance-audit-seo** | "audit SEO complet", "audit payant professionnel", "demandez votre audit SEO" | "ce que doit contenir un rapport d'audit SEO professionnel" (2x) | — | "erreurs SEO les plus coûteuses" | "Audit SEO Gratuit — Score /100", "outil d'audit SEO gratuit", "testeur gratuit" |
 | **/blog/audit-seo-erreurs-qui-coutent-cher** | "service d'audit SEO", "audit SEO professionnel" (2x) | "le contenu complet d'un rapport d'audit SEO" | "la raison pour laquelle l'audit SEO est le premier investissement" | — | "outil d'audit SEO gratuit" (3x) |

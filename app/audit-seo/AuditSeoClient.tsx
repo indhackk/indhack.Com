@@ -57,7 +57,7 @@ const AUDIT_FAQ = [
     },
     {
         question: "Combien coûte un audit SEO ?",
-        answer: "Un audit complet démarre à partir de **500€** pour un site vitrine. Le tarif varie selon la taille du site et la profondeur d'analyse requise. Je propose un premier diagnostic gratuit pour évaluer précisément vos besoins."
+        answer: "Le tarif d'un audit complet s'établit **sur devis** (avec des prestations pouvant démarrer autour de 150€), selon la taille du site et la profondeur d'analyse requise. Je propose un premier diagnostic gratuit pour évaluer précisément vos besoins."
     },
     {
         question: "Combien de temps dure un audit SEO complet ?",
@@ -215,8 +215,8 @@ export default function AuditSeoClient() {
                                 <tbody className="text-soft">
                                     <tr className="border-b border-gray-100">
                                         <td className="py-4 px-4 font-medium">Prix audit complet</td>
-                                        <td className="py-4 px-4">500 - 2 000 €</td>
-                                        <td className="py-4 px-4">1 500 - 5 000 €</td>
+                                        <td className="py-4 px-4">Sur devis</td>
+                                        <td className="py-4 px-4">Forfait d'agence</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-4 px-4 font-medium">Interlocuteur</td>

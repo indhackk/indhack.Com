@@ -107,7 +107,7 @@ const FAQ = [
     },
     {
         question: "Combien coûte un consultant SEO ?",
-        answer: "Les tarifs varient selon l'expérience et la complexité du projet : audit ponctuel (500€-2000€), accompagnement mensuel (500€-2500€/mois), mission complète (3000€-10000€). L'important est le retour sur investissement : un bon SEO génère bien plus qu'il ne coûte."
+        answer: "Les tarifs varient selon l'expérience et la complexité du projet. J'interviens principalement sur devis, avec des prestations pouvant démarrer à partir de 150€. Mon premier diagnostic SEO est gratuit. L'important est le retour sur investissement : un bon SEO génère bien plus qu'il ne coûte."
     },
     {
         question: "Quels résultats attendre et en combien de temps ?",
@@ -338,7 +338,7 @@ export default function ConsultantSEOClient() {
                             <h3 className="text-xl font-heading font-bold text-ink mb-2">Audit SEO</h3>
                             <p className="text-soft text-sm mb-6">Diagnostic complet de votre site</p>
                             <div className="text-4xl font-bold text-ink mb-6">
-                                500€ - 2 000€
+                                Sur devis
                             </div>
                             <ul className="space-y-3 mb-8">
                                 <li className="flex items-start gap-3 text-sm">
@@ -379,7 +379,7 @@ export default function ConsultantSEOClient() {
                             <h3 className="text-xl font-heading font-bold mb-2">Accompagnement mensuel</h3>
                             <p className="text-white/70 text-sm mb-6">Optimisation continue</p>
                             <div className="text-4xl font-bold mb-6">
-                                500€ - 2 500€<span className="text-lg font-normal">/mois</span>
+                                Sur devis
                             </div>
                             <ul className="space-y-3 mb-8">
                                 <li className="flex items-start gap-3 text-sm">
@@ -419,7 +419,7 @@ export default function ConsultantSEOClient() {
                             <h3 className="text-xl font-heading font-bold text-ink mb-2">Mission complète</h3>
                             <p className="text-soft text-sm mb-6">Projet clé en main</p>
                             <div className="text-4xl font-bold text-ink mb-6">
-                                3 000€ - 10 000€
+                                Sur devis
                             </div>
                             <ul className="space-y-3 mb-8">
                                 <li className="flex items-start gap-3 text-sm">
@@ -654,8 +654,7 @@ export default function ConsultantSEOClient() {
                         "description": "Services de consultant SEO freelance : audit technique, stratégie de contenu, netlinking, optimisation on-page et suivi des performances.",
                         "offers": {
                             "@type": "AggregateOffer",
-                            "lowPrice": "500",
-                            "highPrice": "10000",
+                            "lowPrice": "150",
                             "priceCurrency": "EUR"
                         }
                     })
