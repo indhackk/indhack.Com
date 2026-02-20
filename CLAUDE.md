@@ -81,18 +81,30 @@ scripts/                       # Build & automation scripts
 
 **JSON-LD Schemas**: Automatically injected via components (BreadcrumbSchema, BlogPosting in blog pages). Never write schema in markdown content.
 
+### Fonts (tailwind.config.js)
+
+| Token | Font | Usage |
+|-------|------|-------|
+| `heading` | Space Grotesk | H1, H2, H3, H4 |
+| `body` / `sans` | Inter | Body text, paragraphs |
+
 ### Brand Colors (tailwind.config.js)
 
 | Token | Hex | Usage |
 |-------|-----|-------|
-| `sauge` | #2E5E4E | Primary brand color, links, CTAs |
+| `sauge` | #2E5E4E | Primary brand color, links, CTAs (WCAG AA) |
+| `sauge-light` | #8FBFAA | Sauge clair pour fonds sombres |
 | `ink` | #2A3830 | Main text |
-| `soft` | #3D4D46 | Secondary text |
-| `accent` | #D4A853 | Gold accent for highlights |
+| `soft` | #3D4D46 | Secondary text (WCAG AA) |
+| `line` | #E4EBE7 | Borders |
+| `accent` | #D4A853 | Gold accent for CTAs |
+| `accent-hover` | #C49A47 | Hover state for accent |
+| `fond-sombre` | #394843 | Dark backgrounds |
+| `fond-clair` | #FAFBFA | Light backgrounds |
 
 ---
 
-## Fichier de référence SEO
+## 1. Fichier de référence SEO
 
 > Ce fichier est la source de vérité pour tout travail sur le site IndHack.
 > Lis-le en entier AVANT de toucher à quoi que ce soit.

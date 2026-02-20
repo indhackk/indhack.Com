@@ -1,0 +1,818 @@
+[
+  {
+    "url": "/(gmb-app)/app/dashboard",
+    "title": "Réponses IA",
+    "titleLen": 11,
+    "descLen": 0,
+    "h1": "{currentView === 'dashboard' && 'Dashboard'} {currentView === 'reviews' && 'Gestion des avis'} {currentView === 'responses' && 'Réponses IA'} {currentView === 'analytics' && 'Analytics'} {currentView === 'requests' && 'Demander des avis'} {currentView === 'posts' && 'Posts planifiés'} {currentView === 'settings' && 'Paramètres'}",
+    "diff": true
+  },
+  {
+    "url": "/(gmb-app)/login",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "Automatisez vos réponses Google",
+    "diff": true
+  },
+  {
+    "url": "/a-propos",
+    "title": "À Propos",
+    "titleLen": 8,
+    "descLen": 180,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/admin-login",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "IndHack Admin",
+    "diff": true
+  },
+  {
+    "url": "/audit-seo",
+    "title": "Audit SEO Complet | Diagnostic & Plan d",
+    "titleLen": 39,
+    "descLen": 130,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/[slug]",
+    "title": "Article non trouvé",
+    "titleLen": 18,
+    "descLen": 0,
+    "h1": "{post.title}",
+    "diff": true
+  },
+  {
+    "url": "/blog/geo-comment-apparaitre-chatgpt-2026",
+    "title": "GEO en 2026 : Comment Apparaître dans ChatGPT, Perplexity et Google AI | IndHack",
+    "titleLen": 80,
+    "descLen": 180,
+    "h1": "GEO : Comment Rendre Votre Site Visible dans ChatGPT, Perplexity et Google AI en 2026",
+    "diff": true
+  },
+  {
+    "url": "/blog",
+    "title": "Blog SEO & GEO | Conseils Référencement 2026 – IndHack",
+    "titleLen": 54,
+    "descLen": 91,
+    "h1": "Conseils d'une consultante SEO pour votre croissance",
+    "diff": true
+  },
+  {
+    "url": "/blog/pourquoi-votre-site-est-lent-performance-web-2026",
+    "title": "Site web lent = clients perdus : comment passer de 56 à 93 sur PageSpeed",
+    "titleLen": 72,
+    "descLen": 159,
+    "h1": "Site web lent = clients perdus : comment passer de 56 à 93 sur PageSpeed",
+    "diff": false
+  },
+  {
+    "url": "/cgv",
+    "title": "Conditions Générales de Vente",
+    "titleLen": 29,
+    "descLen": 118,
+    "h1": "Conditions Générales de Vente",
+    "diff": false
+  },
+  {
+    "url": "/community-manager",
+    "title": "Community Manager — Gestion Réseaux Sociaux – IndHack",
+    "titleLen": 53,
+    "descLen": 120,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/confidentialite",
+    "title": "Politique de Confidentialité",
+    "titleLen": 28,
+    "descLen": 133,
+    "h1": "Politique de Confidentialité",
+    "diff": false
+  },
+  {
+    "url": "/consultant-seo",
+    "title": "Consultante SEO Freelance | Experte Référencement Naturel – IndHack",
+    "titleLen": 67,
+    "descLen": 127,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-aix-en-provence/audit-technique",
+    "title": "Audit Technique SEO Aix-en-Provence 13",
+    "titleLen": 38,
+    "descLen": 129,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-aix-en-provence",
+    "title": "Consultante SEO Aix-en-Provence — Référencement",
+    "titleLen": 47,
+    "descLen": 127,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-antibes/audit-technique",
+    "title": "Audit Technique SEO Antibes 06",
+    "titleLen": 30,
+    "descLen": 28,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-antibes",
+    "title": "Consultante SEO Antibes (06) — Référencement Local",
+    "titleLen": 50,
+    "descLen": 120,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-bordeaux/audit-technique",
+    "title": "Audit Technique SEO Bordeaux 33",
+    "titleLen": 31,
+    "descLen": 133,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-bordeaux",
+    "title": "Consultante SEO Bordeaux — Experte Référencement",
+    "titleLen": 48,
+    "descLen": 120,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-boulogne-billancourt/audit-technique",
+    "title": "Audit Technique SEO Boulogne-Billancourt 92",
+    "titleLen": 43,
+    "descLen": 131,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-boulogne-billancourt",
+    "title": "Consultante SEO Boulogne-Billancourt (92)",
+    "titleLen": 41,
+    "descLen": 121,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-cannes/audit-technique",
+    "title": "Audit Technique SEO Cannes 06",
+    "titleLen": 29,
+    "descLen": 152,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-cannes",
+    "title": "Consultante SEO Cannes (06) — Référencement Premium",
+    "titleLen": 51,
+    "descLen": 130,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-grenoble/audit-technique",
+    "title": "Audit de Site Grenoble | Audit SEO Technique 38 – IndHack",
+    "titleLen": 57,
+    "descLen": 152,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-grenoble",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "",
+    "diff": false
+  },
+  {
+    "url": "/consultant-seo-juan-les-pins",
+    "title": "Consultante SEO Juan-les-Pins (06) — Réf. Local",
+    "titleLen": 47,
+    "descLen": 113,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-lille/audit-technique",
+    "title": "Audit Technique SEO Lille 59",
+    "titleLen": 28,
+    "descLen": 125,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-lille",
+    "title": "Consultante SEO Lille — Experte Référencement Nord",
+    "titleLen": 50,
+    "descLen": 114,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-lyon/audit-technique",
+    "title": "Audit Technique SEO Lyon 69",
+    "titleLen": 27,
+    "descLen": 141,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-lyon",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "",
+    "diff": false
+  },
+  {
+    "url": "/consultant-seo-marseille/audit-technique",
+    "title": "Audit Technique SEO Marseille 13",
+    "titleLen": 32,
+    "descLen": 122,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-marseille",
+    "title": "Consultante SEO Marseille — Référencement & Visibilité",
+    "titleLen": 54,
+    "descLen": 119,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-monaco/audit-technique",
+    "title": "Audit Technique SEO Monaco 98",
+    "titleLen": 29,
+    "descLen": 130,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-monaco",
+    "title": "Consultante SEO Monaco — Référencement Premium",
+    "titleLen": 46,
+    "descLen": 103,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-montpellier/audit-technique",
+    "title": "Audit Technique SEO Montpellier 34",
+    "titleLen": 34,
+    "descLen": 131,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-montpellier",
+    "title": "Consultante SEO Montpellier — Référencement Local",
+    "titleLen": 49,
+    "descLen": 76,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-nantes/audit-technique",
+    "title": "Audit Technique SEO Nantes 44",
+    "titleLen": 29,
+    "descLen": 134,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-nantes",
+    "title": "Consultante SEO Nantes — Référencement & Visibilité",
+    "titleLen": 51,
+    "descLen": 117,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-nice/audit-technique",
+    "title": "Audit Site Internet Nice | Audit SEO Technique 06 – IndHack",
+    "titleLen": 59,
+    "descLen": 162,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-nice",
+    "title": "Consultante SEO Nice (06) — Experte Référencement Local",
+    "titleLen": 55,
+    "descLen": 141,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-paris/audit-technique",
+    "title": "Audit Technique SEO Paris 75",
+    "titleLen": 28,
+    "descLen": 137,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-paris",
+    "title": "Consultante SEO Paris — Experte Référencement Naturel",
+    "titleLen": 53,
+    "descLen": 126,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-rennes/audit-technique",
+    "title": "Audit Technique SEO Rennes 35",
+    "titleLen": 29,
+    "descLen": 139,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-rennes",
+    "title": "Consultante SEO Rennes — Référencement & Visibilité",
+    "titleLen": 51,
+    "descLen": 83,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-sophia-antipolis/audit-technique",
+    "title": "Audit Technique SEO Sophia Antipolis 06",
+    "titleLen": 39,
+    "descLen": 132,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-sophia-antipolis",
+    "title": "Consultante SEO Sophia Antipolis — Startups & Tech",
+    "titleLen": 50,
+    "descLen": 128,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-strasbourg/audit-technique",
+    "title": "Audit Technique SEO Strasbourg 67",
+    "titleLen": 33,
+    "descLen": 140,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-strasbourg",
+    "title": "Consultante SEO Strasbourg — Référencement Alsace",
+    "titleLen": 49,
+    "descLen": 121,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-toulouse/audit-technique",
+    "title": "Audit Technique SEO Toulouse 31",
+    "titleLen": 31,
+    "descLen": 132,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/consultant-seo-toulouse",
+    "title": "Consultante SEO Toulouse — Référencement & Croissance",
+    "titleLen": 53,
+    "descLen": 121,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/contact",
+    "title": "Contact",
+    "titleLen": 7,
+    "descLen": 155,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/creation-boutique-en-ligne",
+    "title": "Création Boutique en Ligne | E-commerce SEO Optimisé – IndHack",
+    "titleLen": 62,
+    "descLen": 131,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/creation-site-web",
+    "title": "Création de Site Web Optimisé SEO | Sites Performants – IndHack",
+    "titleLen": 63,
+    "descLen": 122,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/dashboard",
+    "title": "Tableau de Bord",
+    "titleLen": 15,
+    "descLen": 0,
+    "h1": "Control Room 🚀",
+    "diff": true
+  },
+  {
+    "url": "/diagnostic/[metier]",
+    "title": "Diagnostic SEO",
+    "titleLen": 14,
+    "descLen": 44,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/diagnostic/avocat",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "",
+    "diff": false
+  },
+  {
+    "url": "/diagnostic/barbier",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "Vos clients vous adorent. Google ne le sait pas.",
+    "diff": true
+  },
+  {
+    "url": "/diagnostic/boutique",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "",
+    "diff": false
+  },
+  {
+    "url": "/diagnostic/coiffeur",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "Vos clients vous adorent. Google ne le sait pas.",
+    "diff": true
+  },
+  {
+    "url": "/diagnostic/dentiste",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "",
+    "diff": false
+  },
+  {
+    "url": "/diagnostic/electricien",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "",
+    "diff": false
+  },
+  {
+    "url": "/diagnostic/plombier",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "",
+    "diff": false
+  },
+  {
+    "url": "/diagnostic/prothesiste-ongulaire",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "",
+    "diff": false
+  },
+  {
+    "url": "/diagnostic/renovation",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "",
+    "diff": false
+  },
+  {
+    "url": "/diagnostic/serrurier",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "",
+    "diff": false
+  },
+  {
+    "url": "/etudes-de-cas",
+    "title": "Études de Cas SEO | Résultats Clients Concrets – IndHack",
+    "titleLen": 56,
+    "descLen": 118,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/faq",
+    "title": "FAQ - Questions Fréquentes SEO",
+    "titleLen": 30,
+    "descLen": 56,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/keystatic/[[...params]]",
+    "title": "",
+    "titleLen": 0,
+    "descLen": 0,
+    "h1": "",
+    "diff": false
+  },
+  {
+    "url": "/mentions-legales",
+    "title": "Mentions Légales",
+    "titleLen": 16,
+    "descLen": 114,
+    "h1": "Mentions Légales",
+    "diff": false
+  },
+  {
+    "url": "/outils/audit-seo-gratuit",
+    "title": "Audit SEO Gratuit : Analyse de Site en 1 Clic | Score /100",
+    "titleLen": 58,
+    "descLen": 38,
+    "h1": "Audit SEO Gratuit",
+    "diff": true
+  },
+  {
+    "url": "/outils/extracteur-mots-cles",
+    "title": "Extracteur de Mots-Clés Gratuit | Densité & N-grammes – IndHack",
+    "titleLen": 63,
+    "descLen": 111,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/outils/generateur-robots-txt",
+    "title": "Générateur robots.txt avec Crawlers IA 2026 — Gratuit",
+    "titleLen": 53,
+    "descLen": 168,
+    "h1": "Générateur robots.txt",
+    "diff": true
+  },
+  {
+    "url": "/outils/generateur-schema-json-ld",
+    "title": "Générateur Schema JSON-LD Gratuit — Données Structurées",
+    "titleLen": 55,
+    "descLen": 148,
+    "h1": "Générateur Schema JSON-LD",
+    "diff": true
+  },
+  {
+    "url": "/outils/gmb-autopilot",
+    "title": "GMB AutoPilot - Réponses Automatiques aux Avis Google",
+    "titleLen": 53,
+    "descLen": 61,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/outils",
+    "title": "Outils SEO Gratuits 2026 — Audit, Visibilité IA, Schema",
+    "titleLen": 55,
+    "descLen": 155,
+    "h1": "Outils SEO Gratuits 2026",
+    "diff": true
+  },
+  {
+    "url": "/outils/simulateur-visibilite-locale",
+    "title": "Simulateur Visibilité Locale — Analysez la SERP de votre ville",
+    "titleLen": 62,
+    "descLen": 165,
+    "h1": "Simulateur Visibilité Locale",
+    "diff": true
+  },
+  {
+    "url": "/outils/testeur-visibilite-ia",
+    "title": "Testeur Visibilité IA Gratuit — ChatGPT, Perplexity, Claude",
+    "titleLen": 59,
+    "descLen": 169,
+    "h1": "Testeur Visibilité IA",
+    "diff": true
+  },
+  {
+    "url": "/",
+    "title": "Consultante SEO & Experte Référencement Naturel",
+    "titleLen": 47,
+    "descLen": 142,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/pour-pauline",
+    "title": "Pour Pauline ❤️",
+    "titleLen": 15,
+    "descLen": 27,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/referencement-naturel",
+    "title": "Référencement Naturel | Stratégie SEO Sur-Mesure – IndHack",
+    "titleLen": 58,
+    "descLen": 110,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/refonte-site-web",
+    "title": "Refonte de Site Web | Migration SEO Sécurisée – IndHack",
+    "titleLen": 55,
+    "descLen": 105,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/seo-local",
+    "title": "SEO Local | Dominez Google Maps & le Pack Local – IndHack",
+    "titleLen": 57,
+    "descLen": 123,
+    "h1": "Consultant SEO Local partout en France",
+    "diff": true
+  },
+  {
+    "url": "/blog/audit-seo-erreurs-qui-coutent-cher",
+    "title": "9 erreurs SEO qui vous coûtent cher (et comment les corriger)",
+    "titleLen": 61,
+    "descLen": 20,
+    "h1": ".htaccess - BONNE redirection",
+    "diff": true
+  },
+  {
+    "url": "/blog/checklist-seo-2026",
+    "title": "Checklist SEO 2026 : 30 points pour optimiser votre site",
+    "titleLen": 56,
+    "descLen": 140,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/checklist-seo-refonte-site",
+    "title": "Checklist SEO : 45 points à vérifier pour votre refonte de site",
+    "titleLen": 63,
+    "descLen": 157,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/comment-creer-site-visible-google",
+    "title": "Comment créer un site Internet visible sur Google en 2026 ?",
+    "titleLen": 59,
+    "descLen": 147,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/contenu-rapport-audit-seo",
+    "title": "Rapport d",
+    "titleLen": 9,
+    "descLen": 25,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/cout-site-web-2026",
+    "title": "Combien coûte un site web en 2026 ?",
+    "titleLen": 35,
+    "descLen": 140,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/devenir-consultant-seo",
+    "title": "Comment devenir consultant SEO en 2026 ? Guide complet",
+    "titleLen": 54,
+    "descLen": 93,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/geo-comment-apparaitre-chatgpt-2026",
+    "title": "GEO 2026 : être visible sur ChatGPT, Perplexity et les IA",
+    "titleLen": 57,
+    "descLen": 119,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/google-business-profile-guide-complet",
+    "title": "Google Business Profile : le guide complet 2026",
+    "titleLen": 47,
+    "descLen": 139,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/google-maps-voler-clients-concurrents",
+    "title": "Voler les clients de vos concurrents sur Google Maps (légalement)",
+    "titleLen": 65,
+    "descLen": 168,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/importance-audit-seo",
+    "title": "Audit SEO : pourquoi c",
+    "titleLen": 22,
+    "descLen": 61,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/missions-consultant-seo",
+    "title": "Quelles sont les missions d",
+    "titleLen": 27,
+    "descLen": 36,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/pourquoi-consultant-seo",
+    "title": "Pourquoi faire appel à un consultant SEO en 2026 ?",
+    "titleLen": 50,
+    "descLen": 34,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/pourquoi-votre-site-est-lent-performance-web-2026",
+    "title": "Site web lent = clients perdus : comment passer de 56 à 93 sur PageSpeed",
+    "titleLen": 72,
+    "descLen": 159,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/programmatic-seo-50-pages-locales",
+    "title": "Programmatic SEO : créer 50 pages locales en 10 minutes",
+    "titleLen": 55,
+    "descLen": 118,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/quelle-formation-seo",
+    "title": "Quelle formation SEO choisir en 2026 ?",
+    "titleLen": 38,
+    "descLen": 156,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/refonte-site-web-sans-perdre-seo",
+    "title": "Refonte de site web : comment ne pas perdre son SEO ?",
+    "titleLen": 53,
+    "descLen": 135,
+    "h1": "Exemple .htaccess",
+    "diff": true
+  },
+  {
+    "url": "/blog/salaire-consultant-seo",
+    "title": "Salaire consultant SEO en 2026 : grilles et évolutions",
+    "titleLen": 54,
+    "descLen": 146,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/seo-local-nice",
+    "title": "SEO local à Nice : dominer le marché azuréen en 2026",
+    "titleLen": 52,
+    "descLen": 168,
+    "h1": "",
+    "diff": true
+  },
+  {
+    "url": "/blog/seo-vs-sea-que-choisir",
+    "title": "SEO vs SEA : que choisir pour votre entreprise ?",
+    "titleLen": 48,
+    "descLen": 152,
+    "h1": "",
+    "diff": true
+  }
+]
