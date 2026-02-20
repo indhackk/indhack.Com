@@ -22,7 +22,7 @@ Le métier de **consultant SEO** a le vent en poupe, et pour cause :
 
 Le **SEO n'est pas mort**, contrairement à ce qu'on lit parfois. Avec l'arrivée de l'**IA générative**, le métier se transforme mais reste indispensable. Les entreprises comprennent que le **trafic organique** est un **actif stratégique**.
 
-## Le profil type du consultant SEO
+## Quel est le profil type du consultant SEO ?
 
 ### Compétences techniques indispensables
 
@@ -55,7 +55,7 @@ Au-delà des compétences techniques, les **qualités humaines** font la différ
 - **Patience** — Les résultats SEO prennent du temps (3-6 mois minimum)
 - **Analyse** — Interpréter des données et en tirer des **insights actionnables**
 
-## Les parcours pour devenir consultant SEO
+## Quels sont les parcours pour devenir consultant SEO ?
 
 ### La voie académique
 

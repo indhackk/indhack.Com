@@ -91,7 +91,7 @@ export default function GenerateurRobotsTxtPage() {
                         },
                         "author": {
                             "@type": "Organization",
-                            "name": "INDHACK",
+                            "name": "IndHack",
                             "url": "https://indhack.com"
                         }
                     })

@@ -31,7 +31,7 @@ GBP permet aux entreprises d'apparaître dans :
 | **Infos pratiques** | Horaires, téléphone, itinéraire |
 | **Interaction** | Posts, Q&A, messages |
 
-## Créer et revendiquer votre fiche
+## Comment créer et revendiquer votre fiche Google Business ?
 
 ### Étape 1 : Vérifier si une fiche existe
 
@@ -55,7 +55,7 @@ Google doit vérifier que vous êtes bien le propriétaire. Méthodes possibles 
 | **Search Console** | Immédiat | Si site déjà vérifié |
 | **Vidéo** | 2-5 jours | Nouveaux établissements |
 
-## Optimiser votre fiche pour le pack local
+## Comment optimiser votre fiche pour apparaître dans le pack local ?
 
 Une fiche créée ne suffit pas. Il faut l'**optimiser** pour apparaître dans le top 3 local.
 
@@ -92,7 +92,7 @@ Les attributs permettent de préciser vos services :
 
 **Remplissez tous les attributs pertinents** — ils apparaissent dans votre fiche et aident au référencement. Pour des techniques avancées d'espionnage concurrentiel, découvrez comment [analyser les catégories cachées de vos concurrents](/blog/google-maps-voler-clients-concurrents).
 
-## Gérer les avis clients
+## Comment gérer les avis clients efficacement ?
 
 Les avis sont le **facteur #1** du classement local. Plus vous avez d'avis positifs récents, plus vous montez.
 

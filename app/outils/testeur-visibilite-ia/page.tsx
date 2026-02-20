@@ -5,7 +5,7 @@ import { ArrowRight, Bot, Shield, Code2, FileCode, Search, MapPin } from "lucide
 
 export const metadata: Metadata = {
     title: "Testeur Visibilité IA Gratuit — ChatGPT, Perplexity, Claude",
-    description: "Votre site est-il visible par ChatGPT et Perplexity ? Testez gratuitement vos signaux GEO : crawlers IA, schema JSON-LD, signaux E-E-A-T. Le seul outil français gratuit.",
+    description: "Votre site est-il visible par ChatGPT et Perplexity ? Testez vos signaux GEO : crawlers IA, schema JSON-LD, E-E-A-T. Outil français gratuit, sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils/testeur-visibilite-ia"
     },
@@ -83,7 +83,7 @@ export default function TesteurVisibiliteIAPage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
-                        "name": "Testeur Visibilité IA INDHACK",
+                        "name": "Testeur Visibilité IA IndHack",
                         "description": "Outil gratuit pour tester la visibilité de votre site auprès des IA génératives (ChatGPT, Perplexity, Claude)",
                         "url": "https://indhack.com/outils/testeur-visibilite-ia",
                         "applicationCategory": "SEO Tool",
@@ -95,7 +95,7 @@ export default function TesteurVisibiliteIAPage() {
                         },
                         "author": {
                             "@type": "Organization",
-                            "name": "INDHACK",
+                            "name": "IndHack",
                             "url": "https://indhack.com"
                         },
                         "featureList": [

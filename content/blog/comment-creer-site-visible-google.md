@@ -51,7 +51,7 @@ C'est LA question que tout entrepreneur se pose. Voici mon analyse honnête.
 
 **Mon conseil :** Si votre objectif est d'**apparaître sur Google** et de générer des **leads qualifiés**, privilégiez un consultant qui maîtrise aussi la **[conception de plateformes web performantes](/creation-site-web)**. Il ne va pas juste "faire joli". Il va construire chaque page comme une **machine à capter du trafic**.
 
-## Les étapes pour créer un site visible sur Google
+## Quelles sont les étapes pour créer un site visible sur Google ?
 
 ### Étude de mots-clés avant la maquette
 

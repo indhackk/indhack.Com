@@ -312,6 +312,108 @@ export default function AuditSeoClient() {
                 </div>
             </section>
 
+            {/* Section Signaux d'alerte */}
+            <section className="py-24 bg-white border-t border-gray-100">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink">
+                                Quand avez-vous besoin d'un <span className="text-sauge">audit SEO</span> ?
+                            </h2>
+                            <p className="text-lg text-soft mt-4">
+                                Ces signaux indiquent que votre site a besoin d'un diagnostic approfondi.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <div className="flex gap-4 items-start bg-amber-50 p-6 rounded-2xl border border-amber-100">
+                                <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+                                <div>
+                                    <h3 className="font-bold text-ink mb-2">Votre trafic organique baisse</h3>
+                                    <p className="text-soft text-sm">Une chute de 20%+ peut signaler une pénalité algorithmique ou un problème technique invisible.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-4 items-start bg-amber-50 p-6 rounded-2xl border border-amber-100">
+                                <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+                                <div>
+                                    <h3 className="font-bold text-ink mb-2">Vous ne rankez pas malgré vos efforts</h3>
+                                    <p className="text-soft text-sm">Vous publiez du contenu mais Google ne le positionne pas ? Un blocage technique empêche le crawl.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-4 items-start bg-amber-50 p-6 rounded-2xl border border-amber-100">
+                                <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+                                <div>
+                                    <h3 className="font-bold text-ink mb-2">Vos concurrents vous dépassent</h3>
+                                    <p className="text-soft text-sm">Vous étiez premier, maintenant vous êtes en page 2 ? Il est temps de comprendre pourquoi.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-4 items-start bg-amber-50 p-6 rounded-2xl border border-amber-100">
+                                <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+                                <div>
+                                    <h3 className="font-bold text-ink mb-2">Vous préparez une refonte de site</h3>
+                                    <p className="text-soft text-sm">Avant de tout changer, identifiez ce qui fonctionne pour ne pas perdre vos acquis SEO.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-4 items-start bg-amber-50 p-6 rounded-2xl border border-amber-100">
+                                <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+                                <div>
+                                    <h3 className="font-bold text-ink mb-2">Votre site est lent (PageSpeed &lt; 50)</h3>
+                                    <p className="text-soft text-sm">Les Core Web Vitals impactent directement le classement. Testez avec notre <Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">outil gratuit</Link>.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-4 items-start bg-amber-50 p-6 rounded-2xl border border-amber-100">
+                                <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+                                <div>
+                                    <h3 className="font-bold text-ink mb-2">Vous n'avez jamais fait d'audit</h3>
+                                    <p className="text-soft text-sm">Plus de 2 ans sans diagnostic ? Des problèmes s'accumulent sans que vous le sachiez.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section Résultats typiques */}
+            <section className="py-24 bg-gray-50 border-t border-gray-100">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-5xl mx-auto">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink">
+                                Ce que révèle un <span className="text-sauge">audit type</span>
+                            </h2>
+                            <p className="text-lg text-soft mt-4 max-w-2xl mx-auto">
+                                En moyenne, voici ce que je trouve lors d'un audit complet sur un site qui n'a jamais été optimisé.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-4 gap-6 mb-12">
+                            <div className="bg-white p-8 rounded-2xl border border-gray-100 text-center">
+                                <p className="text-5xl font-bold text-sauge mb-2">23%</p>
+                                <p className="text-soft text-sm">des pages ont des problèmes d'indexation</p>
+                            </div>
+                            <div className="bg-white p-8 rounded-2xl border border-gray-100 text-center">
+                                <p className="text-5xl font-bold text-sauge mb-2">47%</p>
+                                <p className="text-soft text-sm">des balises title sont mal optimisées</p>
+                            </div>
+                            <div className="bg-white p-8 rounded-2xl border border-gray-100 text-center">
+                                <p className="text-5xl font-bold text-sauge mb-2">5+</p>
+                                <p className="text-soft text-sm">paires de pages en cannibalisation</p>
+                            </div>
+                            <div className="bg-white p-8 rounded-2xl border border-gray-100 text-center">
+                                <p className="text-5xl font-bold text-sauge mb-2">68%</p>
+                                <p className="text-soft text-sm">des sites ont des Core Web Vitals insuffisants</p>
+                            </div>
+                        </div>
+
+                        <div className="bg-ink p-8 rounded-2xl text-white">
+                            <p className="text-lg">
+                                <strong className="text-sauge">Ces chiffres sont basés sur mes audits réels.</strong> La bonne nouvelle ? Chaque problème identifié est une opportunité de croissance. Corrigez ces erreurs et regardez votre trafic organique augmenter en quelques mois.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Experience Section */}
             <section className="py-24 bg-white border-t border-gray-100">
                 <div className="container mx-auto px-4 text-center">

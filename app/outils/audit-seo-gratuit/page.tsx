@@ -79,7 +79,7 @@ export default function AuditSEOPage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
-                        "name": "Audit SEO Gratuit INDHACK",
+                        "name": "Audit SEO Gratuit IndHack",
                         "description": "Outil d'audit SEO gratuit analysant 15 critères techniques dont la compatibilité IA",
                         "url": "https://indhack.com/outils/audit-seo-gratuit",
                         "applicationCategory": "SEO Tool",
@@ -91,7 +91,7 @@ export default function AuditSEOPage() {
                         },
                         "author": {
                             "@type": "Organization",
-                            "name": "INDHACK",
+                            "name": "IndHack",
                             "url": "https://indhack.com"
                         },
                         "featureList": [

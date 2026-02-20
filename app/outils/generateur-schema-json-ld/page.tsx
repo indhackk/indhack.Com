@@ -5,7 +5,7 @@ import { ArrowRight, Code2, Bot, FileCode, Search } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Générateur Schema JSON-LD Gratuit — Données Structurées",
-    description: "Créez vos données structurées en quelques clics. LocalBusiness, FAQPage, Article, Product... Générateur gratuit avec prévisualisation et validation.",
+    description: "Créez vos données structurées Schema.org en quelques clics. LocalBusiness, FAQPage, Article, Product... Générateur SEO gratuit avec prévisualisation en temps réel.",
     alternates: {
         canonical: "https://indhack.com/outils/generateur-schema-json-ld"
     },
@@ -71,7 +71,7 @@ export default function GenerateurSchemaPage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
-                        "name": "Générateur Schema JSON-LD INDHACK",
+                        "name": "Générateur Schema JSON-LD IndHack",
                         "description": "Outil gratuit pour créer des données structurées Schema.org",
                         "url": "https://indhack.com/outils/generateur-schema-json-ld",
                         "applicationCategory": "SEO Tool",
@@ -83,7 +83,7 @@ export default function GenerateurSchemaPage() {
                         },
                         "author": {
                             "@type": "Organization",
-                            "name": "INDHACK",
+                            "name": "IndHack",
                             "url": "https://indhack.com"
                         }
                     })

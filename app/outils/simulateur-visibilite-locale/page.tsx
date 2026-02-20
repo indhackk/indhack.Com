@@ -71,7 +71,7 @@ export default function SimulateurLocalPage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "WebApplication",
-                        "name": "Simulateur Visibilité Locale INDHACK",
+                        "name": "Simulateur Visibilité Locale IndHack",
                         "description": "Outil gratuit pour analyser qui domine Google pour votre métier dans votre ville",
                         "url": "https://indhack.com/outils/simulateur-visibilite-locale",
                         "applicationCategory": "SEO Tool",
@@ -83,7 +83,7 @@ export default function SimulateurLocalPage() {
                         },
                         "author": {
                             "@type": "Organization",
-                            "name": "INDHACK",
+                            "name": "IndHack",
                             "url": "https://indhack.com"
                         },
                         "featureList": [

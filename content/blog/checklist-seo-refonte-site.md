@@ -161,7 +161,7 @@ Vérifiez **quotidiennement** pendant la première semaine :
 
 ---
 
-## Les 5 erreurs qui détruisent le SEO d'une refonte
+## Quelles sont les 5 erreurs qui détruisent le SEO d'une refonte ?
 
 ### Erreur #1 : Lancer sans redirections
 
@@ -205,7 +205,7 @@ Vérifiez **quotidiennement** pendant la première semaine :
 
 ---
 
-## Outils recommandés pour votre migration
+## Quels outils utiliser pour une migration SEO-safe ?
 
 ### Avant la refonte
 
