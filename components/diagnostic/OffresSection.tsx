@@ -101,7 +101,7 @@ export default function OffresSection({ monthlyLoss }: OffresSectionProps) {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-gray-400 text-sm mb-4">
@@ -125,7 +125,7 @@ export default function OffresSection({ monthlyLoss }: OffresSectionProps) {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className={`relative p-8 rounded-3xl bg-gradient-to-br ${offre.color} border ${offre.borderColor} ${offre.popular ? 'md:-mt-4 md:mb-4' : ''
                 }`}
             >
@@ -215,7 +215,7 @@ export default function OffresSection({ monthlyLoss }: OffresSectionProps) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           className="mt-12 text-center"
         >
           <p className="text-gray-500 text-sm">

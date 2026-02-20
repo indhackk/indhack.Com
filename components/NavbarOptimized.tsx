@@ -66,6 +66,7 @@ export function Navbar() {
     };
 
     return (
+        <>
         <nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 animate-slideDown ${isScrolled
                 ? "bg-white/80 backdrop-blur-xl border-b border-line shadow-sm"
@@ -214,12 +215,13 @@ export function Navbar() {
                     </button>
                 </div>
             </div>
+        </nav>
 
-            {/* Mobile Menu */}
-            <div
-                className={`lg:hidden fixed inset-0 z-50 bg-white transition-transform duration-300 ease-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-                    }`}
-            >
+        {/* Mobile Menu - Extrait de la nav pour éviter le bug de stacking context (transform) */}
+        <div
+            className={`lg:hidden fixed inset-0 z-[60] bg-white transition-transform duration-300 ease-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                }`}
+        >
                 <div className="flex flex-col h-full">
                     <div className="flex items-center justify-between p-6 border-b border-line">
                         <span className="font-heading font-bold text-2xl tracking-tighter text-ink">IndHack</span>
@@ -289,7 +291,7 @@ export function Navbar() {
                     </div>
                 </div>
             </div>
-        </nav>
+        </>
     );
 }
 

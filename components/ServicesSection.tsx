@@ -53,7 +53,7 @@ export function ServicesSection() {
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className="text-sauge font-bold tracking-[0.2em] uppercase mb-4 text-sm"
                     >
                         Expertises
@@ -61,7 +61,7 @@ export function ServicesSection() {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className="text-4xl md:text-5xl font-heading font-bold text-ink leading-[1.1] tracking-tight mb-6"
                     >
                         Des solutions qui<br />
@@ -70,7 +70,7 @@ export function ServicesSection() {
                     <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         transition={{ delay: 0.2 }}
                         className="text-lg text-soft leading-relaxed"
                     >
@@ -85,7 +85,7 @@ export function ServicesSection() {
                             key={i}
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: i * 0.1, duration: 0.6 }}
                         >
                             <Link
@@ -124,7 +124,7 @@ export function ServicesSection() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     className="text-center mt-12"
                 >
                     <Link

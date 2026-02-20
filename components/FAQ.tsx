@@ -65,7 +65,7 @@ export function FAQ({ items = defaultFaqs, title = "Questions Fréquentes" }: FA
                             key={index}
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: index * 0.05 }}
                             className={`rounded-3xl border transition-all duration-300 overflow-hidden ${openIndex === index
                                 ? 'bg-fond-clair border-sauge/30 shadow-xl shadow-ink/5'

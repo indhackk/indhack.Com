@@ -91,7 +91,7 @@ export function AboutContent() {
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             className="text-center"
                         >
                             <div className="text-3xl md:text-4xl font-bold text-sauge mb-1">7+</div>
@@ -100,7 +100,7 @@ export function AboutContent() {
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: 0.1 }}
                             className="text-center"
                         >
@@ -110,7 +110,7 @@ export function AboutContent() {
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: 0.2 }}
                             className="text-center"
                         >
@@ -120,7 +120,7 @@ export function AboutContent() {
                         <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: 0.3 }}
                             className="text-center"
                         >
@@ -147,7 +147,7 @@ export function AboutContent() {
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             className="text-center p-8 bg-gray-50 rounded-3xl"
                         >
                             <div className="w-16 h-16 bg-sauge/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -160,7 +160,7 @@ export function AboutContent() {
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: 0.1 }}
                             className="text-center p-8 bg-gray-50 rounded-3xl"
                         >
@@ -174,7 +174,7 @@ export function AboutContent() {
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: 0.2 }}
                             className="text-center p-8 bg-gray-50 rounded-3xl"
                         >

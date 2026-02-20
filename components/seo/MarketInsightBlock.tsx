@@ -22,7 +22,7 @@ export function MarketInsightBlock({ marketType, cityName, targetClients }: Mark
             <motion.section
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 className="py-10 bg-gradient-to-br from-amber-50 via-white to-amber-50/30"
             >
                 <div className="container mx-auto px-4">
@@ -88,7 +88,7 @@ export function MarketInsightBlock({ marketType, cityName, targetClients }: Mark
             <motion.section
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 className="py-10 bg-gradient-to-br from-violet-50 via-white to-indigo-50/30"
             >
                 <div className="container mx-auto px-4">
@@ -159,7 +159,7 @@ export function MarketInsightBlock({ marketType, cityName, targetClients }: Mark
             <motion.section
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 className="py-10 bg-gradient-to-br from-cyan-50 via-white to-teal-50/30"
             >
                 <div className="container mx-auto px-4">
@@ -254,7 +254,7 @@ export function MarketInsightBlock({ marketType, cityName, targetClients }: Mark
             <motion.section
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 className="py-10 bg-gradient-to-br from-orange-50 via-white to-red-50/30"
             >
                 <div className="container mx-auto px-4">
@@ -340,7 +340,7 @@ export function MarketInsightBlock({ marketType, cityName, targetClients }: Mark
         <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="py-10 bg-gradient-to-br from-sauge/5 via-white to-sauge/10"
         >
             <div className="container mx-auto px-4">

@@ -97,7 +97,7 @@ export function AnimatedStats({
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className={`text-sm font-bold tracking-[0.2em] uppercase mb-4 ${isDark ? "text-sauge" : "text-sauge"
                             }`}
                     >
@@ -106,7 +106,7 @@ export function AnimatedStats({
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className={`text-3xl md:text-4xl font-heading font-bold ${isDark ? "text-white" : "text-ink"
                             }`}
                     >
@@ -121,7 +121,7 @@ export function AnimatedStats({
                             key={i}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: i * 0.1 }}
                             className={`text-center p-6 md:p-8 rounded-3xl border ${isDark
                                     ? "bg-white/5 border-white/10 hover:bg-white/10"

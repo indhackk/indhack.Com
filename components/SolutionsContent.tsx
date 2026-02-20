@@ -137,7 +137,7 @@ export function SolutionsContent() {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl lg:text-4xl font-heading font-bold text-ink mb-4">
@@ -154,7 +154,7 @@ export function SolutionsContent() {
                                 key={i}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: true, margin: "-100px" }}
                                 transition={{ delay: i * 0.1 }}
                                 className={`relative bg-white rounded-3xl overflow-hidden border-2 transition-all hover:shadow-2xl ${offer.popular ? 'border-sauge shadow-xl scale-105' : 'border-line hover:border-sauge/30'
                                     }`}
@@ -201,7 +201,7 @@ export function SolutionsContent() {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl lg:text-4xl font-heading font-bold text-ink mb-4">
@@ -218,7 +218,7 @@ export function SolutionsContent() {
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: true, margin: "-100px" }}
                                 transition={{ delay: i * 0.1 }}
                                 className="group bg-fond-clair p-8 rounded-3xl border border-line hover:border-sauge/30 hover:shadow-xl transition-all"
                             >
@@ -249,7 +249,7 @@ export function SolutionsContent() {
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                         >
                             <h2 className="text-3xl lg:text-4xl font-heading font-bold mb-6">
                                 Pourquoi me faire confiance ?
@@ -268,7 +268,7 @@ export function SolutionsContent() {
                                         key={i}
                                         initial={{ opacity: 0, x: -20 }}
                                         whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
+                                        viewport={{ once: true, margin: "-100px" }}
                                         transition={{ delay: i * 0.1 }}
                                         className="flex gap-4"
                                     >
@@ -287,7 +287,7 @@ export function SolutionsContent() {
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             className="relative"
                         >
                             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">

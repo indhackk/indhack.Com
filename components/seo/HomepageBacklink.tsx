@@ -62,7 +62,7 @@ export function HomepageBacklink({ variant = "default", className = "", forceInd
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 className={`bg-gradient-to-br from-sauge/5 to-sauge/10 border border-sauge/20 rounded-2xl p-6 ${className}`}
             >
                 <div className="flex items-center gap-3 mb-3">
@@ -88,7 +88,7 @@ export function HomepageBacklink({ variant = "default", className = "", forceInd
         <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className={`py-8 border-t border-gray-100 ${className}`}
         >
             <div className="container mx-auto px-4">

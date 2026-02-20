@@ -16,7 +16,7 @@ export function AboutSection() {
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                         className="relative max-w-sm mx-auto flex justify-center"
                     >
@@ -37,7 +37,7 @@ export function AboutSection() {
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                     >
                         <p className="text-sauge font-bold tracking-[0.2em] uppercase mb-4 text-sm">Expertise & Rigueur</p>

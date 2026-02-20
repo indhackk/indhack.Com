@@ -68,7 +68,7 @@ export default function SitePreview({ nom, ville, metier, tel }: SitePreviewProp
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-12"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-blue-500/10 text-blue-600 text-sm mb-4 font-medium">
@@ -111,7 +111,7 @@ export default function SitePreview({ nom, ville, metier, tel }: SitePreviewProp
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           className="flex justify-center"
         >
           <div
@@ -273,7 +273,7 @@ export default function SitePreview({ nom, ville, metier, tel }: SitePreviewProp
               initial={{ opacity: 0, scale: 0.8, rotate: -12 }}
               whileInView={{ opacity: 1, scale: 1, rotate: -12 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="absolute -top-4 -right-4 bg-gradient-to-br from-green-500 to-green-600 text-white px-4 py-2 rounded-lg shadow-lg font-bold text-sm"
             >
               Prêt en 2 semaines
@@ -286,7 +286,7 @@ export default function SitePreview({ nom, ville, metier, tel }: SitePreviewProp
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
         >
           {[

@@ -103,7 +103,7 @@ function ChecklistItem({ label, status, delay }: { label: string; status: 'error
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.4, delay }}
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "-100px" }}
       className={`flex items-center gap-3 p-4 rounded-xl border ${bgColors[status]}`}
     >
       {icons[status]}
@@ -123,7 +123,7 @@ export default function DiagnosticScore({ nom, ville, metier }: DiagnosticScoreP
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-2 rounded-full bg-white/5 text-gray-400 text-sm mb-4">
@@ -144,7 +144,7 @@ export default function DiagnosticScore({ nom, ville, metier }: DiagnosticScoreP
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="p-8 rounded-3xl bg-gradient-to-br from-red-500/10 to-transparent border border-red-500/20"
           >
             <div className="flex items-center gap-3 mb-6">
@@ -171,7 +171,7 @@ export default function DiagnosticScore({ nom, ville, metier }: DiagnosticScoreP
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="p-8 rounded-3xl bg-gradient-to-br from-green-500/10 to-transparent border border-green-500/20"
           >
             <div className="flex items-center gap-3 mb-6">
@@ -199,7 +199,7 @@ export default function DiagnosticScore({ nom, ville, metier }: DiagnosticScoreP
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           className="p-8 rounded-3xl bg-white/5 border border-white/10"
         >
           <div className="flex items-center gap-3 mb-6">

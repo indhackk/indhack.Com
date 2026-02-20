@@ -324,7 +324,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                         <motion.div
                             initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group"
                         >
                             <MapPin className="w-8 h-8 text-sauge mb-4 group-hover:scale-110 transition-transform" />
@@ -336,7 +336,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                         <motion.div
                             initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: 0.1 }}
                             className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group"
                         >
@@ -349,7 +349,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                         <motion.div
                             initial={{ opacity: 0, y: 15 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: 0.2 }}
                             className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group"
                         >
@@ -387,7 +387,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                 key={i}
                                 initial={{ opacity: 0, y: 15 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: true, margin: "-100px" }}
                                 transition={{ delay: i * 0.1 }}
                                 className="relative bg-gray-50 p-5 rounded-xl border border-gray-100 group hover:bg-sauge hover:text-white transition-all"
                             >
@@ -456,7 +456,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                 <motion.div
                                     initial={{ opacity: 0, y: 15 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
+                                    viewport={{ once: true, margin: "-100px" }}
                                     transition={{ delay: i * 0.05 }}
                                     className={`p-5 rounded-xl border transition-all group h-full ${(service as any).isPrimary
                                         ? 'bg-sauge text-white border-sauge hover:bg-ink'
@@ -502,7 +502,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                 <motion.div
                                     initial={{ opacity: 0, y: 15 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
+                                    viewport={{ once: true, margin: "-100px" }}
                                     transition={{ delay: i * 0.05 }}
                                     className="p-5 bg-white rounded-xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group h-full"
                                 >

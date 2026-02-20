@@ -87,7 +87,7 @@ export function SEOScoreChecker() {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className="text-center mb-10"
                     >
                         <div className="inline-flex items-center gap-2 bg-sauge/20 text-sauge-light px-4 py-2 rounded-full text-sm font-bold mb-4">
@@ -106,7 +106,7 @@ export function SEOScoreChecker() {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         transition={{ delay: 0.1 }}
                         className="relative z-10"
                     >

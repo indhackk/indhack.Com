@@ -242,7 +242,7 @@ export default function ProspectLandingTemplate({
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="bg-white rounded-2xl shadow-2xl shadow-black/10 overflow-hidden border border-[#E5E5E5]"
             >
               {/* Browser bar */}
@@ -341,7 +341,7 @@ export default function ProspectLandingTemplate({
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="absolute -bottom-12 -right-4 md:right-12 w-48 md:w-64"
             >
               <div className="bg-[#111111] rounded-[2rem] p-2 shadow-2xl">
@@ -386,7 +386,7 @@ export default function ProspectLandingTemplate({
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 className="text-center"
               >
                 <div className="w-12 h-12 rounded-full bg-[#F5F5F5] mx-auto mb-4 flex items-center justify-center">
@@ -417,7 +417,7 @@ export default function ProspectLandingTemplate({
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
             >
               <h3 className="text-2xl font-light mb-6">La stratégie des petits mots-clés</h3>
 
@@ -453,7 +453,7 @@ export default function ProspectLandingTemplate({
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
             >
               <h3 className="text-2xl font-light mb-6">Pourquoi les articles de blog sont essentiels</h3>
 
@@ -526,7 +526,7 @@ export default function ProspectLandingTemplate({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="bg-white rounded-2xl p-6 shadow-lg border border-[#E5E5E5]"
             >
               <div className="flex gap-4">
@@ -560,7 +560,7 @@ export default function ProspectLandingTemplate({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
             >
               <h3 className="text-2xl font-light mb-6">Ce que j'optimise sur votre fiche</h3>
               <div className="space-y-4">
@@ -610,7 +610,7 @@ export default function ProspectLandingTemplate({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="bg-[#FAFAFA] rounded-2xl p-8 border border-[#E5E5E5] flex flex-col"
             >
               <div className="mb-6">
@@ -665,7 +665,7 @@ export default function ProspectLandingTemplate({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="bg-[#111111] text-white rounded-2xl p-8 flex flex-col relative"
             >
               {/* Badge */}
@@ -727,7 +727,7 @@ export default function ProspectLandingTemplate({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="bg-[#FAFAFA] rounded-2xl p-8 border border-[#E5E5E5] flex flex-col"
             >
               <div className="mb-6">
@@ -783,7 +783,7 @@ export default function ProspectLandingTemplate({
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="mt-12 text-center"
           >
             <p className="text-sm text-[#666666]">
@@ -796,7 +796,7 @@ export default function ProspectLandingTemplate({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             className="mt-16 bg-[#FAFAFA] rounded-2xl p-8 border border-[#E5E5E5]"
           >
             <h3 className="text-xl font-light mb-6 text-center">Pourquoi ces prix sont compétitifs</h3>

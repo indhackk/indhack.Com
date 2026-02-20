@@ -52,6 +52,7 @@ export function Navbar() {
     }, []);
 
     return (
+        <>
         <motion.nav
             initial={{ y: -100 }}
             animate={{ y: 0 }}
@@ -214,17 +215,18 @@ export function Navbar() {
                     </button>
                 </div>
             </div>
+        </motion.nav>
 
-            {/* Mobile Menu */}
-            <AnimatePresence>
-                {isMobileMenuOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, x: "100%" }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: "100%" }}
-                        transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="lg:hidden fixed inset-0 z-50 bg-white"
-                    >
+        {/* Mobile Menu - Extrait de la nav pour éviter le bug de stacking context (transform) */}
+        <AnimatePresence>
+            {isMobileMenuOpen && (
+                <motion.div
+                    initial={{ opacity: 0, x: "100%" }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: "100%" }}
+                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                    className="lg:hidden fixed inset-0 z-[60] bg-white"
+                >
                         <div className="flex flex-col h-full">
                             <div className="flex items-center justify-between p-6 border-b border-line">
                                 <span className="font-heading font-bold text-2xl tracking-tighter text-ink">IndHack</span>
@@ -293,10 +295,10 @@ export function Navbar() {
                                 </Button>
                             </div>
                         </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </motion.nav>
+                </motion.div>
+            )}
+        </AnimatePresence>
+        </>
     );
 }
 

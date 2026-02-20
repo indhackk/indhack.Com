@@ -64,7 +64,7 @@ export function CityCarousel({
                         <motion.p
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             className="text-sm font-bold tracking-[0.2em] uppercase text-sauge mb-4"
                         >
                             {subtitle}
@@ -72,7 +72,7 @@ export function CityCarousel({
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             className="text-3xl md:text-4xl font-heading font-bold text-ink"
                         >
                             {title}
@@ -109,7 +109,7 @@ export function CityCarousel({
                             key={region.name}
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: i * 0.1 }}
                             className="flex-shrink-0 w-80 snap-start"
                         >
@@ -155,7 +155,7 @@ export function CityCarousel({
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         transition={{ delay: 0.6 }}
                         className="flex-shrink-0 w-80 snap-start"
                     >

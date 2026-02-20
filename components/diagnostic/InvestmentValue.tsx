@@ -39,7 +39,7 @@ export default function InvestmentValue({ metier, ville }: InvestmentValueProps)
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className="text-center mb-12"
                     >
                         <span className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 text-amber-400 px-4 py-2 rounded-full mb-6">
@@ -170,7 +170,7 @@ export default function InvestmentValue({ metier, ville }: InvestmentValueProps)
                                                 <motion.div
                                                     initial={{ width: 0 }}
                                                     whileInView={{ width: `${Math.min((item.revenue / 10000) * 100, 100)}%` }}
-                                                    viewport={{ once: true }}
+                                                    viewport={{ once: true, margin: "-100px" }}
                                                     transition={{ delay: i * 0.2, duration: 0.8 }}
                                                     className="h-full bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full"
                                                 />
@@ -209,7 +209,7 @@ export default function InvestmentValue({ metier, ville }: InvestmentValueProps)
                                         key={i}
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         whileInView={{ opacity: 1, scale: 1 }}
-                                        viewport={{ once: true }}
+                                        viewport={{ once: true, margin: "-100px" }}
                                         transition={{ delay: i * 0.1 }}
                                         className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center"
                                     >
@@ -299,7 +299,7 @@ export default function InvestmentValue({ metier, ville }: InvestmentValueProps)
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className="mt-12 text-center"
                     >
                         <p className="text-gray-400 mb-4">

@@ -50,7 +50,7 @@ export function TrustSignals({ variant = "full" }: TrustSignalsProps) {
                                 key={i}
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: true, margin: "-100px" }}
                                 transition={{ delay: i * 0.1 }}
                                 className="flex items-center gap-3"
                             >
@@ -76,7 +76,7 @@ export function TrustSignals({ variant = "full" }: TrustSignalsProps) {
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className="text-sm font-bold tracking-[0.2em] uppercase text-sauge mb-4"
                     >
                         Pourquoi me faire confiance
@@ -84,7 +84,7 @@ export function TrustSignals({ variant = "full" }: TrustSignalsProps) {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className="text-3xl md:text-4xl font-heading font-bold text-ink mb-6"
                     >
                         Une approche <span className="text-sauge">différente</span>
@@ -92,7 +92,7 @@ export function TrustSignals({ variant = "full" }: TrustSignalsProps) {
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         transition={{ delay: 0.1 }}
                         className="text-lg text-soft max-w-2xl mx-auto"
                     >
@@ -108,7 +108,7 @@ export function TrustSignals({ variant = "full" }: TrustSignalsProps) {
                             key={i}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: i * 0.1 }}
                             className="group p-6 bg-gray-50 rounded-2xl hover:bg-ink transition-all duration-300"
                         >
@@ -129,7 +129,7 @@ export function TrustSignals({ variant = "full" }: TrustSignalsProps) {
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     className="bg-gray-50 rounded-3xl p-8 md:p-12"
                 >
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
@@ -147,7 +147,7 @@ export function TrustSignals({ variant = "full" }: TrustSignalsProps) {
                                     key={badge}
                                     initial={{ opacity: 0, scale: 0.8 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
+                                    viewport={{ once: true, margin: "-100px" }}
                                     transition={{ delay: 0.3 + i * 0.05 }}
                                     className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-ink"
                                 >

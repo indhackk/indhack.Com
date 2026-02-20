@@ -16,7 +16,7 @@ export default function DiagnosticCTA({ nom, ville }: DiagnosticCTAProps) {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     className="max-w-3xl mx-auto text-center"
                 >
                     <div className="inline-flex items-center gap-2 bg-sauge/20 text-sauge px-4 py-2 rounded-full mb-6">

@@ -226,7 +226,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                             key={i}
                                             initial={{ height: 0 }}
                                             whileInView={{ height: `${h}%` }}
-                                            viewport={{ once: true }}
+                                            viewport={{ once: true, margin: "-100px" }}
                                             transition={{ delay: 0.5 + i * 0.05, duration: 0.4 }}
                                             className="w-4 bg-gradient-to-t from-[#638576] to-[#638576]/50 rounded-t-sm"
                                         />
@@ -248,7 +248,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8, y: 20 }}
                             whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: 0.8 }}
                             className="absolute -bottom-6 -left-6 bg-white text-ink px-6 py-4 rounded-2xl shadow-2xl z-30 border border-gray-100"
                         >
@@ -290,7 +290,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 0.6 }}
                                 className="flex-1"
                             >
@@ -316,7 +316,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                                 key={i}
                                                 initial={{ opacity: 0, x: -10 }}
                                                 whileInView={{ opacity: 1, x: 0 }}
-                                                viewport={{ once: true }}
+                                                viewport={{ once: true, margin: "-100px" }}
                                                 transition={{ delay: i * 0.05 }}
                                                 className="flex items-start gap-3"
                                             >
@@ -335,7 +335,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
+                                    viewport={{ once: true, margin: "-100px" }}
                                     transition={{ duration: 0.8, delay: 0.2 }}
                                     className="relative w-full lg:w-[380px] shrink-0"
                                 >
@@ -380,7 +380,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                         <motion.p
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             className="text-[#638576] font-bold tracking-[0.2em] uppercase mb-4 text-sm"
                         >
                             Ma Méthodologie
@@ -388,7 +388,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                         <motion.h2
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: 0.1 }}
                             className="text-3xl md:text-4xl font-heading font-bold"
                         >
@@ -402,7 +402,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                 key={i}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: true, margin: "-100px" }}
                                 transition={{ delay: i * 0.12 }}
                                 whileHover={{ y: -8 }}
                                 className="relative"
@@ -442,7 +442,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                         >
                             <h3 className="text-2xl font-bold text-ink mb-2">
                                 Besoin d'un <span className="text-[#638576]">{serviceData.title}</span> à {city} ?
@@ -454,7 +454,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                         <motion.div
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-100px" }}
                             className="flex flex-col sm:flex-row gap-4"
                         >
                             <Button
@@ -495,7 +495,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
+                                    viewport={{ once: true, margin: "-100px" }}
                                     transition={{ delay: i * 0.08 }}
                                     whileHover={{ y: -8, scale: 1.02 }}
                                     className="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-2xl hover:border-[#638576]/40 transition-all duration-300 group h-full"
@@ -532,7 +532,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                 <motion.div
                                     initial={{ opacity: 0, y: 15 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
+                                    viewport={{ once: true, margin: "-100px" }}
                                     transition={{ delay: i * 0.05 }}
                                     className="p-5 bg-white rounded-xl border border-gray-100 hover:shadow-lg hover:border-[#638576]/30 transition-all group h-full"
                                 >
@@ -574,7 +574,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: true, margin: "-100px" }}
                         className="text-center"
                     >
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#638576]/10 border border-[#638576]/20 mb-8">

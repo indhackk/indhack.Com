@@ -11,6 +11,7 @@ import remarkGfm from "remark-gfm";
 import { Button } from "@/components/ui/button";
 import { AuditCTA } from "@/components/blog/AuditCTA";
 import { BlogServiceCTA } from "@/components/BlogServiceCTA";
+import { InArticleCTA } from "@/components/blog/InArticleCTA";
 import type { Metadata } from "next";
 
 interface PageProps {
@@ -253,22 +254,51 @@ export default function BlogPostPage({ params }: PageProps) {
 
                     {/* Main Content */}
                     <article className="lg:col-span-3 prose prose-lg prose-headings:font-heading prose-headings:font-bold prose-headings:text-ink prose-headings:scroll-mt-32 prose-p:text-soft prose-li:text-soft prose-strong:text-ink prose-a:text-sauge prose-blockquote:border-sauge prose-blockquote:bg-gray-50 prose-blockquote:p-6 prose-blockquote:rounded-xl max-w-none">
-                        <ReactMarkdown
-                            remarkPlugins={[remarkGfm]}
-                            components={{
-                                h2: ({ node, children, ...props }) => {
-                                    // Génération d'ID pour l'ancrage
-                                    const text = String(children).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-                                    return <h2 id={text} {...props}>{children}</h2>
+                        {(() => {
+                            // Split content by H2 sections pour injecter le CTA après le 3ème H2
+                            const sections = post.content.split(/\n(?=## )/);
+                            const CTA_INSERT_AFTER = 3; // Après le 3ème H2
+
+                            const createIdFromText = (text: React.ReactNode) =>
+                                String(text).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+
+                            const markdownComponents = {
+                                h2: (props: React.HTMLAttributes<HTMLHeadingElement> & { children?: React.ReactNode }) => {
+                                    const { children, ...rest } = props;
+                                    return <h2 id={createIdFromText(children)} {...rest}>{children}</h2>
                                 },
-                                h3: ({ node, children, ...props }) => {
-                                    const text = String(children).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-                                    return <h3 id={text} {...props}>{children}</h3>
+                                h3: (props: React.HTMLAttributes<HTMLHeadingElement> & { children?: React.ReactNode }) => {
+                                    const { children, ...rest } = props;
+                                    return <h3 id={createIdFromText(children)} {...rest}>{children}</h3>
                                 }
-                            }}
-                        >
-                            {post.content}
-                        </ReactMarkdown>
+                            };
+
+                            // Si moins de 4 sections, pas de split (article court)
+                            if (sections.length <= CTA_INSERT_AFTER) {
+                                return (
+                                    <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                                        {post.content}
+                                    </ReactMarkdown>
+                                );
+                            }
+
+                            // Première partie : sections 0 à CTA_INSERT_AFTER-1
+                            const firstPart = sections.slice(0, CTA_INSERT_AFTER).join('\n');
+                            // Deuxième partie : sections CTA_INSERT_AFTER et suivantes
+                            const secondPart = sections.slice(CTA_INSERT_AFTER).join('\n');
+
+                            return (
+                                <>
+                                    <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                                        {firstPart}
+                                    </ReactMarkdown>
+                                    <InArticleCTA />
+                                    <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+                                        {secondPart}
+                                    </ReactMarkdown>
+                                </>
+                            );
+                        })()}
 
                         {/* Tags */}
                         <div className="mt-12 pt-8 border-t border-gray-100 flex flex-wrap gap-2">

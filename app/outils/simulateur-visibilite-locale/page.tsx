@@ -197,6 +197,85 @@ export default function SimulateurLocalPage() {
                     </div>
                 </section>
 
+                {/* SEO Content Section - Anti Thin Content */}
+                <section className="py-16 bg-white">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto prose prose-lg prose-headings:font-heading prose-headings:text-ink prose-p:text-soft prose-strong:text-ink">
+
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+                                Comment Google Maps classe les résultats locaux ?
+                            </h2>
+                            <p>
+                                L'algorithme de Google pour le <strong>SEO local</strong> repose sur trois piliers fondamentaux : la <strong>pertinence</strong>, la <strong>distance</strong> et la <strong>proéminence</strong>.
+                                La pertinence mesure à quel point votre fiche Google Business Profile correspond à la requête de l'utilisateur. Plus vos informations sont complètes (catégories, attributs, services listés), plus Google comprend votre activité.
+                            </p>
+                            <p>
+                                La distance est calculée automatiquement entre la position de l'utilisateur (ou la ville mentionnée dans sa recherche) et votre adresse physique.
+                                La proéminence, elle, dépend de votre notoriété en ligne : nombre d'avis Google, note moyenne, mentions dans la presse locale, backlinks depuis des sites de la région, et présence sur les annuaires professionnels pertinents.
+                            </p>
+                            <p>
+                                Notre simulateur vous révèle qui domine actuellement ces critères dans votre ville. Si des plateformes nationales (PagesJaunes, Doctolib, TripAdvisor) trustent les premières positions, c'est souvent parce qu'elles cumulent des années d'autorité de domaine et des milliers de pages parfaitement structurées. Mais cela signifie aussi qu'il y a de la place pour un site local bien optimisé qui cible des requêtes plus spécifiques.
+                            </p>
+
+                            <h2 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
+                                Pourquoi votre Pack Local est bloqué ?
+                            </h2>
+                            <p>
+                                Le <strong>Pack Local</strong> (les 3 résultats affichés avec la carte Google Maps) est le Graal du référencement local. Y figurer peut multiplier par 5 le nombre d'appels et de visites sur votre site.
+                                Pourtant, de nombreuses entreprises restent invisibles dans ce pack malgré des années d'activité. Voici les causes les plus fréquentes :
+                            </p>
+                            <ul className="list-disc pl-6 space-y-2">
+                                <li><strong>Fiche Google Business Profile incomplète</strong> : catégories imprécises, horaires manquants, aucune photo récente, description vide.</li>
+                                <li><strong>NAP incohérent</strong> : votre Nom, Adresse et numéro de téléphone varient d'un annuaire à l'autre, ce qui sème le doute chez Google.</li>
+                                <li><strong>Pas d'avis ou avis négatifs</strong> : Google favorise les entreprises avec un volume d'avis significatif (30+) et une note supérieure à 4,3 étoiles.</li>
+                                <li><strong>Aucun signal local sur le site web</strong> : votre site ne mentionne pas la ville dans les balises title, H1, meta description ni dans le contenu.</li>
+                                <li><strong>Absence de backlinks locaux</strong> : aucun lien depuis des sites de votre région (presse locale, partenaires, associations).</li>
+                            </ul>
+                            <p>
+                                L'outil ci-dessus vous montre la composition de la page 1 pour votre requête. Si vous n'y figurez pas du tout, c'est que plusieurs de ces facteurs vous pénalisent.
+                                Une stratégie <Link href="/seo-local" className="text-sauge hover:underline">SEO local complète</Link> permet de corriger ces lacunes et de conquérir le Pack Local en 3 à 6 mois.
+                            </p>
+
+                            <h2 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
+                                Plateformes vs sites locaux : quelle stratégie adopter ?
+                            </h2>
+                            <p>
+                                Notre analyse révèle souvent une domination des <strong>plateformes nationales</strong> sur les requêtes locales génériques.
+                                Doctolib pour "médecin + ville", PagesJaunes pour "plombier + ville", TripAdvisor pour "restaurant + ville".
+                                Faut-il les considérer comme des concurrents ou comme des alliés ?
+                            </p>
+                            <p>
+                                La réponse est les deux. Vous devez <strong>être présent sur ces plateformes</strong> car elles captent un volume de recherche considérable.
+                                Un profil optimisé sur Doctolib ou PagesJaunes vous assure une visibilité même si votre propre site ne ranke pas encore.
+                                En parallèle, votre site doit cibler des <strong>requêtes longue traîne</strong> plus spécifiques : "dermatologue pédiatrique + quartier", "plombier urgence week-end + ville", "restaurant gastronomique vue mer + ville".
+                            </p>
+                            <p>
+                                Ces requêtes à forte intention d'achat sont moins disputées et convertissent mieux.
+                                Le simulateur vous aide à identifier si des sites locaux arrivent déjà à percer ce mur de plateformes — et donc si c'est réaliste pour vous.
+                                Pour aller plus loin, notre <Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">outil d'audit SEO gratuit</Link> analyse votre site et détecte les optimisations manquantes.
+                            </p>
+
+                            <h2 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
+                                Les signaux qui font la différence en SEO local
+                            </h2>
+                            <p>
+                                Voici les facteurs qui permettent à un commerce local de dépasser les géants du web sur sa zone géographique :
+                            </p>
+                            <ul className="list-disc pl-6 space-y-2">
+                                <li><strong>Avis Google réguliers et authentiques</strong> : demandez systématiquement un avis après chaque prestation. Répondez à tous les avis, positifs comme négatifs.</li>
+                                <li><strong>Contenu géolocalisé sur le site</strong> : créez une page dédiée à chaque zone desservie avec du contenu unique (pas de duplication).</li>
+                                <li><strong>Citations NAP cohérentes</strong> : inscrivez-vous sur 30 à 50 annuaires locaux avec exactement les mêmes informations.</li>
+                                <li><strong>Schéma LocalBusiness</strong> : ajoutez les données structurées JSON-LD pour aider Google à comprendre votre activité. Notre <Link href="/outils/generateur-schema-json-ld" className="text-sauge hover:underline">générateur de schéma</Link> le fait pour vous.</li>
+                                <li><strong>Photos Google Business récentes</strong> : ajoutez 5 à 10 photos par mois (façade, équipe, réalisations) pour montrer que l'entreprise est active.</li>
+                                <li><strong>Posts Google Business</strong> : publiez une actualité ou une offre chaque semaine pour maintenir l'engagement.</li>
+                            </ul>
+                            <p>
+                                La combinaison de ces signaux envoie un message clair à Google : cette entreprise est active, reconnue localement, et mérite d'être mise en avant dans les résultats de proximité.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Related Tools */}
                 <section className="py-16 bg-ink border-t border-white/5">
                     <div className="container mx-auto px-4">

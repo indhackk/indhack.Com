@@ -23,6 +23,11 @@ const nextConfig = {
     },
 
     // ══════════════════════════════════════════════════════════════
+    // URL CANONIQUE - Évite le Duplicate Content (/page vs /page/)
+    // ══════════════════════════════════════════════════════════════
+    trailingSlash: false,
+
+    // ══════════════════════════════════════════════════════════════
     // REDIRECTIONS 301 - Nettoyage des anciennes URLs WordPress
     // ══════════════════════════════════════════════════════════════
     async redirects() {
