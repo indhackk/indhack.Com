@@ -260,7 +260,7 @@ export default function AuditSEOPage() {
                                     <div>
                                         <h3 className="font-bold text-white mb-2">Après l'audit : passez à l'action</h3>
                                         <p className="text-white/60 text-sm mb-3">
-                                            Cet outil gratuit vous donne un aperçu. Pour un <strong className="text-white">audit SEO professionnel complet</strong> avec analyse concurrentielle, étude sémantique et roadmap priorisée par ROI, découvrez mon accompagnement expert.
+                                            Cet outil gratuit vous donne un aperçu. Si vous préparez une refonte de site, consultez notre <Link href="/blog/checklist-seo-refonte-site" className="text-sauge hover:underline">checklist SEO de 45 points</Link> pour ne rien oublier. Pour un <strong className="text-white">audit SEO professionnel complet</strong> avec analyse concurrentielle, étude sémantique et roadmap priorisée par ROI, découvrez mon accompagnement expert.
                                         </p>
                                         <Link href="/audit-seo" className="text-sauge font-medium hover:underline inline-flex items-center gap-2 text-sm">
                                             Découvrir l'audit SEO professionnel

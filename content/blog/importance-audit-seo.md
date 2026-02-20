@@ -120,6 +120,7 @@ Un audit SEO vous permet de :
 - [Les erreurs d'audit SEO qui coûtent cher](/blog/audit-seo-erreurs-qui-coutent-cher) — Les 9 erreurs techniques les plus fréquentes et comment les corriger
 - [Que contient un rapport d'audit SEO professionnel ?](/blog/contenu-rapport-audit-seo) — Tout ce que vous devez attendre d'un audit complet
 - [Checklist SEO : refonte de site](/blog/checklist-seo-refonte-site) — 45 points à vérifier avant migration
+- [SEO vs SEA : que choisir ?](/blog/seo-vs-sea-que-choisir) — Comparatif complet pour votre stratégie de visibilité
 
 ---
 
@@ -143,13 +144,13 @@ Un audit complet est recommandé une fois par an minimum. Des mini-audits trimes
 
 ---
 
-**Envie d'aller plus loin ?** Découvrez [les missions complètes d'un consultant SEO](/blog/missions-consultant-seo) ou [demandez votre audit SEO](/audit-seo).
+**Envie d'aller plus loin ?** Découvrez [pourquoi faire appel à un consultant SEO](/blog/pourquoi-consultant-seo) ou [demandez votre audit SEO](/audit-seo).
 
-**Services d'audit SEO par ville :**
-- [Audit technique SEO à Nice](/consultant-seo-nice/audit-technique)
-- [Audit SEO Sophia Antipolis](/consultant-seo-sophia-antipolis/audit-technique) — Startups & SaaS
-- [Audit SEO à Cannes](/consultant-seo-cannes/audit-technique) — Marché premium
-- [Audit SEO à Lyon](/consultant-seo-lyon/audit-technique)
-- [Audit SEO à Marseille](/consultant-seo-marseille/audit-technique)
+**Consultante SEO par ville :**
+- [Consultante SEO à Nice](/consultant-seo-nice)
+- [Consultante SEO Sophia Antipolis](/consultant-seo-sophia-antipolis) — Startups & SaaS
+- [Consultante SEO à Cannes](/consultant-seo-cannes) — Marché premium
+- [Consultante SEO à Lyon](/consultant-seo-lyon)
+- [Consultante SEO à Marseille](/consultant-seo-marseille)
 
 ---

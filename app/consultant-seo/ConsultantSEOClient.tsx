@@ -496,13 +496,13 @@ export default function ConsultantSEOClient() {
                             Approfondir le sujet
                         </h2>
                         <div className="grid md:grid-cols-3 gap-6">
-                            <Link href="/blog/missions-consultant-seo" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                            <Link href="/blog/seo-vs-sea-que-choisir" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    Les missions d'un consultant SEO
+                                    SEO vs SEA : que choisir ?
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
-                                    Découvrez les missions concrètes d'un consultant SEO au quotidien.
+                                    Comparatif complet pour choisir la bonne stratégie de visibilité.
                                 </p>
                             </Link>
                             <Link href="/blog/pourquoi-consultant-seo" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">

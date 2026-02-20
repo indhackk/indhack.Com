@@ -2,6 +2,7 @@
 title: "Salaire consultant SEO en 2026 : grilles et évolutions"
 description: "Combien gagne un consultant SEO en France ? Salaires junior, confirmé, senior, freelance. Grilles détaillées par expérience, région et spécialité."
 date: "2026-01-23"
+draft: true
 category: "Métier"
 image: "/images/blog/salaire-consultant-seo.jpg"
 author: "Indiana Aflalo"

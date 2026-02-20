@@ -331,6 +331,15 @@ export default function ReferencementClient() {
                                     Comprendre pourquoi tout projet SEO commence par un audit.
                                 </p>
                             </Link>
+                            <Link href="/blog/checklist-seo-refonte-site" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Checklist</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    45 points SEO pour votre refonte
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    La checklist complète avant, pendant et après migration.
+                                </p>
+                            </Link>
                         </div>
                     </div>
                 </div>

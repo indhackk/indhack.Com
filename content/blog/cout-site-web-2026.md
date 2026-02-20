@@ -2,6 +2,7 @@
 title: "Combien coûte un site web en 2026 ?"
 description: "Guide complet des tarifs de création de site web en 2026 : site vitrine, e-commerce, sur-mesure. Comprendre les prix et éviter les arnaques."
 date: "2026-01-09"
+draft: true
 category: "Création Web"
 image: "/images/blog/cout-site-web-2026.jpg"
 author: "Indiana Aflalo"
