@@ -1,5 +1,5 @@
 ---
-title: "Audit SEO : pourquoi c'est le point de départ de votre croissance"
+title: "Audit SEO : le point de départ de votre croissance"
 description: "Ne naviguez plus à vue. Découvrez pourquoi un audit SEO est l'investissement le plus rentable pour corriger les erreurs invisibles de votre site."
 date: "2026-01-16"
 category: "Stratégie"

@@ -1,5 +1,5 @@
 ---
-title: "Site web lent = clients perdus : comment passer de 56 à 93 sur PageSpeed"
+title: "Site lent = clients perdus : de 56 à 93 sur PageSpeed"
 description: "Un site lent vous fait perdre des clients. Comparatif réel PageSpeed : 56/100 (WordPress) vs 93/100 (Next.js). Découvrez comment améliorer vos Core Web Vitals."
 date: "2026-02-17"
 category: "Performance Web"

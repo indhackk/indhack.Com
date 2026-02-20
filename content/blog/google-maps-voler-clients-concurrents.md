@@ -1,5 +1,5 @@
 ---
-title: "Voler les clients de vos concurrents sur Google Maps (légalement)"
+title: "Voler les clients de vos concurrents sur Google Maps"
 description: "Découvrez la méthode étape par étape pour détourner légalement le trafic de vos concurrents sur Google Maps. Analyse des avis, failles SEO et optimisation de fiche GBP."
 date: "2026-02-11"
 category: "SEO Local"

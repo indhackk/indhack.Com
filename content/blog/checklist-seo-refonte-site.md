@@ -1,5 +1,5 @@
 ---
-title: "Checklist SEO : 45 points à vérifier pour votre refonte de site"
+title: "Checklist SEO refonte : 45 points à vérifier"
 description: "La checklist complète pour réussir votre refonte de site sans perdre votre SEO. 45 points avant, pendant et après la migration. Téléchargeable et imprimable."
 date: "2026-02-16"
 category: "Refonte"

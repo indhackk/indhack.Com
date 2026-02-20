@@ -28,6 +28,19 @@ const nextConfig = {
     async redirects() {
         return [
             // ══════════════════════════════════════════════════════════════
+            // P3: Kill audit-technique cannibalisation
+            // ══════════════════════════════════════════════════════════════
+            {
+                source: '/consultant-seo-:city/audit-technique',
+                destination: '/consultant-seo-:city',
+                permanent: true,
+            },
+            {
+                source: '/seo-:city/audit-technique',
+                destination: '/consultant-seo-:city',
+                permanent: true,
+            },
+            // ══════════════════════════════════════════════════════════════
             // DE-CANNIBALISATION : Pages fusionnées
             // ══════════════════════════════════════════════════════════════
             {

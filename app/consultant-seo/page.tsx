@@ -4,7 +4,7 @@ import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Freelance | Experte Référencement Naturel – IndHack",
+    title: "Consultante SEO Freelance | Référencement – IndHack",
     description: "Consultante SEO freelance expérimentée. Audit technique, stratégie de contenu, netlinking. Résultats mesurables. Devis gratuit.",
     keywords: ["consultant SEO", "consultant SEO freelance", "consultante SEO", "expert référencement naturel", "consultant référencement", "SEO freelance"],
     alternates: {

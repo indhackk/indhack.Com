@@ -1,5 +1,5 @@
 ---
-title: "9 erreurs SEO qui vous coûtent cher (et comment les corriger)"
+title: "9 erreurs SEO qui coûtent cher (et comment les éviter)"
 description: "Votre site perd de l'argent. Les 9 erreurs techniques invisibles (canonical, vitesse, cannibalisation) qui tuent votre CA. Corrections express."
 date: "2026-02-15"
 category: "Audit SEO"
