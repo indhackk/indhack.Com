@@ -8,7 +8,7 @@ author: "Indiana Aflalo"
 keywords: ["formation SEO", "apprendre SEO", "devenir consultant SEO", "formation référencement naturel", "cours SEO gratuit", "certification SEO Google", "parcours SEO", "formation SEO en ligne"]
 ---
 
-Vous voulez **apprendre le SEO** ? Excellente idée. Le **référencement naturel** est l'une des compétences les plus demandées du marché digital. Mais face à la jungle des **formations SEO** disponibles, comment choisir le bon parcours ?
+Vous voulez **apprendre le SEO** ? Excellente idée. Le **référencement naturel** est l'une des compétences les plus demandées du marché digital. Si votre objectif est de [devenir consultant SEO](/blog/devenir-consultant-seo), la formation n'est qu'une étape — mais une étape cruciale. Face à la jungle des **formations SEO** disponibles, comment choisir le bon parcours ?
 
 ## Pourquoi se former au SEO en 2026 ?
 
@@ -186,7 +186,7 @@ Le diplôme compte moins que les **résultats**. Si vous arrivez en entretien av
 
 Quelle que soit la **formation SEO** choisie, retenez ceci : **le SEO s'apprend en faisant**. Créez un site. Positionnez-le. Échouez. Recommencez. Analysez. Améliorez.
 
-Les certifications sont utiles pour rassurer les clients ou les recruteurs. Mais ce qui fait un bon SEO, c'est sa capacité à générer des **résultats concrets**.
+Les certifications sont utiles pour rassurer les clients ou les recruteurs. Mais ce qui fait un bon SEO, c'est sa capacité à générer des **résultats concrets**. Une fois formé, suivez le [guide complet pour devenir consultant SEO](/blog/devenir-consultant-seo) pour structurer votre lancement professionnel.
 
 Un [diagnostic de votre site actuel](/audit-seo) peut être un excellent point de départ pour mettre en pratique vos nouvelles compétences. Testez aussi notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit) pour vous entraîner à détecter les problèmes.
 

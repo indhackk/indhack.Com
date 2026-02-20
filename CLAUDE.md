@@ -18,10 +18,12 @@ npm run start        # Start production server
 npm run lint         # Run ESLint
 
 # Google Indexing (requires .env.local credentials)
-npm run index        # Smart indexing - submit changed pages
-npm run index:status # Check indexing status
-npm run turbo        # Turbo indexing via IndexNow
-npm run turbo:all    # Force reindex all pages
+npm run index          # Smart indexing - submit changed pages
+npm run index:status   # Check indexing status
+npm run index:priority # Priority indexing for important pages
+npm run index:force    # Force reindex all pages via Google API
+npm run turbo          # Turbo indexing via IndexNow
+npm run turbo:all      # Force reindex all pages via IndexNow
 ```
 
 **Important**: Always run `npm run build` after modifications to verify no errors.

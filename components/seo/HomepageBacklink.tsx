@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowLeft, Home, Sparkles } from "lucide-react";
 
@@ -26,11 +26,9 @@ interface HomepageBacklinkProps {
     forceIndex?: number;
 }
 
-// Fonction pour obtenir une variation basée sur le chemin de la page (côté client)
-function getVariationIndex(): number {
-    if (typeof window === "undefined") return 0;
-    // Utilise le pathname pour varier les ancres selon la page
-    const path = window.location.pathname;
+// Fonction de hachage déterministe basée sur le pathname
+// Fonctionne de manière isomorphique (SSR + client)
+function hashPathname(path: string): number {
     let hash = 0;
     for (let i = 0; i < path.length; i++) {
         hash = ((hash << 5) - hash) + path.charCodeAt(i);
@@ -40,13 +38,11 @@ function getVariationIndex(): number {
 }
 
 export function HomepageBacklink({ variant = "default", className = "", forceIndex }: HomepageBacklinkProps) {
-    // Utilise useState pour éviter les problèmes de hydration
-    const [anchorIndex, setAnchorIndex] = useState(0);
+    // usePathname est isomorphique : même valeur SSR et client = pas de mismatch d'hydratation
+    const pathname = usePathname();
 
-    useEffect(() => {
-        setAnchorIndex(forceIndex ?? getVariationIndex());
-    }, [forceIndex]);
-
+    // Calcul déterministe de l'index : Googlebot voit la même ancre que le client
+    const anchorIndex = forceIndex ?? hashPathname(pathname);
     const anchor = ANCHOR_VARIATIONS[anchorIndex];
 
     if (variant === "minimal") {

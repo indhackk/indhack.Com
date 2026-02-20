@@ -9,7 +9,7 @@ author: "Indiana Aflalo"
 keywords: ["missions consultant SEO", "rôle consultant SEO", "que fait un consultant SEO", "travail consultant SEO", "expert SEO missions", "métier consultant SEO"]
 ---
 
-Vous envisagez de faire appel à un expert en référencement naturel mais vous ne savez pas exactement ce qu'il va faire pour votre entreprise ? Que vous soyez à Nice, Marseille ou ailleurs en France, voici un guide clair. Voici un guide complet des **missions SEO** que je réalise au quotidien pour mes clients.
+Vous envisagez de faire appel à un expert en référencement naturel mais vous ne savez pas exactement ce qu'il va faire pour votre entreprise ? Que vous soyez client potentiel ou que vous souhaitiez [rejoindre le métier de consultant en référencement](/blog/devenir-consultant-seo), ce guide vous éclaire. Voici un aperçu complet des **missions SEO** que je réalise au quotidien pour mes clients à Nice, Marseille et partout en France.
 
 ## Les 5 piliers du travail d'un consultant SEO
 
@@ -164,6 +164,8 @@ L'important est de choisir un consultant qui :
 - **Travaille en transparence** totale
 - **Mesure les résultats** avec des KPIs clairs
 - **S'inscrit dans la durée** (le SEO prend du temps)
+
+Ces missions vous inspirent ? Consultez le [parcours complet pour devenir consultant SEO](/blog/devenir-consultant-seo) et lancer votre carrière dans le référencement.
 
 ---
 

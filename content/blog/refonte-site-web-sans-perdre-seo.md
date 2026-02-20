@@ -1,16 +1,18 @@
 ---
-title: "Refonte de site web : comment ne pas perdre son SEO ?"
-description: "Guide complet pour réussir votre refonte de site sans perdre vos positions Google. Checklist, redirections, erreurs à éviter, planning."
-date: "2026-01-07"
+title: "Refonte de site web : checklist et guide pour ne pas perdre son SEO"
+description: "Guide complet + checklist 45 points pour réussir votre refonte sans perdre vos positions Google. Avant, pendant, après : rien n'est oublié."
+date: "2026-02-16"
 category: "Refonte"
 image: "/images/blog/refonte-site-seo.jpg"
 author: "Indiana Aflalo"
-keywords: ["refonte site web SEO", "migration SEO", "redirections 301", "perdre positions Google", "refonte sans perdre référencement", "checklist migration"]
+keywords: ["refonte site web SEO", "checklist seo refonte site", "migration SEO", "redirections 301", "perdre positions Google", "refonte sans perdre référencement", "checklist migration", "audit pre-migration"]
 ---
 
 Une refonte de site web mal préparée peut **anéantir des années de travail SEO** en quelques jours. J'ai vu des entreprises perdre 80% de leur trafic organique du jour au lendemain à cause d'erreurs évitables.
 
 En tant que consultante SEO spécialiste en [refonte de site web](/refonte-site-web), je vous livre la **méthode complète** pour réussir votre migration sans sacrifier vos positions Google. Avant de commencer, testez votre site actuel avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit).
+
+> **Cet article inclut une checklist complète de 45 points** à vérifier avant, pendant et après votre refonte. Vous pouvez l'utiliser comme référence tout au long de votre projet.
 
 ## Pourquoi les refontes SEO échouent ?
 
@@ -26,7 +28,9 @@ Une refonte mal préparée peut faire perdre 50 à 80 % du trafic organique en q
 
 **La bonne nouvelle** : avec une préparation rigoureuse, vous pouvez refondre votre site ET améliorer votre SEO.
 
-## Avant la refonte : l'audit préalable
+---
+
+## Phase 1 : Avant la refonte — audit et préparation
 
 ### Inventorier l'existant
 
@@ -40,6 +44,19 @@ Avant de toucher à quoi que ce soit, documentez **tout** ce qui fonctionne :
 | **Backlinks** | Ahrefs, Majestic |
 | **Structure de liens internes** | Screaming Frog |
 
+#### Checklist inventaire
+
+| # | Point à vérifier | ✓ |
+|---|-----------------|---|
+| 1 | **Crawl complet du site actuel** réalisé (Screaming Frog, Sitebulb) | ☐ |
+| 2 | **Export de toutes les URLs** du site (avec statuts HTTP) | ☐ |
+| 3 | **Liste des pages indexées** extraite de Google Search Console | ☐ |
+| 4 | **Positions actuelles** sur les mots-clés principaux documentées | ☐ |
+| 5 | **Trafic par page** exporté depuis Google Analytics (12 derniers mois) | ☐ |
+| 6 | **Pages de conversion** identifiées (celles qui génèrent des leads/ventes) | ☐ |
+| 7 | **Backlinks** exportés (Ahrefs, Majestic, Search Console) | ☐ |
+| 8 | **Données structurées** actuelles listées (FAQ, Article, LocalBusiness...) | ☐ |
+
 ### Identifier vos pages stars
 
 Toutes vos pages n'ont pas la même valeur. Identifiez les **20% qui génèrent 80% du trafic** :
@@ -51,9 +68,19 @@ Toutes vos pages n'ont pas la même valeur. Identifiez les **20% qui génèrent 
 
 Ces pages sont **prioritaires** : elles ne doivent subir aucune régression.
 
+#### Checklist pages prioritaires
+
+| # | Point à vérifier | ✓ |
+|---|-----------------|---|
+| 9 | **Top 20 pages par trafic** identifiées | ☐ |
+| 10 | **Top 20 pages par positions** (mots-clés stratégiques) identifiées | ☐ |
+| 11 | **Pages avec backlinks** listées (ne jamais supprimer sans redirect) | ☐ |
+| 12 | **Pages de conversion** marquées comme prioritaires | ☐ |
+| 13 | **Contenu evergreen** identifié (articles qui rankent depuis longtemps) | ☐ |
+
 ### Cartographier les redirections
 
-Créez un **tableau de correspondance** entre anciennes et nouvelles URLs :
+Créez un **tableau de correspondance** entre anciennes et nouvelles URLs. C'est LE document le plus important de votre migration.
 
 | Ancienne URL | Nouvelle URL | Statut |
 |--------------|--------------|--------|
@@ -64,7 +91,30 @@ Créez un **tableau de correspondance** entre anciennes et nouvelles URLs :
 
 **Règle d'or** : chaque ancienne URL doit avoir une destination.
 
-## Pendant la refonte : les règles à respecter
+#### Checklist redirections
+
+| # | Point à vérifier | ✓ |
+|---|-----------------|---|
+| 14 | **Tableau de correspondance** créé (ancienne URL → nouvelle URL) | ☐ |
+| 15 | **Chaque ancienne URL** a une destination définie | ☐ |
+| 16 | **Pages à supprimer** identifiées (410) vs pages à rediriger (301) | ☐ |
+| 17 | **Règles regex** préparées pour les patterns d'URL récurrents | ☐ |
+| 18 | **Redirections testées** sur environnement de staging | ☐ |
+
+### Préparation technique
+
+| # | Point à vérifier | ✓ |
+|---|-----------------|---|
+| 19 | **Environnement de staging** configuré (bloqué aux robots) | ☐ |
+| 20 | **Nouveau sitemap XML** préparé | ☐ |
+| 21 | **Robots.txt** du nouveau site vérifié | ☐ |
+| 22 | **Balises canonical** planifiées pour chaque page | ☐ |
+| 23 | **Données structurées** prévues sur le nouveau site | ☐ |
+| 24 | **Tracking Analytics** configuré sur le nouveau site | ☐ |
+
+---
+
+## Phase 2 : Pendant la refonte — développement
 
 ### Conserver la structure d'URL si possible
 
@@ -79,6 +129,16 @@ Le mieux est de **garder les mêmes URLs**. Si vous devez les modifier :
 |-------|-------------|-----------------|
 | /plombier-nice | /plombier-nice | /services/plomberie-chauffage-nice-06 |
 | /blog/seo-2024 | /blog/seo-2025 | /actualites/article-42 |
+
+#### Checklist structure et URLs
+
+| # | Point à vérifier | ✓ |
+|---|-----------------|---|
+| 25 | **URLs identiques** conservées quand c'est possible | ☐ |
+| 26 | **Nouvelles URLs** propres (lowercase, tirets, pas d'accents) | ☐ |
+| 27 | **Hiérarchie d'URL** logique et cohérente | ☐ |
+| 28 | **Pas de paramètres** inutiles dans les URLs | ☐ |
+| 29 | **Trailing slash** cohérent (avec ou sans, mais pas les deux) | ☐ |
 
 ### Implémenter les redirections 301
 
@@ -113,6 +173,17 @@ Ne réécrivez pas les pages qui rankent bien. Si vous devez modifier le contenu
 - **Gardez** les paragraphes clés qui matchent l'intention de recherche
 - **Améliorez** plutôt que de remplacer
 
+#### Checklist contenu et on-page SEO
+
+| # | Point à vérifier | ✓ |
+|---|-----------------|---|
+| 30 | **Contenu des pages prioritaires** conservé à l'identique | ☐ |
+| 31 | **Balises title** migrées (ou améliorées) | ☐ |
+| 32 | **Meta descriptions** migrées | ☐ |
+| 33 | **Structure Hn** (H1, H2, H3) respectée | ☐ |
+| 34 | **Attributs alt** des images conservés | ☐ |
+| 35 | **Maillage interne** recréé (liens entre pages) | ☐ |
+
 ### Optimiser la vitesse
 
 Une refonte est l'occasion d'**améliorer les performances** :
@@ -120,7 +191,7 @@ Une refonte est l'occasion d'**améliorer les performances** :
 | Objectif | Seuil recommandé |
 |----------|-----------------|
 | **LCP** (Largest Contentful Paint) | < 2.5s |
-| **FID** (First Input Delay) | < 100ms |
+| **INP** (Interaction to Next Paint) | < 200ms |
 | **CLS** (Cumulative Layout Shift) | < 0.1 |
 | **TTFB** (Time To First Byte) | < 800ms |
 
@@ -130,20 +201,31 @@ Technologies performantes :
 - CDN (Cloudflare, Vercel Edge)
 - Cache agressif
 
-## Le jour J : la mise en ligne
+#### Checklist performance technique
+
+| # | Point à vérifier | ✓ |
+|---|-----------------|---|
+| 36 | **Core Web Vitals** testés sur staging (LCP < 2.5s, CLS < 0.1) | ☐ |
+| 37 | **Images optimisées** (WebP, lazy loading, dimensions définies) | ☐ |
+| 38 | **CSS/JS** minifiés et différés si possible | ☐ |
+| 39 | **HTTPS** actif avec redirections HTTP → HTTPS | ☐ |
+| 40 | **Mobile-friendly** vérifié (test Google) | ☐ |
+
+---
+
+## Phase 3 : Le jour J — mise en ligne
 
 ### Checklist de lancement
 
 Avant de basculer en production :
 
-- [ ] Toutes les redirections sont en place
-- [ ] Sitemap XML mis à jour
-- [ ] Robots.txt vérifié (pas de noindex accidentel)
-- [ ] Balises meta sur toutes les pages
-- [ ] Canonical corrects
-- [ ] Données structurées migrées
-- [ ] Google Analytics et Search Console configurés
-- [ ] Test de crawl sur l'environnement de staging
+| # | Point à vérifier | ✓ |
+|---|-----------------|---|
+| 41 | **Redirections 301** actives et fonctionnelles | ☐ |
+| 42 | **Robots.txt** autorise l'indexation | ☐ |
+| 43 | **Sitemap XML** soumis dans Search Console | ☐ |
+| 44 | **Balises noindex** retirées (si présentes sur staging) | ☐ |
+| 45 | **Test de crawl** post-lancement réalisé | ☐ |
 
 ### Actions post-lancement
 
@@ -155,20 +237,23 @@ Dans les 24h suivant la mise en ligne :
 4. **Tester les Core Web Vitals** sur PageSpeed Insights
 5. **Vérifier le suivi Analytics** (trafic bien mesuré ?)
 
-## Après la refonte : le suivi
+---
+
+## Phase 4 : Après la refonte — surveillance
 
 ### Semaine 1-2 : surveillance intensive
 
-Vérifiez quotidiennement :
+Vérifiez **quotidiennement** pendant la première semaine :
 
 | Métrique | Où vérifier | Alerte si... |
 |----------|-------------|--------------|
-| **Erreurs 404** | Search Console | > 10 nouvelles erreurs |
+| **Erreurs 404** | Search Console → Pages | > 10 nouvelles erreurs/jour |
 | **Trafic organique** | Analytics | Chute > 20% |
-| **Pages indexées** | Search Console | Diminution |
-| **Core Web Vitals** | Search Console | Passage au rouge |
+| **Pages indexées** | Search Console → Indexation | Diminution soudaine |
+| **Core Web Vitals** | Search Console → Expérience | Passage au rouge |
+| **Positions clés** | Ahrefs / SEMrush | Chute > 5 positions |
 
-### Mois 1-3 : stabilisation
+### Semaines 2-4 : stabilisation
 
 Google met **2 à 4 semaines** pour réévaluer complètement un site après une refonte. Une légère baisse de trafic est normale.
 
@@ -178,7 +263,12 @@ Google met **2 à 4 semaines** pour réévaluer complètement un site après une
 | **Baisse 15-30%** | Vérifier les redirections et erreurs |
 | **Baisse > 30%** | Audit urgent, problème majeur |
 
-### Signaux de succès
+- Corriger immédiatement toute erreur 404 détectée
+- Demander l'indexation des pages importantes via Search Console
+- Surveiller le comportement du trafic
+- Vérifier que les backlinks pointent vers les bonnes pages
+
+### Mois 1-3 : consolidation
 
 Une refonte réussie se traduit par :
 
@@ -187,81 +277,153 @@ Une refonte réussie se traduit par :
 - Taux de rebond stable ou en baisse
 - Pas de chute de positions sur vos mots-clés principaux
 
-## Les erreurs fatales à éviter
+---
+
+## Les 5 erreurs fatales qui détruisent le SEO d'une refonte
 
 ### Erreur #1 : Lancer sans redirections
 
-**Impact** : Perte immédiate de tout le trafic des anciennes URLs
+**Ce qui se passe** : Toutes les anciennes URLs retournent 404. Google désindexe ces pages. Les backlinks pointent vers du vide.
 
-**Solution** : Préparer le tableau de redirections AVANT le développement
+**Impact** : Perte de 50-100% du trafic organique.
 
-### Erreur #2 : Noindex accidentel
+**Comment l'éviter** : Préparer le tableau de redirections AVANT le développement. Tester sur staging.
 
-**Impact** : Google désindexe tout le site
+### Erreur #2 : Noindex ou robots.txt bloquant
 
-**Solution** : Vérifier le robots.txt et les meta robots sur chaque template
+**Ce qui se passe** : Le nouveau site est invisible pour Google. Souvent un oubli de la config staging.
 
-### Erreur #3 : Supprimer du contenu performant
+**Impact** : Désindexation complète du site.
 
-**Impact** : Perte des positions associées
+**Comment l'éviter** : Vérifier robots.txt et meta robots sur CHAQUE template avant la mise en ligne.
 
-**Solution** : Auditer le trafic par page avant de supprimer quoi que ce soit
+### Erreur #3 : Supprimer du contenu qui ranke
 
-### Erreur #4 : Changer de domaine sans migration
+**Ce qui se passe** : Une page qui génère du trafic est supprimée "parce qu'elle est vieille".
 
-**Impact** : Repartir de zéro en SEO
+**Impact** : Perte des positions et du trafic associés.
 
-**Solution** : Si changement de domaine, faire une migration complète avec Search Console
+**Comment l'éviter** : Auditer le trafic par page. Ne jamais supprimer sans vérifier les données.
 
-### Erreur #5 : Oublier les backlinks
+### Erreur #4 : Chaînes de redirections
 
-**Impact** : Les liens externes pointent vers des 404
+**Ce qui se passe** : Page A → Page B → Page C → Page D. Trop de sauts.
 
-**Solution** : Vérifier que toutes les pages avec backlinks ont une redirection
+**Impact** : Perte de "jus SEO" à chaque redirection. Temps de chargement dégradé.
+
+**Comment l'éviter** : Toujours rediriger directement vers la destination finale. Pas de chaînes.
+
+### Erreur #5 : Oublier les données structurées
+
+**Ce qui se passe** : Les rich snippets (FAQ, avis, recettes...) disparaissent des résultats Google.
+
+**Impact** : Baisse du CTR, perte de visibilité SERP.
+
+**Comment l'éviter** : Lister toutes les données structurées actuelles. Les migrer sur le nouveau site.
+
+---
+
+## Outils recommandés pour une migration SEO-safe
+
+### Avant la refonte
+
+| Outil | Usage | Prix |
+|-------|-------|------|
+| **Screaming Frog** | Crawl complet, export URLs | Gratuit (500 URLs) / £199/an |
+| **Google Search Console** | Pages indexées, performances | Gratuit |
+| **Google Analytics** | Trafic par page, conversions | Gratuit |
+| **Ahrefs / SEMrush** | Backlinks, positions | À partir de $99/mois |
+
+### Pendant la refonte
+
+| Outil | Usage |
+|-------|-------|
+| **Redirect Path** (extension Chrome) | Vérifier les redirections |
+| **PageSpeed Insights** | Tester les Core Web Vitals |
+| **Mobile-Friendly Test** | Vérifier la compatibilité mobile |
+| **Rich Results Test** | Valider les données structurées |
+
+### Après la refonte
+
+| Outil | Usage |
+|-------|-------|
+| **Google Search Console** | Surveiller erreurs et indexation |
+| **Screaming Frog** | Crawl post-lancement |
+| **Rank tracker** | Suivre les positions clés |
+
+---
+
+## Planning type d'une refonte SEO-safe
+
+| Phase | Durée indicative | Actions clés |
+|-------|------------------|--------------|
+| **Audit préalable** | 1-2 semaines | Crawl, export données, identification pages prioritaires |
+| **Plan de migration** | 1 semaine | Tableau redirections, plan technique |
+| **Développement** | Variable | Intégration SEO continue, tests staging |
+| **Recette SEO** | 3-5 jours | Vérification checklist complète |
+| **Mise en ligne** | 1 jour | Lancement + soumission sitemap |
+| **Surveillance** | 4-6 semaines | Monitoring quotidien puis hebdomadaire |
+
+---
 
 ## Ce qu'il faut retenir
 
 Une refonte réussie côté SEO repose sur :
 
-1. **Audit complet** avant de commencer
-2. **Tableau de redirections** exhaustif
+1. **Audit exhaustif** de l'existant avant de commencer
+2. **Tableau de redirections** complet et testé
 3. **Conservation** du contenu performant
 4. **Amélioration** des performances techniques
-5. **Surveillance** intensive post-lancement
-
----
-
-## Pour aller plus loin
-
-- [Checklist SEO : 45 points à vérifier pour votre refonte](/blog/checklist-seo-refonte-site) — La liste complète avant, pendant et après
-- [Combien coûte un site web en 2026 ?](/blog/cout-site-web-2026) — Budget pour votre refonte
-- [Comment créer un site visible sur Google](/blog/comment-creer-site-visible-google) — Les fondamentaux si vous repartez de zéro
+5. **Surveillance intensive** post-lancement
 
 ---
 
 ## Questions fréquentes
 
+### Combien de temps pour retrouver mon trafic après une refonte ?
+
+Avec une migration bien préparée, le trafic revient au niveau initial en 4 à 6 semaines. Une légère baisse temporaire (10-15%) est normale pendant que Google réévalue le site. Si la baisse dépasse 30% après 2 semaines, il y a probablement un problème technique à corriger d'urgence.
+
 ### Combien de temps dure une refonte SEO-safe ?
 
 Comptez 2 à 4 semaines pour l'audit préalable et la préparation, puis le temps de développement (variable selon la taille du site), et 4 à 6 semaines de surveillance post-lancement. Une refonte bien préparée prend plus de temps, mais évite des mois de récupération SEO.
 
+### Puis-je changer de nom de domaine pendant la refonte ?
+
+Oui, mais c'est une migration plus complexe. En plus des redirections classiques, il faut utiliser l'outil "Changement d'adresse" dans Google Search Console. Comptez 2-3 mois avant de retrouver vos positions. Je recommande de dissocier les deux : d'abord la refonte, puis le changement de domaine (ou l'inverse).
+
+### Faut-il garder exactement les mêmes URLs ?
+
+C'est l'idéal si vos URLs actuelles sont propres. Mais si elles sont mal structurées (paramètres, accents, trop longues), la refonte est l'occasion de les améliorer. L'important est d'avoir des redirections 301 parfaites de chaque ancienne URL vers la nouvelle.
+
 ### Faut-il un consultant SEO pour une refonte ?
 
-Pour un petit site vitrine (moins de 20 pages), cette checklist peut suffire si vous êtes rigoureux. Pour un site e-commerce ou un blog avec beaucoup de contenu, l'accompagnement d'un expert réduit drastiquement les risques.
+Pour un petit site vitrine (moins de 20 pages), cette checklist peut suffire si vous êtes rigoureux. Pour un site e-commerce ou un blog avec beaucoup de contenu, l'accompagnement d'un expert réduit drastiquement les risques. Le coût d'un consultant est bien inférieur à la perte de trafic d'une migration ratée.
 
-### Que faire si j'ai déjà perdu du trafic ?
+### Que faire si j'ai déjà perdu du trafic après ma refonte ?
 
-Agissez immédiatement : vérifiez les erreurs 404 dans Search Console, contrôlez robots.txt, testez les redirections. Chaque jour compte. Plus vous intervenez vite, plus la récupération sera rapide.
+Agissez vite : vérifiez les erreurs 404 dans Search Console, contrôlez que robots.txt n'est pas bloquant, testez toutes les redirections. Corrigez chaque problème détecté et demandez une réindexation. Plus vous intervenez rapidement, plus la récupération sera rapide.
+
+### Une refonte peut-elle améliorer mon SEO ?
+
+Absolument. Si votre ancien site était lent, mal structuré ou avec un contenu thin, une refonte bien menée peut améliorer vos positions. Les Core Web Vitals sont un facteur de ranking : un nouveau site rapide peut surpasser l'ancien. L'important est de ne rien perdre pendant la transition.
 
 ---
 
-**Vous planifiez une refonte ?** Je vous accompagne pour migrer sans perdre une position. Découvrez ma [prestation refonte de site web](/refonte-site-web) ou [contactez-moi](/contact) pour en discuter.
+## Pour aller plus loin
+
+- [Combien coûte un site web en 2026 ?](/blog/cout-site-web-2026) — Budget pour votre refonte
+- [Comment créer un site visible sur Google](/blog/comment-creer-site-visible-google) — Les fondamentaux si vous repartez de zéro
+
+---
+
+**Vous planifiez une refonte ?** Testez d'abord votre site actuel avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit). Puis découvrez [ma prestation refonte de site web](/refonte-site-web) ou [contactez-moi](/contact) pour un diagnostic gratuit.
 
 **Services par ville :**
-- [Consultant SEO Sophia Antipolis](/consultant-seo-sophia-antipolis) — Refontes tech & SaaS
-- [Consultant SEO Cannes](/consultant-seo-cannes) — Refontes luxe & prestige
+- [Consultant SEO Sophia Antipolis](/consultant-seo-sophia-antipolis) — Refontes tech et SaaS
+- [Consultant SEO Cannes](/consultant-seo-cannes) — Refontes luxe et prestige
 - [Consultant SEO Nice](/consultant-seo-nice) — Refontes tous secteurs
 
 ---
 
-**Tags** : #refonte-site #migration-seo #redirections-301 #perte-trafic #seo-technique
+**Tags** : #refonte-site #checklist-seo #migration-seo #redirections-301 #core-web-vitals #seo-technique

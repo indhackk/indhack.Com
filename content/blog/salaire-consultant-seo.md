@@ -9,7 +9,7 @@ author: "Indiana Aflalo"
 keywords: ["salaire consultant SEO", "rémunération SEO", "combien gagne consultant SEO", "TJM consultant SEO", "salaire référenceur", "salaire SEO manager"]
 ---
 
-Combien gagne réellement un **[expert en visibilité organique](/consultant-seo)** en France ? C'est LA question que se posent tous ceux qui envisagent cette **carrière SEO**. Voici les données actualisées pour 2026, basées sur les études de rémunération et mon expérience du marché.
+Combien gagne réellement un **[expert en visibilité organique](/consultant-seo)** en France ? C'est LA question que se posent tous ceux qui envisagent cette **carrière SEO**. Si vous hésitez encore à vous lancer, consultez d'abord le [guide complet pour devenir consultant SEO](/blog/devenir-consultant-seo) — vous y trouverez le parcours détaillé avant de parler argent. Voici les données actualisées pour 2026, basées sur les études de rémunération et mon expérience du marché.
 
 ## Grille des salaires SEO en 2026
 
@@ -190,7 +190,7 @@ Le **référencement naturel** est un métier bien rémunéré comparé à d'aut
 - **Prouvez vos résultats** avec des études de cas chiffrées
 - **N'ayez pas peur de changer** d'employeur tous les 2-3 ans
 
-Le statut d'[indépendant spécialisé en référencement](/consultant-seo) offre le meilleur potentiel de revenus, mais au prix de la sécurité. À vous de trouver l'équilibre qui vous convient.
+Le statut d'[indépendant spécialisé en référencement](/consultant-seo) offre le meilleur potentiel de revenus, mais au prix de la sécurité. À vous de trouver l'équilibre qui vous convient. Prêt à franchir le pas ? Découvrez [toutes les étapes pour devenir consultant SEO](/blog/devenir-consultant-seo).
 
 ## Ce qu'il faut retenir
 

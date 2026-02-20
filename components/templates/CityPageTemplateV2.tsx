@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
 import { CityData, FRENCH_CITIES } from "@/lib/cities-data";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
+import { MarketInsightBlock } from "@/components/seo/MarketInsightBlock";
 
 interface CityPageProps {
     cityData: CityData;
@@ -361,6 +362,13 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                     </div>
                 </div>
             </section>
+
+            {/* Bloc différenciant selon le type de marché (anti-Doorway Pages) */}
+            <MarketInsightBlock
+                marketType={cityData.context.marketType}
+                cityName={city}
+                targetClients={cityData.context.targetClients}
+            />
 
             {/* Outil SEO Interactif */}
             <SEOScoreChecker />

@@ -53,6 +53,11 @@ const nextConfig = {
                 destination: '/blog/geo-comment-apparaitre-chatgpt-2026',
                 permanent: true, // 301 - fusion articles GEO (cannibalisation)
             },
+            {
+                source: '/blog/checklist-seo-refonte-site',
+                destination: '/blog/refonte-site-web-sans-perdre-seo',
+                permanent: true, // 301 - checklist fusionnée dans le guide ultime refonte
+            },
             // Anciennes URLs WordPress → Accueil
             {
                 source: '/index.html',

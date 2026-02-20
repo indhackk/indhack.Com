@@ -10,6 +10,9 @@ import { Search, ArrowRight, MapPin, BookOpen } from "lucide-react";
 const ServicesSection = dynamic(() => import("@/components/ServicesSection").then(mod => ({ default: mod.ServicesSection })), {
     loading: () => <div className="py-20 bg-white" />,
 });
+const GEOSection = dynamic(() => import("@/components/sections/GEOSection").then(mod => ({ default: mod.GEOSection })), {
+    loading: () => <div className="py-16 bg-ink" />,
+});
 const SEOScoreChecker = dynamic(() => import("@/components/SEOScoreChecker").then(mod => ({ default: mod.SEOScoreChecker })), {
     loading: () => <div className="py-16 bg-ink" />,
 });
@@ -78,6 +81,7 @@ export default function Home() {
                 <Hero />
                 <TrustSignalsStatic />
                 <ServicesSection />
+                <GEOSection />
                 <SEOScoreChecker />
                 <CityCarousel
                     title="J'interviens partout en France"
