@@ -24,6 +24,8 @@ Le **SEO n'est pas mort**, contrairement à ce qu'on lit parfois. Avec l'arrivé
 
 ## Quel est le profil type du consultant SEO ?
 
+Si vous ne maîtrisez pas encore tout à fait les bases, je vous invite d'abord à lire notre guide sur [ce qu'est le SEO en détail](/blog/definition-seo-guide-complet). Le consultant SEO est un profil hybride, à la croisée des chemins entre technicien, rédacteur et stratège.
+
 ### Compétences techniques indispensables
 
 Pour réussir dans ce métier, vous devez maîtriser plusieurs domaines :

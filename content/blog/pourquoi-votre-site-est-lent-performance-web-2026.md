@@ -89,7 +89,7 @@ Formulaire + SEO + cache + sécurité + slider + analytics + cookies = 20-30 ext
 À chaque visite sur un site WordPress classique, le serveur reconstruit la page en interrogeant une base de données. C'est comme si un restaurant recuisait chaque plat de zéro à chaque commande.
 
 ### Les coûts cachés
-Hébergement WordPress correct : 15-50€/mois. Plugins premium : 50-200€/an. Maintenance sécurité : temps ou argent. Sur 3 ans, ça s'additionne. Pour en savoir plus, consultez mon article sur [le coût d'un site web en 2026](/blog/cout-site-web-2026).
+Hébergement WordPress correct : 15-50€/mois. Plugins premium : 50-200€/an. Maintenance sécurité : temps ou argent. Sur 3 ans, ça s'additionne. Pour en savoir plus, consultez mon article sur [le coût d'un site web en 2026](/blog/prix-creation-site-internet-2026).
 
 > **Statistique clé** : WordPress est le CMS le moins performant parmi les grandes plateformes : **43% de taux de passage Core Web Vitals**, contre 75% pour Shopify et 83% pour Duda (source : Search Engine Journal, données CrUX 2025).
 
@@ -171,7 +171,7 @@ Entre 2 et 4 semaines pour un site vitrine, 4 à 8 semaines pour un e-commerce o
 
 ### Pour aller plus loin
 
-- [Combien coûte un site web en 2026 ?](/blog/cout-site-web-2026)
+- [Combien coûte un site web en 2026 ?](/blog/prix-creation-site-internet-2026)
 - [Comment créer un site visible sur Google](/blog/comment-creer-site-visible-google)
 - [GEO : comment apparaître dans ChatGPT en 2026](/blog/geo-comment-apparaitre-chatgpt-2026)
 - [Les erreurs d'audit SEO qui coûtent cher](/blog/audit-seo-erreurs-qui-coutent-cher)

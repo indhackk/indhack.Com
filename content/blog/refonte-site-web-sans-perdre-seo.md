@@ -412,7 +412,7 @@ Absolument. Si votre ancien site était lent, mal structuré ou avec un contenu 
 
 ## Pour aller plus loin
 
-- [Combien coûte un site web en 2026 ?](/blog/cout-site-web-2026) — Budget pour votre refonte
+- [Combien coûte un site web en 2026 ?](/blog/prix-creation-site-internet-2026) — Budget pour votre refonte
 - [Comment créer un site visible sur Google](/blog/comment-creer-site-visible-google) — Les fondamentaux si vous repartez de zéro
 
 ---

@@ -441,10 +441,10 @@ export default function CreationBoutiqueClient() {
                             Ressources pour votre <span className="text-sauge">e-commerce</span>
                         </h2>
                         <div className="grid md:grid-cols-2 gap-6">
-                            <Link href="/blog/cout-site-web-2026" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                            <Link href="/blog/prix-creation-site-internet-2026" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    Combien coûte un site e-commerce en 2026 ?
+                                    Prix création site internet 2026
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
                                     Guide complet des tarifs : WooCommerce, Shopify, sur-mesure.

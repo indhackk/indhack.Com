@@ -32,6 +32,7 @@ const nextConfig = {
     // ══════════════════════════════════════════════════════════════
     async redirects() {
         return [
+      { source: '/blog/cout-site-web-2026', destination: '/blog/prix-creation-site-internet-2026', permanent: true },
             // ══════════════════════════════════════════════════════════════
             // P3: Kill audit-technique cannibalisation
             // ══════════════════════════════════════════════════════════════

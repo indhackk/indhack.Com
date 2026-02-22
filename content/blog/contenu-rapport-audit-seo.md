@@ -263,7 +263,7 @@ Recevoir un rapport de 50 pages peut être intimidant. Voici comment l'exploiter
 
 **Étape 5 : Itérez** — Le SEO n'est jamais "terminé". Google fait 4000+ mises à jour par an. Un audit annuel permet de rester compétitif.
 
-👉 Avant une refonte de site, consultez notre [checklist SEO de 45 points](/blog/checklist-seo-refonte-site) pour ne rien oublier.
+👉 Avant une refonte de site, consultez notre [checklist SEO de 45 points](/blog/refonte-site-web-sans-perdre-seo) pour ne rien oublier.
 
 ---
 
@@ -299,7 +299,7 @@ Les corrections techniques (erreurs d'indexation, vitesse) montrent souvent des 
 
 - [Pourquoi l'audit SEO est le point de départ de votre croissance](/blog/importance-audit-seo) — Comprendre l'importance d'un diagnostic complet
 - [Les erreurs d'audit SEO qui coûtent cher](/blog/audit-seo-erreurs-qui-coutent-cher) — Les 9 erreurs techniques les plus fréquentes
-- [Checklist SEO : refonte de site](/blog/checklist-seo-refonte-site) — 45 points à vérifier avant migration
+- [Checklist SEO : refonte de site](/blog/refonte-site-web-sans-perdre-seo) — 45 points à vérifier avant migration
 
 ---
 

@@ -16,7 +16,7 @@ En tant que [consultante SEO](/consultant-seo), je vous explique les **vraies di
 
 ## SEO et SEA : définitions
 
-Avant de comparer, clarifions les termes :
+Avant de comparer, clarifions les termes. Vous pouvez également lire notre guide expliquant [ce qu'est le SEO en détail](/blog/definition-seo-guide-complet) avant de plonger dans ce comparatif :
 
 | | SEO | SEA |
 |---|-----|-----|

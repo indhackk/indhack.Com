@@ -76,7 +76,7 @@ const SEO_FAQ = [
 const SEO_EDUCATION = [
     {
         title: "Comprendre le référencement naturel",
-        content: "Le référencement naturel (SEO) consiste à optimiser votre site web pour qu'il apparaisse en **première page de Google** sur les mots-clés recherchés par vos clients potentiels. Contrairement à la publicité, vous ne payez pas pour chaque clic : une fois bien positionné, votre site génère du trafic gratuit en continu."
+        content: "Le référencement naturel (SEO) consiste à optimiser votre site web pour qu'il apparaisse en **première page de Google** sur les mots-clés recherchés par vos clients potentiels. Pour les bases, consultez notre guide sur [ce qu'est le SEO en détail](/blog/definition-seo-guide-complet). Contrairement à la publicité, vous ne payez pas pour chaque clic : votre site génère du trafic gratuit en continu."
     },
     {
         title: "Les trois piliers du SEO",
@@ -331,7 +331,7 @@ export default function ReferencementClient() {
                                     Comprendre pourquoi tout projet SEO commence par un audit.
                                 </p>
                             </Link>
-                            <Link href="/blog/checklist-seo-refonte-site" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                            <Link href="/blog/refonte-site-web-sans-perdre-seo" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Checklist</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
                                     45 points SEO pour votre refonte

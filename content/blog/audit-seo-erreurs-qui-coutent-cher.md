@@ -133,7 +133,7 @@ Redirect 301 /ancienne-page /nouvelle-page
 { source: '/ancienne-page', destination: '/nouvelle-page', permanent: true }
 ```
 
-Pour éviter ce désastre lors d'une migration, suivez ma [checklist SEO refonte de site](/blog/checklist-seo-refonte-site).
+Pour éviter ce désastre lors d'une migration, suivez ma [checklist SEO refonte de site](/blog/refonte-site-web-sans-perdre-seo).
 
 ---
 
@@ -238,7 +238,7 @@ Les corrections techniques montrent des effets en 2 à 4 semaines, le temps que 
 
 ### Comment éviter ces erreurs lors d'une refonte de site ?
 
-Suivez une [checklist SEO de refonte](/blog/checklist-seo-refonte-site) complète. Les points critiques : mapping des redirections 301, conservation des URLs performantes, validation des canonicals. C'est mon domaine : je [refonds des sites sans perte de SEO](/refonte-site-web) chaque mois.
+Suivez une [checklist SEO de refonte](/blog/refonte-site-web-sans-perdre-seo) complète. Les points critiques : mapping des redirections 301, conservation des URLs performantes, validation des canonicals. C'est mon domaine : je [refonds des sites sans perte de SEO](/refonte-site-web) chaque mois.
 
 ### Mon site WordPress peut-il avoir ces erreurs ?
 

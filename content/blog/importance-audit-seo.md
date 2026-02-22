@@ -119,7 +119,7 @@ Un audit SEO vous permet de :
 
 - [Les erreurs d'audit SEO qui coûtent cher](/blog/audit-seo-erreurs-qui-coutent-cher) — Les 9 erreurs techniques les plus fréquentes et comment les corriger
 - [Que contient un rapport d'audit SEO professionnel ?](/blog/contenu-rapport-audit-seo) — Tout ce que vous devez attendre d'un audit complet
-- [Checklist SEO : refonte de site](/blog/checklist-seo-refonte-site) — 45 points à vérifier avant migration
+- [Checklist SEO : refonte de site](/blog/refonte-site-web-sans-perdre-seo) — 45 points à vérifier avant migration
 - [SEO vs SEA : que choisir ?](/blog/seo-vs-sea-que-choisir) — Comparatif complet pour votre stratégie de visibilité
 
 ---

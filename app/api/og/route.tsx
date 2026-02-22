@@ -71,7 +71,7 @@ export async function GET(request: NextRequest) {
                             marginBottom: '40px',
                         }}
                     >
-                        INDHACK
+                        IndHack
                     </div>
 
                     {/* Title */}

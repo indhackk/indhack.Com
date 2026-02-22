@@ -114,7 +114,7 @@ export function RobotsGenerator() {
     };
 
     const robotsTxt = useMemo(() => {
-        let content = "# robots.txt généré par INDHACK.com\n";
+        let content = "# robots.txt généré par IndHack.com\n";
         content += "# https://indhack.com/outils/generateur-robots-txt\n\n";
 
         const blocked = CRAWLERS.filter(c => !crawlerSettings[c.id]);

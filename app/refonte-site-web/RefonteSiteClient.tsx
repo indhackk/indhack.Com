@@ -218,7 +218,7 @@ export default function RefonteSiteClient() {
                                     Guide complet pour éviter les pièges et conserver vos positions.
                                 </p>
                             </Link>
-                            <Link href="/blog/checklist-seo-refonte-site" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                            <Link href="/blog/refonte-site-web-sans-perdre-seo" className="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
                                     Checklist SEO : 45 points pour votre refonte

@@ -524,14 +524,14 @@ export function SchemaGenerator() {
                                 <FormField label="Date de modification" value={articleModified} onChange={setArticleModified} type="date" />
                             </div>
                             <FormField label="URL de l'image" value={articleImage} onChange={setArticleImage} placeholder="https://example.com/image.jpg" type="url" />
-                            <FormField label="Nom de l'éditeur" value={articlePublisher} onChange={setArticlePublisher} placeholder="INDHACK" />
+                            <FormField label="Nom de l'éditeur" value={articlePublisher} onChange={setArticlePublisher} placeholder="IndHack" />
                             <FormField label="Logo de l'éditeur (URL)" value={articlePublisherLogo} onChange={setArticlePublisherLogo} placeholder="https://example.com/logo.png" type="url" />
                         </>
                     )}
 
                     {activeType === "Organization" && (
                         <>
-                            <FormField label="Nom de l'organisation *" value={orgName} onChange={setOrgName} placeholder="INDHACK" />
+                            <FormField label="Nom de l'organisation *" value={orgName} onChange={setOrgName} placeholder="IndHack" />
                             <FormField label="URL du site" value={orgUrl} onChange={setOrgUrl} placeholder="https://indhack.com" type="url" />
                             <FormField label="URL du logo" value={orgLogo} onChange={setOrgLogo} placeholder="https://indhack.com/logo.png" type="url" />
                             <div className="space-y-2">
@@ -567,7 +567,7 @@ export function SchemaGenerator() {
                         <>
                             <FormField label="Nom complet *" value={personName} onChange={setPersonName} placeholder="Indiana Aflalo" />
                             <FormField label="Titre / Fonction" value={personJobTitle} onChange={setPersonJobTitle} placeholder="Consultante SEO" />
-                            <FormField label="Employeur" value={personWorksFor} onChange={setPersonWorksFor} placeholder="INDHACK" />
+                            <FormField label="Employeur" value={personWorksFor} onChange={setPersonWorksFor} placeholder="IndHack" />
                             <FormField label="Site web personnel" value={personUrl} onChange={setPersonUrl} placeholder="https://indhack.com" type="url" />
                             <FormField label="Photo (URL)" value={personImage} onChange={setPersonImage} placeholder="https://..." type="url" />
                         </>

@@ -248,10 +248,10 @@ export default function CreationSiteClient() {
                             Approfondir le sujet
                         </h2>
                         <div className="grid md:grid-cols-3 gap-6">
-                            <Link href="/blog/cout-site-web-2026" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                            <Link href="/blog/prix-creation-site-internet-2026" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    Combien coûte un site web en 2026 ?
+                                    Prix création site internet 2026
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
                                     Guide complet des tarifs : site vitrine, e-commerce, sur-mesure.
@@ -275,13 +275,13 @@ export default function CreationSiteClient() {
                                     Pourquoi la vitesse impacte vos conversions et comment y remédier.
                                 </p>
                             </Link>
-                            <Link href="/blog/checklist-seo-refonte-site" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
-                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Checklist</span>
+                            <Link href="/blog/refonte-site-web-sans-perdre-seo" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Guide</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    45 points SEO à vérifier
+                                    Refonte sans perdre son SEO
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
-                                    La checklist complète avant de créer ou refondre votre site.
+                                    Le guide complet pour refondre votre site sans perdre vos positions.
                                 </p>
                             </Link>
                         </div>

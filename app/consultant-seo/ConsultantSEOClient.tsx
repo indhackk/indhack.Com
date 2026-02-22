@@ -204,7 +204,7 @@ export default function ConsultantSEOClient() {
                         </h2>
                         <div className="prose prose-lg max-w-none text-soft">
                             <p className="text-xl leading-relaxed mb-6">
-                                Un <strong>consultant SEO</strong> (Search Engine Optimization) est un expert en <Link href="/referencement-naturel" className="text-sauge hover:underline">référencement naturel</Link> qui accompagne les entreprises pour améliorer leur positionnement sur les moteurs de recherche.
+                                Un <strong>consultant SEO</strong> (Search Engine Optimization) est un expert en <Link href="/referencement-naturel" className="text-sauge hover:underline">référencement naturel</Link> qui occupe une fonction clé pour améliorer votre positionnement. Découvrez <Link href="/blog/definition-seo-guide-complet" className="text-sauge hover:underline">ce qu'est le SEO en détail</Link>.
                             </p>
                             <p className="leading-relaxed mb-6">
                                 Contrairement à la publicité payante (SEA), le référencement naturel vise à obtenir des positions <strong>durables et gratuites</strong> dans les résultats de Google. Le consultant SEO analyse votre site, identifie les opportunités et met en œuvre les optimisations nécessaires.

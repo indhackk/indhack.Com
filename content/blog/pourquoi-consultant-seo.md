@@ -14,6 +14,8 @@ Vous avez lu quelques articles sur le SEO. Vous avez installé Yoast. Vous avez 
 
 ## Qu'est-ce qu'un consultant SEO exactement ?
 
+Mais d'abord, [qu'est-ce que le SEO ?](/blog/definition-seo-guide-complet) 
+
 Un **consultant SEO** est un expert en **référencement naturel** qui aide les entreprises à améliorer leur visibilité sur les moteurs de recherche. Contrairement à une agence classique, le consultant travaille en direct avec vous, comme un partenaire intégré à votre équipe.
 
 **Son rôle :**
