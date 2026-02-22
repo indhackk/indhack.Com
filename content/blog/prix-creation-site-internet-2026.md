@@ -82,42 +82,51 @@ La technologie (la "Stack" en jargon technique) impacte énormément le **créat
 
 ## Freelance ou agence web : à qui confier votre site ?
 
-L'autre immense axe déterminant concernant [quel budget prévoir ?](/blog/prix-creation-site-internet-2026) : l'auteur du projet.
+Le choix du prestataire impacte directement votre **budget site internet**. Voici les différences concrètes.
 
-**L'Agence web typique :**  
-- L'agence propose des process extrêmement sécurisants et dispose de grandes équipes internes spécialisées par pôles (développeur React, infographiste Photoshop, chargé(e) SEO, directeur de Pôle, commercial attitré).  
-- En payant ce **devis site web**, vous amortissez le salaire d'au moins 6 prestataires travaillant simultanément, les locaux flambant neufs et le matériel dernier cri. Parfait si le site, l'enjeu commercial s'inscrit en dizaines de millions de chiffres d'affaires et réclament des normes corporatives gigantesques en 48 heures.
-- Fourchette habituelle sur un vrai projet Headless ou de PME aboutie : Au-delà des 25.000€ euros minimum.
+**L'agence web :**
+- Équipe pluridisciplinaire : développeur, designer, chef de projet, référenceur
+- Process structurés, adaptés aux gros projets
+- Tarifs plus élevés : vous payez les locaux, les charges, la coordination
+- Fourchette : 8 000€ à 50 000€+ selon la complexité
 
-**Le (la) Freelance / Indépendant(e) :**
-- Moins coûteux(se) du fait de moindres frais d'exploitation généraux. Agilité absolue, réactivité en 24h et une immense flexibilité, le (la) spécialiste freelance cumulent d'excellentes compétences ciblées pour la TPE et la PME de la région.
-- Tarifs de **création site web** de 30% à parfois 70% moins chers. Le problème est que si le freelance maîtrise un domaine, l'indépendance de cette structure nécessite de solides qualifications tierces pour en tirer la productivité totale (souvent en mixant un excellent Développeur JS + un Spécialiste SEO de précision pour un projet redoutable techniquement). C'est pourquoi en tant que [consultante SEO freelance](/consultant-seo) avec un solide niveau en React/Next.js (Ingénieur Full-Stack), mon profil garantit une centralisation idéale avec zéro intermédiaire.
+**Le freelance :**
+- Contact direct, pas d'intermédiaire
+- Réactivité (réponse en 24h vs 72h en agence)
+- Tarifs 30 à 50% inférieurs à une agence pour un résultat équivalent
+- Limite : un freelance ne peut pas tout faire seul sur un très gros projet
+
+Mon conseil : pour un site vitrine ou un e-commerce jusqu'à 200 produits, un freelance expérimenté suffit largement. Au-delà, une équipe devient nécessaire. En tant que [consultante SEO freelance](/consultant-seo) avec une double compétence développement (React/Next.js), je peux centraliser la création et le référencement sans intermédiaire.
 
 ## Comment réduire le coût de votre site sans sacrifier la qualité ?
 
-En conclusion, réduire la facture finale de votre devis (du Freelance ou de Grosse Agence) et sécuriser son propre budget internet passe par l'implémentation de processus draconiens d'économie. Plus votre structure et votre vision en lancement sont floues sur la direction exigée, plus l'entreprise de développement provisionnera (et facturera) des "H-H" (heures-hommes). Pour alléger cela, quelques pistes simples :
+Plus votre brief est flou, plus le prestataire provisionne du temps "au cas où". Un cahier des charges précis peut vous faire économiser 20 à 30% sur le devis final.
 
-- **Évitez le "Full Sur-Mesure intégral" si la plus-value s'y compte en clopinettes.** Adossez-vous à d'exceptionnels templates UI payants très hauts de gamme, puis personnalisez fortement vos couleurs et votre base pour économiser ces trois précieuses semaines où l'UI Designer travaillait sur des zones vierges sans aucune fonctionnalité avérée SEO initialement.
-- **Réalisez d'abord les fondations MVP (Produit Minimum Viable).** Mieux vaut allumer de suite avec succès un mini-site Next.js de 4 pages à 6.000€ qui cartonne la conversion, qu'une immense usine à clics de 120 pages sur du très bas de gamme (WordPress gratuit bricolé pendant 2 ans). L'extension du second bloc viendra des fruits d'un bon investissement du premier lancement qualitatif avec acquisition naturelle au poil.
-- **L'Architecture de contenu d'abord : SEO On Day-One.** N'attendez plus, ne refontez plus sans un filet solide, relisez les bonnes conduites via la [checklist de refonte SEO](/blog/refonte-site-web-sans-perdre-seo).
+**3 leviers concrets pour réduire la facture :**
 
-Je n'applique plus de tarifs dissimulés sur la "couche SEO finale ajoutée magiquement en dernière marche". Chaque audit technique démontre les pires résultats concernant ces cas d'écoles catastrophiques. Contactez-moi pour parler très sincèrement de vos ambitions si vous osez un puissant [audit SEO gratuit](/outils/audit-seo-gratuit) et réalisons le point exact de vos fondations et des investissements (budget, retour attendus) à appliquer ensemble pour cette année.
+- **Partez d'un template premium** (50-150€) au lieu d'un design 100% sur-mesure. Vous économisez 2 à 3 semaines de design tout en gardant un rendu professionnel. Le template se personnalise ensuite à vos couleurs.
+
+- **Lancez un MVP (Minimum Viable Product).** Un site de 5 pages bien fait à 4 000€ qui convertit vaut mieux qu'un mastodonte de 50 pages à 15 000€ qui ne génère rien. Vous itérerez ensuite avec le chiffre d'affaires généré.
+
+- **Intégrez le SEO dès le départ.** Ajouter le référencement après coup coûte souvent plus cher que de bien faire les choses au lancement. Consultez la [checklist de refonte SEO](/blog/refonte-site-web-sans-perdre-seo) pour ne rien oublier.
+
+Besoin d'un état des lieux avant de vous lancer ? Testez votre site actuel avec notre [audit SEO gratuit](/outils/audit-seo-gratuit). C'est le meilleur point de départ pour définir un budget réaliste.
 
 ---
 
-## FAQ : Questions fréquentes autour de la conception
+## FAQ : Questions fréquentes sur le prix d'un site internet
 
 **Peut-on créer un site internet gratuitement ?**
-En pratique, un grand OUI, Google Sites ou des solutions open source vous permettent de lancer une page vierge pour des frais quasi nuls (achat du nom de domaine obligatoire vers 15 €). Par contre, attirer un trafic humain au design très moyen engendre systématiquement du temps précieux sacrifié pour n'obtenir aucune position sur le grand Index des algorithmes en 2026. L'outil seul n'aboutit jamais sans le pilote qualifié en cabine de stratégie.
+Techniquement oui, avec Wix gratuit ou Google Sites. Mais ces solutions ont des limites : publicités imposées, URL peu professionnelle (votresite.wixsite.com), performances médiocres. Pour un usage professionnel, comptez au minimum 15€/an de nom de domaine + 5-10€/mois d'hébergement. Le vrai coût d'un site "gratuit", c'est le temps passé et les clients perdus faute de visibilité.
 
 **Combien coûte la maintenance d'un site web par an ?**
-Entre 500 et +10.000 euros HT selon l'infogérance des serveurs applicatifs, les correctifs WordPress constants face aux dizaines de failles de sécurité, ainsi que la régie forfaitisée au mois. Un site Next.js statique généré va coûter quasi-rien annuellement puisqu'il ne contient plus de bases d'accès ouvertes aux pires hackers. Il faut budgéter intelligemment les failles des différentes technologies.
+Entre 200€ et 2 000€/an selon la technologie. Un site WordPress demande des mises à jour régulières (sécurité, plugins) : comptez 500-1 500€/an si vous déléguez. Un site Next.js statique nécessite moins de maintenance : 200-500€/an suffisent généralement. À cela s'ajoute l'hébergement : 60-300€/an selon vos besoins.
 
 **Faut-il un budget SEO en plus du budget de création ?**
-Absolument. Créer le récipient de qualité est la tâche une (le budget conception Site). La tâche "SEO Récurrent" consiste ensuite, mois après mois, à remplir le récipient "Site Internet" à la force du poignet de qualité au lieu de brûler tout dans AdWords. Prévoyez de budgéter les deux piliers séparément mais dès leur conception par un maître d'œuvre.
+Oui. Le budget création couvre le "contenant" (le site lui-même). Le budget SEO couvre le "contenu" et la visibilité (rédaction optimisée, netlinking, suivi des positions). Les deux sont complémentaires. Un site sans SEO, c'est une boutique sans enseigne : personne ne vous trouve.
 
 **Un site à 500€ peut-il être bien référencé ?**
-Oui, c'est concevable techniquement mais cela relève du miracle absolu ou relègue ces cas aux zones sans aucune vraie compétition (un artisan dans une zone géographique désolée). Dès que de sérieux compétiteurs nationaux à l'expertise avérée débloquent des ressources de très haut niveau, un site à très petit budget sans UX propre de navigation plafonnera inexorablement sur la Page de résultat numéro 4 (soit aucune part de marché viable).
+Sur des requêtes très locales et peu concurrentielles, oui. Un plombier dans une petite ville peut se positionner avec un site basique. Mais dès que la concurrence existe (plusieurs acteurs investissent en SEO), un site low-cost ne suffira pas. La qualité technique et la stratégie de contenu font la différence.
 
 **Combien de temps prend la création d'un site internet ?**
-Pour déployer vos ambitions les plus agressives, le budget de création et un process aguerri demandent aux minimums des fourchettes allant de 2 à 4 semaines de travail complet en respectant très scrupuleusement les 3 piliers d'un référencement pour de vraies TPE locales, allant vers la dizaine de mois sur du refonte e-commerce de plus grandes envergures à architecture dantesque.
+Site vitrine simple : 2-4 semaines. Site vitrine avec blog et optimisation SEO : 4-6 semaines. E-commerce jusqu'à 100 produits : 6-10 semaines. E-commerce complexe avec ERP : 3-6 mois. Ces délais incluent les allers-retours de validation. Plus vous êtes réactif sur les retours, plus le projet avance vite.

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2A3830"/>
+      <stop offset="100%" style="stop-color:#1a2420"/>
+    </linearGradient>
+    <linearGradient id="pillar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#638576"/>
+      <stop offset="100%" style="stop-color:#4a6b5c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1100" cy="100" r="200" fill="#638576" opacity="0.1"/>
+  <circle cx="100" cy="530" r="150" fill="#638576" opacity="0.08"/>
+
+  <!-- Title -->
+  <text x="600" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#638576" letter-spacing="0.1em">LES 3 PILIERS DU SEO</text>
+
+  <!-- Three pillars -->
+  <!-- Pillar 1: Technique -->
+  <rect x="100" y="180" width="280" height="350" rx="20" fill="url(#pillar)" opacity="0.9"/>
+  <text x="240" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="white">TECHNIQUE</text>
+  <line x1="160" y1="260" x2="320" y2="260" stroke="white" stroke-width="2" opacity="0.3"/>
+  <text x="240" y="300" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Vitesse</text>
+  <text x="240" y="330" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Core Web Vitals</text>
+  <text x="240" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Mobile-first</text>
+  <text x="240" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Crawlabilité</text>
+  <text x="240" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Indexation</text>
+  <text x="240" y="450" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">HTTPS</text>
+  <!-- Icon -->
+  <circle cx="240" cy="500" r="25" fill="white" opacity="0.2"/>
+  <text x="240" y="508" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="white">⚙️</text>
+
+  <!-- Pillar 2: Contenu -->
+  <rect x="460" y="140" width="280" height="390" rx="20" fill="url(#pillar)"/>
+  <text x="600" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="white">CONTENU</text>
+  <line x1="520" y1="220" x2="680" y2="220" stroke="white" stroke-width="2" opacity="0.3"/>
+  <text x="600" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Mots-clés</text>
+  <text x="600" y="290" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Intention de recherche</text>
+  <text x="600" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">E-E-A-T</text>
+  <text x="600" y="350" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Qualité rédactionnelle</text>
+  <text x="600" y="380" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Structure Hn</text>
+  <text x="600" y="410" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Maillage interne</text>
+  <text x="600" y="440" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Fraîcheur</text>
+  <!-- Icon -->
+  <circle cx="600" cy="490" r="25" fill="white" opacity="0.2"/>
+  <text x="600" y="498" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="white">📝</text>
+
+  <!-- Pillar 3: Autorité -->
+  <rect x="820" y="180" width="280" height="350" rx="20" fill="url(#pillar)" opacity="0.9"/>
+  <text x="960" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="white">AUTORITÉ</text>
+  <line x1="880" y1="260" x2="1040" y2="260" stroke="white" stroke-width="2" opacity="0.3"/>
+  <text x="960" y="300" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Backlinks</text>
+  <text x="960" y="330" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Netlinking</text>
+  <text x="960" y="360" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Mentions</text>
+  <text x="960" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Trust Flow</text>
+  <text x="960" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Domain Authority</text>
+  <text x="960" y="450" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="white" opacity="0.9">Signaux sociaux</text>
+  <!-- Icon -->
+  <circle cx="960" cy="500" r="25" fill="white" opacity="0.2"/>
+  <text x="960" y="508" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="white">🔗</text>
+
+  <!-- Footer -->
+  <rect x="0" y="580" width="1200" height="50" fill="#638576" opacity="0.3"/>
+  <circle cx="80" cy="605" r="8" fill="#638576"/>
+  <text x="100" y="612" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="#638576">indhack.com</text>
+  <text x="1100" y="612" text-anchor="end" font-family="system-ui, sans-serif" font-size="14" fill="white" opacity="0.7">Guide SEO 2026</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2A3830"/>
+      <stop offset="100%" style="stop-color:#1a2420"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="1050" cy="150" r="180" fill="#638576" opacity="0.1"/>
+  <circle cx="150" cy="500" r="120" fill="#638576" opacity="0.08"/>
+
+  <!-- Title -->
+  <text x="600" y="70" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#638576" letter-spacing="0.1em">PRIX CRÉATION SITE INTERNET 2026</text>
+
+  <!-- Price bars container -->
+  <rect x="80" y="100" width="1040" height="420" rx="15" fill="white" opacity="0.05"/>
+
+  <!-- Bar 1: Site basique -->
+  <rect x="120" y="140" width="180" height="30" rx="5" fill="#638576" opacity="0.3"/>
+  <text x="130" y="162" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">Site basique (Wix)</text>
+  <rect x="120" y="175" width="120" height="40" rx="8" fill="#638576" opacity="0.6"/>
+  <text x="180" y="202" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="white">500€ - 2K€</text>
+
+  <!-- Bar 2: Site vitrine pro -->
+  <rect x="120" y="240" width="180" height="30" rx="5" fill="#638576" opacity="0.3"/>
+  <text x="130" y="262" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">Site vitrine pro</text>
+  <rect x="120" y="275" width="200" height="40" rx="8" fill="#638576" opacity="0.7"/>
+  <text x="220" y="302" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="white">2K€ - 8K€</text>
+
+  <!-- Bar 3: Site haute perf -->
+  <rect x="120" y="340" width="220" height="30" rx="5" fill="#638576" opacity="0.3"/>
+  <text x="130" y="362" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">Site haute performance</text>
+  <rect x="120" y="375" width="300" height="40" rx="8" fill="#638576" opacity="0.85"/>
+  <text x="270" y="402" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="white">5K€ - 15K€</text>
+
+  <!-- Bar 4: E-commerce -->
+  <rect x="120" y="440" width="180" height="30" rx="5" fill="#638576" opacity="0.3"/>
+  <text x="130" y="462" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">E-commerce</text>
+  <rect x="120" y="475" width="450" height="40" rx="8" fill="#638576"/>
+  <text x="345" y="502" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="white">3K€ - 50K€+</text>
+
+  <!-- Right side: Comparison table -->
+  <rect x="620" y="140" width="480" height="370" rx="15" fill="white" opacity="0.08"/>
+
+  <!-- Table header -->
+  <text x="860" y="175" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#638576">CE QUI FAIT LE PRIX</text>
+  <line x1="660" y1="190" x2="1060" y2="190" stroke="#638576" stroke-width="1" opacity="0.5"/>
+
+  <!-- Table rows -->
+  <text x="680" y="230" font-family="system-ui, sans-serif" font-size="15" fill="white" opacity="0.8">✓ Design sur-mesure vs template</text>
+  <text x="680" y="265" font-family="system-ui, sans-serif" font-size="15" fill="white" opacity="0.8">✓ Technologie (Wix vs Next.js)</text>
+  <text x="680" y="300" font-family="system-ui, sans-serif" font-size="15" fill="white" opacity="0.8">✓ SEO intégré ou non</text>
+  <text x="680" y="335" font-family="system-ui, sans-serif" font-size="15" fill="white" opacity="0.8">✓ Nombre de pages</text>
+  <text x="680" y="370" font-family="system-ui, sans-serif" font-size="15" fill="white" opacity="0.8">✓ Fonctionnalités spécifiques</text>
+  <text x="680" y="405" font-family="system-ui, sans-serif" font-size="15" fill="white" opacity="0.8">✓ Freelance vs Agence</text>
+  <text x="680" y="440" font-family="system-ui, sans-serif" font-size="15" fill="white" opacity="0.8">✓ Maintenance incluse ou non</text>
+  <text x="680" y="475" font-family="system-ui, sans-serif" font-size="15" fill="white" opacity="0.8">✓ Performance (Core Web Vitals)</text>
+
+  <!-- Footer -->
+  <rect x="0" y="580" width="1200" height="50" fill="#638576" opacity="0.3"/>
+  <circle cx="80" cy="605" r="8" fill="#638576"/>
+  <text x="100" y="612" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="#638576">indhack.com</text>
+  <text x="1100" y="612" text-anchor="end" font-family="system-ui, sans-serif" font-size="14" fill="white" opacity="0.7">Grille tarifaire 2026</text>
+</svg>

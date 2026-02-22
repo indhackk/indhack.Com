@@ -117,7 +117,7 @@ Besoin d'un accompagnement sur ce parcours complexe mais incroyablement rentable
 
 ---
 
-## FAQ : Questions fréquentes sur le la définition du SEO
+## FAQ : Questions fréquentes sur la définition du SEO
 
 **Le SEO est-il gratuit ?**
 Théoriquement, contrairement à la publicité, Google ne facture pas vos clics. Cependant, produire du contenu à ultra-haute valeur ajoutée, obtenir des liens d'autorité et corriger le code d'un site demande des heures de travail spécialisé ou le paiement d'un prestataire externe.

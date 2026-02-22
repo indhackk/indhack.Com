@@ -18,6 +18,31 @@ interface PageProps {
     params: { slug: string };
 }
 
+// Fonction pour extraire les FAQ du contenu markdown
+function extractFAQItems(content: string): Array<{ question: string; answer: string }> {
+    const faqItems: Array<{ question: string; answer: string }> = [];
+
+    // Cherche la section FAQ (commence par ## FAQ ou ## Questions fréquentes)
+    const faqMatch = content.match(/## (?:FAQ|Questions fréquentes)[^\n]*\n([\s\S]*?)(?=\n## [^#]|$)/i);
+    if (!faqMatch) return faqItems;
+
+    const faqSection = faqMatch[1];
+
+    // Pattern: **Question ?**\nRéponse (jusqu'à la prochaine question ou fin)
+    const questionPattern = /\*\*([^*]+\?)\*\*\s*\n([^*]+?)(?=\n\*\*[^*]+\?\*\*|\n---|\n##|$)/g;
+
+    let match;
+    while ((match = questionPattern.exec(faqSection)) !== null) {
+        const question = match[1].trim();
+        const answer = match[2].trim().replace(/\n/g, ' ').replace(/\s+/g, ' ');
+        if (question && answer) {
+            faqItems.push({ question, answer });
+        }
+    }
+
+    return faqItems;
+}
+
 // Génération statique des pages blog pour inclusion dans le sitemap
 export function generateStaticParams() {
     const posts = getAllPosts();
@@ -145,6 +170,32 @@ export default function BlogPostPage({ params }: PageProps) {
                         })
                     }}
                 />
+
+                {/* Schema.org FAQPage - Généré automatiquement depuis le contenu */}
+                {(() => {
+                    const faqItems = extractFAQItems(post.content);
+                    if (faqItems.length === 0) return null;
+                    return (
+                        <script
+                            type="application/ld+json"
+                            dangerouslySetInnerHTML={{
+                                __html: JSON.stringify({
+                                    "@context": "https://schema.org",
+                                    "@type": "FAQPage",
+                                    "mainEntity": faqItems.map(item => ({
+                                        "@type": "Question",
+                                        "name": item.question,
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": item.answer
+                                        }
+                                    }))
+                                })
+                            }}
+                        />
+                    );
+                })()}
+
                 {/* Schema.org BreadcrumbList est inclus dans le composant Breadcrumb */}
 
                 {/* Post Header */}
