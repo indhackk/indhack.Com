@@ -5,7 +5,7 @@ date: "2026-02-22"
 author: "Indiana Aflalo"
 category: "Création de site"
 tags: ["création site web", "prix", "budget", "site internet"]
-image: "/images/blog/cout-site-web-2026.jpg"
+image: "/images/blog/prix-creation-site-internet-2026.webp"
 imageAlt: "Grille de prix création site internet 2026 : de 500€ à 50 000€ selon le type de projet"
 readingTime: "10 min"
 ---
