@@ -30,17 +30,17 @@ import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 const ECOMMERCE_FEATURES = [
     {
         icon: <ShoppingCart className="w-8 h-8 text-sauge" />,
-        title: "Catalogue Optimisé SEO",
+        title: "Catalogue optimisé SEO",
         desc: "Structure de catégories et fiches produits pensées pour le référencement et la conversion."
     },
     {
         icon: <Zap className="w-8 h-8 text-sauge" />,
-        title: "Performance Maximale",
+        title: "Performance maximale",
         desc: "Temps de chargement < 2 secondes. Core Web Vitals optimisés pour les utilisateurs et Google."
     },
     {
         icon: <CreditCard className="w-8 h-8 text-sauge" />,
-        title: "Paiement Sécurisé",
+        title: "Paiement sécurisé",
         desc: "Intégration des solutions de paiement leaders : Stripe, PayPal, cartes bancaires."
     },
     {

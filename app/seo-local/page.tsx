@@ -60,7 +60,7 @@ export default function SeoLocalPage() {
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="inline-flex items-center gap-2 bg-sauge/20 text-sauge px-4 py-2 rounded-full text-sm font-bold mb-6">
                             <MapPin className="w-4 h-4" />
-                            Référencement Géolocalisé
+                            Référencement géolocalisé
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
                             Consultant <span className="text-sauge">SEO Local</span>
@@ -132,14 +132,14 @@ export default function SeoLocalPage() {
                         </div>
                         <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
                             <Search className="w-10 h-10 text-sauge mb-4" />
-                            <h3 className="text-xl font-bold mb-2">Mots-clés Géolocalisés</h3>
+                            <h3 className="text-xl font-bold mb-2">Mots-clés géolocalisés</h3>
                             <p className="text-soft text-sm">
                                 Ciblage des requêtes "métier + ville" à fort potentiel de conversion. Focus sur les quartiers et zones de chalandise spécifiques.
                             </p>
                         </div>
                         <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
                             <Users className="w-10 h-10 text-sauge mb-4" />
-                            <h3 className="text-xl font-bold mb-2">Autorité Locale</h3>
+                            <h3 className="text-xl font-bold mb-2">Autorité locale</h3>
                             <p className="text-soft text-sm">
                                 Acquisition de liens depuis partenaires locaux, annuaires professionnels et presse régionale pour renforcer votre crédibilité Google.
                             </p>

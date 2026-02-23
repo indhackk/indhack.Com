@@ -23,17 +23,17 @@ const FEATURED_CITIES = [
 const SEO_PILLARS = [
     {
         icon: <Search className="w-8 h-8 text-sauge" />,
-        title: "Expertise Technique",
+        title: "Expertise technique",
         desc: "Optimisation de l'indexation, de la structure et de la vitesse pour plaire aux robots de Google."
     },
     {
         icon: <FileText className="w-8 h-8 text-sauge" />,
-        title: "Contenu Stratégique",
+        title: "Contenu stratégique",
         desc: "Rédaction optimisée pour répondre aux intentions de recherche et se positionner sur les bons mots-clés."
     },
     {
         icon: <Link2 className="w-8 h-8 text-sauge" />,
-        title: "Autorité et Crédibilité",
+        title: "Autorité et crédibilité",
         desc: "Campagnes de liens entrants ciblées pour renforcer votre notoriété auprès de Google."
     }
 ];

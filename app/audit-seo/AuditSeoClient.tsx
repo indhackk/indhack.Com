@@ -22,22 +22,22 @@ const FEATURED_CITIES = [
 const AUDIT_FEATURES = [
     {
         icon: <Search className="w-8 h-8 text-sauge" />,
-        title: "Analyse Technique",
+        title: "Analyse technique",
         desc: "Crawl profond de votre site pour identifier les erreurs invisibles : indexation, redirections, vitesse de chargement."
     },
     {
         icon: <BarChart4 className="w-8 h-8 text-sauge" />,
-        title: "Audit Sémantique",
+        title: "Audit sémantique",
         desc: "Analyse de vos mots-clés stratégiques et de la pertinence de vos contenus face aux intentions de recherche."
     },
     {
         icon: <ClipboardList className="w-8 h-8 text-sauge" />,
-        title: "Profil de Backlinks",
+        title: "Profil de backlinks",
         desc: "Évaluation de la puissance et de la santé de votre Netlinking. Nettoyage et stratégie d'autorité."
     },
     {
         icon: <Target className="w-8 h-8 text-sauge" />,
-        title: "Roadmap Priorisée",
+        title: "Roadmap priorisée",
         desc: "Un plan d'action concret avec les interventions à ROI immédiat et les chantiers de fond."
     }
 ];

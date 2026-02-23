@@ -6,22 +6,22 @@ import { Shield, Zap, Award, HeartHandshake, CheckCircle } from "lucide-react";
 const TRUST_POINTS = [
     {
         icon: <Shield className="w-6 h-6" />,
-        title: "Expertise Certifiée",
+        title: "Expertise certifiée",
         description: "Formation continue, certifications Google"
     },
     {
         icon: <Zap className="w-6 h-6" />,
-        title: "Résultats Mesurables",
+        title: "Résultats mesurables",
         description: "KPIs clairs, reporting transparent"
     },
     {
         icon: <HeartHandshake className="w-6 h-6" />,
-        title: "Relation Directe",
+        title: "Relation directe",
         description: "Pas d'intermédiaire, je suis votre contact unique"
     },
     {
         icon: <Award className="w-6 h-6" />,
-        title: "Méthode Éprouvée",
+        title: "Méthode éprouvée",
         description: "+150 projets SEO menés à bien"
     }
 ];

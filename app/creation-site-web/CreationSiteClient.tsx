@@ -24,7 +24,7 @@ const FEATURED_CITIES = [
 const CREATION_FEATURES = [
     {
         icon: <Zap className="w-8 h-8 text-sauge" />,
-        title: "Vitesse Optimale",
+        title: "Vitesse optimale",
         desc: "Chargement instantané pour une expérience utilisateur parfaite et un meilleur référencement."
     },
     {
@@ -34,12 +34,12 @@ const CREATION_FEATURES = [
     },
     {
         icon: <Layout className="w-8 h-8 text-sauge" />,
-        title: "Design Conversion",
+        title: "Design conversion",
         desc: "Design épuré et parcours utilisateur pensé pour transformer vos visiteurs en clients."
     },
     {
         icon: <Code className="w-8 h-8 text-sauge" />,
-        title: "Technologies Modernes",
+        title: "Technologies modernes",
         desc: "Frameworks ultra-performants pour une évolutivité et une sécurité totales."
     }
 ];
@@ -222,7 +222,7 @@ export default function CreationSiteClient() {
                         <div className="grid md:grid-cols-3 gap-6">
                             <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
                                 <Palette className="w-8 h-8 text-sauge mx-auto mb-4" />
-                                <h4 className="font-bold mb-2">Design Sur-Mesure</h4>
+                                <h4 className="font-bold mb-2">Design sur-mesure</h4>
                                 <p className="text-white/60 text-sm">Maquettes uniques validées avant développement</p>
                             </div>
                             <div className="p-6 bg-white/5 rounded-2xl border border-white/10">

@@ -44,7 +44,7 @@ interface Tool {
 const TOOLS: Tool[] = [
     {
         id: "testeur-visibilite-ia",
-        title: "Testeur Visibilité IA",
+        title: "Testeur de visibilité IA",
         description: "Êtes-vous visible par ChatGPT, Perplexity et Claude ?",
         longDescription: "Le seul outil français gratuit qui analyse si votre site peut être cité par les IA génératives. Vérifiez vos crawlers IA, signaux E-E-A-T et données structurées.",
         icon: Bot,
@@ -75,7 +75,7 @@ const TOOLS: Tool[] = [
     },
     {
         id: "generateur-schema-json-ld",
-        title: "Générateur Schema JSON-LD",
+        title: "Générateur de schema JSON-LD",
         description: "Créez vos données structurées sans coder.",
         longDescription: "9 types de schema supportés : LocalBusiness, FAQPage, Article, Product, Organization... Indispensable pour les rich snippets et la visibilité IA.",
         icon: Code2,
@@ -85,7 +85,7 @@ const TOOLS: Tool[] = [
     },
     {
         id: "simulateur-visibilite-locale",
-        title: "Simulateur Visibilité Locale",
+        title: "Simulateur de visibilité locale",
         description: "Qui domine Google dans votre ville ?",
         longDescription: "Analysez les 10 premiers résultats Google pour votre métier + ville. Identifiez les opportunités SEO local et la part des plateformes vs commerces indépendants.",
         icon: MapPin,
@@ -95,7 +95,7 @@ const TOOLS: Tool[] = [
     },
     {
         id: "extracteur-mots-cles",
-        title: "Extracteur de Mots-Clés",
+        title: "Extracteur de mots-clés",
         description: "Analysez la densité et les n-grammes d'un texte.",
         longDescription: "Collez un texte et obtenez instantanément les mots-clés principaux, leur densité, et les expressions 2-3 mots les plus fréquentes. Idéal pour analyser vos contenus ou ceux de vos concurrents.",
         icon: Hash,

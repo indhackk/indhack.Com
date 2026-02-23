@@ -30,14 +30,14 @@ const FAQ = dynamic(() => import("@/components/FAQ").then(mod => ({ default: mod
 });
 
 export const metadata: Metadata = {
-    title: "Consultante SEO & Experte Référencement Naturel",
-    description: "Consultante SEO freelance spécialisée en référencement naturel, SEO local et création de site web. Audit SEO gratuit. Nice et toute la France.",
+    title: "Consultante SEO Freelance | Expert Référencement Naturel [2026]",
+    description: "Faites exploser votre trafic avec une Consultante SEO freelance. Audit gratuit, stratégie d'acquisition sur-mesure et résultats durables sur Google.",
     alternates: {
         canonical: "https://indhack.com"
     },
     openGraph: {
-        title: "Consultante SEO & Experte Référencement Naturel",
-        description: "Dominez Google avec une stratégie SEO sur-mesure. Audit gratuit, accompagnement personnalisé.",
+        title: "Consultante SEO Freelance | Expert Référencement Naturel",
+        description: "Faites exploser votre trafic organique avec une Consultante SEO experte. Accompagnement sur-mesure.",
         url: "https://indhack.com",
         type: "website",
     }

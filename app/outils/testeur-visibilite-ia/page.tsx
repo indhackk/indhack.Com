@@ -25,7 +25,7 @@ const RELATED_TOOLS = [
         icon: FileCode,
     },
     {
-        title: "Générateur Schema JSON-LD",
+        title: "Générateur de schema JSON-LD",
         description: "Créez vos données structurées",
         href: "/outils/generateur-schema-json-ld",
         icon: Code2,

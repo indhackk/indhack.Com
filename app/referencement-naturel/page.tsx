@@ -4,7 +4,7 @@ import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Référencement Naturel | Stratégie SEO Sur-Mesure – IndHack",
+    title: "Référencement naturel | Stratégie SEO sur-mesure – IndHack",
     description: "Stratégies SEO sur-mesure pour atteindre la 1ère page Google. Trafic qualifié, leads durables et ROI maximisé.",
     alternates: {
         canonical: "https://indhack.com/referencement-naturel"

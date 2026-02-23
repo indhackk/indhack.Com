@@ -19,13 +19,13 @@ export const metadata: Metadata = {
 
 const RELATED_TOOLS = [
     {
-        title: "Testeur Visibilité IA",
+        title: "Testeur de visibilité IA",
         description: "Votre site est-il visible par ChatGPT ?",
         href: "/outils/testeur-visibilite-ia",
         icon: Bot,
     },
     {
-        title: "Générateur Schema JSON-LD",
+        title: "Générateur de schema JSON-LD",
         description: "Créez vos données structurées",
         href: "/outils/generateur-schema-json-ld",
         icon: Code2,

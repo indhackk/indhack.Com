@@ -1,6 +1,6 @@
 ---
-title: "Refonte de site web : checklist et guide pour ne pas perdre son SEO"
-description: "Guide complet + checklist 45 points pour réussir votre refonte sans perdre vos positions Google. Avant, pendant, après : rien n'est oublié."
+title: "Checklist SEO Refonte Site : 45 Points à Vérifier Absolument [2026]"
+description: "Refonte imminente ? Une erreur peut diviser votre trafic par 5. Voici la checklist SEO exacte (45 points) à suivre par votre agence pour éviter la chute."
 date: "2026-02-16"
 category: "Refonte"
 image: "/images/blog/refonte-site-seo.jpg"

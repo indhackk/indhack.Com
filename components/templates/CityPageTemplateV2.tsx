@@ -198,10 +198,10 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
 
     // Avantages différenciants
     const ADVANTAGES = [
-        { icon: <Shield />, title: "Expertise Technique", desc: "Next.js, Core Web Vitals, IA" },
+        { icon: <Shield />, title: "Expertise technique", desc: "Next.js, Core Web Vitals, IA" },
         { icon: <BarChart3 />, title: "Approche ROI", desc: "KPIs business, pas juste des positions" },
-        { icon: <MapPin />, title: "Proximité Locale", desc: `Basée région ${cityData.department}` },
-        { icon: <Award />, title: "Sans Engagement Long", desc: "3 mois minimum, puis liberté" }
+        { icon: <MapPin />, title: "Proximité locale", desc: `Basée région ${cityData.department}` },
+        { icon: <Award />, title: "Sans engagement long", desc: "3 mois minimum, puis liberté" }
     ];
 
     return (
@@ -341,7 +341,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                             className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group"
                         >
                             <Search className="w-8 h-8 text-sauge mb-4 group-hover:scale-110 transition-transform" />
-                            <h3 className="text-lg font-bold mb-2">Mots-clés Géolocalisés</h3>
+                            <h3 className="text-lg font-bold mb-2">Mots-clés géolocalisés</h3>
                             <p className="text-soft text-sm">
                                 Ciblage des requêtes "métier + {city}" qui convertissent <strong>3x plus</strong>. Focus quartiers : {cityData.landmarks.slice(0, 2).join(", ")}.
                             </p>
@@ -354,7 +354,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                             className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group"
                         >
                             <Users className="w-8 h-8 text-sauge mb-4 group-hover:scale-110 transition-transform" />
-                            <h3 className="text-lg font-bold mb-2">Autorité Locale</h3>
+                            <h3 className="text-lg font-bold mb-2">Autorité locale</h3>
                             <p className="text-soft text-sm">
                                 Liens depuis partenaires locaux, annuaires pros et presse {cityData.region} pour <strong>asseoir votre crédibilité</strong>.
                             </p>

@@ -2,21 +2,21 @@ import { Metadata } from "next";
 import ExtracteurClient from "./ExtracteurClient";
 
 export const metadata: Metadata = {
-    title: "Extracteur de Mots-Clés Gratuit | Densité & N-grammes – IndHack",
-    description: "Analysez la densité de mots-clés et les n-grammes de n'importe quel texte. Outil SEO gratuit, sans inscription. Optimisez vos contenus en 30 secondes.",
+    title: "Extraire les mots-clés d'un texte | Outil gratuit en ligne – IndHack",
+    description: "Extraire les mots-clés d'un texte en 30 secondes. Analysez la densité, les bi-grammes et tri-grammes. Outil SEO gratuit, sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils/extracteur-mots-cles"
     },
     openGraph: {
-        title: "Extracteur de Mots-Clés Gratuit | Densité & N-grammes – IndHack",
-        description: "Analysez la densité de mots-clés et les n-grammes de n'importe quel texte. Outil SEO gratuit, sans inscription. Optimisez vos contenus en 30 secondes.",
+        title: "Extraire les mots-clés d'un texte | Outil gratuit – IndHack",
+        description: "Extraire les mots-clés d'un texte en 30 secondes. Analysez la densité, les bi-grammes et tri-grammes. Outil SEO gratuit, sans inscription.",
         url: "https://indhack.com/outils/extracteur-mots-cles",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Extracteur de Mots-Clés Gratuit | Densité & N-grammes – IndHack",
-        description: "Analysez la densité de mots-clés et les n-grammes de n'importe quel texte. Outil SEO gratuit, sans inscription. Optimisez vos contenus en 30 secondes.",
+        title: "Extraire les mots-clés d'un texte | Outil gratuit – IndHack",
+        description: "Extraire les mots-clés d'un texte en 30 secondes. Analysez la densité, les bi-grammes et tri-grammes. Outil SEO gratuit, sans inscription.",
     }
 };
 
@@ -54,8 +54,8 @@ export default function ExtracteurMotsClesPage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "SoftwareApplication",
-                        "name": "Extracteur de mots-clés gratuit",
-                        "description": "Analysez les mots-clés d'un texte gratuitement. Extraction de mots-clés, densité, bi-grammes et tri-grammes. Outil SEO gratuit.",
+                        "name": "Extraire les mots-clés d'un texte - Outil gratuit",
+                        "description": "Extraire les mots-clés d'un texte gratuitement. Analyse de densité, bi-grammes et tri-grammes. Outil SEO en ligne sans inscription.",
                         "applicationCategory": "WebApplication",
                         "operatingSystem": "Any",
                         "offers": {

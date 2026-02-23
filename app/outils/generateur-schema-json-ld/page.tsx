@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const RELATED_TOOLS = [
     {
-        title: "Testeur Visibilité IA",
+        title: "Testeur de visibilité IA",
         description: "Vérifiez si votre site est visible par ChatGPT et Perplexity",
         href: "/outils/testeur-visibilite-ia",
         icon: Bot,

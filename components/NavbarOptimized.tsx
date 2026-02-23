@@ -18,7 +18,7 @@ const SERVICES = [
 ];
 
 const TOOLS = [
-    { title: "Testeur Visibilité IA", href: "/outils/testeur-visibilite-ia", desc: "ChatGPT vous trouve-t-il ?", icon: Bot, status: "live" },
+    { title: "Testeur de visibilité IA", href: "/outils/testeur-visibilite-ia", desc: "ChatGPT vous trouve-t-il ?", icon: Bot, status: "live" },
     { title: "Audit SEO Gratuit", href: "/outils/audit-seo-gratuit", desc: "Score /100 en 30 secondes", icon: Search, status: "live" },
     { title: "Extracteur Mots-clés", href: "/outils/extracteur-mots-cles", desc: "Analysez densité et n-grammes", icon: Type, status: "live" },
     { title: "Générateur robots.txt", href: "/outils/generateur-robots-txt", desc: "Crawlers IA 2026 inclus", icon: FileCode, status: "live" },

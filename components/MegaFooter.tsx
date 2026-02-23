@@ -14,7 +14,7 @@ const SERVICES = [
     { title: "SEO Local", href: "/seo-local" },
     { title: "Création de Site Web", href: "/creation-site-web" },
     { title: "Refonte de Site Web", href: "/refonte-site-web" },
-    { title: "Création Boutique E-commerce", href: "/creation-boutique-en-ligne" },
+    { title: "Création boutique e-commerce", href: "/creation-boutique-en-ligne" },
 ];
 
 // ══════════════════════════════════════════════════════════════

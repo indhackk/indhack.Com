@@ -3,19 +3,19 @@ import { Shield, Zap, Award, HeartHandshake } from "lucide-react";
 const TRUST_POINTS = [
     {
         icon: <Shield className="w-6 h-6" />,
-        title: "Expertise Certifiée",
+        title: "Expertise certifiée",
     },
     {
         icon: <Zap className="w-6 h-6" />,
-        title: "Résultats Mesurables",
+        title: "Résultats mesurables",
     },
     {
         icon: <HeartHandshake className="w-6 h-6" />,
-        title: "Relation Directe",
+        title: "Relation directe",
     },
     {
         icon: <Award className="w-6 h-6" />,
-        title: "Méthode Éprouvée",
+        title: "Méthode éprouvée",
     }
 ];
 

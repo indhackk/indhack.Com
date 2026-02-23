@@ -177,11 +177,11 @@ export default function ExtracteurClient() {
                             Outil SEO gratuit
                         </div>
                         <h1 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-4">
-                            Extracteur de <span className="text-sauge">mots-clés</span> gratuit
+                            Extraire les <span className="text-sauge">mots-clés</span> d&apos;un texte
                         </h1>
                         <p className="text-soft text-lg">
-                            Analysez un texte pour en extraire les mots-clés principaux, leur densité,
-                            et les expressions les plus fréquentes (bi-grammes, tri-grammes).
+                            Collez votre texte et extrayez les mots-clés principaux en 30 secondes.
+                            Densité, bi-grammes, tri-grammes — outil gratuit, sans inscription.
                         </p>
                     </div>
                 </div>

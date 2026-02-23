@@ -35,12 +35,12 @@ const REFONTE_FEATURES = [
     },
     {
         icon: <RefreshCw className="w-8 h-8 text-sauge" />,
-        title: "Migration Sémantique",
+        title: "Migration sémantique",
         desc: "Refonte de l'arborescence pour une structure plus cohérente et plus puissante."
     },
     {
         icon: <BarChart3 className="w-8 h-8 text-sauge" />,
-        title: "Suivi Post-Lancement",
+        title: "Suivi post-lancement",
         desc: "Monitoring temps réel des KPIs pour rectifier instantanément la moindre baisse de trafic."
     }
 ];
@@ -142,10 +142,10 @@ export default function RefonteSiteClient() {
                                 sacrifier son <span className="text-sauge">acquisition</span>.
                             </h2>
                             <div className="space-y-6">
-                                <ProcessItem num="01" title="Audit Pré-Refonte" text="Identification des pages top performers et des 'quick wins' sémantiques." />
-                                <ProcessItem num="02" title="Mapping de Redirection" text="Établissement du plan de redirection 301 pour éviter les erreurs 404 en masse." />
-                                <ProcessItem num="03" title="Recettage Technique" text="Analyse du site en pré-production pour valider le balisage et la performance." />
-                                <ProcessItem num="04" title="Go-Live & Suivi" text="Surveillance accrue de la Search Console et rafraîchissement manuel de l'index." />
+                                <ProcessItem num="01" title="Audit pré-refonte" text="Identification des pages top performers et des 'quick wins' sémantiques." />
+                                <ProcessItem num="02" title="Mapping de redirection" text="Établissement du plan de redirection 301 pour éviter les erreurs 404 en masse." />
+                                <ProcessItem num="03" title="Recettage technique" text="Analyse du site en pré-production pour valider le balisage et la performance." />
+                                <ProcessItem num="04" title="Go-live & suivi" text="Surveillance accrue de la Search Console et rafraîchissement manuel de l'index." />
                             </div>
                         </div>
                         <div className="lg:w-1/2 relative">
