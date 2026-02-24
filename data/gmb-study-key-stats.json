@@ -1,0 +1,112 @@
+{
+  "headline": "30% des meilleurs restaurants Google n'ont pas de site web",
+  "subheadline": "Étude exclusive sur 308 établissements du Top Google dans 10 villes de la Côte d'Azur",
+  "keyNumbers": {
+    "totalAnalyzed": 308,
+    "noRealWebsite": 92,
+    "pctNoRealWebsite": "29.9",
+    "noWebsiteAtAll": 65,
+    "pctNoWebsiteAtAll": "21.1",
+    "suspiciousProfiles": 41,
+    "pctSuspicious": "13.3",
+    "lowEngagement": 98,
+    "pctLowEngagement": "31.8",
+    "avgRating": "4.55",
+    "avgReviews": "302",
+    "medianReviews": 222
+  },
+  "byCity": [
+    {
+      "city": "Menton",
+      "total": 28,
+      "noWebsite": 12,
+      "pctNoWebsite": 43,
+      "avgRating": "4.61",
+      "suspectProfiles": 1
+    },
+    {
+      "city": "Fréjus",
+      "total": 28,
+      "noWebsite": 11,
+      "pctNoWebsite": 39,
+      "avgRating": "4.64",
+      "suspectProfiles": 1
+    },
+    {
+      "city": "Grasse",
+      "total": 30,
+      "noWebsite": 8,
+      "pctNoWebsite": 27,
+      "avgRating": "4.61",
+      "suspectProfiles": 1
+    },
+    {
+      "city": "Cagnes-sur-Mer",
+      "total": 31,
+      "noWebsite": 8,
+      "pctNoWebsite": 26,
+      "avgRating": "4.55",
+      "suspectProfiles": 2
+    },
+    {
+      "city": "Mandelieu-la-Napoule",
+      "total": 30,
+      "noWebsite": 7,
+      "pctNoWebsite": 23,
+      "avgRating": "4.53",
+      "suspectProfiles": 0
+    },
+    {
+      "city": "Antibes",
+      "total": 36,
+      "noWebsite": 8,
+      "pctNoWebsite": 22,
+      "avgRating": "4.58",
+      "suspectProfiles": 3
+    },
+    {
+      "city": "Saint-Tropez",
+      "total": 31,
+      "noWebsite": 6,
+      "pctNoWebsite": 19,
+      "avgRating": "4.23",
+      "suspectProfiles": 0
+    },
+    {
+      "city": "Monaco",
+      "total": 26,
+      "noWebsite": 3,
+      "pctNoWebsite": 12,
+      "avgRating": "4.58",
+      "suspectProfiles": 0
+    },
+    {
+      "city": "Nice",
+      "total": 35,
+      "noWebsite": 1,
+      "pctNoWebsite": 3,
+      "avgRating": "4.65",
+      "suspectProfiles": 9
+    },
+    {
+      "city": "Cannes",
+      "total": 33,
+      "noWebsite": 1,
+      "pctNoWebsite": 3,
+      "avgRating": "4.52",
+      "suspectProfiles": 1
+    }
+  ],
+  "highlights": {
+    "saintTropezParadox": "Note moyenne la plus basse (4.23★) malgré le standing premium",
+    "mentonChampion": "43% des restaurants visibles sans site web",
+    "niceProfilsSuspects": "9 profils avec note ≥4.8★ et <20 avis"
+  },
+  "methodology": {
+    "source": "Google Places API via Serper.dev",
+    "date": "2026-02-24",
+    "queries": ["restaurant", "restaurant gastronomique", "pizzeria", "brasserie"],
+    "cities": 10,
+    "note": "Analyse des restaurants apparaissant dans les résultats Google Places"
+  }
+}

@@ -236,6 +236,13 @@ export default function SimulateurLocalPage() {
                                 Une stratégie <Link href="/seo-local" className="text-sauge hover:underline">SEO local complète</Link> permet de corriger ces lacunes et de conquérir le Pack Local en 3 à 6 mois.
                             </p>
 
+                            <div className="bg-accent/10 border border-accent/20 rounded-xl p-6 my-8">
+                                <p className="text-sm font-bold text-accent mb-2">Étude exclusive</p>
+                                <p className="text-ink font-medium">
+                                    Notre <Link href="/etudes/restaurants-cote-azur-google-2026" className="text-sauge hover:underline">analyse de 308 restaurants de la Côte d'Azur</Link> révèle que <strong>30% des établissements les plus visibles sur Google n'ont pas de site web</strong> et <strong>32% ont moins de 50 avis</strong>. Même les mieux positionnés présentent des failles critiques.
+                                </p>
+                            </div>
+
                             <h2 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
                                 Plateformes vs sites locaux : quelle stratégie adopter ?
                             </h2>

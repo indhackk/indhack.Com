@@ -148,6 +148,32 @@ export default function SeoLocalPage() {
                 </div>
             </section>
 
+            {/* Étude Côte d'Azur */}
+            <section className="py-12 bg-accent/5 border-y border-accent/20">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <Link href="/etudes/restaurants-cote-azur-google-2026" className="block group">
+                            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+                                <div className="flex-shrink-0 text-center">
+                                    <p className="text-5xl font-bold text-accent">30%</p>
+                                    <p className="text-xs text-soft font-medium">sans site web</p>
+                                </div>
+                                <div className="flex-1 text-center md:text-left">
+                                    <span className="text-xs font-bold text-accent uppercase tracking-wider">Étude exclusive</span>
+                                    <h3 className="text-xl font-heading font-bold text-ink mt-1 mb-2 group-hover:text-sauge transition-colors">
+                                        30% des meilleurs restaurants Google n'ont pas de site web
+                                    </h3>
+                                    <p className="text-soft text-sm">
+                                        Notre analyse de 308 restaurants de la Côte d'Azur révèle des failles critiques, même chez les mieux positionnés.
+                                    </p>
+                                </div>
+                                <ArrowRight className="w-6 h-6 text-accent group-hover:translate-x-2 transition-transform" />
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
             {/* Villes par région */}
             <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4">

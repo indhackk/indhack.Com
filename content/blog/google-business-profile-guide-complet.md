@@ -96,6 +96,8 @@ Les attributs permettent de préciser vos services :
 
 Les avis sont le **facteur #1** du classement local. Plus vous avez d'avis positifs récents, plus vous montez.
 
+> **Donnée exclusive :** Notre [étude sur 308 restaurants de la Côte d'Azur](/etudes/restaurants-cote-azur-google-2026) révèle que **32% des établissements les mieux positionnés sur Google ont moins de 50 avis**. Et 13% affichent une note ≥4.5★ avec moins de 10 avis — des profils suspects. Même les « meilleurs » négligent leur stratégie d'avis.
+
 ### Comment obtenir plus d'avis
 
 | Méthode | Efficacité | Conseil |

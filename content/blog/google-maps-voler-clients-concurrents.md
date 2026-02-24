@@ -37,6 +37,8 @@ Sur votre propre fiche et votre [site web optimisé](/creation-site-web), transf
 Si le concurrent est critiqué pour ses délais, ajoutes en gros sur votre site : **"Intervention garantie en 24h (contrairement aux standards du marché)"**.
 Vous répondez à la frustration du marché *avant* même que le client ne vous appelle.
 
+> **Le saviez-vous ?** Notre [étude sur 308 restaurants de la Côte d'Azur](/etudes/restaurants-cote-azur-google-2026) montre que 30% des établissements les mieux positionnés sur Google n'ont même pas de site web. Autant d'opportunités à saisir pour vous différencier.
+
 > **Besoin d'aide ?** Mon service de [Référencement Local](/seo-local) inclut cette analyse concurrentielle approfondie.
 
 ## Étape 2 : le hack des "catégories secondaires"
@@ -84,6 +86,7 @@ Vous ne vendez pas un service, vous vendez le résultat.
 
 ## Pour aller plus loin
 
+- [Étude : 30% des meilleurs restaurants Google sans site web](/etudes/restaurants-cote-azur-google-2026) — Notre analyse de 308 établissements de la Côte d'Azur révèle des failles critiques
 - [Google Business Profile : le guide complet](/blog/google-business-profile-guide-complet) — Optimisez chaque champ de votre fiche
 - [SEO local à Nice : dominer le marché azuréen](/blog/seo-local-nice) — Stratégie locale pour la Côte d'Azur
 - [Performance web et SEO](/blog/pourquoi-votre-site-est-lent-performance-web-2026) — Ne perdez pas les visiteurs que Google Maps vous envoie

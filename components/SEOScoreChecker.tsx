@@ -175,6 +175,20 @@ export function SEOScoreChecker() {
                                             ))}
                                         </div>
 
+                                        <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6 mb-8 text-center max-w-2xl mx-auto animate-pulse-slow">
+                                            <div className="flex items-center justify-center gap-2 mb-3">
+                                                <AlertTriangle className="w-6 h-6 text-red-400" />
+                                                <h4 className="text-xl font-bold text-red-400">Attention : Mise à jour Google 2026</h4>
+                                            </div>
+                                            <p className="text-white/80 mb-4">
+                                                L'outil détecte très souvent plus de <strong className="text-white">15 erreurs techniques critiques</strong> sur les sites non optimisés, bloquant le passage en 1ère page.
+                                            </p>
+                                            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-sauge-light font-bold">
+                                                <Zap className="w-5 h-5" />
+                                                <span>Vous n'avez pas de développeur SEO ? Je corrige votre technique en 48h.</span>
+                                            </div>
+                                        </div>
+
                                         <div className="flex flex-col gap-4 max-w-md mx-auto">
                                             <Button
                                                 onClick={openAuditModal}
