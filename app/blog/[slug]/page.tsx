@@ -313,15 +313,14 @@ export default function BlogPostPage({ params }: PageProps) {
                                 const createIdFromText = (text: React.ReactNode) =>
                                     String(text).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
+                                // Custom components to add IDs to headings (node prop filtered to avoid DOM warning)
                                 const markdownComponents = {
-                                    h2: (props: React.HTMLAttributes<HTMLHeadingElement> & { children?: React.ReactNode }) => {
-                                        const { children, ...rest } = props;
-                                        return <h2 id={createIdFromText(children)} {...rest}>{children}</h2>
-                                    },
-                                    h3: (props: React.HTMLAttributes<HTMLHeadingElement> & { children?: React.ReactNode }) => {
-                                        const { children, ...rest } = props;
-                                        return <h3 id={createIdFromText(children)} {...rest}>{children}</h3>
-                                    }
+                                    h2: ({ node: _node, children, ...props }: { node?: unknown; children?: React.ReactNode } & React.HTMLAttributes<HTMLHeadingElement>) => (
+                                        <h2 id={createIdFromText(children)} {...props}>{children}</h2>
+                                    ),
+                                    h3: ({ node: _node, children, ...props }: { node?: unknown; children?: React.ReactNode } & React.HTMLAttributes<HTMLHeadingElement>) => (
+                                        <h3 id={createIdFromText(children)} {...props}>{children}</h3>
+                                    )
                                 };
 
                                 // Si moins de 4 sections, pas de split (article court)
