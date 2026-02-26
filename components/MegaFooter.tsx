@@ -50,6 +50,7 @@ const RESOURCES = [
     { title: "Études de cas", href: "/etudes-de-cas" },
     { title: "FAQ", href: "/faq" },
     { title: "À propos", href: "/a-propos" },
+    { title: "Programme Partenaires", href: "/partenaires" },
 ];
 
 // ══════════════════════════════════════════════════════════════

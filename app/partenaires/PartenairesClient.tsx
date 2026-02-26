@@ -17,6 +17,8 @@ import {
     Clock,
     CheckCircle2,
     Sparkles,
+    HelpCircle,
+    ChevronDown,
 } from "lucide-react";
 
 const ANCHORS = [
@@ -105,7 +107,7 @@ export function PartenairesClient() {
                             </span>
                             <span className="flex items-center gap-2 text-white/60">
                                 <CheckCircle2 className="w-4 h-4 text-sauge" />
-                                Lien dofollow inclus
+                                Lien partenaire inclus
                             </span>
                         </div>
                     </div>
@@ -441,6 +443,85 @@ export function PartenairesClient() {
                                 aide à améliorer notre référencement. C&apos;est un échange gagnant-gagnant :
                                 vous obtenez un outil de génération de leads gratuit, et nous obtenons un backlink de qualité.
                             </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ */}
+            <section className="py-20 bg-fond-clair border-t border-line">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-3xl mx-auto">
+                        <div className="text-center mb-12">
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-sauge/10 border border-sauge/20 rounded-full text-sauge text-xs font-bold mb-4">
+                                <HelpCircle className="w-3.5 h-3.5" />
+                                <span className="uppercase tracking-wider">FAQ</span>
+                            </div>
+                            <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-4">
+                                Questions fréquentes
+                            </h2>
+                        </div>
+
+                        <div className="space-y-4">
+                            <details className="group bg-white rounded-xl border border-line overflow-hidden">
+                                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-gray-50 transition-colors">
+                                    <span className="font-medium text-ink pr-4">Est-ce vraiment 100% gratuit ?</span>
+                                    <ChevronDown className="w-5 h-5 text-soft group-open:rotate-180 transition-transform flex-shrink-0" />
+                                </summary>
+                                <div className="px-5 pb-5 text-soft text-sm leading-relaxed">
+                                    Oui, le widget est entièrement gratuit. Pas de frais cachés, pas d&apos;abonnement. En échange, un petit lien &quot;Propulsé par IndHack&quot; apparaît sous le widget, ce qui nous aide pour notre référencement.
+                                </div>
+                            </details>
+
+                            <details className="group bg-white rounded-xl border border-line overflow-hidden">
+                                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-gray-50 transition-colors">
+                                    <span className="font-medium text-ink pr-4">Combien de leads puis-je espérer par mois ?</span>
+                                    <ChevronDown className="w-5 h-5 text-soft group-open:rotate-180 transition-transform flex-shrink-0" />
+                                </summary>
+                                <div className="px-5 pb-5 text-soft text-sm leading-relaxed">
+                                    Cela dépend de votre trafic. En moyenne, 5 à 15% des visiteurs qui utilisent l&apos;outil laissent leur email pour recevoir un rapport détaillé. Sur un site avec 1 000 visiteurs/mois sur la page du widget, vous pouvez espérer 50 à 150 leads qualifiés.
+                                </div>
+                            </details>
+
+                            <details className="group bg-white rounded-xl border border-line overflow-hidden">
+                                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-gray-50 transition-colors">
+                                    <span className="font-medium text-ink pr-4">Le widget ralentit-il mon site ?</span>
+                                    <ChevronDown className="w-5 h-5 text-soft group-open:rotate-180 transition-transform flex-shrink-0" />
+                                </summary>
+                                <div className="px-5 pb-5 text-soft text-sm leading-relaxed">
+                                    Non. Le widget se charge via une iframe avec l&apos;attribut <code className="bg-gray-100 px-1 py-0.5 rounded text-xs">loading=&quot;lazy&quot;</code>, ce qui signifie qu&apos;il ne se charge que lorsque l&apos;utilisateur scrolle jusqu&apos;à lui. Il n&apos;impacte pas votre Core Web Vitals.
+                                </div>
+                            </details>
+
+                            <details className="group bg-white rounded-xl border border-line overflow-hidden">
+                                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-gray-50 transition-colors">
+                                    <span className="font-medium text-ink pr-4">Puis-je personnaliser l&apos;apparence du widget ?</span>
+                                    <ChevronDown className="w-5 h-5 text-soft group-open:rotate-180 transition-transform flex-shrink-0" />
+                                </summary>
+                                <div className="px-5 pb-5 text-soft text-sm leading-relaxed">
+                                    Le widget a un design neutre qui s&apos;intègre bien sur la plupart des sites. Pour l&apos;instant, la personnalisation des couleurs n&apos;est pas disponible, mais vous pouvez ajuster la largeur maximale et le style du conteneur via le code HTML.
+                                </div>
+                            </details>
+
+                            <details className="group bg-white rounded-xl border border-line overflow-hidden">
+                                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-gray-50 transition-colors">
+                                    <span className="font-medium text-ink pr-4">Comment fonctionne l&apos;analyse de visibilité IA ?</span>
+                                    <ChevronDown className="w-5 h-5 text-soft group-open:rotate-180 transition-transform flex-shrink-0" />
+                                </summary>
+                                <div className="px-5 pb-5 text-soft text-sm leading-relaxed">
+                                    L&apos;outil analyse le fichier robots.txt du site testé pour vérifier s&apos;il autorise les 8 principaux crawlers IA (GPTBot, ChatGPT-User, Claude-Web, PerplexityBot, etc.). Il évalue également la structure sémantique, les signaux E-E-A-T et le format du contenu pour calculer un score de visibilité sur 100.
+                                </div>
+                            </details>
+
+                            <details className="group bg-white rounded-xl border border-line overflow-hidden">
+                                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-gray-50 transition-colors">
+                                    <span className="font-medium text-ink pr-4">C&apos;est compatible avec quel CMS ?</span>
+                                    <ChevronDown className="w-5 h-5 text-soft group-open:rotate-180 transition-transform flex-shrink-0" />
+                                </summary>
+                                <div className="px-5 pb-5 text-soft text-sm leading-relaxed">
+                                    Le widget fonctionne avec tous les CMS et constructeurs de sites : WordPress, Webflow, Shopify, Wix, Squarespace, Framer, ou même un site HTML statique. Il suffit de pouvoir coller du code HTML.
+                                </div>
+                            </details>
                         </div>
                     </div>
                 </div>
