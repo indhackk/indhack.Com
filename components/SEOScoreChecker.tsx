@@ -97,7 +97,7 @@ export function SEOScoreChecker() {
                         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
                             Testez votre <span className="text-sauge-light">Performance SEO</span>
                         </h2>
-                        <p className="text-white/70 max-w-xl mx-auto">
+                        <p className="text-soft-light max-w-xl mx-auto">
                             Interrogation en temps réel des serveurs Google (Lighthouse) pour un diagnostic technique immédiat et réel.
                         </p>
                     </motion.div>
@@ -121,7 +121,7 @@ export function SEOScoreChecker() {
                                         className="flex flex-col sm:flex-row gap-4"
                                     >
                                         <div className="flex-1 relative">
-                                            <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40" />
+                                            <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-soft-light" />
                                             <input
                                                 ref={inputRef}
                                                 type="text"
@@ -130,7 +130,7 @@ export function SEOScoreChecker() {
                                                 onKeyDown={(e) => e.key === "Enter" && analyzeWebsite()}
                                                 placeholder="www.votresite.fr"
                                                 disabled={isAnalyzing}
-                                                className="w-full bg-white/10 border border-white/20 rounded-xl px-12 py-4 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-sauge focus:border-transparent transition-all disabled:opacity-50"
+                                                className="w-full bg-white/10 border border-white/20 rounded-xl px-12 py-4 text-white placeholder:text-soft-light focus:outline-none focus:ring-2 focus:ring-sauge focus:border-transparent transition-all disabled:opacity-50"
                                             />
                                         </div>
                                         <Button
@@ -162,7 +162,7 @@ export function SEOScoreChecker() {
                                             <CheckCircle className="w-8 h-8" />
                                         </div>
                                         <h3 className="text-2xl font-bold mb-4">Site détecté avec succès !</h3>
-                                        <p className="text-white/70 mb-8 max-w-lg mx-auto">
+                                        <p className="text-soft-light mb-8 max-w-lg mx-auto">
                                             Pour obtenir votre <strong>Score SEO réel</strong> et la liste des erreurs techniques à corriger, je dois réaliser un crawl complet de votre site ({url}).
                                         </p>
 
@@ -199,7 +199,7 @@ export function SEOScoreChecker() {
                                             </Button>
                                             <button
                                                 onClick={() => setResult(null)}
-                                                className="text-white/40 text-sm hover:text-white transition-colors"
+                                                className="text-soft-light text-sm hover:text-white transition-colors"
                                             >
                                                 Tester un autre site
                                             </button>

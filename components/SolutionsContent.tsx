@@ -254,7 +254,7 @@ export function SolutionsContent() {
                             <h2 className="text-3xl lg:text-4xl font-heading font-bold mb-6">
                                 Pourquoi me faire confiance ?
                             </h2>
-                            <p className="text-xl text-white/70 mb-8">
+                            <p className="text-xl text-soft-light mb-8">
                                 Je m'engage sur des résultats concrets, avec une transparence totale à chaque étape.
                             </p>
 
@@ -277,7 +277,7 @@ export function SolutionsContent() {
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-lg mb-1">{item.title}</h3>
-                                            <p className="text-white/60">{item.desc}</p>
+                                            <p className="text-soft-light">{item.desc}</p>
                                         </div>
                                     </motion.div>
                                 ))}
@@ -292,7 +292,7 @@ export function SolutionsContent() {
                         >
                             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
                                 <h3 className="text-2xl font-bold mb-6">Prête à démarrer ?</h3>
-                                <p className="text-white/70 mb-8">
+                                <p className="text-soft-light mb-8">
                                     Réservez un appel découverte gratuit de 30 minutes. On discute de vos objectifs
                                     et je vous dis honnêtement si je suis la bonne personne pour vous accompagner.
                                 </p>

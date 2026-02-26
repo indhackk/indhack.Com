@@ -66,7 +66,7 @@ export default function SeoLocalPage() {
                             Consultant <span className="text-sauge">SEO Local</span>
                             <br />partout en France
                         </h1>
-                        <p className="text-xl text-white/60 mb-10 max-w-2xl mx-auto">
+                        <p className="text-xl text-soft-light mb-10 max-w-2xl mx-auto">
                             Dominez les résultats Google dans votre ville. Expertise locale, stratégie sur-mesure et résultats mesurables pour votre entreprise.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
@@ -268,28 +268,28 @@ export default function SeoLocalPage() {
                                 <Zap className="w-6 h-6" />
                             </div>
                             <h4 className="font-bold mb-1">Expertise Technique</h4>
-                            <p className="text-xs text-white/60">Next.js, Core Web Vitals, IA</p>
+                            <p className="text-xs text-soft-light">Next.js, Core Web Vitals, IA</p>
                         </div>
                         <div className="text-center">
                             <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-white/10 flex items-center justify-center text-sauge">
                                 <TrendingUp className="w-6 h-6" />
                             </div>
                             <h4 className="font-bold mb-1">Approche ROI</h4>
-                            <p className="text-xs text-white/60">KPIs business mesurables</p>
+                            <p className="text-xs text-soft-light">KPIs business mesurables</p>
                         </div>
                         <div className="text-center">
                             <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-white/10 flex items-center justify-center text-sauge">
                                 <MapPin className="w-6 h-6" />
                             </div>
                             <h4 className="font-bold mb-1">Proximité Locale</h4>
-                            <p className="text-xs text-white/60">Connaissance du terrain</p>
+                            <p className="text-xs text-soft-light">Connaissance du terrain</p>
                         </div>
                         <div className="text-center">
                             <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-white/10 flex items-center justify-center text-sauge">
                                 <Users className="w-6 h-6" />
                             </div>
                             <h4 className="font-bold mb-1">Sans Engagement Long</h4>
-                            <p className="text-xs text-white/60">3 mois minimum, puis liberté</p>
+                            <p className="text-xs text-soft-light">3 mois minimum, puis liberté</p>
                         </div>
                     </div>
                 </div>

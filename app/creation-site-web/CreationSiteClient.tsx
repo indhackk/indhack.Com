@@ -223,17 +223,17 @@ export default function CreationSiteClient() {
                             <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
                                 <Palette className="w-8 h-8 text-sauge mx-auto mb-4" />
                                 <h4 className="font-bold mb-2">Design sur-mesure</h4>
-                                <p className="text-white/60 text-sm">Maquettes uniques validées avant développement</p>
+                                <p className="text-soft-light text-sm">Maquettes uniques validées avant développement</p>
                             </div>
                             <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
                                 <Smartphone className="w-8 h-8 text-sauge mx-auto mb-4" />
                                 <h4 className="font-bold mb-2">Responsive Design</h4>
-                                <p className="text-white/60 text-sm">Parfait sur mobile, tablette et ordinateur</p>
+                                <p className="text-soft-light text-sm">Parfait sur mobile, tablette et ordinateur</p>
                             </div>
                             <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
                                 <ShieldCheck className="w-8 h-8 text-sauge mx-auto mb-4" />
                                 <h4 className="font-bold mb-2">Sécurité et SSL</h4>
-                                <p className="text-white/60 text-sm">Certificat HTTPS et protections avancées</p>
+                                <p className="text-soft-light text-sm">Certificat HTTPS et protections avancées</p>
                             </div>
                         </div>
                     </div>
@@ -361,7 +361,7 @@ export default function CreationSiteClient() {
                         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
                             Prêt à <span className="text-sauge">lancer</span> votre projet ?
                         </h2>
-                        <p className="text-lg text-white/50 mb-10 max-w-xl mx-auto">
+                        <p className="text-lg text-soft-light mb-10 max-w-xl mx-auto">
                             Discutons de votre projet et voyons comment créer un site qui génère des résultats.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">

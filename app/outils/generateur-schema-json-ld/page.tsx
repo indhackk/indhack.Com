@@ -130,7 +130,7 @@ export default function GenerateurSchemaPage() {
                     <div className="container mx-auto px-4 relative z-10">
                         {/* Breadcrumb */}
                         <nav className="mb-8" aria-label="Fil d'Ariane">
-                            <ol className="flex items-center gap-2 text-sm text-white/40">
+                            <ol className="flex items-center gap-2 text-sm text-soft-light">
                                 <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
                                 <li className="text-white/20">/</li>
                                 <li><Link href="/outils" className="hover:text-white transition-colors">Outils SEO</Link></li>
@@ -148,7 +148,7 @@ export default function GenerateurSchemaPage() {
                             <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
                                 Générateur Schema <span className="text-sauge">JSON-LD</span>
                             </h1>
-                            <p className="text-white/60 text-lg">
+                            <p className="text-soft-light text-lg">
                                 Créez vos données structurées en quelques clics. Prévisualisation en temps réel, copie en un clic.
                             </p>
                         </div>
@@ -171,10 +171,10 @@ export default function GenerateurSchemaPage() {
                             </h2>
 
                             <div className="bg-white/5 rounded-xl border border-white/10 p-6">
-                                <p className="text-white/60 leading-relaxed mb-4">
+                                <p className="text-soft-light leading-relaxed mb-4">
                                     Les schémas JSON-LD permettent aux moteurs de recherche et aux <strong className="text-white">IA génératives</strong> de comprendre précisément le contenu de vos pages. C'est l'un des piliers d'une <Link href="/referencement-naturel" className="text-sauge hover:underline">stratégie de référencement naturel</Link> efficace.
                                 </p>
-                                <p className="text-white/60 leading-relaxed">
+                                <p className="text-soft-light leading-relaxed">
                                     Un <Link href="/audit-seo" className="text-sauge hover:underline">audit SEO professionnel</Link> vérifie systématiquement la présence et la validité de ces balises. Vous pouvez aussi utiliser notre <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">testeur de visibilité IA</Link> pour voir si vos schémas sont correctement détectés.
                                 </p>
                             </div>
@@ -195,7 +195,7 @@ export default function GenerateurSchemaPage() {
                                         { href: "/blog/pourquoi-consultant-seo", text: "Pourquoi travailler avec un consultant SEO" },
                                     ].map((link) => (
                                         <li key={link.href}>
-                                            <Link href={link.href} className="text-white/50 hover:text-sauge transition-colors flex items-center gap-2 text-sm">
+                                            <Link href={link.href} className="text-soft-light hover:text-sauge transition-colors flex items-center gap-2 text-sm">
                                                 <ArrowRight className="w-3 h-3 text-sauge" />
                                                 {link.text}
                                             </Link>
@@ -212,7 +212,7 @@ export default function GenerateurSchemaPage() {
                                         { href: "/consultant-seo-antibes", text: "Consultante SEO à Antibes" },
                                     ].map((link) => (
                                         <li key={link.href}>
-                                            <Link href={link.href} className="text-white/50 hover:text-sauge transition-colors flex items-center gap-2 text-sm">
+                                            <Link href={link.href} className="text-soft-light hover:text-sauge transition-colors flex items-center gap-2 text-sm">
                                                 <ArrowRight className="w-3 h-3 text-sauge" />
                                                 {link.text}
                                             </Link>
@@ -243,7 +243,7 @@ export default function GenerateurSchemaPage() {
                                             <Icon className="w-5 h-5 text-sauge" />
                                         </div>
                                         <h3 className="font-bold text-white mb-1 group-hover:text-sauge transition-colors">{tool.title}</h3>
-                                        <p className="text-sm text-white/50">{tool.description}</p>
+                                        <p className="text-sm text-soft-light">{tool.description}</p>
                                     </Link>
                                 );
                             })}
@@ -267,13 +267,13 @@ export default function GenerateurSchemaPage() {
                                         <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                                             <span className="font-medium text-white pr-4 text-sm">{item.question}</span>
                                             <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-open:rotate-180 transition-transform">
-                                                <svg className="w-3 h-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <svg className="w-3 h-3 text-soft-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                                 </svg>
                                             </span>
                                         </summary>
                                         <div className="px-5 pb-5">
-                                            <p className="text-white/60 text-sm leading-relaxed">{item.answer}</p>
+                                            <p className="text-soft-light text-sm leading-relaxed">{item.answer}</p>
                                         </div>
                                     </details>
                                 ))}
@@ -288,7 +288,7 @@ export default function GenerateurSchemaPage() {
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
                             Besoin d&apos;une stratégie <span className="text-sauge">SEO</span> complète ?
                         </h2>
-                        <p className="text-white/50 mb-8 max-w-xl mx-auto">
+                        <p className="text-soft-light mb-8 max-w-xl mx-auto">
                             Le schema JSON-LD est un élément parmi d'autres. Pour une optimisation SEO globale, je vous accompagne.
                         </p>
                         <Link

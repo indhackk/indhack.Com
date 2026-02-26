@@ -14,11 +14,18 @@ export const metadata: Metadata = {
         description: "Intégrez un testeur de visibilité IA gratuit sur votre site d'agence. Vos visiteurs testent leur SEO, vous recevez leurs emails. Installation en 2 min, 0€.",
         url: "https://indhack.com/partenaires",
         type: "website",
+        images: [{
+            url: "https://indhack.com/api/og?title=Widget%20SEO%20Gratuit%20pour%20Agences&subtitle=G%C3%A9n%C3%A9rez%20des%20leads%20depuis%20votre%20site",
+            width: 1200,
+            height: 630,
+            alt: "Widget SEO Gratuit pour Agences Web - IndHack"
+        }],
     },
     twitter: {
         card: "summary_large_image",
         title: "Widget SEO Gratuit pour Agences Web | Générez des Leads — IndHack",
         description: "Intégrez un testeur de visibilité IA gratuit sur votre site d'agence. Vos visiteurs testent leur SEO, vous recevez leurs emails. Installation en 2 min, 0€.",
+        images: ["https://indhack.com/api/og?title=Widget%20SEO%20Gratuit%20pour%20Agences&subtitle=G%C3%A9n%C3%A9rez%20des%20leads%20depuis%20votre%20site"],
     },
     robots: {
         index: true,

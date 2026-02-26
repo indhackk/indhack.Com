@@ -200,7 +200,7 @@ export default function ReferencementClient() {
                         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
                             Ce que le <span className="text-sauge">référencement</span> vous apporte
                         </h2>
-                        <p className="text-lg text-white/50 mb-12">
+                        <p className="text-lg text-soft-light mb-12">
                             Au-delà des positions, voici l'impact réel sur votre business.
                         </p>
 
@@ -208,17 +208,17 @@ export default function ReferencementClient() {
                             <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
                                 <TrendingUp className="w-10 h-10 text-sauge mx-auto mb-4" />
                                 <h4 className="text-xl font-bold mb-3">Trafic Qualifié</h4>
-                                <p className="text-white/60 text-sm">Des visiteurs qui cherchent activement vos services, pas des curieux.</p>
+                                <p className="text-soft-light text-sm">Des visiteurs qui cherchent activement vos services, pas des curieux.</p>
                             </div>
                             <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
                                 <Target className="w-10 h-10 text-sauge mx-auto mb-4" />
                                 <h4 className="text-xl font-bold mb-3">Leads Préqualifiés</h4>
-                                <p className="text-white/60 text-sm">Des contacts qui ont déjà compris votre valeur grâce à votre contenu.</p>
+                                <p className="text-soft-light text-sm">Des contacts qui ont déjà compris votre valeur grâce à votre contenu.</p>
                             </div>
                             <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
                                 <BarChart3 className="w-10 h-10 text-sauge mx-auto mb-4" />
                                 <h4 className="text-xl font-bold mb-3">Croissance Durable</h4>
-                                <p className="text-white/60 text-sm">Un actif qui génère des résultats même quand vous dormez.</p>
+                                <p className="text-soft-light text-sm">Un actif qui génère des résultats même quand vous dormez.</p>
                             </div>
                         </div>
                     </div>
@@ -360,7 +360,7 @@ export default function ReferencementClient() {
                         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
                             Prêt à <span className="text-sauge">grimper</span> sur Google ?
                         </h2>
-                        <p className="text-lg text-white/50 mb-10 max-w-xl mx-auto">
+                        <p className="text-lg text-soft-light mb-10 max-w-xl mx-auto">
                             Audit gratuit : découvrez où vous en êtes et comment atteindre la première page.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">

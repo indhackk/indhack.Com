@@ -275,7 +275,7 @@ function ProcessItem({ num, title, text }: { num: string; title: string, text: s
             <span className="text-2xl font-bold text-sauge/50">{num}</span>
             <div>
                 <h4 className="text-xl font-bold mb-2">{title}</h4>
-                <div className="text-white/60 text-sm leading-relaxed">
+                <div className="text-soft-light text-sm leading-relaxed">
                     <ReactMarkdown>{text}</ReactMarkdown>
                 </div>
             </div>

@@ -138,7 +138,7 @@ export default function GenerateurRobotsTxtPage() {
                     <div className="container mx-auto px-4 relative z-10">
                         {/* Breadcrumb */}
                         <nav className="mb-8" aria-label="Fil d'Ariane">
-                            <ol className="flex items-center gap-2 text-sm text-white/40">
+                            <ol className="flex items-center gap-2 text-sm text-soft-light">
                                 <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
                                 <li className="text-white/20">/</li>
                                 <li><Link href="/outils" className="hover:text-white transition-colors">Outils SEO</Link></li>
@@ -159,7 +159,7 @@ export default function GenerateurRobotsTxtPage() {
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-4">
                                     Générateur robots.txt
                                 </h1>
-                                <p className="text-lg text-white/60 max-w-2xl">
+                                <p className="text-lg text-soft-light max-w-2xl">
                                     Configurez la visibilité de votre site pour les moteurs de recherche et les IA.
                                     GPTBot, Claude, Perplexity... tous les crawlers 2026 inclus.
                                 </p>
@@ -168,15 +168,15 @@ export default function GenerateurRobotsTxtPage() {
                                 <div className="flex flex-wrap gap-4 mt-8">
                                     <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
                                         <span className="text-white font-bold">12</span>
-                                        <span className="text-white/60 ml-2">crawlers IA</span>
+                                        <span className="text-soft-light ml-2">crawlers IA</span>
                                     </div>
                                     <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
                                         <span className="text-white font-bold">4</span>
-                                        <span className="text-white/60 ml-2">configs prêtes</span>
+                                        <span className="text-soft-light ml-2">configs prêtes</span>
                                     </div>
                                     <div className="px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
                                         <span className="text-white font-bold">100%</span>
-                                        <span className="text-white/60 ml-2">gratuit</span>
+                                        <span className="text-soft-light ml-2">gratuit</span>
                                     </div>
                                 </div>
                             </div>
@@ -205,10 +205,10 @@ export default function GenerateurRobotsTxtPage() {
                             </div>
 
                             <div className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 mb-12">
-                                <p className="text-white/70 text-lg leading-relaxed mb-6">
+                                <p className="text-soft-light text-lg leading-relaxed mb-6">
                                     En 2026, votre fichier <code className="bg-white/10 px-2 py-1 rounded text-sauge">robots.txt</code> ne gère plus seulement Googlebot. <strong className="text-white">Une dizaine de crawlers IA</strong> parcourent le web pour alimenter ChatGPT, Gemini, Perplexity et d'autres. Pour vérifier si ces crawlers accèdent déjà à votre site, utilisez notre <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">testeur de visibilité IA</Link>.
                                 </p>
-                                <p className="text-white/70 text-lg leading-relaxed">
+                                <p className="text-soft-light text-lg leading-relaxed">
                                     La bonne stratégie dépend de vos objectifs : voulez-vous <strong className="text-white">être cité par les IA</strong> (excellent pour la visibilité) ou <strong className="text-white">protéger votre contenu</strong> de l'entraînement des modèles ? Cette configuration fait partie d'une <Link href="/referencement-naturel" className="text-sauge hover:underline">stratégie SEO complète</Link>.
                                 </p>
                             </div>
@@ -228,8 +228,8 @@ export default function GenerateurRobotsTxtPage() {
                                         {CRAWLER_INFO.map((crawler) => (
                                             <tr key={crawler.name} className="hover:bg-white/5 transition-colors">
                                                 <td className="px-6 py-4 font-medium text-white">{crawler.name}</td>
-                                                <td className="px-6 py-4 text-white/60">{crawler.editor}</td>
-                                                <td className="px-6 py-4 text-white/60">{crawler.usage}</td>
+                                                <td className="px-6 py-4 text-soft-light">{crawler.editor}</td>
+                                                <td className="px-6 py-4 text-soft-light">{crawler.usage}</td>
                                                 <td className="px-6 py-4">
                                                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                                                         crawler.recommendation === 'success'
@@ -249,7 +249,7 @@ export default function GenerateurRobotsTxtPage() {
                             <div className="mt-8 bg-white/5 rounded-xl p-6 border border-white/10">
                                 <div className="flex gap-4">
                                     <Bot className="w-6 h-6 text-sauge flex-shrink-0" />
-                                    <p className="text-white/60">
+                                    <p className="text-soft-light">
                                         <strong className="text-white">Ma recommandation :</strong> Autorisez les crawlers de navigation (ChatGPT-User, Claude-Web, PerplexityBot) pour être cité dans les réponses. Bloquez les crawlers d'entraînement (GPTBot, Google-Extended) si vous souhaitez protéger votre contenu original.
                                     </p>
                                 </div>
@@ -279,7 +279,7 @@ export default function GenerateurRobotsTxtPage() {
                                         <h3 className="font-bold text-white mb-1 group-hover:text-sauge transition-colors">
                                             {tool.title}
                                         </h3>
-                                        <p className="text-sm text-white/50">{tool.description}</p>
+                                        <p className="text-sm text-soft-light">{tool.description}</p>
                                     </Link>
                                 );
                             })}
@@ -300,7 +300,7 @@ export default function GenerateurRobotsTxtPage() {
                                         { href: "/blog/seo-local-nice", text: "Guide du SEO local à Nice" },
                                     ].map((link) => (
                                         <li key={link.href}>
-                                            <Link href={link.href} className="text-white/50 hover:text-sauge transition-colors flex items-center gap-2 text-sm">
+                                            <Link href={link.href} className="text-soft-light hover:text-sauge transition-colors flex items-center gap-2 text-sm">
                                                 <ArrowRight className="w-3 h-3 text-sauge" />
                                                 {link.text}
                                             </Link>
@@ -317,7 +317,7 @@ export default function GenerateurRobotsTxtPage() {
                                         { href: "/consultant-seo-cannes", text: "Consultant SEO Cannes" },
                                     ].map((link) => (
                                         <li key={link.href}>
-                                            <Link href={link.href} className="text-white/50 hover:text-sauge transition-colors flex items-center gap-2 text-sm">
+                                            <Link href={link.href} className="text-soft-light hover:text-sauge transition-colors flex items-center gap-2 text-sm">
                                                 <ArrowRight className="w-3 h-3 text-sauge" />
                                                 {link.text}
                                             </Link>
@@ -345,13 +345,13 @@ export default function GenerateurRobotsTxtPage() {
                                         <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                                             <span className="font-medium text-white pr-4 text-sm">{item.question}</span>
                                             <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-open:rotate-180 transition-transform">
-                                                <svg className="w-3 h-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <svg className="w-3 h-3 text-soft-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                                 </svg>
                                             </span>
                                         </summary>
                                         <div className="px-5 pb-5">
-                                            <p className="text-white/60 text-sm leading-relaxed">{item.answer}</p>
+                                            <p className="text-soft-light text-sm leading-relaxed">{item.answer}</p>
                                         </div>
                                     </details>
                                 ))}
@@ -366,7 +366,7 @@ export default function GenerateurRobotsTxtPage() {
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
                             Besoin d&apos;une stratégie <span className="text-sauge">GEO</span> complète ?
                         </h2>
-                        <p className="text-white/50 mb-8 max-w-xl mx-auto">
+                        <p className="text-soft-light mb-8 max-w-xl mx-auto">
                             Le robots.txt est la première étape. Je vous accompagne pour apparaître dans les réponses de ChatGPT et Perplexity.
                         </p>
                         <Link

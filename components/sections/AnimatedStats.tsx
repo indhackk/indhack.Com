@@ -141,7 +141,7 @@ export function AnimatedStats({
                             <p className={`font-bold mb-1 ${isDark ? "text-white" : "text-ink"}`}>
                                 {stat.label}
                             </p>
-                            <p className={`text-sm ${isDark ? "text-white/50" : "text-soft"}`}>
+                            <p className={`text-sm ${isDark ? "text-soft-light" : "text-soft"}`}>
                                 {stat.description}
                             </p>
                         </motion.div>

@@ -50,7 +50,7 @@ export function AboutContent() {
                                 Votre visibilité Google,<br />
                                 <span className="text-sauge">ma spécialité</span>
                             </h1>
-                            <p className="text-xl text-white/60 leading-relaxed max-w-xl mb-10">
+                            <p className="text-xl text-soft-light leading-relaxed max-w-xl mb-10">
                                 Consultante SEO indépendante, j'aide les entreprises ambitieuses à <strong className="text-white">transformer leur présence digitale</strong> en machine à générer des clients qualifiés.
                             </p>
                             <Button
@@ -314,7 +314,7 @@ export function AboutContent() {
                     <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6">
                         Prêt à booster votre <span className="text-sauge">visibilité</span> ?
                     </h2>
-                    <p className="text-xl text-white/50 mb-10 max-w-xl mx-auto">
+                    <p className="text-xl text-soft-light mb-10 max-w-xl mx-auto">
                         Discutons de votre projet et voyons comment atteindre vos objectifs ensemble.
                     </p>
                     <Button

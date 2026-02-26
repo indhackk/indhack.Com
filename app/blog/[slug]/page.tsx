@@ -268,13 +268,13 @@ export default function BlogPostPage({ params }: PageProps) {
 
                                 <div className="bg-ink p-6 rounded-2xl text-white">
                                     <div className="font-heading font-bold text-lg mb-4">Besoin d'aide ?</div>
-                                    <p className="text-white/70 text-sm mb-6">
+                                    <p className="text-soft-light text-sm mb-6">
                                         Passons de la théorie à la pratique ensemble.
                                     </p>
                                     <AuditCTA className="w-full bg-sauge hover:bg-white hover:text-ink transition-all mb-3 rounded-xl">
                                         Audit Gratuit
                                     </AuditCTA>
-                                    <a href="tel:0661139748" className="flex items-center justify-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
+                                    <a href="tel:0661139748" className="flex items-center justify-center gap-2 text-sm text-soft-light hover:text-white transition-colors">
                                         <Phone className="w-4 h-4" />
                                         06 61 13 97 48
                                     </a>

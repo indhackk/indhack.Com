@@ -164,7 +164,7 @@ export function CityCarousel({
                             <h3 className="text-xl font-bold text-white mb-2">
                                 Votre ville n'est pas listée ?
                             </h3>
-                            <p className="text-white/60 text-sm mb-6">
+                            <p className="text-soft-light text-sm mb-6">
                                 J'interviens dans toute la France. Contactez-moi pour discuter de votre projet.
                             </p>
                             <Link

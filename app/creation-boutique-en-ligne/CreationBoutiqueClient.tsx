@@ -297,7 +297,7 @@ export default function CreationBoutiqueClient() {
                         <h2 className="text-3xl font-heading font-bold mb-4">
                             De l'idée à la <span className="text-sauge">première vente</span>
                         </h2>
-                        <p className="text-lg text-white/70 max-w-2xl mx-auto">
+                        <p className="text-lg text-soft-light max-w-2xl mx-auto">
                             Un processus structuré pour garantir le succès de votre boutique.
                         </p>
                     </div>
@@ -314,7 +314,7 @@ export default function CreationBoutiqueClient() {
                             >
                                 <span className="text-3xl font-bold text-sauge/50">{item.step}</span>
                                 <h3 className="text-lg font-bold mt-2 mb-2">{item.title}</h3>
-                                <p className="text-white/70 text-sm">{item.desc}</p>
+                                <p className="text-soft-light text-sm">{item.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -483,7 +483,7 @@ export default function CreationBoutiqueClient() {
                         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
                             Prêt à <span className="text-sauge">vendre en ligne</span> ?
                         </h2>
-                        <p className="text-lg text-white/50 mb-10 max-w-xl mx-auto">
+                        <p className="text-lg text-soft-light mb-10 max-w-xl mx-auto">
                             Discutons de votre projet et voyons ensemble comment créer une boutique qui génère des ventes.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">

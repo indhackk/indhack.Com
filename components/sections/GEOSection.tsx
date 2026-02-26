@@ -35,18 +35,18 @@ export function GEOSection() {
 
                             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
                                 Optimisation pour <span className="text-sauge-light">l'IA</span>
-                                <span className="block text-xl md:text-2xl font-normal text-white/70 mt-2">
+                                <span className="block text-xl md:text-2xl font-normal text-soft-light mt-2">
                                     Generative Engine Optimization (GEO)
                                 </span>
                             </h2>
 
-                            <p className="text-white/70 mb-6 leading-relaxed">
+                            <p className="text-soft-light mb-6 leading-relaxed">
                                 En 2026, vos clients ne cherchent plus seulement sur Google.
                                 Ils posent leurs questions à <strong className="text-white">ChatGPT</strong>, <strong className="text-white">Perplexity</strong> et <strong className="text-white">Claude</strong>.
                                 Si ces IA ne vous citent pas, vous perdez des opportunités invisibles.
                             </p>
 
-                            <p className="text-white/70 mb-8 leading-relaxed">
+                            <p className="text-soft-light mb-8 leading-relaxed">
                                 J'optimise votre site pour être <strong className="text-white">référencé ET recommandé</strong> par
                                 les moteurs de recherche traditionnels et les moteurs de réponse IA.
                                 Une double visibilité qui vous positionne en avance sur vos concurrents.
@@ -78,7 +78,7 @@ export function GEOSection() {
                                     </div>
                                     <div>
                                         <p className="font-bold text-white">Audit Visibilité IA</p>
-                                        <p className="text-xs text-white/50">8 crawlers analysés</p>
+                                        <p className="text-xs text-soft-light">8 crawlers analysés</p>
                                     </div>
                                 </div>
 
@@ -86,11 +86,11 @@ export function GEOSection() {
                                 <div className="grid grid-cols-2 gap-4 mb-6">
                                     <div className="bg-white/5 rounded-xl p-4 text-center">
                                         <p className="text-3xl font-bold text-sauge-light">40%</p>
-                                        <p className="text-xs text-white/60 mt-1">des recherches passent par l'IA</p>
+                                        <p className="text-xs text-soft-light mt-1">des recherches passent par l'IA</p>
                                     </div>
                                     <div className="bg-white/5 rounded-xl p-4 text-center">
                                         <p className="text-3xl font-bold text-sauge-light">+200%</p>
-                                        <p className="text-xs text-white/60 mt-1">trafic IA d'ici 2027</p>
+                                        <p className="text-xs text-soft-light mt-1">trafic IA d'ici 2027</p>
                                     </div>
                                 </div>
 

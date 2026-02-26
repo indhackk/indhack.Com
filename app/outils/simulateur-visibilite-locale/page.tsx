@@ -136,7 +136,7 @@ export default function SimulateurLocalPage() {
                     <div className="container mx-auto px-4 relative z-10">
                         {/* Breadcrumb */}
                         <nav className="mb-8" aria-label="Fil d'Ariane">
-                            <ol className="flex items-center gap-2 text-sm text-white/40">
+                            <ol className="flex items-center gap-2 text-sm text-soft-light">
                                 <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
                                 <li className="text-white/20">/</li>
                                 <li><Link href="/outils" className="hover:text-white transition-colors">Outils SEO</Link></li>
@@ -154,7 +154,7 @@ export default function SimulateurLocalPage() {
                             <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
                                 Simulateur Visibilité <span className="text-sauge">Locale</span>
                             </h1>
-                            <p className="text-white/60 text-lg">
+                            <p className="text-soft-light text-lg">
                                 Qui domine la page 1 de Google pour votre métier dans votre ville ?
                                 Plateformes nationales ou commerces locaux ? Identifiez vos opportunités SEO.
                             </p>
@@ -177,21 +177,21 @@ export default function SimulateurLocalPage() {
                                     <Search className="w-5 h-5 text-sauge" />
                                 </div>
                                 <h3 className="font-bold text-white text-sm mb-1">Top 10 Google</h3>
-                                <p className="text-xs text-white/50">Analyse des 10 premiers résultats organiques pour votre requête locale</p>
+                                <p className="text-xs text-soft-light">Analyse des 10 premiers résultats organiques pour votre requête locale</p>
                             </div>
                             <div className="bg-white/5 rounded-xl p-5 border border-white/10 text-center">
                                 <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center mx-auto mb-3">
                                     <Users className="w-5 h-5 text-sauge" />
                                 </div>
                                 <h3 className="font-bold text-white text-sm mb-1">Classification</h3>
-                                <p className="text-xs text-white/50">Plateformes (PagesJaunes, Doctolib...) vs annuaires vs sites locaux</p>
+                                <p className="text-xs text-soft-light">Plateformes (PagesJaunes, Doctolib...) vs annuaires vs sites locaux</p>
                             </div>
                             <div className="bg-white/5 rounded-xl p-5 border border-white/10 text-center">
                                 <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center mx-auto mb-3">
                                     <TrendingUp className="w-5 h-5 text-sauge" />
                                 </div>
                                 <h3 className="font-bold text-white text-sm mb-1">Opportunités</h3>
-                                <p className="text-xs text-white/50">Niveau de concurrence et recommandations SEO personnalisées</p>
+                                <p className="text-xs text-soft-light">Niveau de concurrence et recommandations SEO personnalisées</p>
                             </div>
                         </div>
                     </div>
@@ -302,7 +302,7 @@ export default function SimulateurLocalPage() {
                                             <Icon className="w-5 h-5 text-sauge" />
                                         </div>
                                         <h3 className="font-bold text-white mb-1 group-hover:text-sauge transition-colors">{tool.title}</h3>
-                                        <p className="text-sm text-white/50">{tool.description}</p>
+                                        <p className="text-sm text-soft-light">{tool.description}</p>
                                     </Link>
                                 );
                             })}
@@ -326,13 +326,13 @@ export default function SimulateurLocalPage() {
                                         <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                                             <span className="font-medium text-white pr-4 text-sm">{item.question}</span>
                                             <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-open:rotate-180 transition-transform">
-                                                <svg className="w-3 h-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <svg className="w-3 h-3 text-soft-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                                 </svg>
                                             </span>
                                         </summary>
                                         <div className="px-5 pb-5">
-                                            <p className="text-white/60 text-sm leading-relaxed">{item.answer}</p>
+                                            <p className="text-soft-light text-sm leading-relaxed">{item.answer}</p>
                                         </div>
                                     </details>
                                 ))}
@@ -347,7 +347,7 @@ export default function SimulateurLocalPage() {
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
                             Besoin de dominer votre <span className="text-sauge">marché local</span> ?
                         </h2>
-                        <p className="text-white/50 mb-8 max-w-xl mx-auto">
+                        <p className="text-soft-light mb-8 max-w-xl mx-auto">
                             Cet outil vous montre la situation. Pour une stratégie SEO local complète
                             (Google Business, citations, backlinks locaux), je vous accompagne.
                         </p>

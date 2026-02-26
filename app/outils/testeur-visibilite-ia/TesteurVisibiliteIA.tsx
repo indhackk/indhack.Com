@@ -131,7 +131,7 @@ function ScoreGauge({ score }: { score: number }) {
                 >
                     {score}
                 </motion.span>
-                <span className="text-white/50 text-sm">/100</span>
+                <span className="text-soft-light text-sm">/100</span>
             </div>
         </div>
     );
@@ -141,7 +141,7 @@ function CrawlerRow({ crawler }: { crawler: CrawlerStatus }) {
     const statusConfig = {
         allowed: { icon: CheckCircle2, color: "text-emerald-400", bg: "bg-emerald-500/20", border: "border-emerald-500/30" },
         blocked: { icon: XCircle, color: "text-red-400", bg: "bg-red-500/20", border: "border-red-500/30" },
-        not_mentioned: { icon: MinusCircle, color: "text-white/40", bg: "bg-white/5", border: "border-white/10" },
+        not_mentioned: { icon: MinusCircle, color: "text-soft-light", bg: "bg-white/5", border: "border-white/10" },
     };
     const config = statusConfig[crawler.status];
     const Icon = config.icon;
@@ -159,7 +159,7 @@ function CrawlerRow({ crawler }: { crawler: CrawlerStatus }) {
                     )}
                 </div>
             </div>
-            <span className="text-xs text-white/40">{crawler.company}</span>
+            <span className="text-xs text-soft-light">{crawler.company}</span>
         </div>
     );
 }
@@ -177,7 +177,7 @@ function CategoryCard({ category, data }: { category: keyof typeof CATEGORY_CONF
                 className="w-full p-4 flex items-center gap-4 text-left hover:bg-white/5 transition-colors"
             >
                 <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-white/60" />
+                    <Icon className="w-5 h-5 text-soft-light" />
                 </div>
                 <div className="flex-1">
                     <div className="flex items-center justify-between mb-1">
@@ -195,7 +195,7 @@ function CategoryCard({ category, data }: { category: keyof typeof CATEGORY_CONF
                         />
                     </div>
                 </div>
-                <svg className={`w-4 h-4 text-white/40 transition-transform ${isOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className={`w-4 h-4 text-soft-light transition-transform ${isOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
             </button>
@@ -224,9 +224,9 @@ function CategoryCard({ category, data }: { category: keyof typeof CATEGORY_CONF
                                     <div className="flex-1 min-w-0">
                                         <div className="flex items-center justify-between">
                                             <span className="text-xs font-medium text-white">{check.label}</span>
-                                            <span className="text-[10px] text-white/40">{check.points}/{check.maxPoints}</span>
+                                            <span className="text-[10px] text-soft-light">{check.points}/{check.maxPoints}</span>
                                         </div>
-                                        <p className="text-[11px] text-white/50 mt-0.5">{check.detail}</p>
+                                        <p className="text-[11px] text-soft-light mt-0.5">{check.detail}</p>
                                         {check.fixUrl && (
                                             <Link href={check.fixUrl} className="inline-flex items-center gap-1 text-[11px] text-sauge font-medium hover:underline mt-1">
                                                 {check.fixLabel || "Corriger"}
@@ -359,7 +359,7 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                             </motion.div>
                         )}
 
-                        <p className="text-center text-sm text-white/40 mt-4">
+                        <p className="text-center text-sm text-soft-light mt-4">
                             Gratuit • Sans inscription • 8 crawlers IA analysés
                         </p>
                     </form>
@@ -407,14 +407,14 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                                     href={result.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-white/50 hover:text-sauge flex items-center justify-center md:justify-start gap-1 text-sm"
+                                    className="text-soft-light hover:text-sauge flex items-center justify-center md:justify-start gap-1 text-sm"
                                 >
                                     {result.url}
                                     <ExternalLink className="w-3 h-3" />
                                 </a>
                                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mt-4">
-                                    <span className="px-2 py-1 bg-white/10 rounded text-xs text-white/60">{result.wordCount} mots</span>
-                                    <span className="px-2 py-1 bg-white/10 rounded text-xs text-white/60">{result.responseTime}ms</span>
+                                    <span className="px-2 py-1 bg-white/10 rounded text-xs text-soft-light">{result.wordCount} mots</span>
+                                    <span className="px-2 py-1 bg-white/10 rounded text-xs text-soft-light">{result.responseTime}ms</span>
                                     {result.hasLlmsTxt && (
                                         <span className="px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded text-xs font-medium border border-emerald-500/30">llms.txt</span>
                                     )}
@@ -522,7 +522,7 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                         <h3 className="text-xl font-bold text-white mb-2">
                             Besoin d&apos;aide pour améliorer votre score ?
                         </h3>
-                        <p className="text-white/50 mb-6 text-sm">
+                        <p className="text-soft-light mb-6 text-sm">
                             Je vous accompagne pour optimiser votre visibilité IA.
                         </p>
                         <Link

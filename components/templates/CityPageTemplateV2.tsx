@@ -281,23 +281,23 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="text-center p-4 bg-white/5 rounded-xl">
                                         <p className="text-3xl font-bold text-sauge">46%</p>
-                                        <p className="text-xs text-white/60 mt-1">Recherches locales</p>
+                                        <p className="text-xs text-soft-light mt-1">Recherches locales</p>
                                     </div>
                                     <div className="text-center p-4 bg-white/5 rounded-xl">
                                         <p className="text-3xl font-bold text-sauge">78%</p>
-                                        <p className="text-xs text-white/60 mt-1">Achat sous 24h</p>
+                                        <p className="text-xs text-soft-light mt-1">Achat sous 24h</p>
                                     </div>
                                     <div className="text-center p-4 bg-white/5 rounded-xl">
                                         <p className="text-3xl font-bold text-sauge">88%</p>
-                                        <p className="text-xs text-white/60 mt-1">Font confiance aux avis</p>
+                                        <p className="text-xs text-soft-light mt-1">Font confiance aux avis</p>
                                     </div>
                                     <div className="text-center p-4 bg-white/5 rounded-xl">
                                         <p className="text-3xl font-bold text-sauge">x5</p>
-                                        <p className="text-xs text-white/60 mt-1">ROI moyen SEO</p>
+                                        <p className="text-xs text-soft-light mt-1">ROI moyen SEO</p>
                                     </div>
                                 </div>
                                 <div className="mt-6 pt-6 border-t border-white/10">
-                                    <p className="text-sm text-white/70 mb-4">Population {city} : <strong className="text-white">{cityData.population} hab.</strong></p>
+                                    <p className="text-sm text-soft-light mb-4">Population {city} : <strong className="text-white">{cityData.population} hab.</strong></p>
                                     <Button
                                         onClick={openAuditModal}
                                         className="w-full bg-sauge text-white hover:bg-white hover:text-ink rounded-xl py-6 font-bold"
@@ -412,7 +412,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                     {item.icon}
                                 </div>
                                 <h4 className="font-bold text-sm mb-1">{item.title}</h4>
-                                <p className="text-xs text-white/60">{item.desc}</p>
+                                <p className="text-xs text-soft-light">{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -649,7 +649,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                         <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
                             Prêt à dominer Google à <span className="text-sauge-light">{city}</span> ?
                         </h2>
-                        <p className="text-white/60 mb-8 max-w-lg mx-auto text-sm">
+                        <p className="text-soft-light mb-8 max-w-lg mx-auto text-sm">
                             Audit SEO local offert. Découvrez votre potentiel de croissance en 15 minutes.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">

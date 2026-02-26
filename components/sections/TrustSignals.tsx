@@ -118,7 +118,7 @@ export function TrustSignals({ variant = "full" }: TrustSignalsProps) {
                             <h3 className="font-bold text-ink group-hover:text-white mb-2 transition-colors">
                                 {point.title}
                             </h3>
-                            <p className="text-sm text-soft group-hover:text-white/60 transition-colors">
+                            <p className="text-sm text-soft group-hover:text-soft-light transition-colors">
                                 {point.description}
                             </p>
                         </motion.div>

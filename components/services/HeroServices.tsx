@@ -41,7 +41,7 @@ export function HeroServices({ title, subtitle, category, image, customVisual }:
                             {title}
                         </h1>
 
-                        <p className="text-xl lg:text-2xl text-white/60 leading-relaxed max-w-xl mb-12">
+                        <p className="text-xl lg:text-2xl text-soft-light leading-relaxed max-w-xl mb-12">
                             {subtitle}
                         </p>
 

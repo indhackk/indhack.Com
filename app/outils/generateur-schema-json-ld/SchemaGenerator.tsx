@@ -410,7 +410,7 @@ export function SchemaGenerator() {
                                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                                         isActive
                                             ? "bg-sauge text-white"
-                                            : "bg-white/5 text-white/60 hover:bg-white/10 hover:text-white"
+                                            : "bg-white/5 text-soft-light hover:bg-white/10 hover:text-white"
                                     }`}
                                 >
                                     <Icon className="w-4 h-4" />
@@ -432,7 +432,7 @@ export function SchemaGenerator() {
                                 <button
                                     key={template.id}
                                     onClick={() => applyTemplate(template.id)}
-                                    className="px-3 py-1.5 bg-white/5 hover:bg-sauge/20 text-white/60 hover:text-sauge rounded-lg text-sm transition-colors border border-white/10 hover:border-sauge/30"
+                                    className="px-3 py-1.5 bg-white/5 hover:bg-sauge/20 text-soft-light hover:text-sauge rounded-lg text-sm transition-colors border border-white/10 hover:border-sauge/30"
                                 >
                                     {template.label}
                                 </button>
@@ -467,7 +467,7 @@ export function SchemaGenerator() {
 
                     {activeType === "FAQPage" && (
                         <>
-                            <p className="text-sm text-white/60 mb-4">Ajoutez vos questions et réponses pour créer une page FAQ structurée.</p>
+                            <p className="text-sm text-soft-light mb-4">Ajoutez vos questions et réponses pour créer une page FAQ structurée.</p>
                             {faqItems.map((item, index) => (
                                 <div key={index} className="p-4 bg-white/5 rounded-xl space-y-3 border border-white/10">
                                     <div className="flex items-center justify-between">
@@ -659,10 +659,10 @@ export function SchemaGenerator() {
 
                     {activeType === "BreadcrumbList" && (
                         <>
-                            <p className="text-sm text-white/60 mb-4">Configurez votre fil d'Ariane (breadcrumb) pour améliorer la navigation et le SEO.</p>
+                            <p className="text-sm text-soft-light mb-4">Configurez votre fil d'Ariane (breadcrumb) pour améliorer la navigation et le SEO.</p>
                             {breadcrumbs.map((item, index) => (
                                 <div key={index} className="flex gap-2 items-center">
-                                    <span className="text-sm text-white/50 w-8">{index + 1}.</span>
+                                    <span className="text-sm text-soft-light w-8">{index + 1}.</span>
                                     <input
                                         type="text"
                                         value={item.name}
@@ -716,7 +716,7 @@ export function SchemaGenerator() {
                             style={{ width: `${score}%` }}
                         />
                     </div>
-                    <p className="text-sm text-white/60 mt-2">
+                    <p className="text-sm text-soft-light mt-2">
                         {score >= 70 ? "Excellent ! Votre schema est bien rempli." : score >= 40 ? "Bon début. Complétez les champs recommandés." : "Ajoutez plus d'informations pour un schema efficace."}
                     </p>
                 </div>
@@ -730,14 +730,14 @@ export function SchemaGenerator() {
                                 <span className="w-3 h-3 rounded-full bg-amber-500" />
                                 <span className="w-3 h-3 rounded-full bg-emerald-500" />
                             </div>
-                            <span className="font-mono text-sm text-white/60 ml-2">schema.json</span>
+                            <span className="font-mono text-sm text-soft-light ml-2">schema.json</span>
                         </div>
                         <div className="flex gap-2">
                             <a
                                 href="https://search.google.com/test/rich-results"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 px-3 py-1.5 text-sm text-white/60 hover:text-white transition-colors"
+                                className="flex items-center gap-2 px-3 py-1.5 text-sm text-soft-light hover:text-white transition-colors"
                             >
                                 <ExternalLink className="w-4 h-4" />
                                 Tester
@@ -778,7 +778,7 @@ export function SchemaGenerator() {
                         <Eye className="w-5 h-5 text-sauge" />
                         Comment utiliser ce code ?
                     </h3>
-                    <ol className="space-y-2 text-sm text-white/70">
+                    <ol className="space-y-2 text-sm text-soft-light">
                         <li className="flex gap-3">
                             <span className="w-6 h-6 rounded-full bg-sauge/20 text-sauge flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
                             <span>Copiez le code JSON-LD ci-dessus</span>

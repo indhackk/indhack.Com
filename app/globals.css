@@ -10,6 +10,7 @@
   --sauge: #2E5E4E;  /* Darkened for WCAG AA 4.5:1 on white AND gray-50 backgrounds */
   --sauge-light: #8FBFAA;  /* Light sauge for dark backgrounds (WCAG AA on ink) */
   --soft: #3D4D46;   /* Darkened for WCAG AA contrast */
+  --soft-light: #B8C4BE;  /* Light soft for dark backgrounds (WCAG AA on ink) */
   --line: #E4EBE7;
   --fond-clair: #FAFBFA;
   --accent: #D4A853;

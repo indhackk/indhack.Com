@@ -36,7 +36,7 @@ export function CTASection() {
                         <span className="text-sauge-light">Performance Business</span>.
                     </h2>
 
-                    <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-xl md:text-2xl text-soft-light mb-12 max-w-2xl mx-auto leading-relaxed">
                         Le SEO est un moteur de revenus, pas un coût. <br />
                         Échangeons sur votre stratégie lors d'un audit offert.
                     </p>
@@ -62,7 +62,7 @@ export function CTASection() {
                         </Link>
                     </div>
 
-                    <div className="mt-16 flex items-center justify-center gap-10 opacity-30">
+                    <div className="mt-16 flex items-center justify-center gap-10 opacity-50">
                         <div className="flex flex-col items-center">
                             <span className="text-2xl font-bold italic">RAPIDE</span>
                         </div>

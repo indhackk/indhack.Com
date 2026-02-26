@@ -164,7 +164,7 @@ export function PartenairesClient() {
 
                         {/* CTA Arrow */}
                         <div className="mt-12 animate-bounce">
-                            <ChevronDown className="w-6 h-6 text-white/40 mx-auto" />
+                            <ChevronDown className="w-6 h-6 text-soft-light mx-auto" />
                         </div>
                     </div>
                 </div>

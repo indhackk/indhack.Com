@@ -148,7 +148,7 @@ export default function TesteurVisibiliteIAPage() {
                     <div className="container mx-auto px-4 relative z-10">
                         {/* Breadcrumb */}
                         <nav className="mb-8" aria-label="Fil d'Ariane">
-                            <ol className="flex items-center gap-2 text-sm text-white/40">
+                            <ol className="flex items-center gap-2 text-sm text-soft-light">
                                 <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
                                 <li className="text-white/20">/</li>
                                 <li><Link href="/outils" className="hover:text-white transition-colors">Outils SEO</Link></li>
@@ -166,7 +166,7 @@ export default function TesteurVisibiliteIAPage() {
                             <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
                                 Testeur Visibilité <span className="text-sauge">IA</span>
                             </h1>
-                            <p className="text-white/60 text-lg">
+                            <p className="text-soft-light text-lg">
                                 Votre site est-il visible par ChatGPT, Perplexity et Claude ?
                             </p>
                         </div>
@@ -198,7 +198,7 @@ export default function TesteurVisibiliteIAPage() {
                                                 <Icon className="w-5 h-5 text-sauge" />
                                             </div>
                                             <h3 className="font-bold text-white text-sm mb-1">{cat.title}</h3>
-                                            <p className="text-xs text-white/50 mb-2">{cat.desc}</p>
+                                            <p className="text-xs text-soft-light mb-2">{cat.desc}</p>
                                             <span className="text-xs font-bold text-sauge">{cat.points} pts</span>
                                         </div>
                                     );
@@ -227,7 +227,7 @@ export default function TesteurVisibiliteIAPage() {
                                             <Icon className="w-5 h-5 text-sauge" />
                                         </div>
                                         <h3 className="font-bold text-white mb-1 group-hover:text-sauge transition-colors">{tool.title}</h3>
-                                        <p className="text-sm text-white/50">{tool.description}</p>
+                                        <p className="text-sm text-soft-light">{tool.description}</p>
                                     </Link>
                                 );
                             })}
@@ -248,7 +248,7 @@ export default function TesteurVisibiliteIAPage() {
                                         { href: "/blog/importance-audit-seo", text: "L'audit SEO : point de départ de votre croissance" },
                                     ].map((link) => (
                                         <li key={link.href}>
-                                            <Link href={link.href} className="text-white/50 hover:text-sauge transition-colors flex items-center gap-2 text-sm">
+                                            <Link href={link.href} className="text-soft-light hover:text-sauge transition-colors flex items-center gap-2 text-sm">
                                                 <ArrowRight className="w-3 h-3 text-sauge" />
                                                 {link.text}
                                             </Link>
@@ -266,7 +266,7 @@ export default function TesteurVisibiliteIAPage() {
                                         { href: "/consultant-seo-sophia-antipolis", text: "Consultant SEO Sophia Antipolis" },
                                     ].map((link) => (
                                         <li key={link.href}>
-                                            <Link href={link.href} className="text-white/50 hover:text-sauge transition-colors flex items-center gap-2 text-sm">
+                                            <Link href={link.href} className="text-soft-light hover:text-sauge transition-colors flex items-center gap-2 text-sm">
                                                 <MapPin className="w-3 h-3 text-sauge" />
                                                 {link.text}
                                             </Link>
@@ -294,13 +294,13 @@ export default function TesteurVisibiliteIAPage() {
                                         <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
                                             <span className="font-medium text-white pr-4 text-sm">{item.question}</span>
                                             <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 group-open:rotate-180 transition-transform">
-                                                <svg className="w-3 h-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <svg className="w-3 h-3 text-soft-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                                 </svg>
                                             </span>
                                         </summary>
                                         <div className="px-5 pb-5">
-                                            <p className="text-white/60 text-sm leading-relaxed">{item.answer}</p>
+                                            <p className="text-soft-light text-sm leading-relaxed">{item.answer}</p>
                                         </div>
                                     </details>
                                 ))}
@@ -315,7 +315,7 @@ export default function TesteurVisibiliteIAPage() {
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
                             Besoin d&apos;une stratégie <span className="text-sauge">GEO</span> complète ?
                         </h2>
-                        <p className="text-white/50 mb-8 max-w-xl mx-auto">
+                        <p className="text-soft-light mb-8 max-w-xl mx-auto">
                             Je vous accompagne pour apparaître dans les réponses de ChatGPT et Perplexity.
                         </p>
                         <Link

@@ -115,7 +115,7 @@ export default function EtudesDeCasClient() {
                                 et transformer leur visibilité en chiffre d'affaires.
                             </p>
 
-                            <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
+                            <div className="flex flex-wrap justify-center gap-6 text-sm text-soft-light">
                                 <span className="flex items-center gap-2">
                                     <TrendingUp className="w-4 h-4 text-sauge" />
                                     +300% trafic moyen
@@ -150,15 +150,15 @@ export default function EtudesDeCasClient() {
                                 {/* Header */}
                                 <div className="bg-ink text-white p-8">
                                     <div className="flex flex-wrap gap-4 mb-4">
-                                        <span className="flex items-center gap-2 text-sm text-white/60">
+                                        <span className="flex items-center gap-2 text-sm text-soft-light">
                                             <Briefcase className="w-4 h-4" />
                                             {study.sector}
                                         </span>
-                                        <span className="flex items-center gap-2 text-sm text-white/60">
+                                        <span className="flex items-center gap-2 text-sm text-soft-light">
                                             <MapPin className="w-4 h-4" />
                                             {study.location}
                                         </span>
-                                        <span className="flex items-center gap-2 text-sm text-white/60">
+                                        <span className="flex items-center gap-2 text-sm text-soft-light">
                                             <Calendar className="w-4 h-4" />
                                             {study.duration}
                                         </span>
@@ -297,7 +297,7 @@ export default function EtudesDeCasClient() {
                         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
                             Prêt à écrire votre <span className="text-sauge">success story</span> ?
                         </h2>
-                        <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+                        <p className="text-xl text-soft-light mb-8 max-w-2xl mx-auto">
                             Audit gratuit et sans engagement. Découvrez votre potentiel de croissance.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">

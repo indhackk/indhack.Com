@@ -193,7 +193,7 @@ export function RobotsGenerator() {
                                         <Icon className="w-4 h-4 text-white" />
                                     </div>
                                     <div className="font-bold text-white text-sm">{preset.name}</div>
-                                    <div className="text-xs text-white/50 mt-1">{preset.description}</div>
+                                    <div className="text-xs text-soft-light mt-1">{preset.description}</div>
                                 </button>
                             );
                         })}
@@ -215,7 +215,7 @@ export function RobotsGenerator() {
                             style={{ width: `${(allowedAI / totalAI) * 100}%` }}
                         />
                     </div>
-                    <p className="text-sm text-white/60 mt-3">
+                    <p className="text-sm text-soft-light mt-3">
                         {allowedAI === totalAI
                             ? "Votre site sera visible par toutes les IA"
                             : allowedAI === 0
@@ -260,7 +260,7 @@ export function RobotsGenerator() {
                     <label className="block font-bold text-white mb-2">
                         Chemins à bloquer (Disallow)
                     </label>
-                    <p className="text-sm text-white/50 mb-3">Un chemin par ligne. Ex: /admin/, /private/</p>
+                    <p className="text-sm text-soft-light mb-3">Un chemin par ligne. Ex: /admin/, /private/</p>
                     <textarea
                         value={customDisallow}
                         onChange={(e) => setCustomDisallow(e.target.value)}
@@ -294,12 +294,12 @@ export function RobotsGenerator() {
                                 <span className="w-3 h-3 rounded-full bg-amber-500" />
                                 <span className="w-3 h-3 rounded-full bg-emerald-500" />
                             </div>
-                            <span className="font-mono text-sm text-white/60 ml-2">robots.txt</span>
+                            <span className="font-mono text-sm text-soft-light ml-2">robots.txt</span>
                         </div>
                         <div className="flex gap-2">
                             <button
                                 onClick={handleDownload}
-                                className="flex items-center gap-2 px-3 py-1.5 text-sm text-white/60 hover:text-white transition-colors"
+                                className="flex items-center gap-2 px-3 py-1.5 text-sm text-soft-light hover:text-white transition-colors"
                             >
                                 <Download className="w-4 h-4" />
                                 Télécharger
@@ -327,17 +327,17 @@ export function RobotsGenerator() {
                                     ) : line.startsWith('Disallow:') ? (
                                         <>
                                             <span className="text-red-400">Disallow:</span>
-                                            <span className="text-white/60">{line.replace('Disallow:', '')}</span>
+                                            <span className="text-soft-light">{line.replace('Disallow:', '')}</span>
                                         </>
                                     ) : line.startsWith('Allow:') ? (
                                         <>
                                             <span className="text-emerald-400">Allow:</span>
-                                            <span className="text-white/60">{line.replace('Allow:', '')}</span>
+                                            <span className="text-soft-light">{line.replace('Allow:', '')}</span>
                                         </>
                                     ) : line.startsWith('Sitemap:') ? (
                                         <>
                                             <span className="text-cyan-400">Sitemap:</span>
-                                            <span className="text-white/60">{line.replace('Sitemap:', '')}</span>
+                                            <span className="text-soft-light">{line.replace('Sitemap:', '')}</span>
                                         </>
                                     ) : (
                                         <span>{line}</span>
@@ -354,7 +354,7 @@ export function RobotsGenerator() {
                         <Eye className="w-4 h-4 text-sauge" />
                         Comment utiliser ce fichier ?
                     </h3>
-                    <ol className="space-y-1.5 text-xs text-white/70">
+                    <ol className="space-y-1.5 text-xs text-soft-light">
                         <li>1. Téléchargez ou copiez le fichier</li>
                         <li>2. Placez-le à la racine de votre site</li>
                         <li>3. Vérifiez : <code className="bg-white/10 px-1 rounded text-sauge">votresite.com/robots.txt</code></li>
@@ -365,7 +365,7 @@ export function RobotsGenerator() {
                 <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4">
                     <div className="flex gap-2">
                         <Info className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
-                        <p className="text-xs text-white/70">
+                        <p className="text-xs text-soft-light">
                             Le robots.txt est une <strong className="text-white">directive</strong>, pas une protection. Les bots malveillants l&apos;ignorent.
                         </p>
                     </div>
@@ -405,12 +405,12 @@ function CrawlerSection({
                 <div className="flex items-center gap-2">
                     {icon}
                     <span className="font-bold text-white">{title}</span>
-                    <span className="text-sm text-white/50">
+                    <span className="text-sm text-soft-light">
                         ({crawlers.filter(c => settings[c.id]).length}/{crawlers.length})
                     </span>
                 </div>
                 <svg
-                    className={`w-5 h-5 text-white/50 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                    className={`w-5 h-5 text-soft-light transition-transform ${isOpen ? 'rotate-180' : ''}`}
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -428,7 +428,7 @@ function CrawlerSection({
                         >
                             <div className="flex-1">
                                 <div className="font-medium text-white text-sm">{crawler.name}</div>
-                                <div className="text-xs text-white/50">{crawler.description}</div>
+                                <div className="text-xs text-soft-light">{crawler.description}</div>
                             </div>
                             <button
                                 onClick={() => onToggle(crawler.id)}

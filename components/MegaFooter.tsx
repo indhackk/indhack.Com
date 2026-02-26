@@ -81,7 +81,7 @@ export function MegaFooter() {
                                 <li key={service.href}>
                                     <Link
                                         href={service.href}
-                                        className="text-sm text-white/70 hover:text-white transition-colors"
+                                        className="text-sm text-soft-light hover:text-white transition-colors"
                                     >
                                         {service.title}
                                     </Link>
@@ -103,7 +103,7 @@ export function MegaFooter() {
                                 <Link
                                     key={city.href}
                                     href={city.href}
-                                    className="text-sm text-white/70 hover:text-sauge-light transition-colors"
+                                    className="text-sm text-soft-light hover:text-sauge-light transition-colors"
                                 >
                                     {city.name}
                                 </Link>
@@ -123,7 +123,7 @@ export function MegaFooter() {
                                 <li key={resource.href}>
                                     <Link
                                         href={resource.href}
-                                        className="text-sm text-white/70 hover:text-white transition-colors"
+                                        className="text-sm text-soft-light hover:text-white transition-colors"
                                     >
                                         {resource.title}
                                     </Link>
@@ -163,7 +163,7 @@ export function MegaFooter() {
                             </a>
                             <a
                                 href="mailto:contact@indhack.com"
-                                className="flex items-center gap-3 text-white/70 hover:text-white transition-colors text-sm"
+                                className="flex items-center gap-3 text-soft-light hover:text-white transition-colors text-sm"
                             >
                                 <Mail className="w-4 h-4 text-sauge-light" />
                                 contact@indhack.com
@@ -212,7 +212,7 @@ export function MegaFooter() {
                                 <Link
                                     key={link.href}
                                     href={link.href}
-                                    className="text-xs text-white/70 hover:text-white transition-colors"
+                                    className="text-xs text-soft-light hover:text-white transition-colors"
                                 >
                                     {link.title}
                                 </Link>
@@ -220,7 +220,7 @@ export function MegaFooter() {
                         </div>
 
                         {/* Copyright */}
-                        <p className="text-xs text-white/70 text-center">
+                        <p className="text-xs text-soft-light text-center">
                             © {new Date().getFullYear()}{" "}
                             <Link href="/" className="hover:text-sauge-light transition-colors">
                                 IndHack - Consultante SEO

@@ -123,7 +123,7 @@ function ScoreGauge({ score }: { score: number }) {
                 >
                     {score}
                 </motion.span>
-                <span className="text-sm text-white/50">/100</span>
+                <span className="text-sm text-soft-light">/100</span>
                 <span className={`text-sm font-medium mt-1 ${getColor()}`}>{getLabel()}</span>
             </div>
         </div>
@@ -143,7 +143,7 @@ function CategoryScore({ category, score, maxScore }: { category: keyof typeof C
                 </div>
                 <div>
                     <div className="font-bold text-white">{info.label}</div>
-                    <div className="text-sm text-white/50">{score}/{maxScore} points</div>
+                    <div className="text-sm text-soft-light">{score}/{maxScore} points</div>
                 </div>
             </div>
             <div className="h-2 bg-white/10 rounded-full overflow-hidden">
@@ -191,7 +191,7 @@ function CriteriaCard({ criteria, index }: { criteria: CriteriaResult; index: nu
                             {categoryInfo.label}
                         </span>
                     </div>
-                    <p className="text-sm text-white/60 mt-1">{criteria.message}</p>
+                    <p className="text-sm text-soft-light mt-1">{criteria.message}</p>
 
                     <AnimatePresence>
                         {expanded && (
@@ -202,7 +202,7 @@ function CriteriaCard({ criteria, index }: { criteria: CriteriaResult; index: nu
                                 className="overflow-hidden"
                             >
                                 {criteria.details && (
-                                    <p className="text-xs text-white/50 mt-3 p-2 bg-white/5 rounded-lg font-mono break-all">
+                                    <p className="text-xs text-soft-light mt-3 p-2 bg-white/5 rounded-lg font-mono break-all">
                                         {criteria.details}
                                     </p>
                                 )}
@@ -218,7 +218,7 @@ function CriteriaCard({ criteria, index }: { criteria: CriteriaResult; index: nu
                 </div>
                 <div className="text-right">
                     <span className="font-bold text-white">{criteria.score}</span>
-                    <span className="text-white/50">/{criteria.maxScore}</span>
+                    <span className="text-soft-light">/{criteria.maxScore}</span>
                 </div>
             </div>
         </motion.div>
@@ -330,7 +330,7 @@ export function AuditSEO() {
                             )}
                         </button>
 
-                        <p className="text-center text-sm text-white/50">
+                        <p className="text-center text-sm text-soft-light">
                             Gratuit • Sans inscription • 15 critères analysés dont la compatibilité IA
                         </p>
                     </form>
@@ -350,7 +350,7 @@ export function AuditSEO() {
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: i * 1 }}
-                                        className="flex items-center gap-3 text-white/60"
+                                        className="flex items-center gap-3 text-soft-light"
                                     >
                                         <div className="w-2 h-2 bg-sauge rounded-full animate-pulse" />
                                         {text}
@@ -385,7 +385,7 @@ export function AuditSEO() {
                                     <ExternalLink className="w-4 h-4" />
                                 </a>
                                 {result.cached && (
-                                    <p className="text-xs text-white/50 mt-2">Résultat mis en cache (analysé récemment)</p>
+                                    <p className="text-xs text-soft-light mt-2">Résultat mis en cache (analysé récemment)</p>
                                 )}
                                 <div className="flex items-center justify-center lg:justify-start gap-3 mt-4">
                                     <button
@@ -435,7 +435,7 @@ export function AuditSEO() {
                             <h3 className="text-2xl font-bold text-white mb-3">
                                 Votre score est de {result.score}/100
                             </h3>
-                            <p className="text-white/60 mb-6 max-w-xl mx-auto">
+                            <p className="text-soft-light mb-6 max-w-xl mx-auto">
                                 Je peux améliorer votre score et booster votre visibilité sur Google et les IA.
                             </p>
                             <Link
@@ -460,7 +460,7 @@ export function AuditSEO() {
                                     <Bot className="w-5 h-5 text-violet-400" />
                                 </div>
                                 <div className="font-bold text-white group-hover:text-sauge transition-colors">Testeur Visibilité IA</div>
-                                <p className="text-sm text-white/60">Votre site est-il visible par ChatGPT ?</p>
+                                <p className="text-sm text-soft-light">Votre site est-il visible par ChatGPT ?</p>
                             </Link>
                             <Link
                                 href="/outils/generateur-schema-json-ld"
@@ -470,7 +470,7 @@ export function AuditSEO() {
                                     <FileText className="w-5 h-5 text-blue-400" />
                                 </div>
                                 <div className="font-bold text-white group-hover:text-sauge transition-colors">Générateur Schema</div>
-                                <p className="text-sm text-white/60">Créez vos données structurées</p>
+                                <p className="text-sm text-soft-light">Créez vos données structurées</p>
                             </Link>
                             <Link
                                 href="/outils/generateur-robots-txt"
@@ -480,7 +480,7 @@ export function AuditSEO() {
                                     <Shield className="w-5 h-5 text-cyan-400" />
                                 </div>
                                 <div className="font-bold text-white group-hover:text-sauge transition-colors">Générateur robots.txt</div>
-                                <p className="text-sm text-white/60">Configurez vos crawlers IA</p>
+                                <p className="text-sm text-soft-light">Configurez vos crawlers IA</p>
                             </Link>
                         </div>
                     </div>

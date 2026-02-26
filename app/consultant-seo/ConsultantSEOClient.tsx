@@ -152,7 +152,7 @@ export default function ConsultantSEOClient() {
                                 </Link>
                             </div>
 
-                            <div className="flex flex-wrap gap-6 text-sm text-white/70">
+                            <div className="flex flex-wrap gap-6 text-sm text-soft-light">
                                 <span className="flex items-center gap-2">
                                     <CheckCircle2 className="w-4 h-4 text-sauge" />
                                     Réponse sous 24h
@@ -280,7 +280,7 @@ export default function ConsultantSEOClient() {
                         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
                             Pourquoi choisir un <span className="text-sauge">consultant SEO freelance</span> ?
                         </h2>
-                        <p className="text-lg text-white/70 max-w-2xl mx-auto">
+                        <p className="text-lg text-soft-light max-w-2xl mx-auto">
                             Travailler avec un freelance plutôt qu'une agence présente de nombreux avantages pour les PME et entrepreneurs.
                         </p>
                     </motion.div>
@@ -301,7 +301,7 @@ export default function ConsultantSEOClient() {
                                 <h3 className="text-xl font-heading font-bold mb-3">
                                     {avantage.title}
                                 </h3>
-                                <p className="text-white/70 leading-relaxed">
+                                <p className="text-soft-light leading-relaxed">
                                     {avantage.description}
                                 </p>
                             </motion.div>
@@ -377,7 +377,7 @@ export default function ConsultantSEOClient() {
                                 POPULAIRE
                             </div>
                             <h3 className="text-xl font-heading font-bold mb-2">Accompagnement mensuel</h3>
-                            <p className="text-white/70 text-sm mb-6">Optimisation continue</p>
+                            <p className="text-soft-light text-sm mb-6">Optimisation continue</p>
                             <div className="text-4xl font-bold mb-6">
                                 Sur devis
                             </div>
@@ -571,7 +571,7 @@ export default function ConsultantSEOClient() {
                         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
                             Prêt à dominer Google ?
                         </h2>
-                        <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+                        <p className="text-xl text-soft-light mb-8 max-w-2xl mx-auto">
                             Discutons de votre projet et voyons ensemble comment atteindre vos objectifs de visibilité.
                         </p>
 
@@ -587,7 +587,7 @@ export default function ConsultantSEOClient() {
                             </a>
                         </div>
 
-                        <div className="flex flex-wrap justify-center gap-8 text-white/60 text-sm">
+                        <div className="flex flex-wrap justify-center gap-8 text-soft-light text-sm">
                             <span className="flex items-center gap-2">
                                 <Clock className="w-4 h-4" />
                                 Réponse sous 24h
@@ -603,7 +603,7 @@ export default function ConsultantSEOClient() {
                         </div>
 
                         <div className="mt-8 pt-6 border-t border-white/10">
-                            <Link href="/outils" className="text-white/50 hover:text-sauge transition-colors text-sm">
+                            <Link href="/outils" className="text-soft-light hover:text-sauge transition-colors text-sm">
                                 Testez d'abord mes <span className="underline">outils SEO gratuits</span> →
                             </Link>
                         </div>

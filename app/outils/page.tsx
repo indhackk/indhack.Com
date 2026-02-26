@@ -231,7 +231,7 @@ export default function OutilsPage() {
                     <div className="container mx-auto px-4 relative z-10">
                         {/* Breadcrumb */}
                         <nav className="mb-8" aria-label="Fil d'Ariane">
-                            <ol className="flex items-center gap-2 text-sm text-white/50">
+                            <ol className="flex items-center gap-2 text-sm text-soft-light">
                                 <li><Link href="/" className="hover:text-white transition-colors">Accueil</Link></li>
                                 <li>/</li>
                                 <li className="text-white font-medium">Outils SEO</li>
@@ -248,11 +248,11 @@ export default function OutilsPage() {
                                 Outils SEO Gratuits 2026
                             </h1>
 
-                            <p className="text-xl text-white/60 leading-relaxed mb-4">
+                            <p className="text-xl text-soft-light leading-relaxed mb-4">
                                 Les <strong className="text-white">seuls outils SEO français</strong> qui analysent votre visibilité sur Google <strong className="text-white">ET</strong> sur les IA génératives (ChatGPT, Perplexity, Claude).
                             </p>
 
-                            <p className="text-lg text-white/60 leading-relaxed">
+                            <p className="text-lg text-soft-light leading-relaxed">
                                 <span className="text-white font-medium">100% gratuits, sans inscription.</span> Préparez votre site pour le référencement de demain.
                             </p>
                         </div>
@@ -272,7 +272,7 @@ export default function OutilsPage() {
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-white">{benefit.title}</h3>
-                                            <p className="text-sm text-white/60">{benefit.description}</p>
+                                            <p className="text-sm text-soft-light">{benefit.description}</p>
                                         </div>
                                     </div>
                                 );
@@ -307,7 +307,7 @@ export default function OutilsPage() {
                                                 {tool.title}
                                             </h2>
 
-                                            <p className="text-white/60 text-sm leading-relaxed mb-4">
+                                            <p className="text-soft-light text-sm leading-relaxed mb-4">
                                                 {tool.longDescription}
                                             </p>
 
@@ -343,7 +343,7 @@ export default function OutilsPage() {
                                 Pourquoi ces outils sont différents
                             </h2>
 
-                            <div className="space-y-6 text-lg text-white/60 leading-relaxed">
+                            <div className="space-y-6 text-lg text-soft-light leading-relaxed">
                                 <p>
                                     En 2026, <strong className="text-white">le SEO ne se limite plus à Google</strong>. Vos clients utilisent ChatGPT, Perplexity et Gemini pour trouver des réponses. Si votre site n'est pas optimisé pour ces IA, vous êtes invisible pour une partie croissante de votre audience.
                                 </p>
@@ -375,14 +375,14 @@ export default function OutilsPage() {
                                             <h3 className="text-lg font-bold text-white pr-4">
                                                 {item.question}
                                             </h3>
-                                            <span className="text-white/50 group-open:rotate-180 transition-transform duration-200 flex-shrink-0">
+                                            <span className="text-soft-light group-open:rotate-180 transition-transform duration-200 flex-shrink-0">
                                                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                                 </svg>
                                             </span>
                                         </summary>
                                         <div className="px-6 pb-6 pt-0">
-                                            <p className="text-white/60 leading-relaxed">
+                                            <p className="text-soft-light leading-relaxed">
                                                 {item.answer}
                                             </p>
                                         </div>
@@ -407,19 +407,19 @@ export default function OutilsPage() {
                                     <h3 className="font-bold text-white mb-4">Services SEO</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/audit-seo" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                            <Link href="/audit-seo" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
                                                 <ArrowRight className="w-3 h-3" />
                                                 Audit SEO complet
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/referencement-naturel" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                            <Link href="/referencement-naturel" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
                                                 <ArrowRight className="w-3 h-3" />
                                                 Référencement naturel
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/creation-site-web" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                            <Link href="/creation-site-web" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
                                                 <ArrowRight className="w-3 h-3" />
                                                 Création de site web
                                             </Link>
@@ -432,19 +432,19 @@ export default function OutilsPage() {
                                     <h3 className="font-bold text-white mb-4">Articles SEO</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                            <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
                                                 <ArrowRight className="w-3 h-3" />
                                                 Guide complet du GEO
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/blog/google-search-console" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                            <Link href="/blog/google-search-console" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
                                                 <ArrowRight className="w-3 h-3" />
                                                 Maîtriser Google Search Console
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/blog" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                            <Link href="/blog" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
                                                 <ArrowRight className="w-3 h-3" />
                                                 Tous les articles
                                             </Link>
@@ -457,19 +457,19 @@ export default function OutilsPage() {
                                     <h3 className="font-bold text-white mb-4">SEO Local</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/consultant-seo-nice" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                            <Link href="/consultant-seo-nice" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
                                                 <ArrowRight className="w-3 h-3" />
                                                 Consultante SEO Nice
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/consultant-seo-cannes" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                            <Link href="/consultant-seo-cannes" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
                                                 <ArrowRight className="w-3 h-3" />
                                                 Consultante SEO Cannes
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/consultant-seo-sophia-antipolis" className="text-white/60 hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                            <Link href="/consultant-seo-sophia-antipolis" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
                                                 <ArrowRight className="w-3 h-3" />
                                                 Consultante SEO Sophia-Antipolis
                                             </Link>
@@ -490,7 +490,7 @@ export default function OutilsPage() {
                         <h2 className="text-3xl font-heading font-bold text-white mb-6">
                             Besoin d'aller plus loin ?
                         </h2>
-                        <p className="text-white/60 text-lg mb-8 max-w-2xl mx-auto">
+                        <p className="text-soft-light text-lg mb-8 max-w-2xl mx-auto">
                             Ces outils vous donnent un aperçu. Pour une stratégie SEO et GEO complète avec accompagnement personnalisé, je suis là pour vous.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

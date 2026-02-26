@@ -27,6 +27,7 @@ module.exports = {
                 'sauge-light': '#8FBFAA',   // Sauge clair pour fonds sombres (WCAG AA sur ink)
                 'ink': '#2A3830',           // Texte principal
                 'soft': '#3D4D46',          // Texte secondaire - WCAG AA
+                'soft-light': '#B8C4BE',    // Texte secondaire sur fonds sombres - WCAG AA sur ink
                 'line': '#E4EBE7',          // Bordures
                 'accent': '#D4A853',        // Ambre/doré pour CTA
                 'accent-hover': '#C49A47',  // Hover state

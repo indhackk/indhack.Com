@@ -162,7 +162,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
             {/* Breadcrumb Navigation */}
             <div className="bg-ink pt-24 pb-3 px-4">
                 <div className="container mx-auto">
-                    <nav className="text-xs text-white/50 flex items-center gap-2 flex-wrap" aria-label="Fil d'ariane">
+                    <nav className="text-xs text-soft-light flex items-center gap-2 flex-wrap" aria-label="Fil d'ariane">
                         <Link href="/" className="hover:text-sauge transition-colors duration-300">Accueil</Link>
                         <ChevronRight className="w-3 h-3" />
                         <Link href="/seo-local" className="hover:text-sauge transition-colors duration-300">SEO Local</Link>
@@ -417,7 +417,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
                                         {item.step}
                                     </motion.div>
                                     <h3 className="font-bold text-lg mb-3 text-white">{item.title}</h3>
-                                    <div className="text-sm text-white/60 leading-relaxed">
+                                    <div className="text-sm text-soft-light leading-relaxed">
                                         <ReactMarkdown rehypePlugins={[rehypeRaw]}>{replacePlaceholders(item.desc)}</ReactMarkdown>
                                     </div>
                                 </div>

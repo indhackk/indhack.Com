@@ -471,7 +471,7 @@ export default function AuditSeoClient() {
                             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                                 <div>
                                     <h3 className="text-xl font-bold mb-2">Besoin d'un audit dans votre ville ?</h3>
-                                    <p className="text-white/70">
+                                    <p className="text-soft-light">
                                         J'accompagne des entreprises dans toute la France avec une expertise particulière sur la Côte d'Azur.
                                     </p>
                                 </div>
@@ -596,7 +596,7 @@ export default function AuditSeoClient() {
                             Passez à l'étape <br />
                             <span className="text-sauge">supérieure</span>.
                         </h2>
-                        <p className="text-xl text-white/50 mb-12 max-w-xl mx-auto relative z-10">
+                        <p className="text-xl text-soft-light mb-12 max-w-xl mx-auto relative z-10">
                             Obtenez un état des lieux clair de votre site et un plan d'action chiffré.
                         </p>
                         <div className="relative z-10">

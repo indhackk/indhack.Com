@@ -69,7 +69,7 @@ export function FloatingCTA() {
                                 <div className="bg-ink text-white p-4 flex items-center justify-between">
                                     <div>
                                         <p className="font-bold">Besoin d'aide ?</p>
-                                        <p className="text-xs text-white/60">Réponse sous 24h</p>
+                                        <p className="text-xs text-soft-light">Réponse sous 24h</p>
                                     </div>
                                     <button
                                         onClick={() => setIsExpanded(false)}
