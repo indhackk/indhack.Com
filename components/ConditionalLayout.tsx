@@ -16,7 +16,7 @@ const FloatingCTA = dynamic(() => import("@/components/ui/FloatingCTA").then(mod
 });
 
 // Routes where we hide the main site layout (Navbar, Footer, etc.)
-const ISOLATED_ROUTES = ["/login", "/app", "/diagnostic", "/pour-pauline"];
+const ISOLATED_ROUTES = ["/login", "/app", "/diagnostic", "/pour-pauline", "/widget"];
 
 function isIsolatedRoute(pathname: string): boolean {
     return ISOLATED_ROUTES.some(route =>

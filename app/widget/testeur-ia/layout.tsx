@@ -1,0 +1,17 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Testeur Visibilité IA - Widget",
+    robots: {
+        index: false,
+        follow: false,
+    }
+};
+
+export default function WidgetLayout({
+    children,
+}: {
+    children: React.ReactNode;
+}) {
+    return <>{children}</>;
+}
