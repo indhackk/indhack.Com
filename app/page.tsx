@@ -144,8 +144,8 @@ export default function Home() {
                                     <h3 className="text-xl font-bold text-ink mb-4">Articles SEO</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/blog/pourquoi-consultant-seo" className="text-sauge hover:underline inline-flex items-center gap-1">
-                                                Pourquoi engager un consultant SEO
+                                            <Link href="/blog/refonte-site-web-sans-perdre-seo" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Notre guide complet de refonte SEO
                                                 <ArrowRight className="w-3 h-3" />
                                             </Link>
                                         </li>

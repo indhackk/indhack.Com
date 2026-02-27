@@ -1,0 +1,51 @@
+{
+  "name": "indhack-schema-generator",
+  "version": "1.0.0",
+  "description": "A lightweight React component for generating valid Schema.org JSON-LD structured data markup",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src/",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indhack/indhack-schema-generator.git"
+  },
+  "keywords": [
+    "schema-org",
+    "json-ld",
+    "seo",
+    "structured-data",
+    "react",
+    "nextjs",
+    "schema-generator",
+    "rich-results",
+    "google-seo",
+    "local-business"
+  ],
+  "author": "Indiana Aflalo <contact@indhack.com> (https://indhack.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indhack/indhack-schema-generator/issues"
+  },
+  "homepage": "https://indhack.com/outils/generateur-schema-json-ld",
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "react": "^18.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  }
+}

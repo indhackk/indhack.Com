@@ -570,9 +570,9 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                 </h3>
                                 <ul className="space-y-2 text-sm">
                                     <li>
-                                        <Link href="/blog/seo-local-nice" className="text-soft hover:text-sauge transition-colors flex items-center gap-2">
+                                        <Link href="/blog/refonte-site-web-sans-perdre-seo" className="text-soft hover:text-sauge transition-colors flex items-center gap-2">
                                             <ArrowRight className="w-3 h-3" />
-                                            SEO local : dominer votre marché
+                                            Checklist SEO refonte de site
                                         </Link>
                                     </li>
                                     <li>

@@ -241,6 +241,8 @@ C'est un fichier texte placé à la racine de votre site (comme robots.txt) qui 
 
 Le **GEO (Generative Engine Optimization)** n'est pas une tendance passagère. C'est l'évolution naturelle du référencement face à la montée des IA génératives. Les entreprises qui investissent dans le GEO maintenant auront un avantage concurrentiel durable.
 
+> **À noter :** Si vous planifiez une refonte de site, c'est le moment idéal pour intégrer le GEO dès la conception. Consultez notre guide pour [préparer une refonte sans perdre son SEO](/blog/refonte-site-web-sans-perdre-seo) — les 45 points à vérifier incluent désormais les optimisations IA.
+
 Les 4 piliers à retenir :
 1. **Accessibilité** — Autorisez les crawlers IA
 2. **Sémantique** — Structurez vos données (Schema.org, FAQ)

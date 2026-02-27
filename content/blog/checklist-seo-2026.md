@@ -248,6 +248,8 @@ Surveillez si et comment votre marque est citée par les IA génératives. Des o
 
 Ces **30 points** constituent le socle d'une stratégie de référencement naturel efficace en 2026. Mais identifier les problèmes ne suffit pas – il faut les **prioriser par impact** et les corriger méthodiquement.
 
+> **Cas particulier : la refonte de site.** Si vous préparez une migration ou un changement de design, ces 30 points ne suffisent pas. Consultez notre [checklist avant et après refonte](/blog/refonte-site-web-sans-perdre-seo) qui détaille les 45 vérifications spécifiques pour ne pas perdre vos positions pendant la transition.
+
 ### Téléchargez la Checklist PDF
 
 Gardez cette checklist à portée de main pour vos prochains audits :

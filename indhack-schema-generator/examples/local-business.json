@@ -1,0 +1,40 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Chez Marie",
+  "description": "Restaurant gastronomique français au coeur de Nice",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "15 rue du Port",
+    "addressLocality": "Nice",
+    "postalCode": "06300",
+    "addressCountry": "FR"
+  },
+  "telephone": "+33 4 93 00 00 00",
+  "email": "contact@chezmarie.fr",
+  "url": "https://chezmarie.fr",
+  "logo": "https://chezmarie.fr/logo.png",
+  "image": "https://chezmarie.fr/restaurant.jpg",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.7034,
+    "longitude": 7.2663
+  },
+  "priceRange": "€€€",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "12:00",
+      "closes": "14:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "19:00",
+      "closes": "22:30"
+    }
+  ],
+  "servesCuisine": "French",
+  "acceptsReservations": "True"
+}

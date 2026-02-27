@@ -1,0 +1,26 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Complete Guide to Schema.org JSON-LD Implementation",
+  "description": "Learn how to implement Schema.org structured data using JSON-LD format to improve your search engine visibility and get rich results.",
+  "image": "https://example.com/images/schema-guide.jpg",
+  "datePublished": "2026-02-27",
+  "dateModified": "2026-02-27",
+  "author": {
+    "@type": "Person",
+    "name": "Indiana Aflalo",
+    "url": "https://indhack.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "IndHack",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://indhack.com/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://example.com/blog/schema-guide"
+  }
+}

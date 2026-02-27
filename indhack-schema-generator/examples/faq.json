@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is JSON-LD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JSON-LD (JavaScript Object Notation for Linked Data) is a method of encoding structured data using JSON. It allows search engines like Google to better understand your content and display rich results in search."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why should I use structured data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Structured data helps search engines understand your content better, which can lead to rich results (like star ratings, FAQ dropdowns, recipe cards) in search results. This typically improves click-through rates and visibility."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do I put the JSON-LD code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JSON-LD structured data should be placed within a <script type=\"application/ld+json\"> tag, typically in the <head> section of your HTML document. You can also place it in the <body> if needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I test my structured data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use Google's Rich Results Test (search.google.com/test/rich-results) or Schema Markup Validator (validator.schema.org) to test your structured data for errors and preview how it might appear in search results."
+      }
+    }
+  ]
+}
