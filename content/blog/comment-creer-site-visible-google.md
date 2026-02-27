@@ -3,7 +3,7 @@ title: "Comment créer un site Internet visible sur Google en 2026 ?"
 description: "Agence web ou freelance passionné ? Découvrez les étapes clés pour créer un site web qui se positionne réellement sur Google et génère des clients."
 date: "2026-02-04"
 category: "Création de site"
-image: "/images/blog/creer-site-visible-google.jpg"
+image: "/images/blog/creer-site-visible-google-2026.webp"
 author: "Indiana Aflalo"
 keywords: ["créer site internet visible Google", "référencement site web", "site web premier page Google", "création site SEO", "freelance SEO", "agence web vs freelance"]
 ---

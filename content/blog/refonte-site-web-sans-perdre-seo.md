@@ -3,7 +3,7 @@ title: "Checklist SEO Refonte Site : 45 Points à Vérifier Absolument [2026]"
 description: "Refonte imminente ? Une erreur peut diviser votre trafic par 5. Voici la checklist SEO exacte (45 points) à suivre par votre agence pour éviter la chute."
 date: "2026-02-16"
 category: "Refonte"
-image: "/images/blog/refonte-site-seo.jpg"
+image: "/images/blog/refonte-sans-perte-seo-2026.webp"
 author: "Indiana Aflalo"
 keywords: ["refonte site web SEO", "checklist seo refonte site", "migration SEO", "redirections 301", "perdre positions Google", "refonte sans perdre référencement", "checklist migration", "audit pre-migration"]
 ---
