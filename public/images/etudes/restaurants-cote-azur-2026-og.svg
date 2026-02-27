@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" viewBox="0 0 1200 630" width="1200" height="630">
+  <title>Étude restaurants Côte d'Azur 2026 - 30% sans site web</title>
+  <desc>Analyse SEO de 308 restaurants sur la Côte d'Azur : 30% n'ont pas de site web, 32% ont un engagement faible, 13% profils suspects. Étude IndHack 2026.</desc>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:title>Étude SEO Local Restaurants Côte d'Azur 2026</dc:title>
+        <dc:description>Infographie présentant les résultats de l'analyse de 308 restaurants apparaissant dans le Top Google sur 10 villes de la Côte d'Azur.</dc:description>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Indiana Aflalo - IndHack</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>© 2026 IndHack - Tous droits réservés</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date>2026-02-25</dc:date>
+        <dc:subject>SEO Local, Google Business Profile, Restaurants, Côte d'Azur, Nice, Cannes, Antibes</dc:subject>
+        <dc:language>fr</dc:language>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>IndHack - indhack.com</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2A3830"/>
+      <stop offset="100%" style="stop-color:#1a2520"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2E5E4E"/>
+      <stop offset="100%" style="stop-color:#8FBFAA"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1100" cy="100" r="200" fill="#2E5E4E" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="100" cy="530" r="180" fill="#2E5E4E" opacity="0.1" filter="url(#glow)"/>
+
+  <!-- Badge -->
+  <rect x="50" y="50" width="140" height="36" rx="18" fill="#2E5E4E" opacity="0.3"/>
+  <text x="120" y="74" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#8FBFAA" text-anchor="middle">ÉTUDE 2026</text>
+
+  <!-- Main title -->
+  <text x="50" y="180" font-family="system-ui, sans-serif" font-size="52" font-weight="800" fill="white">
+    <tspan x="50" dy="0">30% des restaurants</tspan>
+    <tspan x="50" dy="65">Google n'ont</tspan>
+    <tspan x="50" dy="65" fill="#8FBFAA">pas de site web</tspan>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="50" y="400" font-family="system-ui, sans-serif" font-size="22" fill="#B8C4BE">Analyse de 308 établissements sur la Côte d'Azur</text>
+
+  <!-- Stats boxes -->
+  <g transform="translate(50, 450)">
+    <!-- Stat 1 -->
+    <rect x="0" y="0" width="180" height="90" rx="12" fill="#2E5E4E" opacity="0.2"/>
+    <text x="90" y="45" font-family="system-ui, sans-serif" font-size="36" font-weight="800" fill="#8FBFAA" text-anchor="middle">308</text>
+    <text x="90" y="72" font-family="system-ui, sans-serif" font-size="13" fill="#B8C4BE" text-anchor="middle">restaurants analysés</text>
+
+    <!-- Stat 2 -->
+    <rect x="200" y="0" width="180" height="90" rx="12" fill="#2E5E4E" opacity="0.2"/>
+    <text x="290" y="45" font-family="system-ui, sans-serif" font-size="36" font-weight="800" fill="#8FBFAA" text-anchor="middle">10</text>
+    <text x="290" y="72" font-family="system-ui, sans-serif" font-size="13" fill="#B8C4BE" text-anchor="middle">villes étudiées</text>
+
+    <!-- Stat 3 -->
+    <rect x="400" y="0" width="180" height="90" rx="12" fill="#2E5E4E" opacity="0.2"/>
+    <text x="490" y="45" font-family="system-ui, sans-serif" font-size="36" font-weight="800" fill="#D4A853" text-anchor="middle">30%</text>
+    <text x="490" y="72" font-family="system-ui, sans-serif" font-size="13" fill="#B8C4BE" text-anchor="middle">sans site web</text>
+  </g>
+
+  <!-- Chart visualization (simplified bar chart) -->
+  <g transform="translate(750, 180)">
+    <rect x="0" y="0" width="380" height="280" rx="16" fill="#1a2520" opacity="0.5"/>
+
+    <!-- Chart title -->
+    <text x="190" y="35" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#B8C4BE" text-anchor="middle">Failles identifiées</text>
+
+    <!-- Bars -->
+    <rect x="30" y="70" width="200" height="35" rx="6" fill="url(#accentGrad)"/>
+    <text x="240" y="93" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">30%</text>
+    <text x="40" y="93" font-family="system-ui, sans-serif" font-size="12" fill="white">Sans site web</text>
+
+    <rect x="30" y="120" width="220" height="35" rx="6" fill="url(#accentGrad)" opacity="0.8"/>
+    <text x="260" y="143" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">32%</text>
+    <text x="40" y="143" font-family="system-ui, sans-serif" font-size="12" fill="white">Faible engagement</text>
+
+    <rect x="30" y="170" width="90" height="35" rx="6" fill="#D4A853" opacity="0.9"/>
+    <text x="130" y="193" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="white">13%</text>
+    <text x="40" y="193" font-family="system-ui, sans-serif" font-size="12" fill="white">Suspects</text>
+
+    <!-- Legend dots -->
+    <circle cx="50" cy="240" r="6" fill="#8FBFAA"/>
+    <text x="65" y="244" font-family="system-ui, sans-serif" font-size="11" fill="#B8C4BE">Nice, Cannes, Antibes...</text>
+  </g>
+
+  <!-- Author/Brand -->
+  <g transform="translate(50, 580)">
+    <circle cx="15" cy="0" r="8" fill="#2E5E4E"/>
+    <text x="35" y="5" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#8FBFAA">IndHack</text>
+    <text x="120" y="5" font-family="system-ui, sans-serif" font-size="14" fill="#B8C4BE">• Indiana Aflalo</text>
+  </g>
+</svg>
