@@ -5,7 +5,7 @@ date: "2026-02-22"
 author: "Indiana Aflalo"
 category: "Stratégie"
 tags: ["SEO", "référencement naturel", "définition", "guide"]
-image: "/images/blog/definition-seo-guide-complet.webp"
+image: "/images/nice-workspace.webp"
 imageAlt: "Qu'est-ce que le SEO ? Définition complète du référencement naturel et ses 3 piliers en 2026"
 readingTime: "12 min"
 ---
