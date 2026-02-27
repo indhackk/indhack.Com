@@ -16,18 +16,15 @@ En tant que consultante SEO, je vois passer des dizaines de rapports chaque ann�
 
 Dans ce guide mis à jour pour 2026, je vous dévoile les **7 sections indispensables** d'un vrai rapport d'audit, celles qui font la différence entre un document qui finit dans un tiroir et un plan d'action qui double votre trafic. 
 
-<div className="bg-sauge/10 p-6 rounded-2xl border border-sauge/20 my-8">
-  <h3 className="text-xl font-bold text-ink mt-0 mb-3">🎁 Differentiateur : La Grille d'Évaluation de votre Rapport SEO</h3>
-  <p className="text-soft mb-4">Vous avez déjà reçu un audit et vous doutez de sa qualité ? Utilisez ma grille d'évaluation exclusive (format PDF ou Google Sheets) pour vérifier si votre prestataire a couvert tous les angles morts.</p>
-  <ul className="mb-4">
-    <li>✓ 30 points de contrôle critiques</li>
-    <li>✓ Checklist des outils qui auraient dû être utilisés</li>
-    <li>✓ Score de qualité de votre plan d'action</li>
-  </ul>
-  <a href="/contact" className="inline-block bg-ink text-white px-6 py-3 rounded-xl font-bold hover:bg-sauge transition-colors">
-    Obtenir la grille d'évaluation gratuite
-  </a>
-</div>
+> **🎁 La Grille d'Évaluation de votre Rapport SEO**
+>
+> Vous avez déjà reçu un audit et vous doutez de sa qualité ? Utilisez ma grille d'évaluation exclusive pour vérifier si votre prestataire a couvert tous les angles morts :
+>
+> - ✓ 30 points de contrôle critiques
+> - ✓ Checklist des outils qui auraient dû être utilisés
+> - ✓ Score de qualité de votre plan d'action
+>
+> **[Obtenir la grille d'évaluation gratuite →](/contact)**
 
 ## Section 1 : Le résumé exécutif (L'état des lieux pour la direction)
 
