@@ -111,8 +111,11 @@ export default function BlogPostPage({ params }: PageProps) {
     return (
         <>
             <Breadcrumb items={getBlogBreadcrumb(post.title, params.slug)} />
-            <main className="pt-28 pb-20 bg-white">
-                <div className="container mx-auto px-4 max-w-4xl">
+            <main className="pt-28 pb-20 bg-[#fafafa] relative overflow-hidden">
+                <div className="absolute top-0 -left-1/4 w-1/2 h-[500px] bg-sauge/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
+                <div className="absolute top-1/4 -right-1/4 w-1/2 h-[500px] bg-blue-500/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
+
+                <div className="container mx-auto px-4 max-w-7xl">
 
                     {/* Schema.org BlogPosting - Optimisé GEO */}
                     <script
@@ -210,15 +213,15 @@ export default function BlogPostPage({ params }: PageProps) {
                             </span>
                         </div>
 
-                        <h1 className="text-3xl md:text-5xl font-heading font-bold text-ink mb-6 leading-tight">
+                        <h1 className="text-4xl md:text-6xl font-heading font-extrabold text-ink mb-8 leading-[1.15] tracking-tight max-w-5xl">
                             {post.title}
                         </h1>
 
-                        <div className="text-xl text-soft leading-relaxed italic border-l-4 border-sauge pl-6 mb-10">
+                        <div className="text-xl md:text-2xl text-soft/90 leading-relaxed font-light border-l-4 border-sauge pl-8 mb-12 max-w-4xl">
                             <ReactMarkdown>{post.description}</ReactMarkdown>
                         </div>
 
-                        <div className="relative h-[300px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+                        <div className="relative h-[400px] md:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-black/5">
                             <Image
                                 src={post.image}
                                 alt={post.title}
@@ -230,18 +233,19 @@ export default function BlogPostPage({ params }: PageProps) {
                     </header>
 
                     {/* Post Content */}
-                    <div className="grid lg:grid-cols-4 gap-12">
+                    <div className="grid lg:grid-cols-12 gap-12 xl:gap-16 items-start">
 
                         {/* Sidebar with Table of Contents */}
-                        <aside className="lg:col-span-1 order-last lg:order-first">
+                        <aside className="lg:col-span-4 xl:col-span-3 order-last lg:order-first">
                             <div className="sticky top-32 space-y-8">
 
                                 {/* Table des matières */}
-                                <div className="hidden lg:block">
-                                    <div className="text-xs font-bold text-ink uppercase tracking-wider mb-4 border-b border-gray-100 pb-2">
+                                <div className="hidden lg:block bg-white/80 backdrop-blur-xl p-8 rounded-[2rem] border border-gray-100 shadow-sm ring-1 ring-black/5">
+                                    <div className="text-xs font-bold text-ink uppercase tracking-wider mb-6 flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-sauge shadow-[0_0_10px_rgba(var(--sauge),0.5)]" />
                                         Sommaire
                                     </div>
-                                    <nav className="space-y-1">
+                                    <nav className="space-y-2">
                                         {post.content.split('\n').filter(line => line.startsWith('##')).map((line, i) => {
                                             // Nettoyage basique des titres markdown pour l'affichage
                                             const cleanTitle = line.replace(/^#+\s+/, '').replace(/\*\*/g, '');
@@ -254,9 +258,9 @@ export default function BlogPostPage({ params }: PageProps) {
                                                 <a
                                                     key={i}
                                                     href={`#${slug}`}
-                                                    className={`block text-sm py-1 border-l-2 pl-3 transition-colors ${isH3
-                                                        ? 'text-soft/80 border-transparent hover:text-sauge hover:border-sauge ml-2 text-xs'
-                                                        : 'text-soft border-transparent hover:text-sauge hover:border-sauge font-medium'
+                                                    className={`block py-1.5 border-l-2 pl-4 transition-all duration-300 ${isH3
+                                                        ? 'text-soft/70 border-transparent hover:text-sauge hover:border-sauge ml-3 text-sm'
+                                                        : 'text-soft/90 border-transparent hover:text-sauge hover:border-sauge font-medium text-sm hover:pl-5'
                                                         }`}
                                                 >
                                                     {cleanTitle}
@@ -266,24 +270,28 @@ export default function BlogPostPage({ params }: PageProps) {
                                     </nav>
                                 </div>
 
-                                <div className="bg-ink p-6 rounded-2xl text-white">
-                                    <div className="font-heading font-bold text-lg mb-4">Besoin d'aide ?</div>
-                                    <p className="text-soft-light text-sm mb-6">
-                                        Passons de la théorie à la pratique ensemble.
+                                <div className="bg-gradient-to-br from-ink to-ink/90 p-8 rounded-[2rem] text-white shadow-xl shadow-ink/10 relative overflow-hidden group border border-ink/50">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl -mr-10 -mt-10 transition-transform duration-700 group-hover:scale-150" />
+                                    <div className="font-heading font-bold text-xl mb-3 relative z-10">Besoin d'un expert ?</div>
+                                    <p className="text-white/70 text-sm mb-8 leading-relaxed relative z-10 font-light">
+                                        Ne laissez pas votre SEO au hasard. Diagnostiquons votre site gratuitement.
                                     </p>
-                                    <AuditCTA className="w-full bg-sauge hover:bg-white hover:text-ink transition-all mb-3 rounded-xl">
-                                        Audit Gratuit
+                                    <AuditCTA className="w-full bg-sauge hover:bg-white hover:text-ink transition-all duration-300 mb-4 rounded-xl py-6 font-bold shadow-lg shadow-sauge/20 relative z-10 hover:scale-[1.02]">
+                                        Lancer mon audit
                                     </AuditCTA>
-                                    <a href="tel:0661139748" className="flex items-center justify-center gap-2 text-sm text-soft-light hover:text-white transition-colors">
+                                    <a href="tel:0661139748" className="flex items-center justify-center gap-2 text-sm text-white/60 hover:text-white transition-colors relative z-10 font-medium">
                                         <Phone className="w-4 h-4" />
                                         06 61 13 97 48
                                     </a>
                                 </div>
 
-                                <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                                    <div className="font-heading font-bold text-ink mb-4">Auteur</div>
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                                <div className="bg-white/80 backdrop-blur-xl p-8 rounded-[2rem] border border-gray-100 shadow-sm ring-1 ring-black/5">
+                                    <div className="text-xs font-bold text-ink uppercase tracking-wider mb-6 flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
+                                        Auteur
+                                    </div>
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="relative w-16 h-16 rounded-full overflow-hidden shadow-inner ring-2 ring-sauge/20">
                                             <Image
                                                 src="/images/indiana-aflalo.jpg"
                                                 alt="Indiana Aflalo"
@@ -292,19 +300,19 @@ export default function BlogPostPage({ params }: PageProps) {
                                             />
                                         </div>
                                         <div>
-                                            <div className="font-bold text-ink text-sm">Indiana Aflalo</div>
-                                            <div className="text-xs text-soft">Consultante SEO</div>
+                                            <div className="font-bold text-ink text-base">Indiana Aflalo</div>
+                                            <div className="text-sm text-soft/80">Consultante SEO</div>
                                         </div>
                                     </div>
-                                    <Link href="/a-propos" className="text-xs font-medium text-sauge hover:text-ink transition-colors flex items-center gap-1">
-                                        Voir mon profil <ArrowRight className="w-3 h-3" />
+                                    <Link href="/a-propos" className="text-sm font-medium text-sauge hover:text-ink transition-colors flex items-center gap-2 group">
+                                        Voir mon profil <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                                     </Link>
                                 </div>
                             </div>
                         </aside>
 
                         {/* Main Content */}
-                        <article className="lg:col-span-3 prose prose-lg prose-headings:font-heading prose-headings:font-bold prose-headings:text-ink prose-headings:scroll-mt-32 prose-p:text-soft prose-li:text-soft prose-strong:text-ink prose-a:text-sauge prose-blockquote:border-sauge prose-blockquote:bg-gray-50 prose-blockquote:p-6 prose-blockquote:rounded-xl max-w-none">
+                        <article className="lg:col-span-8 xl:col-span-9 prose prose-lg md:prose-xl prose-headings:font-heading prose-headings:font-bold prose-headings:text-ink prose-headings:scroll-mt-32 prose-headings:tracking-tight prose-p:text-soft/90 prose-p:leading-relaxed prose-li:text-soft/90 prose-strong:text-ink prose-a:text-sauge prose-a:decoration-sauge/30 hover:prose-a:decoration-sauge prose-blockquote:border-sauge prose-blockquote:bg-sauge/5 prose-blockquote:px-8 prose-blockquote:py-6 prose-blockquote:rounded-2xl prose-blockquote:font-light prose-blockquote:text-ink/80 prose-blockquote:not-italic prose-blockquote:shadow-sm prose-img:rounded-3xl prose-img:shadow-lg max-w-none bg-white p-8 md:p-14 rounded-[2.5rem] shadow-sm border border-gray-100 ring-1 ring-black/5">
                             {(() => {
                                 // Split content by H2 sections pour injecter le CTA après le 3ème H2
                                 const sections = post.content.split(/\n(?=## )/);
@@ -366,22 +374,27 @@ export default function BlogPostPage({ params }: PageProps) {
                     </div>
 
                     {/* Final CTA Area */}
-                    <section className="mt-20 py-12 px-8 bg-gray-50 rounded-3xl text-center border border-gray-100">
-                        <div className="text-2xl md:text-3xl font-heading font-bold text-ink mb-4">
-                            Cet article vous a été utile ?
-                        </div>
-                        <p className="text-soft mb-8 max-w-xl mx-auto">
-                            Partagez-le ou contactez-moi pour discuter de votre stratégie SEO en détail.
-                        </p>
-                        <div className="flex flex-wrap justify-center gap-4">
-                            <AuditCTA className="bg-sauge hover:bg-ink text-white rounded-full px-8 py-6">
-                                Réserver mon audit gratuit
-                            </AuditCTA>
-                            <Link href="/contact">
-                                <Button variant="outline" className="border-2 border-ink text-ink hover:bg-ink hover:text-white rounded-full px-8 py-6">
-                                    Me contacter
-                                </Button>
-                            </Link>
+                    <section className="mt-24 py-16 px-8 md:px-12 bg-gradient-to-br from-white to-gray-50 rounded-[3rem] text-center border border-gray-100 shadow-xl shadow-gray-200/20 relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-sauge/5 rounded-full blur-[80px] -mr-32 -mt-32 pointer-events-none" />
+                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/5 rounded-full blur-[80px] -ml-32 -mb-32 pointer-events-none" />
+
+                        <div className="relative z-10">
+                            <div className="text-3xl md:text-4xl font-heading font-extrabold text-ink mb-6 tracking-tight">
+                                Cet article vous a été utile ?
+                            </div>
+                            <p className="text-lg text-soft/80 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                                Ne laissez pas votre potentiel de croissance inexploité. Discutons ensemble de la stratégie SEO qui propulsera votre entreprise vers de nouveaux sommets.
+                            </p>
+                            <div className="flex flex-wrap justify-center gap-4">
+                                <AuditCTA className="bg-sauge hover:bg-sauge/90 hover:scale-105 transition-all duration-300 text-white rounded-full px-8 py-6 text-lg font-bold shadow-lg shadow-sauge/20">
+                                    Réserver mon audit gratuit
+                                </AuditCTA>
+                                <Link href="/contact">
+                                    <Button variant="outline" className="border-2 border-ink text-ink hover:bg-ink hover:text-white rounded-full px-8 py-6 text-lg font-bold transition-all duration-300 hover:scale-105">
+                                        Me contacter
+                                    </Button>
+                                </Link>
+                            </div>
                         </div>
                     </section>
 
