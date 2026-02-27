@@ -1,18 +1,18 @@
 ---
 title: "Checklist SEO Refonte Site : 45 Points à Vérifier Absolument [2026]"
-description: "Refonte imminente ? Une erreur peut diviser votre trafic par 5. Voici la checklist SEO exacte (45 points) à suivre par votre agence pour éviter la chute."
+description: "Checklist complète : 45 points SEO à vérifier AVANT, PENDANT et APRÈS votre refonte. Plan de redirection, erreurs 404, robots.txt... Ne perdez pas vos positions Google."
 date: "2026-02-16"
 category: "Refonte"
 image: "/images/blog/refonte-sans-perte-seo-2026.webp"
 author: "Indiana Aflalo"
-keywords: ["refonte site web SEO", "checklist seo refonte site", "migration SEO", "redirections 301", "perdre positions Google", "refonte sans perdre référencement", "checklist migration", "audit pre-migration"]
+keywords: ["refonte site web SEO", "checklist seo refonte site", "migration SEO", "redirections 301", "perdre positions Google", "refonte sans perdre référencement", "checklist migration", "audit pre-migration", "plan de redirection", "erreurs 404", "perte de positionnement", "robots.txt migration"]
 ---
 
-Une refonte de site web mal préparée peut **anéantir des années de travail SEO** en quelques jours. J'ai vu des entreprises perdre 80% de leur trafic organique du jour au lendemain à cause d'erreurs évitables.
+Une refonte de site web mal préparée peut **anéantir des années de travail SEO** en quelques jours. J'ai vu des entreprises subir une perte de positionnement de 80% du jour au lendemain à cause d'erreurs évitables : plan de redirection absent, erreurs 404 massives, robots.txt bloquant l'indexation.
 
-En tant que consultante SEO spécialiste en [refonte de site web](/refonte-site-web), je vous livre la **méthode complète** pour réussir votre migration sans sacrifier vos positions Google. Avant de commencer, testez votre site actuel avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit).
+En tant que consultante SEO spécialiste en [refonte de site web](/refonte-site-web), je vous livre la **méthode complète** pour réussir votre migration SEO sans sacrifier vos positions Google. Un audit pré-migration rigoureux, un plan de redirection exhaustif, et une surveillance post-lancement sont les clés du succès. Avant de commencer, testez votre site actuel avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit).
 
-> **Cet article inclut une checklist complète de 45 points** à vérifier avant, pendant et après votre refonte. Vous pouvez l'utiliser comme référence tout au long de votre projet.
+> **Cet article inclut une checklist complète de 45 points** à vérifier avant, pendant et après votre refonte. Téléchargeable gratuitement, vous pouvez l'utiliser comme référence tout au long de votre projet de migration.
 
 ## Pourquoi les refontes SEO échouent ?
 
@@ -370,43 +370,43 @@ Une refonte réussie se traduit par :
 
 Une refonte réussie côté SEO repose sur :
 
-1. **Audit exhaustif** de l'existant avant de commencer
-2. **Tableau de redirections** complet et testé
-3. **Conservation** du contenu performant
-4. **Amélioration** des performances techniques
-5. **Surveillance intensive** post-lancement
+1. **Audit pré-migration exhaustif** de l'existant avant de commencer
+2. **Plan de redirection 301** complet et testé (éviter les chaînes de redirections)
+3. **Conservation** du contenu performant et du maillage interne
+4. **Amélioration** des performances techniques (Core Web Vitals, mobile-first)
+5. **Surveillance intensive** post-lancement (erreurs 404, perte de positionnement)
 
 ---
 
 ## Questions fréquentes
 
-### Combien de temps pour retrouver mon trafic après une refonte ?
+**Combien de temps pour retrouver mon trafic après une refonte ?**
 
-Avec une migration bien préparée, le trafic revient au niveau initial en 4 à 6 semaines. Une légère baisse temporaire (10-15%) est normale pendant que Google réévalue le site. Si la baisse dépasse 30% après 2 semaines, il y a probablement un problème technique à corriger d'urgence.
+Avec une migration bien préparée et un plan de redirection solide, le trafic revient au niveau initial en 4 à 6 semaines. Une légère baisse temporaire (10-15%) est normale pendant que Google réévalue le site. Si la baisse dépasse 30% après 2 semaines, il y a probablement un problème technique à corriger d'urgence (erreurs 404, chaînes de redirections, robots.txt bloquant).
 
-### Combien de temps dure une refonte SEO-safe ?
+**Combien de temps dure une refonte SEO-safe ?**
 
-Comptez 2 à 4 semaines pour l'audit préalable et la préparation, puis le temps de développement (variable selon la taille du site), et 4 à 6 semaines de surveillance post-lancement. Une refonte bien préparée prend plus de temps, mais évite des mois de récupération SEO.
+Comptez 2 à 4 semaines pour l'audit pré-migration et la préparation du plan de redirection, puis le temps de développement (variable selon la taille du site), et 4 à 6 semaines de surveillance post-lancement. Une refonte bien préparée prend plus de temps, mais évite des mois de récupération SEO et une perte de positionnement catastrophique.
 
-### Puis-je changer de nom de domaine pendant la refonte ?
+**Puis-je changer de nom de domaine pendant la refonte ?**
 
-Oui, mais c'est une migration plus complexe. En plus des redirections classiques, il faut utiliser l'outil "Changement d'adresse" dans Google Search Console. Comptez 2-3 mois avant de retrouver vos positions. Je recommande de dissocier les deux : d'abord la refonte, puis le changement de domaine (ou l'inverse).
+Oui, mais c'est une migration plus complexe. En plus des redirections 301 classiques, il faut utiliser l'outil "Changement d'adresse" dans Google Search Console. Comptez 2-3 mois avant de retrouver vos positions. Je recommande de dissocier les deux : d'abord la refonte, puis le changement de domaine (ou l'inverse).
 
-### Faut-il garder exactement les mêmes URLs ?
+**Faut-il garder exactement les mêmes URLs ?**
 
-C'est l'idéal si vos URLs actuelles sont propres. Mais si elles sont mal structurées (paramètres, accents, trop longues), la refonte est l'occasion de les améliorer. L'important est d'avoir des redirections 301 parfaites de chaque ancienne URL vers la nouvelle.
+C'est l'idéal si vos URLs actuelles sont propres. Mais si elles sont mal structurées (paramètres, accents, trop longues), la refonte est l'occasion de les améliorer. L'important est d'avoir un plan de redirection 301 parfait : chaque ancienne URL doit pointer vers sa nouvelle destination sans créer de chaîne de redirections.
 
-### Faut-il un consultant SEO pour une refonte ?
+**Faut-il un consultant SEO pour une refonte ?**
 
-Pour un petit site vitrine (moins de 20 pages), cette checklist peut suffire si vous êtes rigoureux. Pour un site e-commerce ou un blog avec beaucoup de contenu, l'accompagnement d'un expert réduit drastiquement les risques. Le coût d'un consultant est bien inférieur à la perte de trafic d'une migration ratée.
+Pour un petit site vitrine (moins de 20 pages), cette checklist peut suffire si vous êtes rigoureux. Pour un site e-commerce ou un blog avec beaucoup de contenu, l'accompagnement d'un expert réduit drastiquement les risques de perte de positionnement. Le coût d'un consultant est bien inférieur à la perte de trafic d'une migration ratée.
 
-### Que faire si j'ai déjà perdu du trafic après ma refonte ?
+**Que faire si j'ai déjà perdu du trafic après ma refonte ?**
 
-Agissez vite : vérifiez les erreurs 404 dans Search Console, contrôlez que robots.txt n'est pas bloquant, testez toutes les redirections. Corrigez chaque problème détecté et demandez une réindexation. Plus vous intervenez rapidement, plus la récupération sera rapide.
+Agissez vite : vérifiez les erreurs 404 dans Search Console, contrôlez que robots.txt n'est pas bloquant, testez toutes les redirections 301 avec l'extension Redirect Path. Corrigez chaque problème détecté et demandez une réindexation. Plus vous intervenez rapidement, plus la récupération sera rapide.
 
-### Une refonte peut-elle améliorer mon SEO ?
+**Une refonte peut-elle améliorer mon SEO ?**
 
-Absolument. Si votre ancien site était lent, mal structuré ou avec un contenu thin, une refonte bien menée peut améliorer vos positions. Les Core Web Vitals sont un facteur de ranking : un nouveau site rapide peut surpasser l'ancien. L'important est de ne rien perdre pendant la transition.
+Absolument. Si votre ancien site était lent, mal structuré ou avec un contenu thin, une refonte bien menée peut améliorer vos positions. Les Core Web Vitals (LCP, INP, CLS) sont un facteur de ranking : un nouveau site rapide et mobile-first peut surpasser l'ancien. L'important est de ne rien perdre pendant la transition grâce à un audit pré-migration rigoureux.
 
 ---
 
