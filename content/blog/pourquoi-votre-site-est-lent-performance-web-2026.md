@@ -3,7 +3,7 @@ title: "Site lent = clients perdus : de 56 à 93 sur PageSpeed"
 description: "Un site lent vous fait perdre des clients. Comparatif réel PageSpeed : 56/100 (WordPress) vs 93/100 (Next.js). Découvrez comment améliorer vos Core Web Vitals."
 date: "2026-02-20"
 category: "Performance Web"
-image: "/images/blog/pourquoi-site-lent-2026.webp"
+image: "/images/nice-workspace.webp"
 author: "Indiana Aflalo"
 keywords: ["site internet rapide", "création site web performant", "pourquoi mon site est lent", "vitesse site web SEO", "core web vitals 2026", "création site web Nice", "performance web", "PageSpeed Insights"]
 ---
