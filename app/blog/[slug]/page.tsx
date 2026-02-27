@@ -18,6 +18,19 @@ interface PageProps {
     params: { slug: string };
 }
 
+// Fonction de slugification cohérente pour les ancres
+function slugify(text: string): string {
+    return text
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '') // Supprime les accents
+        .replace(/[^a-z0-9\s-]/g, '') // Garde lettres, chiffres, espaces, tirets
+        .trim()
+        .replace(/\s+/g, '-') // Espaces -> tirets
+        .replace(/-+/g, '-') // Plusieurs tirets -> un seul
+        .replace(/^-|-$/g, ''); // Supprime tirets en début/fin
+}
+
 // Fonction pour extraire les FAQ du contenu markdown
 function extractFAQItems(content: string): Array<{ question: string; answer: string }> {
     const faqItems: Array<{ question: string; answer: string }> = [];
@@ -242,21 +255,17 @@ export default function BlogPostPage({ params }: PageProps) {
                                         Sommaire
                                     </div>
                                     <nav className="space-y-1">
-                                        {post.content.split('\n').filter(line => line.startsWith('##')).slice(0, 10).map((line, i) => {
+                                        {post.content.split('\n').filter(line => line.startsWith('## ') && !line.startsWith('### ')).slice(0, 8).map((line, i) => {
                                             const cleanTitle = line.replace(/^#+\s+/, '').replace(/\*\*/g, '');
-                                            const slug = cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-                                            const isH3 = line.startsWith('###');
+                                            const anchorId = slugify(cleanTitle);
 
                                             return (
                                                 <a
                                                     key={i}
-                                                    href={`#${slug}`}
-                                                    className={`block py-1 border-l-2 pl-3 transition-colors text-sm ${isH3
-                                                        ? 'text-soft/70 border-transparent hover:text-sauge hover:border-sauge ml-2 text-xs'
-                                                        : 'text-soft border-transparent hover:text-sauge hover:border-sauge font-medium'
-                                                        }`}
+                                                    href={`#${anchorId}`}
+                                                    className="block py-1.5 border-l-2 pl-3 transition-colors text-sm text-soft border-transparent hover:text-sauge hover:border-sauge"
                                                 >
-                                                    {cleanTitle.length > 35 ? cleanTitle.slice(0, 35) + '...' : cleanTitle}
+                                                    {cleanTitle.length > 40 ? cleanTitle.slice(0, 40) + '...' : cleanTitle}
                                                 </a>
                                             );
                                         })}
@@ -307,16 +316,13 @@ export default function BlogPostPage({ params }: PageProps) {
                                 const sections = post.content.split(/\n(?=## )/);
                                 const CTA_INSERT_AFTER = 3; // Après le 3ème H2
 
-                                const createIdFromText = (text: React.ReactNode) =>
-                                    String(text).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
-                                // Custom components to add IDs to headings (node prop filtered to avoid DOM warning)
+                                // Custom components to add IDs to headings
                                 const markdownComponents = {
                                     h2: ({ node: _node, children, ...props }: { node?: unknown; children?: React.ReactNode } & React.HTMLAttributes<HTMLHeadingElement>) => (
-                                        <h2 id={createIdFromText(children)} {...props}>{children}</h2>
+                                        <h2 id={slugify(String(children))} {...props}>{children}</h2>
                                     ),
                                     h3: ({ node: _node, children, ...props }: { node?: unknown; children?: React.ReactNode } & React.HTMLAttributes<HTMLHeadingElement>) => (
-                                        <h3 id={createIdFromText(children)} {...props}>{children}</h3>
+                                        <h3 id={slugify(String(children))} {...props}>{children}</h3>
                                     )
                                 };
 
