@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { AuditCTA } from "@/components/blog/AuditCTA";
 import { BlogServiceCTA } from "@/components/BlogServiceCTA";
 import { InArticleCTA } from "@/components/blog/InArticleCTA";
+import { AgencyWidgetCTA } from "@/components/blog/AgencyWidgetCTA";
 import type { Metadata } from "next";
 
 interface PageProps {
@@ -361,6 +362,11 @@ export default function BlogPostPage({ params }: PageProps) {
 
                             {/* Service CTA contextuel */}
                             <BlogServiceCTA category={post.category} />
+
+                            {/* CTA Agences (Conditionnel basé sur array de slugs SEO Technique / Création) */}
+                            {['checklist-seo-2026', 'refonte-site-web-sans-perdre-seo', 'audit-seo-erreurs-qui-coutent-cher', 'programmatic-seo-50-pages-locales', 'comment-creer-site-visible-google', 'definition-seo-guide-complet', 'geo-comment-apparaitre-chatgpt-2026'].includes(post.slug) && (
+                                <AgencyWidgetCTA />
+                            )}
                         </article>
 
                     </div>

@@ -331,11 +331,10 @@ export function PartenairesClient() {
                                         />
                                         <button
                                             onClick={copyCode}
-                                            className={`absolute top-4 right-4 px-5 py-3 rounded-lg font-semibold text-sm flex items-center gap-2 transition-all duration-300 ${
-                                                copied
-                                                    ? "bg-emerald-500 text-white scale-105"
-                                                    : "bg-white text-ink hover:bg-gray-100 hover:scale-105"
-                                            }`}
+                                            className={`absolute top-4 right-4 px-5 py-3 rounded-lg font-semibold text-sm flex items-center gap-2 transition-all duration-300 ${copied
+                                                ? "bg-emerald-500 text-white scale-105"
+                                                : "bg-white text-ink hover:bg-gray-100 hover:scale-105"
+                                                }`}
                                         >
                                             {copied ? (
                                                 <>
@@ -522,28 +521,28 @@ export function PartenairesClient() {
                         <div className="space-y-4">
                             {[
                                 {
-                                    q: "Est-ce vraiment 100% gratuit ?",
-                                    a: "Oui, le widget est entièrement gratuit. Pas de frais cachés, pas d'abonnement. En échange, un petit lien \"Propulsé par IndHack\" apparaît sous le widget, ce qui nous aide pour notre référencement."
+                                    q: "Comment intégrer ce widget d'audit SEO gratuit sur mon site d'agence web (WordPress, Webflow, etc.) ?",
+                                    a: "Le widget est universel. Vous copiez l'extrait de code HTML généré ci-dessus et vous le collez sur n'importe quel CMS : WordPress, Shopify, Webflow, Wix, Squarespace ou un site développé sur-mesure. Il s'intègre instantanément pour capter les emails de vos prospects."
                                 },
                                 {
-                                    q: "Combien de leads puis-je espérer par mois ?",
-                                    a: "Cela dépend de votre trafic. En moyenne, 5 à 15% des visiteurs qui utilisent l'outil laissent leur email pour recevoir un rapport détaillé. Sur un site avec 1 000 visiteurs/mois sur la page du widget, vous pouvez espérer 50 à 150 leads qualifiés."
+                                    q: "Est-ce que le générateur de leads SEO est vraiment 100% gratuit ?",
+                                    a: "Oui, ce widget d'audit est entièrement gratuit. Contrairement aux outils de prospection digitale SaaS, il n'y a ni abonnement ni coût caché. En échange de l'analyse, un simple lien discret 'Propulsé par IndHack' informe vos visiteurs sur l'origine du calcul."
                                 },
                                 {
-                                    q: "Le widget ralentit-il mon site ?",
-                                    a: "Non. Le widget se charge via une iframe avec l'attribut loading=\"lazy\", ce qui signifie qu'il ne se charge que lorsque l'utilisateur scrolle jusqu'à lui. Il n'impacte pas votre Core Web Vitals."
+                                    q: "Combien de prospects cet outil d'inbound marketing SEO génère-t-il en moyenne ?",
+                                    a: "Sur une page d'agence recevant du trafic qualifié, l'outil offre un fort taux de conversion. En moyenne, 5 à 15 % des visiteurs qui testent leur site laissent leur email pour obtenir le rapport complet. Pour 1000 visiteurs sur la page, attendez-vous à collecter entre 50 et 150 leads qualifiés."
                                 },
                                 {
-                                    q: "Puis-je personnaliser l'apparence du widget ?",
-                                    a: "Le widget a un design neutre qui s'intègre bien sur la plupart des sites. Pour l'instant, la personnalisation des couleurs n'est pas disponible, mais vous pouvez ajuster la largeur maximale et le style du conteneur via le code HTML."
+                                    q: "Le widget d'analyse a-t-il un impact sur la vitesse (Core Web Vitals) de l'agence ?",
+                                    a: "Non. L'iframe utilise l'attribut native HTML `loading=lazy`. Le script ne sera donc chargé que si le visiteur scrolle jusqu'au générateur. Les performances de vitesse de votre landing page restent parfaitement optimisées."
                                 },
                                 {
-                                    q: "Comment fonctionne l'analyse de visibilité IA ?",
-                                    a: "L'outil analyse le fichier robots.txt du site testé pour vérifier s'il autorise les 8 principaux crawlers IA (GPTBot, ChatGPT-User, Claude-Web, PerplexityBot, etc.). Il évalue également la structure sémantique, les signaux E-E-A-T et le format du contenu pour calculer un score de visibilité sur 100."
+                                    q: "Comment fonctionne techniquement l'analyse de visibilité IA ?",
+                                    a: "L'outil vérifie en temps réel le fichier robots.txt du nom de domaine analysé. Il teste les accès des 8 grands crawlers d'intelligence artificielle (GPTBot, ChatGPT-User, Claude-Web, PerplexityBot, etc.). De plus, il scanne le balisage sémantique et la structure du site pour évaluer si l'information est lisible pour l'IA (Generative Engine Optimization)."
                                 },
                                 {
-                                    q: "C'est compatible avec quel CMS ?",
-                                    a: "Le widget fonctionne avec tous les CMS et constructeurs de sites : WordPress, Webflow, Shopify, Wix, Squarespace, Framer, ou même un site HTML statique. Il suffit de pouvoir coller du code HTML."
+                                    q: "Puis-je adapter esthétiquement ce testeur SEO marque blanche à la charte de mon agence de communication ?",
+                                    a: "Le design a été conçu pour être premium et neutre. Actuellement, les couleurs internes de l'iframe ne peuvent pas être modifiées, mais son esthétique élégante lui permet de s'adapter facilement à la majorité des agences digitales et studios de développement web. Vous gardez en revanche le contrôle sur la largeur et le positionnement du conteneur."
                                 }
                             ].map((item, i) => (
                                 <details key={i} className="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden hover:border-sauge/30 transition-colors">
