@@ -3,7 +3,7 @@ title: "Étude : 30% des meilleurs restaurants Google de la Côte d'Azur n'ont p
 description: "Nous avons analysé 308 restaurants apparaissant dans le Top Google sur 10 villes de la Côte d'Azur. Découvrez les failles critiques de ces établissements (profils suspects, manque d'avis, absence de site web) dans notre étude exclusive 2026."
 date: "2026-02-25"
 category: "SEO Local"
-image: "/images/etudes/restaurants-cote-azur-2026-og.svg"
+image: "/images/blog/new_restaurant_study_1772274701808.png"
 author: "Indiana Aflalo"
 keywords: ["étude restaurant côte d'azur", "statistiques seo local", "google my business restaurant", "audit seo local"]
 draft: false

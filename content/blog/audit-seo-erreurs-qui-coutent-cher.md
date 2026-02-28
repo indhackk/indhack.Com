@@ -3,7 +3,7 @@ title: "9 erreurs SEO qui coûtent cher (et comment les éviter)"
 description: "Votre site perd de l'argent. Les 9 erreurs techniques invisibles (canonical, vitesse, cannibalisation) qui tuent votre CA. Corrections express."
 date: "2026-02-15"
 category: "Audit SEO"
-image: "/images/blog/seo-audit-money-flying-2026-02-15.webp"
+image: "/images/blog/new_audit_errors_1772274883811.png"
 author: "Indiana Aflalo"
 keywords: ["erreurs seo techniques", "erreurs audit seo", "erreurs seo fréquentes", "erreurs seo à éviter", "perte chiffre d'affaires site web", "audit seo gratuit", "corriger site web", "cannibalisation mots clés"]
 ---
