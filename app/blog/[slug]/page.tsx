@@ -18,19 +18,6 @@ interface PageProps {
     params: { slug: string };
 }
 
-// Fonction de slugification cohérente pour les ancres
-function slugify(text: string): string {
-    return text
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '') // Supprime les accents
-        .replace(/[^a-z0-9\s-]/g, '') // Garde lettres, chiffres, espaces, tirets
-        .trim()
-        .replace(/\s+/g, '-') // Espaces -> tirets
-        .replace(/-+/g, '-') // Plusieurs tirets -> un seul
-        .replace(/^-|-$/g, ''); // Supprime tirets en début/fin
-}
-
 // Fonction pour extraire les FAQ du contenu markdown
 function extractFAQItems(content: string): Array<{ question: string; answer: string }> {
     const faqItems: Array<{ question: string; answer: string }> = [];
@@ -125,7 +112,7 @@ export default function BlogPostPage({ params }: PageProps) {
         <>
             <Breadcrumb items={getBlogBreadcrumb(post.title, params.slug)} />
             <main className="pt-28 pb-20 bg-white">
-                <div className="container mx-auto px-4 max-w-6xl">
+                <div className="container mx-auto px-4 max-w-4xl">
 
                     {/* Schema.org BlogPosting - Optimisé GEO */}
                     <script
@@ -227,11 +214,11 @@ export default function BlogPostPage({ params }: PageProps) {
                             {post.title}
                         </h1>
 
-                        <div className="text-lg md:text-xl text-soft leading-relaxed border-l-4 border-sauge pl-6 mb-10 max-w-3xl">
+                        <div className="text-xl text-soft leading-relaxed italic border-l-4 border-sauge pl-6 mb-10">
                             <ReactMarkdown>{post.description}</ReactMarkdown>
                         </div>
 
-                        <div className="relative h-[300px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
+                        <div className="relative h-[300px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
                             <Image
                                 src={post.image}
                                 alt={post.title}
@@ -243,42 +230,49 @@ export default function BlogPostPage({ params }: PageProps) {
                     </header>
 
                     {/* Post Content */}
-                    <div className="flex flex-col lg:flex-row gap-8 xl:gap-12">
+                    <div className="grid lg:grid-cols-4 gap-12">
 
                         {/* Sidebar with Table of Contents */}
-                        <aside className="w-full lg:w-72 xl:w-80 flex-shrink-0 order-last lg:order-first">
-                            <div className="lg:sticky lg:top-28 space-y-6">
+                        <aside className="lg:col-span-1 order-last lg:order-first">
+                            <div className="sticky top-32 space-y-8">
 
                                 {/* Table des matières */}
-                                <div className="hidden lg:block bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-                                    <div className="text-xs font-bold text-ink uppercase tracking-wider mb-4 pb-2 border-b border-gray-100">
+                                <div className="hidden lg:block">
+                                    <div className="text-xs font-bold text-ink uppercase tracking-wider mb-4 border-b border-gray-100 pb-2">
                                         Sommaire
                                     </div>
                                     <nav className="space-y-1">
-                                        {post.content.split('\n').filter(line => line.startsWith('## ') && !line.startsWith('### ')).slice(0, 8).map((line, i) => {
+                                        {post.content.split('\n').filter(line => line.startsWith('##')).map((line, i) => {
+                                            // Nettoyage basique des titres markdown pour l'affichage
                                             const cleanTitle = line.replace(/^#+\s+/, '').replace(/\*\*/g, '');
-                                            const anchorId = slugify(cleanTitle);
+                                            // Création d'un ID basique (dans un vrai cas il faut slugifier comme remark)
+                                            const slug = cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+
+                                            const isH3 = line.startsWith('###');
 
                                             return (
                                                 <a
                                                     key={i}
-                                                    href={`#${anchorId}`}
-                                                    className="block py-1.5 border-l-2 pl-3 transition-colors text-sm text-soft border-transparent hover:text-sauge hover:border-sauge"
+                                                    href={`#${slug}`}
+                                                    className={`block text-sm py-1 border-l-2 pl-3 transition-colors ${isH3
+                                                        ? 'text-soft/80 border-transparent hover:text-sauge hover:border-sauge ml-2 text-xs'
+                                                        : 'text-soft border-transparent hover:text-sauge hover:border-sauge font-medium'
+                                                        }`}
                                                 >
-                                                    {cleanTitle.length > 40 ? cleanTitle.slice(0, 40) + '...' : cleanTitle}
+                                                    {cleanTitle}
                                                 </a>
                                             );
                                         })}
                                     </nav>
                                 </div>
 
-                                <div className="bg-ink p-6 rounded-xl text-white">
-                                    <div className="font-heading font-bold text-lg mb-3">Besoin d'aide ?</div>
+                                <div className="bg-ink p-6 rounded-2xl text-white">
+                                    <div className="font-heading font-bold text-lg mb-4">Besoin d'aide ?</div>
                                     <p className="text-soft-light text-sm mb-6">
                                         Passons de la théorie à la pratique ensemble.
                                     </p>
                                     <AuditCTA className="w-full bg-sauge hover:bg-white hover:text-ink transition-all mb-3 rounded-xl">
-                                        Audit gratuit
+                                        Audit Gratuit
                                     </AuditCTA>
                                     <a href="tel:0661139748" className="flex items-center justify-center gap-2 text-sm text-soft-light hover:text-white transition-colors">
                                         <Phone className="w-4 h-4" />
@@ -286,7 +280,7 @@ export default function BlogPostPage({ params }: PageProps) {
                                     </a>
                                 </div>
 
-                                <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                                <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
                                     <div className="font-heading font-bold text-ink mb-4">Auteur</div>
                                     <div className="flex items-center gap-3 mb-4">
                                         <div className="relative w-12 h-12 rounded-full overflow-hidden">
@@ -310,19 +304,22 @@ export default function BlogPostPage({ params }: PageProps) {
                         </aside>
 
                         {/* Main Content */}
-                        <article className="flex-1 min-w-0 prose prose-lg md:prose-xl prose-headings:font-heading prose-headings:font-bold prose-headings:text-ink prose-headings:scroll-mt-28 prose-headings:tracking-tight prose-p:text-soft/90 prose-p:leading-relaxed prose-li:text-soft/90 prose-strong:text-ink prose-a:text-sauge prose-a:decoration-sauge/30 hover:prose-a:decoration-sauge prose-blockquote:border-sauge prose-blockquote:bg-sauge/5 prose-blockquote:px-6 prose-blockquote:py-4 prose-blockquote:rounded-xl prose-blockquote:font-light prose-blockquote:text-ink/80 prose-blockquote:not-italic prose-img:rounded-2xl prose-img:shadow-md max-w-none bg-white p-6 md:p-10 lg:p-12 rounded-2xl shadow-sm border border-gray-100">
+                        <article className="lg:col-span-3 prose prose-lg prose-headings:font-heading prose-headings:font-bold prose-headings:text-ink prose-headings:scroll-mt-32 prose-p:text-soft prose-li:text-soft prose-strong:text-ink prose-a:text-sauge prose-blockquote:border-sauge prose-blockquote:bg-gray-50 prose-blockquote:p-6 prose-blockquote:rounded-xl max-w-none">
                             {(() => {
                                 // Split content by H2 sections pour injecter le CTA après le 3ème H2
                                 const sections = post.content.split(/\n(?=## )/);
                                 const CTA_INSERT_AFTER = 3; // Après le 3ème H2
 
-                                // Custom components to add IDs to headings
+                                const createIdFromText = (text: React.ReactNode) =>
+                                    String(text).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+
+                                // Custom components to add IDs to headings (node prop filtered to avoid DOM warning)
                                 const markdownComponents = {
                                     h2: ({ node: _node, children, ...props }: { node?: unknown; children?: React.ReactNode } & React.HTMLAttributes<HTMLHeadingElement>) => (
-                                        <h2 id={slugify(String(children))} {...props}>{children}</h2>
+                                        <h2 id={createIdFromText(children)} {...props}>{children}</h2>
                                     ),
                                     h3: ({ node: _node, children, ...props }: { node?: unknown; children?: React.ReactNode } & React.HTMLAttributes<HTMLHeadingElement>) => (
-                                        <h3 id={slugify(String(children))} {...props}>{children}</h3>
+                                        <h3 id={createIdFromText(children)} {...props}>{children}</h3>
                                     )
                                 };
 
@@ -369,19 +366,19 @@ export default function BlogPostPage({ params }: PageProps) {
                     </div>
 
                     {/* Final CTA Area */}
-                    <section className="mt-16 py-12 px-8 bg-gray-50 rounded-2xl text-center border border-gray-100">
+                    <section className="mt-20 py-12 px-8 bg-gray-50 rounded-3xl text-center border border-gray-100">
                         <div className="text-2xl md:text-3xl font-heading font-bold text-ink mb-4">
                             Cet article vous a été utile ?
                         </div>
                         <p className="text-soft mb-8 max-w-xl mx-auto">
-                            Partagez-le ou contactez-moi pour discuter de votre stratégie SEO.
+                            Partagez-le ou contactez-moi pour discuter de votre stratégie SEO en détail.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <AuditCTA className="bg-sauge hover:bg-ink text-white rounded-full px-8 py-4">
+                            <AuditCTA className="bg-sauge hover:bg-ink text-white rounded-full px-8 py-6">
                                 Réserver mon audit gratuit
                             </AuditCTA>
                             <Link href="/contact">
-                                <Button variant="outline" className="border-2 border-ink text-ink hover:bg-ink hover:text-white rounded-full px-8 py-4">
+                                <Button variant="outline" className="border-2 border-ink text-ink hover:bg-ink hover:text-white rounded-full px-8 py-6">
                                     Me contacter
                                 </Button>
                             </Link>

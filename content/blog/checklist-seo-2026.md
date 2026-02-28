@@ -3,7 +3,7 @@ title: "Checklist SEO 2026 : 30 points pour optimiser votre site"
 description: "Checklist SEO 2026 gratuite : 30 points essentiels pour optimiser votre site web. Technique, contenu, SEO local, backlinks et visibilité IA."
 date: "2026-02-08"
 category: "Guides"
-image: "/images/nice-workspace.webp"
+image: "/images/blog/checklist-seo-2026.jpg"
 author: "Indiana Aflalo"
 keywords: ["checklist SEO 2026", "audit SEO", "référencement naturel", "optimisation site web", "SEO technique", "SEO local", "backlinks", "visibilité IA"]
 ---
