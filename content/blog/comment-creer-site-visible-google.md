@@ -4,6 +4,7 @@ description: "Agence web ou freelance passionné ? Découvrez les étapes clés 
 date: "2026-02-04"
 category: "Création de site"
 image: "/images/blog/creer-site-visible-google.jpg"
+imageAlt: "Création d'un site web visible sur Google : étapes clés du référencement dès la conception"
 author: "Indiana Aflalo"
 keywords: ["créer site internet visible Google", "référencement site web", "site web premier page Google", "création site SEO", "freelance SEO", "agence web vs freelance"]
 ---

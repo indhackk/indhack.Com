@@ -4,6 +4,7 @@ description: "Votre site perd de l'argent. Les 9 erreurs techniques invisibles (
 date: "2026-02-15"
 category: "Audit SEO"
 image: "/images/blog/new_audit_errors_1772274883811.png"
+imageAlt: "9 erreurs SEO techniques courantes : canonical, vitesse, cannibalisation et leurs impacts sur le chiffre d'affaires"
 author: "Indiana Aflalo"
 keywords: ["erreurs seo techniques", "erreurs audit seo", "erreurs seo fréquentes", "erreurs seo à éviter", "perte chiffre d'affaires site web", "audit seo gratuit", "corriger site web", "cannibalisation mots clés"]
 ---

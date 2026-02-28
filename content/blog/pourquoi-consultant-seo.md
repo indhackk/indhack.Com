@@ -4,6 +4,7 @@ description: "Investir dans un consultant SEO, c'est rentable ? Découvrez les 8
 date: "2026-02-01"
 category: "Stratégie"
 image: "/images/blog/pourquoi-consultant-seo.jpg"
+imageAlt: "8 raisons de faire appel à un consultant SEO plutôt que de gérer le référencement seul"
 author: "Indiana Aflalo"
 keywords: ["consultant SEO", "pourquoi consultant SEO", "expert référencement naturel", "faire appel consultant SEO", "tarif consultant SEO", "ROI SEO"]
 ---

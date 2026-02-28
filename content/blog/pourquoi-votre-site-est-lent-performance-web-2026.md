@@ -4,6 +4,7 @@ description: "Un site lent vous fait perdre des clients. Comparatif réel PageSp
 date: "2026-02-20"
 category: "Performance Web"
 image: "/images/blog/pourquoi-site-lent-2026.webp"
+imageAlt: "Comparatif PageSpeed : score de 56 (WordPress) vs 93 (Next.js) sur Core Web Vitals"
 author: "Indiana Aflalo"
 keywords: ["site internet rapide", "création site web performant", "pourquoi mon site est lent", "vitesse site web SEO", "core web vitals 2026", "création site web Nice", "performance web", "PageSpeed Insights"]
 ---

@@ -5,6 +5,7 @@ date: "2026-01-23"
 draft: true
 category: "Métier"
 image: "/images/blog/salaire-consultant-seo.jpg"
+imageAlt: "Grilles salariales consultant SEO 2026 : junior, confirmé, senior et freelance en France"
 author: "Indiana Aflalo"
 keywords: ["salaire consultant SEO", "rémunération SEO", "combien gagne consultant SEO", "TJM consultant SEO", "salaire référenceur", "salaire SEO manager"]
 ---

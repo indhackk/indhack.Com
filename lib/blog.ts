@@ -11,6 +11,7 @@ export interface BlogPost {
     date: string;
     category: string;
     image: string;
+    imageAlt?: string;
     author: string;
     content: string;
     keywords: string[];
@@ -33,6 +34,7 @@ export function getAllPosts(): BlogPost[] {
             date: data.date,
             category: data.category,
             image: data.image,
+            imageAlt: data.imageAlt,
             author: data.author,
             keywords: data.keywords || [],
             draft: data.draft || false,
@@ -63,6 +65,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
             date: data.date,
             category: data.category,
             image: data.image,
+            imageAlt: data.imageAlt,
             author: data.author,
             keywords: data.keywords || [],
             draft: false,

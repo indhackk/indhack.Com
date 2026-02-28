@@ -4,6 +4,7 @@ description: "Checklist complète : 45 points SEO à vérifier AVANT, PENDANT et
 date: "2026-02-16"
 category: "Refonte"
 image: "/images/blog/new_redesign_seo_1772274864650.png"
+imageAlt: "Checklist refonte site web : 45 points SEO pour éviter la perte de positions Google"
 author: "Indiana Aflalo"
 keywords: ["refonte site web SEO", "checklist seo refonte site", "migration SEO", "redirections 301", "perdre positions Google", "refonte sans perdre référencement", "checklist migration", "audit pre-migration", "plan de redirection", "erreurs 404", "perte de positionnement", "robots.txt migration"]
 ---

@@ -4,6 +4,7 @@ description: "Nous avons analysé 308 restaurants apparaissant dans le Top Googl
 date: "2026-02-25"
 category: "SEO Local"
 image: "/images/blog/new_restaurant_study_1772274701808.png"
+imageAlt: "Étude SEO local 2026 : analyse de 308 restaurants sur Google Maps en Côte d'Azur"
 author: "Indiana Aflalo"
 keywords: ["étude restaurant côte d'azur", "statistiques seo local", "google my business restaurant", "audit seo local"]
 draft: false

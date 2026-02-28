@@ -76,7 +76,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
                     url: `https://indhack.com${post.image}`,
                     width: 1200,
                     height: 630,
-                    alt: post.title,
+                    alt: post.imageAlt || post.title,
                 }
             ],
             locale: "fr_FR",
@@ -221,7 +221,7 @@ export default function BlogPostPage({ params }: PageProps) {
                         <div className="relative h-[300px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
                             <Image
                                 src={post.image}
-                                alt={post.title}
+                                alt={post.imageAlt || post.title}
                                 fill
                                 className="object-cover"
                                 priority

@@ -4,6 +4,7 @@ description: "Référencement naturel ou publicité Google Ads ? Comparatif comp
 date: "2026-02-06"
 category: "Stratégie"
 image: "/images/blog/seo-vs-sea.jpg"
+imageAlt: "Comparatif SEO vs SEA : coûts, délais et ROI du référencement naturel face à Google Ads"
 author: "Indiana Aflalo"
 keywords: ["SEO vs SEA", "référencement naturel vs payant", "Google Ads vs SEO", "SEA définition", "comparatif SEO SEA", "stratégie acquisition"]
 ---

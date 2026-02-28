@@ -4,6 +4,7 @@ description: "Comment apparaître en tête des recherches locales à Nice et dan
 date: "2026-01-14"
 category: "SEO Local"
 image: "/images/blog/seo-local-nice-2026.webp"
+imageAlt: "SEO local Nice et Alpes-Maritimes : stratégies pour dominer Google Maps sur la Côte d'Azur"
 author: "Indiana Aflalo"
 keywords: ["SEO Nice", "référencement local Nice", "Alpes-Maritimes", "Google Maps Nice", "consultant SEO Nice", "Google Business Profile Nice"]
 ---

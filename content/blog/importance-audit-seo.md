@@ -4,6 +4,7 @@ description: "Ne naviguez plus à vue. Découvrez pourquoi un audit SEO est l'in
 date: "2026-01-16"
 category: "Stratégie"
 image: "/images/blog/importance-audit-seo.jpg"
+imageAlt: "Audit SEO : diagnostic complet pour identifier les fuites de performance de votre site"
 author: "Indiana Aflalo"
 keywords: ["audit SEO", "PME", "croissance", "ROI", "stratégie digitale", "analyse site web", "optimisation SEO"]
 ---

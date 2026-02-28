@@ -4,6 +4,7 @@ description: "Checklist SEO 2026 gratuite : 30 points essentiels pour optimiser 
 date: "2026-02-08"
 category: "Guides"
 image: "/images/blog/new_checklist_seo_1772274828890.png"
+imageAlt: "Checklist SEO 2026 : 30 points essentiels pour optimiser technique, contenu, SEO local et visibilité IA"
 author: "Indiana Aflalo"
 keywords: ["checklist SEO 2026", "audit SEO", "référencement naturel", "optimisation site web", "SEO technique", "SEO local", "backlinks", "visibilité IA"]
 ---

@@ -4,6 +4,7 @@ description: "Guide GEO complet : optimisez votre site pour être cité par Chat
 date: "2026-02-17"
 category: "IA & SEO"
 image: "/images/blog/geo-ia-seo.jpg"
+imageAlt: "GEO 2026 : optimisation pour ChatGPT, Perplexity et les moteurs de recherche IA"
 author: "Indiana Aflalo"
 keywords: ["GEO", "Generative Engine Optimization", "ChatGPT SEO", "visibilité IA", "référencement ChatGPT", "Perplexity SEO", "Google AI Overviews", "optimisation IA", "crawlers IA", "GPTBot", "robots.txt IA", "llms.txt"]
 ---

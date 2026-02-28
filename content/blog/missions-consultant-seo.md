@@ -5,6 +5,7 @@ date: "2026-01-25"
 draft: true
 category: "Métier"
 image: "/images/blog/missions-consultant-seo.jpg"
+imageAlt: "Missions d'un consultant SEO : audit, stratégie de contenu, netlinking et suivi de performances"
 author: "Indiana Aflalo"
 keywords: ["missions consultant SEO", "rôle consultant SEO", "que fait un consultant SEO", "travail consultant SEO", "expert SEO missions", "métier consultant SEO"]
 ---

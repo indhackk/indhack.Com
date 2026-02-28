@@ -4,6 +4,7 @@ description: "Découvrez la méthode étape par étape pour détourner légaleme
 date: "2026-02-11"
 category: "SEO Local"
 image: "/images/blog/seo-local-nice.jpg"
+imageAlt: "Stratégie SEO local Google Maps : analyser et dépasser vos concurrents sur le pack local"
 author: "Indiana Aflalo"
 keywords: ["seo local google maps", "voler clients concurrents", "optimisation google business profile", "hack seo local", "google maps 2026"]
 ---

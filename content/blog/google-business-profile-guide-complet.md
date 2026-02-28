@@ -4,6 +4,7 @@ description: "Optimisez votre fiche Google Business Profile pour dominer le pack
 date: "2026-01-11"
 category: "SEO Local"
 image: "/images/blog/google-business-profile.jpg"
+imageAlt: "Guide Google Business Profile 2026 : optimisation complète de votre fiche pour le pack local"
 author: "Indiana Aflalo"
 keywords: ["Google Business Profile", "fiche Google", "SEO local", "Google My Business", "pack local", "avis Google", "référencement local"]
 ---
