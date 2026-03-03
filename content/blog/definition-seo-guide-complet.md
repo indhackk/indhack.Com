@@ -57,6 +57,7 @@ Il s'agit de la santé mécanique de votre site. Si le moteur est cassé, la Fer
 - **La vitesse** : Les *Core Web Vitals* sont un critère officiel de classement. Un LCP (temps d'affichage) supérieur à 2.5 secondes est un malus direct. ([L'impact de la vitesse sur votre référencement naturel](/blog/pourquoi-votre-site-est-lent-performance-web-2026)).
 - **Le Mobile-First** : Google n'explore plus la version "ordinateur" de votre site, mais uniquement la version smartphone.
 - **L'architecture HTTPS et l'arborescence** : Un site sécurisé, sans erreur 404, et structuré logiquement.
+- **La refonte** : Moderniser ou migrer un site sans méthodologie SEO peut anéantir vos positions. Consultez notre [guide de refonte SEO](/blog/refonte-site-web-sans-perdre-seo) pour éviter ce piège.
 
 ### Pilier 2 — Le SEO Sémantique (Le contenu)
 C'est l'essence même de votre visibilité. Le SEO sémantique consiste à créer un contenu répondant précisément à l'intention de recherche de l'utilisateur.
