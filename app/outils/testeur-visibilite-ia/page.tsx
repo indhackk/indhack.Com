@@ -223,12 +223,12 @@ export default function TesteurVisibiliteIAPage() {
                                     const Icon = cat.icon;
                                     return (
                                         <div key={cat.title} className="bg-white/5 rounded-xl p-5 border border-white/10">
-                                            <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center mb-3">
-                                                <Icon className="w-5 h-5 text-sauge" />
+                                            <div className="w-10 h-10 rounded-lg bg-sauge/30 flex items-center justify-center mb-3">
+                                                <Icon className="w-5 h-5 text-sauge-light" />
                                             </div>
                                             <h3 className="font-bold text-white text-sm mb-1">{cat.title}</h3>
-                                            <p className="text-xs text-soft-light mb-2">{cat.desc}</p>
-                                            <span className="text-xs font-bold text-sauge">{cat.points} pts</span>
+                                            <p className="text-sm text-soft-light mb-2">{cat.desc}</p>
+                                            <span className="text-sm font-bold text-sauge-light">{cat.points} pts</span>
                                         </div>
                                     );
                                 })}
@@ -253,9 +253,9 @@ export default function TesteurVisibiliteIAPage() {
                                     { stat: "1,48 Md€", label: "marché GEO estimé en 2026", source: "Grand View Research" },
                                 ].map((item) => (
                                     <div key={item.stat} className="bg-white/5 rounded-xl p-6 border border-white/10 text-center">
-                                        <span className="text-3xl font-bold text-sauge block mb-2">{item.stat}</span>
+                                        <span className="text-3xl font-bold text-sauge-light block mb-2">{item.stat}</span>
                                         <span className="text-white font-medium block mb-1">{item.label}</span>
-                                        <span className="text-xs text-soft-light">Source : {item.source}</span>
+                                        <span className="text-sm text-white/60">Source : {item.source}</span>
                                     </div>
                                 ))}
                             </div>
@@ -279,41 +279,41 @@ export default function TesteurVisibiliteIAPage() {
                                     <table className="w-full text-sm border-collapse">
                                         <thead>
                                             <tr className="bg-white/10">
-                                                <th className="px-4 py-3 text-left text-white font-medium border border-white/10">Critère</th>
-                                                <th className="px-4 py-3 text-left text-white font-medium border border-white/10">SEO classique</th>
-                                                <th className="px-4 py-3 text-left text-sauge font-medium border border-white/10">GEO (Generative Engine Optimization)</th>
+                                                <th className="px-4 py-3 text-left text-white font-medium border border-white/20">Critère</th>
+                                                <th className="px-4 py-3 text-left text-white font-medium border border-white/20">SEO classique</th>
+                                                <th className="px-4 py-3 text-left text-sauge-light font-medium border border-white/20">GEO (Generative Engine Optimization)</th>
                                             </tr>
                                         </thead>
                                         <tbody className="text-soft-light">
                                             <tr>
-                                                <td className="px-4 py-3 border border-white/10 font-medium text-white">Objectif</td>
-                                                <td className="px-4 py-3 border border-white/10">Apparaître dans les liens bleus Google</td>
-                                                <td className="px-4 py-3 border border-white/10">Être cité comme source par les IA</td>
+                                                <td className="px-4 py-3 border border-white/20 font-medium text-white">Objectif</td>
+                                                <td className="px-4 py-3 border border-white/20">Apparaître dans les liens bleus Google</td>
+                                                <td className="px-4 py-3 border border-white/20">Être cité comme source par les IA</td>
                                             </tr>
                                             <tr className="bg-white/5">
-                                                <td className="px-4 py-3 border border-white/10 font-medium text-white">Canaux ciblés</td>
-                                                <td className="px-4 py-3 border border-white/10">Google, Bing, Yahoo</td>
-                                                <td className="px-4 py-3 border border-white/10">ChatGPT, Perplexity, Claude, Gemini, Copilot</td>
+                                                <td className="px-4 py-3 border border-white/20 font-medium text-white">Canaux ciblés</td>
+                                                <td className="px-4 py-3 border border-white/20">Google, Bing, Yahoo</td>
+                                                <td className="px-4 py-3 border border-white/20">ChatGPT, Perplexity, Claude, Gemini, Copilot</td>
                                             </tr>
                                             <tr>
-                                                <td className="px-4 py-3 border border-white/10 font-medium text-white">Signaux clés</td>
-                                                <td className="px-4 py-3 border border-white/10">Backlinks, mots-clés, Core Web Vitals</td>
-                                                <td className="px-4 py-3 border border-white/10">JSON-LD, E-E-A-T, llms.txt, contenu citable</td>
+                                                <td className="px-4 py-3 border border-white/20 font-medium text-white">Signaux clés</td>
+                                                <td className="px-4 py-3 border border-white/20">Backlinks, mots-clés, Core Web Vitals</td>
+                                                <td className="px-4 py-3 border border-white/20">JSON-LD, E-E-A-T, llms.txt, contenu citable</td>
                                             </tr>
                                             <tr className="bg-white/5">
-                                                <td className="px-4 py-3 border border-white/10 font-medium text-white">Crawlers</td>
-                                                <td className="px-4 py-3 border border-white/10">Googlebot, Bingbot</td>
-                                                <td className="px-4 py-3 border border-white/10">GPTBot, Claude-Web, PerplexityBot</td>
+                                                <td className="px-4 py-3 border border-white/20 font-medium text-white">Crawlers</td>
+                                                <td className="px-4 py-3 border border-white/20">Googlebot, Bingbot</td>
+                                                <td className="px-4 py-3 border border-white/20">GPTBot, Claude-Web, PerplexityBot</td>
                                             </tr>
                                             <tr>
-                                                <td className="px-4 py-3 border border-white/10 font-medium text-white">Métriques</td>
-                                                <td className="px-4 py-3 border border-white/10">Position, CTR, impressions</td>
-                                                <td className="px-4 py-3 border border-white/10">Taux de citation, présence dans les réponses IA</td>
+                                                <td className="px-4 py-3 border border-white/20 font-medium text-white">Métriques</td>
+                                                <td className="px-4 py-3 border border-white/20">Position, CTR, impressions</td>
+                                                <td className="px-4 py-3 border border-white/20">Taux de citation, présence dans les réponses IA</td>
                                             </tr>
                                             <tr className="bg-white/5">
-                                                <td className="px-4 py-3 border border-white/10 font-medium text-white">Outils</td>
-                                                <td className="px-4 py-3 border border-white/10">Search Console, Ahrefs, SEMrush</td>
-                                                <td className="px-4 py-3 border border-white/10"><span className="text-sauge font-medium">Testeur Visibilité IA IndHack</span>, Perplexity Analytics</td>
+                                                <td className="px-4 py-3 border border-white/20 font-medium text-white">Outils</td>
+                                                <td className="px-4 py-3 border border-white/20">Search Console, Ahrefs, SEMrush</td>
+                                                <td className="px-4 py-3 border border-white/20"><span className="text-sauge-light font-medium">Testeur Visibilité IA IndHack</span>, Perplexity Analytics</td>
                                             </tr>
                                         </tbody>
                                     </table>

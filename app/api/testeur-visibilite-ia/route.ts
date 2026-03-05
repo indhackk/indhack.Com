@@ -76,6 +76,32 @@ interface CitabilityInfo {
     score: number; // 0-100
 }
 
+interface FreshnessInfo {
+    hasDate: boolean;
+    date?: string;
+    ageMonths?: number;
+    source?: string;
+}
+
+interface QAStructureInfo {
+    questionHeadingsCount: number;
+    totalH2H3: number;
+}
+
+interface OGSignalsInfo {
+    count: number;
+    present: string[];
+    missing: string[];
+}
+
+interface HeadingDepthInfo {
+    hasProperStructure: boolean;
+    hasSkips: boolean;
+    h1Count: number;
+    h2Count: number;
+    h3Count: number;
+}
+
 interface VisibilityResult {
     url: string;
     timestamp: string;
@@ -100,6 +126,10 @@ interface VisibilityResult {
     xRobotsTagInfo?: XRobotsTagInfo;
     metaRobotsIaInfo?: MetaRobotsIaInfo;
     citabilityInfo?: CitabilityInfo;
+    freshnessInfo?: FreshnessInfo;
+    qaStructureInfo?: QAStructureInfo;
+    ogSignalsInfo?: OGSignalsInfo;
+    headingDepthInfo?: HeadingDepthInfo;
     cached?: boolean;
 }
 
@@ -272,6 +302,166 @@ function calculateCitability($: cheerio.CheerioAPI, bodyText: string): Citabilit
     };
 }
 
+// Check content freshness from various date sources
+function checkFreshness($: cheerio.CheerioAPI, headers: Headers): FreshnessInfo {
+    const result: FreshnessInfo = { hasDate: false };
+
+    // Try multiple date sources
+    const dateSources = [
+        // Meta tags
+        () => $('meta[property="article:modified_time"]').attr("content"),
+        () => $('meta[property="article:published_time"]').attr("content"),
+        () => $('meta[name="date"]').attr("content"),
+        () => $('meta[name="DC.date"]').attr("content"),
+        () => $('meta[property="og:updated_time"]').attr("content"),
+        // Time element
+        () => $("time[datetime]").first().attr("datetime"),
+        () => $("time").first().text(),
+        // Schema.org
+        () => $('[itemprop="dateModified"]').attr("content") || $('[itemprop="dateModified"]').text(),
+        () => $('[itemprop="datePublished"]').attr("content") || $('[itemprop="datePublished"]').text(),
+    ];
+
+    let dateStr: string | undefined;
+    let source = "";
+
+    for (const getDate of dateSources) {
+        const val = getDate();
+        if (val && val.length > 6) {
+            dateStr = val;
+            source = "meta/html";
+            break;
+        }
+    }
+
+    // Check Last-Modified header
+    if (!dateStr) {
+        const lastMod = headers.get("last-modified");
+        if (lastMod) {
+            dateStr = lastMod;
+            source = "header";
+        }
+    }
+
+    // Try to parse text patterns in body
+    if (!dateStr) {
+        const bodyText = $("body").text();
+        const patterns = [
+            /(?:mis à jour|modifié|publié|updated|published)\s*(?:le|:)?\s*(\d{1,2}[\/\-\.]\d{1,2}[\/\-\.]\d{2,4})/i,
+            /(\d{1,2}\s+(?:janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s+\d{4})/i,
+        ];
+        for (const pattern of patterns) {
+            const match = bodyText.match(pattern);
+            if (match) {
+                dateStr = match[1];
+                source = "text";
+                break;
+            }
+        }
+    }
+
+    if (dateStr) {
+        result.hasDate = true;
+        result.date = dateStr;
+        result.source = source;
+
+        // Try to calculate age
+        try {
+            const parsed = new Date(dateStr);
+            if (!isNaN(parsed.getTime())) {
+                const now = new Date();
+                const diffMs = now.getTime() - parsed.getTime();
+                result.ageMonths = Math.floor(diffMs / (1000 * 60 * 60 * 24 * 30));
+            }
+        } catch {
+            // Date parsing failed
+        }
+    }
+
+    return result;
+}
+
+// Check Q&A structure in headings
+function checkQAStructure($: cheerio.CheerioAPI): QAStructureInfo {
+    const h2h3 = $("h2, h3");
+    let questionCount = 0;
+
+    const questionWords = /^(comment|pourquoi|quand|quel|quelle|quels|quelles|combien|où|est-ce|what|how|why|when|which|who|can|do|does|is|are|should)/i;
+
+    h2h3.each((_, el) => {
+        const text = $(el).text().trim();
+        if (questionWords.test(text) || text.endsWith("?")) {
+            questionCount++;
+        }
+    });
+
+    return {
+        questionHeadingsCount: questionCount,
+        totalH2H3: h2h3.length,
+    };
+}
+
+// Check Open Graph signals
+function checkOGSignals($: cheerio.CheerioAPI): OGSignalsInfo {
+    const ogTags = ["og:title", "og:description", "og:image", "og:type", "og:url"];
+    const twitterTags = ["twitter:card", "twitter:title"];
+    const allTags = [...ogTags, ...twitterTags];
+
+    const present: string[] = [];
+    const missing: string[] = [];
+
+    for (const tag of allTags) {
+        const selector = tag.startsWith("twitter:")
+            ? `meta[name="${tag}"]`
+            : `meta[property="${tag}"]`;
+        if ($(selector).length > 0) {
+            present.push(tag);
+        } else {
+            missing.push(tag);
+        }
+    }
+
+    return {
+        count: present.length,
+        present,
+        missing,
+    };
+}
+
+// Check heading depth and structure
+function checkHeadingDepth($: cheerio.CheerioAPI): HeadingDepthInfo {
+    const h1 = $("h1").length;
+    const h2 = $("h2").length;
+    const h3 = $("h3").length;
+    const h4 = $("h4").length;
+
+    // Check for heading skips (H1 -> H3 without H2, etc.)
+    let hasSkips = false;
+    const headings = $("h1, h2, h3, h4, h5, h6");
+    let lastLevel = 0;
+
+    headings.each((_, el) => {
+        const tagName = $(el).prop("tagName")?.toLowerCase();
+        if (tagName) {
+            const level = parseInt(tagName.replace("h", ""));
+            if (lastLevel > 0 && level > lastLevel + 1) {
+                hasSkips = true;
+            }
+            lastLevel = level;
+        }
+    });
+
+    const hasProperStructure = h1 === 1 && h2 >= 2 && h3 >= 1 && !hasSkips;
+
+    return {
+        hasProperStructure,
+        hasSkips,
+        h1Count: h1,
+        h2Count: h2,
+        h3Count: h3,
+    };
+}
+
 function parseCrawlerStatus(robotsTxt: string, agent: string): "allowed" | "blocked" | "not_mentioned" {
     if (!robotsTxt) return "not_mentioned";
 
@@ -344,6 +534,18 @@ async function analyzeVisibility(url: string): Promise<VisibilityResult> {
 
     // Calculate citability score
     const citabilityInfo = calculateCitability($, bodyText);
+
+    // Check content freshness
+    const freshnessInfo = checkFreshness($, pageHeaders);
+
+    // Check Q&A structure
+    const qaStructureInfo = checkQAStructure($);
+
+    // Check Open Graph signals
+    const ogSignalsInfo = checkOGSignals($);
+
+    // Check heading depth
+    const headingDepthInfo = checkHeadingDepth($);
 
     // Fetch robots.txt
     let robotsTxt = "";
@@ -653,6 +855,27 @@ async function analyzeVisibility(url: string): Promise<VisibilityResult> {
         maxPoints: 5,
     });
 
+    // Heading depth bonus check
+    const depthStatus: CheckItem["status"] = headingDepthInfo.hasProperStructure ? "success" :
+        headingDepthInfo.hasSkips ? "error" : "warning";
+    categories.semantique.checks.push({
+        label: "Profondeur sémantique",
+        status: depthStatus,
+        detail: headingDepthInfo.hasProperStructure
+            ? "Structure H1→H2→H3 parfaite"
+            : headingDepthInfo.hasSkips
+                ? "Sauts de niveaux détectés (ex: H1→H3)"
+                : "Structure incomplète (ajoutez des H3)",
+        points: 0,
+        maxPoints: 0,
+    });
+    if (headingDepthInfo.hasSkips) {
+        recommendations.push({
+            text: "Évitez les sauts de niveaux dans vos titres (H1→H3 sans H2). Les IA comprennent mieux une structure logique.",
+            priority: 3,
+        });
+    }
+
     // Lists & Tables (5 pts)
     const listsCount = $("ul, ol").length;
     const tablesCount = $("table").length;
@@ -738,6 +961,21 @@ async function analyzeVisibility(url: string): Promise<VisibilityResult> {
         detail: `${hasLegal ? "Mentions légales" : ""}${hasPrivacy ? " + Confidentialité" : ""}${hasCgv ? " + CGV" : ""}`.trim() || "Aucune page légale",
         points: legalPoints,
         maxPoints: 5,
+    });
+
+    // Open Graph signals bonus check
+    const ogStatus: CheckItem["status"] = ogSignalsInfo.count >= 5 ? "success" :
+        ogSignalsInfo.count >= 2 ? "warning" : "error";
+    categories.eeat.checks.push({
+        label: "Métadonnées sociales (OG)",
+        status: ogStatus,
+        detail: ogSignalsInfo.count >= 5
+            ? `${ogSignalsInfo.count}/7 balises OG/Twitter`
+            : ogSignalsInfo.count > 0
+                ? `${ogSignalsInfo.count}/7 (manque: ${ogSignalsInfo.missing.slice(0, 3).join(", ")})`
+                : "Aucune balise Open Graph détectée",
+        points: 0,
+        maxPoints: 0,
     });
 
     // ========== 4. FORMAT IA-FRIENDLY (/20) ==========
@@ -895,6 +1133,68 @@ async function analyzeVisibility(url: string): Promise<VisibilityResult> {
         maxPoints: 2,
     });
 
+    // Content freshness bonus check
+    let freshnessStatus: CheckItem["status"] = "error";
+    let freshnessDetail = "Pas de signal de fraîcheur détecté";
+
+    if (freshnessInfo.hasDate && freshnessInfo.ageMonths !== undefined) {
+        if (freshnessInfo.ageMonths <= 3) {
+            freshnessStatus = "success";
+            freshnessDetail = `Contenu frais (${freshnessInfo.ageMonths <= 1 ? "< 1 mois" : `${freshnessInfo.ageMonths} mois`})`;
+        } else if (freshnessInfo.ageMonths <= 12) {
+            freshnessStatus = "warning";
+            freshnessDetail = `Contenu récent (${freshnessInfo.ageMonths} mois)`;
+        } else {
+            freshnessStatus = "warning";
+            freshnessDetail = `Contenu potentiellement obsolète (${freshnessInfo.ageMonths} mois)`;
+        }
+    } else if (freshnessInfo.hasDate) {
+        freshnessStatus = "warning";
+        freshnessDetail = `Date détectée: ${freshnessInfo.date}`;
+    }
+
+    categories.format.checks.push({
+        label: "Fraîcheur du contenu",
+        status: freshnessStatus,
+        detail: freshnessDetail,
+        points: 0,
+        maxPoints: 0,
+    });
+
+    if (!freshnessInfo.hasDate) {
+        recommendations.push({
+            text: "Ajoutez une date de publication/mise à jour visible. Les IA préfèrent citer du contenu récent.",
+            priority: 3,
+        });
+    }
+
+    // Q&A structure bonus check
+    let qaStatus: CheckItem["status"] = "error";
+    let qaDetail = "Aucun titre en question";
+
+    if (qaStructureInfo.questionHeadingsCount >= 3) {
+        qaStatus = "success";
+        qaDetail = `Excellent (${qaStructureInfo.questionHeadingsCount}/${qaStructureInfo.totalH2H3} titres en question)`;
+    } else if (qaStructureInfo.questionHeadingsCount >= 1) {
+        qaStatus = "warning";
+        qaDetail = `${qaStructureInfo.questionHeadingsCount}/${qaStructureInfo.totalH2H3} titres en question`;
+    }
+
+    categories.format.checks.push({
+        label: "Structure Q&A",
+        status: qaStatus,
+        detail: qaDetail,
+        points: 0,
+        maxPoints: 0,
+    });
+
+    if (qaStructureInfo.questionHeadingsCount === 0 && qaStructureInfo.totalH2H3 > 0) {
+        recommendations.push({
+            text: "Reformulez certains sous-titres en questions. Les IA extraient prioritairement les réponses à des questions explicites.",
+            priority: 4,
+        });
+    }
+
     // Calculate total score
     const totalScore = categories.accessibilite.score +
         categories.semantique.score +
@@ -941,6 +1241,10 @@ async function analyzeVisibility(url: string): Promise<VisibilityResult> {
         xRobotsTagInfo,
         metaRobotsIaInfo,
         citabilityInfo,
+        freshnessInfo,
+        qaStructureInfo,
+        ogSignalsInfo,
+        headingDepthInfo,
     };
 }
 

@@ -20,6 +20,9 @@ import {
     AlertTriangle,
     Zap,
     Linkedin,
+    Clock,
+    Wrench,
+    Target,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -285,6 +288,29 @@ export function TesteurVisibiliteIA() {
         );
     };
 
+    const shareOnTwitter = () => {
+        const text = result
+            ? `Mon score de visibilité IA est de ${result.score}/100 ! Testez le vôtre gratuitement →`
+            : "Testez votre visibilité IA gratuitement →";
+        window.open(
+            `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent('https://indhack.com/outils/testeur-visibilite-ia')}`,
+            '_blank',
+            'width=600,height=400'
+        );
+    };
+
+    // Get difficulty badge based on recommendation
+    const getDifficultyBadge = (text: string): { label: string; color: string } => {
+        const lowerText = text.toLowerCase();
+        if (lowerText.includes("robots.txt") || lowerText.includes("date") || lowerText.includes("meta")) {
+            return { label: "Facile (5 min)", color: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30" };
+        }
+        if (lowerText.includes("schema") || lowerText.includes("json-ld") || lowerText.includes("contenu")) {
+            return { label: "Moyen (30 min)", color: "bg-amber-500/20 text-amber-400 border-amber-500/30" };
+        }
+        return { label: "Avancé (1h+)", color: "bg-red-500/20 text-red-400 border-red-500/30" };
+    };
+
     const copyResult = () => {
         if (!result) return;
         const text = `Score visibilité IA : ${result.score}/100
@@ -432,18 +458,20 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                                 LinkedIn
                             </button>
                             <button
+                                onClick={shareOnTwitter}
+                                className="flex items-center gap-2 px-4 py-2 bg-black hover:bg-gray-800 rounded-lg text-sm font-medium text-white transition-colors"
+                            >
+                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                                X (Twitter)
+                            </button>
+                            <button
                                 onClick={copyResult}
                                 className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-sm font-medium text-white transition-colors"
                             >
                                 {copiedResult ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                                {copiedResult ? "Copié !" : "Copier le résultat"}
-                            </button>
-                            <button
-                                onClick={copyLink}
-                                className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-sm font-medium text-white transition-colors"
-                            >
-                                {copiedLink ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                                {copiedLink ? "Copié !" : "Copier le lien"}
+                                {copiedResult ? "Copié !" : "Copier"}
                             </button>
                             <button
                                 onClick={handleNewTest}
@@ -455,30 +483,51 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                         </div>
                     </div>
 
-                    {/* Recommendations */}
+                    {/* Priority Actions - Enhanced */}
                     {result.recommendations.length > 0 && (
-                        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
-                            <h3 className="font-bold text-white mb-4">Actions prioritaires</h3>
+                        <div className="bg-gradient-to-br from-sauge/10 to-transparent backdrop-blur-sm rounded-2xl border border-sauge/20 p-6">
+                            <div className="flex items-center gap-3 mb-5">
+                                <div className="w-10 h-10 rounded-xl bg-sauge/20 flex items-center justify-center">
+                                    <Target className="w-5 h-5 text-sauge-light" />
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-white text-lg">Actions prioritaires</h3>
+                                    <p className="text-sm text-soft-light">Les 3 corrections les plus impactantes</p>
+                                </div>
+                            </div>
                             <div className="space-y-3">
-                                {result.recommendations.map((rec, i) => (
-                                    <div key={i} className="flex items-start gap-3 p-3 bg-white/5 rounded-lg border border-white/5">
-                                        <div className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${
-                                            rec.priority === 1 ? "bg-red-500" : rec.priority === 2 ? "bg-amber-500" : "bg-emerald-500"
-                                        }`} />
-                                        <div className="flex-1">
-                                            <p className="text-sm text-white">{rec.text}</p>
-                                            {rec.fixUrl && (
-                                                <Link
-                                                    href={rec.fixUrl}
-                                                    className="inline-flex items-center gap-1 text-sm text-sauge font-medium hover:underline mt-1"
-                                                >
-                                                    {rec.fixLabel || "Corriger"}
-                                                    <ArrowRight className="w-3 h-3" />
-                                                </Link>
-                                            )}
+                                {result.recommendations.slice(0, 3).map((rec, i) => {
+                                    const difficulty = getDifficultyBadge(rec.text);
+                                    return (
+                                        <div key={i} className="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover:border-sauge/30 transition-colors">
+                                            <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-sm ${
+                                                i === 0 ? "bg-red-500/20 text-red-400 border border-red-500/30" :
+                                                i === 1 ? "bg-amber-500/20 text-amber-400 border border-amber-500/30" :
+                                                "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
+                                            }`}>
+                                                {i + 1}
+                                            </div>
+                                            <div className="flex-1 min-w-0">
+                                                <p className="text-sm text-white mb-2">{rec.text}</p>
+                                                <div className="flex flex-wrap items-center gap-2">
+                                                    <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium border ${difficulty.color}`}>
+                                                        <Clock className="w-3 h-3" />
+                                                        {difficulty.label}
+                                                    </span>
+                                                    {rec.fixUrl && (
+                                                        <Link
+                                                            href={rec.fixUrl}
+                                                            className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium bg-sauge/20 text-sauge-light border border-sauge/30 hover:bg-sauge/30 transition-colors"
+                                                        >
+                                                            <Wrench className="w-3 h-3" />
+                                                            {rec.fixLabel || "Corriger"}
+                                                        </Link>
+                                                    )}
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    );
+                                })}
                             </div>
                         </div>
                     )}
