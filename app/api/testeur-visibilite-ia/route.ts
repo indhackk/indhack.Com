@@ -21,6 +21,9 @@ const AI_CRAWLERS = [
     { name: "CCBot", agent: "CCBot", description: "Common Crawl", company: "Common Crawl", critical: false },
 ];
 
+// AI crawler user-agents for X-Robots-Tag and meta detection
+const AI_CRAWLER_AGENTS = ["gptbot", "chatgpt-user", "oai-searchbot", "claude-web", "perplexitybot", "google-extended", "bytespider", "ccbot", "anthropic-ai", "cohere-ai"];
+
 const VALUABLE_SCHEMAS = ["LocalBusiness", "Organization", "FAQPage", "HowTo", "Article", "BlogPosting", "Person", "Product", "Service", "BreadcrumbList", "WebSite", "Review", "AggregateRating"];
 
 interface CrawlerStatus {
@@ -48,6 +51,31 @@ interface CategoryScore {
     checks: CheckItem[];
 }
 
+interface LlmsTxtInfo {
+    exists: boolean;
+    isValid: boolean;
+    hasFullVersion: boolean;
+    projectName?: string;
+}
+
+interface XRobotsTagInfo {
+    hasAiBlocking: boolean;
+    blockedAgents: string[];
+}
+
+interface MetaRobotsIaInfo {
+    hasAiBlocking: boolean;
+    blockedAgents: string[];
+}
+
+interface CitabilityInfo {
+    statsCount: number;
+    hasDefinitions: boolean;
+    listsCount: number;
+    tablesCount: number;
+    score: number; // 0-100
+}
+
 interface VisibilityResult {
     url: string;
     timestamp: string;
@@ -68,6 +96,10 @@ interface VisibilityResult {
     wordCount: number;
     responseTime: number;
     hasLlmsTxt: boolean;
+    llmsTxtInfo?: LlmsTxtInfo;
+    xRobotsTagInfo?: XRobotsTagInfo;
+    metaRobotsIaInfo?: MetaRobotsIaInfo;
+    citabilityInfo?: CitabilityInfo;
     cached?: boolean;
 }
 
@@ -99,7 +131,12 @@ function setCachedResult(url: string, data: VisibilityResult): void {
     cacheMap.set(url, { data, expiry: Date.now() + CACHE_TTL });
 }
 
-async function fetchWithTimeout(url: string, timeout = 10000): Promise<Response> {
+interface FetchResult {
+    response: Response;
+    headers: Headers;
+}
+
+async function fetchWithTimeout(url: string, timeout = 10000): Promise<FetchResult> {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), timeout);
     try {
@@ -112,11 +149,127 @@ async function fetchWithTimeout(url: string, timeout = 10000): Promise<Response>
             redirect: "follow",
         });
         clearTimeout(timeoutId);
-        return response;
+        return { response, headers: response.headers };
     } catch {
         clearTimeout(timeoutId);
         throw new Error("Timeout ou erreur de connexion");
     }
+}
+
+// Check llms.txt validity (should start with # and project name)
+function validateLlmsTxt(content: string): { isValid: boolean; projectName?: string } {
+    if (!content || content.trim().length === 0) return { isValid: false };
+    const lines = content.trim().split("\n");
+    const firstLine = lines[0].trim();
+    // Valid llms.txt starts with # followed by project name
+    if (firstLine.startsWith("# ") && firstLine.length > 2) {
+        return { isValid: true, projectName: firstLine.substring(2).trim() };
+    }
+    // Also accept markdown with any heading
+    if (firstLine.startsWith("#")) {
+        return { isValid: true, projectName: firstLine.replace(/^#+\s*/, "").trim() };
+    }
+    return { isValid: false };
+}
+
+// Parse X-Robots-Tag headers for AI blocking
+function parseXRobotsTag(headers: Headers): XRobotsTagInfo {
+    const result: XRobotsTagInfo = { hasAiBlocking: false, blockedAgents: [] };
+
+    // Check all headers (some servers send multiple X-Robots-Tag)
+    const xRobotsTag = headers.get("x-robots-tag");
+    if (!xRobotsTag) return result;
+
+    const directives = xRobotsTag.toLowerCase();
+
+    for (const agent of AI_CRAWLER_AGENTS) {
+        // Check for agent-specific blocking like "GPTBot: noindex" or "noindex, nofollow" for all
+        if (directives.includes(agent) && (directives.includes("noindex") || directives.includes("nofollow"))) {
+            result.hasAiBlocking = true;
+            result.blockedAgents.push(agent);
+        }
+    }
+
+    // Also check for global noindex that would affect all
+    if ((directives.includes("noindex") || directives.includes("none")) && !directives.includes(":")) {
+        result.hasAiBlocking = true;
+        result.blockedAgents = ["all"];
+    }
+
+    return result;
+}
+
+// Parse meta robots tags for AI-specific blocking
+function parseMetaRobotsIa($: cheerio.CheerioAPI): MetaRobotsIaInfo {
+    const result: MetaRobotsIaInfo = { hasAiBlocking: false, blockedAgents: [] };
+
+    for (const agent of AI_CRAWLER_AGENTS) {
+        const metaTag = $(`meta[name="${agent}" i], meta[name="${agent.toLowerCase()}" i]`);
+        if (metaTag.length > 0) {
+            const content = metaTag.attr("content")?.toLowerCase() || "";
+            if (content.includes("noindex") || content.includes("nofollow") || content.includes("none")) {
+                result.hasAiBlocking = true;
+                result.blockedAgents.push(agent);
+            }
+        }
+    }
+
+    return result;
+}
+
+// Calculate citability score
+function calculateCitability($: cheerio.CheerioAPI, bodyText: string): CitabilityInfo {
+    // Count statistics/numbers patterns
+    const statsPatterns = [
+        /\d+\s?%/g,                           // Percentages: 53%, 53 %
+        /\d{1,3}(?:[\s,]\d{3})+/g,            // Large numbers: 1 000, 10,000
+        /\d+\s?(millions?|milliards?|milliers?)/gi, // Millions, milliards
+        /\d+\s?(€|EUR|USD|\$)/g,              // Currency
+        /\d+\s?(ans?|jours?|heures?|mois)/gi, // Time periods
+        /\d+\s?(clients?|utilisateurs?|projets?|sites?)/gi, // Metrics
+        /(?:en|depuis|de)\s+\d{4}/gi,         // Years: en 2024, depuis 2020
+        /\d+x|\d+\s?fois/gi,                  // Multipliers: 3x, 3 fois
+    ];
+
+    let statsCount = 0;
+    for (const pattern of statsPatterns) {
+        const matches = bodyText.match(pattern);
+        if (matches) statsCount += matches.length;
+    }
+
+    // Check for definitions (patterns like "X est...", "On appelle X...")
+    const definitionPatterns = [
+        /(?:est|sont|désigne|signifie|correspond à|consiste à)\s+(?:un|une|le|la|les|l')/gi,
+        /on\s+(?:appelle|définit|nomme|désigne)/gi,
+        /(?:définition|qu'est-ce que|c'est quoi)/gi,
+    ];
+
+    let hasDefinitions = false;
+    for (const pattern of definitionPatterns) {
+        if (pattern.test(bodyText)) {
+            hasDefinitions = true;
+            break;
+        }
+    }
+
+    // Count lists and tables
+    const listsCount = $("ul, ol").length;
+    const tablesCount = $("table").length;
+
+    // Calculate score (0-100)
+    let score = 0;
+    score += Math.min(statsCount * 5, 40);      // Up to 40 points for stats (8+ stats = max)
+    score += hasDefinitions ? 20 : 0;            // 20 points for definitions
+    score += Math.min(listsCount * 5, 20);       // Up to 20 points for lists (4+ = max)
+    score += Math.min(tablesCount * 10, 20);     // Up to 20 points for tables (2+ = max)
+
+    return {
+        statsCount,
+        hasDefinitions,
+        listsCount,
+        tablesCount,
+        score: Math.min(score, 100),
+    };
 }
 
 function parseCrawlerStatus(robotsTxt: string, agent: string): "allowed" | "blocked" | "not_mentioned" {
@@ -173,7 +326,7 @@ async function analyzeVisibility(url: string): Promise<VisibilityResult> {
 
     // Fetch main page
     const startTime = Date.now();
-    const response = await fetchWithTimeout(normalizedUrl);
+    const { response, headers: pageHeaders } = await fetchWithTimeout(normalizedUrl);
     const responseTime = Date.now() - startTime;
     const html = await response.text();
     const $ = cheerio.load(html);
@@ -183,11 +336,20 @@ async function analyzeVisibility(url: string): Promise<VisibilityResult> {
     const bodyText = $("body").text().replace(/\s+/g, " ").trim();
     const wordCount = countWords(bodyText);
 
+    // Parse X-Robots-Tag from headers
+    const xRobotsTagInfo = parseXRobotsTag(pageHeaders);
+
+    // Parse meta robots for AI-specific tags
+    const metaRobotsIaInfo = parseMetaRobotsIa($);
+
+    // Calculate citability score
+    const citabilityInfo = calculateCitability($, bodyText);
+
     // Fetch robots.txt
     let robotsTxt = "";
     let hasSitemapInRobots = false;
     try {
-        const robotsResponse = await fetchWithTimeout(`${baseUrl}/robots.txt`, 5000);
+        const { response: robotsResponse } = await fetchWithTimeout(`${baseUrl}/robots.txt`, 5000);
         if (robotsResponse.ok) {
             robotsTxt = await robotsResponse.text();
             hasSitemapInRobots = robotsTxt.toLowerCase().includes("sitemap:");
@@ -196,19 +358,37 @@ async function analyzeVisibility(url: string): Promise<VisibilityResult> {
         robotsTxt = "";
     }
 
-    // Check llms.txt
-    let hasLlmsTxt = false;
+    // Check llms.txt with validation
+    let llmsTxtInfo: LlmsTxtInfo = { exists: false, isValid: false, hasFullVersion: false };
     try {
-        const llmsResponse = await fetchWithTimeout(`${baseUrl}/llms.txt`, 3000);
-        hasLlmsTxt = llmsResponse.ok;
+        const { response: llmsResponse } = await fetchWithTimeout(`${baseUrl}/llms.txt`, 3000);
+        if (llmsResponse.ok) {
+            const llmsContent = await llmsResponse.text();
+            const validation = validateLlmsTxt(llmsContent);
+            llmsTxtInfo.exists = true;
+            llmsTxtInfo.isValid = validation.isValid;
+            llmsTxtInfo.projectName = validation.projectName;
+        }
     } catch {
-        hasLlmsTxt = false;
+        // llms.txt not found
     }
+
+    // Check llms-full.txt
+    try {
+        const { response: llmsFullResponse } = await fetchWithTimeout(`${baseUrl}/llms-full.txt`, 3000);
+        if (llmsFullResponse.ok) {
+            llmsTxtInfo.hasFullVersion = true;
+        }
+    } catch {
+        // llms-full.txt not found
+    }
+
+    const hasLlmsTxt = llmsTxtInfo.exists;
 
     // Check sitemap.xml
     let hasSitemapXml = false;
     try {
-        const sitemapResponse = await fetchWithTimeout(`${baseUrl}/sitemap.xml`, 3000);
+        const { response: sitemapResponse } = await fetchWithTimeout(`${baseUrl}/sitemap.xml`, 3000);
         hasSitemapXml = sitemapResponse.ok;
     } catch {
         hasSitemapXml = false;
@@ -299,16 +479,69 @@ async function analyzeVisibility(url: string): Promise<VisibilityResult> {
         maxPoints: 6,
     });
 
-    // llms.txt (5 pts bonus)
-    const llmsPoints = hasLlmsTxt ? 5 : 0;
+    // llms.txt enhanced check (5 pts)
+    let llmsPoints = 0;
+    let llmsStatus: CheckItem["status"] = "warning";
+    let llmsDetail = "Non détecté";
+
+    if (llmsTxtInfo.exists) {
+        if (llmsTxtInfo.isValid) {
+            llmsPoints = llmsTxtInfo.hasFullVersion ? 5 : 4;
+            llmsStatus = "success";
+            llmsDetail = llmsTxtInfo.hasFullVersion
+                ? `Valide + llms-full.txt (${llmsTxtInfo.projectName})`
+                : `Valide (${llmsTxtInfo.projectName})`;
+        } else {
+            llmsPoints = 2;
+            llmsStatus = "warning";
+            llmsDetail = "Présent mais format invalide (doit commencer par # Nom)";
+        }
+    } else {
+        llmsDetail = "Non détecté — recommandé pour guider les LLM";
+    }
+
     categories.accessibilite.score += llmsPoints;
     categories.accessibilite.checks.push({
         label: "Fichier llms.txt",
-        status: hasLlmsTxt ? "success" : "warning",
-        detail: hasLlmsTxt ? "Présent (excellent pour les LLM)" : "Non détecté (optionnel mais recommandé)",
+        status: llmsStatus,
+        detail: llmsDetail,
         points: llmsPoints,
         maxPoints: 5,
+        fixUrl: !llmsTxtInfo.exists ? "/outils/generateur-robots-txt" : undefined,
+        fixLabel: !llmsTxtInfo.exists ? "En savoir plus sur llms.txt" : undefined,
     });
+
+    // X-Robots-Tag check (warning only, no points)
+    if (xRobotsTagInfo.hasAiBlocking) {
+        const blockedList = xRobotsTagInfo.blockedAgents.join(", ");
+        categories.accessibilite.checks.push({
+            label: "Header X-Robots-Tag",
+            status: "error",
+            detail: `Bloque les crawlers IA via header HTTP (${blockedList})`,
+            points: 0,
+            maxPoints: 0,
+        });
+        recommendations.push({
+            text: `Le header X-Robots-Tag bloque les crawlers IA (${blockedList}). Vérifiez votre serveur web.`,
+            priority: 1,
+        });
+    }
+
+    // Meta robots IA check (warning only, no points)
+    if (metaRobotsIaInfo.hasAiBlocking) {
+        const blockedList = metaRobotsIaInfo.blockedAgents.join(", ");
+        categories.accessibilite.checks.push({
+            label: "Meta robots IA",
+            status: "error",
+            detail: `Balises meta bloquant les crawlers IA (${blockedList})`,
+            points: 0,
+            maxPoints: 0,
+        });
+        recommendations.push({
+            text: `Des balises <meta name="${metaRobotsIaInfo.blockedAgents[0]}"> bloquent les crawlers IA.`,
+            priority: 1,
+        });
+    }
 
     // ========== 2. RICHESSE SÉMANTIQUE (/30) ==========
 
@@ -540,17 +773,42 @@ async function analyzeVisibility(url: string): Promise<VisibilityResult> {
         recommendations.push({ text: "Enrichissez votre contenu (minimum 300 mots, idéalement 800+)", priority: 2 });
     }
 
-    // Numbers & data (4 pts)
-    const hasNumbers = /\d+\s?%|\d+\s?€|\d+\s?(ans|jours|heures|clients|projets|utilisateurs)/i.test(bodyText);
-    const numberPoints = hasNumbers ? 4 : 0;
-    categories.format.score += numberPoints;
+    // Citability score (enhanced, 4 pts)
+    let citabilityPoints = 0;
+    let citabilityStatus: CheckItem["status"] = "error";
+    let citabilityDetail = "";
+
+    if (citabilityInfo.score >= 60) {
+        citabilityPoints = 4;
+        citabilityStatus = "success";
+        citabilityDetail = `Excellent (${citabilityInfo.statsCount} stats, ${citabilityInfo.listsCount} listes, ${citabilityInfo.tablesCount} tableaux)`;
+    } else if (citabilityInfo.score >= 30) {
+        citabilityPoints = 2;
+        citabilityStatus = "warning";
+        citabilityDetail = `Moyen (${citabilityInfo.statsCount} stats${citabilityInfo.hasDefinitions ? ", définitions" : ""})`;
+    } else if (citabilityInfo.statsCount > 0 || citabilityInfo.listsCount > 0) {
+        citabilityPoints = 1;
+        citabilityStatus = "warning";
+        citabilityDetail = `Faible — ajoutez des données chiffrées, listes ou tableaux`;
+    } else {
+        citabilityDetail = "Aucune donnée citable — les IA préfèrent citer du contenu structuré";
+    }
+
+    categories.format.score += citabilityPoints;
     categories.format.checks.push({
-        label: "Données chiffrées",
-        status: hasNumbers ? "success" : "warning",
-        detail: hasNumbers ? "Statistiques détectées" : "Pas de données chiffrées",
-        points: numberPoints,
+        label: "Score de citabilité",
+        status: citabilityStatus,
+        detail: citabilityDetail,
+        points: citabilityPoints,
         maxPoints: 4,
     });
+
+    if (citabilityInfo.score < 30) {
+        recommendations.push({
+            text: "Enrichissez votre contenu avec des statistiques, listes et tableaux pour améliorer la citabilité par les IA",
+            priority: 3,
+        });
+    }
 
     // Meta title (3 pts)
     const titleLength = pageTitle.length;
@@ -679,6 +937,10 @@ async function analyzeVisibility(url: string): Promise<VisibilityResult> {
         wordCount,
         responseTime,
         hasLlmsTxt,
+        llmsTxtInfo,
+        xRobotsTagInfo,
+        metaRobotsIaInfo,
+        citabilityInfo,
     };
 }
 

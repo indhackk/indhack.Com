@@ -4,7 +4,7 @@ import { TesteurVisibiliteIA } from "./TesteurVisibiliteIA";
 import { ArrowRight, Bot, Shield, Code2, FileCode, Search, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Testeur Visibilité IA Gratuit — ChatGPT, Perplexity, Claude",
+    title: "Test Visibilité ChatGPT / IA : Votre Marque Est-Elle Citée ?",
     description: "Votre site est-il visible par ChatGPT et Perplexity ? Testez vos signaux GEO : crawlers IA, schema JSON-LD, E-E-A-T. Outil français gratuit, sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils/testeur-visibilite-ia"
@@ -82,7 +82,7 @@ export default function TesteurVisibiliteIAPage() {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "WebApplication",
+                        "@type": "SoftwareApplication",
                         "name": "Testeur Visibilité IA IndHack",
                         "description": "Outil gratuit pour tester la visibilité de votre site auprès des IA génératives (ChatGPT, Perplexity, Claude)",
                         "url": "https://indhack.com/outils/testeur-visibilite-ia",
@@ -176,6 +176,35 @@ export default function TesteurVisibiliteIAPage() {
                     </div>
                 </section>
 
+                {/* How the tester works - SEO content section */}
+                <section className="py-16 bg-ink border-t border-white/5">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto prose prose-invert">
+                            <h2 className="text-2xl font-heading font-bold text-white mb-6">
+                                Comment fonctionne le <span className="text-sauge">testeur de visibilité IA</span>
+                            </h2>
+
+                            <div className="space-y-6 text-soft-light">
+                                <p>
+                                    Notre testeur analyse votre site selon les critères qui déterminent sa visibilité auprès des IA génératives comme <strong className="text-white">ChatGPT</strong>, <strong className="text-white">Perplexity</strong>, <strong className="text-white">Claude</strong> et <strong className="text-white">Gemini</strong>. Cette discipline émergente s&apos;appelle le <strong className="text-white">GEO (Generative Engine Optimization)</strong> — l&apos;équivalent du SEO pour les moteurs de recherche IA.
+                                </p>
+
+                                <p>
+                                    L&apos;outil vérifie d&apos;abord l&apos;<strong className="text-white">accessibilité de votre site aux crawlers IA</strong> : nous analysons votre fichier <code className="text-sauge bg-sauge/10 px-1 rounded">robots.txt</code> pour détecter si GPTBot, Claude-Web ou PerplexityBot sont autorisés à indexer vos pages. Nous vérifions également la présence du nouveau standard <code className="text-sauge bg-sauge/10 px-1 rounded">llms.txt</code>, un fichier Markdown adopté par plus de 844 000 sites (dont Anthropic, Cloudflare et Stripe) pour guider les LLM vers les contenus importants.
+                                </p>
+
+                                <p>
+                                    Ensuite, nous analysons vos <strong className="text-white">données structurées JSON-LD</strong> (Organization, FAQPage, LocalBusiness...) qui permettent aux IA de comprendre le contexte de votre contenu. Les pages avec un <Link href="/outils/generateur-schema-json-ld" className="text-sauge hover:underline">schema JSON-LD</Link> bien implémenté sont jusqu&apos;à 40 % plus susceptibles d&apos;être citées comme source.
+                                </p>
+
+                                <p>
+                                    Enfin, nous évaluons vos <strong className="text-white">signaux E-E-A-T</strong> (Expérience, Expertise, Autorité, Confiance) et la <strong className="text-white">citabilité de votre contenu</strong>. Les IA privilégient les contenus avec des données chiffrées, des listes structurées et des définitions claires. <Link href="/outils/generateur-robots-txt" className="text-sauge hover:underline">Configurez vos crawlers IA</Link> pour maximiser votre score, et complétez avec un <Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">audit SEO complet</Link> pour optimiser votre référencement global.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* How It Works */}
                 <section className="py-16 bg-fond-sombre border-t border-white/5">
                     <div className="container mx-auto px-4">
@@ -208,8 +237,97 @@ export default function TesteurVisibiliteIAPage() {
                     </div>
                 </section>
 
-                {/* Related Tools */}
+                {/* Why AI visibility matters in 2026 - SEO content section */}
                 <section className="py-16 bg-ink border-t border-white/5">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
+                                Pourquoi la visibilité IA est <span className="text-sauge">cruciale en 2026</span>
+                            </h2>
+
+                            <div className="grid md:grid-cols-2 gap-6 mb-10">
+                                {[
+                                    { stat: "39 %", label: "des Français utilisent les IA pour chercher", source: "IPSOS 2025" },
+                                    { stat: "800M", label: "d'utilisateurs actifs hebdomadaires sur ChatGPT", source: "OpenAI 2025" },
+                                    { stat: "-61 %", label: "de CTR organique sur les requêtes avec AI Overview", source: "Ahrefs" },
+                                    { stat: "1,48 Md€", label: "marché GEO estimé en 2026", source: "Grand View Research" },
+                                ].map((item) => (
+                                    <div key={item.stat} className="bg-white/5 rounded-xl p-6 border border-white/10 text-center">
+                                        <span className="text-3xl font-bold text-sauge block mb-2">{item.stat}</span>
+                                        <span className="text-white font-medium block mb-1">{item.label}</span>
+                                        <span className="text-xs text-soft-light">Source : {item.source}</span>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="prose prose-invert max-w-none space-y-4 text-soft-light">
+                                <p>
+                                    Les moteurs de recherche traditionnels perdent du terrain face aux assistants IA. Quand un utilisateur demande à ChatGPT ou Perplexity « quel consultant SEO à Nice ? », l&apos;IA ne renvoie pas 10 liens bleus — elle <strong className="text-white">cite directement les sources qu&apos;elle juge fiables</strong>. Si votre site n&apos;est pas optimisé pour le GEO, vous êtes tout simplement invisible.
+                                </p>
+
+                                <p>
+                                    Notre testeur de visibilité IA est <strong className="text-white">le seul outil GEO gratuit disponible en français</strong>. Les alternatives anglophones (Otterly.ai, GEO Tracker) sont payantes et ne prennent pas en compte les spécificités du marché francophone. En analysant votre site gratuitement, sans inscription, nous vous donnons les clés pour <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="text-sauge hover:underline">apparaître dans les réponses de ChatGPT</Link> et des autres IA.
+                                </p>
+                            </div>
+
+                            {/* SEO vs GEO comparison table */}
+                            <div className="mt-10">
+                                <h3 className="text-xl font-heading font-bold text-white text-center mb-6">
+                                    SEO vs GEO : <span className="text-sauge">tableau comparatif</span>
+                                </h3>
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-sm border-collapse">
+                                        <thead>
+                                            <tr className="bg-white/10">
+                                                <th className="px-4 py-3 text-left text-white font-medium border border-white/10">Critère</th>
+                                                <th className="px-4 py-3 text-left text-white font-medium border border-white/10">SEO classique</th>
+                                                <th className="px-4 py-3 text-left text-sauge font-medium border border-white/10">GEO (Generative Engine Optimization)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="text-soft-light">
+                                            <tr>
+                                                <td className="px-4 py-3 border border-white/10 font-medium text-white">Objectif</td>
+                                                <td className="px-4 py-3 border border-white/10">Apparaître dans les liens bleus Google</td>
+                                                <td className="px-4 py-3 border border-white/10">Être cité comme source par les IA</td>
+                                            </tr>
+                                            <tr className="bg-white/5">
+                                                <td className="px-4 py-3 border border-white/10 font-medium text-white">Canaux ciblés</td>
+                                                <td className="px-4 py-3 border border-white/10">Google, Bing, Yahoo</td>
+                                                <td className="px-4 py-3 border border-white/10">ChatGPT, Perplexity, Claude, Gemini, Copilot</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="px-4 py-3 border border-white/10 font-medium text-white">Signaux clés</td>
+                                                <td className="px-4 py-3 border border-white/10">Backlinks, mots-clés, Core Web Vitals</td>
+                                                <td className="px-4 py-3 border border-white/10">JSON-LD, E-E-A-T, llms.txt, contenu citable</td>
+                                            </tr>
+                                            <tr className="bg-white/5">
+                                                <td className="px-4 py-3 border border-white/10 font-medium text-white">Crawlers</td>
+                                                <td className="px-4 py-3 border border-white/10">Googlebot, Bingbot</td>
+                                                <td className="px-4 py-3 border border-white/10">GPTBot, Claude-Web, PerplexityBot</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="px-4 py-3 border border-white/10 font-medium text-white">Métriques</td>
+                                                <td className="px-4 py-3 border border-white/10">Position, CTR, impressions</td>
+                                                <td className="px-4 py-3 border border-white/10">Taux de citation, présence dans les réponses IA</td>
+                                            </tr>
+                                            <tr className="bg-white/5">
+                                                <td className="px-4 py-3 border border-white/10 font-medium text-white">Outils</td>
+                                                <td className="px-4 py-3 border border-white/10">Search Console, Ahrefs, SEMrush</td>
+                                                <td className="px-4 py-3 border border-white/10"><span className="text-sauge font-medium">Testeur Visibilité IA IndHack</span>, Perplexity Analytics</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p className="text-xs text-soft-light text-center mt-4">
+                                    Le SEO et le GEO sont complémentaires. Un bon positionnement Google renforce généralement votre autorité perçue par les IA.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Related Tools */}
+                <section className="py-16 bg-fond-sombre border-t border-white/5">
                     <div className="container mx-auto px-4">
                         <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
                             Outils <span className="text-sauge">complémentaires</span>
