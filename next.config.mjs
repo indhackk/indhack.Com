@@ -32,7 +32,7 @@ const nextConfig = {
     // ══════════════════════════════════════════════════════════════
     async redirects() {
         return [
-      { source: '/blog/cout-site-web-2026', destination: '/blog/prix-creation-site-internet-2026', permanent: true },
+            { source: '/blog/cout-site-web-2026', destination: '/blog/prix-creation-site-internet-2026', permanent: true },
             // ══════════════════════════════════════════════════════════════
             // P3: Kill audit-technique cannibalisation
             // ══════════════════════════════════════════════════════════════
@@ -276,12 +276,7 @@ const nextConfig = {
                 destination: '/consultant-seo-:city/:service',
                 permanent: true,
             },
-            // Pattern catch-all pour anciennes URLs /seo-[ville] (safety net)
-            {
-                source: '/seo-:city',
-                destination: '/consultant-seo-:city',
-                permanent: true,
-            },
+            // Pattern catch-all supprimé car il casse /seo-local (les 18 villes sont déjà en dur au-dessus)
         ];
     },
 

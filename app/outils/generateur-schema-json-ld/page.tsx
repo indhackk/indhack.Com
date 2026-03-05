@@ -70,7 +70,7 @@ export default function GenerateurSchemaPage() {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "WebApplication",
+                        "@type": "SoftwareApplication",
                         "name": "Générateur Schema JSON-LD IndHack",
                         "description": "Outil gratuit pour créer des données structurées Schema.org",
                         "url": "https://indhack.com/outils/generateur-schema-json-ld",

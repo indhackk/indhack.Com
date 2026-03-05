@@ -70,7 +70,7 @@ export default function SimulateurLocalPage() {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "WebApplication",
+                        "@type": "SoftwareApplication",
                         "name": "Simulateur Visibilité Locale IndHack",
                         "description": "Outil gratuit pour analyser qui domine Google pour votre métier dans votre ville",
                         "url": "https://indhack.com/outils/simulateur-visibilite-locale",

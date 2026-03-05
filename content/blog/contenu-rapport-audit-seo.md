@@ -1,5 +1,5 @@
 ---
-title: "Rapport d'audit SEO : les 7 sections indispensables [Guide 2026]"
+title: "Rapport Audit SEO 2026 : Le Modèle PDF/Word à Copier"
 description: "Votre rapport ne contient pas ces 7 sections ? Il est incomplet. Découvrez ce qu'un rapport d'audit SEO professionnel doit vraiment contenir pour générer du trafic."
 date: "2026-02-23"
 category: "Audit"

@@ -438,12 +438,6 @@ export default function OutilsPage() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/blog/google-search-console" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
-                                                <ArrowRight className="w-3 h-3" />
-                                                Maîtriser Google Search Console
-                                            </Link>
-                                        </li>
-                                        <li>
                                             <Link href="/blog" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
                                                 <ArrowRight className="w-3 h-3" />
                                                 Tous les articles

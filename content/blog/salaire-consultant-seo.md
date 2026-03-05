@@ -2,7 +2,6 @@
 title: "Salaire consultant SEO en 2026 : grilles et évolutions"
 description: "Combien gagne un consultant SEO en France ? Salaires junior, confirmé, senior, freelance. Grilles détaillées par expérience, région et spécialité."
 date: "2026-01-23"
-draft: true
 category: "Métier"
 image: "/images/blog/salaire-consultant-seo.jpg"
 imageAlt: "Grilles salariales consultant SEO 2026 : junior, confirmé, senior et freelance en France"
@@ -202,7 +201,7 @@ Le **salaire d'un consultant SEO** varie de 28K€ (junior) à plus de 100K€ (
 ## Pour aller plus loin
 
 - [Comment devenir consultant SEO ?](/blog/devenir-consultant-seo) — Le parcours complet pour se lancer
-- [Quelles sont les missions d'un consultant SEO ?](/blog/missions-consultant-seo) — Ce qu'un expert fait concrètement
+
 - [Quelle formation SEO choisir ?](/blog/quelle-formation-seo) — Comparer les parcours disponibles
 
 ---

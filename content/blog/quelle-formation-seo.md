@@ -197,7 +197,7 @@ Un [diagnostic de votre site actuel](/audit-seo) peut être un excellent point d
 
 - [Comment devenir consultant SEO ?](/blog/devenir-consultant-seo) — Le parcours complet pour se lancer
 - [Quel salaire pour un consultant SEO ?](/blog/salaire-consultant-seo) — Grilles de rémunération par niveau
-- [Quelles sont les missions d'un consultant SEO ?](/blog/missions-consultant-seo) — Ce qu'un expert fait concrètement
+
 
 ---
 

@@ -108,7 +108,7 @@ Pour les acteurs de proximité, l'immense majorité de la conversion passera par
 Créer un site web puis croiser les doigts ne fonctionne pas. Votre parcours vers les sommets algorithmiques de Google demande un protocole précis afin de ne pas brûler du budget pour rien.
 
 1. **Étape 1 — Faites l'état des lieux (L'Audit) :** Ne changez pas l'huile d'une voiture qui a le joint de culasse explosé. Prenez 30 secondes pour analyser vos fondations. [Testez votre site gratuitement](/outils/audit-seo-gratuit) grâce à notre simulateur exclusif.
-2. **Étape 2 — L'étude de mots-clés (Le Ciblage) :** Mettez un terme aux devinettes. Ne créez aucune page sans avoir vérifié le volume de recherche et l'intention avec un vrai outil extracteur de termes. 
+2. **Étape 2 — L'étude de mots-clés (Le Ciblage) :** Mettez un terme aux devinettes. Ne créez aucune page sans avoir vérifié le volume de recherche et l'intention avec un outil pour [extraire mots clés d'un texte](/outils/extracteur-mots-cles). 
 3. **Étape 3 — L'optimisation On-page (Contenus) :** Restructurez vos H1, balises Titles, Meta-descriptions, enlevez le blabla inutile et ciblez la précision.
 4. **Étape 4 — Le maillage et l'autorité :** Liez vos pages logiquement entre elles pour faciliter la navigation de Googlebot, et amorcez une phase d'acquisition de liens via partenariats et relations presse spécialisées.
 

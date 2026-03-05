@@ -147,7 +147,7 @@ Le meilleur moment pour investir dans le SEO, c'était il y a 5 ans. Le deuxièm
 
 ## Pour aller plus loin
 
-- [Les missions complètes d'un consultant SEO](/blog/missions-consultant-seo) — Ce qu'un expert fait concrètement
+
 - [Quel salaire pour un consultant SEO ?](/blog/salaire-consultant-seo) — Grilles de rémunération du métier
 - [Comment devenir consultant SEO ?](/blog/devenir-consultant-seo) — Le parcours pour se lancer
 

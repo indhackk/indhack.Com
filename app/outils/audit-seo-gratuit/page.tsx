@@ -4,7 +4,7 @@ import { AuditSEO } from "./AuditSEO";
 import { ArrowRight, Search, Bot, Code2, FileCode, Gauge, TrendingUp, Zap, Target, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Audit SEO Gratuit : Analyse de Site en 1 Clic | Score /100",
+    title: "Audit SEO Gratuit : Calculez Votre Score en 3 Secondes",
     description: "Analysez votre site avec notre outil d'audit SEO gratuit. Score /100, 15 critères vérifiés dont compatibilité IA. Analyse seo gratuite sans inscription.",
     keywords: ["audit seo gratuit", "analyse seo gratuit", "audit site gratuit", "analyseur seo", "test seo gratuit", "outil audit seo"],
     alternates: {
@@ -78,7 +78,7 @@ export default function AuditSEOPage() {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "WebApplication",
+                        "@type": "SoftwareApplication",
                         "name": "Audit SEO Gratuit IndHack",
                         "description": "Outil d'audit SEO gratuit analysant 15 critères techniques dont la compatibilité IA",
                         "url": "https://indhack.com/outils/audit-seo-gratuit",

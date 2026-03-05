@@ -78,7 +78,7 @@ export default function GenerateurRobotsTxtPage() {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "WebApplication",
+                        "@type": "SoftwareApplication",
                         "name": "Générateur robots.txt IndHack",
                         "description": "Outil gratuit pour créer un fichier robots.txt avec les crawlers IA 2026",
                         "url": "https://indhack.com/outils/generateur-robots-txt",
@@ -231,11 +231,10 @@ export default function GenerateurRobotsTxtPage() {
                                                 <td className="px-6 py-4 text-soft-light">{crawler.editor}</td>
                                                 <td className="px-6 py-4 text-soft-light">{crawler.usage}</td>
                                                 <td className="px-6 py-4">
-                                                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                                                        crawler.recommendation === 'success'
+                                                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${crawler.recommendation === 'success'
                                                             ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
                                                             : 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
-                                                    }`}>
+                                                        }`}>
                                                         {crawler.text}
                                                     </span>
                                                 </td>

@@ -147,7 +147,6 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
     // Articles blog connexes pour le maillage
     const relatedBlogPosts = [
         { title: "L'importance d'un audit SEO", href: "/blog/importance-audit-seo", desc: "Pourquoi auditer votre site" },
-        { title: "Les missions d'un consultant SEO", href: "/blog/missions-consultant-seo", desc: "Ce que fait un expert SEO" },
         { title: "Devenir visible sur Google", href: "/blog/comment-creer-site-visible-google", desc: "Guide pratique" }
     ];
 

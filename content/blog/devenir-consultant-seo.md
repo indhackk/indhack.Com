@@ -212,7 +212,7 @@ Le meilleur moment pour commencer, c'est **maintenant**.
 ## Pour aller plus loin
 
 - [Quel salaire pour un consultant SEO ?](/blog/salaire-consultant-seo) — Grilles de rémunération junior à senior
-- [Quelles sont les missions d'un consultant SEO ?](/blog/missions-consultant-seo) — Ce qu'un expert fait concrètement
+
 - [Quelle formation SEO choisir ?](/blog/quelle-formation-seo) — Comparer les parcours disponibles
 
 ---

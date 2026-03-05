@@ -56,7 +56,7 @@ export default function ExtracteurMotsClesPage() {
                         "@type": "SoftwareApplication",
                         "name": "Extraire les mots-clés d'un texte - Outil gratuit",
                         "description": "Extraire les mots-clés d'un texte gratuitement. Analyse de densité, bi-grammes et tri-grammes. Outil SEO en ligne sans inscription.",
-                        "applicationCategory": "WebApplication",
+                        "applicationCategory": "SoftwareApplication",
                         "operatingSystem": "Any",
                         "offers": {
                             "@type": "Offer",
