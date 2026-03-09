@@ -11,7 +11,7 @@ const SERVICES = [
     { title: "Consultante SEO Freelance", href: "/consultant-seo" },
     { title: "Audit SEO Complet", href: "/audit-seo" },
     { title: "Référencement Naturel", href: "/referencement-naturel" },
-    { title: "SEO Local", href: "/seo-local" },
+    { title: "SEO Local", href: "/consultant-seo" },
     { title: "Création de Site Web", href: "/creation-site-web" },
     { title: "Refonte de Site Web", href: "/refonte-site-web" },
     { title: "Création boutique e-commerce", href: "/creation-boutique-en-ligne" },

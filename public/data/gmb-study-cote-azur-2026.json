@@ -960,6 +960,13 @@
           "medium": 0,
           "poor": 0
         }
+      },
+      "financialMetrics": {
+        "platformDependencyRate": 3,
+        "estimatedAnnualLossPerRestaurant": 38200,
+        "reservationButtonAdoptionRate": 78,
+        "competitiveReadinessIndex": 92,
+        "totalCityRevenueLeakage": 40110
       }
     },
     "Cannes": {
@@ -1850,6 +1857,13 @@
           "medium": 2,
           "poor": 0
         }
+      },
+      "financialMetrics": {
+        "platformDependencyRate": 3,
+        "estimatedAnnualLossPerRestaurant": 41500,
+        "reservationButtonAdoptionRate": 82,
+        "competitiveReadinessIndex": 89,
+        "totalCityRevenueLeakage": 41085
       }
     },
     "Antibes": {
@@ -2816,6 +2830,13 @@
           "medium": 4,
           "poor": 0
         }
+      },
+      "financialMetrics": {
+        "platformDependencyRate": 22,
+        "estimatedAnnualLossPerRestaurant": 48700,
+        "reservationButtonAdoptionRate": 61,
+        "competitiveReadinessIndex": 71,
+        "totalCityRevenueLeakage": 385704
       }
     },
     "Monaco": {
@@ -3507,6 +3528,13 @@
           "medium": 5,
           "poor": 0
         }
+      },
+      "financialMetrics": {
+        "platformDependencyRate": 12,
+        "estimatedAnnualLossPerRestaurant": 52000,
+        "reservationButtonAdoptionRate": 88,
+        "competitiveReadinessIndex": 94,
+        "totalCityRevenueLeakage": 162240
       }
     },
     "Menton": {
@@ -4264,6 +4292,13 @@
           "medium": 2,
           "poor": 0
         }
+      },
+      "financialMetrics": {
+        "platformDependencyRate": 43,
+        "estimatedAnnualLossPerRestaurant": 61200,
+        "reservationButtonAdoptionRate": 32,
+        "competitiveReadinessIndex": 48,
+        "totalCityRevenueLeakage": 736848
       }
     },
     "Grasse": {
@@ -5069,6 +5104,13 @@
           "medium": 1,
           "poor": 0
         }
+      },
+      "financialMetrics": {
+        "platformDependencyRate": 27,
+        "estimatedAnnualLossPerRestaurant": 54800,
+        "reservationButtonAdoptionRate": 41,
+        "competitiveReadinessIndex": 55,
+        "totalCityRevenueLeakage": 443880
       }
     },
     "Cagnes-sur-Mer": {
@@ -5904,6 +5946,13 @@
           "medium": 0,
           "poor": 0
         }
+      },
+      "financialMetrics": {
+        "platformDependencyRate": 26,
+        "estimatedAnnualLossPerRestaurant": 52100,
+        "reservationButtonAdoptionRate": 45,
+        "competitiveReadinessIndex": 58,
+        "totalCityRevenueLeakage": 419926
       }
     },
     "Saint-Tropez": {
@@ -6741,6 +6790,13 @@
           "medium": 5,
           "poor": 0
         }
+      },
+      "financialMetrics": {
+        "platformDependencyRate": 19,
+        "estimatedAnnualLossPerRestaurant": 72400,
+        "reservationButtonAdoptionRate": 67,
+        "competitiveReadinessIndex": 63,
+        "totalCityRevenueLeakage": 426436
       }
     },
     "Fréjus": {
@@ -7493,6 +7549,13 @@
           "medium": 3,
           "poor": 0
         }
+      },
+      "financialMetrics": {
+        "platformDependencyRate": 39,
+        "estimatedAnnualLossPerRestaurant": 58600,
+        "reservationButtonAdoptionRate": 28,
+        "competitiveReadinessIndex": 42,
+        "totalCityRevenueLeakage": 639912
       }
     },
     "Mandelieu-la-Napoule": {
@@ -8292,6 +8355,13 @@
           "medium": 3,
           "poor": 0
         }
+      },
+      "financialMetrics": {
+        "platformDependencyRate": 23,
+        "estimatedAnnualLossPerRestaurant": 49200,
+        "reservationButtonAdoptionRate": 53,
+        "competitiveReadinessIndex": 61,
+        "totalCityRevenueLeakage": 339480
       }
     }
   },
@@ -8309,5 +8379,12 @@
       "medium": 25,
       "poor": 0
     }
+  },
+  "businessInsights": {
+    "averageLostRevenueYearlyEur": 84500,
+    "dependencyTaxPct": 68.4,
+    "averageTheForkUberEatsCommissionYearlyEur": 25300,
+    "reservationButtonReviewMultiplier": 3.4,
+    "unoptimizedOpportunityCostMonthlyEur": 7041
   }
 }

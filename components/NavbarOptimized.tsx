@@ -12,7 +12,7 @@ const SERVICES = [
     { title: "Consultant SEO", href: "/consultant-seo", desc: "Expertise SEO freelance pour votre croissance.", category: "seo" },
     { title: "Audit SEO", href: "/audit-seo", desc: "Analyse technique et sémantique profonde.", category: "seo" },
     { title: "Référencement Naturel", href: "/referencement-naturel", desc: "Stratégie d'acquisition durable sur Google.", category: "seo" },
-    { title: "SEO Local", href: "/seo-local", desc: "Dominez Google Maps et le Pack Local.", category: "seo" },
+    { title: "SEO Local", href: "/consultant-seo", desc: "Dominez Google Maps et le Pack Local.", category: "seo" },
     { title: "Création de Site Web", href: "/creation-site-web", desc: "Sites haute performance optimisés SEO.", category: "web" },
     { title: "Refonte de Site", href: "/refonte-site-web", desc: "Migrez sans perdre votre visibilité.", category: "web" },
 ];
