@@ -57,12 +57,12 @@ function parseCSVLine(line) {
   return result;
 }
 
-// Normaliser les guillemets et apostrophes
+// Normaliser les guillemets et apostrophes (avec Unicode explicite)
 function normalizeQuotes(str) {
   return str
-    .replace(/[""„‟«»]/g, '"')  // Guillemets doubles
-    .replace(/[''‚‛]/g, "'")     // Apostrophes
-    .replace(/\u00A0/g, ' ');    // Espaces insécables
+    .replace(/[\u201C\u201D\u201E\u201F\u00AB\u00BB]/g, '"')  // Guillemets doubles courbes → droits
+    .replace(/[\u2018\u2019\u201A\u201B]/g, "'")               // Apostrophes courbes → droites
+    .replace(/\u00A0/g, ' ');                                  // Espaces insécables → normaux
 }
 
 // Nettoyer URL (supprimer tracking params)
