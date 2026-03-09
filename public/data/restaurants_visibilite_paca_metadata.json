@@ -1,0 +1,26 @@
+{
+  "title": "Visibilité des restaurants en région PACA sur Google Maps",
+  "description": "Analyse de la présence numérique des restaurants de la région Provence-Alpes-Côte d'Azur sur Google Maps. Données collectées en mars 2026.",
+  "publisher": "Indiana Music - Consultant SEO",
+  "license": "ODbL-1.0",
+  "frequency": "annual",
+  "temporal_coverage": "2026",
+  "spatial_coverage": "Région PACA (France)",
+  "columns": {
+    "nom_restaurant": "Nom de l'établissement tel qu'affiché sur Google Maps",
+    "ville": "Commune d'implantation",
+    "categorie": "Catégorie de cuisine principale",
+    "note_google": "Note moyenne Google (sur 5)",
+    "nombre_avis": "Nombre total d'avis Google",
+    "possede_site_web": "Présence d'un site web référencé (true/false)",
+    "url_site_web": "URL du site web si existant",
+    "score_completude_profil": "Score de complétude du profil Google Business (sur 10)",
+    "google_maps_cid": "Identifiant unique Google Maps (CID)"
+  },
+  "stats": {
+    "total_restaurants": 297,
+    "villes": 10,
+    "note_moyenne": "4.56",
+    "taux_site_web": "79.5%"
+  }
+}
