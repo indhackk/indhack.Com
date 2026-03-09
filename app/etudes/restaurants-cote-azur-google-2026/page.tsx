@@ -2,18 +2,18 @@ import { Metadata } from "next";
 import StudyClientContent from "./StudyClientContent";
 
 export const metadata: Metadata = {
-    title: "30% des meilleurs restaurants Google sans site web | Étude Côte d'Azur 2026",
-    description: "Étude exclusive : analyse de 308 restaurants du Top Google sur la Côte d'Azur. 30% sans site web, 13% avec des profils suspects. Données vérifiées, méthodologie transparente.",
+    title: "20% des meilleurs restaurants Google sans site web | Étude Côte d'Azur 2026",
+    description: "Étude exclusive : analyse de 297 restaurants du Top Google sur la Côte d'Azur. 20.5% sans site web, 9% avec des profils suspects. Données vérifiées, méthodologie transparente.",
     keywords: ["restaurants Côte d'Azur", "Google My Business", "SEO local restauration", "visibilité Google restaurants", "étude restauration 2026", "Nice", "Cannes", "Monaco"],
     alternates: {
         canonical: "https://indhack.com/etudes/restaurants-cote-azur-google-2026"
     },
     openGraph: {
-        title: "30% des meilleurs restaurants Google sans site web | Côte d'Azur",
-        description: "Même les restaurants les plus visibles de la Côte d'Azur ont des failles critiques. Étude exclusive sur 308 établissements.",
+        title: "20% des meilleurs restaurants Google sans site web | Côte d'Azur",
+        description: "Même les restaurants les plus visibles de la Côte d'Azur ont des failles critiques. Étude exclusive sur 297 établissements.",
         url: "https://indhack.com/etudes/restaurants-cote-azur-google-2026",
         type: "article",
-        publishedTime: "2026-02-24",
+        publishedTime: "2026-03-09",
         authors: ["Indiana Aflalo"],
         images: [{
             url: "https://indhack.com/images/etudes/restaurants-cote-azur-2026-og.png",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "30% des meilleurs restaurants Google sans site web",
-        description: "Étude exclusive sur 308 restaurants de la Côte d'Azur. Données vérifiées.",
+        title: "20% des meilleurs restaurants Google sans site web",
+        description: "Étude exclusive sur 297 restaurants de la Côte d'Azur. Données vérifiées.",
     }
 };
 
@@ -39,11 +39,11 @@ export default function EtudeRestaurantsCoteAzur() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "NewsArticle",
-                        "headline": "30% des restaurants les plus visibles de la Côte d'Azur n'ont pas de site web : étude 2026",
-                        "description": "Analyse des failles des 308 restaurants apparaissant dans le Top Google sur 10 villes de la Côte d'Azur. 30% sans site web, 13% de profils suspects.",
+                        "headline": "20.5% des restaurants les plus visibles de la Côte d'Azur n'ont pas de site web : étude 2026",
+                        "description": "Analyse des failles des 297 restaurants apparaissant dans le Top Google sur 10 villes de la Côte d'Azur. 20.5% sans site web, 9% de profils suspects.",
                         "image": "https://indhack.com/images/etudes/restaurants-cote-azur-2026-og.png",
-                        "datePublished": "2026-02-24",
-                        "dateModified": "2026-02-24",
+                        "datePublished": "2026-03-09",
+                        "dateModified": "2026-03-09",
                         "author": {
                             "@type": "Person",
                             "name": "Indiana Aflalo",
@@ -75,18 +75,18 @@ export default function EtudeRestaurantsCoteAzur() {
                         "@context": "https://schema.org",
                         "@type": "Dataset",
                         "name": "Failles GMB des restaurants de la Côte d'Azur 2026",
-                        "description": "Analyse des failles des 308 restaurants les plus visibles sur Google dans 10 villes de la Côte d'Azur (Nice, Cannes, Monaco, Antibes, etc.)",
+                        "description": "Analyse des failles des 297 restaurants les plus visibles sur Google dans 10 villes de la Côte d'Azur (Nice, Cannes, Monaco, Antibes, etc.)",
                         "url": "https://indhack.com/etudes/restaurants-cote-azur-google-2026",
                         "creator": {
                             "@type": "Person",
                             "name": "Indiana Aflalo"
                         },
-                        "datePublished": "2026-02-24",
+                        "datePublished": "2026-03-09",
                         "spatialCoverage": {
                             "@type": "Place",
                             "name": "Côte d'Azur, France"
                         },
-                        "temporalCoverage": "2026-02",
+                        "temporalCoverage": "2026-03",
                         "variableMeasured": [
                             "Présence site web",
                             "Note moyenne Google",

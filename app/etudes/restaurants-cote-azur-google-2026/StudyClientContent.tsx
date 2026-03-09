@@ -35,12 +35,12 @@ import { Button } from "@/components/ui/button";
 
 const RESEARCH_DATA = {
     methodology: {
-        totalScraped: 3450,
-        sampleSize: 308,
-        samplePercentage: 8.9,
+        totalScraped: 3108,
+        sampleSize: 297,
+        samplePercentage: 9.5,
         trafficCapture: 80,
         cities: 10,
-        extractionDate: "24 février 2026",
+        extractionDate: "9 mars 2026",
         sources: ["Google Places API", "Serper.dev", "INSEE 2024"]
     },
     economicModel: {
@@ -64,25 +64,25 @@ const RESEARCH_DATA = {
         }
     },
     findings: {
-        noWebsite: { count: 92, percentage: 29.9 },
-        platformDependent: { percentage: 68.4 },
-        suspiciousProfiles: { count: 41, percentage: 13.3 },
+        noWebsite: { count: 61, percentage: 20.5 },
+        platformDependent: { percentage: 56.4 },
+        suspiciousProfiles: { count: 28, percentage: 9.4 },
         calculatedLoss: {
             perRestaurant: 77760,
             methodology: "Différentiel de marge brute : réservation directe (35%) vs livraison plateforme (8%) sur CA 288k€"
         }
     },
     cityData: [
-        { city: "Menton", scraped: 312, sample: 28, noWebsitePct: 43, riskLevel: "critical" },
-        { city: "Fréjus", scraped: 298, sample: 28, noWebsitePct: 39, riskLevel: "critical" },
-        { city: "Grasse", scraped: 287, sample: 30, noWebsitePct: 27, riskLevel: "high" },
-        { city: "Cagnes-sur-Mer", scraped: 276, sample: 31, noWebsitePct: 26, riskLevel: "high" },
-        { city: "Mandelieu", scraped: 189, sample: 30, noWebsitePct: 23, riskLevel: "medium" },
-        { city: "Antibes", scraped: 445, sample: 36, noWebsitePct: 22, riskLevel: "medium" },
-        { city: "Saint-Tropez", scraped: 267, sample: 31, noWebsitePct: 19, riskLevel: "medium" },
-        { city: "Monaco", scraped: 198, sample: 26, noWebsitePct: 12, riskLevel: "low" },
-        { city: "Nice", scraped: 687, sample: 35, noWebsitePct: 3, riskLevel: "low" },
-        { city: "Cannes", scraped: 491, sample: 33, noWebsitePct: 3, riskLevel: "low" },
+        { city: "Menton", scraped: 247, sample: 28, noWebsitePct: 42.9, riskLevel: "critical" },
+        { city: "Fréjus", scraped: 252, sample: 28, noWebsitePct: 39.3, riskLevel: "critical" },
+        { city: "Grasse", scraped: 283, sample: 30, noWebsitePct: 26.7, riskLevel: "high" },
+        { city: "Cagnes-sur-Mer", scraped: 294, sample: 31, noWebsitePct: 25.8, riskLevel: "high" },
+        { city: "Mandelieu", scraped: 212, sample: 29, noWebsitePct: 24.1, riskLevel: "medium" },
+        { city: "Saint-Tropez", scraped: 287, sample: 31, noWebsitePct: 19.4, riskLevel: "medium" },
+        { city: "Antibes", scraped: 274, sample: 26, noWebsitePct: 15.4, riskLevel: "medium" },
+        { city: "Monaco", scraped: 226, sample: 26, noWebsitePct: 11.5, riskLevel: "low" },
+        { city: "Cannes", scraped: 332, sample: 33, noWebsitePct: 3.0, riskLevel: "low" },
+        { city: "Nice", scraped: 418, sample: 35, noWebsitePct: 2.9, riskLevel: "low" },
     ]
 };
 
@@ -505,7 +505,7 @@ export default function StudyClientContent() {
                                         <span className="text-[9px] font-mono uppercase tracking-wider text-red-400/60">Dépendance Critique</span>
                                     </div>
                                     <p className="text-4xl font-mono font-bold text-white tracking-tight mb-2">
-                                        <AnimatedNumber value={68.4} suffix="%" duration={1.5} />
+                                        <AnimatedNumber value={56.4} suffix="%" duration={1.5} />
                                     </p>
                                     <p className="text-xs text-white/40 leading-relaxed">
                                         Taux de dépendance aux plateformes tierces pour l'acquisition client
@@ -539,7 +539,7 @@ export default function StudyClientContent() {
                                         <span className="text-[9px] font-mono uppercase tracking-wider text-white/30">Déficit Digital</span>
                                     </div>
                                     <p className="text-4xl font-mono font-bold text-white tracking-tight mb-2">
-                                        <AnimatedNumber value={29.9} suffix="%" duration={1} />
+                                        <AnimatedNumber value={20.5} suffix="%" duration={1} />
                                     </p>
                                     <p className="text-xs text-white/40 leading-relaxed">
                                         Établissements du Top SERP sans site web propriétaire (n={RESEARCH_DATA.findings.noWebsite.count})
@@ -866,7 +866,7 @@ export default function StudyClientContent() {
                                         <Download className="w-5 h-5 text-white/20 group-hover:text-emerald-400 transition-colors" />
                                     </div>
                                     <h3 className="font-bold text-white/90 mb-1">Dataset Complet (JSON)</h3>
-                                    <p className="text-white/40 text-xs mb-4">308 établissements · Métriques détaillées · Business Insights</p>
+                                    <p className="text-white/40 text-xs mb-4">297 établissements · Métriques détaillées · Business Insights</p>
                                     <div className="flex gap-2">
                                         <span className="px-2 py-1 text-[9px] font-mono uppercase tracking-wider bg-white/[0.04] rounded text-white/40">API Ready</span>
                                         <span className="px-2 py-1 text-[9px] font-mono uppercase tracking-wider bg-white/[0.04] rounded text-white/40">2.4 MB</span>

@@ -13,6 +13,8 @@ Pour une entreprise locale, être visible sur des recherches comme "**consultant
 
 > **Outil gratuit :** [Simulateur de Visibilité Locale — Analysez la SERP de votre ville](/outils/simulateur-visibilite-locale) — Découvrez qui domine Google pour votre métier à Nice, Cannes ou Monaco.
 
+> 📊 **Étude Exclusive (Mars 2026) :** 20.5% des meilleurs restaurants de la Côte d'Azur sur Google n'ont même pas de site web. Résultat : une perte de marge estimée à 77 000€/an pour ces établissements. [Découvrez les statistiques chocs par ville.](/blog/etude-restaurants-cote-azur-2026-resume)
+
 ## La puissance de la recherche locale
 
 Les recherches de proximité convertissent 28 % mieux que les recherches génériques (source : Google). Les **recherches de proximité** ont un **taux de conversion** bien plus élevé :
@@ -95,6 +97,7 @@ Le **SEO local** à Nice et sur la Côte d'Azur est un levier puissant pour les 
 
 ## Pour aller plus loin
 
+- [Étude 2026 : Le déficit numérique des restaurants de la Côte d'Azur](/blog/etude-restaurants-cote-azur-2026-resume) — Découvrez les failles critiques sur Google Maps qui coûtent des dizaines de milliers d'euros aux artisans azuréens.
 - [Google Business Profile : le guide complet](/blog/google-business-profile-guide-complet) — Optimisez chaque champ de votre fiche Google
 - [Comment voler les clients de vos concurrents sur Google Maps](/blog/google-maps-voler-clients-concurrents) — Techniques avancées de SEO local
 - [Checklist SEO 2026](/blog/checklist-seo-2026) — Les 30 points essentiels pour un SEO performant
