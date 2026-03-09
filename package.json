@@ -49,6 +49,7 @@
     "three": "^0.182.0"
   },
   "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

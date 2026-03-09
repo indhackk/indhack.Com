@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "indhack-prospecting": {
+      "command": "node",
+      "args": ["scripts/mcp-prospecting-server.mjs"],
+      "cwd": "${workspaceFolder}",
+      "description": "Serveur de prospecting IndHack - Accès aux données GMB restaurants Côte d'Azur"
+    }
+  }
+}
