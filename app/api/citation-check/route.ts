@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 // ═══════════════════════════════════════════════════════════
 // CITATION CHECK API — Vérifie si un site est cité par les IA
-// Utilise Perplexity Sonar API pour des réponses grounded
+// Priorité : Gemini 2.5 Flash + Google Search (GRATUIT 500 req/jour)
+// Fallback : Perplexity Sonar > SERPER Google Results
 // ═══════════════════════════════════════════════════════════
 
 const RATE_LIMIT = 5; // 5 tests/heure par IP
@@ -19,10 +20,10 @@ interface CitationSource {
 interface PromptResult {
     prompt: string;
     isCited: boolean;
-    citationPosition: number | null; // 1-based position dans les sources, null si absent
+    citationPosition: number | null;
     totalSources: number;
-    competitors: string[]; // domaines concurrents mentionnés
-    snippet: string; // extrait de la réponse mentionnant le site (ou résumé)
+    competitors: string[];
+    snippet: string;
     sources: CitationSource[];
     aiEngine: string;
 }
@@ -53,10 +54,7 @@ function checkRateLimit(ip: string): boolean {
         return true;
     }
 
-    if (entry.count >= RATE_LIMIT) {
-        return false;
-    }
-
+    if (entry.count >= RATE_LIMIT) return false;
     entry.count++;
     return true;
 }
@@ -69,18 +67,86 @@ function extractDomain(url: string): string {
     }
 }
 
-// Interroge Perplexity Sonar avec un prompt et retourne la réponse + sources
+// ═══════════════════════════════════════════════════════════
+// MOTEUR 1 : Gemini 2.5 Flash + Google Search Grounding
+// GRATUIT : 500 requêtes/jour sur le free tier
+// ═══════════════════════════════════════════════════════════
+async function queryGemini(prompt: string): Promise<{ content: string; citations: string[] }> {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) throw new Error("GEMINI_API_KEY not configured");
+
+    const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent`,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "x-goog-api-key": apiKey,
+            },
+            body: JSON.stringify({
+                contents: [
+                    {
+                        parts: [
+                            {
+                                text: `Réponds en français. ${prompt} Cite des sites web spécifiques, des outils et des entreprises avec leurs noms.`,
+                            },
+                        ],
+                    },
+                ],
+                tools: [
+                    {
+                        google_search: {},
+                    },
+                ],
+                generationConfig: {
+                    temperature: 0.1,
+                    maxOutputTokens: 1024,
+                },
+            }),
+        }
+    );
+
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Gemini API error ${response.status}: ${errorText}`);
+    }
+
+    const data = await response.json();
+
+    // Extraire le texte de la réponse
+    const content = data.candidates?.[0]?.content?.parts
+        ?.map((p: { text?: string }) => p.text || "")
+        .join("") || "";
+
+    // Extraire les sources depuis groundingMetadata
+    const groundingMetadata = data.candidates?.[0]?.groundingMetadata;
+    const citations: string[] = [];
+
+    if (groundingMetadata?.groundingChunks) {
+        for (const chunk of groundingMetadata.groundingChunks) {
+            if (chunk.web?.uri) {
+                citations.push(chunk.web.uri);
+            }
+        }
+    }
+
+    // Aussi vérifier les webSearchQueries pour le contexte
+    // (les sources directes sont dans groundingChunks)
+
+    return { content, citations };
+}
+
+// ═══════════════════════════════════════════════════════════
+// MOTEUR 2 (Fallback) : Perplexity Sonar
+// ═══════════════════════════════════════════════════════════
 async function queryPerplexity(prompt: string): Promise<{ content: string; citations: string[] }> {
     const apiKey = process.env.PERPLEXITY_API_KEY;
-
-    if (!apiKey) {
-        throw new Error("PERPLEXITY_API_KEY not configured");
-    }
+    if (!apiKey) throw new Error("PERPLEXITY_API_KEY not configured");
 
     const response = await fetch("https://api.perplexity.ai/chat/completions", {
         method: "POST",
         headers: {
-            "Authorization": `Bearer ${apiKey}`,
+            Authorization: `Bearer ${apiKey}`,
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -88,12 +154,10 @@ async function queryPerplexity(prompt: string): Promise<{ content: string; citat
             messages: [
                 {
                     role: "system",
-                    content: "Tu es un assistant de recherche. Réponds de façon factuelle et concise en citant des sources web spécifiques. Mentionne les noms de sites, outils et entreprises pertinents avec leurs URLs quand c'est possible."
+                    content:
+                        "Tu es un assistant de recherche. Réponds de façon factuelle et concise en citant des sources web spécifiques. Mentionne les noms de sites, outils et entreprises pertinents avec leurs URLs.",
                 },
-                {
-                    role: "user",
-                    content: prompt
-                }
+                { role: "user", content: prompt },
             ],
             max_tokens: 1024,
             temperature: 0.1,
@@ -108,20 +172,18 @@ async function queryPerplexity(prompt: string): Promise<{ content: string; citat
     }
 
     const data = await response.json();
-
     return {
         content: data.choices?.[0]?.message?.content || "",
         citations: data.citations || [],
     };
 }
 
-// Fallback : utilise l'API SERPER pour simuler une vérification de citation
-async function querySerperFallback(prompt: string): Promise<{ content: string; citations: string[] }> {
+// ═══════════════════════════════════════════════════════════
+// MOTEUR 3 (Dernier recours) : SERPER Google Results
+// ═══════════════════════════════════════════════════════════
+async function querySerper(prompt: string): Promise<{ content: string; citations: string[] }> {
     const apiKey = process.env.SERPER_API_KEY;
-
-    if (!apiKey) {
-        throw new Error("No API key available (neither PERPLEXITY_API_KEY nor SERPER_API_KEY)");
-    }
+    if (!apiKey) throw new Error("SERPER_API_KEY not configured");
 
     const response = await fetch("https://google.serper.dev/search", {
         method: "POST",
@@ -129,17 +191,10 @@ async function querySerperFallback(prompt: string): Promise<{ content: string; c
             "X-API-KEY": apiKey,
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-            q: prompt,
-            gl: "fr",
-            hl: "fr",
-            num: 10,
-        }),
+        body: JSON.stringify({ q: prompt, gl: "fr", hl: "fr", num: 10 }),
     });
 
-    if (!response.ok) {
-        throw new Error(`Serper API error ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`Serper API error ${response.status}`);
 
     const data = await response.json();
     const citations: string[] = [];
@@ -151,26 +206,17 @@ async function querySerperFallback(prompt: string): Promise<{ content: string; c
         if (data.answerBox.link) citations.push(data.answerBox.link);
     }
 
-    // Knowledge Graph
     if (data.knowledgeGraph?.description) {
         content += " " + data.knowledgeGraph.description;
         if (data.knowledgeGraph.website) citations.push(data.knowledgeGraph.website);
     }
 
-    // Résultats organiques
-    if (data.organic) {
-        for (const result of data.organic.slice(0, 10)) {
-            citations.push(result.link);
-            if (!content) content = result.snippet || "";
-        }
-    }
-
     // AI Overview de Google
     if (data.aiOverview) {
-        content = typeof data.aiOverview === "string"
-            ? data.aiOverview
-            : data.aiOverview.text || data.aiOverview.snippet || content;
-
+        content =
+            typeof data.aiOverview === "string"
+                ? data.aiOverview
+                : data.aiOverview.text || data.aiOverview.snippet || content;
         if (data.aiOverview.references) {
             for (const ref of data.aiOverview.references) {
                 if (ref.link) citations.push(ref.link);
@@ -178,9 +224,52 @@ async function querySerperFallback(prompt: string): Promise<{ content: string; c
         }
     }
 
+    if (data.organic) {
+        for (const result of data.organic.slice(0, 10)) {
+            citations.push(result.link);
+            if (!content) content = result.snippet || "";
+        }
+    }
+
     return { content, citations };
 }
 
+// ═══════════════════════════════════════════════════════════
+// DISPATCH : essaie Gemini > Perplexity > SERPER
+// ═══════════════════════════════════════════════════════════
+async function queryAI(prompt: string): Promise<{ content: string; citations: string[]; engine: string }> {
+    // 1. Gemini (gratuit, 500/jour)
+    if (process.env.GEMINI_API_KEY) {
+        try {
+            const result = await queryGemini(prompt);
+            return { ...result, engine: "Gemini + Google Search" };
+        } catch (err) {
+            console.warn("Gemini failed, trying fallback:", err);
+        }
+    }
+
+    // 2. Perplexity Sonar (payant)
+    if (process.env.PERPLEXITY_API_KEY) {
+        try {
+            const result = await queryPerplexity(prompt);
+            return { ...result, engine: "Perplexity Sonar" };
+        } catch (err) {
+            console.warn("Perplexity failed, trying fallback:", err);
+        }
+    }
+
+    // 3. SERPER Google (payant, pas un vrai LLM)
+    if (process.env.SERPER_API_KEY) {
+        const result = await querySerper(prompt);
+        return { ...result, engine: "Google AI Overview" };
+    }
+
+    throw new Error("Aucune API configurée (GEMINI_API_KEY, PERPLEXITY_API_KEY ou SERPER_API_KEY)");
+}
+
+// ═══════════════════════════════════════════════════════════
+// ANALYSE : vérifie si le domaine est cité dans les résultats
+// ═══════════════════════════════════════════════════════════
 function analyzePromptResult(
     prompt: string,
     domain: string,
@@ -190,9 +279,18 @@ function analyzePromptResult(
 ): PromptResult {
     const domainLower = domain.toLowerCase();
 
+    // Dédupliquer les citations par domaine
+    const seenDomains = new Set<string>();
+    const uniqueCitations = citations.filter((url) => {
+        const d = extractDomain(url);
+        if (seenDomains.has(d)) return false;
+        seenDomains.add(d);
+        return true;
+    });
+
     // Cherche le domaine dans les citations/sources
     let citationPosition: number | null = null;
-    const sources: CitationSource[] = citations.map((url, i) => {
+    const sources: CitationSource[] = uniqueCitations.map((url, i) => {
         const sourceDomain = extractDomain(url);
         if (sourceDomain.includes(domainLower) || domainLower.includes(sourceDomain)) {
             if (citationPosition === null) citationPosition = i + 1;
@@ -200,54 +298,66 @@ function analyzePromptResult(
         return { url, title: sourceDomain };
     });
 
-    // Vérifie aussi si le domaine est mentionné dans le texte de la réponse
-    const isCitedInText = content.toLowerCase().includes(domainLower) ||
-        content.toLowerCase().includes(domainLower.replace(".", " "));
+    // Vérifie aussi si le domaine est mentionné dans le texte
+    const isCitedInText =
+        content.toLowerCase().includes(domainLower) ||
+        content.toLowerCase().includes(domainLower.replace(".", " ")) ||
+        content.toLowerCase().includes(domainLower.split(".")[0]);
 
     const isCited = citationPosition !== null || isCitedInText;
 
-    // Si cité dans le texte mais pas dans les sources, marquer position spéciale
     if (isCitedInText && citationPosition === null) {
-        citationPosition = -1; // Mentionné dans le texte mais pas comme source
+        citationPosition = -1; // Mentionné dans le texte mais pas comme source directe
     }
 
-    // Extraire les concurrents (autres domaines dans les sources)
-    const competitors = citations
-        .map(url => extractDomain(url))
-        .filter(d => !d.includes(domainLower) && !domainLower.includes(d))
-        .filter(d => !d.includes("wikipedia") && !d.includes("reddit") && !d.includes("google"))
-        .filter((d, i, arr) => arr.indexOf(d) === i) // unique
+    // Extraire les concurrents
+    const competitors = uniqueCitations
+        .map((url) => extractDomain(url))
+        .filter((d) => !d.includes(domainLower) && !domainLower.includes(d))
+        .filter(
+            (d) =>
+                !d.includes("wikipedia") &&
+                !d.includes("reddit") &&
+                !d.includes("google") &&
+                !d.includes("youtube") &&
+                !d.includes("facebook") &&
+                !d.includes("twitter") &&
+                !d.includes("x.com")
+        )
+        .filter((d, i, arr) => arr.indexOf(d) === i)
         .slice(0, 5);
 
     // Extraire un snippet pertinent
     let snippet = "";
     if (isCited) {
-        // Chercher la phrase qui mentionne le domaine
         const sentences = content.split(/[.!?]\s/);
-        const relevant = sentences.find(s =>
-            s.toLowerCase().includes(domainLower) ||
-            s.toLowerCase().includes(domainLower.split(".")[0])
+        const relevant = sentences.find(
+            (s) =>
+                s.toLowerCase().includes(domainLower) ||
+                s.toLowerCase().includes(domainLower.split(".")[0])
         );
-        snippet = relevant ? relevant.trim().slice(0, 200) : content.slice(0, 200);
+        snippet = relevant ? relevant.trim().slice(0, 250) : content.slice(0, 250);
     } else {
-        snippet = content.slice(0, 200);
+        snippet = content.slice(0, 250);
     }
 
     return {
         prompt,
         isCited,
         citationPosition,
-        totalSources: citations.length,
+        totalSources: uniqueCitations.length,
         competitors,
-        snippet: snippet + (snippet.length >= 200 ? "..." : ""),
+        snippet: snippet + (snippet.length >= 250 ? "..." : ""),
         sources,
         aiEngine,
     };
 }
 
+// ═══════════════════════════════════════════════════════════
+// ROUTE HANDLER
+// ═══════════════════════════════════════════════════════════
 export async function POST(request: NextRequest) {
     try {
-        // Rate limiting
         const ip = getClientIP(request);
         if (!checkRateLimit(ip)) {
             return NextResponse.json(
@@ -278,66 +388,51 @@ export async function POST(request: NextRequest) {
         // Construire les prompts de recherche
         const searchPrompts = prompts.map((keyword: string) => {
             const k = keyword.trim();
-            // Formater comme une vraie question utilisateur
             if (k.includes("?")) return k;
-            if (k.toLowerCase().startsWith("quel") || k.toLowerCase().startsWith("comment") || k.toLowerCase().startsWith("meilleur")) return k;
+            if (
+                k.toLowerCase().startsWith("quel") ||
+                k.toLowerCase().startsWith("comment") ||
+                k.toLowerCase().startsWith("meilleur") ||
+                k.toLowerCase().startsWith("top")
+            )
+                return k;
             return `Quels sont les meilleurs ${k} ? Donne-moi des recommandations concrètes avec des sites web.`;
         });
 
-        // Déterminer quel moteur utiliser
-        const hasPerplexity = !!process.env.PERPLEXITY_API_KEY;
-        const hasSerper = !!process.env.SERPER_API_KEY;
-
-        if (!hasPerplexity && !hasSerper) {
-            return NextResponse.json(
-                { error: "Service temporairement indisponible. Réessayez plus tard." },
-                { status: 503 }
-            );
-        }
-
-        const aiEngine = hasPerplexity ? "Perplexity Sonar" : "Google AI Overview";
-
-        // Exécuter les requêtes (séquentiellement pour respecter les rate limits API)
+        // Exécuter les requêtes
         const results: PromptResult[] = [];
 
-        for (const searchPrompt of searchPrompts) {
+        for (let i = 0; i < searchPrompts.length; i++) {
             try {
-                const { content, citations } = hasPerplexity
-                    ? await queryPerplexity(searchPrompt)
-                    : await querySerperFallback(searchPrompt);
-
-                results.push(analyzePromptResult(
-                    searchPrompt,
-                    cleanDomain,
-                    content,
-                    citations,
-                    aiEngine
-                ));
+                const { content, citations, engine } = await queryAI(searchPrompts[i]);
+                results.push(
+                    analyzePromptResult(searchPrompts[i], cleanDomain, content, citations, engine)
+                );
             } catch (err) {
-                console.error(`Error querying for prompt "${searchPrompt}":`, err);
+                console.error(`Error querying for prompt "${searchPrompts[i]}":`, err);
                 results.push({
-                    prompt: searchPrompt,
+                    prompt: searchPrompts[i],
                     isCited: false,
                     citationPosition: null,
                     totalSources: 0,
                     competitors: [],
                     snippet: "Erreur lors de la vérification. Réessayez.",
                     sources: [],
-                    aiEngine,
+                    aiEngine: "N/A",
                 });
             }
 
-            // Petit délai entre les requêtes pour éviter le throttling
-            if (searchPrompts.indexOf(searchPrompt) < searchPrompts.length - 1) {
-                await new Promise(resolve => setTimeout(resolve, 500));
+            // Délai entre requêtes
+            if (i < searchPrompts.length - 1) {
+                await new Promise((resolve) => setTimeout(resolve, 500));
             }
         }
 
-        // Calculer le score global
-        const cited = results.filter(r => r.isCited).length;
+        // Score global
+        const cited = results.filter((r) => r.isCited).length;
         const total = results.length;
 
-        // Agréger les concurrents
+        // Top concurrents
         const competitorCount = new Map<string, number>();
         for (const result of results) {
             for (const comp of result.competitors) {
@@ -349,7 +444,7 @@ export async function POST(request: NextRequest) {
             .sort((a, b) => b.count - a.count)
             .slice(0, 8);
 
-        const response: CitationCheckResult = {
+        const citationResult: CitationCheckResult = {
             domain: cleanDomain,
             timestamp: new Date().toISOString(),
             prompts: results,
@@ -361,8 +456,7 @@ export async function POST(request: NextRequest) {
             topCompetitors,
         };
 
-        return NextResponse.json(response);
-
+        return NextResponse.json(citationResult);
     } catch (error) {
         console.error("Citation check error:", error);
         return NextResponse.json(

@@ -199,7 +199,7 @@ export default function CitationChecker({ domain }: { domain: string }) {
                     </button>
 
                     <p className="text-xs text-soft-light/60 text-center mt-3">
-                        Gratuit • 3 mots-clés • 5 tests/heure • Propulsé par Perplexity Sonar
+                        Gratuit • 3 mots-clés • 5 tests/heure • Propulsé par Gemini + Google Search
                     </p>
                 </>
             ) : (
