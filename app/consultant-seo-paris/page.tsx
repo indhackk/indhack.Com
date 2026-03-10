@@ -6,8 +6,8 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-paris")!;
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Paris — Experte Référencement Naturel",
-    description: "Consultante SEO freelance à Paris. Stratégies de référencement sur-mesure pour dominer Google dans la capitale. Audit gratuit.",
+    title: "Consultant SEO Paris | Expert Référencement Naturel",
+    description: "Consultant SEO à Paris : stratégie sur-mesure, audit technique et référencement naturel pour PME et startups parisiennes. Audit gratuit.",
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`
     },
