@@ -45,8 +45,7 @@ export const metadata: Metadata = {
 
 export default function GlossaireSeoPage() {
     const breadcrumbItems = [
-        { label: "Accueil", href: "/" },
-        { label: "Glossaire SEO & GEO" },
+        { label: "Glossaire SEO & GEO", href: "/glossaire-seo" },
     ];
 
     return (
