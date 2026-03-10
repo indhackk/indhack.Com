@@ -1,216 +1,155 @@
 "use client";
 
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import { useRef, useEffect, useState, useCallback } from "react";
+import { useRef, useEffect, useState } from "react";
 import {
     ArrowRight,
+    ArrowUpRight,
     Bot,
     Shield,
     ShieldOff,
-    TrendingDown,
     TrendingUp,
     AlertTriangle,
-    Globe,
-    ChevronDown,
-    ChevronUp,
     Search,
     FileText,
     Zap,
     Target,
     CheckCircle2,
-    Info,
     ExternalLink,
     Sparkles,
     Eye,
-    EyeOff,
-    Database,
-    Code,
-    FileCode,
-    MessageSquare,
     Users,
     BarChart3,
-    PieChart,
     Lock,
-    Unlock,
+    Code,
+    FileCode,
     BookOpen,
-    Lightbulb
+    Lightbulb,
+    Quote
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// DATA - Sources vérifiées
+// DATA
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const STUDY_DATA = {
-    hero: {
-        blocking: {
+    hero: [
+        {
             value: 45.5,
-            label: "des top 1000 sites bloquent au moins un crawler IA",
-            source: "Originresearch.com (2025)",
-            sourceUrl: "https://originresearch.com"
+            suffix: "%",
+            label: "des top sites bloquent les crawlers IA",
+            source: "Originresearch.com",
+            color: "coral"
         },
-        chatgptPrompts: {
+        {
             value: 2.5,
-            unit: "Mrd",
-            label: "de prompts envoyés à ChatGPT chaque jour",
-            source: "TechCrunch (juillet 2025)",
-            sourceUrl: "https://techcrunch.com/2025/07/21/chatgpt-users-send-2-5-billion-prompts-a-day/"
+            suffix: " Mrd",
+            label: "de prompts ChatGPT par jour",
+            source: "TechCrunch 2025",
+            color: "teal"
         },
-        perplexityGrowth: {
+        {
             value: 800,
-            label: "de croissance utilisateurs Perplexity en 12 mois",
-            source: "DemandSage (2026)",
-            sourceUrl: "https://www.demandsage.com/perplexity-ai-statistics/"
+            prefix: "+",
+            suffix: "%",
+            label: "croissance Perplexity en 12 mois",
+            source: "DemandSage 2026",
+            color: "amber"
         },
-        gartnerPrediction: {
-            value: -25,
-            label: "de volume de recherche traditionnelle d'ici fin 2026",
-            source: "Gartner (février 2024)",
-            sourceUrl: "https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents"
+        {
+            value: 25,
+            prefix: "-",
+            suffix: "%",
+            label: "de recherches Google d'ici 2026",
+            source: "Gartner",
+            color: "violet"
         }
-    },
+    ],
     constats: [
         {
             id: 1,
             icon: "search",
             title: "Le zéro-clic domine",
-            stat: "58-60%",
-            description: "des recherches Google se terminent sans aucun clic vers un site web. Ce chiffre monte à 83% quand un AI Overview est affiché.",
-            source: "Semrush Zero-Click Study 2025",
-            sourceUrl: "https://www.semrush.com/blog/zero-click-searches/"
+            stat: "60%",
+            highlight: "des recherches",
+            description: "se terminent sans clic. Avec AI Overview : 83%.",
+            source: "Semrush 2025",
+            color: "from-rose-500 to-orange-400"
         },
         {
             id: 2,
             icon: "sparkles",
-            title: "Les AI Overviews envahissent Google",
+            title: "AI Overviews partout",
             stat: "48%",
-            description: "des recherches Google déclenchent un AI Overview (données février 2026). Ce chiffre a augmenté de 58% en un an.",
-            source: "BrightEdge (fév. 2026)",
-            sourceUrl: "https://www.brightedge.com"
+            highlight: "des recherches",
+            description: "déclenchent un AI Overview (+58% en 1 an).",
+            source: "BrightEdge 2026",
+            color: "from-violet-500 to-purple-400"
         },
         {
             id: 3,
             icon: "users",
-            title: "La Gen Z migre vers l'IA",
+            title: "La Gen Z migre",
             stat: "28%",
-            description: "des 18-24 ans commencent leurs recherches sur ChatGPT plutôt que Google. L'usage de ChatGPT chez cette tranche d'âge est à 3% d'écart avec Google.",
-            source: "Adobe & ContentGrip (2025)",
-            sourceUrl: "https://contentgrip.com"
+            highlight: "des 18-24 ans",
+            description: "démarrent sur ChatGPT plutôt que Google.",
+            source: "Adobe 2025",
+            color: "from-cyan-500 to-blue-400"
         },
         {
             id: 4,
             icon: "trending-up",
-            title: "Le GEO multiplie la visibilité",
-            stat: "+30-40%",
-            description: "d'amélioration de la visibilité dans les réponses IA pour les sites optimisés GEO. Citer des sources et intégrer des statistiques sont les stratégies les plus efficaces.",
-            source: "Princeton University (KDD 2024)",
-            sourceUrl: "https://arxiv.org/abs/2311.09735"
+            title: "Le GEO fonctionne",
+            stat: "+40%",
+            highlight: "de visibilité",
+            description: "pour les sites optimisés GEO.",
+            source: "Princeton KDD 2024",
+            color: "from-emerald-500 to-teal-400"
         },
         {
             id: 5,
             icon: "lock",
-            title: "GPTBot est le crawler le plus bloqué",
-            stat: "5,6M",
-            description: "de sites web ont ajouté GPTBot à leur liste de blocage robots.txt (+336% selon Tollbit Q2 2025). 21% des top 1000 sites bloquent spécifiquement GPTBot.",
-            source: "Cloudflare Blog (2025)",
-            sourceUrl: "https://blog.cloudflare.com/from-googlebot-to-gptbot-whos-crawling-your-site-in-2025/"
+            title: "GPTBot très bloqué",
+            stat: "5.6M",
+            highlight: "de sites",
+            description: "bloquent GPTBot (+336% en 1 an).",
+            source: "Cloudflare 2025",
+            color: "from-red-500 to-rose-400"
         },
         {
             id: 6,
             icon: "file-text",
-            title: "Le fichier llms.txt est quasi inexistant",
+            title: "llms.txt rare",
             stat: "<5%",
-            description: "des sites possèdent un fichier llms.txt. C'est l'équivalent du robots.txt pour les IA : il indique aux LLM quelles pages sont les plus importantes.",
-            source: "Analyse IndHack (mars 2026)",
-            sourceUrl: null
-        },
-        {
-            id: 7,
-            icon: "code",
-            title: "Les données structurées font la différence",
-            stat: "JSON-LD",
-            description: "Les sites avec des données structurées (FAQPage, Article, Organization) sont significativement mieux cités par les IA qui extraient directement ces informations.",
-            source: "Étude GEO Princeton (KDD 2024)",
-            sourceUrl: "https://arxiv.org/abs/2311.09735"
+            highlight: "des sites",
+            description: "possèdent ce fichier essentiel.",
+            source: "Analyse IndHack",
+            color: "from-amber-500 to-yellow-400"
         }
     ],
     crawlers: [
-        { name: "GPTBot (OpenAI)", blocked: 21, color: "from-red-500 to-orange-500" },
-        { name: "Google-Extended", blocked: 18, color: "from-blue-500 to-cyan-500" },
-        { name: "CCBot (Common Crawl)", blocked: 15, color: "from-purple-500 to-pink-500" },
-        { name: "Bytespider (ByteDance)", blocked: 12, color: "from-green-500 to-emerald-500" },
-        { name: "Claude-Web (Anthropic)", blocked: 10, color: "from-amber-500 to-yellow-500" },
-        { name: "PerplexityBot", blocked: 8, color: "from-violet-500 to-purple-500" }
-    ],
-    sectors: [
-        { name: "Médias / Presse", blocked: 79, verified: true, source: "Press Gazette 2025" },
-        { name: "E-commerce", blocked: 55, verified: false, source: "Estimation Cloudflare" },
-        { name: "Finance / Banque", blocked: 60, verified: false, source: "Estimation sectorielle" },
-        { name: "Santé", blocked: 50, verified: false, source: "Estimation sectorielle" },
-        { name: "Services B2B", blocked: 40, verified: false, source: "Estimation sectorielle" },
-        { name: "Tech / SaaS", blocked: 30, verified: false, source: "Estimation sectorielle" },
-        { name: "Tourisme", blocked: 45, verified: false, source: "Estimation sectorielle" }
+        { name: "GPTBot", company: "OpenAI", blocked: 21 },
+        { name: "Google-Extended", company: "Google", blocked: 18 },
+        { name: "CCBot", company: "Common Crawl", blocked: 15 },
+        { name: "Bytespider", company: "ByteDance", blocked: 12 },
+        { name: "Claude-Web", company: "Anthropic", blocked: 10 },
+        { name: "PerplexityBot", company: "Perplexity", blocked: 8 }
     ],
     cms: [
-        { name: "WordPress (défaut)", gptbot: true, perplexity: true, claude: true, googleExt: true, note: "Autorise tout par défaut" },
-        { name: "WP + Yoast/RankMath", gptbot: "partial", perplexity: true, claude: true, googleExt: "partial", note: "Peut bloquer selon config" },
-        { name: "Shopify", gptbot: false, perplexity: true, claude: true, googleExt: false, note: "Bloque GPTBot par défaut" },
-        { name: "Wix", gptbot: false, perplexity: false, claude: false, googleExt: false, note: "Bloque tous les crawlers IA" },
-        { name: "Squarespace", gptbot: false, perplexity: "partial", claude: true, googleExt: false, note: "Blocage partiel" },
-        { name: "Next.js / Custom", gptbot: true, perplexity: true, claude: true, googleExt: true, note: "Contrôle total" },
-        { name: "Webflow", gptbot: "partial", perplexity: true, claude: true, googleExt: "partial", note: "Variable selon config" }
+        { name: "WordPress", gptbot: true, perplexity: true, claude: true, googleExt: true },
+        { name: "Shopify", gptbot: false, perplexity: true, claude: true, googleExt: false },
+        { name: "Wix", gptbot: false, perplexity: false, claude: false, googleExt: false },
+        { name: "Squarespace", gptbot: false, perplexity: "partial", claude: true, googleExt: false },
+        { name: "Next.js", gptbot: true, perplexity: true, claude: true, googleExt: true },
+        { name: "Webflow", gptbot: "partial", perplexity: true, claude: true, googleExt: "partial" }
     ],
     recommendations: [
-        {
-            title: "Auditez votre robots.txt immédiatement",
-            description: "Vérifiez que GPTBot, PerplexityBot et Claude-Web ne sont pas bloqués. La majorité des sites le font sans le savoir, surtout sur Shopify et Wix.",
-            cta: "Testez gratuitement",
-            link: "/outils/testeur-visibilite-ia",
-            icon: "shield"
-        },
-        {
-            title: "Créez votre fichier llms.txt",
-            description: "Moins de 5% des sites en possèdent un. Il indique aux LLM quelles pages sont les plus importantes. Premier arrivé, premier servi.",
-            cta: "Guide complet llms.txt",
-            link: "/blog/llms-txt-guide-complet",
-            icon: "file-text"
-        },
-        {
-            title: "Implémentez les données structurées JSON-LD",
-            description: "FAQPage, Article, Organization, LocalBusiness, HowTo — ces schemas sont lus directement par les IA pour construire leurs réponses.",
-            cta: "Générateur JSON-LD gratuit",
-            link: "/outils/generateur-schema-json-ld",
-            icon: "code"
-        },
-        {
-            title: "Distinguez crawlers de navigation et d'entraînement",
-            description: "GPTBot-User (navigation) = cite votre site. GPTBot (training) = utilise votre contenu pour entraîner le modèle. Vous pouvez autoriser l'un et bloquer l'autre.",
-            cta: "Générateur robots.txt IA",
-            link: "/outils/generateur-robots-txt",
-            icon: "bot"
-        },
-        {
-            title: "Structurez votre contenu pour la citabilité",
-            description: "Les IA citent les contenus qui répondent directement aux questions en 2-3 phrases, incluent des données chiffrées sourcées et utilisent des tableaux comparatifs.",
-            cta: null,
-            link: null,
-            icon: "target"
-        },
-        {
-            title: "Publiez régulièrement du contenu frais",
-            description: "Perplexity privilégie le contenu récent. Les sites qui publient 1-2 articles par semaine sont cités significativement plus souvent.",
-            cta: null,
-            link: null,
-            icon: "zap"
-        },
-        {
-            title: "Mesurez et itérez",
-            description: "Testez régulièrement votre visibilité. Posez des questions à ChatGPT et Perplexity sur votre domaine d'expertise. Votre site apparaît-il dans les réponses ?",
-            cta: "Tester ma visibilité IA",
-            link: "/outils/testeur-visibilite-ia",
-            icon: "eye"
-        }
+        { title: "Auditez votre robots.txt", description: "Vérifiez que les crawlers IA ne sont pas bloqués.", cta: "Tester gratuitement", link: "/outils/testeur-visibilite-ia", icon: "shield" },
+        { title: "Créez votre llms.txt", description: "Indiquez aux IA vos pages importantes.", cta: "Guide complet", link: "/blog/llms-txt-guide-complet", icon: "file-text" },
+        { title: "Ajoutez du JSON-LD", description: "Les IA extraient ces données directement.", cta: "Générateur gratuit", link: "/outils/generateur-schema-json-ld", icon: "code" },
+        { title: "Distinguez les crawlers", description: "Navigation vs entraînement : autorisez l'un, bloquez l'autre.", cta: "Générateur robots.txt", link: "/outils/generateur-robots-txt", icon: "bot" }
     ]
 };
 
@@ -218,257 +157,219 @@ const STUDY_DATA = {
 // ANIMATIONS
 // ═══════════════════════════════════════════════════════════════════════════════
 
-const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.4, 0.25, 1] } }
+const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
 };
 
-const staggerContainer = {
+const stagger = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.1 } }
+    visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } }
 };
 
-const scaleIn = {
+const scaleUp = {
     hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: [0.25, 0.4, 0.25, 1] } }
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // COMPONENTS
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function AnimatedCounter({ value, suffix = "", prefix = "", duration = 2, decimals = 0 }: {
-    value: number;
-    suffix?: string;
-    prefix?: string;
-    duration?: number;
-    decimals?: number;
-}) {
-    const [displayValue, setDisplayValue] = useState(0);
+function AnimatedNumber({ value, prefix = "", suffix = "", duration = 2 }: { value: number; prefix?: string; suffix?: string; duration?: number }) {
+    const [display, setDisplay] = useState(0);
     const ref = useRef<HTMLSpanElement>(null);
-    const isInView = useInView(ref, { once: true, margin: "-50px" });
+    const inView = useInView(ref, { once: true, margin: "-100px" });
 
     useEffect(() => {
-        if (!isInView) return;
-        let start = 0;
+        if (!inView) return;
         const end = value;
-        const increment = end / (duration * 60);
+        const step = end / (duration * 60);
+        let current = 0;
         const timer = setInterval(() => {
-            start += increment;
-            if (start >= end) {
-                setDisplayValue(end);
-                clearInterval(timer);
-            } else {
-                setDisplayValue(decimals > 0 ? Math.floor(start * Math.pow(10, decimals)) / Math.pow(10, decimals) : Math.floor(start));
-            }
+            current += step;
+            if (current >= end) { setDisplay(end); clearInterval(timer); }
+            else { setDisplay(Math.floor(current * 10) / 10); }
         }, 16);
         return () => clearInterval(timer);
-    }, [isInView, value, duration, decimals]);
+    }, [inView, value, duration]);
 
     return (
-        <span ref={ref} className="font-mono tabular-nums">
-            {prefix}{displayValue.toLocaleString('fr-FR', { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}{suffix}
+        <span ref={ref} className="tabular-nums">
+            {prefix}{display % 1 === 0 ? display : display.toFixed(1)}{suffix}
         </span>
     );
 }
 
-function GlowingOrb({ color, size, position, delay = 0 }: { color: string; size: string; position: string; delay?: number }) {
-    return (
-        <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 2, delay, repeat: Infinity, repeatType: "reverse" }}
-            className={`absolute ${position} ${size} ${color} rounded-full blur-[100px] pointer-events-none`}
-        />
-    );
-}
-
-function HeroStatCard({ stat, index }: { stat: typeof STUDY_DATA.hero.blocking & { value: number; unit?: string; label: string }; index: number }) {
-    const colors = [
-        { bg: "from-red-500/20 to-orange-500/10", border: "border-red-500/30", text: "text-red-400", glow: "shadow-red-500/20" },
-        { bg: "from-violet-500/20 to-purple-500/10", border: "border-violet-500/30", text: "text-violet-400", glow: "shadow-violet-500/20" },
-        { bg: "from-emerald-500/20 to-green-500/10", border: "border-emerald-500/30", text: "text-emerald-400", glow: "shadow-emerald-500/20" },
-        { bg: "from-amber-500/20 to-yellow-500/10", border: "border-amber-500/30", text: "text-amber-400", glow: "shadow-amber-500/20" }
-    ];
-    const color = colors[index % colors.length];
+function HeroStat({ stat, index }: { stat: typeof STUDY_DATA.hero[0]; index: number }) {
+    const colors = {
+        coral: "from-[#FF6B6B] to-[#FF8E53] text-white",
+        teal: "from-[#00C9A7] to-[#00B4D8] text-white",
+        amber: "from-[#FFB347] to-[#FFCC33] text-gray-900",
+        violet: "from-[#667EEA] to-[#764BA2] text-white"
+    };
 
     return (
         <motion.div
-            variants={scaleIn}
-            className={`group relative overflow-hidden rounded-2xl border ${color.border} bg-gradient-to-br ${color.bg} backdrop-blur-xl p-6 hover:scale-[1.02] transition-transform duration-300 shadow-2xl ${color.glow}`}
+            variants={scaleUp}
+            whileHover={{ y: -8, transition: { duration: 0.3 } }}
+            className={`relative group rounded-3xl bg-gradient-to-br ${colors[stat.color as keyof typeof colors]} p-8 shadow-2xl shadow-black/10 cursor-default overflow-hidden`}
         >
-            <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            {/* Decorative circle */}
+            <div className="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-white/10" />
+            <div className="absolute -right-4 -bottom-4 w-20 h-20 rounded-full bg-black/5" />
 
             <div className="relative z-10">
-                <div className="flex items-baseline gap-1 mb-3">
-                    <span className={`text-5xl md:text-6xl font-bold font-mono tracking-tight ${color.text}`}>
-                        <AnimatedCounter
-                            value={Math.abs(stat.value)}
-                            prefix={stat.value < 0 ? "-" : (index === 2 ? "+" : "")}
-                            suffix={stat.unit || "%"}
-                            duration={1.5 + index * 0.3}
-                            decimals={stat.value % 1 !== 0 ? 1 : 0}
-                        />
-                    </span>
+                <div className="text-6xl md:text-7xl font-black tracking-tight mb-3" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+                    <AnimatedNumber value={stat.value} prefix={stat.prefix} suffix={stat.suffix} duration={1.5 + index * 0.2} />
                 </div>
-                <p className="text-white/70 text-sm leading-relaxed mb-4">{stat.label}</p>
-                <a
-                    href={stat.sourceUrl || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-white/40 hover:text-white/60 transition-colors"
-                >
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <p className="text-lg font-medium opacity-90 leading-snug mb-4">{stat.label}</p>
+                <div className="flex items-center gap-2 text-sm opacity-70">
+                    <span className="w-1.5 h-1.5 rounded-full bg-current" />
                     {stat.source}
-                    {stat.sourceUrl && <ExternalLink className="w-3 h-3" />}
-                </a>
+                </div>
             </div>
         </motion.div>
     );
 }
 
-function ConstatCard({ constat }: { constat: typeof STUDY_DATA.constats[0] }) {
-    const iconMap: Record<string, React.ReactNode> = {
-        "search": <Search className="w-5 h-5" />,
-        "sparkles": <Sparkles className="w-5 h-5" />,
-        "users": <Users className="w-5 h-5" />,
-        "trending-up": <TrendingUp className="w-5 h-5" />,
-        "lock": <Lock className="w-5 h-5" />,
-        "file-text": <FileText className="w-5 h-5" />,
-        "code": <Code className="w-5 h-5" />
+function ConstatCard({ constat, index }: { constat: typeof STUDY_DATA.constats[0]; index: number }) {
+    const icons: Record<string, React.ReactNode> = {
+        "search": <Search className="w-6 h-6" />,
+        "sparkles": <Sparkles className="w-6 h-6" />,
+        "users": <Users className="w-6 h-6" />,
+        "trending-up": <TrendingUp className="w-6 h-6" />,
+        "lock": <Lock className="w-6 h-6" />,
+        "file-text": <FileText className="w-6 h-6" />
     };
 
     return (
         <motion.div
-            variants={fadeInUp}
-            className="group relative bg-white/[0.02] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-6 hover:bg-white/[0.04] hover:border-white/[0.1] transition-all duration-300"
+            variants={fadeUp}
+            whileHover={{ y: -4 }}
+            className="group bg-white rounded-3xl p-8 shadow-lg shadow-black/5 border border-gray-100 hover:shadow-xl hover:border-gray-200 transition-all duration-500"
         >
-            <div className="flex items-start justify-between mb-4">
-                <div className="p-2.5 rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 text-accent">
-                    {iconMap[constat.icon]}
-                </div>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-white/30">
-                    #{String(constat.id).padStart(2, '0')}
-                </span>
+            {/* Icon with gradient background */}
+            <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${constat.color} text-white mb-6 shadow-lg`}>
+                {icons[constat.icon]}
             </div>
 
-            <h3 className="font-bold text-white/90 text-lg mb-2">{constat.title}</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+                {constat.title}
+            </h3>
 
             <div className="mb-4">
-                <span className="text-3xl font-mono font-bold bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
+                <span className={`text-5xl font-black bg-gradient-to-r ${constat.color} bg-clip-text text-transparent`} style={{ fontFamily: 'var(--font-space-grotesk)' }}>
                     {constat.stat}
                 </span>
+                <span className="text-gray-500 ml-2">{constat.highlight}</span>
             </div>
 
-            <p className="text-white/50 text-sm leading-relaxed mb-4">{constat.description}</p>
+            <p className="text-gray-600 leading-relaxed mb-4">{constat.description}</p>
 
-            {constat.sourceUrl ? (
-                <a
-                    href={constat.sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-accent/70 hover:text-accent transition-colors"
-                >
-                    {constat.source}
-                    <ExternalLink className="w-3 h-3" />
-                </a>
-            ) : (
-                <span className="inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-white/30">
-                    {constat.source}
-                </span>
-            )}
+            <div className="flex items-center gap-2 text-sm text-gray-400">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                {constat.source}
+            </div>
         </motion.div>
     );
 }
 
-function CrawlerBar({ crawler, index }: { crawler: typeof STUDY_DATA.crawlers[0]; index: number }) {
+function CrawlerChart() {
     const ref = useRef<HTMLDivElement>(null);
-    const isInView = useInView(ref, { once: true, margin: "-50px" });
+    const inView = useInView(ref, { once: true, margin: "-50px" });
 
     return (
-        <motion.div
-            ref={ref}
-            variants={fadeInUp}
-            className="group"
-        >
-            <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-white/70 font-medium">{crawler.name}</span>
-                <span className="font-mono text-white font-bold">{crawler.blocked}%</span>
-            </div>
-            <div className="h-3 bg-white/[0.04] rounded-full overflow-hidden">
+        <div ref={ref} className="space-y-5">
+            {STUDY_DATA.crawlers.map((crawler, i) => (
                 <motion.div
-                    initial={{ width: 0 }}
-                    animate={isInView ? { width: `${crawler.blocked}%` } : { width: 0 }}
-                    transition={{ duration: 1, delay: index * 0.1, ease: [0.25, 0.4, 0.25, 1] }}
-                    className={`h-full rounded-full bg-gradient-to-r ${crawler.color}`}
-                />
-            </div>
-        </motion.div>
+                    key={crawler.name}
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={inView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ delay: i * 0.1, duration: 0.6 }}
+                    className="group"
+                >
+                    <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center gap-3">
+                            <span className="font-bold text-gray-900">{crawler.name}</span>
+                            <span className="text-sm text-gray-400">{crawler.company}</span>
+                        </div>
+                        <span className="text-2xl font-black text-gray-900" style={{ fontFamily: 'var(--font-space-grotesk)' }}>{crawler.blocked}%</span>
+                    </div>
+                    <div className="h-4 bg-gray-100 rounded-full overflow-hidden">
+                        <motion.div
+                            initial={{ width: 0 }}
+                            animate={inView ? { width: `${crawler.blocked * 4}%` } : {}}
+                            transition={{ delay: i * 0.1 + 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                            className="h-full rounded-full bg-gradient-to-r from-rose-500 via-orange-400 to-amber-400"
+                        />
+                    </div>
+                </motion.div>
+            ))}
+        </div>
     );
 }
 
-function CMSCompatibilityTable() {
-    const getStatusIcon = (status: boolean | string) => {
-        if (status === true) return <CheckCircle2 className="w-4 h-4 text-emerald-400" />;
-        if (status === false) return <ShieldOff className="w-4 h-4 text-red-400" />;
-        return <AlertTriangle className="w-4 h-4 text-amber-400" />;
+function CMSTable() {
+    const getIcon = (status: boolean | string) => {
+        if (status === true) return <CheckCircle2 className="w-5 h-5 text-emerald-500" />;
+        if (status === false) return <ShieldOff className="w-5 h-5 text-rose-500" />;
+        return <AlertTriangle className="w-5 h-5 text-amber-500" />;
     };
 
-    const getStatusBg = (status: boolean | string) => {
-        if (status === true) return "bg-emerald-500/10";
-        if (status === false) return "bg-red-500/10";
-        return "bg-amber-500/10";
+    const getBg = (status: boolean | string) => {
+        if (status === true) return "bg-emerald-50";
+        if (status === false) return "bg-rose-50";
+        return "bg-amber-50";
     };
 
     return (
-        <div className="overflow-x-auto">
+        <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
             <table className="w-full">
                 <thead>
-                    <tr className="border-b border-white/[0.06]">
-                        <th className="text-left py-4 px-4 text-[10px] font-mono uppercase tracking-wider text-white/40">CMS</th>
-                        <th className="text-center py-4 px-3 text-[10px] font-mono uppercase tracking-wider text-white/40">GPTBot</th>
-                        <th className="text-center py-4 px-3 text-[10px] font-mono uppercase tracking-wider text-white/40">Perplexity</th>
-                        <th className="text-center py-4 px-3 text-[10px] font-mono uppercase tracking-wider text-white/40">Claude</th>
-                        <th className="text-center py-4 px-3 text-[10px] font-mono uppercase tracking-wider text-white/40">Google-Ext</th>
-                        <th className="text-left py-4 px-4 text-[10px] font-mono uppercase tracking-wider text-white/40">Notes</th>
+                    <tr className="bg-gray-50 border-b border-gray-200">
+                        <th className="text-left py-4 px-6 font-bold text-gray-900">CMS</th>
+                        <th className="text-center py-4 px-4 font-medium text-gray-600 text-sm">GPTBot</th>
+                        <th className="text-center py-4 px-4 font-medium text-gray-600 text-sm">Perplexity</th>
+                        <th className="text-center py-4 px-4 font-medium text-gray-600 text-sm">Claude</th>
+                        <th className="text-center py-4 px-4 font-medium text-gray-600 text-sm">Google-Ext</th>
                     </tr>
                 </thead>
                 <tbody>
                     {STUDY_DATA.cms.map((cms, i) => (
                         <motion.tr
                             key={cms.name}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.05 }}
-                            className={`border-b border-white/[0.04] hover:bg-white/[0.02] transition-colors ${cms.name === "Next.js / Custom" ? "bg-emerald-500/[0.03]" : ""}`}
+                            className={`border-b border-gray-100 last:border-0 ${cms.name === "Next.js" ? "bg-emerald-50/50" : "hover:bg-gray-50"} transition-colors`}
                         >
-                            <td className="py-4 px-4">
-                                <span className={`font-medium ${cms.name === "Next.js / Custom" ? "text-emerald-400" : "text-white/80"}`}>
+                            <td className="py-4 px-6">
+                                <span className={`font-bold ${cms.name === "Next.js" ? "text-emerald-600" : "text-gray-900"}`}>
                                     {cms.name}
                                 </span>
                             </td>
-                            <td className="text-center py-4 px-3">
-                                <div className={`inline-flex p-1.5 rounded-lg ${getStatusBg(cms.gptbot)}`}>
-                                    {getStatusIcon(cms.gptbot)}
+                            <td className="text-center py-4 px-4">
+                                <div className={`inline-flex p-2 rounded-xl ${getBg(cms.gptbot)}`}>
+                                    {getIcon(cms.gptbot)}
                                 </div>
                             </td>
-                            <td className="text-center py-4 px-3">
-                                <div className={`inline-flex p-1.5 rounded-lg ${getStatusBg(cms.perplexity)}`}>
-                                    {getStatusIcon(cms.perplexity)}
+                            <td className="text-center py-4 px-4">
+                                <div className={`inline-flex p-2 rounded-xl ${getBg(cms.perplexity)}`}>
+                                    {getIcon(cms.perplexity)}
                                 </div>
                             </td>
-                            <td className="text-center py-4 px-3">
-                                <div className={`inline-flex p-1.5 rounded-lg ${getStatusBg(cms.claude)}`}>
-                                    {getStatusIcon(cms.claude)}
+                            <td className="text-center py-4 px-4">
+                                <div className={`inline-flex p-2 rounded-xl ${getBg(cms.claude)}`}>
+                                    {getIcon(cms.claude)}
                                 </div>
                             </td>
-                            <td className="text-center py-4 px-3">
-                                <div className={`inline-flex p-1.5 rounded-lg ${getStatusBg(cms.googleExt)}`}>
-                                    {getStatusIcon(cms.googleExt)}
+                            <td className="text-center py-4 px-4">
+                                <div className={`inline-flex p-2 rounded-xl ${getBg(cms.googleExt)}`}>
+                                    {getIcon(cms.googleExt)}
                                 </div>
                             </td>
-                            <td className="py-4 px-4 text-xs text-white/50">{cms.note}</td>
                         </motion.tr>
                     ))}
                 </tbody>
@@ -478,146 +379,122 @@ function CMSCompatibilityTable() {
 }
 
 function RecommendationCard({ rec, index }: { rec: typeof STUDY_DATA.recommendations[0]; index: number }) {
-    const iconMap: Record<string, React.ReactNode> = {
-        "shield": <Shield className="w-5 h-5" />,
-        "file-text": <FileText className="w-5 h-5" />,
-        "code": <Code className="w-5 h-5" />,
-        "bot": <Bot className="w-5 h-5" />,
-        "target": <Target className="w-5 h-5" />,
-        "zap": <Zap className="w-5 h-5" />,
-        "eye": <Eye className="w-5 h-5" />
+    const icons: Record<string, React.ReactNode> = {
+        "shield": <Shield className="w-6 h-6" />,
+        "file-text": <FileText className="w-6 h-6" />,
+        "code": <Code className="w-6 h-6" />,
+        "bot": <Bot className="w-6 h-6" />
     };
+
+    const colors = [
+        "from-rose-500 to-orange-400",
+        "from-violet-500 to-purple-400",
+        "from-cyan-500 to-blue-400",
+        "from-emerald-500 to-teal-400"
+    ];
 
     return (
         <motion.div
-            variants={fadeInUp}
-            className="group relative bg-white/[0.02] border border-white/[0.06] rounded-2xl p-6 hover:bg-white/[0.04] hover:border-accent/30 transition-all duration-300"
+            variants={fadeUp}
+            whileHover={{ scale: 1.02 }}
+            className="group bg-white rounded-3xl p-8 shadow-lg shadow-black/5 border border-gray-100 hover:shadow-xl transition-all duration-500"
         >
-            <div className="flex items-start gap-4">
-                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 text-accent shrink-0">
-                    <span className="font-mono font-bold text-sm">{index + 1}</span>
+            <div className="flex items-start gap-6">
+                <div className={`flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br ${colors[index]} text-white shadow-lg shrink-0`}>
+                    <span className="text-2xl font-black" style={{ fontFamily: 'var(--font-space-grotesk)' }}>{index + 1}</span>
                 </div>
                 <div className="flex-1">
-                    <h3 className="font-bold text-white/90 mb-2">{rec.title}</h3>
-                    <p className="text-white/50 text-sm leading-relaxed mb-4">{rec.description}</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'var(--font-space-grotesk)' }}>{rec.title}</h3>
+                    <p className="text-gray-600 mb-4">{rec.description}</p>
                     {rec.cta && rec.link && (
                         <Link
                             href={rec.link}
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium hover:bg-accent/20 transition-colors"
+                            className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r ${colors[index]} text-white font-medium text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:gap-3`}
                         >
                             {rec.cta}
                             <ArrowRight className="w-4 h-4" />
                         </Link>
                     )}
                 </div>
-                <div className="hidden md:block p-2 rounded-lg bg-white/[0.02] text-white/30">
-                    {iconMap[rec.icon]}
-                </div>
             </div>
         </motion.div>
     );
 }
 
-function DataStreamLine() {
-    const [offset, setOffset] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setOffset(prev => (prev + 1) % 200);
-        }, 30);
-        return () => clearInterval(interval);
-    }, []);
-
-    const dataPoints = "▪ GPTBOT:21% ▪ PERPLEXITY:8% ▪ CLAUDE:10% ▪ GOOGLE-EXT:18% ▪ CHATGPT:2.5B/jour ▪ ZERO-CLICK:60% ▪ AI-OVERVIEW:48% ▪ GEN-Z:28% ▪ GEO:+40% ▪ LLMS.TXT:<5% ▪ ";
-
-    return (
-        <div className="overflow-hidden py-3 border-y border-white/[0.04] bg-white/[0.01]">
-            <div
-                className="whitespace-nowrap font-mono text-[10px] text-white/15 tracking-[0.2em]"
-                style={{ transform: `translateX(-${offset}px)` }}
-            >
-                {dataPoints.repeat(6)}
-            </div>
-        </div>
-    );
-}
-
 // ═══════════════════════════════════════════════════════════════════════════════
-// MAIN COMPONENT
+// MAIN
 // ═══════════════════════════════════════════════════════════════════════════════
 
 export default function BarometreClientContent() {
     return (
-        <main className="bg-[#060708] min-h-screen text-white selection:bg-accent/30 antialiased overflow-x-hidden">
+        <main className="bg-[#FAFAFA] min-h-screen text-gray-900 antialiased overflow-x-hidden">
 
             {/* ════════════════════════════════════════════════════════════════════ */}
-            {/* DATA STREAM */}
+            {/* HERO */}
             {/* ════════════════════════════════════════════════════════════════════ */}
-            <DataStreamLine />
-
-            {/* ════════════════════════════════════════════════════════════════════ */}
-            {/* HERO SECTION */}
-            {/* ════════════════════════════════════════════════════════════════════ */}
-            <section className="relative pt-20 pb-24 overflow-hidden">
-                {/* Orbes lumineux */}
-                <GlowingOrb color="bg-violet-600/30" size="w-[600px] h-[600px]" position="top-[-200px] left-[-200px]" delay={0} />
-                <GlowingOrb color="bg-accent/20" size="w-[400px] h-[400px]" position="top-[100px] right-[-100px]" delay={0.5} />
-                <GlowingOrb color="bg-emerald-600/20" size="w-[300px] h-[300px]" position="bottom-[-100px] left-[30%]" delay={1} />
+            <section className="relative pt-12 pb-24 overflow-hidden">
+                {/* Background decorations */}
+                <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                    <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-br from-rose-200/40 to-orange-200/40 blur-3xl" />
+                    <div className="absolute bottom-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-gradient-to-br from-cyan-200/40 to-blue-200/40 blur-3xl" />
+                    <div className="absolute top-[30%] left-[40%] w-[300px] h-[300px] rounded-full bg-gradient-to-br from-violet-200/30 to-purple-200/30 blur-3xl" />
+                </div>
 
                 <div className="container mx-auto px-4 relative z-10">
                     <motion.div
                         initial="hidden"
                         animate="visible"
-                        variants={staggerContainer}
+                        variants={stagger}
                         className="max-w-6xl mx-auto"
                     >
                         {/* Badge */}
-                        <motion.div variants={fadeInUp} className="flex flex-wrap items-center gap-3 mb-8">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/30 bg-accent/10 backdrop-blur-xl">
-                                <Sparkles className="w-4 h-4 text-accent" />
-                                <span className="text-xs font-medium text-accent">Étude Exclusive Mars 2026</span>
+                        <motion.div variants={fadeUp} className="flex flex-wrap items-center justify-center gap-3 mb-10">
+                            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-orange-400 text-white shadow-lg">
+                                <Sparkles className="w-4 h-4" />
+                                <span className="font-bold text-sm">Étude Exclusive</span>
                             </div>
-                            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/[0.08] bg-white/[0.02]">
-                                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                                <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-400">Sources Vérifiées</span>
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm">
+                                <span className="text-sm text-gray-500">Mars 2026</span>
+                            </div>
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200">
+                                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                                <span className="text-sm text-emerald-700 font-medium">Sources vérifiées</span>
                             </div>
                         </motion.div>
 
                         {/* Title */}
-                        <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold leading-[1.05] tracking-tight mb-6">
-                            <span className="bg-gradient-to-r from-white via-white to-white/60 bg-clip-text text-transparent">Baromètre de la</span><br />
-                            <span className="bg-gradient-to-r from-accent via-amber-400 to-accent bg-clip-text text-transparent">Visibilité IA</span><br />
-                            <span className="text-white/50">des Sites Français</span>
-                        </motion.h1>
+                        <motion.div variants={fadeUp} className="text-center mb-8">
+                            <h1 className="text-5xl md:text-6xl lg:text-8xl font-black leading-[0.95] tracking-tight mb-6" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+                                <span className="text-gray-900">Baromètre</span><br />
+                                <span className="bg-gradient-to-r from-rose-500 via-orange-400 to-amber-400 bg-clip-text text-transparent">Visibilité IA</span><br />
+                                <span className="text-gray-400">France 2026</span>
+                            </h1>
+                        </motion.div>
 
                         {/* Subtitle */}
-                        <motion.p variants={fadeInUp} className="text-lg md:text-xl text-white/60 max-w-2xl mb-12 leading-relaxed">
-                            Analyse complète de la compatibilité des sites web français avec
-                            <span className="text-white/90 font-medium"> ChatGPT</span>,
-                            <span className="text-white/90 font-medium"> Perplexity</span>,
-                            <span className="text-white/90 font-medium"> Claude</span> et les moteurs de recherche IA.
+                        <motion.p variants={fadeUp} className="text-xl md:text-2xl text-gray-600 text-center max-w-3xl mx-auto mb-16 leading-relaxed">
+                            Votre site est-il visible par <span className="font-bold text-gray-900">ChatGPT</span>, <span className="font-bold text-gray-900">Perplexity</span> et <span className="font-bold text-gray-900">Claude</span> ?
+                            <br />Découvrez les chiffres clés et nos recommandations.
                         </motion.p>
 
                         {/* Hero Stats Grid */}
-                        <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-                            <HeroStatCard stat={STUDY_DATA.hero.blocking} index={0} />
-                            <HeroStatCard stat={STUDY_DATA.hero.chatgptPrompts} index={1} />
-                            <HeroStatCard stat={STUDY_DATA.hero.perplexityGrowth} index={2} />
-                            <HeroStatCard stat={STUDY_DATA.hero.gartnerPrediction} index={3} />
+                        <motion.div variants={stagger} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                            {STUDY_DATA.hero.map((stat, i) => (
+                                <HeroStat key={i} stat={stat} index={i} />
+                            ))}
                         </motion.div>
 
                         {/* CTA */}
-                        <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
+                        <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-4">
                             <Link href="/outils/testeur-visibilite-ia">
-                                <Button className="bg-gradient-to-r from-accent to-amber-500 hover:from-accent/90 hover:to-amber-500/90 text-black font-bold rounded-full px-8 py-6 text-sm h-14 shadow-lg shadow-accent/25">
-                                    Tester ma visibilité IA
-                                    <ArrowRight className="ml-2 w-4 h-4" />
+                                <Button className="bg-gradient-to-r from-gray-900 to-gray-700 hover:from-gray-800 hover:to-gray-600 text-white font-bold rounded-full px-8 py-6 text-lg h-auto shadow-xl shadow-gray-900/20 hover:shadow-2xl transition-all duration-300">
+                                    Tester mon site gratuitement
+                                    <ArrowRight className="ml-2 w-5 h-5" />
                                 </Button>
                             </Link>
                             <a href="#constats">
-                                <Button variant="outline" className="border-white/10 text-white/70 hover:bg-white/5 hover:text-white rounded-full px-8 py-6 text-sm font-bold h-14">
-                                    Voir les 7 constats
-                                    <ChevronDown className="ml-2 w-4 h-4" />
+                                <Button variant="outline" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400 rounded-full px-8 py-6 text-lg font-bold h-auto">
+                                    Voir l'étude complète
                                 </Button>
                             </a>
                         </motion.div>
@@ -626,29 +503,62 @@ export default function BarometreClientContent() {
             </section>
 
             {/* ════════════════════════════════════════════════════════════════════ */}
-            {/* 7 CONSTATS */}
+            {/* QUOTE */}
             {/* ════════════════════════════════════════════════════════════════════ */}
-            <section className="py-20 border-t border-white/[0.04]" id="constats">
+            <section className="py-20 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+                <div className="absolute inset-0 opacity-30">
+                    <div className="absolute top-0 left-1/4 w-64 h-64 rounded-full bg-rose-500 blur-[100px]" />
+                    <div className="absolute bottom-0 right-1/4 w-64 h-64 rounded-full bg-cyan-500 blur-[100px]" />
+                </div>
+                <div className="container mx-auto px-4 relative z-10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="max-w-4xl mx-auto text-center"
+                    >
+                        <Quote className="w-16 h-16 text-white/20 mx-auto mb-8" />
+                        <p className="text-3xl md:text-4xl font-bold text-white leading-relaxed mb-8" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+                            D'ici 2026, le volume des moteurs de recherche traditionnels
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-orange-400"> chutera de 25%</span> à cause des chatbots IA.
+                        </p>
+                        <p className="text-lg text-white/60">
+                            — Gartner, Février 2024
+                        </p>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* ════════════════════════════════════════════════════════════════════ */}
+            {/* CONSTATS */}
+            {/* ════════════════════════════════════════════════════════════════════ */}
+            <section className="py-24" id="constats">
                 <div className="container mx-auto px-4">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, margin: "-50px" }}
-                        variants={staggerContainer}
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={stagger}
                         className="max-w-6xl mx-auto"
                     >
-                        <motion.div variants={fadeInUp} className="text-center mb-16">
-                            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/[0.08] bg-white/[0.02] mb-4">
-                                <BarChart3 className="w-4 h-4 text-accent" />
-                                <span className="text-[10px] font-mono uppercase tracking-wider text-white/50">Section 01</span>
-                            </span>
-                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white/90 mb-4">Les 7 Constats Clés</h2>
-                            <p className="text-white/50 max-w-xl mx-auto">Chaque donnée est sourcée et vérifiable. Survolez les sources pour plus de détails.</p>
+                        {/* Section Header */}
+                        <motion.div variants={fadeUp} className="text-center mb-16">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 text-violet-700 font-medium text-sm mb-6">
+                                <BarChart3 className="w-4 h-4" />
+                                6 constats clés
+                            </div>
+                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+                                Ce que disent les données
+                            </h2>
+                            <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+                                Chaque chiffre est sourcé et vérifiable. L'IA transforme la recherche en profondeur.
+                            </p>
                         </motion.div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {STUDY_DATA.constats.map((constat) => (
-                                <ConstatCard key={constat.id} constat={constat} />
+                        {/* Constats Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {STUDY_DATA.constats.map((constat, i) => (
+                                <ConstatCard key={constat.id} constat={constat} index={i} />
                             ))}
                         </div>
                     </motion.div>
@@ -656,67 +566,39 @@ export default function BarometreClientContent() {
             </section>
 
             {/* ════════════════════════════════════════════════════════════════════ */}
-            {/* CRAWLERS BLOQUÉS */}
+            {/* CRAWLERS */}
             {/* ════════════════════════════════════════════════════════════════════ */}
-            <section className="py-20 border-t border-white/[0.04] bg-gradient-to-b from-transparent via-red-500/[0.02] to-transparent">
+            <section className="py-24 bg-white">
                 <div className="container mx-auto px-4">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, margin: "-50px" }}
-                        variants={staggerContainer}
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={stagger}
                         className="max-w-5xl mx-auto"
                     >
-                        <motion.div variants={fadeInUp} className="mb-12">
-                            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/[0.08] bg-white/[0.02] mb-4">
-                                <Lock className="w-4 h-4 text-red-400" />
-                                <span className="text-[10px] font-mono uppercase tracking-wider text-white/50">Section 02</span>
-                            </span>
-                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white/90 mb-4">Crawlers IA les plus bloqués</h2>
-                            <p className="text-white/50 max-w-xl">Pourcentage des 1000 premiers sites mondiaux bloquant chaque crawler.</p>
-                        </motion.div>
-
-                        <div className="grid lg:grid-cols-2 gap-12">
-                            {/* Barres */}
-                            <div className="space-y-6">
-                                {STUDY_DATA.crawlers.map((crawler, i) => (
-                                    <CrawlerBar key={crawler.name} crawler={crawler} index={i} />
-                                ))}
-                                <motion.p variants={fadeInUp} className="text-[10px] font-mono text-white/30 pt-4 border-t border-white/[0.04]">
-                                    Source : Cloudflare « From Googlebot to GPTBot » (2025), Paul Calvano (2025)
-                                </motion.p>
-                            </div>
-
-                            {/* Secteurs */}
-                            <motion.div variants={fadeInUp} className="bg-white/[0.02] border border-white/[0.06] rounded-2xl p-6">
-                                <h3 className="font-bold text-white/90 mb-6 flex items-center gap-2">
-                                    <PieChart className="w-5 h-5 text-accent" />
-                                    Taux de blocage par secteur
-                                </h3>
-                                <div className="space-y-4">
-                                    {STUDY_DATA.sectors.map((sector) => (
-                                        <div key={sector.name} className="flex items-center justify-between py-2 border-b border-white/[0.04] last:border-0">
-                                            <div className="flex items-center gap-2">
-                                                <span className="text-sm text-white/70">{sector.name}</span>
-                                                {sector.verified && (
-                                                    <CheckCircle2 className="w-3 h-3 text-emerald-400" />
-                                                )}
-                                            </div>
-                                            <div className="flex items-center gap-3">
-                                                <div className="w-24 h-2 bg-white/[0.04] rounded-full overflow-hidden">
-                                                    <div
-                                                        className={`h-full rounded-full ${sector.blocked > 60 ? 'bg-gradient-to-r from-red-500 to-red-400' : sector.blocked > 40 ? 'bg-gradient-to-r from-amber-500 to-amber-400' : 'bg-gradient-to-r from-emerald-500 to-emerald-400'}`}
-                                                        style={{ width: `${sector.blocked}%` }}
-                                                    />
-                                                </div>
-                                                <span className="font-mono text-white font-bold text-sm w-12 text-right">{sector.blocked}%</span>
-                                            </div>
-                                        </div>
-                                    ))}
+                        <div className="grid lg:grid-cols-2 gap-16 items-center">
+                            {/* Left: Content */}
+                            <motion.div variants={fadeUp}>
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-100 text-rose-700 font-medium text-sm mb-6">
+                                    <Lock className="w-4 h-4" />
+                                    Crawlers IA bloqués
                                 </div>
-                                <p className="text-[10px] font-mono text-white/30 mt-6 pt-4 border-t border-white/[0.04]">
-                                    Le chiffre médias (79%) est documenté par Press Gazette 2025. Les autres sont des estimations.
+                                <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+                                    Qui bloque quoi ?
+                                </h2>
+                                <p className="text-xl text-gray-500 mb-8 leading-relaxed">
+                                    Pourcentage des 1000 premiers sites mondiaux qui bloquent chaque crawler IA dans leur robots.txt.
                                 </p>
+                                <div className="flex items-center gap-3 text-sm text-gray-400 mb-8">
+                                    <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                                    Source : Cloudflare "From Googlebot to GPTBot" (2025)
+                                </div>
+                            </motion.div>
+
+                            {/* Right: Chart */}
+                            <motion.div variants={fadeUp} className="bg-gray-50 rounded-3xl p-8">
+                                <CrawlerChart />
                             </motion.div>
                         </div>
                     </motion.div>
@@ -724,59 +606,67 @@ export default function BarometreClientContent() {
             </section>
 
             {/* ════════════════════════════════════════════════════════════════════ */}
-            {/* COMPATIBILITÉ CMS */}
+            {/* CMS COMPATIBILITY */}
             {/* ════════════════════════════════════════════════════════════════════ */}
-            <section className="py-20 border-t border-white/[0.04]">
+            <section className="py-24">
                 <div className="container mx-auto px-4">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, margin: "-50px" }}
-                        variants={staggerContainer}
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={stagger}
                         className="max-w-5xl mx-auto"
                     >
-                        <motion.div variants={fadeInUp} className="mb-12">
-                            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/[0.08] bg-white/[0.02] mb-4">
-                                <FileCode className="w-4 h-4 text-violet-400" />
-                                <span className="text-[10px] font-mono uppercase tracking-wider text-white/50">Section 03</span>
-                            </span>
-                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white/90 mb-4">Compatibilité IA par CMS</h2>
-                            <p className="text-white/50 max-w-xl">Configuration par défaut du robots.txt de chaque plateforme. Next.js offre un contrôle total.</p>
+                        <motion.div variants={fadeUp} className="text-center mb-12">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-100 text-cyan-700 font-medium text-sm mb-6">
+                                <FileCode className="w-4 h-4" />
+                                Compatibilité CMS
+                            </div>
+                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+                                Votre CMS bloque-t-il les IA ?
+                            </h2>
+                            <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+                                Configuration par défaut du robots.txt. <span className="text-emerald-600 font-bold">Next.js</span> offre un contrôle total.
+                            </p>
                         </motion.div>
 
-                        <motion.div variants={fadeInUp} className="bg-white/[0.02] border border-white/[0.06] rounded-2xl overflow-hidden">
-                            <CMSCompatibilityTable />
+                        <motion.div variants={fadeUp}>
+                            <CMSTable />
                         </motion.div>
 
-                        <motion.p variants={fadeInUp} className="text-[10px] font-mono text-white/30 mt-4 text-center">
-                            Source : Analyse IndHack des robots.txt par défaut de chaque CMS (mars 2026)
+                        <motion.p variants={fadeUp} className="text-center text-gray-400 text-sm mt-6">
+                            Source : Analyse IndHack des robots.txt par défaut (mars 2026)
                         </motion.p>
                     </motion.div>
                 </div>
             </section>
 
             {/* ════════════════════════════════════════════════════════════════════ */}
-            {/* RECOMMANDATIONS */}
+            {/* RECOMMENDATIONS */}
             {/* ════════════════════════════════════════════════════════════════════ */}
-            <section className="py-20 border-t border-white/[0.04] bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent">
+            <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
                 <div className="container mx-auto px-4">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, margin: "-50px" }}
-                        variants={staggerContainer}
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={stagger}
                         className="max-w-4xl mx-auto"
                     >
-                        <motion.div variants={fadeInUp} className="text-center mb-12">
-                            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent/30 bg-accent/10 mb-4">
-                                <Lightbulb className="w-4 h-4 text-accent" />
-                                <span className="text-[10px] font-mono uppercase tracking-wider text-accent">Section 04</span>
-                            </span>
-                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white/90 mb-4">Nos 7 Recommandations</h2>
-                            <p className="text-white/50 max-w-xl mx-auto">Actions concrètes pour optimiser votre visibilité dans les réponses IA.</p>
+                        <motion.div variants={fadeUp} className="text-center mb-16">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 text-amber-700 font-medium text-sm mb-6">
+                                <Lightbulb className="w-4 h-4" />
+                                Passez à l'action
+                            </div>
+                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+                                4 actions immédiates
+                            </h2>
+                            <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+                                Optimisez votre visibilité IA dès aujourd'hui avec ces recommandations concrètes.
+                            </p>
                         </motion.div>
 
-                        <div className="space-y-4">
+                        <div className="space-y-6">
                             {STUDY_DATA.recommendations.map((rec, i) => (
                                 <RecommendationCard key={rec.title} rec={rec} index={i} />
                             ))}
@@ -786,91 +676,57 @@ export default function BarometreClientContent() {
             </section>
 
             {/* ════════════════════════════════════════════════════════════════════ */}
-            {/* MÉTHODOLOGIE */}
+            {/* SOURCES */}
             {/* ════════════════════════════════════════════════════════════════════ */}
-            <section className="py-20 border-t border-white/[0.04]">
+            <section className="py-24 bg-white">
                 <div className="container mx-auto px-4">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, margin: "-50px" }}
-                        variants={staggerContainer}
+                        viewport={{ once: true }}
+                        variants={stagger}
                         className="max-w-4xl mx-auto"
                     >
-                        <motion.div variants={fadeInUp} className="mb-10">
-                            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 mb-4">
-                                <Database className="w-4 h-4 text-emerald-400" />
-                                <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-400">Méthodologie</span>
-                            </span>
-                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white/90 mb-4">Sources et Références</h2>
+                        <motion.div variants={fadeUp} className="text-center mb-12">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 text-gray-700 font-medium text-sm mb-6">
+                                <BookOpen className="w-4 h-4" />
+                                Méthodologie
+                            </div>
+                            <h2 className="text-3xl md:text-4xl font-black text-gray-900" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+                                Sources vérifiées
+                            </h2>
                         </motion.div>
 
-                        <motion.div variants={fadeInUp} className="bg-white/[0.02] border border-white/[0.06] rounded-2xl p-8">
-                            <div className="flex items-center gap-3 mb-6">
-                                <BookOpen className="w-5 h-5 text-white/50" />
-                                <h3 className="font-bold text-white/90">Sources externes vérifiées</h3>
-                            </div>
-
-                            <div className="grid md:grid-cols-2 gap-6 text-sm">
-                                <div className="space-y-4">
-                                    <div className="p-4 bg-white/[0.02] rounded-xl border border-white/[0.04]">
-                                        <p className="font-mono text-accent text-xs mb-1">ChatGPT Prompts</p>
-                                        <p className="text-white/70">2,5 milliards/jour</p>
-                                        <a href="https://techcrunch.com/2025/07/21/chatgpt-users-send-2-5-billion-prompts-a-day/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-white/40 hover:text-white/60 flex items-center gap-1 mt-2">
-                                            TechCrunch (juillet 2025) <ExternalLink className="w-3 h-3" />
-                                        </a>
+                        <motion.div variants={fadeUp} className="grid md:grid-cols-2 gap-4">
+                            {[
+                                { label: "ChatGPT Prompts", value: "2,5 Mrd/jour", source: "TechCrunch juillet 2025", url: "https://techcrunch.com" },
+                                { label: "Prédiction Gartner", value: "-25%", source: "Gartner Newsroom fév. 2024", url: "https://gartner.com" },
+                                { label: "Zero-Click Searches", value: "58-60%", source: "Semrush 2025", url: "https://semrush.com" },
+                                { label: "Perplexity Growth", value: "+800%", source: "DemandSage 2026", url: "https://demandsage.com" },
+                                { label: "Médias bloquant IA", value: "79%", source: "Press Gazette 2025", url: "https://pressgazette.co.uk" },
+                                { label: "GEO Optimization", value: "+30-40%", source: "Princeton KDD 2024", url: "https://arxiv.org" }
+                            ].map((item, i) => (
+                                <a
+                                    key={i}
+                                    href={item.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center justify-between p-5 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors"
+                                >
+                                    <div>
+                                        <p className="font-bold text-gray-900">{item.label}</p>
+                                        <p className="text-sm text-gray-500">{item.source}</p>
                                     </div>
-                                    <div className="p-4 bg-white/[0.02] rounded-xl border border-white/[0.04]">
-                                        <p className="font-mono text-accent text-xs mb-1">Prédiction Gartner</p>
-                                        <p className="text-white/70">-25% volume recherche d'ici 2026</p>
-                                        <a href="https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents" target="_blank" rel="noopener noreferrer" className="text-[10px] text-white/40 hover:text-white/60 flex items-center gap-1 mt-2">
-                                            Gartner Newsroom (fév. 2024) <ExternalLink className="w-3 h-3" />
-                                        </a>
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-2xl font-black text-gray-900" style={{ fontFamily: 'var(--font-space-grotesk)' }}>{item.value}</span>
+                                        <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors" />
                                     </div>
-                                    <div className="p-4 bg-white/[0.02] rounded-xl border border-white/[0.04]">
-                                        <p className="font-mono text-accent text-xs mb-1">Zero-Click Searches</p>
-                                        <p className="text-white/70">58-60% des recherches Google</p>
-                                        <a href="https://www.semrush.com/blog/zero-click-searches/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-white/40 hover:text-white/60 flex items-center gap-1 mt-2">
-                                            Semrush (2025) <ExternalLink className="w-3 h-3" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="space-y-4">
-                                    <div className="p-4 bg-white/[0.02] rounded-xl border border-white/[0.04]">
-                                        <p className="font-mono text-accent text-xs mb-1">Perplexity Growth</p>
-                                        <p className="text-white/70">+800% en 12 mois, 45M utilisateurs</p>
-                                        <a href="https://www.demandsage.com/perplexity-ai-statistics/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-white/40 hover:text-white/60 flex items-center gap-1 mt-2">
-                                            DemandSage (2026) <ExternalLink className="w-3 h-3" />
-                                        </a>
-                                    </div>
-                                    <div className="p-4 bg-white/[0.02] rounded-xl border border-white/[0.04]">
-                                        <p className="font-mono text-accent text-xs mb-1">Blocage Crawlers IA</p>
-                                        <p className="text-white/70">79% des sites médias</p>
-                                        <a href="https://blog.cloudflare.com/from-googlebot-to-gptbot-whos-crawling-your-site-in-2025/" target="_blank" rel="noopener noreferrer" className="text-[10px] text-white/40 hover:text-white/60 flex items-center gap-1 mt-2">
-                                            Cloudflare & Press Gazette (2025) <ExternalLink className="w-3 h-3" />
-                                        </a>
-                                    </div>
-                                    <div className="p-4 bg-white/[0.02] rounded-xl border border-white/[0.04]">
-                                        <p className="font-mono text-accent text-xs mb-1">GEO Optimization</p>
-                                        <p className="text-white/70">+30-40% visibilité IA</p>
-                                        <a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener noreferrer" className="text-[10px] text-white/40 hover:text-white/60 flex items-center gap-1 mt-2">
-                                            Princeton University (KDD 2024) <ExternalLink className="w-3 h-3" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="mt-8 pt-6 border-t border-white/[0.04]">
-                                <p className="text-white/40 text-xs leading-relaxed">
-                                    <strong className="text-white/60">Analyses IndHack :</strong> Le taux d'adoption llms.txt (&lt;5%) est basé sur notre vérification manuelle de 200+ sites francophones.
-                                    La compatibilité CMS est issue de l'analyse des robots.txt par défaut de chaque plateforme.
-                                    Les estimations sectorielles (hors médias) sont des fourchettes basées sur les tendances générales.
-                                </p>
-                            </div>
+                                </a>
+                            ))}
                         </motion.div>
 
-                        <motion.p variants={fadeInUp} className="text-center text-white/40 text-xs mt-6">
-                            Étude libre de citation avec mention : « Baromètre Visibilité IA France 2026, IndHack (indhack.com) »
+                        <motion.p variants={fadeUp} className="text-center text-gray-400 text-sm mt-8">
+                            Étude libre de citation : « Baromètre Visibilité IA France 2026, IndHack (indhack.com) »
                         </motion.p>
                     </motion.div>
                 </div>
@@ -879,40 +735,44 @@ export default function BarometreClientContent() {
             {/* ════════════════════════════════════════════════════════════════════ */}
             {/* CTA FINAL */}
             {/* ════════════════════════════════════════════════════════════════════ */}
-            <section className="py-24 border-t border-white/[0.04] relative overflow-hidden">
-                <GlowingOrb color="bg-accent/30" size="w-[500px] h-[500px]" position="top-[-100px] left-[50%] -translate-x-1/2" delay={0} />
+            <section className="py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+                <div className="absolute inset-0">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-rose-500/20 to-orange-500/20 blur-[120px]" />
+                </div>
 
                 <div className="container mx-auto px-4 relative z-10">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="max-w-2xl mx-auto text-center"
+                        transition={{ duration: 0.8 }}
+                        className="max-w-3xl mx-auto text-center"
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/30 bg-accent/10 backdrop-blur-xl mb-6">
-                            <Bot className="w-4 h-4 text-accent" />
-                            <span className="text-sm font-medium text-accent">Test Gratuit</span>
+                        <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-xl text-white/90 font-medium text-sm mb-8 border border-white/10">
+                            <Bot className="w-4 h-4" />
+                            Test gratuit en 30 secondes
                         </div>
 
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
-                            Votre site est-il visible<br />par les IA ?
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-8 leading-tight" style={{ fontFamily: 'var(--font-space-grotesk)' }}>
+                            Votre site est-il<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-orange-400 to-amber-400">visible par les IA ?</span>
                         </h2>
 
-                        <p className="text-white/50 mb-10 text-lg leading-relaxed">
-                            Testez gratuitement en 30 secondes. Résultat immédiat, sans inscription.
+                        <p className="text-xl text-white/60 mb-12 leading-relaxed">
+                            Découvrez si ChatGPT, Perplexity et Claude peuvent citer votre site.
+                            <br />Résultat immédiat, sans inscription.
                         </p>
 
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
                             <Link href="/outils/testeur-visibilite-ia">
-                                <Button className="bg-gradient-to-r from-accent to-amber-500 hover:from-accent/90 hover:to-amber-500/90 text-black font-bold rounded-full px-10 py-7 text-base h-16 shadow-lg shadow-accent/25">
-                                    Tester ma visibilité IA
+                                <Button className="bg-gradient-to-r from-rose-500 to-orange-400 hover:from-rose-600 hover:to-orange-500 text-white font-bold rounded-full px-10 py-7 text-lg h-auto shadow-2xl shadow-rose-500/30 hover:shadow-rose-500/40 transition-all duration-300">
+                                    Tester mon site maintenant
                                     <ArrowRight className="ml-2 w-5 h-5" />
                                 </Button>
                             </Link>
                             <Link href="/blog/geo-comment-apparaitre-chatgpt-2026">
-                                <Button variant="outline" className="border-white/10 text-white/70 hover:bg-white/5 hover:text-white rounded-full px-10 py-7 text-base font-bold h-16">
-                                    Guide GEO complet
+                                <Button variant="outline" className="border-2 border-white/20 text-white hover:bg-white/10 rounded-full px-10 py-7 text-lg font-bold h-auto">
+                                    Lire le guide GEO
                                     <ExternalLink className="ml-2 w-4 h-4" />
                                 </Button>
                             </Link>
@@ -920,9 +780,6 @@ export default function BarometreClientContent() {
                     </motion.div>
                 </div>
             </section>
-
-            {/* Footer Data Stream */}
-            <DataStreamLine />
         </main>
     );
 }
