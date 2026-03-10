@@ -11,7 +11,7 @@ interface GlossaryTerm {
     category: "seo-technique" | "seo-contenu" | "seo-local" | "geo-ia" | "analytics" | "strategie";
 }
 
-const CATEGORIES = {
+const CATEGORIES: Record<string, { label: string; color: string }> = {
     "seo-technique": { label: "SEO Technique", color: "bg-blue-500/20 text-blue-400 border-blue-500/30" },
     "seo-contenu": { label: "SEO Contenu", color: "bg-green-500/20 text-green-400 border-green-500/30" },
     "seo-local": { label: "SEO Local", color: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30" },
@@ -33,6 +33,17 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         category: "seo-technique",
     },
     {
+        term: "AIO (AI Overview / AI Overviews)",
+        slug: "aio",
+        definition:
+            "Réponses générées par l'IA de Google affichées en haut des résultats de recherche. Les AI Overviews synthétisent le contenu de plusieurs sources pour répondre directement aux requêtes. Être cité dans une AIO nécessite un contenu E-E-A-T fort et des données structurées.",
+        links: [
+            { label: "SEO vs GEO", href: "/blog/seo-vs-geo-differences" },
+            { label: "Visibilité IA", href: "/outils/testeur-visibilite-ia" },
+        ],
+        category: "geo-ia",
+    },
+    {
         term: "Audit SEO",
         slug: "audit-seo",
         definition:
@@ -50,9 +61,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "backlink",
         definition:
             "Lien hypertexte pointant d'un site externe vers le vôtre. Les backlinks de qualité (provenant de sites à forte autorité et pertinents thématiquement) sont l'un des facteurs de classement les plus importants. On parle aussi de liens entrants ou inbound links.",
-        links: [
-            { label: "Référencement naturel", href: "/referencement-naturel" },
-        ],
+        links: [{ label: "Référencement naturel", href: "/referencement-naturel" }],
         category: "strategie",
     },
     {
@@ -60,9 +69,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "balise-title",
         definition:
             "Élément HTML (<title>) qui définit le titre d'une page web. C'est le texte bleu cliquable affiché dans les résultats Google. La balise title est l'un des facteurs on-page les plus importants pour le SEO : elle doit contenir le mot-clé principal et inciter au clic.",
-        links: [
-            { label: "Checklist SEO 2026", href: "/blog/checklist-seo-2026" },
-        ],
+        links: [{ label: "Checklist SEO 2026", href: "/blog/checklist-seo-2026" }],
         category: "seo-technique",
     },
     {
@@ -70,9 +77,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "balise-meta-description",
         definition:
             "Attribut HTML qui fournit un résumé de la page (max ~155 caractères). Bien qu'elle ne soit pas un facteur de classement direct, une meta description optimisée augmente le taux de clic (CTR) dans les résultats de recherche.",
-        links: [
-            { label: "Checklist SEO complète", href: "/blog/checklist-seo-2026" },
-        ],
+        links: [{ label: "Checklist SEO complète", href: "/blog/checklist-seo-2026" }],
         category: "seo-technique",
     },
     {
@@ -80,9 +85,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "canonical-url",
         definition:
             "Balise HTML (<link rel='canonical'>) qui indique à Google quelle est la version principale d'une page quand plusieurs URLs présentent un contenu similaire. Elle évite les problèmes de contenu dupliqué.",
-        links: [
-            { label: "Refonte sans perte SEO", href: "/blog/refonte-site-web-sans-perdre-seo" },
-        ],
+        links: [{ label: "Refonte sans perte SEO", href: "/blog/refonte-site-web-sans-perdre-seo" }],
         category: "seo-technique",
     },
     {
@@ -97,13 +100,46 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         category: "geo-ia",
     },
     {
+        term: "Cocon Sémantique",
+        slug: "cocon-semantique",
+        definition:
+            "Architecture de contenu où les pages sont organisées en silos thématiques avec un maillage interne optimisé. Le cocon sémantique structure le site autour de pages mères (piliers) et pages filles liées par des liens contextuels.",
+        links: [
+            { label: "Référencement naturel", href: "/referencement-naturel" },
+            { label: "Audit SEO", href: "/audit-seo" },
+        ],
+        category: "seo-contenu",
+    },
+    {
+        term: "Consultant SEO",
+        slug: "consultant-seo",
+        definition:
+            "Professionnel spécialisé dans l'optimisation du référencement naturel. Un consultant SEO audite les sites, élabore des stratégies de visibilité, optimise le contenu et les aspects techniques, et suit les performances. Peut être freelance ou en agence.",
+        links: [
+            { label: "Devenir consultant SEO", href: "/blog/devenir-consultant-seo" },
+            { label: "Salaire consultant SEO", href: "/blog/salaire-consultant-seo" },
+            { label: "Nos services", href: "/consultant-seo" },
+            { label: "Pourquoi un consultant SEO", href: "/blog/pourquoi-consultant-seo" },
+        ],
+        category: "strategie",
+    },
+    {
+        term: "Contenu Citable",
+        slug: "contenu-citable",
+        definition:
+            "Contenu formaté pour être facilement cité par les moteurs IA : statistiques sourcées, définitions claires, listes structurées, études originales. La recherche Princeton GEO (2024) montre que le contenu citable augmente la visibilité IA de 30 à 40%.",
+        links: [
+            { label: "Guide GEO", href: "/blog/geo-comment-apparaitre-chatgpt-2026" },
+            { label: "SEO vs GEO", href: "/blog/seo-vs-geo-differences" },
+        ],
+        category: "geo-ia",
+    },
+    {
         term: "Contenu Dupliqué",
         slug: "contenu-duplique",
         definition:
             "Contenu identique ou très similaire accessible sur plusieurs URLs différentes (interne ou externe). Le contenu dupliqué peut diluer le ranking et empêcher Google d'indexer la bonne version de la page.",
-        links: [
-            { label: "Erreurs SEO coûteuses", href: "/blog/audit-seo-erreurs-qui-coutent-cher" },
-        ],
+        links: [{ label: "Erreurs SEO coûteuses", href: "/blog/audit-seo-erreurs-qui-coutent-cher" }],
         category: "seo-technique",
     },
     {
@@ -122,18 +158,37 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "crawl",
         definition:
             "Processus par lequel les robots des moteurs de recherche (Googlebot, Bingbot, GPTBot) parcourent les pages web en suivant les liens pour découvrir et analyser le contenu. L'optimisation du crawl budget est essentielle pour les gros sites.",
-        links: [
-            { label: "Configurer le robots.txt", href: "/outils/generateur-robots-txt" },
-        ],
+        links: [{ label: "Configurer le robots.txt", href: "/outils/generateur-robots-txt" }],
         category: "seo-technique",
+    },
+    {
+        term: "Création de Site Web",
+        slug: "creation-site-web",
+        definition:
+            "Processus de conception et développement d'un site internet. Pour un bon référencement dès le départ, la création doit intégrer le SEO technique (architecture, vitesse, responsive), le contenu optimisé et les données structurées.",
+        links: [
+            { label: "Créer un site visible", href: "/blog/comment-creer-site-visible-google" },
+            { label: "Prix création 2026", href: "/blog/prix-creation-site-internet-2026" },
+            { label: "Service création", href: "/creation-site-web" },
+        ],
+        category: "strategie",
     },
     {
         term: "CTR (Click-Through Rate)",
         slug: "ctr",
         definition:
             "Taux de clic : pourcentage d'utilisateurs qui cliquent sur votre lien par rapport au nombre total d'affichages dans les résultats de recherche. Un CTR élevé indique que votre title et meta description sont attractifs.",
+        links: [{ label: "Guide SEO complet", href: "/blog/definition-seo-guide-complet" }],
+        category: "analytics",
+    },
+    {
+        term: "Domain Authority (DA) / Authority Score",
+        slug: "domain-authority",
+        definition:
+            "Métrique (échelle 0-100) créée par des outils SEO (Moz, Semrush) pour estimer la capacité d'un domaine à se classer dans Google. Basée sur la qualité et quantité des backlinks. Ce n'est pas un facteur Google officiel, mais un bon indicateur comparatif.",
         links: [
-            { label: "Guide SEO complet", href: "/blog/definition-seo-guide-complet" },
+            { label: "Audit SEO", href: "/audit-seo" },
+            { label: "Référencement naturel", href: "/referencement-naturel" },
         ],
         category: "analytics",
     },
@@ -153,9 +208,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "eeat",
         definition:
             "Experience, Expertise, Authoritativeness, Trustworthiness. Critères utilisés par les Quality Raters de Google pour évaluer la qualité du contenu. Un E-E-A-T fort (auteur identifié, sources citées, expertise démontrée) améliore le classement, surtout pour les sujets YMYL.",
-        links: [
-            { label: "Référencement naturel", href: "/referencement-naturel" },
-        ],
+        links: [{ label: "Référencement naturel", href: "/referencement-naturel" }],
         category: "strategie",
     },
     {
@@ -163,8 +216,17 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "featured-snippet",
         definition:
             "Encadré en position 0 de Google qui affiche directement la réponse à une question. Structurer son contenu avec des listes, tableaux ou définitions claires augmente les chances d'obtenir un featured snippet.",
+        links: [{ label: "Stratégie de contenu", href: "/referencement-naturel" }],
+        category: "strategie",
+    },
+    {
+        term: "Formation SEO",
+        slug: "formation-seo",
+        definition:
+            "Parcours d'apprentissage du référencement naturel. Les formations SEO couvrent généralement les 3 piliers (technique, contenu, popularité), les outils (Search Console, Semrush, Ahrefs) et les tendances actuelles comme le GEO.",
         links: [
-            { label: "Stratégie de contenu", href: "/referencement-naturel" },
+            { label: "Quelle formation choisir", href: "/blog/quelle-formation-seo" },
+            { label: "Devenir consultant SEO", href: "/blog/devenir-consultant-seo" },
         ],
         category: "strategie",
     },
@@ -199,16 +261,14 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "google-search-console",
         definition:
             "Outil gratuit de Google qui permet de surveiller les performances de son site dans les résultats de recherche : impressions, clics, position moyenne, erreurs d'indexation, Core Web Vitals, et soumission de sitemaps.",
-        links: [
-            { label: "Importance de l'audit SEO", href: "/blog/importance-audit-seo" },
-        ],
+        links: [{ label: "Importance de l'audit SEO", href: "/blog/importance-audit-seo" }],
         category: "analytics",
     },
     {
         term: "GPTBot",
         slug: "gptbot",
         definition:
-            "Robot de crawl d'OpenAI (user-agent: GPTBot) qui parcourt le web pour enrichir les modèles GPT et ChatGPT. Autoriser GPTBot via le robots.txt est essentiel pour la visibilité GEO. Environ 21% des 1000 plus gros sites bloquent GPTBot.",
+            "Robot de crawl d'OpenAI (user-agent: GPTBot) qui parcourt le web pour enrichir les modèles GPT et ChatGPT. Autoriser GPTBot via le robots.txt est essentiel pour la visibilité GEO.",
         links: [
             { label: "Configurer le robots.txt", href: "/outils/generateur-robots-txt" },
             { label: "Guide GEO", href: "/blog/geo-comment-apparaitre-chatgpt-2026" },
@@ -220,9 +280,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "indexation",
         definition:
             "Processus par lequel Google ajoute une page web à son index après l'avoir crawlée et analysée. Une page non indexée est invisible dans les résultats de recherche. On peut vérifier l'indexation via la Search Console ou la commande site:mondomaine.com.",
-        links: [
-            { label: "Audit SEO gratuit", href: "/outils/audit-seo-gratuit" },
-        ],
+        links: [{ label: "Audit SEO gratuit", href: "/outils/audit-seo-gratuit" }],
         category: "seo-technique",
     },
     {
@@ -241,9 +299,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "keyword",
         definition:
             "Terme ou expression saisi par les utilisateurs dans un moteur de recherche. La recherche de mots-clés (keyword research) est la base de toute stratégie SEO : identifier les requêtes à cibler en fonction du volume, de la concurrence et de l'intention.",
-        links: [
-            { label: "Extracteur de mots-clés", href: "/outils/extracteur-mots-cles" },
-        ],
+        links: [{ label: "Extracteur de mots-clés", href: "/outils/extracteur-mots-cles" }],
         category: "strategie",
     },
     {
@@ -251,9 +307,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "link-building",
         definition:
             "Stratégie d'acquisition de liens entrants (backlinks) depuis des sites tiers. Techniques : guest posting, linkable assets, broken link building, digital PR. La qualité prime sur la quantité : un lien d'un site d'autorité vaut plus que 100 liens de sites de faible qualité.",
-        links: [
-            { label: "Référencement naturel", href: "/referencement-naturel" },
-        ],
+        links: [{ label: "Référencement naturel", href: "/referencement-naturel" }],
         category: "strategie",
     },
     {
@@ -271,7 +325,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         term: "Local Pack",
         slug: "local-pack",
         definition:
-            "Bloc de 3 résultats locaux affichés dans Google avec une carte, pour les requêtes à intention locale (ex: 'restaurant sushi Nice'). Apparaître dans le Local Pack dépend de la proximité, la pertinence et la proéminence (avis, citations).",
+            "Bloc de 3 résultats locaux affichés dans Google avec une carte, pour les requêtes à intention locale (ex: 'restaurant Nice'). Apparaître dans le Local Pack dépend de la proximité, la pertinence et la proéminence (avis, citations).",
         links: [
             { label: "SEO Local", href: "/seo-local" },
             { label: "Google Maps stratégie", href: "/blog/google-maps-voler-clients-concurrents" },
@@ -316,9 +370,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "nofollow-dofollow",
         definition:
             "Attributs HTML des liens. Un lien dofollow transmet du PageRank (jus SEO), tandis qu'un lien nofollow (rel='nofollow') indique à Google de ne pas suivre ce lien. Les liens sponsorisés doivent porter l'attribut rel='sponsored'.",
-        links: [
-            { label: "Référencement naturel", href: "/referencement-naturel" },
-        ],
+        links: [{ label: "Référencement naturel", href: "/referencement-naturel" }],
         category: "seo-technique",
     },
     {
@@ -326,19 +378,28 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "pagerank",
         definition:
             "Algorithme historique de Google qui mesure l'importance d'une page web en fonction de la qualité et de la quantité des liens qui pointent vers elle. Bien que Google n'affiche plus le PageRank publiquement, le concept reste central dans l'algorithme de classement.",
-        links: [
-            { label: "Guide SEO", href: "/blog/definition-seo-guide-complet" },
-        ],
+        links: [{ label: "Guide SEO", href: "/blog/definition-seo-guide-complet" }],
         category: "seo-technique",
     },
     {
         term: "Perplexity",
         slug: "perplexity",
         definition:
-            "Moteur de recherche IA qui synthétise des réponses à partir de sources web avec des citations. Perplexity a 45 millions d'utilisateurs et une croissance de 800% en 2024. Être cité par Perplexity est un objectif clé du GEO.",
+            "Moteur de recherche IA qui synthétise des réponses à partir de sources web avec des citations. Perplexity a plus de 45 millions d'utilisateurs. Être cité par Perplexity est un objectif clé du GEO.",
         links: [
             { label: "Apparaître sur Perplexity", href: "/blog/apparaitre-sur-perplexity" },
             { label: "Tester sa visibilité IA", href: "/outils/testeur-visibilite-ia" },
+        ],
+        category: "geo-ia",
+    },
+    {
+        term: "PerplexityBot",
+        slug: "perplexitybot",
+        definition:
+            "Robot de crawl de Perplexity AI qui parcourt le web pour alimenter les réponses de son moteur de recherche IA. Autoriser PerplexityBot dans le robots.txt est essentiel pour apparaître dans les citations de Perplexity.",
+        links: [
+            { label: "Apparaître sur Perplexity", href: "/blog/apparaitre-sur-perplexity" },
+            { label: "Générateur robots.txt", href: "/outils/generateur-robots-txt" },
         ],
         category: "geo-ia",
     },
@@ -358,9 +419,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "redirection-301",
         definition:
             "Redirection permanente qui transfère ~90% du PageRank de l'ancienne URL vers la nouvelle. Essentielle lors d'une refonte de site ou d'un changement de domaine pour ne pas perdre le référencement acquis.",
-        links: [
-            { label: "Refonte sans perte SEO", href: "/blog/refonte-site-web-sans-perdre-seo" },
-        ],
+        links: [{ label: "Refonte sans perte SEO", href: "/blog/refonte-site-web-sans-perdre-seo" }],
         category: "seo-technique",
     },
     {
@@ -388,13 +447,22 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         category: "strategie",
     },
     {
+        term: "Refonte de Site Web",
+        slug: "refonte-site-web",
+        definition:
+            "Reconstruction complète ou partielle d'un site web : design, structure, technologie, contenu. La refonte est risquée pour le SEO si les redirections 301, les canonical URLs et la structure ne sont pas planifiées. Peut entraîner une perte de 30-80% du trafic si mal gérée.",
+        links: [
+            { label: "Checklist refonte SEO", href: "/blog/refonte-site-web-sans-perdre-seo" },
+            { label: "Service refonte", href: "/refonte-site-web" },
+        ],
+        category: "strategie",
+    },
+    {
         term: "Rich Snippet",
         slug: "rich-snippet",
         definition:
             "Résultat de recherche enrichi qui affiche des informations supplémentaires (étoiles, prix, FAQ, images) grâce aux données structurées Schema.org. Les rich snippets augmentent significativement le CTR.",
-        links: [
-            { label: "Générateur Schema JSON-LD", href: "/outils/generateur-schema-json-ld" },
-        ],
+        links: [{ label: "Générateur Schema JSON-LD", href: "/outils/generateur-schema-json-ld" }],
         category: "seo-technique",
     },
     {
@@ -413,9 +481,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "sea",
         definition:
             "Publicité payante sur les moteurs de recherche (Google Ads, Bing Ads). Contrairement au SEO qui vise les résultats organiques, le SEA achète des positions via un système d'enchères au CPC (Coût Par Clic).",
-        links: [
-            { label: "SEO vs SEA", href: "/blog/seo-vs-sea-que-choisir" },
-        ],
+        links: [{ label: "SEO vs SEA", href: "/blog/seo-vs-sea-que-choisir" }],
         category: "strategie",
     },
     {
@@ -446,9 +512,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "seo-off-page",
         definition:
             "Actions d'optimisation en dehors du site : acquisition de backlinks, digital PR, mentions de marque, réseaux sociaux. L'objectif est de construire l'autorité et la crédibilité du domaine aux yeux de Google.",
-        links: [
-            { label: "Référencement naturel", href: "/referencement-naturel" },
-        ],
+        links: [{ label: "Référencement naturel", href: "/referencement-naturel" }],
         category: "strategie",
     },
     {
@@ -467,9 +531,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "serp",
         definition:
             "Page de résultats d'un moteur de recherche. La SERP Google comprend : résultats organiques, annonces payantes, featured snippets, Local Pack, People Also Ask, vidéos, images, et Knowledge Panel.",
-        links: [
-            { label: "Guide SEO", href: "/blog/definition-seo-guide-complet" },
-        ],
+        links: [{ label: "Guide SEO", href: "/blog/definition-seo-guide-complet" }],
         category: "analytics",
     },
     {
@@ -477,19 +539,15 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "sitemap-xml",
         definition:
             "Fichier XML listant toutes les URLs d'un site que l'on souhaite voir indexées par les moteurs de recherche. Le sitemap facilite la découverte des pages et doit être soumis via Google Search Console.",
-        links: [
-            { label: "Checklist SEO", href: "/blog/checklist-seo-2026" },
-        ],
+        links: [{ label: "Checklist SEO", href: "/blog/checklist-seo-2026" }],
         category: "seo-technique",
     },
     {
         term: "Taux de Rebond (Bounce Rate)",
         slug: "taux-de-rebond",
         definition:
-            "Pourcentage de visiteurs qui quittent un site après avoir vu une seule page. Un taux de rebond élevé peut indiquer un problème de pertinence, de vitesse ou d'UX. Google utilise les signaux comportementaux comme facteur de classement indirect.",
-        links: [
-            { label: "Performance web", href: "/blog/pourquoi-votre-site-est-lent-performance-web-2026" },
-        ],
+            "Pourcentage de visiteurs qui quittent un site après avoir vu une seule page. Un taux de rebond élevé peut indiquer un problème de pertinence, de vitesse ou d'UX.",
+        links: [{ label: "Performance web", href: "/blog/pourquoi-votre-site-est-lent-performance-web-2026" }],
         category: "analytics",
     },
     {
@@ -497,16 +555,14 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "trust-flow",
         definition:
             "Métriques de Majestic qui évaluent la qualité (Trust Flow) et la quantité (Citation Flow) des backlinks d'un domaine. Un Trust Flow élevé indique des liens de sites de confiance ; un ratio TF/CF proche de 1 est idéal.",
-        links: [
-            { label: "Audit SEO", href: "/audit-seo" },
-        ],
+        links: [{ label: "Audit SEO", href: "/audit-seo" }],
         category: "analytics",
     },
     {
         term: "UX (Expérience Utilisateur)",
         slug: "ux",
         definition:
-            "Qualité de l'expérience vécue par un utilisateur sur un site web. Google intègre des signaux UX dans son algorithme : temps de chargement, facilité de navigation, responsive design, interactivité. Un bon UX améliore le SEO et le taux de conversion.",
+            "Qualité de l'expérience vécue par un utilisateur sur un site web. Google intègre des signaux UX dans son algorithme : temps de chargement, facilité de navigation, responsive design, interactivité.",
         links: [
             { label: "Création de site optimisé", href: "/creation-site-web" },
             { label: "Performance web", href: "/blog/pourquoi-votre-site-est-lent-performance-web-2026" },
@@ -530,133 +586,38 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "ymyl",
         definition:
             "Catégorie de pages Google traitant de sujets pouvant impacter la santé, les finances ou la sécurité des utilisateurs. Google applique des standards E-E-A-T particulièrement stricts sur ces pages : santé, finance, juridique, actualités.",
-        links: [
-            { label: "Guide SEO complet", href: "/blog/definition-seo-guide-complet" },
-        ],
+        links: [{ label: "Guide SEO complet", href: "/blog/definition-seo-guide-complet" }],
         category: "strategie",
     },
     {
         term: "Zero-Click Search",
         slug: "zero-click-search",
         definition:
-            "Recherche Google où l'utilisateur obtient sa réponse directement dans la SERP (featured snippet, Knowledge Panel, Local Pack) sans cliquer sur aucun résultat. En 2025, plus de 60% des recherches Google sont zero-click. Le GEO et les featured snippets sont des stratégies de réponse.",
+            "Recherche Google où l'utilisateur obtient sa réponse directement dans la SERP (featured snippet, Knowledge Panel, Local Pack) sans cliquer sur aucun résultat. Le GEO et les featured snippets sont des stratégies de réponse à ce phénomène.",
         links: [
             { label: "SEO vs GEO", href: "/blog/seo-vs-geo-differences" },
             { label: "Guide GEO", href: "/blog/geo-comment-apparaitre-chatgpt-2026" },
-        ],
-        category: "geo-ia",
-    },
-    {
-        term: "Consultant SEO",
-        slug: "consultant-seo",
-        definition:
-            "Professionnel spécialisé dans l'optimisation du référencement naturel. Un consultant SEO audite les sites, élabore des stratégies de visibilité, optimise le contenu et les aspects techniques, et suit les performances. Peut être freelance ou en agence.",
-        links: [
-            { label: "Devenir consultant SEO", href: "/blog/devenir-consultant-seo" },
-            { label: "Salaire consultant SEO", href: "/blog/salaire-consultant-seo" },
-            { label: "Nos services", href: "/consultant-seo" },
-            { label: "Pourquoi un consultant SEO", href: "/blog/pourquoi-consultant-seo" },
-        ],
-        category: "strategie",
-    },
-    {
-        term: "Refonte de Site Web",
-        slug: "refonte-site-web",
-        definition:
-            "Reconstruction complète ou partielle d'un site web : design, structure, technologie, contenu. La refonte est risquée pour le SEO si les redirections 301, les canonical URLs et la structure ne sont pas planifiées. Peut entraîner une perte de 30-80% du trafic si mal gérée.",
-        links: [
-            { label: "Checklist refonte SEO", href: "/blog/refonte-site-web-sans-perdre-seo" },
-            { label: "Service refonte", href: "/refonte-site-web" },
-        ],
-        category: "strategie",
-    },
-    {
-        term: "Formation SEO",
-        slug: "formation-seo",
-        definition:
-            "Parcours d'apprentissage du référencement naturel. Les formations SEO couvrent généralement les 3 piliers (technique, contenu, popularité), les outils (Search Console, Semrush, Ahrefs) et les tendances actuelles comme le GEO.",
-        links: [
-            { label: "Quelle formation choisir", href: "/blog/quelle-formation-seo" },
-            { label: "Devenir consultant SEO", href: "/blog/devenir-consultant-seo" },
-        ],
-        category: "strategie",
-    },
-    {
-        term: "AIO (AI Overview / AI Overviews)",
-        slug: "aio",
-        definition:
-            "Réponses générées par l'IA de Google affichées en haut des résultats de recherche. Les AI Overviews synthétisent le contenu de plusieurs sources pour répondre directement aux requêtes. Être cité dans une AIO nécessite un contenu E-E-A-T fort et des données structurées.",
-        links: [
-            { label: "SEO vs GEO", href: "/blog/seo-vs-geo-differences" },
-            { label: "Visibilité IA", href: "/outils/testeur-visibilite-ia" },
-        ],
-        category: "geo-ia",
-    },
-    {
-        term: "Création de Site Web",
-        slug: "creation-site-web",
-        definition:
-            "Processus de conception et développement d'un site internet. Pour un bon référencement dès le départ, la création doit intégrer le SEO technique (architecture, vitesse, responsive), le contenu optimisé et les données structurées.",
-        links: [
-            { label: "Créer un site visible", href: "/blog/comment-creer-site-visible-google" },
-            { label: "Prix création 2026", href: "/blog/prix-creation-site-internet-2026" },
-            { label: "Service création", href: "/creation-site-web" },
-        ],
-        category: "strategie",
-    },
-    {
-        term: "Domain Authority (DA) / Authority Score",
-        slug: "domain-authority",
-        definition:
-            "Métrique (échelle 0-100) créée par des outils SEO (Moz, Semrush) pour estimer la capacité d'un domaine à se classer dans Google. Basée sur la qualité et quantité des backlinks. Ce n'est pas un facteur Google officiel, mais un bon indicateur comparatif.",
-        links: [
-            { label: "Audit SEO", href: "/audit-seo" },
-            { label: "Référencement naturel", href: "/referencement-naturel" },
-        ],
-        category: "analytics",
-    },
-    {
-        term: "PerplexityBot",
-        slug: "perplexitybot",
-        definition:
-            "Robot de crawl de Perplexity AI qui parcourt le web pour alimenter les réponses de son moteur de recherche IA. Autoriser PerplexityBot dans le robots.txt est essentiel pour apparaître dans les citations de Perplexity.",
-        links: [
-            { label: "Apparaître sur Perplexity", href: "/blog/apparaitre-sur-perplexity" },
-            { label: "Générateur robots.txt", href: "/outils/generateur-robots-txt" },
-        ],
-        category: "geo-ia",
-    },
-    {
-        term: "Cocon Sémantique",
-        slug: "cocon-semantique",
-        definition:
-            "Architecture de contenu où les pages sont organisées en silos thématiques avec un maillage interne optimisé. Inventé par Laurent Bourrelly, le cocon sémantique structure le site autour de pages mères (piliers) et pages filles liées par des liens contextuels.",
-        links: [
-            { label: "Référencement naturel", href: "/referencement-naturel" },
-            { label: "Audit SEO", href: "/audit-seo" },
-        ],
-        category: "seo-contenu",
-    },
-    {
-        term: "Contenu Citable",
-        slug: "contenu-citable",
-        definition:
-            "Contenu formaté pour être facilement cité par les moteurs IA : statistiques sourcées, définitions claires, listes structurées, études originales. La recherche Princeton GEO (2024) montre que le contenu citable augmente la visibilité IA de 30 à 40%.",
-        links: [
-            { label: "Guide GEO", href: "/blog/geo-comment-apparaitre-chatgpt-2026" },
-            { label: "SEO vs GEO", href: "/blog/seo-vs-geo-differences" },
         ],
         category: "geo-ia",
     },
 ];
 
+// Tri alphabétique unique
+const SORTED_TERMS = [...GLOSSARY_TERMS].sort((a, b) => a.term.localeCompare(b.term, "fr"));
+const ALL_LETTERS = Array.from(new Set(SORTED_TERMS.map((t) => t.term[0].toUpperCase()))).sort((a, b) =>
+    a.localeCompare(b, "fr")
+);
+
 export default function GlossaireSeoClient() {
     const [searchQuery, setSearchQuery] = useState("");
     const [activeCategory, setActiveCategory] = useState<string | null>(null);
-    const [expandedTerms, setExpandedTerms] = useState<Set<string>>(new Set());
+
+    // Filtrage uniquement pour la recherche/catégorie côté client
+    const isFiltering = searchQuery.trim() !== "" || activeCategory !== null;
 
     const filteredTerms = useMemo(() => {
-        let terms = GLOSSARY_TERMS;
+        if (!isFiltering) return SORTED_TERMS;
+        let terms = SORTED_TERMS;
         if (activeCategory) {
             terms = terms.filter((t) => t.category === activeCategory);
         }
@@ -666,25 +627,21 @@ export default function GlossaireSeoClient() {
                 (t) => t.term.toLowerCase().includes(q) || t.definition.toLowerCase().includes(q)
             );
         }
-        return terms.sort((a, b) => a.term.localeCompare(b.term, "fr"));
-    }, [searchQuery, activeCategory]);
+        return terms;
+    }, [searchQuery, activeCategory, isFiltering]);
 
-    const letters = useMemo(() => {
-        const letterSet = new Set(filteredTerms.map((t) => t.term[0].toUpperCase()));
-        return Array.from(letterSet).sort((a, b) => a.localeCompare(b, "fr"));
-    }, [filteredTerms]);
+    const filteredLetters = useMemo(() => {
+        if (!isFiltering) return ALL_LETTERS;
+        return Array.from(new Set(filteredTerms.map((t) => t.term[0].toUpperCase()))).sort((a, b) =>
+            a.localeCompare(b, "fr")
+        );
+    }, [filteredTerms, isFiltering]);
 
-    const toggleTerm = (slug: string) => {
-        setExpandedTerms((prev) => {
-            const next = new Set(prev);
-            if (next.has(slug)) {
-                next.delete(slug);
-            } else {
-                next.add(slug);
-            }
-            return next;
-        });
-    };
+    const hiddenSlugs = useMemo(() => {
+        if (!isFiltering) return new Set<string>();
+        const visibleSlugs = new Set(filteredTerms.map((t) => t.slug));
+        return new Set(SORTED_TERMS.filter((t) => !visibleSlugs.has(t.slug)).map((t) => t.slug));
+    }, [filteredTerms, isFiltering]);
 
     return (
         <div className="min-h-screen bg-[#0a0a0f]">
@@ -697,14 +654,14 @@ export default function GlossaireSeoClient() {
                             +{GLOSSARY_TERMS.length} définitions
                         </span>
                         <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                            Glossaire SEO & GEO
+                            Glossaire SEO &amp; GEO
                         </h1>
                         <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
                             Tous les termes du référencement naturel et de la visibilité IA expliqués simplement.
-                            De A/B Testing à Zero-Click Search.
+                            De Algorithme Google à Zero-Click Search.
                         </p>
 
-                        {/* Search */}
+                        {/* Search — interactif uniquement */}
                         <div className="relative max-w-lg mx-auto mb-8">
                             <input
                                 type="text"
@@ -713,18 +670,8 @@ export default function GlossaireSeoClient() {
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 className="w-full px-5 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50"
                             />
-                            <svg
-                                className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                                />
+                            <svg className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                         </div>
 
@@ -733,9 +680,7 @@ export default function GlossaireSeoClient() {
                             <button
                                 onClick={() => setActiveCategory(null)}
                                 className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-all ${
-                                    !activeCategory
-                                        ? "bg-white/10 text-white border-white/20"
-                                        : "bg-transparent text-gray-500 border-gray-800 hover:border-gray-600"
+                                    !activeCategory ? "bg-white/10 text-white border-white/20" : "bg-transparent text-gray-500 border-gray-800 hover:border-gray-600"
                                 }`}
                             >
                                 Tous ({GLOSSARY_TERMS.length})
@@ -747,9 +692,7 @@ export default function GlossaireSeoClient() {
                                         key={key}
                                         onClick={() => setActiveCategory(activeCategory === key ? null : key)}
                                         className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-all ${
-                                            activeCategory === key
-                                                ? color
-                                                : "bg-transparent text-gray-500 border-gray-800 hover:border-gray-600"
+                                            activeCategory === key ? color : "bg-transparent text-gray-500 border-gray-800 hover:border-gray-600"
                                         }`}
                                     >
                                         {label} ({count})
@@ -765,11 +708,15 @@ export default function GlossaireSeoClient() {
             <div className="sticky top-16 z-30 bg-[#0a0a0f]/95 backdrop-blur-sm border-b border-white/5 py-3">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap justify-center gap-1">
-                        {letters.map((letter) => (
+                        {ALL_LETTERS.map((letter) => (
                             <a
                                 key={letter}
                                 href={`#letter-${letter}`}
-                                className="w-8 h-8 flex items-center justify-center rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-white/10 transition-all"
+                                className={`w-8 h-8 flex items-center justify-center rounded-md text-sm font-medium transition-all ${
+                                    filteredLetters.includes(letter)
+                                        ? "text-gray-400 hover:text-white hover:bg-white/10"
+                                        : "text-gray-700 cursor-default"
+                                }`}
                             >
                                 {letter}
                             </a>
@@ -778,13 +725,14 @@ export default function GlossaireSeoClient() {
                 </div>
             </div>
 
-            {/* Terms */}
+            {/* TERMES — TOUJOURS DANS LE DOM, visibles par Google via <details open> côté SSR */}
             <section className="py-12">
                 <div className="container mx-auto px-4 max-w-4xl">
-                    {letters.map((letter) => {
-                        const termsForLetter = filteredTerms.filter(
-                            (t) => t.term[0].toUpperCase() === letter
-                        );
+                    {ALL_LETTERS.map((letter) => {
+                        const termsForLetter = SORTED_TERMS.filter((t) => t.term[0].toUpperCase() === letter);
+                        const hasVisible = termsForLetter.some((t) => !hiddenSlugs.has(t.slug));
+                        if (isFiltering && !hasVisible) return null;
+
                         return (
                             <div key={letter} id={`letter-${letter}`} className="mb-10">
                                 <h2 className="text-2xl font-bold text-purple-400 mb-4 pl-2 border-l-4 border-purple-500">
@@ -792,79 +740,49 @@ export default function GlossaireSeoClient() {
                                 </h2>
                                 <div className="space-y-3">
                                     {termsForLetter.map((term) => {
-                                        const isExpanded = expandedTerms.has(term.slug);
+                                        if (isFiltering && hiddenSlugs.has(term.slug)) return null;
+
                                         return (
-                                            <div
+                                            <details
                                                 key={term.slug}
                                                 id={term.slug}
-                                                className="bg-white/[0.03] border border-white/5 rounded-xl overflow-hidden hover:border-white/10 transition-all"
+                                                className="group bg-white/[0.03] border border-white/5 rounded-xl overflow-hidden hover:border-white/10 transition-all"
                                             >
-                                                <button
-                                                    onClick={() => toggleTerm(term.slug)}
-                                                    className="w-full flex items-center justify-between px-5 py-4 text-left"
-                                                >
+                                                <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                                                     <div className="flex items-center gap-3">
                                                         <h3 className="text-lg font-semibold text-white">
                                                             {term.term}
                                                         </h3>
-                                                        <span
-                                                            className={`px-2 py-0.5 rounded-md text-xs font-medium border ${
-                                                                CATEGORIES[term.category].color
-                                                            }`}
-                                                        >
+                                                        <span className={`px-2 py-0.5 rounded-md text-xs font-medium border ${CATEGORIES[term.category].color}`}>
                                                             {CATEGORIES[term.category].label}
                                                         </span>
                                                     </div>
-                                                    <svg
-                                                        className={`w-5 h-5 text-gray-500 transform transition-transform ${
-                                                            isExpanded ? "rotate-180" : ""
-                                                        }`}
-                                                        fill="none"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                    >
-                                                        <path
-                                                            strokeLinecap="round"
-                                                            strokeLinejoin="round"
-                                                            strokeWidth={2}
-                                                            d="M19 9l-7 7-7-7"
-                                                        />
+                                                    <svg className="w-5 h-5 text-gray-500 transform transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                                     </svg>
-                                                </button>
-                                                {isExpanded && (
-                                                    <div className="px-5 pb-5 border-t border-white/5 pt-4">
-                                                        <p className="text-gray-300 leading-relaxed mb-4">
-                                                            {term.definition}
-                                                        </p>
-                                                        {term.links && term.links.length > 0 && (
-                                                            <div className="flex flex-wrap gap-2">
-                                                                {term.links.map((link) => (
-                                                                    <Link
-                                                                        key={link.href}
-                                                                        href={link.href}
-                                                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-500/10 text-purple-400 text-sm font-medium border border-purple-500/20 hover:bg-purple-500/20 transition-colors"
-                                                                    >
-                                                                        <svg
-                                                                            className="w-3.5 h-3.5"
-                                                                            fill="none"
-                                                                            viewBox="0 0 24 24"
-                                                                            stroke="currentColor"
-                                                                        >
-                                                                            <path
-                                                                                strokeLinecap="round"
-                                                                                strokeLinejoin="round"
-                                                                                strokeWidth={2}
-                                                                                d="M13 7l5 5m0 0l-5 5m5-5H6"
-                                                                            />
-                                                                        </svg>
-                                                                        {link.label}
-                                                                    </Link>
-                                                                ))}
-                                                            </div>
-                                                        )}
-                                                    </div>
-                                                )}
-                                            </div>
+                                                </summary>
+                                                <div className="px-5 pb-5 border-t border-white/5 pt-4">
+                                                    <p className="text-gray-300 leading-relaxed mb-4">
+                                                        {term.definition}
+                                                    </p>
+                                                    {term.links && term.links.length > 0 && (
+                                                        <div className="flex flex-wrap gap-2">
+                                                            {term.links.map((link) => (
+                                                                <Link
+                                                                    key={link.href}
+                                                                    href={link.href}
+                                                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-500/10 text-purple-400 text-sm font-medium border border-purple-500/20 hover:bg-purple-500/20 transition-colors"
+                                                                >
+                                                                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                                                    </svg>
+                                                                    {link.label}
+                                                                </Link>
+                                                            ))}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </details>
                                         );
                                     })}
                                 </div>
@@ -872,7 +790,7 @@ export default function GlossaireSeoClient() {
                         );
                     })}
 
-                    {filteredTerms.length === 0 && (
+                    {isFiltering && filteredTerms.length === 0 && (
                         <div className="text-center py-16">
                             <p className="text-gray-500 text-lg">
                                 Aucun terme trouvé pour &ldquo;{searchQuery}&rdquo;
