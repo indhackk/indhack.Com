@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 // ═══════════════════════════════════════════════════════════
 // CITATION CHECK API — Vérifie si un site est cité par les IA
-// Priorité : Gemini 2.5 Flash + Google Search (GRATUIT 500 req/jour)
+// Priorité : Tavily AI Search (GRATUIT 1000 req/mois)
 // Fallback : Perplexity Sonar > SERPER Google Results
 // ═══════════════════════════════════════════════════════════
 
@@ -68,70 +68,40 @@ function extractDomain(url: string): string {
 }
 
 // ═══════════════════════════════════════════════════════════
-// MOTEUR 1 : Gemini 2.5 Flash + Google Search Grounding
-// GRATUIT : 500 requêtes/jour sur le free tier
+// MOTEUR 1 : Tavily AI Search
+// GRATUIT : 1000 requêtes/mois, pas de carte bancaire
+// Retourne une réponse IA + sources avec URLs
 // ═══════════════════════════════════════════════════════════
-async function queryGemini(prompt: string): Promise<{ content: string; citations: string[] }> {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) throw new Error("GEMINI_API_KEY not configured");
+async function queryTavily(prompt: string): Promise<{ content: string; citations: string[] }> {
+    const apiKey = process.env.TAVILY_API_KEY;
+    if (!apiKey) throw new Error("TAVILY_API_KEY not configured");
 
-    const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent`,
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "x-goog-api-key": apiKey,
-            },
-            body: JSON.stringify({
-                contents: [
-                    {
-                        parts: [
-                            {
-                                text: `Réponds en français. ${prompt} Cite des sites web spécifiques, des outils et des entreprises avec leurs noms.`,
-                            },
-                        ],
-                    },
-                ],
-                tools: [
-                    {
-                        google_search: {},
-                    },
-                ],
-                generationConfig: {
-                    temperature: 0.1,
-                    maxOutputTokens: 1024,
-                },
-            }),
-        }
-    );
+    const response = await fetch("https://api.tavily.com/search", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+            query: prompt,
+            search_depth: "basic",
+            include_answer: true,
+            max_results: 10,
+            topic: "general",
+        }),
+    });
 
     if (!response.ok) {
         const errorText = await response.text();
-        throw new Error(`Gemini API error ${response.status}: ${errorText}`);
+        throw new Error(`Tavily API error ${response.status}: ${errorText}`);
     }
 
     const data = await response.json();
 
-    // Extraire le texte de la réponse
-    const content = data.candidates?.[0]?.content?.parts
-        ?.map((p: { text?: string }) => p.text || "")
-        .join("") || "";
-
-    // Extraire les sources depuis groundingMetadata
-    const groundingMetadata = data.candidates?.[0]?.groundingMetadata;
-    const citations: string[] = [];
-
-    if (groundingMetadata?.groundingChunks) {
-        for (const chunk of groundingMetadata.groundingChunks) {
-            if (chunk.web?.uri) {
-                citations.push(chunk.web.uri);
-            }
-        }
-    }
-
-    // Aussi vérifier les webSearchQueries pour le contexte
-    // (les sources directes sont dans groundingChunks)
+    const content = data.answer || "";
+    const citations: string[] = (data.results || [])
+        .map((r: { url?: string }) => r.url)
+        .filter(Boolean);
 
     return { content, citations };
 }
@@ -235,16 +205,16 @@ async function querySerper(prompt: string): Promise<{ content: string; citations
 }
 
 // ═══════════════════════════════════════════════════════════
-// DISPATCH : essaie Gemini > Perplexity > SERPER
+// DISPATCH : essaie Tavily > Perplexity > SERPER
 // ═══════════════════════════════════════════════════════════
 async function queryAI(prompt: string): Promise<{ content: string; citations: string[]; engine: string }> {
-    // 1. Gemini (gratuit, 500/jour)
-    if (process.env.GEMINI_API_KEY) {
+    // 1. Tavily (gratuit, 1000/mois)
+    if (process.env.TAVILY_API_KEY) {
         try {
-            const result = await queryGemini(prompt);
-            return { ...result, engine: "Gemini + Google Search" };
+            const result = await queryTavily(prompt);
+            return { ...result, engine: "Tavily AI Search" };
         } catch (err) {
-            console.warn("Gemini failed, trying fallback:", err);
+            console.warn("Tavily failed, trying fallback:", err);
         }
     }
 
@@ -258,13 +228,13 @@ async function queryAI(prompt: string): Promise<{ content: string; citations: st
         }
     }
 
-    // 3. SERPER Google (payant, pas un vrai LLM)
+    // 3. SERPER Google (existant, pas un vrai LLM)
     if (process.env.SERPER_API_KEY) {
         const result = await querySerper(prompt);
         return { ...result, engine: "Google AI Overview" };
     }
 
-    throw new Error("Aucune API configurée (GEMINI_API_KEY, PERPLEXITY_API_KEY ou SERPER_API_KEY)");
+    throw new Error("Aucune API configurée (TAVILY_API_KEY, PERPLEXITY_API_KEY ou SERPER_API_KEY)");
 }
 
 // ═══════════════════════════════════════════════════════════
