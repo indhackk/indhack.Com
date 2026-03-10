@@ -1,20 +1,34 @@
 import { Metadata } from "next";
 import ConsultantIAClient from "./ConsultantIAClient";
+import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
+import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Consultant IA & Automatisation | IndHack",
-    description: "Experts en intégration d'Intelligence Artificielle pour les PME. Automatisation, déploiement d'agents LLM, optimisation des process. Devis gratuit.",
-    keywords: ["consultant IA", "intégration IA", "automatisation entreprise", "intelligence artificielle PME", "agent IA sur mesure", "chatGPT entreprise"],
+    title: "Consultant IA : automatisez votre entreprise avec l'IA – IndHack",
+    description: "Consultante IA à Nice. Audit des tâches répétitives, création d'agents LLM sur mesure (ChatGPT, Claude), automatisation n8n/Make. Audit gratuit + accompagnement.",
+    keywords: ["consultant IA", "consultante IA", "intégration IA entreprise", "automatisation IA", "agent IA sur mesure", "ChatGPT entreprise", "IA PME", "consultant IA France", "consultant IA Nice"],
     alternates: {
         canonical: "https://indhack.com/consultant-ia"
     },
     openGraph: {
-        title: "Consultant IA & Automatisation | IndHack",
-        description: "Intégrez l'IA dans votre entreprise. Gain de temps, automatisation de vos processus et création d'agents sur mesure (ChatGPT, Claude).",
+        title: "Consultant IA : automatisez votre entreprise avec l'IA",
+        description: "Audit gratuit de vos tâches répétitives + création d'agents IA sur mesure. Gagnez 10h/semaine grâce à l'intelligence artificielle.",
         url: "https://indhack.com/consultant-ia",
         type: "website",
         locale: "fr_FR",
         siteName: "IndHack",
+        images: [{
+            url: "https://indhack.com/api/og?title=Consultant%20IA&subtitle=Automatisez%20votre%20entreprise%20avec%20l%27IA",
+            width: 1200,
+            height: 630,
+            alt: "Consultant IA - Automatisation et agents LLM - IndHack"
+        }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Consultant IA : automatisez votre entreprise avec l'IA",
+        description: "Audit gratuit + agents IA sur mesure pour automatiser vos tâches répétitives et gagner en productivité.",
+        images: ["https://indhack.com/api/og?title=Consultant%20IA&subtitle=Automatisation%20%26%20Agents%20LLM"],
     },
     robots: {
         index: true,
@@ -25,26 +39,13 @@ export const metadata: Metadata = {
 export default function ConsultantIAPage() {
     return (
         <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Service",
-                        "serviceType": "Consultant Intelligence Artificielle",
-                        "provider": {
-                            "@type": "Organization",
-                            "name": "IndHack",
-                            "url": "https://indhack.com",
-                        },
-                        "areaServed": {
-                            "@type": "Country",
-                            "name": "France"
-                        },
-                        "description": "Services de consulting IA : intégration de LLMs (Claude, ChatGPT), automatisation des processus métiers, et création d'agents conversationnels sur mesure.",
-                    })
-                }}
+            <ServiceSchema
+                name="Consultant IA - Intégration et automatisation"
+                description="Consultante IA spécialisée en intégration d'intelligence artificielle pour les PME. Audit des tâches répétitives, création d'agents LLM (ChatGPT, Claude), automatisation des processus métiers avec n8n/Make, formation des équipes."
+                url="https://indhack.com/consultant-ia"
+                serviceType="Consultant IA"
             />
+            <Breadcrumb items={getServiceBreadcrumb("Consultant IA", "/consultant-ia")} />
             <ConsultantIAClient />
         </>
     );
