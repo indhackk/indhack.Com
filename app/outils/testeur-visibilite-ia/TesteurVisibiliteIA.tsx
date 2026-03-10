@@ -482,6 +482,37 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                                 Nouveau test
                             </button>
                         </div>
+
+                        {/* Public Report Link + Badge */}
+                        {(() => {
+                            try {
+                                const domain = new URL(result.url).hostname.replace("www.", "");
+                                return (
+                                    <div className="mt-5 pt-5 border-t border-white/5">
+                                        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                                            <Link
+                                                href={`/rapport/${domain}`}
+                                                className="flex items-center gap-2 text-sm text-sauge hover:text-sauge-light transition-colors"
+                                            >
+                                                <ExternalLink className="w-4 h-4" />
+                                                Voir votre rapport public
+                                            </Link>
+                                            <div className="flex items-center gap-3">
+                                                <span className="text-xs text-soft-light/50">Badge embarquable :</span>
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                <img
+                                                    src={`/api/badge/${domain}`}
+                                                    alt={`GEO Score ${result.score}/100`}
+                                                    width={160}
+                                                    height={32}
+                                                    className="rounded"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            } catch { return null; }
+                        })()}
                     </div>
 
                     {/* Priority Actions - Enhanced */}

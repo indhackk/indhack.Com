@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import * as cheerio from "cheerio";
+import { saveRapport, type RapportData } from "@/lib/rapports";
 
 // Rate limiting
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -1273,6 +1274,36 @@ export async function POST(request: NextRequest) {
 
         const result = await analyzeVisibility(url);
         setCachedResult(url, result);
+
+        // Sauvegarder le rapport public
+        try {
+            const domain = new URL(result.url).hostname.replace("www.", "");
+            const rapportData: RapportData = {
+                domain,
+                url: result.url,
+                score: result.score,
+                maxScore: result.maxScore,
+                level: result.level,
+                levelLabel: result.levelLabel,
+                pageTitle: result.pageTitle,
+                wordCount: result.wordCount,
+                responseTime: result.responseTime,
+                hasLlmsTxt: result.hasLlmsTxt,
+                categories: {
+                    accessibilite: { score: result.categories.accessibilite.score, maxScore: result.categories.accessibilite.maxScore },
+                    semantique: { score: result.categories.semantique.score, maxScore: result.categories.semantique.maxScore },
+                    eeat: { score: result.categories.eeat.score, maxScore: result.categories.eeat.maxScore },
+                    format: { score: result.categories.format.score, maxScore: result.categories.format.maxScore },
+                },
+                crawlers: result.crawlers.map((c) => ({ name: c.name, company: c.company, status: c.status })),
+                recommendations: result.recommendations.map((r) => r.text),
+                testedAt: result.timestamp,
+                updatedAt: new Date().toISOString(),
+            };
+            saveRapport(rapportData);
+        } catch (saveErr) {
+            console.warn("Failed to save rapport:", saveErr);
+        }
 
         return NextResponse.json(result);
     } catch (error) {
