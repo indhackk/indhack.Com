@@ -234,7 +234,7 @@ Créez un fichier `public/llms.txt` à la racine de votre projet. Next.js le ser
 
 Vous pouvez aussi créer une route API dynamique dans `app/llms.txt/route.ts` pour générer le contenu automatiquement à partir de vos données.
 
-Cette approche est celle que j'utilise pour mes clients en tant que [consultante SEO](/consultant-seo) et [consultante GEO](/consultant-geo).
+Cette approche est celle que j'utilise pour mes clients en tant que [consultante SEO](/consultant-seo) et [consultante GEO](/consultant-geo). Pour un diagnostic complet de votre site, commencez par un [audit SEO](/audit-seo). Et si vous souhaitez aller plus loin avec l'automatisation IA, découvrez mon [service de consultant IA](/consultant-ia) — l'[audit IA est gratuit](/audit-ia). [Contactez-moi](/contact) pour en discuter.
 
 ## Questions fréquentes
 

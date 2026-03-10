@@ -33,7 +33,7 @@ Le SEO repose sur trois piliers fondamentaux :
 | **Contenu** | Qualité et pertinence du contenu | Mots-clés, intention de recherche, E-E-A-T |
 | **Popularité** | Autorité du domaine via les backlinks | Netlinking, citations, mentions |
 
-Le SEO existe depuis plus de 25 ans et reste le canal d'acquisition le plus rentable à long terme. Un [consultant SEO](/consultant-seo) travaille sur ces trois piliers pour générer du trafic organique durable.
+Le SEO existe depuis plus de 25 ans et reste le canal d'acquisition le plus rentable à long terme. Un [consultant SEO](/consultant-seo) travaille sur ces trois piliers pour générer du trafic organique durable. Le [référencement naturel](/referencement-naturel) est la base de toute stratégie de visibilité en ligne.
 
 Pour un diagnostic complet de votre SEO actuel, utilisez notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit).
 
@@ -170,7 +170,7 @@ Notre [générateur de robots.txt](/outils/generateur-robots-txt) vous permet de
 
 Suivez vos positions Google via la Search Console (SEO) et testez régulièrement votre visibilité IA via notre [testeur](/outils/testeur-visibilite-ia). Ajustez votre stratégie en fonction des résultats.
 
-> **Besoin d'un accompagnement ?** Je propose des audits combinés SEO + GEO pour identifier toutes vos opportunités de visibilité. [Demandez un audit gratuit →](/contact)
+> **Besoin d'un accompagnement ?** Je propose des audits combinés SEO + GEO pour identifier toutes vos opportunités de visibilité. [Demandez un audit gratuit →](/contact). Et pour automatiser vos processus internes, découvrez mon service de [consultant IA](/consultant-ia) avec [audit IA gratuit](/audit-ia).
 
 ## Checklist SEO + GEO
 

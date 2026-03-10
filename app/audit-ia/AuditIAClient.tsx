@@ -498,7 +498,7 @@ export default function AuditIAClient() {
                                     Envie d'aller plus loin après l'audit ?
                                 </h3>
                                 <p className="text-soft leading-relaxed">
-                                    L'audit identifie les opportunités. Mon service de <Link href="/consultant-ia" className="text-emerald-600 font-semibold hover:underline">consultant IA</Link> les concrétise : création d'agents sur mesure, automatisation des workflows, formation de vos équipes et SAV garanti.
+                                    L'audit identifie les opportunités. Mon service de <Link href="/consultant-ia" className="text-emerald-600 font-semibold hover:underline">consultant IA</Link> les concrétise : création d'agents sur mesure, automatisation des workflows, formation de vos équipes et SAV garanti. Je suis aussi <Link href="/consultant-seo" className="text-emerald-600 hover:underline">consultante SEO</Link> et experte en <Link href="/referencement-naturel" className="text-emerald-600 hover:underline">référencement naturel</Link>.
                                 </p>
                             </div>
                             <Link href="/consultant-ia" className="flex-shrink-0">

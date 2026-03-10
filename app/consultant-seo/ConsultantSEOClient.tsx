@@ -602,9 +602,15 @@ export default function ConsultantSEOClient() {
                             </span>
                         </div>
 
-                        <div className="mt-8 pt-6 border-t border-white/10">
+                        <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap justify-center gap-6">
+                            <Link href="/consultant-geo" className="text-soft-light hover:text-sauge transition-colors text-sm">
+                                Voir aussi : <span className="underline">Consultant GEO</span> →
+                            </Link>
+                            <Link href="/consultant-ia" className="text-soft-light hover:text-sauge transition-colors text-sm">
+                                Voir aussi : <span className="underline">Consultant IA</span> →
+                            </Link>
                             <Link href="/outils" className="text-soft-light hover:text-sauge transition-colors text-sm">
-                                Testez d'abord mes <span className="underline">outils SEO gratuits</span> →
+                                Testez mes <span className="underline">outils SEO gratuits</span> →
                             </Link>
                         </div>
                     </motion.div>

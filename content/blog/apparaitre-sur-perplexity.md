@@ -185,7 +185,7 @@ Voici la méthode que j'ai appliquée pour faire citer un client (secteur B2B, S
 
 Le facteur le plus impactant : les **données chiffrées sourcées**. Perplexity les cite quasi systématiquement car elles apportent de la crédibilité à ses réponses.
 
-> **Vous voulez les mêmes résultats ?** [Testez votre visibilité IA gratuitement](/outils/testeur-visibilite-ia), puis [demandez un audit GEO](/contact) pour un accompagnement personnalisé.
+> **Vous voulez les mêmes résultats ?** [Testez votre visibilité IA gratuitement](/outils/testeur-visibilite-ia), puis [demandez un audit GEO](/contact) pour un accompagnement personnalisé. Je suis [consultante SEO](/consultant-seo) et experte en [référencement naturel](/referencement-naturel) — je combine SEO classique et GEO pour maximiser votre visibilité. Et pour automatiser vos processus internes, découvrez mon [service de consultant IA](/consultant-ia) avec [audit IA gratuit](/audit-ia).
 
 ## Mesurer votre visibilité sur Perplexity
 

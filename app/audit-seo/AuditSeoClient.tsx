@@ -574,6 +574,14 @@ export default function AuditSeoClient() {
                             <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
                     </div>
+                    <div className="flex flex-wrap justify-center gap-4 mt-6">
+                        <Link href="/consultant-geo" className="text-soft hover:text-sauge transition-colors text-sm">
+                            Découvrir le <span className="underline">consultant GEO</span> →
+                        </Link>
+                        <Link href="/audit-ia" className="text-soft hover:text-sauge transition-colors text-sm">
+                            Découvrir l'<span className="underline">audit IA gratuit</span> →
+                        </Link>
+                    </div>
                 </div>
             </section>
 

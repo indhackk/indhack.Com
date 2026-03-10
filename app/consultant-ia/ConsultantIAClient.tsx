@@ -397,7 +397,7 @@ export default function ConsultantIAClient() {
                                 En tant que <Link href="/consultant-seo" className="text-sauge hover:underline font-medium">consultante SEO</Link> et experte en <Link href="/consultant-geo" className="text-sauge hover:underline font-medium">optimisation GEO</Link>, j'ai une double compétence rare : je sais comment l'IA fonctionne en interne <em>et</em> comment elle référence les sites en externe. Cette vision 360° me permet de créer des solutions qui non seulement automatisent vos tâches, mais améliorent aussi votre <Link href="/referencement-naturel" className="text-sauge hover:underline font-medium">visibilité en ligne</Link>.
                             </p>
                             <p className="leading-relaxed">
-                                Ma philosophie : <strong>zéro dépendance</strong>. Vous êtes propriétaire de vos outils, de vos données et de vos workflows. Pas d'abonnement piège, pas de boîte noire.
+                                Ma philosophie : <strong>zéro dépendance</strong>. Vous êtes propriétaire de vos outils, de vos données et de vos workflows. Pas d'abonnement piège, pas de boîte noire. Commencez par un <Link href="/audit-ia" className="text-sauge hover:underline font-medium">audit IA gratuit</Link> pour identifier vos tâches automatisables.
                             </p>
                         </div>
                     </motion.div>

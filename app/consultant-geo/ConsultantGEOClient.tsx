@@ -306,8 +306,11 @@ export default function ConsultantGEOClient() {
                             <p className="leading-relaxed mb-6">
                                 Le GEO repose sur 4 piliers : l'accessibilité technique aux crawlers IA, la richesse sémantique du contenu, les signaux E-E-A-T (Expérience, Expertise, Autorité, Fiabilité) et un format de contenu adapté aux LLMs. J'ai détaillé ces piliers dans mon <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="text-sauge hover:underline">guide complet GEO 2026</Link>.
                             </p>
-                            <p className="leading-relaxed">
+                            <p className="leading-relaxed mb-6">
                                 En tant que <strong>consultante GEO et SEO</strong>, je combine expertise technique (Next.js, données structurées, automatisation) et stratégie de contenu pour faire de votre site une référence — sur Google <em>et</em> dans les IA. Mon <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">outil gratuit de test de visibilité IA</Link> est le seul outil GEO gratuit en français.
+                            </p>
+                            <p className="leading-relaxed">
+                                Je propose aussi un accompagnement en <Link href="/consultant-ia" className="text-sauge hover:underline">intégration IA pour les entreprises</Link> (agents sur mesure, automatisation) avec un <Link href="/audit-ia" className="text-sauge hover:underline">audit IA gratuit</Link>. Besoin d'un diagnostic complet ? Commencez par un <Link href="/audit-seo" className="text-sauge hover:underline">audit SEO</Link> pour évaluer votre situation sur Google, ou explorez mes services de <Link href="/referencement-naturel" className="text-sauge hover:underline">référencement naturel</Link>.
                             </p>
                         </div>
                     </motion.div>
