@@ -25,6 +25,7 @@ import {
     Target,
 } from "lucide-react";
 import Link from "next/link";
+import CitationChecker from "./CitationChecker";
 
 interface CrawlerStatus {
     name: string;
@@ -565,6 +566,9 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                             <CategoryCard key={cat} category={cat} data={result.categories[cat]} />
                         ))}
                     </div>
+
+                    {/* Citation Check — Étape 2 */}
+                    <CitationChecker domain={result.url} />
 
                     {/* CTA */}
                     <div className="bg-fond-sombre rounded-2xl p-8 text-center border border-white/10">
