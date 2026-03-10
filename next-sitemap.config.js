@@ -54,6 +54,15 @@ const staticPageDates = {
     '/a-propos': '2026-01-10',
     '/contact': '2026-01-10',
     '/faq': '2026-01-15',
+    '/glossaire-seo': '2026-03-10',
+    '/etudes-de-cas': '2026-02-18',
+    '/etudes/restaurants-cote-azur-google-2026': '2026-03-01',
+    '/partenaires': '2026-02-18',
+    '/consultant-geo': '2026-02-15',
+    '/consultant-ia': '2026-02-15',
+    '/audit-ia': '2026-02-15',
+    '/community-manager': '2026-02-15',
+    '/creation-boutique-en-ligne': '2026-01-20',
 };
 
 /** @type {import('next-sitemap').IConfig} */
@@ -146,12 +155,12 @@ module.exports = {
             '/refonte-site-web'
         ];
 
-        // Pages villes (cocoon SEO) - nouvelles URLs
+        // Pages villes (cocoon SEO) - 19 villes
         const cityPages = [
             '/consultant-seo-nice', '/consultant-seo-cannes', '/consultant-seo-antibes', '/consultant-seo-monaco', '/consultant-seo-sophia-antipolis',
-            '/consultant-seo-marseille', '/consultant-seo-aix-en-provence', '/consultant-seo-paris', '/consultant-seo-lyon', '/consultant-seo-bordeaux',
-            '/consultant-seo-toulouse', '/consultant-seo-rennes', '/consultant-seo-nantes', '/consultant-seo-lille', '/consultant-seo-montpellier',
-            '/consultant-seo-strasbourg', '/consultant-seo-grenoble', '/consultant-seo-boulogne-billancourt'
+            '/consultant-seo-marseille', '/consultant-seo-aix-en-provence', '/consultant-seo-juan-les-pins', '/consultant-seo-paris', '/consultant-seo-lyon',
+            '/consultant-seo-bordeaux', '/consultant-seo-toulouse', '/consultant-seo-rennes', '/consultant-seo-nantes', '/consultant-seo-lille',
+            '/consultant-seo-montpellier', '/consultant-seo-strasbourg', '/consultant-seo-grenoble', '/consultant-seo-boulogne-billancourt'
         ];
 
         // Pages outils SEO (valeur ajoutée forte)
@@ -185,6 +194,12 @@ module.exports = {
         } else if (toolPages.includes(path)) {
             // Outils SEO gratuits - haute priorité
             priority = 0.9;
+            changefreq = 'weekly';
+        } else if (['/consultant-geo', '/consultant-ia', '/audit-ia', '/community-manager', '/creation-boutique-en-ligne'].includes(path)) {
+            priority = 0.8;
+            changefreq = 'weekly';
+        } else if (path === '/glossaire-seo' || path === '/etudes-de-cas' || path === '/partenaires') {
+            priority = 0.8;
             changefreq = 'weekly';
         } else if (path === '/contact' || path === '/a-propos') {
             priority = 0.6;

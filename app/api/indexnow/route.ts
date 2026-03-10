@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import * as fs from 'fs';
-import * as path from 'path';
+import { getAllPosts } from '@/lib/blog';
 
 const SITE_URL = 'https://indhack.com';
-const INDEXNOW_KEY = '2833efbc9758eea39a5f2bc6e3f191cb';
+const INDEXNOW_KEY = '6b2a934952ac4fd0b140867c9eb03ed5';
 
 interface IndexNowResult {
     endpoint: string;
@@ -12,7 +11,7 @@ interface IndexNowResult {
     message?: string;
 }
 
-// Soumettre à IndexNow
+// Soumettre à IndexNow (Bing, Yandex, Seznam — se propagent mutuellement)
 async function submitToIndexNow(urls: string[]): Promise<IndexNowResult[]> {
     const endpoints = [
         { name: 'Bing', url: 'https://www.bing.com/indexnow' },
@@ -34,7 +33,7 @@ async function submitToIndexNow(urls: string[]): Promise<IndexNowResult[]> {
             const response = await fetch(endpoint.url, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/json; charset=utf-8',
                 },
                 body: payload
             });
@@ -90,37 +89,69 @@ async function pingBingSitemap(): Promise<{ success: boolean; status?: number }>
     }
 }
 
-// Extraire URLs du sitemap (version simplifiée pour l'API)
-function getUrlsFromSitemap(): string[] {
-    // URLs principales du site
-    return [
-        'https://indhack.com/',
-        'https://indhack.com/consultant-seo',
-        'https://indhack.com/audit-seo',
-        'https://indhack.com/referencement-naturel',
-        'https://indhack.com/seo-local',
-        'https://indhack.com/creation-site-web',
-        'https://indhack.com/refonte-site-web',
-        'https://indhack.com/creation-boutique-en-ligne',
-        'https://indhack.com/tarifs',
-        'https://indhack.com/etudes-de-cas',
-        'https://indhack.com/contact',
-        'https://indhack.com/a-propos',
-        'https://indhack.com/blog',
-        // Villes principales
-        'https://indhack.com/consultant-seo-nice',
-        'https://indhack.com/consultant-seo-paris',
-        'https://indhack.com/consultant-seo-lyon',
-        'https://indhack.com/consultant-seo-marseille',
-        'https://indhack.com/consultant-seo-cannes',
-        'https://indhack.com/consultant-seo-bordeaux',
-        'https://indhack.com/consultant-seo-toulouse',
-        'https://indhack.com/consultant-seo-montpellier',
-        'https://indhack.com/consultant-seo-nantes',
-        'https://indhack.com/consultant-seo-lille',
-        'https://indhack.com/consultant-seo-strasbourg',
-        'https://indhack.com/consultant-seo-rennes',
+// TOUTES les URLs du site — dynamique avec les articles de blog
+function getAllSiteUrls(): string[] {
+    const blogPosts = getAllPosts();
+
+    const pages = [
+        // Pages prioritaires
+        '/',
+        '/audit-seo',
+        '/consultant-seo',
+        '/referencement-naturel',
+        '/creation-site-web',
+        '/refonte-site-web',
+        '/seo-local',
+        // Services secondaires
+        '/consultant-geo',
+        '/consultant-ia',
+        '/audit-ia',
+        '/community-manager',
+        '/creation-boutique-en-ligne',
+        // 19 pages villes
+        '/consultant-seo-nice',
+        '/consultant-seo-cannes',
+        '/consultant-seo-sophia-antipolis',
+        '/consultant-seo-antibes',
+        '/consultant-seo-monaco',
+        '/consultant-seo-marseille',
+        '/consultant-seo-aix-en-provence',
+        '/consultant-seo-juan-les-pins',
+        '/consultant-seo-paris',
+        '/consultant-seo-lyon',
+        '/consultant-seo-grenoble',
+        '/consultant-seo-bordeaux',
+        '/consultant-seo-toulouse',
+        '/consultant-seo-nantes',
+        '/consultant-seo-rennes',
+        '/consultant-seo-montpellier',
+        '/consultant-seo-strasbourg',
+        '/consultant-seo-lille',
+        '/consultant-seo-boulogne-billancourt',
+        // 8 outils gratuits
+        '/outils',
+        '/outils/audit-seo-gratuit',
+        '/outils/testeur-visibilite-ia',
+        '/outils/generateur-robots-txt',
+        '/outils/generateur-schema-json-ld',
+        '/outils/extracteur-mots-cles',
+        '/outils/simulateur-visibilite-locale',
+        '/outils/gmb-autopilot',
+        // Ressources
+        '/glossaire-seo',
+        '/blog',
+        '/faq',
+        '/a-propos',
+        '/contact',
+        '/etudes-de-cas',
+        '/etudes/restaurants-cote-azur-google-2026',
+        '/partenaires',
     ];
+
+    // Articles de blog dynamiques
+    const blogUrls = blogPosts.filter(p => !p.draft).map(p => `/blog/${p.slug}`);
+
+    return [...pages, ...blogUrls].map(path => `${SITE_URL}${path}`);
 }
 
 export async function GET() {
@@ -141,7 +172,7 @@ export async function GET() {
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json().catch(() => ({}));
-        const urls: string[] = body.urls || getUrlsFromSitemap();
+        const urls: string[] = body.urls || getAllSiteUrls();
         const pingSitemaps = body.pingSitemaps !== false;
 
         const results: {
