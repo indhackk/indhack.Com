@@ -2,6 +2,7 @@
 title: "GEO 2026 : être visible sur ChatGPT, Perplexity et les IA"
 description: "Guide GEO complet : optimisez votre site pour être cité par ChatGPT, Perplexity, Google AI. Checklist et outil gratuit."
 date: "2026-02-17"
+dateModified: "2026-03-11"
 category: "IA & SEO"
 image: "/images/blog/geo-ia-seo.jpg"
 imageAlt: "GEO 2026 : optimisation pour ChatGPT, Perplexity et les moteurs de recherche IA"
@@ -13,7 +14,9 @@ En 2026, vos clients ne tapent plus seulement des mots-clés dans Google. Ils po
 
 La question n'est plus "êtes-vous bien référencé sur Google ?" mais **"êtes-vous cité par les IA quand vos clients potentiels posent une question ?"**
 
-Selon les recherches menées par l'université de Princeton sur le GEO (2023-2024), les techniques d'optimisation pour les moteurs génératifs peuvent améliorer la visibilité dans les réponses IA de **30 à 40%**. Ce n'est pas une projection : c'est une réalité mesurable.
+Les chiffres parlent d'eux-mêmes : selon Gartner, le volume de recherche sur les moteurs classiques diminuera de **25 % d'ici fin 2026** au profit des IA conversationnelles. Webflow rapporte que **8 % de ses nouvelles inscriptions** proviennent du trafic LLM — avec un taux de conversion **6 fois supérieur** à celui de Google Search (Source : Webflow, 2025). Et selon une étude de Yext portant sur **17,2 millions de citations IA**, les pages mises à jour dans les 30 derniers jours reçoivent **3,2 fois plus de citations** que le contenu ancien.
+
+Selon les recherches menées par l'université de Princeton, Georgia Tech et l'Allen Institute for AI (publication KDD 2024), les techniques d'optimisation GEO peuvent améliorer la visibilité dans les réponses IA de **30 à 40 %**. Plus précisément, l'ajout de statistiques sourcées augmente la visibilité IA de **41 %** — c'est le levier unique le plus puissant (Source : Aggarwal et al., « GEO: Generative Engine Optimization », 2024).
 
 Le **GEO (Generative Engine Optimization)** désigne l'optimisation pour les moteurs génératifs. Ce n'est PAS un remplacement du SEO classique, mais un complément devenu indispensable pour toute stratégie de visibilité digitale en 2026.
 
@@ -71,6 +74,10 @@ Les deux disciplines sont **complémentaires**. Un site mal référencé sur Goo
 | Baisse du CTR organique avec AI Overviews | jusqu'à -61% |
 
 Ces chiffres proviennent d'études récentes (Seer Interactive, novembre 2025 pour le CTR ; SparkToro pour les zero-click). Ils ne sont pas des projections : ils décrivent la réalité actuelle.
+
+Fait marquant : selon une analyse de Yext (janvier 2026), **seulement 11 % des domaines cités** apparaissent sur plusieurs plateformes IA simultanément. Autrement dit, être visible sur Perplexity ne garantit pas d'être cité par ChatGPT ou Gemini. Chaque plateforme a ses propres préférences de citation — ce qui rend une stratégie multi-plateforme indispensable.
+
+Autre donnée clé : les citations YouTube dans les réponses IA ont bondi de **18,9 % à 39,2 %** entre août 2024 et décembre 2025 (Source : Yext, étude sur 17,2 millions de citations). Le contenu vidéo devient un levier GEO majeur.
 
 ### Ce que ça change pour votre business
 
@@ -196,6 +203,24 @@ Les IA répondent de plus en plus aux requêtes locales. "Quel restaurant italie
 4. **Citations NAP cohérentes** — Nom, Adresse, Téléphone identiques partout sur le web. Les incohérences créent de la méfiance.
 
 > Pour optimiser votre référencement local, [découvrez nos services SEO local](/seo-local).
+
+## Comment chaque IA choisit ses sources : les préférences par plateforme
+
+Selon l'analyse de Yext sur 17,2 millions de citations IA (janvier 2026), chaque plateforme a des comportements de citation distincts :
+
+| Plateforme IA | Source la plus citée | Préférence principale | Stratégie recommandée |
+|--------------|---------------------|----------------------|----------------------|
+| **ChatGPT** | Wikipedia (7,8 %) | Sources autoritaires, bien établies | Créer du contenu de référence encyclopédique |
+| **Google AI Overviews** | Reddit (2,2 %) | Contenu frais, données structurées | Rafraîchir le contenu toutes les 2-4 semaines |
+| **Perplexity** | Reddit (6,6 %) | Contenu long (3 000+ mots), multi-sources | Articles approfondis avec 10-15 sources citées |
+| **Claude** | Contenu communautaire | Reddit, forums (2-4x plus que les autres IA) | Présence active sur les forums et discussions |
+| **Mistral** | Contenu francophone | Biais linguistique français | Contenu natif en français, terminologie locale |
+
+Ce tableau est crucial pour votre stratégie : optimiser pour une seule IA ne suffit pas. Il faut adapter votre contenu aux préférences de chaque plateforme.
+
+**Exemple concret :** Un article bien positionné sur Perplexity (long, détaillé, sourcé) peut être totalement absent de ChatGPT s'il manque d'autorité de domaine. Inversement, un site très autoritaire sur Google peut être invisible pour Claude s'il n'a aucune présence communautaire.
+
+Pour vérifier votre visibilité sur chaque plateforme, utilisez notre [testeur de visibilité IA](/outils/testeur-visibilite-ia) combiné à des tests manuels sur chaque IA.
 
 ## Checklist GEO — 10 actions à faire aujourd'hui
 

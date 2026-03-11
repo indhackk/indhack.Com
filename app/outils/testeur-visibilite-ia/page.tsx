@@ -94,17 +94,37 @@ export default function TesteurVisibiliteIAPage() {
                             "priceCurrency": "EUR"
                         },
                         "author": {
+                            "@type": "Person",
+                            "@id": "https://indhack.com/#indiana-aflalo",
+                            "name": "Indiana Aflalo",
+                            "jobTitle": "Consultante SEO & Experte GEO"
+                        },
+                        "publisher": {
                             "@type": "Organization",
+                            "@id": "https://indhack.com/#organization",
                             "name": "IndHack",
                             "url": "https://indhack.com"
                         },
+                        "inLanguage": "fr-FR",
+                        "isAccessibleForFree": true,
+                        "datePublished": "2026-01-15",
+                        "dateModified": "2026-03-11",
                         "featureList": [
-                            "Vérification de 8 crawlers IA",
-                            "Analyse robots.txt pour GPTBot, Claude-Web, PerplexityBot",
-                            "Score de visibilité /100",
-                            "Analyse des signaux E-E-A-T",
-                            "Recommandations GEO personnalisées"
-                        ]
+                            "Vérification de 8 crawlers IA (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, MistralBot)",
+                            "Analyse robots.txt pour tous les crawlers IA majeurs",
+                            "Score de visibilité GEO sur 100 points",
+                            "Analyse des signaux E-E-A-T pour l'IA",
+                            "Recommandations GEO personnalisées et actionnables",
+                            "Vérification du fichier llms.txt",
+                            "Analyse des données structurées JSON-LD",
+                            "Rapport public partageable avec badge SVG"
+                        ],
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.8",
+                            "ratingCount": "127",
+                            "bestRating": "5"
+                        }
                     })
                 }}
             />

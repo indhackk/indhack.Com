@@ -22,7 +22,18 @@ const ORGANIZATION_DATA = {
         addressCountry: "FR"
     },
     sameAs: [
-        "https://www.linkedin.com/in/indianaaflalo"
+        "https://www.linkedin.com/in/indianaaflalo",
+        "https://www.malt.fr/profile/indianaaflalo",
+        "https://github.com/indhack"
+    ],
+    knowsAbout: [
+        "Search Engine Optimization",
+        "Generative Engine Optimization",
+        "SEO Local",
+        "AI Search Optimization",
+        "Référencement Naturel",
+        "Création de Site Web",
+        "Google Business Profile Optimization"
     ]
 };
 
@@ -51,11 +62,25 @@ export function OrganizationSchema() {
             ...ORGANIZATION_DATA.address
         },
         "sameAs": ORGANIZATION_DATA.sameAs,
+        "knowsAbout": ORGANIZATION_DATA.knowsAbout,
         "founder": {
             "@type": "Person",
+            "@id": "https://indhack.com/#indiana-aflalo",
             "name": "Indiana Aflalo",
-            "jobTitle": "Consultante SEO",
-            "url": "https://indhack.com/a-propos"
+            "jobTitle": "Consultante SEO & Experte GEO",
+            "url": "https://indhack.com/a-propos",
+            "sameAs": [
+                "https://www.linkedin.com/in/indianaaflalo",
+                "https://www.malt.fr/profile/indianaaflalo"
+            ],
+            "knowsAbout": [
+                "SEO",
+                "GEO",
+                "Generative Engine Optimization",
+                "Local SEO",
+                "AI Search Optimization",
+                "Web Development"
+            ]
         }
     };
 
@@ -311,6 +336,112 @@ export function CityProfessionalServiceSchema({
 }
 
 // ══════════════════════════════════════════════════════════════
+// PERSON SCHEMA (pour les pages À propos, articles blog)
+// ══════════════════════════════════════════════════════════════
+
+export function PersonSchema() {
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://indhack.com/#indiana-aflalo",
+        "name": "Indiana Aflalo",
+        "jobTitle": "Consultante SEO & Experte GEO",
+        "description": "Consultante SEO freelance spécialisée en Generative Engine Optimization (GEO), référencement naturel et SEO local. Basée à Nice, France.",
+        "url": "https://indhack.com/a-propos",
+        "image": ORGANIZATION_DATA.logo,
+        "email": ORGANIZATION_DATA.email,
+        "telephone": ORGANIZATION_DATA.telephone,
+        "worksFor": {
+            "@id": "https://indhack.com/#organization"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/indianaaflalo",
+            "https://www.malt.fr/profile/indianaaflalo"
+        ],
+        "knowsAbout": [
+            "Search Engine Optimization",
+            "Generative Engine Optimization",
+            "Local SEO",
+            "AI Search Optimization",
+            "Google Business Profile",
+            "Technical SEO",
+            "Content Strategy",
+            "Web Development",
+            "Next.js",
+            "Schema.org Markup"
+        ],
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Professional Expertise",
+                "name": "Expert SEO & GEO"
+            }
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nice",
+            "addressRegion": "Provence-Alpes-Côte d'Azur",
+            "addressCountry": "FR"
+        }
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+    );
+}
+
+// ══════════════════════════════════════════════════════════════
+// SOFTWARE APPLICATION SCHEMA (pour les outils)
+// ══════════════════════════════════════════════════════════════
+
+interface SoftwareApplicationSchemaProps {
+    name: string;
+    description: string;
+    url: string;
+    applicationCategory?: string;
+}
+
+export function SoftwareApplicationSchema({
+    name,
+    description,
+    url,
+    applicationCategory = "SEO Tool"
+}: SoftwareApplicationSchemaProps) {
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": name,
+        "description": description,
+        "url": url,
+        "applicationCategory": applicationCategory,
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+        },
+        "creator": {
+            "@id": "https://indhack.com/#indiana-aflalo"
+        },
+        "publisher": {
+            "@id": "https://indhack.com/#organization"
+        },
+        "inLanguage": "fr-FR",
+        "isAccessibleForFree": true
+    };
+
+    return (
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+    );
+}
+
+// ══════════════════════════════════════════════════════════════
 // COMPOSANT COMBINÉ POUR LA HOMEPAGE
 // ══════════════════════════════════════════════════════════════
 
@@ -320,6 +451,7 @@ export function HomepageSchemas() {
             <OrganizationSchema />
             <LocalBusinessSchema />
             <WebSiteSchema />
+            <PersonSchema />
         </>
     );
 }
