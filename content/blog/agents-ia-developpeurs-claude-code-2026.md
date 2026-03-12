@@ -14,7 +14,7 @@ Le 9 mars 2026, Anthropic a lancé une fonctionnalité qui illustre parfaitement
 
 *Ce n'est pas un gadget. C'est un signal fort : les agents IA ne se contentent plus de compléter du code — ils **relisent**, **testent**, **corrigent** et **déploient**.*
 
-En tant que [consultante IA et GEO](/consultant-seo), je travaille quotidiennement avec ces outils. Voici mon analyse complète du marché des agents IA pour développeurs en 2026, avec des comparatifs concrets et des recommandations pour les équipes tech et les décideurs.
+En tant que [consultante spécialisée en intelligence artificielle](/consultant-ia) et en [optimisation pour les moteurs génératifs](/blog/geo-comment-apparaitre-chatgpt-2026), je travaille quotidiennement avec ces outils. Voici mon analyse complète du marché des agents IA pour développeurs en 2026, avec des comparatifs concrets et des recommandations pour les équipes tech et les décideurs.
 
 ## Sommaire
 
