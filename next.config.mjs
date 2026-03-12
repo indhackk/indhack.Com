@@ -373,7 +373,7 @@ const nextConfig = {
             // TOUTES LES AUTRES PAGES — Headers de sécurité stricts
             // ══════════════════════════════════════════════════════════════
             {
-                source: "/(.*)",
+                source: "/((?!widget).*)",
                 headers: [
                     // Protection XSS
                     {
