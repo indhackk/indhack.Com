@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getAllPosts } from '@/lib/blog';
 
 const SITE_URL = 'https://indhack.com';
-const INDEXNOW_KEY = '6b2a934952ac4fd0b140867c9eb03ed5';
+const INDEXNOW_KEY = process.env.INDEXNOW_KEY || '';
 
 interface IndexNowResult {
     endpoint: string;

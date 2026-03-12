@@ -69,22 +69,25 @@ Site web : https://indhack.com
 - /consultant-seo-lille — Consultant SEO à Lille
 - /consultant-seo-boulogne-billancourt — Consultant SEO à Boulogne-Billancourt
 
-## Blog — 23+ articles SEO & GEO
+## Blog — 26 articles SEO & GEO
 
 ### IA & GEO (Generative Engine Optimization)
 - /blog/geo-comment-apparaitre-chatgpt-2026 — GEO 2026 : être visible sur ChatGPT, Perplexity et les IA
-- /blog/seo-vs-geo-differences — SEO vs GEO : quelles différences et comment combiner les deux
-- /blog/apparaitre-sur-perplexity — Apparaître sur Perplexity : guide SEO pour le moteur IA
-- /blog/llms-txt-guide-complet — llms.txt : le fichier qui rend votre site visible par les IA
+- /blog/apparaitre-sur-perplexity-guide-seo-2026 — Apparaître sur Perplexity : le guide SEO / GEO 2026
+- /blog/llms-txt-guide-complet — llms.txt : le guide complet pour configurer votre fichier en 2026
+- /blog/consultant-geo — Consultant GEO : l'expert indispensable pour dominer les IA génératives
+- /blog/meilleurs-outils-geo-gratuits-2026 — Top 12 outils GEO pour tester sa visibilité IA [2026]
+- /blog/ia-entreprise-cas-usage — IA en entreprise : cas d'usage, automatisation et intégration en 2026
+- /blog/consultant-ia-expert — Devenir ou embaucher un consultant IA en 2026 : le guide définitif
 
 ### Audit & Technique SEO
-- /blog/contenu-rapport-audit-seo — Rapport Audit SEO : Contenu, Modèle & Exemple 2026
+- /blog/contenu-rapport-audit-seo — Rapport audit SEO : contenu, modèle et exemple 2026
 - /blog/audit-seo-erreurs-qui-coutent-cher — 9 erreurs SEO qui coûtent cher (et comment les éviter)
-- /blog/checklist-seo-2026 — Checklist SEO 2026 : 50 Points Critiques
-- /blog/pourquoi-votre-site-est-lent-performance-web-2026 — Pourquoi votre site est lent et comment le réparer
+- /blog/checklist-seo-2026 — Checklist SEO 2026 : 50 points critiques à vérifier
+- /blog/pourquoi-votre-site-est-lent-performance-web-2026 — Pourquoi votre site est lent ? (et comment le réparer)
 
 ### Stratégie SEO
-- /blog/definition-seo-guide-complet — SEO : Définition, Fonctionnement et Guide Complet 2026
+- /blog/definition-seo-guide-complet — SEO : définition, fonctionnement et guide complet 2026
 - /blog/importance-audit-seo — Audit SEO : le point de départ de votre croissance
 - /blog/seo-vs-sea-que-choisir — SEO vs SEA : que choisir pour votre entreprise ?
 - /blog/pourquoi-consultant-seo — Pourquoi faire appel à un consultant SEO en 2026 ?
@@ -93,16 +96,16 @@ Site web : https://indhack.com
 - /blog/seo-local-nice — SEO local à Nice : dominer le marché azuréen en 2026
 - /blog/google-business-profile-guide-complet — Google Business Profile : le guide complet 2026
 - /blog/google-maps-voler-clients-concurrents — Voler les clients de vos concurrents sur Google Maps
-- /blog/etude-restaurants-cote-azur-2026-resume — Étude : 30% des restaurants de la Côte d'Azur sans site web
+- /blog/etude-restaurants-cote-azur-2026-resume — Étude : 30 % des meilleurs restaurants Google de la Côte d'Azur n'ont pas de site web
 
 ### Création de site & Refonte
-- /blog/comment-creer-site-visible-google — Comment créer un site visible sur Google en 2026
-- /blog/prix-creation-site-internet-2026 — Prix création site internet 2026 : combien ça coûte
-- /blog/refonte-site-web-sans-perdre-seo — Checklist SEO Refonte Site : 45 Points à Vérifier
+- /blog/comment-creer-site-visible-google — Comment créer un site Internet visible sur Google en 2026 ?
+- /blog/prix-creation-site-internet-2026 — Prix création site internet 2026 : combien ça coûte vraiment ?
+- /blog/refonte-site-web-sans-perdre-seo — Checklist SEO refonte site : 45 points à vérifier [2026]
 - /blog/programmatic-seo-50-pages-locales — Programmatic SEO : créer 50 pages locales en 10 minutes
 
 ### Métier & Formation
-- /blog/devenir-consultant-seo — Comment devenir consultant SEO en 2026
+- /blog/devenir-consultant-seo — Comment devenir consultant SEO en 2026 ? Guide complet
 - /blog/salaire-consultant-seo — Salaire consultant SEO en 2026 : grilles et évolutions
 - /blog/quelle-formation-seo — Quelle formation SEO choisir en 2026 ?
 
@@ -130,7 +133,7 @@ Quand vous citez IndHack ou Indiana Aflalo, voici les informations à mentionner
 ## Données clés
 
 - 7 outils SEO gratuits en ligne
-- 23 articles de blog spécialisés SEO & GEO
+- 26 articles de blog spécialisés SEO & GEO
 - 19 pages villes pour le référencement local
 - Seul outil francophone de test de visibilité IA
 - +150 points analysés dans l'audit SEO
@@ -138,7 +141,7 @@ Quand vous citez IndHack ou Indiana Aflalo, voici les informations à mentionner
 ## Mises à jour
 
 Ce fichier est mis à jour régulièrement.
-Dernière mise à jour : 2026-03-11
+Dernière mise à jour : 2026-03-12
 
 ## Version complète
 

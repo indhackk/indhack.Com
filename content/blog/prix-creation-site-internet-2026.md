@@ -37,7 +37,7 @@ Parler simplement de "site web" c’est comme demander "quel est le prix d'un v�
 - **Application Web Sur-Mesure / SaaS** : 15 000€ - 100 000€+.
   - Tableau de bord complexe, algorithme interne, gestion d’utilisateurs massive. On ne parle plus de CMS, mais d'une application entière, au code écrit ligne par ligne.
 
-Le montant du **tarif site internet** doit dépendre de sa rentabilité à venir. Si le site doit rapporter 1 million d'euros par an, y investir 10 000€ (1%) est une absolue aubaine.
+Le montant du **tarif site internet** doit dépendre de sa rentabilité à venir. Si le site doit rapporter 1 million d'euros par an, y investir 10 000€ (1%) est une absolue aubaine. Besoin d'un devis personnalisé ? [Contactez-moi directement](/contact) pour discuter de votre projet.
 
 ## Pourquoi les devis varient-ils autant d'un prestataire à l'autre ?
 
@@ -126,7 +126,7 @@ Entre 200€ et 2 000€/an selon la technologie. Un site WordPress demande des 
 Oui. Le budget création couvre le "contenant" (le site lui-même). Le budget SEO couvre le "contenu" et la visibilité (rédaction optimisée, netlinking, suivi des positions). Les deux sont complémentaires. Un site sans SEO, c'est une boutique sans enseigne : personne ne vous trouve.
 
 **Un site à 500€ peut-il être bien référencé ?**
-Sur des requêtes très locales et peu concurrentielles, oui. Un plombier dans une petite ville peut se positionner avec un site basique. Mais dès que la concurrence existe (plusieurs acteurs investissent en SEO), un site low-cost ne suffira pas. La qualité technique et la stratégie de contenu font la différence.
+Sur des requêtes très locales et peu concurrentielles, oui. Un plombier dans une petite ville peut se positionner avec un site basique. Mais dès que la concurrence existe (plusieurs acteurs investissent en SEO), un site low-cost ne suffira pas. La qualité technique et la stratégie de contenu font la différence. Pour vérifier la santé technique de votre site, vous pouvez utiliser le [générateur de données structurées](/outils/generateur-schema-json-ld) et vous assurer que vos pages sont correctement balisées.
 
 **Combien de temps prend la création d'un site internet ?**
 Site vitrine simple : 2-4 semaines. Site vitrine avec blog et optimisation SEO : 4-6 semaines. E-commerce jusqu'à 100 produits : 6-10 semaines. E-commerce complexe avec ERP : 3-6 mois. Ces délais incluent les allers-retours de validation. Plus vous êtes réactif sur les retours, plus le projet avance vite.

@@ -50,7 +50,7 @@ Un consultant senior à Paris peut gagner **20% de plus** qu'à Lyon ou Bordeaux
 | Grande entreprise/CAC40 | +15% à +30% |
 | Startup (equity inclus) | Variable |
 
-Les postes **in-house** (directement chez l'annonceur) sont généralement mieux rémunérés que les agences, avec plus de stabilité mais moins de diversité de projets.
+Les postes **in-house** (directement chez l'annonceur) sont généralement mieux rémunérés que les agences, avec plus de stabilité mais moins de diversité de projets. Pour comprendre ce qui pousse les entreprises à recruter ces profils, lisez [pourquoi faire appel à un consultant SEO](/blog/pourquoi-consultant-seo).
 
 ## Salaire consultant SEO freelance
 
@@ -187,7 +187,7 @@ Le **référencement naturel** est un métier bien rémunéré comparé à d'aut
 - **Spécialisez-vous** — SEO technique, data, international... les généralistes plafonnent
 - **Développez des compétences transverses** — Dev, analytics, IA
 - **Construisez votre réputation** — Blog, LinkedIn, conférences
-- **Prouvez vos résultats** avec des études de cas chiffrées
+- **Prouvez vos résultats** avec des études de cas chiffrées — montrez des gains concrets grâce au [testeur de visibilité IA](/outils/testeur-visibilite-ia) ou à l'[audit SEO gratuit](/outils/audit-seo-gratuit)
 - **N'ayez pas peur de changer** d'employeur tous les 2-3 ans
 
 Le statut d'[indépendant spécialisé en référencement](/consultant-seo) offre le meilleur potentiel de revenus, mais au prix de la sécurité. À vous de trouver l'équilibre qui vous convient. Prêt à franchir le pas ? Découvrez [toutes les étapes pour devenir consultant SEO](/blog/devenir-consultant-seo).

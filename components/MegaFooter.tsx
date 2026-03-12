@@ -48,10 +48,12 @@ const CITIES = [
 const RESOURCES = [
     { title: "Outils SEO Gratuits", href: "/outils" },
     { title: "Blog SEO", href: "/blog" },
+    { title: "Glossaire SEO & GEO", href: "/glossaire-seo" },
+    { title: "Checklist GEO", href: "/checklist-geo" },
     { title: "Études de cas", href: "/etudes-de-cas" },
     { title: "FAQ", href: "/faq" },
     { title: "À propos", href: "/a-propos" },
-    { title: "Widget Agence Gratuit 🎁", href: "/partenaires" },
+    { title: "Widget Agence Gratuit", href: "/partenaires" },
 ];
 
 // ══════════════════════════════════════════════════════════════
