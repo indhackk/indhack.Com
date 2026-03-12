@@ -109,7 +109,7 @@ export function Navbar() {
                                 </button>
 
                                 <div
-                                    className={`absolute top-full left-1/2 -translate-x-1/2 w-[850px] bg-white rounded-2xl shadow-2xl border border-line p-6 grid grid-cols-3 gap-3 transition-all duration-200 ${isServicesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
+                                    className={`absolute top-full left-1/2 -translate-x-1/2 w-[min(90vw,850px)] bg-white rounded-2xl shadow-2xl border border-line p-4 lg:p-6 grid grid-cols-2 xl:grid-cols-3 gap-3 transition-all duration-200 ${isServicesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
                                         }`}
                                 >
                                     {SERVICES.map((service) => (
@@ -140,7 +140,7 @@ export function Navbar() {
                                 </button>
 
                                 <div
-                                    className={`absolute top-full left-1/2 -translate-x-1/2 w-[700px] bg-white rounded-2xl shadow-2xl border border-line p-6 transition-all duration-200 ${isToolsOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
+                                    className={`absolute top-full left-1/2 -translate-x-1/2 w-[min(90vw,700px)] bg-white rounded-2xl shadow-2xl border border-line p-4 lg:p-6 transition-all duration-200 ${isToolsOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
                                         }`}
                                 >
                                     <div className="flex items-center justify-between mb-4 pb-3 border-b border-line">
@@ -239,7 +239,7 @@ export function Navbar() {
                                     key={service.href}
                                     href={service.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block text-2xl font-bold text-ink hover:text-sauge transition-colors"
+                                    className="block text-lg sm:text-xl font-bold text-ink hover:text-sauge transition-colors"
                                 >
                                     {service.title}
                                 </Link>
@@ -253,7 +253,7 @@ export function Navbar() {
                                     key={tool.href}
                                     href={tool.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block text-2xl font-bold text-ink hover:text-sauge transition-colors"
+                                    className="block text-lg sm:text-xl font-bold text-ink hover:text-sauge transition-colors"
                                 >
                                     {tool.title}
                                 </Link>
@@ -269,9 +269,9 @@ export function Navbar() {
 
                         <div className="space-y-4">
                             <p className="text-xs font-bold text-soft tracking-widest uppercase">Menu</p>
-                            <Link href="/a-propos" onClick={() => setIsMobileMenuOpen(false)} className="block text-2xl font-bold text-ink">À propos</Link>
-                            <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="block text-2xl font-bold text-ink">Blog</Link>
-                            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-2xl font-bold text-ink">Contact</Link>
+                            <Link href="/a-propos" onClick={() => setIsMobileMenuOpen(false)} className="block text-lg sm:text-xl font-bold text-ink">À propos</Link>
+                            <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="block text-lg sm:text-xl font-bold text-ink">Blog</Link>
+                            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-lg sm:text-xl font-bold text-ink">Contact</Link>
                         </div>
                     </div>
 

@@ -576,8 +576,8 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
             "Capacité d'un site web à être cité, recommandé ou référencé par les moteurs de réponse IA (ChatGPT, Perplexity, Claude, Gemini). La visibilité IA dépend de l'autorité du domaine, la qualité du contenu, les données structurées et l'accessibilité aux crawlers IA.",
         links: [
             { label: "Testeur visibilité IA", href: "/outils/testeur-visibilite-ia" },
-            { label: "Audit IA", href: "/audit-ia" },
-            { label: "SEO vs GEO", href: "/blog/seo-vs-geo-differences" },
+            { label: "Audit SEO gratuit", href: "/outils/audit-seo-gratuit" },
+            { label: "Guide GEO complet", href: "/blog/geo-comment-apparaitre-chatgpt-2026" },
         ],
         category: "geo-ia",
     },

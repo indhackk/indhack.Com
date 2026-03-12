@@ -111,7 +111,7 @@ export function CityCarousel({
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ delay: i * 0.1 }}
-                            className="flex-shrink-0 w-80 snap-start"
+                            className="flex-shrink-0 w-[calc(100vw-3rem)] sm:w-80 snap-start"
                         >
                             <div className="bg-white rounded-3xl border border-gray-100 p-6 h-full hover:shadow-xl hover:border-sauge/30 transition-all">
                                 {/* Region header */}
@@ -157,7 +157,7 @@ export function CityCarousel({
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ delay: 0.6 }}
-                        className="flex-shrink-0 w-80 snap-start"
+                        className="flex-shrink-0 w-[calc(100vw-3rem)] sm:w-80 snap-start"
                     >
                         <div className="bg-ink rounded-3xl p-6 h-full flex flex-col justify-center text-center">
                             <MapPin className="w-12 h-12 text-sauge mx-auto mb-4" />

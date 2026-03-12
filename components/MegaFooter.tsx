@@ -70,7 +70,7 @@ export function MegaFooter() {
         <footer className="bg-ink text-white">
             {/* Main Footer Content - 4 Colonnes */}
             <div className="container mx-auto px-4 py-16">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
 
                     {/* ══════════════════════════════════════════════════════════════
                         COLONNE 1 — Expertises SEO

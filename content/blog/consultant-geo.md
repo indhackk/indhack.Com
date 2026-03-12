@@ -41,7 +41,7 @@ Les IA ont besoin de preuves, de données chiffrées et de liens. Le consultant 
 - Citation et création de données primaires originales (Études de cas, statistiques inédites qui pousseront les IA à vous citer car vous êtes la seule source existante).
 
 ### 3. L'Hybridation avec l'IA en entreprise
-Souvent, le Consultant GEO est aussi **[Consultant IA](/blog/consultant-ia)**, car c'est le même écosystème. Une fois qu'il a rendu votre entreprise visible depuis l'extérieur, il va souvent intégrer de l'**[IA au sein même de votre entreprise](/blog/ia-entreprise)**. Cela passe par le développement d'outils internes, de scripts pour automatiser vos tâches répétitives, ou la création de bots locaux sur vos propres données.
+Souvent, le Consultant GEO est aussi **[Consultant IA](/blog/consultant-ia-expert)**, car c'est le même écosystème. Une fois qu'il a rendu votre entreprise visible depuis l'extérieur, il va souvent intégrer de l'**[IA au sein même de votre entreprise](/blog/ia-entreprise-cas-usage)**. Cela passe par le développement d'outils internes, de scripts pour automatiser vos tâches répétitives, ou la création de bots locaux sur vos propres données.
 
 ## Pourquoi faire appel à un Consultant GEO aujourd'hui ?
 

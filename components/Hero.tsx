@@ -32,7 +32,7 @@ export function Hero() {
                 <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-sauge/10 rounded-full blur-[150px] mix-blend-screen" />
             </div>
 
-            <div className="container mx-auto px-4 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center py-24">
+            <div className="container mx-auto px-4 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center py-24">
                 {/* Value Proposition - NO animation delay on LCP content */}
                 <div
                     className={`text-center lg:text-left space-y-8 transition-all duration-700 ease-out ${isAnimated ? 'opacity-100 translate-x-0' : 'opacity-100'}`}
@@ -76,7 +76,7 @@ export function Hero() {
 
                 {/* 3D Visual - lazy loaded after LCP */}
                 <div
-                    className="h-[400px] lg:h-[650px] w-full relative group cursor-grab active:cursor-grabbing"
+                    className="hidden md:block md:h-[400px] lg:h-[650px] w-full relative group cursor-grab active:cursor-grabbing"
                 >
                     {showBrain && <BrainCanvas />}
 

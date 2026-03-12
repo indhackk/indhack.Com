@@ -35,7 +35,7 @@ Fini les chatbots stupides de 2020 qui proposaient juste un menu "Tapez 1, Tapez
 
 ### 2. Automatisation des tâches répétitives (Make / n8n + IA)
 Chaque e-mail de prospect reçu, chaque PDF de facture, chaque devis peut être "lu" par l'IA de manière automatisée. 
-**[Un consultant en intelligence artificielle](/blog/consultant-ia)** peut vous fabriquer des flux où : Un e-mail client contenant un appel d'offre est scanné par l'IA → qui rédige un brouillon de devis très précis → qui le place dans votre CRM → et vous notifie sur Slack. *C'est la fin du copier-coller*.
+**[Un consultant en intelligence artificielle](/blog/consultant-ia-expert)** peut vous fabriquer des flux où : Un e-mail client contenant un appel d'offre est scanné par l'IA → qui rédige un brouillon de devis très précis → qui le place dans votre CRM → et vous notifie sur Slack. *C'est la fin du copier-coller*.
 
 ### 3. La Base de Connaissances Interne (RAG)
 L'intégration "RAG" (Retrieval-Augmented Generation) est la grande tendance. On "donne à lire" à un GPT privé vos milliards d'octets de documentations techniques, lois internes, et ressources humaines (le tout sécurisé, de façon à ce qu'aucune donnée ne sorte chez OpenAI ou Anthropic). 

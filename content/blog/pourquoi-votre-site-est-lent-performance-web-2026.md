@@ -43,7 +43,7 @@ J'ai testé mon site et celui d'un professionnel du web des Alpes-Maritimes sur 
 ### 🚀 IndHack.com (Next.js sur-mesure)
 *Un site conçu pour dominer Google et convertir.*
 
-![Score Google PageSpeed Insights parfait de 100/100 sur mobile avec Next.js](/images/blog/pagespeed-100.png)
+![Score Google PageSpeed Insights parfait de 100/100 sur mobile avec Next.js](/images/blog/vitesse-performance-blog-seo.jpg)
 
 | Métrique PageSpeed | Score | Statut |
 |:---|:---:|:---:|

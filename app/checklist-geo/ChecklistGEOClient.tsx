@@ -318,10 +318,10 @@ export default function ChecklistGEOClient() {
                                 llms.txt : le guide complet pour votre site
                             </h3>
                         </Link>
-                        <Link href="/etudes/barometre-geo-france-2026" className="group bg-white p-6 rounded-2xl border border-line hover:border-sauge hover:shadow-lg transition-all">
+                        <Link href="/etude/barometre-visibilite-ia-2026" className="group bg-white p-6 rounded-2xl border border-line hover:border-sauge hover:shadow-lg transition-all">
                             <span className="text-xs font-medium text-sauge uppercase tracking-wide">Étude</span>
                             <h3 className="text-base font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                Baromètre GEO France 2026 : 100 sites audités
+                                Baromètre de visibilité IA 2026
                             </h3>
                         </Link>
                     </div>

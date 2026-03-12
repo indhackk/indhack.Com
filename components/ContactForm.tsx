@@ -111,7 +111,7 @@ export function ContactForm() {
             {/* Contact Section */}
             <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <div className="grid lg:grid-cols-5 gap-12">
+                    <div className="grid md:grid-cols-5 gap-8 lg:gap-12">
 
                         {/* Contact Info */}
                         <motion.div
@@ -230,7 +230,7 @@ export function ContactForm() {
                                     </Button>
                                 </div>
                             ) : (
-                                <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm space-y-5">
+                                <form onSubmit={handleSubmit} className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border border-gray-100 shadow-sm space-y-5">
                                     <div>
                                         <h3 className="text-xl font-heading font-bold text-ink mb-1">Votre projet</h3>
                                         <p className="text-soft text-sm">Décrivez votre besoin, je reviens vers vous rapidement.</p>

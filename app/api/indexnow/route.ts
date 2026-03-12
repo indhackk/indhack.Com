@@ -105,7 +105,7 @@ function getAllSiteUrls(): string[] {
         // Services secondaires
         '/consultant-geo',
         '/consultant-ia',
-        '/audit-ia',
+        '/audit-seo',
         '/community-manager',
         '/creation-boutique-en-ligne',
         // 19 pages villes
