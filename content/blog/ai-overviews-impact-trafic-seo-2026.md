@@ -14,7 +14,7 @@ En février 2026, **48 % des requêtes Google** aux États-Unis déclenchent une
 
 *Pendant ce temps, le CTR organique sur ces requêtes a chuté de **61 %** (source : Seer Interactive, septembre 2025). Et ce n'est que la moyenne.*
 
-En tant que [consultante SEO et GEO](/consultant-seo), je travaille chaque jour avec des données de trafic qui racontent cette histoire. Cet article compile les **chiffres les plus fiables** — sourcés chez Seer Interactive, Ahrefs, Semrush, SeoClarity et Google — pour vous donner une vision claire de ce qui se passe réellement et, surtout, de ce que vous pouvez faire.
+En tant que [consultante SEO](/consultant-seo) et [GEO](/consultant-geo), je travaille chaque jour avec des données de trafic qui racontent cette histoire. Cet article compile les **chiffres les plus fiables** — sourcés chez Seer Interactive, Ahrefs, Semrush, SeoClarity et Google — pour vous donner une vision claire de ce qui se passe réellement et, surtout, de ce que vous pouvez faire.
 
 ## Sommaire
 
@@ -269,3 +269,4 @@ Cinq leviers clés : être déjà dans le **top 10 organique** (99,5 % des sourc
 - [GEO 2026 : être visible sur ChatGPT, Perplexity et les IA](/blog/geo-comment-apparaitre-chatgpt-2026)
 - [Google AI Mode : 93 % de zero-click, la fin des 10 liens bleus](/blog/google-ai-mode-fin-10-liens-bleus-2026)
 - [Apparaître sur Perplexity : le guide SEO / GEO 2026](/blog/apparaitre-sur-perplexity-guide-seo-2026)
+- [Agents IA pour développeurs : Claude Code, Cursor en 2026](/blog/agents-ia-developpeurs-claude-code-2026)

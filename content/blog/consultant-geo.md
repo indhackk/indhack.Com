@@ -221,8 +221,8 @@ Non, le GEO complète le SEO. Les IA utilisent toujours les classements Google/B
 ## Articles complémentaires
 
 - [GEO 2026 : apparaître dans ChatGPT, Gemini et Claude](/blog/geo-comment-apparaitre-chatgpt-2026) — Maîtriser la théorie et la pratique du Generative Engine Optimization
+- [Google AI Mode : 93 % de zero-click](/blog/google-ai-mode-fin-10-liens-bleus-2026) — Comprendre la fin des 10 liens bleus et la refonte de Google
+- [AI Overviews : l'impact sur le SEO](/blog/ai-overviews-impact-trafic-seo-2026) — Les chiffres clés et statistiques sur la chute du trafic organique
 - [Apparaître sur Perplexity : le guide SEO/GEO complet](/blog/apparaitre-sur-perplexity-guide-seo-2026) — Stratégie pratique pour dominer les sources citées par Perplexity
 - [Fichier llms.txt : guide complet et configuration](/blog/llms-txt-guide-complet) — Configurer votre fichier llms.txt pour les IA génératives
-- [Les 12 meilleurs outils GEO gratuits et payants 2026](/blog/meilleurs-outils-geo-gratuits-2026) — Auditer et monitorer votre visibilité dans les réponses IA en continu
-- [Consultant IA en 2026 : le guide définitif](/blog/consultant-ia-expert) — Tout savoir sur le consulting IA et l'intégration d'outils intelligents
 - [Testeur de visibilité IA gratuit](/outils/testeur-visibilite-ia) — Vérifiez maintenant si vous êtes visible par ChatGPT, Perplexity et Claude

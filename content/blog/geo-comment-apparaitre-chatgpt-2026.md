@@ -287,7 +287,9 @@ Les 4 piliers à retenir :
 - [Checklist SEO 2026 — Les 30 points essentiels](/blog/checklist-seo-2026)
 - [L'importance d'un audit SEO pour votre croissance](/blog/importance-audit-seo)
 - [Google Business Profile : Guide Complet](/blog/google-business-profile-guide-complet)
-- [SEO vs SEA : que choisir pour votre acquisition ?](/blog/seo-vs-sea-que-choisir)
+- [AI Overviews : les chiffres qui changent tout pour le SEO en 2026](/blog/ai-overviews-impact-trafic-seo-2026)
+- [Google AI Mode : 93 % de zero-click, la fin des 10 liens bleus](/blog/google-ai-mode-fin-10-liens-bleus-2026)
+- [Agents IA pour développeurs : Claude Code, Cursor en 2026](/blog/agents-ia-developpeurs-claude-code-2026)
 
 **Outils gratuits :**
 - [Testeur Visibilité IA](/outils/testeur-visibilite-ia)

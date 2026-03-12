@@ -272,3 +272,4 @@ Estimation réaliste pour une équipe de 10 : Claude Code Pro (10 × 20 $/mois =
 - [IA en entreprise : cas d'usage et automatisation 2026](/blog/ia-entreprise-cas-usage)
 - [GEO 2026 : être visible sur ChatGPT, Perplexity et les IA](/blog/geo-comment-apparaitre-chatgpt-2026)
 - [Google AI Mode : 93 % de zero-click, la fin des 10 liens bleus](/blog/google-ai-mode-fin-10-liens-bleus-2026)
+- [AI Overviews : les chiffres qui changent tout pour le SEO en 2026](/blog/ai-overviews-impact-trafic-seo-2026)

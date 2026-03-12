@@ -14,7 +14,7 @@ Depuis mars 2026, Google a officiellement lancé **AI Mode** — et cette fois, 
 
 *Le chiffre qui résume tout : **93 % des sessions AI Mode se terminent sans un seul clic** vers un site externe (source : Semrush, mars 2026). C'est plus du double du taux de zero-click des AI Overviews classiques (43 %).*
 
-En tant que [consultant SEO et GEO](/consultant-seo), je considère AI Mode comme le changement le plus radical dans l'histoire de la recherche Google. Plus radical que le passage au mobile-first. Plus radical que les featured snippets. Voici mon analyse complète et les stratégies concrètes pour ne pas disparaître.
+En tant que [consultant SEO](/consultant-seo) et [GEO](/consultant-geo), je considère AI Mode comme le changement le plus radical dans l'histoire de la recherche Google. Plus radical que le passage au mobile-first. Plus radical que les featured snippets. Voici mon analyse complète et les stratégies concrètes pour ne pas disparaître.
 
 ## Sommaire
 
@@ -253,3 +253,4 @@ Plusieurs solutions émergent : Ahrefs Brand Radar, Otterly.ai, Rankscale. Chez 
 - [GEO 2026 : être visible sur ChatGPT, Perplexity et les IA](/blog/geo-comment-apparaitre-chatgpt-2026)
 - [AI Overviews : les chiffres qui changent tout pour le SEO en 2026](/blog/ai-overviews-impact-trafic-seo-2026)
 - [llms.txt : guide complet pour configurer votre fichier](/blog/llms-txt-guide-complet)
+- [Agents IA pour développeurs : Claude Code, Cursor en 2026](/blog/agents-ia-developpeurs-claude-code-2026)
