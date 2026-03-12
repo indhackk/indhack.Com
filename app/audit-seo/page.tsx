@@ -4,8 +4,8 @@ import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Rapport Audit SEO Gratuit | Diagnostic Site Web Complet",
-    description: "Rapport d'audit SEO complet en 48h : +150 points analysés, diagnostic technique et sémantique, plan d'action priorisé par ROI. Rapport PDF gratuit.",
+    title: "Audit SEO complet | +150 points analysés en 48h – IndHack",
+    description: "Audit SEO complet en 48h : +150 points analysés, diagnostic technique et sémantique, plan d'action priorisé par ROI. Rapport PDF offert avec chaque audit.",
     alternates: {
         canonical: "https://indhack.com/audit-seo"
     },

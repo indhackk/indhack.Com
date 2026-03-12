@@ -1,5 +1,5 @@
 ---
-title: "Devenir ou Embaucher un Consultant IA en 2026 : Le Guide Définitif"
+title: "Devenir ou embaucher un consultant IA en 2026 : le guide définitif"
 description: "Le marché du Consultant IA (Intelligence Artificielle) explose en France. Compétences, missions, salaires & pourquoi votre entreprise en a besoin maintenant."
 date: "2026-02-28"
 category: "IA Entreprise"

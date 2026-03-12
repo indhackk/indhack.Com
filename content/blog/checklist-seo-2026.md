@@ -1,17 +1,17 @@
 ---
-title: "Checklist SEO Refonte 2026 : 50 Points Critiques (PDF)"
-description: "Checklist SEO 2026 gratuite : 30 points essentiels pour optimiser votre site web. Technique, contenu, SEO local, backlinks et visibilité IA."
+title: "Checklist SEO 2026 : 50 points critiques à vérifier"
+description: "Checklist SEO 2026 gratuite : 50 points essentiels pour optimiser votre site web. Technique, contenu, SEO local, backlinks et visibilité IA. Téléchargez le PDF."
 date: "2026-02-08"
 category: "Guides"
 image: "/images/blog/new_checklist_seo_1772274828890.png"
-imageAlt: "Checklist SEO 2026 : 30 points essentiels pour optimiser technique, contenu, SEO local et visibilité IA"
+imageAlt: "Checklist SEO 2026 : 50 points essentiels pour optimiser technique, contenu, SEO local et visibilité IA"
 author: "Indiana Aflalo"
 keywords: ["checklist SEO 2026", "audit SEO", "référencement naturel", "optimisation site web", "SEO technique", "SEO local", "backlinks", "visibilité IA"]
 ---
 
 Le référencement naturel évolue constamment. Ce qui fonctionnait hier peut devenir obsolète demain. En 2026, les algorithmes de Google intègrent désormais l'intelligence artificielle de manière massive, et la **visibilité dans les moteurs de recherche génératifs** devient un nouvel enjeu stratégique.
 
-Cette **checklist SEO 2026** rassemble les **30 points essentiels** que je vérifie systématiquement lors de mes [audits SEO](/audit-seo). Que vous soyez entrepreneur, responsable marketing ou développeur, ces points vous permettront d'identifier rapidement les axes d'amélioration de votre site.
+Cette **checklist SEO 2026** rassemble les **50 points essentiels** que je vérifie systématiquement lors de mes [audits SEO](/audit-seo). Que vous soyez entrepreneur, responsable marketing ou développeur, ces points vous permettront d'identifier rapidement les axes d'amélioration de votre site.
 
 > **Besoin d'un diagnostic personnalisé ?** Testez votre site gratuitement avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit) pour identifier vos priorités d'optimisation.
 

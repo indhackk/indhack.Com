@@ -4,13 +4,13 @@ import { TesteurVisibiliteIA } from "./TesteurVisibiliteIA";
 import { ArrowRight, Bot, Shield, Code2, FileCode, Search, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Test Visibilité ChatGPT / IA : Votre Marque Est-Elle Citée ?",
+    title: "Test visibilité ChatGPT / IA : votre marque est-elle citée ?",
     description: "Votre site est-il visible par ChatGPT et Perplexity ? Testez vos signaux GEO : crawlers IA, schema JSON-LD, E-E-A-T. Outil français gratuit, sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils/testeur-visibilite-ia"
     },
     openGraph: {
-        title: "Testeur Visibilité IA — Êtes-vous visible par ChatGPT ?",
+        title: "Testeur visibilité IA — êtes-vous visible par ChatGPT ?",
         description: "Analysez vos signaux GEO (Generative Engine Optimization). 8 crawlers IA vérifiés, 4 catégories de signaux. Gratuit, sans inscription.",
         url: "https://indhack.com/outils/testeur-visibilite-ia",
         type: "website",

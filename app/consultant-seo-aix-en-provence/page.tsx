@@ -6,7 +6,7 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-aix-en-provence")!;
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Aix-en-Provence — Référencement",
+    title: "Consultante SEO Aix-en-Provence — référencement",
     description: "Consultante SEO freelance à Aix-en-Provence. Référencement local pour PME et entrepreneurs des Bouches-du-Rhône. Audit gratuit.",
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`

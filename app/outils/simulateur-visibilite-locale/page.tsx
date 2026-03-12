@@ -4,13 +4,13 @@ import { SimulateurLocal } from "./SimulateurLocal";
 import { ArrowRight, MapPin, Search, Bot, Code2, Target, TrendingUp, Users } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Simulateur Visibilité Locale — Analysez la SERP de votre ville",
+    title: "Simulateur visibilité locale — analysez la SERP de votre ville",
     description: "Qui domine Google pour votre métier dans votre ville ? Analysez les 10 premiers résultats, identifiez les plateformes vs commerces locaux. Gratuit, sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils/simulateur-visibilite-locale"
     },
     openGraph: {
-        title: "Simulateur Visibilité Locale — Analysez la concurrence Google",
+        title: "Simulateur visibilité locale — analysez la concurrence Google",
         description: "Découvrez qui domine la page 1 de Google pour votre activité dans votre ville. Plateformes vs commerces locaux.",
         url: "https://indhack.com/outils/simulateur-visibilite-locale",
         type: "website",

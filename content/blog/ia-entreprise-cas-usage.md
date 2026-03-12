@@ -1,5 +1,5 @@
 ---
-title: "IA en entreprise : Cas d'usage, automatisation et intégration en 2026"
+title: "IA en entreprise : cas d'usage, automatisation et intégration en 2026"
 description: "Comment intégrer l'intelligence artificielle dans votre entreprise de façon sécurisée ? Audit, automatisation des tâches répétitives et SAV. Découvrez nos solutions."
 date: "2026-02-10"
 category: "IA Entreprise"

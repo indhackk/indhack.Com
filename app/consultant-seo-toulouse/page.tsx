@@ -6,7 +6,7 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-toulouse")!;
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Toulouse — Référencement & Croissance",
+    title: "Consultante SEO Toulouse — référencement & croissance",
     description: "Consultante SEO freelance à Toulouse. Référencement local pour PME et startups de Haute-Garonne. Audit technique gratuit.",
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`

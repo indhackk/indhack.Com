@@ -7,7 +7,7 @@ import { SophiaAntipolisContent } from "./SophiaContent";
 const cityData = getCityBySlug("consultant-seo-sophia-antipolis")!;
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Sophia Antipolis — Startups & Tech",
+    title: "Consultante SEO Sophia Antipolis — startups & tech",
     description: "Consultante SEO spécialisée startups et ESN à Sophia Antipolis. Référencement B2B tech, content marketing SaaS, leads qualifiés.",
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`

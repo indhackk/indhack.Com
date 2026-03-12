@@ -4,14 +4,14 @@ import { AuditSEO } from "./AuditSEO";
 import { ArrowRight, Search, Bot, Code2, FileCode, Gauge, TrendingUp, Zap, Target, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Audit SEO Gratuit : Calculez Votre Score en 3 Secondes",
+    title: "Audit SEO gratuit : calculez votre score en 3 secondes",
     description: "Analysez votre site avec notre outil d'audit SEO gratuit. Score /100, 15 critères vérifiés dont compatibilité IA. Analyse seo gratuite sans inscription.",
     keywords: ["audit seo gratuit", "analyse seo gratuit", "audit site gratuit", "analyseur seo", "test seo gratuit", "outil audit seo"],
     alternates: {
         canonical: "https://indhack.com/outils/audit-seo-gratuit"
     },
     openGraph: {
-        title: "Audit SEO Gratuit — Analyse de Site en 30 Secondes",
+        title: "Audit SEO gratuit — analyse de site en 30 secondes",
         description: "Outil d'analyse SEO gratuit : 15 critères vérifiés, score /100, compatibilité IA. Sans inscription. L'analyseur SEO français de référence.",
         url: "https://indhack.com/outils/audit-seo-gratuit",
         type: "website",

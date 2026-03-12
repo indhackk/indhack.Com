@@ -6,7 +6,7 @@ import { Breadcrumb, getCityBreadcrumb } from "@/components/Breadcrumb";
 const cityData = getCityBySlug("consultant-seo-juan-les-pins")!;
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Juan-les-Pins (06) — Réf. Local",
+    title: "Consultante SEO Juan-les-Pins (06) — réf. local",
     description: "Consultante SEO à Juan-les-Pins. Référencement pour hôtels, restaurants, beach clubs et nightlife. Audit gratuit.",
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`

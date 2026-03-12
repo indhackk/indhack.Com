@@ -1,5 +1,5 @@
 ---
-title: "Consultant GEO : L'expert indispensable pour dominer les IA génératives"
+title: "Consultant GEO : l'expert indispensable pour dominer les IA génératives"
 description: "Découvrez le métier de Consultant GEO (Generative Engine Optimization). Pourquoi le SEO ne suffit plus et comment faire citer votre marque par ChatGPT et Perplexity."
 date: "2026-01-08"
 category: "IA & SEO"

@@ -1,12 +1,12 @@
 ---
-title: "Rapport Audit SEO : Contenu, Modèle & Exemple 2026"
+title: "Rapport audit SEO : contenu, modèle et exemple 2026"
 description: "Que doit contenir un rapport d'audit SEO ? Les 7 sections indispensables + modèle gratuit PDF/Word. Grille d'évaluation pour vérifier la qualité de votre audit."
 date: "2026-02-23"
 category: "Audit"
 image: "/images/blog/rapport-audit-seo.jpg"
 imageAlt: "Rapport d'audit SEO professionnel : les 7 sections indispensables pour un diagnostic complet"
 author: "Indiana Aflalo"
-keywords: ["rapport audit SEO", "rapport d'audit seo", "audit SEO complet", "rapport audit site web pdf", "contenu audit seo", "exemple rapport audit", "analyse SEO", "diagnostic site web", "audit référencement naturel", "audit technique SEO"]
+keywords: ["rapport audit SEO", "rapport d'audit seo", "rapport seo pro", "exemple rapport seo", "seo rapport", "audit SEO complet", "rapport audit site web pdf", "contenu audit seo", "exemple rapport audit", "analyse SEO", "diagnostic site web", "audit référencement naturel", "audit technique SEO"]
 readingTime: "12 min"
 ---
 

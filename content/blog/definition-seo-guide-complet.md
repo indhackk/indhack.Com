@@ -1,5 +1,5 @@
 ---
-title: "SEO : Définition, Fonctionnement et Guide Complet 2026"
+title: "SEO : définition, fonctionnement et guide complet 2026"
 description: "Qu'est-ce que le SEO ? Définition claire du référencement naturel, les 3 piliers (technique, contenu, autorité), et comment l'utiliser pour votre entreprise en 2026."
 date: "2026-02-22"
 author: "Indiana Aflalo"

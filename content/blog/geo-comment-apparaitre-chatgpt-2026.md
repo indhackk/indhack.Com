@@ -1,6 +1,6 @@
 ---
 title: "GEO 2026 : être visible sur ChatGPT, Perplexity et les IA"
-description: "Guide GEO complet : optimisez votre site pour être cité par ChatGPT, Perplexity, Google AI. Checklist et outil gratuit."
+description: "GEO (Generative Engine Optimization) : le guide complet pour être cité par ChatGPT, Perplexity et Google AI Overviews en 2026. Checklist + outil de test gratuit."
 date: "2026-02-17"
 dateModified: "2026-03-11"
 category: "IA & SEO"

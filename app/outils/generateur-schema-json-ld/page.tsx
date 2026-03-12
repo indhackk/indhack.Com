@@ -4,13 +4,13 @@ import { SchemaGenerator } from "./SchemaGenerator";
 import { ArrowRight, Code2, Bot, FileCode, Search } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Générateur Schema JSON-LD Gratuit — Données Structurées",
+    title: "Générateur schema JSON-LD gratuit — données structurées",
     description: "Créez vos données structurées Schema.org en quelques clics. LocalBusiness, FAQPage, Article, Product... Générateur SEO gratuit avec prévisualisation en temps réel.",
     alternates: {
         canonical: "https://indhack.com/outils/generateur-schema-json-ld"
     },
     openGraph: {
-        title: "Générateur Schema JSON-LD Gratuit",
+        title: "Générateur schema JSON-LD gratuit",
         description: "Créez vos données structurées Schema.org en quelques clics. 9 types de schema supportés. Gratuit, sans inscription.",
         url: "https://indhack.com/outils/generateur-schema-json-ld",
         type: "website",
