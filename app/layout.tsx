@@ -7,11 +7,6 @@ import { ConditionalLayout } from "@/components/ConditionalLayout";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 
-// Lazy load CookieConsent (appears after 1.5s delay anyway)
-const CookieConsent = dynamic(() => import("@/components/CookieConsent").then(mod => ({ default: mod.CookieConsent })), {
-    ssr: false,
-});
-
 const spaceGrotesk = Space_Grotesk({
     subsets: ["latin"],
     variable: "--font-space-grotesk",
@@ -173,7 +168,6 @@ export default function RootLayout({
                     <ConditionalLayout>
                         {children}
                     </ConditionalLayout>
-                    <CookieConsent />
                 </ModalProvider>
                 <Analytics />
             </body>
