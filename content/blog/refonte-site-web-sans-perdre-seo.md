@@ -1,6 +1,6 @@
 ---
 title: "Checklist SEO refonte site : 45 points à vérifier [2026]"
-description: "Checklist complète : 45 points SEO à vérifier AVANT, PENDANT et APRÈS votre refonte. Plan de redirection, erreurs 404, robots.txt... Ne perdez pas vos positions Google."
+description: "Checklist : 45 points SEO à vérifier avant, pendant et après votre refonte. Redirections, 404, robots.txt. Gardez vos positions."
 date: "2026-02-16"
 category: "Refonte"
 image: "/images/blog/new_redesign_seo_1772274864650.png"

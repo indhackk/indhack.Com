@@ -1,6 +1,6 @@
 ---
-title: "Prix création site internet 2026 : combien ça coûte vraiment ?"
-description: "De 500€ à 50 000€ : pourquoi les devis varient autant ? Grille tarifaire complète pour site vitrine, e-commerce, sur-mesure. Guide honnête d'une consultante SEO."
+title: "Prix création site internet 2026 : combien ça coûte ?"
+description: "De 500€ à 50 000€ : pourquoi les devis varient autant ? Grille tarifaire site vitrine, e-commerce et sur-mesure en 2026."
 date: "2026-02-22"
 author: "Indiana Aflalo"
 category: "Création de site"
@@ -130,3 +130,9 @@ Sur des requêtes très locales et peu concurrentielles, oui. Un plombier dans u
 
 **Combien de temps prend la création d'un site internet ?**
 Site vitrine simple : 2-4 semaines. Site vitrine avec blog et optimisation SEO : 4-6 semaines. E-commerce jusqu'à 100 produits : 6-10 semaines. E-commerce complexe avec ERP : 3-6 mois. Ces délais incluent les allers-retours de validation. Plus vous êtes réactif sur les retours, plus le projet avance vite.
+
+## Articles complémentaires
+
+- [Comment créer un site visible sur Google dès le démarrage](/blog/comment-creer-site-visible-google) — Intégrer le SEO structurellement dès la conception pour éviter les refontes coûteuses
+- [Refonte de site web sans perdre son SEO : le guide complet](/blog/refonte-site-web-sans-perdre-seo) — Moderniser votre site tout en préservant votre visibilité Google acquise
+- [Pourquoi votre site est lent : guide performance web 2026](/blog/pourquoi-votre-site-est-lent-performance-web-2026) — Comprendre l'impact de la vitesse sur les conversions et le référencement

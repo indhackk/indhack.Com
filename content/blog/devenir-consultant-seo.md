@@ -1,6 +1,6 @@
 ---
 title: "Comment devenir consultant SEO en 2026 ? Guide complet"
-description: "Vous voulez devenir consultant SEO ? Parcours, compétences, formations, salaire et conseils d'une consultante en activité. Le guide ultime pour lancer votre carrière."
+description: "Devenir consultant SEO : parcours, compétences, formations, salaire et conseils d'une consultante en activité. Guide complet."
 date: "2026-01-28"
 category: "Métier"
 image: "/images/blog/devenir-consultant-seo.jpg"

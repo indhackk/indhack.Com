@@ -1,6 +1,6 @@
 ---
-title: "llms.txt : le guide complet pour configurer votre fichier en 2026"
-description: "Découvrez ce qu'est le fichier llms.txt, indispensable pour le GEO (Generative Engine Optimization). Apprenez à le configurer pour ChatGPT et les autres IA."
+title: "llms.txt : guide complet pour configurer votre fichier"
+description: "Le fichier llms.txt, indispensable pour le GEO. Apprenez à le configurer pour ChatGPT, Perplexity et les crawlers IA."
 date: "2025-12-15"
 dateModified: "2026-03-11"
 category: "IA & SEO"

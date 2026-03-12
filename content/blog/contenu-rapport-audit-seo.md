@@ -1,6 +1,6 @@
 ---
 title: "Rapport audit SEO : contenu, modèle et exemple 2026"
-description: "Que doit contenir un rapport d'audit SEO ? Les 7 sections indispensables + modèle gratuit PDF/Word. Grille d'évaluation pour vérifier la qualité de votre audit."
+description: "Que doit contenir un rapport d'audit SEO ? Les 7 sections indispensables + modèle gratuit. Grille pour vérifier votre audit."
 date: "2026-02-23"
 category: "Audit"
 image: "/images/blog/rapport-audit-seo.jpg"
@@ -157,3 +157,9 @@ Les moteurs de recherche modifient leurs algorithmes plusieurs fois par jour (do
 ---
 
 **Envie de passer à l'action ?** Contactez-moi pour planifier un diagnostic spécifique et piloter ensemble la rentabilité de votre plateforme web. Que ce soit de [Paris](/consultant-seo-paris) ou [Nice](/consultant-seo-nice), l'accompagnement d'un spécialiste transforme la complexité en résultat chiffré.
+
+## Articles complémentaires
+
+- [L'importance d'un audit SEO : point de départ de votre stratégie](/blog/importance-audit-seo) — Comprendre pourquoi l'audit est indispensable avant tout plan d'action
+- [9 erreurs SEO qui coûtent cher à votre visibilité](/blog/audit-seo-erreurs-qui-coutent-cher) — Identifier les pièges à éviter lors d'un audit et pendant sa correction
+- [Checklist SEO 2026 : les 50 points essentiels](/blog/checklist-seo-2026) — S'assurer qu'aucun élément critique ne manque à votre stratégie

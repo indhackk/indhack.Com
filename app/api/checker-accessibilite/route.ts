@@ -113,10 +113,27 @@ async function fetchWithTimeout(url: string, timeout = 10000): Promise<Response>
     }
 }
 
+// SSRF Protection: block private/internal IPs
+function isPrivateUrl(urlString: string): boolean {
+    try {
+        const urlObj = new URL(urlString);
+        const hostname = urlObj.hostname.toLowerCase();
+        if (hostname === "localhost" || hostname === "127.0.0.1" || hostname === "0.0.0.0" || hostname === "[::1]") return true;
+        if (hostname.startsWith("10.") || hostname.startsWith("192.168.") || hostname.startsWith("172.") || hostname.startsWith("169.254.")) return true;
+        if (hostname.endsWith(".local") || hostname.endsWith(".internal")) return true;
+        if (!["http:", "https:"].includes(urlObj.protocol)) return true;
+        return false;
+    } catch { return true; }
+}
+
 async function analyzeAccessibility(url: string): Promise<AccessibilityResult> {
     let normalizedUrl = url.trim();
     if (!normalizedUrl.startsWith("http://") && !normalizedUrl.startsWith("https://")) {
         normalizedUrl = "https://" + normalizedUrl;
+    }
+
+    if (isPrivateUrl(normalizedUrl)) {
+        throw new Error("URL non autorisée : les adresses internes/privées sont bloquées.");
     }
 
     const response = await fetchWithTimeout(normalizedUrl);

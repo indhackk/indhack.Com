@@ -1,6 +1,6 @@
 ---
 title: "Quelle formation SEO choisir en 2026 ?"
-description: "Formation SEO en ligne, bootcamp, autodidacte ou alternance ? Découvrez tous les parcours pour apprendre le référencement naturel et devenir consultant SEO."
+description: "Formation SEO en ligne, bootcamp, autodidacte ou alternance ? Tous les parcours pour apprendre le référencement naturel."
 date: "2026-01-30"
 category: "Formation"
 image: "/images/blog/formation-seo.jpg"

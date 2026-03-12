@@ -1,6 +1,6 @@
 ---
 title: "Checklist SEO 2026 : 50 points critiques à vérifier"
-description: "Checklist SEO 2026 gratuite : 50 points essentiels pour optimiser votre site web. Technique, contenu, SEO local, backlinks et visibilité IA. Téléchargez le PDF."
+description: "Checklist SEO 2026 gratuite : 50 points pour optimiser votre site. Technique, contenu, SEO local, backlinks et visibilité IA."
 date: "2026-02-08"
 category: "Guides"
 image: "/images/blog/new_checklist_seo_1772274828890.png"
