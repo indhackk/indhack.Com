@@ -167,7 +167,7 @@ interface FetchResult {
     headers: Headers;
 }
 
-async function fetchWithTimeout(url: string, timeout = 10000): Promise<FetchResult> {
+async function fetchWithTimeout(url: string, timeout = 15000): Promise<FetchResult> {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), timeout);
     try {
@@ -181,9 +181,14 @@ async function fetchWithTimeout(url: string, timeout = 10000): Promise<FetchResu
         });
         clearTimeout(timeoutId);
         return { response, headers: response.headers };
-    } catch {
+    } catch (err) {
         clearTimeout(timeoutId);
-        throw new Error("Timeout ou erreur de connexion");
+        let hostname = url;
+        try { hostname = new URL(url).hostname; } catch { /* keep raw url */ }
+        if (err instanceof Error && err.name === "AbortError") {
+            throw new Error(`Le site ${hostname} ne répond pas (timeout de ${timeout / 1000}s). Vérifiez que l'URL est correcte.`);
+        }
+        throw new Error(`Impossible de joindre ${hostname}. Vérifiez que le site est accessible.`);
     }
 }
 

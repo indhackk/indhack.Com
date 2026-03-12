@@ -312,8 +312,8 @@ export function PartenairesClient() {
         const bg = darkMode ? "background:#1a1a2e;" : "";
         const rad = `border-radius:${borderRadius}px;`;
 
-        const code = `<div style="max-width:700px;margin:0 auto;${bg}">
-  <iframe id="indhack-widget" src="${iframeUrl}" width="100%" height="400" style="border:none;${rad}box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);transition:height 0.3s ease;" loading="lazy"></iframe>
+        const code = `<div style="max-width:960px;margin:0 auto;${bg}">
+  <iframe id="indhack-widget" src="${iframeUrl}" width="100%" height="500" style="border:none;${rad}box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);transition:height 0.3s ease;" loading="lazy"></iframe>
   <p style="text-align:right;font-size:11px;margin-top:4px;opacity:0.6;">
     <a href="https://indhack.com/outils/testeur-visibilite-ia" target="_blank" rel="dofollow" style="color:inherit;text-decoration:none;">${randomAnchor}</a>
   </p>
@@ -817,7 +817,7 @@ export function PartenairesClient() {
                                 <iframe
                                     src={previewIframeUrl}
                                     width="100%"
-                                    height="400"
+                                    height="500"
                                     style={{ border: "none", borderRadius: `${borderRadius}px` }}
                                     loading="lazy"
                                 />

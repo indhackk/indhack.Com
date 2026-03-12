@@ -87,8 +87,8 @@ const CATEGORY_CONFIG = {
     format: { label: "Format IA-Friendly", icon: Layout },
 };
 
-function ScoreGauge({ score, primaryColor }: { score: number; primaryColor?: string }) {
-    const radius = 65;
+function ScoreGauge({ score, primaryColor, isDark }: { score: number; primaryColor?: string; isDark?: boolean }) {
+    const radius = 75;
     const circumference = 2 * Math.PI * radius;
     const strokeDashoffset = circumference - (score / 100) * circumference;
 
@@ -100,22 +100,22 @@ function ScoreGauge({ score, primaryColor }: { score: number; primaryColor?: str
     };
 
     return (
-        <div className="relative w-36 h-36 mx-auto">
-            <svg className="transform -rotate-90" width={144} height={144} viewBox="0 0 144 144">
+        <div className="relative w-44 h-44 mx-auto">
+            <svg className="transform -rotate-90" width={176} height={176} viewBox="0 0 176 176">
                 <circle
-                    cx="72"
-                    cy="72"
+                    cx="88"
+                    cy="88"
                     r={radius}
-                    stroke="#e5e7eb"
-                    strokeWidth="10"
+                    stroke={isDark ? "#3a3a50" : "#e5e7eb"}
+                    strokeWidth="12"
                     fill="none"
                 />
                 <circle
-                    cx="72"
-                    cy="72"
+                    cx="88"
+                    cy="88"
                     r={radius}
                     stroke={getColor()}
-                    strokeWidth="10"
+                    strokeWidth="12"
                     fill="none"
                     strokeLinecap="round"
                     strokeDasharray={circumference}
@@ -124,8 +124,8 @@ function ScoreGauge({ score, primaryColor }: { score: number; primaryColor?: str
                 />
             </svg>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="text-4xl font-bold text-ink">{score}</span>
-                <span className="text-soft text-sm">/100</span>
+                <span className="text-5xl font-bold" style={{ color: isDark ? "#ffffff" : "#2A3830" }}>{score}</span>
+                <span className="text-base" style={{ color: isDark ? "#a0a0a0" : "#6b7280" }}>/100</span>
             </div>
         </div>
     );
@@ -141,17 +141,17 @@ function CrawlerRow({ crawler }: { crawler: CrawlerStatus }) {
     const Icon = config.icon;
 
     return (
-        <div className={`flex items-center justify-between p-2 rounded-lg ${config.bg} border ${config.border}`}>
+        <div className={`flex items-center justify-between p-2.5 rounded-lg ${config.bg} border ${config.border}`}>
             <div className="flex items-center gap-2">
-                <Icon className={`w-3.5 h-3.5 ${config.color}`} />
-                <span className="font-medium text-ink text-xs">{crawler.name}</span>
+                <Icon className={`w-4 h-4 ${config.color}`} />
+                <span className="font-medium text-ink text-sm">{crawler.name}</span>
                 {crawler.critical && (
-                    <span className="text-[8px] bg-sauge/20 text-sauge px-1 py-0.5 rounded font-medium">
+                    <span className="text-[10px] bg-sauge/20 text-sauge px-1.5 py-0.5 rounded font-medium">
                         Critique
                     </span>
                 )}
             </div>
-            <span className="text-[10px] text-soft">{crawler.company}</span>
+            <span className="text-xs text-soft">{crawler.company}</span>
         </div>
     );
 }
@@ -166,19 +166,19 @@ function CategoryCard({ category, data, primaryColor }: { category: keyof typeof
         <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full p-3 flex items-center gap-2 text-left hover:bg-gray-50 transition-colors"
+                className="w-full p-3.5 flex items-center gap-3 text-left hover:bg-gray-50 transition-colors"
             >
-                <div className="w-7 h-7 rounded-md bg-gray-100 flex items-center justify-center">
-                    <Icon className="w-3.5 h-3.5 text-gray-600" />
+                <div className="w-8 h-8 rounded-md bg-gray-100 flex items-center justify-center">
+                    <Icon className="w-4 h-4 text-gray-600" />
                 </div>
                 <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between mb-1">
-                        <span className="font-medium text-ink text-xs truncate">{config.label}</span>
-                        <span className={`text-xs font-bold ${percentage >= 70 ? "text-emerald-600" : percentage >= 40 ? "text-amber-600" : "text-red-600"}`}>
+                    <div className="flex items-center justify-between mb-1.5">
+                        <span className="font-medium text-ink text-sm truncate">{config.label}</span>
+                        <span className={`text-sm font-bold ${percentage >= 70 ? "text-emerald-600" : percentage >= 40 ? "text-amber-600" : "text-red-600"}`}>
                             {data.score}/{data.maxScore}
                         </span>
                     </div>
-                    <div className="h-1 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
                         <div
                             className={`h-full rounded-full transition-all duration-700`}
                             style={{
@@ -190,23 +190,23 @@ function CategoryCard({ category, data, primaryColor }: { category: keyof typeof
                         />
                     </div>
                 </div>
-                <svg className={`w-4 h-4 text-gray-400 transition-transform ${isOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className={`w-5 h-5 text-gray-400 transition-transform ${isOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
             </button>
             {isOpen && (
-                <div className="px-3 pb-3 space-y-1">
+                <div className="px-3.5 pb-3.5 space-y-1.5">
                     {data.checks.map((check, i) => (
-                        <div key={i} className={`flex items-start gap-1.5 p-1.5 rounded text-[10px] ${
+                        <div key={i} className={`flex items-start gap-2 p-2 rounded text-xs ${
                             check.status === "success" ? "bg-emerald-50" :
                             check.status === "warning" ? "bg-amber-50" : "bg-red-50"
                         }`}>
                             {check.status === "success" ? (
-                                <CheckCircle2 className="w-3 h-3 text-emerald-600 flex-shrink-0 mt-0.5" />
+                                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0 mt-0.5" />
                             ) : check.status === "warning" ? (
-                                <AlertTriangle className="w-3 h-3 text-amber-600 flex-shrink-0 mt-0.5" />
+                                <AlertTriangle className="w-3.5 h-3.5 text-amber-600 flex-shrink-0 mt-0.5" />
                             ) : (
-                                <XCircle className="w-3 h-3 text-red-600 flex-shrink-0 mt-0.5" />
+                                <XCircle className="w-3.5 h-3.5 text-red-600 flex-shrink-0 mt-0.5" />
                             )}
                             <div className="flex-1 min-w-0">
                                 <span className="font-medium text-ink">{check.label}</span>
@@ -333,56 +333,57 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
     return (
         <div
             ref={containerRef}
-            className="max-w-2xl mx-auto p-3 sm:p-4"
+            className="w-full mx-auto p-4 sm:p-6"
             style={{
                 backgroundColor: isDark ? "#1e1e2e" : "#ffffff",
                 borderRadius,
                 color: isDark ? "#e0e0e0" : undefined,
+                maxWidth: "900px",
             }}
         >
             {/* Form */}
             {!result && (
                 <div>
-                    <div className="text-center mb-5">
+                    <div className="text-center mb-6">
                         <div
-                            className="inline-flex items-center gap-1.5 px-2.5 py-1 border rounded-full text-[10px] font-bold mb-2"
+                            className="inline-flex items-center gap-2 px-3 py-1.5 border rounded-full text-xs font-bold mb-3"
                             style={{
                                 backgroundColor: `${primaryColor}15`,
                                 borderColor: `${primaryColor}30`,
                                 color: primaryColor,
                             }}
                         >
-                            <Bot className="w-3 h-3" />
+                            <Bot className="w-4 h-4" />
                             <span className="uppercase tracking-wider">Testeur Visibilité IA</span>
                         </div>
                         <h2
-                            className="text-lg sm:text-xl font-bold mb-1"
+                            className="text-xl sm:text-2xl font-bold mb-2"
                             style={{ color: isDark ? "#ffffff" : "#2A3830" }}
                         >
                             Votre site est-il visible par{" "}
                             <span style={{ color: primaryColor }}>ChatGPT</span> ?
                         </h2>
-                        <p className="text-xs" style={{ color: isDark ? "#a0a0a0" : "#3D4D46" }}>
+                        <p className="text-sm" style={{ color: isDark ? "#a0a0a0" : "#3D4D46" }}>
                             Analysez vos signaux GEO en 30 secondes
                         </p>
                     </div>
 
                     <form
                         onSubmit={handleSubmit}
-                        className="border p-4"
+                        className="border p-5 sm:p-6"
                         style={{
                             borderRadius,
                             backgroundColor: isDark ? "#252538" : "#f9fafb",
                             borderColor: isDark ? "#3a3a50" : "#e5e7eb",
                         }}
                     >
-                        <div className="flex flex-col sm:flex-row gap-2">
+                        <div className="flex flex-col sm:flex-row gap-3">
                             <div className="flex-1">
                                 <input
                                     type="text"
                                     value={url}
                                     onChange={(e) => setUrl(e.target.value)}
-                                    className="w-full px-3 py-2.5 border focus:ring-2 transition-all text-sm"
+                                    className="w-full px-4 py-3 border focus:ring-2 transition-all text-base"
                                     style={{
                                         borderRadius: `${parseInt(borderRadius) - 4}px`,
                                         borderColor: isDark ? "#3a3a50" : "#e5e7eb",
@@ -397,7 +398,7 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
                             <button
                                 type="submit"
                                 disabled={loading || !url.trim()}
-                                className="text-white px-5 py-2.5 font-bold disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-1.5 whitespace-nowrap text-sm hover:opacity-90"
+                                className="text-white px-6 py-3 font-bold disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2 whitespace-nowrap text-base hover:opacity-90"
                                 style={{
                                     backgroundColor: buttonColor,
                                     borderRadius: `${parseInt(borderRadius) - 4}px`,
@@ -405,12 +406,12 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
                             >
                                 {loading ? (
                                     <>
-                                        <Loader2 className="w-4 h-4 animate-spin" />
+                                        <Loader2 className="w-5 h-5 animate-spin" />
                                         Analyse...
                                     </>
                                 ) : (
                                     <>
-                                        <Zap className="w-4 h-4" />
+                                        <Zap className="w-5 h-5" />
                                         {buttonText}
                                     </>
                                 )}
@@ -418,38 +419,43 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
                         </div>
 
                         {error && (
-                            <div className="mt-3 p-2.5 bg-red-50 border border-red-200 rounded-lg text-red-700 text-xs flex items-center gap-2">
-                                <XCircle className="w-4 h-4 flex-shrink-0" />
-                                {error}
+                            <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm flex items-start gap-2">
+                                <XCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                                <div>
+                                    <p className="font-medium">{error}</p>
+                                    <p className="text-xs text-red-500 mt-1">
+                                        Vérifiez que l&apos;URL est correcte et que le site est accessible.
+                                    </p>
+                                </div>
                             </div>
                         )}
 
-                        <p className="text-center text-[10px] mt-3" style={{ color: isDark ? "#666" : "#9ca3af" }}>
+                        <p className="text-center text-xs mt-4" style={{ color: isDark ? "#666" : "#9ca3af" }}>
                             Gratuit • 8 crawlers IA analysés
                         </p>
                     </form>
 
                     {loading && (
                         <div
-                            className="mt-4 border p-4"
+                            className="mt-5 border p-5"
                             style={{
                                 borderRadius,
                                 backgroundColor: isDark ? "#252538" : "#f9fafb",
                                 borderColor: isDark ? "#3a3a50" : "#e5e7eb",
                             }}
                         >
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-4">
                                 <div
-                                    className="w-8 h-8 rounded-lg flex items-center justify-center"
+                                    className="w-10 h-10 rounded-lg flex items-center justify-center"
                                     style={{ backgroundColor: `${primaryColor}15` }}
                                 >
-                                    <Bot className="w-4 h-4 animate-pulse" style={{ color: primaryColor }} />
+                                    <Bot className="w-5 h-5 animate-pulse" style={{ color: primaryColor }} />
                                 </div>
                                 <div className="flex-1">
-                                    <div className="text-xs font-medium mb-1.5" style={{ color: isDark ? "#e0e0e0" : "#2A3830" }}>
+                                    <div className="text-sm font-medium mb-2" style={{ color: isDark ? "#e0e0e0" : "#2A3830" }}>
                                         Analyse en cours...
                                     </div>
-                                    <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                    <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                                         <div
                                             className="h-full rounded-full animate-pulse"
                                             style={{ width: "60%", backgroundColor: primaryColor }}
@@ -466,7 +472,7 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
                             href="https://indhack.com/outils/testeur-visibilite-ia"
                             target="_blank"
                             rel="dofollow"
-                            className="inline-flex items-center gap-1 text-[10px] hover:underline transition-opacity opacity-50 hover:opacity-80"
+                            className="inline-flex items-center gap-1.5 text-xs hover:underline transition-opacity opacity-50 hover:opacity-80"
                             style={{ color: isDark ? "#888" : "#9ca3af" }}
                         >
                             <Bot className="w-3 h-3" />
@@ -478,24 +484,24 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
 
             {/* Results */}
             {result && (
-                <div className="space-y-4">
+                <div className="space-y-5">
                     {/* Score Card */}
                     <div
-                        className="border p-4"
+                        className="border p-5 sm:p-6"
                         style={{
                             borderRadius,
                             backgroundColor: isDark ? "#252538" : "#f9fafb",
                             borderColor: isDark ? "#3a3a50" : "#e5e7eb",
                         }}
                     >
-                        <div className="flex flex-col items-center gap-3">
-                            <ScoreGauge score={result.score} primaryColor={primaryColor} />
+                        <div className="flex flex-col items-center gap-4">
+                            <ScoreGauge score={result.score} primaryColor={primaryColor} isDark={isDark} />
                             <div className="text-center">
-                                <div className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium mb-1 ${LEVEL_CONFIG[result.level].bg} text-white`}>
+                                <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium mb-2 ${LEVEL_CONFIG[result.level].bg} text-white`}>
                                     {result.levelLabel}
                                 </div>
                                 <h3
-                                    className="text-sm font-bold mb-0.5 line-clamp-1"
+                                    className="text-base font-bold mb-1 line-clamp-1"
                                     style={{ color: isDark ? "#ffffff" : "#2A3830" }}
                                 >
                                     {result.pageTitle}
@@ -504,15 +510,15 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
                                     href={result.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center justify-center gap-1 text-[10px] hover:underline"
+                                    className="flex items-center justify-center gap-1 text-xs hover:underline"
                                     style={{ color: isDark ? "#888" : "#6b7280" }}
                                 >
-                                    {result.url.length > 35 ? result.url.substring(0, 35) + "..." : result.url}
-                                    <ExternalLink className="w-2.5 h-2.5" />
+                                    {result.url.length > 45 ? result.url.substring(0, 45) + "..." : result.url}
+                                    <ExternalLink className="w-3 h-3" />
                                 </a>
-                                <div className="flex items-center justify-center gap-2 mt-2">
+                                <div className="flex items-center justify-center gap-3 mt-3">
                                     <span
-                                        className="px-1.5 py-0.5 rounded text-[10px] border"
+                                        className="px-2.5 py-1 rounded text-xs border"
                                         style={{
                                             backgroundColor: isDark ? "#1e1e2e" : "#ffffff",
                                             borderColor: isDark ? "#3a3a50" : "#e5e7eb",
@@ -522,7 +528,7 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
                                         {result.wordCount} mots
                                     </span>
                                     <span
-                                        className="px-1.5 py-0.5 rounded text-[10px] border"
+                                        className="px-2.5 py-1 rounded text-xs border"
                                         style={{
                                             backgroundColor: isDark ? "#1e1e2e" : "#ffffff",
                                             borderColor: isDark ? "#3a3a50" : "#e5e7eb",
@@ -535,17 +541,17 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
                             </div>
                         </div>
 
-                        <div className="mt-3 pt-3 border-t flex justify-center" style={{ borderColor: isDark ? "#3a3a50" : "#e5e7eb" }}>
+                        <div className="mt-4 pt-4 border-t flex justify-center" style={{ borderColor: isDark ? "#3a3a50" : "#e5e7eb" }}>
                             <button
                                 onClick={handleNewTest}
-                                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border"
+                                className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors border hover:bg-gray-50"
                                 style={{
                                     backgroundColor: isDark ? "#1e1e2e" : "#ffffff",
                                     borderColor: isDark ? "#3a3a50" : "#e5e7eb",
                                     color: isDark ? "#e0e0e0" : "#2A3830",
                                 }}
                             >
-                                <RefreshCw className="w-3.5 h-3.5" />
+                                <RefreshCw className="w-4 h-4" />
                                 Nouveau test
                             </button>
                         </div>
@@ -554,30 +560,30 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
                     {/* Recommendations */}
                     {result.recommendations.length > 0 && (
                         <div
-                            className="border p-3"
+                            className="border p-4 sm:p-5"
                             style={{
                                 borderRadius,
                                 backgroundColor: isDark ? "#252538" : "#f9fafb",
                                 borderColor: isDark ? "#3a3a50" : "#e5e7eb",
                             }}
                         >
-                            <h4 className="font-bold text-xs mb-2" style={{ color: isDark ? "#ffffff" : "#2A3830" }}>
+                            <h4 className="font-bold text-sm mb-3" style={{ color: isDark ? "#ffffff" : "#2A3830" }}>
                                 Actions prioritaires
                             </h4>
-                            <div className="space-y-1.5">
+                            <div className="space-y-2">
                                 {result.recommendations.slice(0, 3).map((rec, i) => (
                                     <div
                                         key={i}
-                                        className="flex items-start gap-2 p-2 rounded-lg border"
+                                        className="flex items-start gap-3 p-3 rounded-lg border"
                                         style={{
                                             backgroundColor: isDark ? "#1e1e2e" : "#ffffff",
                                             borderColor: isDark ? "#3a3a50" : "#f3f4f6",
                                         }}
                                     >
-                                        <div className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${
+                                        <div className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${
                                             rec.priority === 1 ? "bg-red-500" : rec.priority === 2 ? "bg-amber-500" : "bg-emerald-500"
                                         }`} />
-                                        <p className="text-[11px] leading-relaxed" style={{ color: isDark ? "#d0d0d0" : "#2A3830" }}>
+                                        <p className="text-sm leading-relaxed" style={{ color: isDark ? "#d0d0d0" : "#2A3830" }}>
                                             {rec.text}
                                         </p>
                                     </div>
@@ -588,31 +594,31 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
 
                     {/* Crawlers */}
                     <div
-                        className="border p-3"
+                        className="border p-4 sm:p-5"
                         style={{
                             borderRadius,
                             backgroundColor: isDark ? "#252538" : "#f9fafb",
                             borderColor: isDark ? "#3a3a50" : "#e5e7eb",
                         }}
                     >
-                        <h4 className="font-bold text-xs mb-2" style={{ color: isDark ? "#ffffff" : "#2A3830" }}>
+                        <h4 className="font-bold text-sm mb-3" style={{ color: isDark ? "#ffffff" : "#2A3830" }}>
                             Crawlers IA
                         </h4>
-                        <div className="grid grid-cols-2 gap-1.5">
+                        <div className="grid grid-cols-2 gap-2">
                             {result.crawlers.map((crawler) => (
                                 <CrawlerRow key={crawler.agent} crawler={crawler} />
                             ))}
                         </div>
                         {blockedCount > 0 && (
-                            <div className="mt-2 p-2 bg-red-50 border border-red-100 rounded-lg text-[10px] text-red-700 flex items-start gap-1.5">
-                                <AlertTriangle className="w-3 h-3 flex-shrink-0 mt-0.5" />
+                            <div className="mt-3 p-3 bg-red-50 border border-red-100 rounded-lg text-xs text-red-700 flex items-start gap-2">
+                                <AlertTriangle className="w-4 h-4 flex-shrink-0 mt-0.5" />
                                 <span>{blockedCount} crawler(s) bloqué(s)</span>
                             </div>
                         )}
                     </div>
 
                     {/* Categories */}
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {(Object.keys(result.categories) as Array<keyof typeof result.categories>).map((cat) => (
                             <CategoryCard key={cat} category={cat} data={result.categories[cat]} primaryColor={primaryColor} />
                         ))}
@@ -621,27 +627,27 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
                     {/* Lead Form */}
                     {showLeadForm && agencyEmail && !leadSubmitted && (
                         <div
-                            className="border p-4"
+                            className="border p-5"
                             style={{
                                 borderRadius,
                                 backgroundColor: `${primaryColor}08`,
                                 borderColor: `${primaryColor}30`,
                             }}
                         >
-                            <h4 className="font-bold text-sm mb-1" style={{ color: isDark ? "#ffffff" : "#2A3830" }}>
+                            <h4 className="font-bold text-base mb-1.5" style={{ color: isDark ? "#ffffff" : "#2A3830" }}>
                                 Améliorez votre visibilité IA
                             </h4>
-                            <p className="text-[11px] mb-3" style={{ color: isDark ? "#a0a0a0" : "#3D4D46" }}>
+                            <p className="text-sm mb-4" style={{ color: isDark ? "#a0a0a0" : "#3D4D46" }}>
                                 Recevez un rapport détaillé avec des recommandations personnalisées.
                             </p>
-                            <form onSubmit={handleLeadSubmit} className="flex flex-col sm:flex-row gap-2">
+                            <form onSubmit={handleLeadSubmit} className="flex flex-col sm:flex-row gap-3">
                                 <div className="flex-1 relative">
-                                    <Mail className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                                     <input
                                         type="email"
                                         value={visitorEmail}
                                         onChange={(e) => setVisitorEmail(e.target.value)}
-                                        className="w-full pl-8 pr-3 py-2 border focus:ring-2 transition-all text-sm"
+                                        className="w-full pl-10 pr-4 py-3 border focus:ring-2 transition-all text-base"
                                         style={{
                                             borderRadius: `${parseInt(borderRadius) - 4}px`,
                                             borderColor: isDark ? "#3a3a50" : "#e5e7eb",
@@ -657,24 +663,24 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
                                 <button
                                     type="submit"
                                     disabled={leadSubmitting || !visitorEmail.trim()}
-                                    className="text-white px-4 py-2 font-medium disabled:opacity-50 transition-all flex items-center justify-center gap-1.5 text-sm whitespace-nowrap hover:opacity-90"
+                                    className="text-white px-5 py-3 font-medium disabled:opacity-50 transition-all flex items-center justify-center gap-2 text-base whitespace-nowrap hover:opacity-90"
                                     style={{
                                         backgroundColor: buttonColor,
                                         borderRadius: `${parseInt(borderRadius) - 4}px`,
                                     }}
                                 >
                                     {leadSubmitting ? (
-                                        <Loader2 className="w-4 h-4 animate-spin" />
+                                        <Loader2 className="w-5 h-5 animate-spin" />
                                     ) : (
                                         <>
                                             Recevoir mon rapport
-                                            <ArrowRight className="w-3.5 h-3.5" />
+                                            <ArrowRight className="w-4 h-4" />
                                         </>
                                     )}
                                 </button>
                             </form>
                             {leadError && (
-                                <p className="text-[10px] text-red-600 mt-2">{leadError}</p>
+                                <p className="text-xs text-red-600 mt-2">{leadError}</p>
                             )}
                         </div>
                     )}
@@ -695,7 +701,7 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
                             href="https://indhack.com/outils/testeur-visibilite-ia"
                             target="_blank"
                             rel="dofollow"
-                            className="inline-flex items-center gap-1 text-[10px] hover:underline transition-opacity opacity-50 hover:opacity-80"
+                            className="inline-flex items-center gap-1.5 text-xs hover:underline transition-opacity opacity-50 hover:opacity-80"
                             style={{ color: isDark ? "#888" : "#9ca3af" }}
                         >
                             <Bot className="w-3 h-3" />
