@@ -211,22 +211,11 @@ export default function OutilsPage() {
                 }}
             />
 
-            <main className="min-h-screen bg-ink">
-                {/* Hero Section */}
-                <section className="relative pt-32 pb-20 overflow-hidden">
-                    {/* Background Effects */}
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-sauge/5 via-transparent to-transparent" />
+            <main className="min-h-screen">
+                {/* Hero Section — Dark */}
+                <section className="relative bg-ink pt-32 pb-16 overflow-hidden">
                     <div className="absolute top-20 left-10 w-72 h-72 bg-sauge/20 rounded-full blur-[150px]" />
                     <div className="absolute bottom-10 right-10 w-96 h-96 bg-violet-500/10 rounded-full blur-[150px]" />
-
-                    {/* Dot Grid */}
-                    <div
-                        className="absolute inset-0 opacity-20"
-                        style={{
-                            backgroundImage: `radial-gradient(circle, rgba(99, 133, 118, 0.3) 1px, transparent 1px)`,
-                            backgroundSize: '24px 24px'
-                        }}
-                    />
 
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         {/* Breadcrumb */}
@@ -239,13 +228,13 @@ export default function OutilsPage() {
                         </nav>
 
                         <div className="max-w-3xl">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/10 border border-sauge/20 rounded-full text-sauge text-sm font-medium mb-6">
-                                <Sparkles className="w-4 h-4" />
-                                {TOOLS.length} outils gratuits • Orientés IA & GEO
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/10 rounded-full text-white text-sm font-medium mb-6">
+                                <Sparkles className="w-4 h-4 text-sauge-light" />
+                                {TOOLS.length} outils gratuits · Orientés IA &amp; GEO
                             </div>
 
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
-                                Outils SEO Gratuits 2026
+                                Outils SEO gratuits 2026
                             </h1>
 
                             <p className="text-xl text-soft-light leading-relaxed mb-4">
@@ -253,26 +242,26 @@ export default function OutilsPage() {
                             </p>
 
                             <p className="text-lg text-soft-light leading-relaxed">
-                                <span className="text-white font-medium">100% gratuits, sans inscription.</span> Préparez votre site pour le référencement de demain.
+                                <span className="text-white font-medium">100 % gratuits, sans inscription.</span> Préparez votre site pour le référencement de demain.
                             </p>
                         </div>
                     </div>
                 </section>
 
-                {/* Benefits Bar */}
-                <section className="py-8 bg-white/5 backdrop-blur-sm border-y border-white/10">
+                {/* Benefits Bar — White */}
+                <section className="py-12 bg-white border-b border-line">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="grid md:grid-cols-3 gap-6">
+                        <div className="grid md:grid-cols-3 gap-8">
                             {BENEFITS.map((benefit) => {
                                 const Icon = benefit.icon;
                                 return (
                                     <div key={benefit.title} className="flex items-start gap-4">
-                                        <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center flex-shrink-0">
+                                        <div className="w-11 h-11 rounded-xl bg-sauge/10 flex items-center justify-center flex-shrink-0">
                                             <Icon className="w-5 h-5 text-sauge" />
                                         </div>
                                         <div>
-                                            <h3 className="font-bold text-white">{benefit.title}</h3>
-                                            <p className="text-sm text-soft-light">{benefit.description}</p>
+                                            <h3 className="font-bold text-ink">{benefit.title}</h3>
+                                            <p className="text-sm text-soft mt-1">{benefit.description}</p>
                                         </div>
                                     </div>
                                 );
@@ -281,40 +270,43 @@ export default function OutilsPage() {
                     </div>
                 </section>
 
-                {/* Tools Grid */}
-                <section className="py-20 relative">
+                {/* Tools Grid — Light */}
+                <section className="py-16 md:py-20 bg-fond-clair">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-10 text-center">
+                            Choisissez votre outil
+                        </h2>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {TOOLS.map((tool) => {
                                 const Icon = tool.icon;
                                 return (
                                     <Link key={tool.id} href={tool.href} className="group">
-                                        <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20 h-full">
+                                        <div className="relative bg-white rounded-2xl p-6 border border-line shadow-sm transition-all duration-300 hover:shadow-md hover:border-sauge/30 h-full flex flex-col">
                                             {/* Badge */}
                                             {tool.badge && (
-                                                <span className="absolute top-4 right-4 px-3 py-1 bg-violet-500/20 text-violet-300 text-xs font-bold rounded-full border border-violet-500/20">
+                                                <span className="absolute top-4 right-4 px-3 py-1 bg-violet-100 text-violet-700 text-xs font-bold rounded-full border border-violet-200">
                                                     {tool.badge}
                                                 </span>
                                             )}
 
                                             {/* Icon */}
-                                            <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                                            <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300`}>
                                                 <Icon className="w-7 h-7 text-white" />
                                             </div>
 
                                             {/* Content */}
-                                            <h2 className="text-lg font-heading font-bold text-white mb-2 group-hover:text-sauge transition-colors">
+                                            <h2 className="text-lg font-heading font-bold text-ink mb-2 group-hover:text-sauge transition-colors">
                                                 {tool.title}
                                             </h2>
 
-                                            <p className="text-soft-light text-sm leading-relaxed mb-4">
+                                            <p className="text-soft text-sm leading-relaxed mb-4">
                                                 {tool.longDescription}
                                             </p>
 
                                             {/* Features */}
                                             <ul className="space-y-2 mb-4">
                                                 {tool.features.map((feature) => (
-                                                    <li key={feature} className="flex items-center gap-2 text-sm text-white/80">
+                                                    <li key={feature} className="flex items-center gap-2 text-sm text-ink">
                                                         <CheckCircle2 className="w-4 h-4 text-sauge flex-shrink-0" />
                                                         {feature}
                                                     </li>
@@ -322,7 +314,7 @@ export default function OutilsPage() {
                                             </ul>
 
                                             {/* CTA */}
-                                            <div className="flex items-center gap-2 text-sauge font-medium text-sm mt-auto">
+                                            <div className="flex items-center gap-2 text-sauge font-medium text-sm mt-auto pt-2">
                                                 Utiliser l'outil
                                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                             </div>
@@ -334,16 +326,15 @@ export default function OutilsPage() {
                     </div>
                 </section>
 
-                {/* Why These Tools Section */}
-                <section className="py-20 relative">
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent" />
-                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                {/* Why Different — Sauge (dark green) */}
+                <section className="py-16 md:py-20 bg-sauge text-white">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto">
-                            <h2 className="text-3xl font-heading font-bold text-white mb-8 text-center">
+                            <h2 className="text-3xl font-heading font-bold mb-8 text-center">
                                 Pourquoi ces outils sont différents
                             </h2>
 
-                            <div className="space-y-6 text-lg text-soft-light leading-relaxed">
+                            <div className="space-y-6 text-lg text-white/85 leading-relaxed">
                                 <p>
                                     En 2026, <strong className="text-white">le SEO ne se limite plus à Google</strong>. Vos clients utilisent ChatGPT, Perplexity et Gemini pour trouver des réponses. Si votre site n'est pas optimisé pour ces IA, vous êtes invisible pour une partie croissante de votre audience.
                                 </p>
@@ -353,36 +344,36 @@ export default function OutilsPage() {
                                 </p>
 
                                 <p>
-                                    Mon <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline font-medium">Testeur de Visibilité IA</Link> est unique en France : il vérifie si GPTBot, Claude-Web et PerplexityBot peuvent accéder à votre contenu, et analyse vos signaux E-E-A-T que les IA utilisent pour vous citer.
+                                    Mon <Link href="/outils/testeur-visibilite-ia" className="text-white underline underline-offset-4 decoration-white/40 hover:decoration-white font-medium transition-colors">testeur de visibilité IA</Link> est unique en France : il vérifie si GPTBot, Claude-Web et PerplexityBot peuvent accéder à votre contenu, et analyse vos signaux E-E-A-T que les IA utilisent pour vous citer.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* FAQ Section */}
-                <section className="py-20">
+                {/* FAQ Section — White */}
+                <section className="py-16 md:py-20 bg-white">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto">
-                            <h2 className="text-3xl font-heading font-bold text-white mb-12 text-center">
-                                Questions Fréquentes
+                            <h2 className="text-3xl font-heading font-bold text-ink mb-10 text-center">
+                                Questions fréquentes
                             </h2>
 
-                            <div className="space-y-4">
+                            <div className="space-y-3">
                                 {FAQ_ITEMS.map((item, index) => (
-                                    <details key={index} className="group bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">
-                                        <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-                                            <h3 className="text-lg font-bold text-white pr-4">
+                                    <details key={index} className="group bg-fond-clair rounded-xl border border-line overflow-hidden">
+                                        <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                                            <h3 className="text-base font-bold text-ink pr-4">
                                                 {item.question}
                                             </h3>
-                                            <span className="text-soft-light group-open:rotate-180 transition-transform duration-200 flex-shrink-0">
+                                            <span className="text-soft group-open:rotate-180 transition-transform duration-200 flex-shrink-0">
                                                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                                 </svg>
                                             </span>
                                         </summary>
-                                        <div className="px-6 pb-6 pt-0">
-                                            <p className="text-soft-light leading-relaxed">
+                                        <div className="px-5 pb-5 pt-0">
+                                            <p className="text-soft leading-relaxed">
                                                 {item.answer}
                                             </p>
                                         </div>
@@ -393,34 +384,34 @@ export default function OutilsPage() {
                     </div>
                 </section>
 
-                {/* Maillage Section */}
-                <section className="py-16 border-t border-white/10">
+                {/* Maillage Section — Light gray */}
+                <section className="py-16 md:py-20 bg-gray-50 border-t border-line">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-2xl font-heading font-bold text-white mb-8 text-center">
+                            <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
                                 Complétez votre stratégie SEO
                             </h2>
 
                             <div className="grid md:grid-cols-3 gap-6">
                                 {/* Services */}
-                                <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
-                                    <h3 className="font-bold text-white mb-4">Services SEO</h3>
+                                <div className="bg-white rounded-xl border border-line p-6 shadow-sm">
+                                    <h3 className="font-bold text-ink mb-4">Services SEO</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/audit-seo" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
-                                                <ArrowRight className="w-3 h-3" />
+                                            <Link href="/audit-seo" className="text-soft hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3 text-sauge" />
                                                 Audit SEO complet
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/referencement-naturel" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
-                                                <ArrowRight className="w-3 h-3" />
+                                            <Link href="/referencement-naturel" className="text-soft hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3 text-sauge" />
                                                 Référencement naturel
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/creation-site-web" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
-                                                <ArrowRight className="w-3 h-3" />
+                                            <Link href="/creation-site-web" className="text-soft hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3 text-sauge" />
                                                 Création de site web
                                             </Link>
                                         </li>
@@ -428,18 +419,18 @@ export default function OutilsPage() {
                                 </div>
 
                                 {/* Blog */}
-                                <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
-                                    <h3 className="font-bold text-white mb-4">Articles SEO</h3>
+                                <div className="bg-white rounded-xl border border-line p-6 shadow-sm">
+                                    <h3 className="font-bold text-ink mb-4">Articles SEO</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
-                                                <ArrowRight className="w-3 h-3" />
+                                            <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="text-soft hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3 text-sauge" />
                                                 Guide complet du GEO
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/blog" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
-                                                <ArrowRight className="w-3 h-3" />
+                                            <Link href="/blog" className="text-soft hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3 text-sauge" />
                                                 Tous les articles
                                             </Link>
                                         </li>
@@ -447,24 +438,24 @@ export default function OutilsPage() {
                                 </div>
 
                                 {/* Local */}
-                                <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">
-                                    <h3 className="font-bold text-white mb-4">SEO Local</h3>
+                                <div className="bg-white rounded-xl border border-line p-6 shadow-sm">
+                                    <h3 className="font-bold text-ink mb-4">SEO Local</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/consultant-seo-nice" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
-                                                <ArrowRight className="w-3 h-3" />
+                                            <Link href="/consultant-seo-nice" className="text-soft hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3 text-sauge" />
                                                 Consultante SEO Nice
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/consultant-seo-cannes" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
-                                                <ArrowRight className="w-3 h-3" />
+                                            <Link href="/consultant-seo-cannes" className="text-soft hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3 text-sauge" />
                                                 Consultante SEO Cannes
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/consultant-seo-sophia-antipolis" className="text-soft-light hover:text-sauge transition-colors text-sm flex items-center gap-2">
-                                                <ArrowRight className="w-3 h-3" />
+                                            <Link href="/consultant-seo-sophia-antipolis" className="text-soft hover:text-sauge transition-colors text-sm flex items-center gap-2">
+                                                <ArrowRight className="w-3 h-3 text-sauge" />
                                                 Consultante SEO Sophia-Antipolis
                                             </Link>
                                         </li>
@@ -475,10 +466,9 @@ export default function OutilsPage() {
                     </div>
                 </section>
 
-                {/* CTA Section */}
-                <section className="py-20 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-sauge/10 to-emerald-600/5" />
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-sauge/20 rounded-full blur-[150px]" />
+                {/* CTA Section — Dark */}
+                <section className="py-16 md:py-20 bg-ink relative overflow-hidden">
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-sauge/15 rounded-full blur-[150px]" />
 
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                         <h2 className="text-3xl font-heading font-bold text-white mb-6">
@@ -490,7 +480,7 @@ export default function OutilsPage() {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center justify-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-colors"
+                                className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-full font-bold transition-colors"
                             >
                                 Demander un audit personnalisé
                                 <ArrowRight className="w-5 h-5" />

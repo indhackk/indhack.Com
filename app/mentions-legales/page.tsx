@@ -17,7 +17,7 @@ export default function MentionsLegales() {
     const lastUpdate = "17 janvier 2025";
 
     return (
-        <div className="container mx-auto px-4 py-24 max-w-4xl">
+        <div className="container mx-auto px-4 py-16 md:py-20 max-w-4xl">
             <h1 className="text-4xl font-heading font-bold mb-4 text-ink">Mentions Légales</h1>
             <p className="text-soft mb-12">Dernière mise à jour : {lastUpdate}</p>
 
