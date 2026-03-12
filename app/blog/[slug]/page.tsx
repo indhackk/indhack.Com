@@ -113,7 +113,7 @@ export default function BlogPostPage({ params }: PageProps) {
         <>
             <Breadcrumb items={getBlogBreadcrumb(post.title, params.slug)} />
             <main className="pt-28 pb-20 bg-white">
-                <div className="container mx-auto px-4 max-w-4xl">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
 
                     {/* Schema.org BlogPosting - Optimisé GEO */}
                     <script
@@ -211,7 +211,7 @@ export default function BlogPostPage({ params }: PageProps) {
                             </span>
                         </div>
 
-                        <h1 className="text-3xl md:text-5xl font-heading font-bold text-ink mb-6 leading-tight">
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-ink mb-6 leading-tight">
                             {post.title}
                         </h1>
 
@@ -231,11 +231,11 @@ export default function BlogPostPage({ params }: PageProps) {
                     </header>
 
                     {/* Post Content */}
-                    <div className="grid lg:grid-cols-4 gap-12">
+                    <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
 
                         {/* Sidebar with Table of Contents */}
-                        <aside className="lg:col-span-1 order-last lg:order-first">
-                            <div className="sticky top-32 space-y-8">
+                        <aside className="lg:col-span-3 order-last lg:order-first">
+                            <div className="sticky top-32 space-y-6">
 
                                 {/* Table des matières */}
                                 <div className="hidden lg:block">
@@ -244,20 +244,17 @@ export default function BlogPostPage({ params }: PageProps) {
                                     </div>
                                     <nav className="space-y-1">
                                         {post.content.split('\n').filter(line => line.startsWith('##')).map((line, i) => {
-                                            // Nettoyage basique des titres markdown pour l'affichage
                                             const cleanTitle = line.replace(/^#+\s+/, '').replace(/\*\*/g, '');
-                                            // Création d'un ID basique (dans un vrai cas il faut slugifier comme remark)
                                             const slug = cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-
                                             const isH3 = line.startsWith('###');
 
                                             return (
                                                 <a
                                                     key={i}
                                                     href={`#${slug}`}
-                                                    className={`block text-sm py-1 border-l-2 pl-3 transition-colors ${isH3
+                                                    className={`block py-1 border-l-2 pl-3 transition-colors ${isH3
                                                         ? 'text-soft/80 border-transparent hover:text-sauge hover:border-sauge ml-2 text-xs'
-                                                        : 'text-soft border-transparent hover:text-sauge hover:border-sauge font-medium'
+                                                        : 'text-soft border-transparent hover:text-sauge hover:border-sauge font-medium text-[13px]'
                                                         }`}
                                                 >
                                                     {cleanTitle}
@@ -267,24 +264,23 @@ export default function BlogPostPage({ params }: PageProps) {
                                     </nav>
                                 </div>
 
-                                <div className="bg-ink p-6 rounded-2xl text-white">
-                                    <div className="font-heading font-bold text-lg mb-4">Besoin d'aide ?</div>
-                                    <p className="text-soft-light text-sm mb-6">
-                                        Passons de la théorie à la pratique ensemble.
+                                <div className="bg-fond-sombre/95 p-5 rounded-xl text-white">
+                                    <div className="font-heading font-bold text-base mb-2">Besoin d'aide ?</div>
+                                    <p className="text-soft-light text-xs mb-4 leading-relaxed">
+                                        Passons de la théorie à la pratique.
                                     </p>
-                                    <AuditCTA className="w-full bg-sauge hover:bg-white hover:text-ink transition-all mb-3 rounded-xl">
-                                        Audit Gratuit
+                                    <AuditCTA className="w-full bg-sauge hover:bg-white hover:text-ink transition-all mb-2 rounded-lg text-sm py-2">
+                                        Audit gratuit
                                     </AuditCTA>
-                                    <a href="tel:0661139748" className="flex items-center justify-center gap-2 text-sm text-soft-light hover:text-white transition-colors">
-                                        <Phone className="w-4 h-4" />
+                                    <a href="tel:0661139748" className="flex items-center justify-center gap-1.5 text-xs text-soft-light hover:text-white transition-colors">
+                                        <Phone className="w-3.5 h-3.5" />
                                         06 61 13 97 48
                                     </a>
                                 </div>
 
-                                <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                                    <div className="font-heading font-bold text-ink mb-4">Auteur</div>
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                                <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                    <div className="flex items-center gap-3">
+                                        <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
                                             <Image
                                                 src="/images/indiana-aflalo.jpg"
                                                 alt="Indiana Aflalo"
@@ -297,7 +293,7 @@ export default function BlogPostPage({ params }: PageProps) {
                                             <div className="text-xs text-soft">Consultante SEO</div>
                                         </div>
                                     </div>
-                                    <Link href="/a-propos" className="text-xs font-medium text-sauge hover:text-ink transition-colors flex items-center gap-1">
+                                    <Link href="/a-propos" className="mt-3 text-xs font-medium text-sauge hover:text-ink transition-colors flex items-center gap-1">
                                         Voir mon profil <ArrowRight className="w-3 h-3" />
                                     </Link>
                                 </div>
@@ -305,7 +301,7 @@ export default function BlogPostPage({ params }: PageProps) {
                         </aside>
 
                         {/* Main Content */}
-                        <article className="lg:col-span-3 prose prose-lg prose-headings:font-heading prose-headings:font-bold prose-headings:text-ink prose-headings:scroll-mt-32 prose-p:text-soft prose-li:text-soft prose-strong:text-ink prose-a:text-sauge prose-blockquote:border-sauge prose-blockquote:bg-gray-50 prose-blockquote:p-6 prose-blockquote:rounded-xl max-w-none">
+                        <article className="lg:col-span-9 prose prose-lg prose-headings:font-heading prose-headings:font-bold prose-headings:text-ink prose-headings:scroll-mt-32 prose-p:text-soft prose-li:text-soft prose-strong:text-ink prose-a:text-sauge prose-blockquote:border-sauge prose-blockquote:bg-gray-50 prose-blockquote:p-6 prose-blockquote:rounded-xl prose-h2:text-2xl prose-h2:md:text-3xl prose-h3:text-xl prose-h3:md:text-2xl max-w-none">
                             {(() => {
                                 // Split content by H2 sections pour injecter le CTA après le 3ème H2
                                 const sections = post.content.split(/\n(?=## )/);
