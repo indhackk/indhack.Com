@@ -679,9 +679,8 @@ export default function GlossaireSeoClient() {
                         <div className="flex flex-wrap justify-center gap-2">
                             <button
                                 onClick={() => setActiveCategory(null)}
-                                className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-all ${
-                                    !activeCategory ? "bg-white/10 text-white border-white/20" : "bg-transparent text-gray-500 border-gray-800 hover:border-gray-600"
-                                }`}
+                                className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-all ${!activeCategory ? "bg-white/10 text-white border-white/20" : "bg-transparent text-gray-500 border-gray-800 hover:border-gray-600"
+                                    }`}
                             >
                                 Tous ({GLOSSARY_TERMS.length})
                             </button>
@@ -691,9 +690,8 @@ export default function GlossaireSeoClient() {
                                     <button
                                         key={key}
                                         onClick={() => setActiveCategory(activeCategory === key ? null : key)}
-                                        className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-all ${
-                                            activeCategory === key ? color : "bg-transparent text-gray-500 border-gray-800 hover:border-gray-600"
-                                        }`}
+                                        className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-all ${activeCategory === key ? color : "bg-transparent text-gray-500 border-gray-800 hover:border-gray-600"
+                                            }`}
                                     >
                                         {label} ({count})
                                     </button>
@@ -712,11 +710,10 @@ export default function GlossaireSeoClient() {
                             <a
                                 key={letter}
                                 href={`#letter-${letter}`}
-                                className={`w-8 h-8 flex items-center justify-center rounded-md text-sm font-medium transition-all ${
-                                    filteredLetters.includes(letter)
+                                className={`w-8 h-8 flex items-center justify-center rounded-md text-sm font-medium transition-all ${filteredLetters.includes(letter)
                                         ? "text-gray-400 hover:text-white hover:bg-white/10"
                                         : "text-gray-700 cursor-default"
-                                }`}
+                                    }`}
                             >
                                 {letter}
                             </a>
@@ -746,6 +743,7 @@ export default function GlossaireSeoClient() {
                                             <details
                                                 key={term.slug}
                                                 id={term.slug}
+                                                open
                                                 className="group bg-white/[0.03] border border-white/5 rounded-xl overflow-hidden hover:border-white/10 transition-all"
                                             >
                                                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
