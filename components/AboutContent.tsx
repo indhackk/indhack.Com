@@ -132,7 +132,7 @@ export function AboutContent() {
             </section>
 
             {/* Valeurs */}
-            <section className="py-24 bg-white">
+            <section className="py-16 md:py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-4">
@@ -189,7 +189,7 @@ export function AboutContent() {
             </section>
 
             {/* Parcours */}
-            <section className="py-24 bg-gray-50">
+            <section className="py-16 md:py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto text-center">
                         <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-10">
@@ -309,7 +309,7 @@ export function AboutContent() {
             <FAQ items={ABOUT_FAQ} title="Questions sur mon approche" />
 
             {/* CTA */}
-            <section className="py-24 bg-ink">
+            <section className="py-16 md:py-20 bg-ink">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6">
                         Prêt à booster votre <span className="text-sauge">visibilité</span> ?

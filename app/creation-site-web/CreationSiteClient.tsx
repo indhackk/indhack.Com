@@ -139,7 +139,7 @@ export default function CreationSiteClient() {
             />
 
             {/* Features */}
-            <section className="py-24 bg-white">
+            <section className="py-16 md:py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center mb-16">
                         <motion.h2
@@ -179,7 +179,7 @@ export default function CreationSiteClient() {
             </section>
 
             {/* Process */}
-            <section className="py-24 bg-gray-50">
+            <section className="py-16 md:py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <p className="text-sauge font-bold tracking-[0.2em] uppercase mb-4 text-sm">Processus</p>
@@ -212,7 +212,7 @@ export default function CreationSiteClient() {
             </section>
 
             {/* Ce qui est inclus */}
-            <section className="py-24 bg-ink text-white">
+            <section className="py-16 md:py-20 bg-ink text-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12">
@@ -355,7 +355,7 @@ export default function CreationSiteClient() {
             <HomepageBacklink variant="default" />
 
             {/* CTA */}
-            <section className="py-24 bg-white">
+            <section className="py-16 md:py-20 bg-white">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
                     <div className="bg-ink p-12 md:p-16 rounded-3xl text-white">
                         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">

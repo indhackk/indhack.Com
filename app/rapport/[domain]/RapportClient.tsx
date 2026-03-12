@@ -310,7 +310,7 @@ export default function RapportClient({ rapport }: { rapport: RapportData }) {
                         </pre>
                         <button
                             onClick={copyBadge}
-                            className="absolute top-2 right-2 flex items-center gap-1.5 px-3 py-1.5 bg-sauge/20 hover:bg-sauge/30 text-sauge-light rounded-md text-xs font-medium transition-colors border border-sauge/30"
+                            className="absolute top-2 right-2 flex items-center gap-1.5 px-3 py-1.5 bg-sauge/20 hover:bg-sauge/30 text-white rounded-md text-xs font-medium transition-colors border border-sauge/30"
                         >
                             {copiedBadge ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
                             {copiedBadge ? "Copié !" : "Copier"}

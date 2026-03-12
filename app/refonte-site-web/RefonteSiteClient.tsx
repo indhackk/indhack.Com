@@ -91,7 +91,7 @@ export default function RefonteSiteClient() {
                 category="Expertise Technique"
             />
 
-            <section className="py-24 bg-white relative overflow-hidden">
+            <section className="py-16 md:py-20 bg-white relative overflow-hidden">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center mb-20">
                         <motion.h2
@@ -132,7 +132,7 @@ export default function RefonteSiteClient() {
             </section>
 
             {/* Process Section */}
-            <section className="py-24 bg-ink text-white">
+            <section className="py-16 md:py-20 bg-ink text-white">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2">
@@ -241,7 +241,7 @@ export default function RefonteSiteClient() {
             <HomepageBacklink variant="default" />
 
             {/* Final CTA */}
-            <section className="py-24 bg-white text-center">
+            <section className="py-16 md:py-20 bg-white text-center">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="bg-gray-50 rounded-[3rem] p-12 md:p-20 border border-gray-100 relative overflow-hidden">
                         <div className="absolute top-0 right-0 p-10 opacity-5 pointer-events-none">

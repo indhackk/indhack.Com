@@ -433,7 +433,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                 </span>
                             ))}
                             {cityData.nearbyAreas.map((area, i) => (
-                                <span key={i} className="bg-sauge/10 px-3 py-1.5 rounded-full text-xs font-medium text-sauge">
+                                <span key={i} className="bg-sauge/10 px-3 py-1.5 rounded-full text-xs font-medium text-ink border border-sauge/20">
                                     {area}
                                 </span>
                             ))}

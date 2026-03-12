@@ -366,7 +366,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
             ))}
 
             {/* Methodology - Dark Premium Glassmorphism with enhanced visuals */}
-            <section className="py-24 bg-ink text-white relative overflow-hidden">
+            <section className="py-16 md:py-20 bg-ink text-white relative overflow-hidden">
                 {/* Enhanced background glow effects */}
                 <div className="absolute inset-0 pointer-events-none">
                     <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#638576]/15 rounded-full blur-[180px]" />
@@ -563,7 +563,7 @@ export function CityServiceTemplate({ cityData, serviceData }: CityServiceTempla
             />
 
             {/* Final CTA - Light background to separate from Dark Footer */}
-            <section className="py-24 bg-gray-50 relative overflow-hidden border-t border-gray-100">
+            <section className="py-16 md:py-20 bg-gray-50 relative overflow-hidden border-t border-gray-100">
                 {/* Decorative background */}
                 <div className="absolute inset-0 pointer-events-none opacity-50">
                     <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#638576]/5 rounded-full blur-[100px]" />

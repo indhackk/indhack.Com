@@ -118,7 +118,7 @@ export function FAQContent() {
     return (
         <main className="bg-fond-clair">
             {/* Hero Section */}
-            <section className="bg-ink text-white py-20 md:py-28">
+            <section className="bg-ink text-white py-16 md:py-20">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto text-center">
                         <p className="text-sauge font-medium mb-4 tracking-wide uppercase text-sm">

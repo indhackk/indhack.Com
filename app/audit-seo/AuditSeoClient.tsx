@@ -122,7 +122,7 @@ export default function AuditSeoClient() {
                 </div>
             </section>
 
-            <section className="py-24 bg-white relative overflow-hidden">
+            <section className="py-16 md:py-20 bg-white relative overflow-hidden">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center mb-20 space-y-6">
                         <motion.h2
@@ -162,7 +162,7 @@ export default function AuditSeoClient() {
             </section>
 
             {/* Section Éducative - Pourquoi un audit SEO en 2026 */}
-            <section className="py-24 bg-gray-50 border-t border-gray-100">
+            <section className="py-16 md:py-20 bg-gray-50 border-t border-gray-100">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <div className="text-center mb-12">
@@ -191,7 +191,7 @@ export default function AuditSeoClient() {
             </section>
 
             {/* Section Freelance vs Agence */}
-            <section className="py-24 bg-white border-t border-gray-100">
+            <section className="py-16 md:py-20 bg-white border-t border-gray-100">
                 <div className="container mx-auto px-4">
                     <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-12">
@@ -255,7 +255,7 @@ export default function AuditSeoClient() {
             </section>
 
             {/* Section Processus en 5 étapes */}
-            <section className="py-24 bg-gray-50 border-t border-gray-100">
+            <section className="py-16 md:py-20 bg-gray-50 border-t border-gray-100">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <div className="text-center mb-12">
@@ -313,7 +313,7 @@ export default function AuditSeoClient() {
             </section>
 
             {/* Section Signaux d'alerte */}
-            <section className="py-24 bg-white border-t border-gray-100">
+            <section className="py-16 md:py-20 bg-white border-t border-gray-100">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <div className="text-center mb-12">
@@ -374,7 +374,7 @@ export default function AuditSeoClient() {
             </section>
 
             {/* Section Résultats typiques */}
-            <section className="py-24 bg-gray-50 border-t border-gray-100">
+            <section className="py-16 md:py-20 bg-gray-50 border-t border-gray-100">
                 <div className="container mx-auto px-4">
                     <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-12">
@@ -415,7 +415,7 @@ export default function AuditSeoClient() {
             </section>
 
             {/* Experience Section */}
-            <section className="py-24 bg-white border-t border-gray-100">
+            <section className="py-16 md:py-20 bg-white border-t border-gray-100">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-ink mb-16 uppercase tracking-tighter">
                         Pourquoi IndHack pour votre <span className="text-sauge">Audit</span> ?
@@ -429,7 +429,7 @@ export default function AuditSeoClient() {
             </section>
 
             {/* Section Types d'audit et Maillage */}
-            <section className="py-24 bg-white">
+            <section className="py-16 md:py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-12">
@@ -586,7 +586,7 @@ export default function AuditSeoClient() {
             <HomepageBacklink variant="default" />
 
             {/* Final CTA */}
-            <section className="py-24 bg-white text-center">
+            <section className="py-16 md:py-20 bg-white text-center">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="bg-ink p-16 rounded-[4rem] text-white overflow-hidden relative group">
                         {/* Background Decor */}

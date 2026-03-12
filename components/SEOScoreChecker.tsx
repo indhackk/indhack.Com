@@ -90,12 +90,12 @@ export function SEOScoreChecker() {
                         viewport={{ once: true, margin: "-100px" }}
                         className="text-center mb-10"
                     >
-                        <div className="inline-flex items-center gap-2 bg-sauge/20 text-sauge-light px-4 py-2 rounded-full text-sm font-bold mb-4">
+                        <div className="inline-flex items-center gap-2 bg-sauge/20 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
                             <Zap className="w-4 h-4" />
                             Analyse Live (Google Data)
                         </div>
                         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-                            Testez votre <span className="text-sauge-light">Performance SEO</span>
+                            Testez votre <span className="text-sauge-light/90">performance SEO</span>
                         </h2>
                         <p className="text-soft-light max-w-xl mx-auto">
                             Interrogation en temps réel des serveurs Google (Lighthouse) pour un diagnostic technique immédiat et réel.
@@ -158,7 +158,7 @@ export function SEOScoreChecker() {
                                         animate={{ opacity: 1, y: 0 }}
                                         className="text-center py-6"
                                     >
-                                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-sauge/20 text-sauge-light mb-6">
+                                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-sauge/20 text-white mb-6">
                                             <CheckCircle className="w-8 h-8" />
                                         </div>
                                         <h3 className="text-2xl font-bold mb-4">Site détecté avec succès !</h3>
@@ -183,7 +183,7 @@ export function SEOScoreChecker() {
                                             <p className="text-white/80 mb-4">
                                                 L'outil détecte très souvent plus de <strong className="text-white">15 erreurs techniques critiques</strong> sur les sites non optimisés, bloquant le passage en 1ère page.
                                             </p>
-                                            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-sauge-light font-bold">
+                                            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-white font-bold">
                                                 <Zap className="w-5 h-5" />
                                                 <span>Vous n'avez pas de développeur SEO ? Je corrige votre technique en 48h.</span>
                                             </div>

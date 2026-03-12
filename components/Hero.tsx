@@ -25,7 +25,7 @@ export function Hero() {
     }, []);
 
     return (
-        <section className="relative bg-ink text-white overflow-hidden min-h-screen flex items-center">
+        <section className="relative bg-ink text-white overflow-hidden min-h-[85vh] flex items-center">
             {/* Background Aura */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-sauge/20 rounded-full blur-[120px] mix-blend-screen" />

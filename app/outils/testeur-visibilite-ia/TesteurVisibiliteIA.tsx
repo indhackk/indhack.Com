@@ -549,7 +549,7 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                                                     {rec.fixUrl && (
                                                         <Link
                                                             href={rec.fixUrl}
-                                                            className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium bg-sauge/20 text-sauge-light border border-sauge/30 hover:bg-sauge/30 transition-colors"
+                                                            className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium bg-sauge/20 text-white border border-sauge/30 hover:bg-sauge/30 transition-colors"
                                                         >
                                                             <Wrench className="w-3 h-3" />
                                                             {rec.fixLabel || "Corriger"}

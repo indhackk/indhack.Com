@@ -12,7 +12,7 @@ interface GlossaryTerm {
 }
 
 const CATEGORIES: Record<string, { label: string; color: string }> = {
-    "seo-technique": { label: "SEO Technique", color: "bg-sauge/20 text-sauge-light border-sauge/30" },
+    "seo-technique": { label: "SEO Technique", color: "bg-sauge/20 text-white border-sauge/30" },
     "seo-contenu": { label: "SEO Contenu", color: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30" },
     "seo-local": { label: "SEO Local", color: "bg-amber-500/20 text-amber-400 border-amber-500/30" },
     "geo-ia": { label: "GEO & IA", color: "bg-violet-500/20 text-violet-300 border-violet-500/30" },
@@ -651,7 +651,7 @@ export default function GlossaireSeoClient() {
                 <div className="absolute top-20 left-10 w-72 h-72 bg-sauge/20 rounded-full blur-[150px]" />
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="max-w-3xl mx-auto text-center">
-                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sauge/10 text-sauge-light border border-sauge/20 text-sm font-medium mb-6">
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sauge/10 text-white border border-sauge/20 text-sm font-medium mb-6">
                             +{GLOSSARY_TERMS.length} définitions
                         </span>
                         <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-6 leading-tight">
@@ -770,7 +770,7 @@ export default function GlossaireSeoClient() {
                                                                 <Link
                                                                     key={link.href}
                                                                     href={link.href}
-                                                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sauge/10 text-sauge-light text-sm font-medium border border-sauge/20 hover:bg-sauge/20 transition-colors"
+                                                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sauge/20 text-white text-sm font-medium border border-sauge/30 hover:bg-sauge/30 transition-colors"
                                                                 >
                                                                     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />

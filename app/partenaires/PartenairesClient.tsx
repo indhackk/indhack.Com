@@ -396,7 +396,7 @@ export function PartenairesClient() {
             </section>
 
             {/* Benefits - Cards avec hover effects */}
-            <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+            <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-4">
@@ -476,7 +476,7 @@ export function PartenairesClient() {
             {/* ═══════════════════════════════════════════════════════════
                 GENERATOR + LIVE PREVIEW — Side by side on desktop
                 ═══════════════════════════════════════════════════════════ */}
-            <section className="py-24 bg-gradient-to-b from-white to-gray-50" id="generator">
+            <section className="py-16 md:py-20 bg-gradient-to-b from-white to-gray-50" id="generator">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/10 rounded-full text-sauge text-sm font-semibold mb-6">
@@ -797,7 +797,7 @@ export function PartenairesClient() {
 
             {/* Full iframe Preview */}
             {showPreview && (
-                <section className="py-24 bg-gray-50 border-t border-gray-100">
+                <section className="py-16 md:py-20 bg-gray-50 border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
                             <div className="text-center mb-12">
@@ -831,7 +831,7 @@ export function PartenairesClient() {
             )}
 
             {/* Installation Steps */}
-            <section className="py-24 bg-white border-t border-gray-100">
+            <section className="py-16 md:py-20 bg-white border-t border-gray-100">
                 <div className="container mx-auto px-4">
                     <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-16">
@@ -953,7 +953,7 @@ export function PartenairesClient() {
             </section>
 
             {/* FAQ - Premium accordion */}
-            <section className="py-24 bg-white border-t border-gray-100">
+            <section className="py-16 md:py-20 bg-white border-t border-gray-100">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto">
                         <div className="text-center mb-16">
@@ -1009,7 +1009,7 @@ export function PartenairesClient() {
             </section>
 
             {/* Contact Form Section */}
-            <section className="py-24 relative overflow-hidden" id="contact-partenaire">
+            <section className="py-16 md:py-20 relative overflow-hidden" id="contact-partenaire">
                 <div className="absolute inset-0 bg-gradient-to-br from-ink via-[#1a2f28] to-ink" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(46,94,78,0.4),transparent_50%)]" />
 
