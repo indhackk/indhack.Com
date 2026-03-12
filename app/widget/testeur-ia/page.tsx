@@ -26,7 +26,7 @@ export default async function WidgetTesteurIAPage({ searchParams }: PageProps) {
 
     return (
         <main
-            className="min-h-screen py-4"
+            className="py-4"
             style={{
                 backgroundColor: theme.darkMode ? "#1a1a2e" : "#FAFBFA",
             }}

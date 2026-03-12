@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
     Bot,
     Loader2,
@@ -313,9 +313,27 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
 
     const blockedCount = result?.crawlers.filter(c => c.status === "blocked").length || 0;
 
+    // Auto-resize iframe via postMessage
+    const containerRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        const sendHeight = () => {
+            if (containerRef.current) {
+                const height = containerRef.current.scrollHeight + 20;
+                window.parent.postMessage({ type: "indhack-widget-resize", height }, "*");
+            }
+        };
+        // Send on load and after render
+        sendHeight();
+        const timer = setTimeout(sendHeight, 500);
+        const observer = new ResizeObserver(sendHeight);
+        if (containerRef.current) observer.observe(containerRef.current);
+        return () => { clearTimeout(timer); observer.disconnect(); };
+    }, [result, loading, leadSubmitted]);
+
     return (
         <div
-            className="max-w-2xl mx-auto p-3 sm:p-4 min-h-screen"
+            ref={containerRef}
+            className="max-w-2xl mx-auto p-3 sm:p-4"
             style={{
                 backgroundColor: isDark ? "#1e1e2e" : "#ffffff",
                 borderRadius,
@@ -443,7 +461,7 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: Tes
                     )}
 
                     {/* Backlink inside the iframe */}
-                    <div className="mt-6 text-center">
+                    <div className="mt-4 text-center">
                         <a
                             href="https://indhack.com/outils/testeur-visibilite-ia"
                             target="_blank"

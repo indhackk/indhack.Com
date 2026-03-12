@@ -29,6 +29,8 @@ import {
     Sun,
     Eye,
     RotateCcw,
+    Send,
+    FileDown,
 } from "lucide-react";
 
 // Lazy load Lottie pour performance
@@ -102,9 +104,9 @@ function WidgetMiniPreview({
     const cardBg = darkMode ? "#252547" : "#ffffff";
     const textColor = darkMode ? "#e2e8f0" : "#2A3830";
     const mutedText = darkMode ? "#94a3b8" : "#6b7280";
-    const inputBg = darkMode ? "#1e1e3a" : "#f3f4f6";
     const borderColor = darkMode ? "#374151" : "#e5e7eb";
     const rad = `${borderRadius}px`;
+    const accentBg = `${primaryColor}12`;
 
     return (
         <div
@@ -112,43 +114,34 @@ function WidgetMiniPreview({
             style={{
                 backgroundColor: bg,
                 borderRadius: rad,
-                padding: "24px",
+                padding: "16px",
                 border: `1px solid ${borderColor}`,
             }}
         >
-            {/* Badge */}
-            <div className="flex justify-center mb-3">
+            {/* Badge + Title compact */}
+            <div className="flex items-center gap-2 mb-2.5">
                 <div
-                    className="flex items-center gap-1.5 px-3 py-1 text-[10px] font-semibold tracking-wider uppercase"
-                    style={{
-                        backgroundColor: `${primaryColor}15`,
-                        color: primaryColor,
-                        borderRadius: "9999px",
-                    }}
+                    className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: accentBg }}
                 >
-                    <Bot className="w-3 h-3" />
-                    Testeur visibilité IA
+                    <Bot className="w-3.5 h-3.5" style={{ color: primaryColor }} />
+                </div>
+                <div className="min-w-0">
+                    <h3
+                        className="font-bold text-[13px] leading-tight"
+                        style={{ color: textColor }}
+                    >
+                        Visible par <span style={{ color: primaryColor }}>ChatGPT</span> ?
+                    </h3>
+                    <p className="text-[9px] leading-tight" style={{ color: mutedText }}>
+                        Analysez 8 crawlers IA en 30s
+                    </p>
                 </div>
             </div>
 
-            {/* Title */}
-            <h3
-                className="text-center font-bold text-base mb-1"
-                style={{ color: textColor }}
-            >
-                Votre site est-il visible par{" "}
-                <span style={{ color: primaryColor }}>ChatGPT</span> ?
-            </h3>
-            <p
-                className="text-center text-[11px] mb-4"
-                style={{ color: mutedText }}
-            >
-                Analysez vos signaux GEO en 30 secondes
-            </p>
-
-            {/* Input + Button */}
+            {/* Input + Button compact */}
             <div
-                className="flex items-center gap-2 p-1.5"
+                className="flex items-center gap-1.5 p-1"
                 style={{
                     backgroundColor: cardBg,
                     borderRadius: rad,
@@ -159,14 +152,14 @@ function WidgetMiniPreview({
                     type="text"
                     readOnly
                     value="https://votre-site.com"
-                    className="flex-1 text-xs px-3 py-2.5 bg-transparent outline-none"
+                    className="flex-1 text-[11px] px-2.5 py-2 bg-transparent outline-none min-w-0"
                     style={{ color: mutedText }}
                 />
                 <button
-                    className="flex items-center gap-1.5 px-4 py-2.5 text-white text-xs font-semibold transition-all whitespace-nowrap"
+                    className="flex items-center gap-1 px-3 py-2 text-white text-[11px] font-semibold whitespace-nowrap flex-shrink-0"
                     style={{
                         backgroundColor: buttonColor,
-                        borderRadius: `${Math.max(0, parseInt(borderRadius) - 4)}px`,
+                        borderRadius: `${Math.max(0, parseInt(borderRadius) - 3)}px`,
                     }}
                 >
                     <Zap className="w-3 h-3" />
@@ -174,22 +167,47 @@ function WidgetMiniPreview({
                 </button>
             </div>
 
-            {/* Subtext */}
-            <p
-                className="text-center text-[10px] mt-2.5"
-                style={{ color: mutedText }}
+            {/* Mock score result - adds visual appeal */}
+            <div
+                className="mt-2.5 p-2.5 rounded-lg"
+                style={{ backgroundColor: accentBg, border: `1px solid ${primaryColor}20` }}
             >
-                Gratuit &bull; 8 crawlers IA analysés
-            </p>
+                <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-[9px] font-semibold uppercase tracking-wider" style={{ color: primaryColor }}>
+                        Score visibilité IA
+                    </span>
+                    <span className="text-[13px] font-bold" style={{ color: primaryColor }}>
+                        72/100
+                    </span>
+                </div>
+                {/* Progress bar */}
+                <div className="w-full h-1.5 rounded-full" style={{ backgroundColor: `${primaryColor}20` }}>
+                    <div
+                        className="h-full rounded-full transition-all"
+                        style={{ width: "72%", backgroundColor: primaryColor }}
+                    />
+                </div>
+                {/* Mini crawler results */}
+                <div className="flex items-center gap-1.5 mt-2">
+                    {["GPT", "Claude", "Perplexity", "Gemini"].map((name) => (
+                        <div
+                            key={name}
+                            className="flex-1 text-center py-0.5 rounded text-[7px] font-medium"
+                            style={{ backgroundColor: cardBg, color: mutedText, border: `1px solid ${borderColor}` }}
+                        >
+                            {name}
+                        </div>
+                    ))}
+                </div>
+            </div>
 
             {/* Backlink */}
-            <div className="flex justify-center mt-3">
+            <div className="flex justify-center mt-2">
                 <span
-                    className="text-[9px] flex items-center gap-1"
+                    className="text-[8px] flex items-center gap-1"
                     style={{ color: darkMode ? "#555" : "#c0c0c0" }}
                 >
-                    <Bot className="w-2.5 h-2.5" />
-                    Propulsé par IndHack — Testeur de visibilité IA
+                    Propulsé par IndHack
                 </span>
             </div>
         </div>
@@ -209,6 +227,46 @@ export function PartenairesClient() {
     const [buttonText, setButtonText] = useState("Tester");
     const [borderRadius, setBorderRadius] = useState("12");
     const [darkMode, setDarkMode] = useState(false);
+
+    // Contact form state
+    const [contactForm, setContactForm] = useState({ name: "", contactEmail: "", website: "", message: "" });
+    const [contactSubmitted, setContactSubmitted] = useState(false);
+    const [contactLoading, setContactLoading] = useState(false);
+    const [contactError, setContactError] = useState("");
+
+    const handleContactSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setContactLoading(true);
+        setContactError("");
+        try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    access_key: "dbf0dae2-86ac-495e-a670-c4fc028ce036",
+                    subject: `🤝 Question partenaire - ${contactForm.name}`,
+                    from_name: contactForm.name,
+                    replyto: contactForm.contactEmail,
+                    Nom: contactForm.name,
+                    Email: contactForm.contactEmail,
+                    Site_Web: contactForm.website || "Non renseigné",
+                    Message: contactForm.message,
+                    Source: "Page Partenaires",
+                }),
+            });
+            const data = await res.json();
+            if (data.success) {
+                setContactSubmitted(true);
+                setContactForm({ name: "", contactEmail: "", website: "", message: "" });
+            } else {
+                setContactError("Erreur lors de l'envoi. Réessayez ou écrivez-moi à contact@indhack.com");
+            }
+        } catch {
+            setContactError("Erreur de connexion. Écrivez-moi à contact@indhack.com");
+        } finally {
+            setContactLoading(false);
+        }
+    };
 
     const isDefault = primaryColor === "#2E5E4E" && buttonColor === "#2E5E4E" && buttonText === "Tester" && borderRadius === "12" && !darkMode;
 
@@ -255,11 +313,12 @@ export function PartenairesClient() {
         const rad = `border-radius:${borderRadius}px;`;
 
         const code = `<div style="max-width:700px;margin:0 auto;${bg}">
-  <iframe src="${iframeUrl}" width="100%" height="720" style="border:none;${rad}box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);" loading="lazy"></iframe>
+  <iframe id="indhack-widget" src="${iframeUrl}" width="100%" height="400" style="border:none;${rad}box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);transition:height 0.3s ease;" loading="lazy"></iframe>
   <p style="text-align:right;font-size:11px;margin-top:4px;opacity:0.6;">
     <a href="https://indhack.com/outils/testeur-visibilite-ia" target="_blank" rel="dofollow" style="color:inherit;text-decoration:none;">${randomAnchor}</a>
   </p>
-</div>`;
+</div>
+<script>window.addEventListener("message",function(e){if(e.data&&e.data.type==="indhack-widget-resize"){document.getElementById("indhack-widget").style.height=e.data.height+"px";}});</script>`;
 
         setGeneratedCode(code);
         setShowPreview(true);
@@ -656,29 +715,21 @@ export function PartenairesClient() {
                         {/* RIGHT: Live preview (2 cols) — sticky */}
                         <div className="lg:col-span-2 lg:sticky lg:top-24">
                             <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-                                {/* Preview header */}
-                                <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100 bg-gray-50/50">
-                                    <div className="flex items-center gap-2">
-                                        <Eye className="w-4 h-4 text-sauge" />
-                                        <span className="text-xs font-semibold text-ink">Aperçu en temps réel</span>
+                                {/* Preview header — compact browser chrome */}
+                                <div className="flex items-center gap-2 px-3 py-2 border-b border-gray-100 bg-gray-50">
+                                    <div className="flex items-center gap-1">
+                                        <div className="w-2 h-2 rounded-full bg-red-400" />
+                                        <div className="w-2 h-2 rounded-full bg-amber-400" />
+                                        <div className="w-2 h-2 rounded-full bg-emerald-400" />
                                     </div>
-                                    <div className="flex items-center gap-1.5">
-                                        <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
-                                        <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-                                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
-                                    </div>
-                                </div>
-
-                                {/* Browser bar mock */}
-                                <div className="px-4 py-2 border-b border-gray-100 bg-gray-50/30">
-                                    <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-[10px] text-gray-400 font-mono">
-                                        <Globe className="w-3 h-3" />
+                                    <div className="flex-1 flex items-center gap-1.5 px-2.5 py-1 bg-white rounded-md border border-gray-200 text-[9px] text-gray-400 font-mono">
+                                        <Globe className="w-2.5 h-2.5" />
                                         votre-agence.fr/outils
                                     </div>
                                 </div>
 
-                                {/* Live widget preview */}
-                                <div className="p-4">
+                                {/* Live widget preview — tight padding */}
+                                <div className="p-3">
                                     <WidgetMiniPreview
                                         primaryColor={primaryColor}
                                         buttonColor={buttonColor}
@@ -688,9 +739,10 @@ export function PartenairesClient() {
                                     />
                                 </div>
 
-                                <div className="px-4 pb-4">
-                                    <p className="text-[10px] text-gray-400 text-center">
-                                        Ce que vos visiteurs verront sur votre site
+                                <div className="px-3 pb-2.5 flex items-center justify-center gap-1.5">
+                                    <Eye className="w-3 h-3 text-sauge" />
+                                    <p className="text-[10px] text-gray-400">
+                                        Aperçu en temps réel
                                     </p>
                                 </div>
                             </div>
@@ -765,7 +817,7 @@ export function PartenairesClient() {
                                 <iframe
                                     src={previewIframeUrl}
                                     width="100%"
-                                    height="720"
+                                    height="400"
                                     style={{ border: "none", borderRadius: `${borderRadius}px` }}
                                     loading="lazy"
                                 />
@@ -790,9 +842,18 @@ export function PartenairesClient() {
                             <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-4">
                                 Comment installer le widget
                             </h2>
-                            <p className="text-soft text-lg">
+                            <p className="text-soft text-lg mb-4">
                                 3 étapes simples, moins de 2 minutes.
                             </p>
+                            <a
+                                href="/guide-installation-widget-indhack.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-sauge/10 text-sauge rounded-full text-sm font-semibold hover:bg-sauge hover:text-white transition-all duration-300"
+                            >
+                                <FileDown className="w-4 h-4" />
+                                Télécharger le guide PDF par CMS
+                            </a>
                         </div>
 
                         <div className="grid md:grid-cols-3 gap-8">
@@ -947,36 +1008,129 @@ export function PartenairesClient() {
                 </div>
             </section>
 
-            {/* CTA - Gradient premium */}
-            <section className="py-24 relative overflow-hidden">
+            {/* Contact Form Section */}
+            <section className="py-24 relative overflow-hidden" id="contact-partenaire">
                 <div className="absolute inset-0 bg-gradient-to-br from-ink via-[#1a2f28] to-ink" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(46,94,78,0.4),transparent_50%)]" />
 
-                <div className="container mx-auto px-4 text-center relative z-10">
-                    <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center mx-auto mb-8">
-                        <MessageSquare className="w-10 h-10 text-sauge-light" />
-                    </div>
-                    <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
-                        Des questions sur l&apos;intégration ?
-                    </h2>
-                    <p className="text-white/60 mb-10 max-w-lg mx-auto text-lg">
-                        Je suis disponible pour vous aider à installer le widget ou pour discuter d&apos;un partenariat personnalisé.
-                    </p>
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link
-                            href="/contact"
-                            className="group inline-flex items-center gap-3 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-all duration-300 shadow-lg shadow-black/20"
-                        >
-                            Contactez-moi
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                        <a
-                            href="#generator"
-                            className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors px-6 py-3"
-                        >
-                            <Sparkles className="w-4 h-4" />
-                            Générer mon widget
-                        </a>
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="max-w-2xl mx-auto">
+                        <div className="text-center mb-10">
+                            <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
+                                <MessageSquare className="w-8 h-8 text-sauge-light" />
+                            </div>
+                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-3">
+                                Des questions sur l&apos;intégration ?
+                            </h2>
+                            <p className="text-white/60 text-lg">
+                                Je vous aide à installer le widget ou à discuter d&apos;un partenariat personnalisé.
+                            </p>
+                        </div>
+
+                        {contactSubmitted ? (
+                            <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-10 text-center">
+                                <div className="w-14 h-14 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <CheckCircle2 className="w-7 h-7 text-emerald-400" />
+                                </div>
+                                <h3 className="text-xl font-heading font-bold text-white mb-2">Message envoyé !</h3>
+                                <p className="text-white/60 mb-6">Je reviens vers vous sous 24h. À très vite !</p>
+                                <button
+                                    onClick={() => setContactSubmitted(false)}
+                                    className="text-sm text-sauge-light hover:text-white transition-colors"
+                                >
+                                    Envoyer un autre message
+                                </button>
+                            </div>
+                        ) : (
+                            <form onSubmit={handleContactSubmit} className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-6 md:p-8 space-y-4">
+                                <div className="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label className="block text-xs font-semibold text-white/70 mb-1.5">Nom *</label>
+                                        <input
+                                            required
+                                            type="text"
+                                            value={contactForm.name}
+                                            onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
+                                            placeholder="Votre nom"
+                                            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/30 text-sm focus:border-sauge-light focus:ring-2 focus:ring-sauge/20 transition-all outline-none"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block text-xs font-semibold text-white/70 mb-1.5">Email *</label>
+                                        <input
+                                            required
+                                            type="email"
+                                            value={contactForm.contactEmail}
+                                            onChange={(e) => setContactForm({ ...contactForm, contactEmail: e.target.value })}
+                                            placeholder="votre@email.com"
+                                            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/30 text-sm focus:border-sauge-light focus:ring-2 focus:ring-sauge/20 transition-all outline-none"
+                                        />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label className="block text-xs font-semibold text-white/70 mb-1.5">Site web</label>
+                                    <input
+                                        type="url"
+                                        value={contactForm.website}
+                                        onChange={(e) => setContactForm({ ...contactForm, website: e.target.value })}
+                                        placeholder="https://votre-agence.fr"
+                                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/30 text-sm focus:border-sauge-light focus:ring-2 focus:ring-sauge/20 transition-all outline-none"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-xs font-semibold text-white/70 mb-1.5">Votre question *</label>
+                                    <textarea
+                                        required
+                                        rows={3}
+                                        value={contactForm.message}
+                                        onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                                        placeholder="Besoin d'aide pour l'intégration, question technique, partenariat..."
+                                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/30 text-sm focus:border-sauge-light focus:ring-2 focus:ring-sauge/20 transition-all outline-none resize-none"
+                                    />
+                                </div>
+
+                                {contactError && (
+                                    <div className="p-3 bg-red-500/20 border border-red-500/30 rounded-lg text-red-300 text-sm">
+                                        {contactError}
+                                    </div>
+                                )}
+
+                                <button
+                                    type="submit"
+                                    disabled={contactLoading}
+                                    className="w-full bg-white text-ink px-8 py-4 rounded-xl font-bold hover:bg-sauge hover:text-white transition-all duration-300 flex items-center justify-center gap-2 text-base disabled:opacity-50"
+                                >
+                                    {contactLoading ? (
+                                        <>
+                                            <div className="w-4 h-4 border-2 border-ink/30 border-t-ink rounded-full animate-spin" />
+                                            Envoi en cours...
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Send className="w-4 h-4" />
+                                            Envoyer ma question
+                                        </>
+                                    )}
+                                </button>
+                            </form>
+                        )}
+
+                        <div className="flex items-center justify-center gap-6 mt-8">
+                            <a
+                                href="mailto:contact@indhack.com"
+                                className="flex items-center gap-2 text-white/50 hover:text-white transition-colors text-sm"
+                            >
+                                <Mail className="w-4 h-4" />
+                                contact@indhack.com
+                            </a>
+                            <a
+                                href="#generator"
+                                className="flex items-center gap-2 text-white/50 hover:text-white transition-colors text-sm"
+                            >
+                                <Sparkles className="w-4 h-4" />
+                                Générer mon widget
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
