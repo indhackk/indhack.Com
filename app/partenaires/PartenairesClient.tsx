@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import {
@@ -23,6 +23,12 @@ import {
     Rocket,
     Shield,
     Gift,
+    Palette,
+    Type,
+    Moon,
+    Sun,
+    Eye,
+    RotateCcw,
 } from "lucide-react";
 
 // Lazy load Lottie pour performance
@@ -67,6 +73,129 @@ const ANCHORS = [
     "Outil par IndHack",
 ];
 
+const COLOR_PRESETS = [
+    { name: "Sauge", primary: "#2E5E4E", button: "#2E5E4E" },
+    { name: "Bleu", primary: "#2563EB", button: "#2563EB" },
+    { name: "Violet", primary: "#7C3AED", button: "#7C3AED" },
+    { name: "Rouge", primary: "#DC2626", button: "#DC2626" },
+    { name: "Orange", primary: "#EA580C", button: "#EA580C" },
+    { name: "Rose", primary: "#DB2777", button: "#DB2777" },
+    { name: "Noir", primary: "#18181B", button: "#18181B" },
+    { name: "Cyan", primary: "#0891B2", button: "#0891B2" },
+];
+
+// Mini-preview component that renders a fake widget UI with live theme
+function WidgetMiniPreview({
+    primaryColor,
+    buttonColor,
+    buttonText,
+    borderRadius,
+    darkMode,
+}: {
+    primaryColor: string;
+    buttonColor: string;
+    buttonText: string;
+    borderRadius: string;
+    darkMode: boolean;
+}) {
+    const bg = darkMode ? "#1a1a2e" : "#FAFBFA";
+    const cardBg = darkMode ? "#252547" : "#ffffff";
+    const textColor = darkMode ? "#e2e8f0" : "#2A3830";
+    const mutedText = darkMode ? "#94a3b8" : "#6b7280";
+    const inputBg = darkMode ? "#1e1e3a" : "#f3f4f6";
+    const borderColor = darkMode ? "#374151" : "#e5e7eb";
+    const rad = `${borderRadius}px`;
+
+    return (
+        <div
+            className="w-full transition-all duration-300"
+            style={{
+                backgroundColor: bg,
+                borderRadius: rad,
+                padding: "24px",
+                border: `1px solid ${borderColor}`,
+            }}
+        >
+            {/* Badge */}
+            <div className="flex justify-center mb-3">
+                <div
+                    className="flex items-center gap-1.5 px-3 py-1 text-[10px] font-semibold tracking-wider uppercase"
+                    style={{
+                        backgroundColor: `${primaryColor}15`,
+                        color: primaryColor,
+                        borderRadius: "9999px",
+                    }}
+                >
+                    <Bot className="w-3 h-3" />
+                    Testeur visibilité IA
+                </div>
+            </div>
+
+            {/* Title */}
+            <h3
+                className="text-center font-bold text-base mb-1"
+                style={{ color: textColor }}
+            >
+                Votre site est-il visible par{" "}
+                <span style={{ color: primaryColor }}>ChatGPT</span> ?
+            </h3>
+            <p
+                className="text-center text-[11px] mb-4"
+                style={{ color: mutedText }}
+            >
+                Analysez vos signaux GEO en 30 secondes
+            </p>
+
+            {/* Input + Button */}
+            <div
+                className="flex items-center gap-2 p-1.5"
+                style={{
+                    backgroundColor: cardBg,
+                    borderRadius: rad,
+                    border: `1px solid ${borderColor}`,
+                }}
+            >
+                <input
+                    type="text"
+                    readOnly
+                    value="https://votre-site.com"
+                    className="flex-1 text-xs px-3 py-2.5 bg-transparent outline-none"
+                    style={{ color: mutedText }}
+                />
+                <button
+                    className="flex items-center gap-1.5 px-4 py-2.5 text-white text-xs font-semibold transition-all whitespace-nowrap"
+                    style={{
+                        backgroundColor: buttonColor,
+                        borderRadius: `${Math.max(0, parseInt(borderRadius) - 4)}px`,
+                    }}
+                >
+                    <Zap className="w-3 h-3" />
+                    {buttonText}
+                </button>
+            </div>
+
+            {/* Subtext */}
+            <p
+                className="text-center text-[10px] mt-2.5"
+                style={{ color: mutedText }}
+            >
+                Gratuit &bull; 8 crawlers IA analysés
+            </p>
+
+            {/* Backlink */}
+            <div className="flex justify-center mt-3">
+                <span
+                    className="text-[9px] flex items-center gap-1"
+                    style={{ color: darkMode ? "#555" : "#c0c0c0" }}
+                >
+                    <Bot className="w-2.5 h-2.5" />
+                    Propulsé par IndHack — Testeur de visibilité IA
+                </span>
+            </div>
+        </div>
+    );
+}
+
 export function PartenairesClient() {
     const [email, setEmail] = useState("");
     const [generatedCode, setGeneratedCode] = useState("");
@@ -80,6 +209,16 @@ export function PartenairesClient() {
     const [buttonText, setButtonText] = useState("Tester");
     const [borderRadius, setBorderRadius] = useState("12");
     const [darkMode, setDarkMode] = useState(false);
+
+    const isDefault = primaryColor === "#2E5E4E" && buttonColor === "#2E5E4E" && buttonText === "Tester" && borderRadius === "12" && !darkMode;
+
+    const resetCustomization = () => {
+        setPrimaryColor("#2E5E4E");
+        setButtonColor("#2E5E4E");
+        setButtonText("Tester");
+        setBorderRadius("12");
+        setDarkMode(false);
+    };
 
     const validateEmail = (email: string) => {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -131,6 +270,12 @@ export function PartenairesClient() {
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
     };
+
+    // Memoize preview URL for iframe
+    const previewIframeUrl = useMemo(() => {
+        return buildIframeUrl().replace("https://indhack.com", "");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [email, primaryColor, buttonColor, buttonText, borderRadius, darkMode]);
 
     return (
         <div className="bg-white">
@@ -269,130 +414,178 @@ export function PartenairesClient() {
                 </div>
             </section>
 
-            {/* Generator - Premium card */}
+            {/* ═══════════════════════════════════════════════════════════
+                GENERATOR + LIVE PREVIEW — Side by side on desktop
+                ═══════════════════════════════════════════════════════════ */}
             <section className="py-24 bg-gradient-to-b from-white to-gray-50" id="generator">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-3xl mx-auto">
-                        <div className="text-center mb-12">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/10 rounded-full text-sauge text-sm font-semibold mb-6">
-                                <span className="w-6 h-6 bg-sauge text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
-                                <span>Étape 1</span>
-                            </div>
-                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-4">
-                                Générez votre widget personnalisé
-                            </h2>
-                            <p className="text-soft text-lg">
-                                Entrez l&apos;email où vous souhaitez recevoir les leads.
-                            </p>
+                    <div className="text-center mb-16">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/10 rounded-full text-sauge text-sm font-semibold mb-6">
+                            <Sparkles className="w-4 h-4" />
+                            <span>Personnalisez et générez</span>
                         </div>
+                        <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-4">
+                            Créez votre widget sur-mesure
+                        </h2>
+                        <p className="text-soft text-lg max-w-2xl mx-auto">
+                            Personnalisez les couleurs, le bouton et le style pour l&apos;adapter à votre charte graphique.
+                            L&apos;aperçu se met à jour en temps réel.
+                        </p>
+                    </div>
 
-                        <div className="bg-white rounded-3xl border border-gray-200 p-8 md:p-10 shadow-xl shadow-gray-100/50">
-                            <div className="space-y-6">
-                                <div>
-                                    <label htmlFor="agency-email" className="block text-sm font-semibold text-ink mb-3">
-                                        Email de votre agence
-                                    </label>
-                                    <div className="relative group">
-                                        <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-sauge transition-colors" />
-                                        <input
-                                            id="agency-email"
-                                            type="email"
-                                            value={email}
-                                            onChange={(e) => {
-                                                setEmail(e.target.value);
-                                                setEmailError("");
-                                            }}
-                                            onKeyDown={(e) => {
-                                                if (e.key === "Enter") {
-                                                    e.preventDefault();
-                                                    generateCode();
-                                                }
-                                            }}
-                                            placeholder="contact@votre-agence.fr"
-                                            className="w-full pl-12 pr-4 py-4 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-sauge focus:bg-white focus:ring-4 focus:ring-sauge/10 transition-all text-ink placeholder-gray-400 text-lg"
-                                        />
-                                    </div>
-                                    {emailError && (
-                                        <p className="text-red-500 text-sm mt-2 flex items-center gap-2">
-                                            <span className="w-1.5 h-1.5 bg-red-500 rounded-full" />
-                                            {emailError}
-                                        </p>
-                                    )}
-                                    <p className="text-gray-500 text-sm mt-3">
-                                        Cet email recevra les coordonnées de chaque prospect qui demande un rapport.
+                    <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-8 items-start">
+                        {/* LEFT: Configuration panel (3 cols) */}
+                        <div className="lg:col-span-3 space-y-6">
+                            {/* Email card */}
+                            <div className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-sm">
+                                <div className="flex items-center gap-3 mb-5">
+                                    <div className="w-8 h-8 bg-sauge text-white rounded-lg flex items-center justify-center text-sm font-bold">1</div>
+                                    <h3 className="font-bold text-ink text-lg">Votre email de réception</h3>
+                                </div>
+                                <div className="relative group">
+                                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-sauge transition-colors" />
+                                    <input
+                                        id="agency-email"
+                                        type="email"
+                                        value={email}
+                                        onChange={(e) => {
+                                            setEmail(e.target.value);
+                                            setEmailError("");
+                                        }}
+                                        onKeyDown={(e) => {
+                                            if (e.key === "Enter") {
+                                                e.preventDefault();
+                                                generateCode();
+                                            }
+                                        }}
+                                        placeholder="contact@votre-agence.fr"
+                                        className="w-full pl-12 pr-4 py-4 bg-gray-50 border-2 border-gray-200 rounded-xl focus:border-sauge focus:bg-white focus:ring-4 focus:ring-sauge/10 transition-all text-ink placeholder-gray-400"
+                                    />
+                                </div>
+                                {emailError && (
+                                    <p className="text-red-500 text-sm mt-2 flex items-center gap-2">
+                                        <span className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+                                        {emailError}
                                     </p>
+                                )}
+                                <p className="text-gray-400 text-xs mt-2">
+                                    Chaque prospect qui demande un rapport vous sera envoyé à cette adresse.
+                                </p>
+                            </div>
+
+                            {/* Customization card */}
+                            <div className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-sm">
+                                <div className="flex items-center justify-between mb-6">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 bg-sauge text-white rounded-lg flex items-center justify-center text-sm font-bold">2</div>
+                                        <h3 className="font-bold text-ink text-lg">Personnalisation</h3>
+                                    </div>
+                                    {!isDefault && (
+                                        <button
+                                            onClick={resetCustomization}
+                                            className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-sauge transition-colors"
+                                        >
+                                            <RotateCcw className="w-3 h-3" />
+                                            Réinitialiser
+                                        </button>
+                                    )}
                                 </div>
 
-                                {/* Customization options */}
-                                <div className="pt-6 border-t border-gray-100">
-                                    <div className="flex items-center gap-2 mb-4">
-                                        <Sparkles className="w-4 h-4 text-sauge" />
-                                        <span className="text-sm font-semibold text-ink">Personnalisez votre widget</span>
-                                        <span className="text-xs text-gray-400">(optionnel)</span>
+                                {/* Color presets */}
+                                <div className="mb-6">
+                                    <label className="block text-xs font-semibold text-soft uppercase tracking-wider mb-3">
+                                        Thèmes rapides
+                                    </label>
+                                    <div className="flex flex-wrap gap-2">
+                                        {COLOR_PRESETS.map((preset) => (
+                                            <button
+                                                key={preset.name}
+                                                onClick={() => {
+                                                    setPrimaryColor(preset.primary);
+                                                    setButtonColor(preset.button);
+                                                }}
+                                                className={`flex items-center gap-2 px-3 py-2 rounded-lg border text-xs font-medium transition-all duration-200 ${
+                                                    primaryColor === preset.primary
+                                                        ? "border-gray-900 bg-gray-50 text-ink shadow-sm scale-105"
+                                                        : "border-gray-200 text-soft hover:border-gray-300 hover:bg-gray-50"
+                                                }`}
+                                            >
+                                                <div
+                                                    className="w-4 h-4 rounded-full ring-1 ring-black/10"
+                                                    style={{ backgroundColor: preset.primary }}
+                                                />
+                                                {preset.name}
+                                            </button>
+                                        ))}
                                     </div>
+                                </div>
 
-                                    <div className="grid grid-cols-2 gap-4">
-                                        {/* Primary Color */}
-                                        <div>
-                                            <label className="block text-xs font-medium text-soft mb-1.5">
-                                                Couleur principale
-                                            </label>
-                                            <div className="flex items-center gap-2">
-                                                <input
-                                                    type="color"
-                                                    value={primaryColor}
-                                                    onChange={(e) => setPrimaryColor(e.target.value)}
-                                                    className="w-8 h-8 rounded-lg border border-gray-200 cursor-pointer"
-                                                />
-                                                <input
-                                                    type="text"
-                                                    value={primaryColor}
-                                                    onChange={(e) => setPrimaryColor(e.target.value)}
-                                                    className="flex-1 px-2 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-xs text-ink font-mono"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        {/* Button Color */}
-                                        <div>
-                                            <label className="block text-xs font-medium text-soft mb-1.5">
-                                                Couleur du bouton
-                                            </label>
-                                            <div className="flex items-center gap-2">
-                                                <input
-                                                    type="color"
-                                                    value={buttonColor}
-                                                    onChange={(e) => setButtonColor(e.target.value)}
-                                                    className="w-8 h-8 rounded-lg border border-gray-200 cursor-pointer"
-                                                />
-                                                <input
-                                                    type="text"
-                                                    value={buttonColor}
-                                                    onChange={(e) => setButtonColor(e.target.value)}
-                                                    className="flex-1 px-2 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-xs text-ink font-mono"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        {/* Button Text */}
-                                        <div>
-                                            <label className="block text-xs font-medium text-soft mb-1.5">
-                                                Texte du bouton
-                                            </label>
+                                {/* Custom colors */}
+                                <div className="grid grid-cols-2 gap-4 mb-5">
+                                    <div>
+                                        <label className="flex items-center gap-1.5 text-xs font-semibold text-soft uppercase tracking-wider mb-2">
+                                            <Palette className="w-3 h-3" />
+                                            Couleur principale
+                                        </label>
+                                        <div className="flex items-center gap-2 bg-gray-50 rounded-xl p-2 border border-gray-200">
+                                            <input
+                                                type="color"
+                                                value={primaryColor}
+                                                onChange={(e) => setPrimaryColor(e.target.value)}
+                                                className="w-10 h-10 rounded-lg border-0 cursor-pointer bg-transparent"
+                                            />
                                             <input
                                                 type="text"
-                                                value={buttonText}
-                                                onChange={(e) => setButtonText(e.target.value)}
-                                                className="w-full px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-ink"
-                                                placeholder="Tester"
+                                                value={primaryColor}
+                                                onChange={(e) => setPrimaryColor(e.target.value)}
+                                                className="flex-1 px-2 py-1 bg-white border border-gray-200 rounded-lg text-xs text-ink font-mono text-center"
                                             />
                                         </div>
+                                    </div>
 
-                                        {/* Border Radius */}
-                                        <div>
-                                            <label className="block text-xs font-medium text-soft mb-1.5">
-                                                Arrondi (px)
-                                            </label>
+                                    <div>
+                                        <label className="flex items-center gap-1.5 text-xs font-semibold text-soft uppercase tracking-wider mb-2">
+                                            <Palette className="w-3 h-3" />
+                                            Couleur du bouton
+                                        </label>
+                                        <div className="flex items-center gap-2 bg-gray-50 rounded-xl p-2 border border-gray-200">
+                                            <input
+                                                type="color"
+                                                value={buttonColor}
+                                                onChange={(e) => setButtonColor(e.target.value)}
+                                                className="w-10 h-10 rounded-lg border-0 cursor-pointer bg-transparent"
+                                            />
+                                            <input
+                                                type="text"
+                                                value={buttonColor}
+                                                onChange={(e) => setButtonColor(e.target.value)}
+                                                className="flex-1 px-2 py-1 bg-white border border-gray-200 rounded-lg text-xs text-ink font-mono text-center"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Button text + radius */}
+                                <div className="grid grid-cols-2 gap-4 mb-5">
+                                    <div>
+                                        <label className="flex items-center gap-1.5 text-xs font-semibold text-soft uppercase tracking-wider mb-2">
+                                            <Type className="w-3 h-3" />
+                                            Texte du bouton
+                                        </label>
+                                        <input
+                                            type="text"
+                                            value={buttonText}
+                                            onChange={(e) => setButtonText(e.target.value)}
+                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm text-ink focus:border-sauge focus:ring-2 focus:ring-sauge/10 transition-all"
+                                            placeholder="Tester"
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label className="flex items-center gap-1.5 text-xs font-semibold text-soft uppercase tracking-wider mb-2">
+                                            Arrondi des bords
+                                        </label>
+                                        <div className="bg-gray-50 border border-gray-200 rounded-xl px-4 py-3">
                                             <input
                                                 type="range"
                                                 min="0"
@@ -401,85 +594,156 @@ export function PartenairesClient() {
                                                 onChange={(e) => setBorderRadius(e.target.value)}
                                                 className="w-full accent-sauge"
                                             />
-                                            <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                                            <div className="flex justify-between text-[10px] text-gray-400 mt-1">
                                                 <span>Carré</span>
-                                                <span>{borderRadius}px</span>
+                                                <span className="font-mono font-bold text-ink">{borderRadius}px</span>
                                                 <span>Arrondi</span>
                                             </div>
                                         </div>
                                     </div>
-
-                                    {/* Dark Mode Toggle */}
-                                    <div className="mt-4 flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200">
-                                        <div>
-                                            <span className="text-sm font-medium text-ink">Mode sombre</span>
-                                            <p className="text-[10px] text-gray-400">Pour les sites avec un fond sombre</p>
-                                        </div>
-                                        <button
-                                            type="button"
-                                            onClick={() => setDarkMode(!darkMode)}
-                                            className={`relative w-11 h-6 rounded-full transition-colors ${darkMode ? "bg-sauge" : "bg-gray-300"}`}
-                                        >
-                                            <div className={`absolute top-0.5 w-5 h-5 bg-white rounded-full shadow transition-transform ${darkMode ? "translate-x-5" : "translate-x-0.5"}`} />
-                                        </button>
-                                    </div>
                                 </div>
 
+                                {/* Dark mode */}
                                 <button
-                                    onClick={generateCode}
-                                    className="w-full bg-gradient-to-r from-sauge to-emerald-600 text-white px-8 py-5 rounded-xl font-bold hover:shadow-lg hover:shadow-sauge/25 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-3 text-lg group mt-6"
+                                    type="button"
+                                    onClick={() => setDarkMode(!darkMode)}
+                                    className={`w-full flex items-center justify-between p-4 rounded-xl border transition-all duration-300 ${
+                                        darkMode
+                                            ? "bg-gray-900 border-gray-700"
+                                            : "bg-gray-50 border-gray-200 hover:border-gray-300"
+                                    }`}
                                 >
-                                    <Code2 className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                                    Générer mon code HTML
-                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    <div className="flex items-center gap-3">
+                                        {darkMode ? (
+                                            <Moon className="w-5 h-5 text-indigo-400" />
+                                        ) : (
+                                            <Sun className="w-5 h-5 text-amber-500" />
+                                        )}
+                                        <div className="text-left">
+                                            <span className={`text-sm font-semibold ${darkMode ? "text-white" : "text-ink"}`}>
+                                                Mode {darkMode ? "sombre" : "clair"}
+                                            </span>
+                                            <p className={`text-[11px] ${darkMode ? "text-gray-400" : "text-gray-500"}`}>
+                                                {darkMode ? "Pour les sites avec un fond foncé" : "Thème par défaut pour la plupart des sites"}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className={`relative w-12 h-7 rounded-full transition-colors duration-300 ${
+                                            darkMode ? "bg-indigo-500" : "bg-gray-300"
+                                        }`}
+                                    >
+                                        <div
+                                            className={`absolute top-0.5 w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 ${
+                                                darkMode ? "translate-x-5" : "translate-x-0.5"
+                                            }`}
+                                        />
+                                    </div>
                                 </button>
                             </div>
 
-                            {generatedCode && (
-                                <div className="mt-10 pt-10 border-t border-gray-100">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <label className="text-sm font-semibold text-ink">
-                                            Votre code HTML
-                                        </label>
-                                        <span className="text-xs text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full font-medium flex items-center gap-1.5">
-                                            <Lottie animationData={checkAnimation} loop={false} style={{ width: 16, height: 16 }} />
-                                            Prêt à copier
-                                        </span>
+                            {/* Generate button */}
+                            <button
+                                onClick={generateCode}
+                                className="w-full bg-gradient-to-r from-sauge to-emerald-600 text-white px-8 py-5 rounded-2xl font-bold hover:shadow-lg hover:shadow-sauge/25 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-3 text-lg group"
+                            >
+                                <Code2 className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                                Générer mon code HTML
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </button>
+                        </div>
+
+                        {/* RIGHT: Live preview (2 cols) — sticky */}
+                        <div className="lg:col-span-2 lg:sticky lg:top-24">
+                            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+                                {/* Preview header */}
+                                <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100 bg-gray-50/50">
+                                    <div className="flex items-center gap-2">
+                                        <Eye className="w-4 h-4 text-sauge" />
+                                        <span className="text-xs font-semibold text-ink">Aperçu en temps réel</span>
                                     </div>
-                                    <div className="relative group">
-                                        <textarea
-                                            readOnly
-                                            value={generatedCode}
-                                            className="w-full h-48 p-5 bg-ink text-emerald-400 font-mono text-sm rounded-xl border-2 border-gray-700 resize-none focus:outline-none focus:border-sauge transition-colors"
-                                        />
-                                        <button
-                                            onClick={copyCode}
-                                            className={`absolute top-4 right-4 px-5 py-3 rounded-lg font-semibold text-sm flex items-center gap-2 transition-all duration-300 ${copied
-                                                ? "bg-emerald-500 text-white scale-105"
-                                                : "bg-white text-ink hover:bg-gray-100 hover:scale-105"
-                                                }`}
-                                        >
-                                            {copied ? (
-                                                <>
-                                                    <Check className="w-4 h-4" />
-                                                    Copié !
-                                                </>
-                                            ) : (
-                                                <>
-                                                    <Copy className="w-4 h-4" />
-                                                    Copier le code
-                                                </>
-                                            )}
-                                        </button>
+                                    <div className="flex items-center gap-1.5">
+                                        <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                                        <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
                                     </div>
                                 </div>
-                            )}
+
+                                {/* Browser bar mock */}
+                                <div className="px-4 py-2 border-b border-gray-100 bg-gray-50/30">
+                                    <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-[10px] text-gray-400 font-mono">
+                                        <Globe className="w-3 h-3" />
+                                        votre-agence.fr/outils
+                                    </div>
+                                </div>
+
+                                {/* Live widget preview */}
+                                <div className="p-4">
+                                    <WidgetMiniPreview
+                                        primaryColor={primaryColor}
+                                        buttonColor={buttonColor}
+                                        buttonText={buttonText}
+                                        borderRadius={borderRadius}
+                                        darkMode={darkMode}
+                                    />
+                                </div>
+
+                                <div className="px-4 pb-4">
+                                    <p className="text-[10px] text-gray-400 text-center">
+                                        Ce que vos visiteurs verront sur votre site
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    {/* Generated code — full width below */}
+                    {generatedCode && (
+                        <div className="max-w-6xl mx-auto mt-12">
+                            <div className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-sm">
+                                <div className="flex items-center justify-between mb-5">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 bg-emerald-500 text-white rounded-lg flex items-center justify-center text-sm font-bold">3</div>
+                                        <h3 className="font-bold text-ink text-lg">Votre code HTML</h3>
+                                    </div>
+                                    <span className="text-xs text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full font-medium flex items-center gap-1.5">
+                                        <Lottie animationData={checkAnimation} loop={false} style={{ width: 16, height: 16 }} />
+                                        Prêt à copier
+                                    </span>
+                                </div>
+                                <div className="relative group">
+                                    <textarea
+                                        readOnly
+                                        value={generatedCode}
+                                        className="w-full h-40 p-5 bg-ink text-emerald-400 font-mono text-sm rounded-xl border-2 border-gray-700 resize-none focus:outline-none focus:border-sauge transition-colors"
+                                    />
+                                    <button
+                                        onClick={copyCode}
+                                        className={`absolute top-4 right-4 px-5 py-3 rounded-lg font-semibold text-sm flex items-center gap-2 transition-all duration-300 ${copied
+                                            ? "bg-emerald-500 text-white scale-105"
+                                            : "bg-white text-ink hover:bg-gray-100 hover:scale-105"
+                                            }`}
+                                    >
+                                        {copied ? (
+                                            <>
+                                                <Check className="w-4 h-4" />
+                                                Copié !
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Copy className="w-4 h-4" />
+                                                Copier le code
+                                            </>
+                                        )}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </section>
 
-            {/* Preview */}
+            {/* Full iframe Preview */}
             {showPreview && (
                 <section className="py-24 bg-gray-50 border-t border-gray-100">
                     <div className="container mx-auto px-4">
@@ -499,7 +763,7 @@ export function PartenairesClient() {
 
                             <div className="bg-white rounded-2xl p-4 md:p-8 border border-gray-200 shadow-lg" style={darkMode ? { backgroundColor: "#1a1a2e" } : undefined}>
                                 <iframe
-                                    src={buildIframeUrl().replace("https://indhack.com", "")}
+                                    src={previewIframeUrl}
                                     width="100%"
                                     height="720"
                                     style={{ border: "none", borderRadius: `${borderRadius}px` }}
