@@ -65,6 +65,14 @@ interface VisibilityResult {
     cached?: boolean;
 }
 
+interface WidgetTheme {
+    primaryColor?: string;
+    buttonColor?: string;
+    buttonText?: string;
+    borderRadius?: string;
+    darkMode?: boolean;
+}
+
 const LEVEL_CONFIG = {
     invisible: { color: "text-red-500", bg: "bg-red-500", label: "Invisible pour les IA" },
     partial: { color: "text-amber-500", bg: "bg-amber-500", label: "Partiellement visible" },
@@ -79,7 +87,7 @@ const CATEGORY_CONFIG = {
     format: { label: "Format IA-Friendly", icon: Layout },
 };
 
-function ScoreGauge({ score }: { score: number }) {
+function ScoreGauge({ score, primaryColor }: { score: number; primaryColor?: string }) {
     const radius = 65;
     const circumference = 2 * Math.PI * radius;
     const strokeDashoffset = circumference - (score / 100) * circumference;
@@ -88,7 +96,7 @@ function ScoreGauge({ score }: { score: number }) {
         if (score <= 30) return "#ef4444";
         if (score <= 60) return "#f59e0b";
         if (score <= 85) return "#10b981";
-        return "#2E5E4E";
+        return primaryColor || "#2E5E4E";
     };
 
     return (
@@ -148,7 +156,7 @@ function CrawlerRow({ crawler }: { crawler: CrawlerStatus }) {
     );
 }
 
-function CategoryCard({ category, data }: { category: keyof typeof CATEGORY_CONFIG; data: CategoryScore }) {
+function CategoryCard({ category, data, primaryColor }: { category: keyof typeof CATEGORY_CONFIG; data: CategoryScore; primaryColor?: string }) {
     const config = CATEGORY_CONFIG[category];
     const Icon = config.icon;
     const percentage = Math.round((data.score / data.maxScore) * 100);
@@ -172,8 +180,13 @@ function CategoryCard({ category, data }: { category: keyof typeof CATEGORY_CONF
                     </div>
                     <div className="h-1 bg-gray-100 rounded-full overflow-hidden">
                         <div
-                            className={`h-full rounded-full transition-all duration-700 ${percentage >= 70 ? "bg-emerald-500" : percentage >= 40 ? "bg-amber-500" : "bg-red-500"}`}
-                            style={{ width: `${percentage}%` }}
+                            className={`h-full rounded-full transition-all duration-700`}
+                            style={{
+                                width: `${percentage}%`,
+                                backgroundColor: percentage >= 70
+                                    ? (primaryColor || "#10b981")
+                                    : percentage >= 40 ? "#f59e0b" : "#ef4444"
+                            }}
                         />
                     </div>
                 </div>
@@ -211,9 +224,10 @@ function CategoryCard({ category, data }: { category: keyof typeof CATEGORY_CONF
 interface TesteurIAWidgetProps {
     agencyEmail?: string;
     showLeadForm?: boolean;
+    theme?: WidgetTheme;
 }
 
-export function TesteurIAWidget({ agencyEmail, showLeadForm = true }: TesteurIAWidgetProps) {
+export function TesteurIAWidget({ agencyEmail, showLeadForm = true, theme }: TesteurIAWidgetProps) {
     const [url, setUrl] = useState("");
     const [loading, setLoading] = useState(false);
     const [result, setResult] = useState<VisibilityResult | null>(null);
@@ -224,6 +238,13 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true }: TesteurIAW
     const [leadSubmitting, setLeadSubmitting] = useState(false);
     const [leadSubmitted, setLeadSubmitted] = useState(false);
     const [leadError, setLeadError] = useState<string | null>(null);
+
+    // Theme
+    const primaryColor = theme?.primaryColor || "#2E5E4E";
+    const buttonColor = theme?.buttonColor || primaryColor;
+    const buttonText = theme?.buttonText || "Tester";
+    const borderRadius = theme?.borderRadius ? `${theme.borderRadius}px` : "12px";
+    const isDark = theme?.darkMode || false;
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -293,31 +314,64 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true }: TesteurIAW
     const blockedCount = result?.crawlers.filter(c => c.status === "blocked").length || 0;
 
     return (
-        <div className="max-w-2xl mx-auto p-3 sm:p-4 bg-white min-h-screen">
+        <div
+            className="max-w-2xl mx-auto p-3 sm:p-4 min-h-screen"
+            style={{
+                backgroundColor: isDark ? "#1e1e2e" : "#ffffff",
+                borderRadius,
+                color: isDark ? "#e0e0e0" : undefined,
+            }}
+        >
             {/* Form */}
             {!result && (
                 <div>
                     <div className="text-center mb-5">
-                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-sauge/10 border border-sauge/20 rounded-full text-sauge text-[10px] font-bold mb-2">
+                        <div
+                            className="inline-flex items-center gap-1.5 px-2.5 py-1 border rounded-full text-[10px] font-bold mb-2"
+                            style={{
+                                backgroundColor: `${primaryColor}15`,
+                                borderColor: `${primaryColor}30`,
+                                color: primaryColor,
+                            }}
+                        >
                             <Bot className="w-3 h-3" />
                             <span className="uppercase tracking-wider">Testeur Visibilité IA</span>
                         </div>
-                        <h2 className="text-lg sm:text-xl font-bold text-ink mb-1">
-                            Votre site est-il visible par <span className="text-sauge">ChatGPT</span> ?
+                        <h2
+                            className="text-lg sm:text-xl font-bold mb-1"
+                            style={{ color: isDark ? "#ffffff" : "#2A3830" }}
+                        >
+                            Votre site est-il visible par{" "}
+                            <span style={{ color: primaryColor }}>ChatGPT</span> ?
                         </h2>
-                        <p className="text-soft text-xs">
+                        <p className="text-xs" style={{ color: isDark ? "#a0a0a0" : "#3D4D46" }}>
                             Analysez vos signaux GEO en 30 secondes
                         </p>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="bg-gray-50 rounded-xl border border-gray-200 p-4">
+                    <form
+                        onSubmit={handleSubmit}
+                        className="border p-4"
+                        style={{
+                            borderRadius,
+                            backgroundColor: isDark ? "#252538" : "#f9fafb",
+                            borderColor: isDark ? "#3a3a50" : "#e5e7eb",
+                        }}
+                    >
                         <div className="flex flex-col sm:flex-row gap-2">
                             <div className="flex-1">
                                 <input
                                     type="text"
                                     value={url}
                                     onChange={(e) => setUrl(e.target.value)}
-                                    className="w-full px-3 py-2.5 bg-white border border-gray-200 rounded-lg focus:border-sauge focus:ring-2 focus:ring-sauge/20 transition-all text-ink placeholder-gray-400 text-sm"
+                                    className="w-full px-3 py-2.5 border focus:ring-2 transition-all text-sm"
+                                    style={{
+                                        borderRadius: `${parseInt(borderRadius) - 4}px`,
+                                        borderColor: isDark ? "#3a3a50" : "#e5e7eb",
+                                        backgroundColor: isDark ? "#1e1e2e" : "#ffffff",
+                                        color: isDark ? "#e0e0e0" : "#2A3830",
+                                        outlineColor: primaryColor,
+                                    }}
                                     disabled={loading}
                                     placeholder="https://votre-site.com"
                                 />
@@ -325,7 +379,11 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true }: TesteurIAW
                             <button
                                 type="submit"
                                 disabled={loading || !url.trim()}
-                                className="bg-sauge text-white px-5 py-2.5 rounded-lg font-bold hover:bg-sauge/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-1.5 whitespace-nowrap text-sm"
+                                className="text-white px-5 py-2.5 font-bold disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-1.5 whitespace-nowrap text-sm hover:opacity-90"
+                                style={{
+                                    backgroundColor: buttonColor,
+                                    borderRadius: `${parseInt(borderRadius) - 4}px`,
+                                }}
                             >
                                 {loading ? (
                                     <>
@@ -335,7 +393,7 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true }: TesteurIAW
                                 ) : (
                                     <>
                                         <Zap className="w-4 h-4" />
-                                        Tester
+                                        {buttonText}
                                     </>
                                 )}
                             </button>
@@ -348,29 +406,55 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true }: TesteurIAW
                             </div>
                         )}
 
-                        <p className="text-center text-[10px] text-gray-400 mt-3">
+                        <p className="text-center text-[10px] mt-3" style={{ color: isDark ? "#666" : "#9ca3af" }}>
                             Gratuit • 8 crawlers IA analysés
                         </p>
                     </form>
 
                     {loading && (
-                        <div className="mt-4 bg-gray-50 rounded-xl border border-gray-200 p-4">
+                        <div
+                            className="mt-4 border p-4"
+                            style={{
+                                borderRadius,
+                                backgroundColor: isDark ? "#252538" : "#f9fafb",
+                                borderColor: isDark ? "#3a3a50" : "#e5e7eb",
+                            }}
+                        >
                             <div className="flex items-center gap-3">
-                                <div className="w-8 h-8 rounded-lg bg-sauge/10 flex items-center justify-center">
-                                    <Bot className="w-4 h-4 text-sauge animate-pulse" />
+                                <div
+                                    className="w-8 h-8 rounded-lg flex items-center justify-center"
+                                    style={{ backgroundColor: `${primaryColor}15` }}
+                                >
+                                    <Bot className="w-4 h-4 animate-pulse" style={{ color: primaryColor }} />
                                 </div>
                                 <div className="flex-1">
-                                    <div className="text-xs font-medium text-ink mb-1.5">Analyse en cours...</div>
+                                    <div className="text-xs font-medium mb-1.5" style={{ color: isDark ? "#e0e0e0" : "#2A3830" }}>
+                                        Analyse en cours...
+                                    </div>
                                     <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
                                         <div
-                                            className="h-full bg-sauge rounded-full animate-pulse"
-                                            style={{ width: "60%" }}
+                                            className="h-full rounded-full animate-pulse"
+                                            style={{ width: "60%", backgroundColor: primaryColor }}
                                         />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     )}
+
+                    {/* Backlink inside the iframe */}
+                    <div className="mt-6 text-center">
+                        <a
+                            href="https://indhack.com/outils/testeur-visibilite-ia"
+                            target="_blank"
+                            rel="dofollow"
+                            className="inline-flex items-center gap-1 text-[10px] hover:underline transition-opacity opacity-50 hover:opacity-80"
+                            style={{ color: isDark ? "#888" : "#9ca3af" }}
+                        >
+                            <Bot className="w-3 h-3" />
+                            Propulsé par IndHack — Testeur de visibilité IA
+                        </a>
+                    </div>
                 </div>
             )}
 
@@ -378,34 +462,70 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true }: TesteurIAW
             {result && (
                 <div className="space-y-4">
                     {/* Score Card */}
-                    <div className="bg-gray-50 rounded-xl border border-gray-200 p-4">
+                    <div
+                        className="border p-4"
+                        style={{
+                            borderRadius,
+                            backgroundColor: isDark ? "#252538" : "#f9fafb",
+                            borderColor: isDark ? "#3a3a50" : "#e5e7eb",
+                        }}
+                    >
                         <div className="flex flex-col items-center gap-3">
-                            <ScoreGauge score={result.score} />
+                            <ScoreGauge score={result.score} primaryColor={primaryColor} />
                             <div className="text-center">
                                 <div className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium mb-1 ${LEVEL_CONFIG[result.level].bg} text-white`}>
                                     {result.levelLabel}
                                 </div>
-                                <h3 className="text-sm font-bold text-ink mb-0.5 line-clamp-1">{result.pageTitle}</h3>
+                                <h3
+                                    className="text-sm font-bold mb-0.5 line-clamp-1"
+                                    style={{ color: isDark ? "#ffffff" : "#2A3830" }}
+                                >
+                                    {result.pageTitle}
+                                </h3>
                                 <a
                                     href={result.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-gray-500 hover:text-sauge flex items-center justify-center gap-1 text-[10px]"
+                                    className="flex items-center justify-center gap-1 text-[10px] hover:underline"
+                                    style={{ color: isDark ? "#888" : "#6b7280" }}
                                 >
                                     {result.url.length > 35 ? result.url.substring(0, 35) + "..." : result.url}
                                     <ExternalLink className="w-2.5 h-2.5" />
                                 </a>
                                 <div className="flex items-center justify-center gap-2 mt-2">
-                                    <span className="px-1.5 py-0.5 bg-white rounded text-[10px] text-gray-500 border">{result.wordCount} mots</span>
-                                    <span className="px-1.5 py-0.5 bg-white rounded text-[10px] text-gray-500 border">{result.responseTime}ms</span>
+                                    <span
+                                        className="px-1.5 py-0.5 rounded text-[10px] border"
+                                        style={{
+                                            backgroundColor: isDark ? "#1e1e2e" : "#ffffff",
+                                            borderColor: isDark ? "#3a3a50" : "#e5e7eb",
+                                            color: isDark ? "#a0a0a0" : "#6b7280",
+                                        }}
+                                    >
+                                        {result.wordCount} mots
+                                    </span>
+                                    <span
+                                        className="px-1.5 py-0.5 rounded text-[10px] border"
+                                        style={{
+                                            backgroundColor: isDark ? "#1e1e2e" : "#ffffff",
+                                            borderColor: isDark ? "#3a3a50" : "#e5e7eb",
+                                            color: isDark ? "#a0a0a0" : "#6b7280",
+                                        }}
+                                    >
+                                        {result.responseTime}ms
+                                    </span>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="mt-3 pt-3 border-t border-gray-200 flex justify-center">
+                        <div className="mt-3 pt-3 border-t flex justify-center" style={{ borderColor: isDark ? "#3a3a50" : "#e5e7eb" }}>
                             <button
                                 onClick={handleNewTest}
-                                className="flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-gray-100 rounded-lg text-xs font-medium text-ink transition-colors border border-gray-200"
+                                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border"
+                                style={{
+                                    backgroundColor: isDark ? "#1e1e2e" : "#ffffff",
+                                    borderColor: isDark ? "#3a3a50" : "#e5e7eb",
+                                    color: isDark ? "#e0e0e0" : "#2A3830",
+                                }}
                             >
                                 <RefreshCw className="w-3.5 h-3.5" />
                                 Nouveau test
@@ -415,15 +535,33 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true }: TesteurIAW
 
                     {/* Recommendations */}
                     {result.recommendations.length > 0 && (
-                        <div className="bg-gray-50 rounded-xl border border-gray-200 p-3">
-                            <h4 className="font-bold text-ink text-xs mb-2">Actions prioritaires</h4>
+                        <div
+                            className="border p-3"
+                            style={{
+                                borderRadius,
+                                backgroundColor: isDark ? "#252538" : "#f9fafb",
+                                borderColor: isDark ? "#3a3a50" : "#e5e7eb",
+                            }}
+                        >
+                            <h4 className="font-bold text-xs mb-2" style={{ color: isDark ? "#ffffff" : "#2A3830" }}>
+                                Actions prioritaires
+                            </h4>
                             <div className="space-y-1.5">
                                 {result.recommendations.slice(0, 3).map((rec, i) => (
-                                    <div key={i} className="flex items-start gap-2 p-2 bg-white rounded-lg border border-gray-100">
+                                    <div
+                                        key={i}
+                                        className="flex items-start gap-2 p-2 rounded-lg border"
+                                        style={{
+                                            backgroundColor: isDark ? "#1e1e2e" : "#ffffff",
+                                            borderColor: isDark ? "#3a3a50" : "#f3f4f6",
+                                        }}
+                                    >
                                         <div className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${
                                             rec.priority === 1 ? "bg-red-500" : rec.priority === 2 ? "bg-amber-500" : "bg-emerald-500"
                                         }`} />
-                                        <p className="text-[11px] text-ink leading-relaxed">{rec.text}</p>
+                                        <p className="text-[11px] leading-relaxed" style={{ color: isDark ? "#d0d0d0" : "#2A3830" }}>
+                                            {rec.text}
+                                        </p>
                                     </div>
                                 ))}
                             </div>
@@ -431,8 +569,17 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true }: TesteurIAW
                     )}
 
                     {/* Crawlers */}
-                    <div className="bg-gray-50 rounded-xl border border-gray-200 p-3">
-                        <h4 className="font-bold text-ink text-xs mb-2">Crawlers IA</h4>
+                    <div
+                        className="border p-3"
+                        style={{
+                            borderRadius,
+                            backgroundColor: isDark ? "#252538" : "#f9fafb",
+                            borderColor: isDark ? "#3a3a50" : "#e5e7eb",
+                        }}
+                    >
+                        <h4 className="font-bold text-xs mb-2" style={{ color: isDark ? "#ffffff" : "#2A3830" }}>
+                            Crawlers IA
+                        </h4>
                         <div className="grid grid-cols-2 gap-1.5">
                             {result.crawlers.map((crawler) => (
                                 <CrawlerRow key={crawler.agent} crawler={crawler} />
@@ -449,17 +596,24 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true }: TesteurIAW
                     {/* Categories */}
                     <div className="grid grid-cols-2 gap-2">
                         {(Object.keys(result.categories) as Array<keyof typeof result.categories>).map((cat) => (
-                            <CategoryCard key={cat} category={cat} data={result.categories[cat]} />
+                            <CategoryCard key={cat} category={cat} data={result.categories[cat]} primaryColor={primaryColor} />
                         ))}
                     </div>
 
                     {/* Lead Form */}
                     {showLeadForm && agencyEmail && !leadSubmitted && (
-                        <div className="bg-gradient-to-br from-sauge/5 to-sauge/10 rounded-xl border border-sauge/20 p-4">
-                            <h4 className="font-bold text-ink text-sm mb-1">
+                        <div
+                            className="border p-4"
+                            style={{
+                                borderRadius,
+                                backgroundColor: `${primaryColor}08`,
+                                borderColor: `${primaryColor}30`,
+                            }}
+                        >
+                            <h4 className="font-bold text-sm mb-1" style={{ color: isDark ? "#ffffff" : "#2A3830" }}>
                                 Améliorez votre visibilité IA
                             </h4>
-                            <p className="text-[11px] text-soft mb-3">
+                            <p className="text-[11px] mb-3" style={{ color: isDark ? "#a0a0a0" : "#3D4D46" }}>
                                 Recevez un rapport détaillé avec des recommandations personnalisées.
                             </p>
                             <form onSubmit={handleLeadSubmit} className="flex flex-col sm:flex-row gap-2">
@@ -469,7 +623,14 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true }: TesteurIAW
                                         type="email"
                                         value={visitorEmail}
                                         onChange={(e) => setVisitorEmail(e.target.value)}
-                                        className="w-full pl-8 pr-3 py-2 bg-white border border-gray-200 rounded-lg focus:border-sauge focus:ring-2 focus:ring-sauge/20 transition-all text-ink placeholder-gray-400 text-sm"
+                                        className="w-full pl-8 pr-3 py-2 border focus:ring-2 transition-all text-sm"
+                                        style={{
+                                            borderRadius: `${parseInt(borderRadius) - 4}px`,
+                                            borderColor: isDark ? "#3a3a50" : "#e5e7eb",
+                                            backgroundColor: isDark ? "#1e1e2e" : "#ffffff",
+                                            color: isDark ? "#e0e0e0" : "#2A3830",
+                                            outlineColor: primaryColor,
+                                        }}
                                         placeholder="Votre email"
                                         required
                                         disabled={leadSubmitting}
@@ -478,7 +639,11 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true }: TesteurIAW
                                 <button
                                     type="submit"
                                     disabled={leadSubmitting || !visitorEmail.trim()}
-                                    className="bg-sauge text-white px-4 py-2 rounded-lg font-medium hover:bg-sauge/90 disabled:opacity-50 transition-colors flex items-center justify-center gap-1.5 text-sm whitespace-nowrap"
+                                    className="text-white px-4 py-2 font-medium disabled:opacity-50 transition-all flex items-center justify-center gap-1.5 text-sm whitespace-nowrap hover:opacity-90"
+                                    style={{
+                                        backgroundColor: buttonColor,
+                                        borderRadius: `${parseInt(borderRadius) - 4}px`,
+                                    }}
                                 >
                                     {leadSubmitting ? (
                                         <Loader2 className="w-4 h-4 animate-spin" />
@@ -505,6 +670,20 @@ export function TesteurIAWidget({ agencyEmail, showLeadForm = true }: TesteurIAW
                             </p>
                         </div>
                     )}
+
+                    {/* Backlink inside the iframe — results view */}
+                    <div className="mt-2 text-center">
+                        <a
+                            href="https://indhack.com/outils/testeur-visibilite-ia"
+                            target="_blank"
+                            rel="dofollow"
+                            className="inline-flex items-center gap-1 text-[10px] hover:underline transition-opacity opacity-50 hover:opacity-80"
+                            style={{ color: isDark ? "#888" : "#9ca3af" }}
+                        >
+                            <Bot className="w-3 h-3" />
+                            Propulsé par IndHack — Testeur de visibilité IA
+                        </a>
+                    </div>
                 </div>
             )}
         </div>

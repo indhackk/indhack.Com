@@ -83,7 +83,7 @@ const faqSchema = {
             "name": "Puis-je adapter esthétiquement ce testeur SEO marque blanche à la charte de mon agence de communication ?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Le design a été conçu pour être premium et neutre. Actuellement, les couleurs internes de l'iframe ne peuvent pas être modifiées, mais son esthétique élégante lui permet de s'adapter facilement à la majorité des agences digitales et studios de développement web. Vous gardez en revanche le contrôle sur la largeur et le positionnement du conteneur."
+                "text": "Oui ! Le widget est entièrement personnalisable. Vous pouvez modifier la couleur principale, la couleur du bouton, le texte du CTA, l'arrondi des bords, et même activer un mode sombre pour les sites avec un fond foncé. Toutes ces options sont disponibles directement dans le générateur de code."
             }
         }
     ]

@@ -74,9 +74,27 @@ export function PartenairesClient() {
     const [emailError, setEmailError] = useState("");
     const [showPreview, setShowPreview] = useState(false);
 
+    // Customization state
+    const [primaryColor, setPrimaryColor] = useState("#2E5E4E");
+    const [buttonColor, setButtonColor] = useState("#2E5E4E");
+    const [buttonText, setButtonText] = useState("Tester");
+    const [borderRadius, setBorderRadius] = useState("12");
+    const [darkMode, setDarkMode] = useState(false);
+
     const validateEmail = (email: string) => {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
+    };
+
+    const buildIframeUrl = () => {
+        const params = new URLSearchParams();
+        if (email.trim()) params.set("email", email.trim());
+        if (primaryColor !== "#2E5E4E") params.set("color", primaryColor.replace("#", ""));
+        if (buttonColor !== "#2E5E4E") params.set("btn", buttonColor.replace("#", ""));
+        if (buttonText !== "Tester") params.set("btnText", buttonText);
+        if (borderRadius !== "12") params.set("radius", borderRadius);
+        if (darkMode) params.set("dark", "1");
+        return `https://indhack.com/widget/testeur-ia?${params.toString()}`;
     };
 
     const generateCode = () => {
@@ -93,11 +111,14 @@ export function PartenairesClient() {
         }
 
         const randomAnchor = ANCHORS[Math.floor(Math.random() * ANCHORS.length)];
+        const iframeUrl = buildIframeUrl();
+        const bg = darkMode ? "background:#1a1a2e;" : "";
+        const rad = `border-radius:${borderRadius}px;`;
 
-        const code = `<div style="max-width:700px;margin:0 auto;">
-  <iframe src="https://indhack.com/widget/testeur-ia?email=${encodeURIComponent(email.trim())}" width="100%" height="700" style="border:none;border-radius:12px;box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);" loading="lazy"></iframe>
+        const code = `<div style="max-width:700px;margin:0 auto;${bg}">
+  <iframe src="${iframeUrl}" width="100%" height="720" style="border:none;${rad}box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1);" loading="lazy"></iframe>
   <p style="text-align:right;font-size:11px;margin-top:4px;opacity:0.6;">
-    <a href="https://indhack.com" target="_blank" rel="dofollow" style="color:inherit;text-decoration:none;">${randomAnchor}</a>
+    <a href="https://indhack.com/outils/testeur-visibilite-ia" target="_blank" rel="dofollow" style="color:inherit;text-decoration:none;">${randomAnchor}</a>
   </p>
 </div>`;
 
@@ -302,9 +323,111 @@ export function PartenairesClient() {
                                     </p>
                                 </div>
 
+                                {/* Customization options */}
+                                <div className="pt-6 border-t border-gray-100">
+                                    <div className="flex items-center gap-2 mb-4">
+                                        <Sparkles className="w-4 h-4 text-sauge" />
+                                        <span className="text-sm font-semibold text-ink">Personnalisez votre widget</span>
+                                        <span className="text-xs text-gray-400">(optionnel)</span>
+                                    </div>
+
+                                    <div className="grid grid-cols-2 gap-4">
+                                        {/* Primary Color */}
+                                        <div>
+                                            <label className="block text-xs font-medium text-soft mb-1.5">
+                                                Couleur principale
+                                            </label>
+                                            <div className="flex items-center gap-2">
+                                                <input
+                                                    type="color"
+                                                    value={primaryColor}
+                                                    onChange={(e) => setPrimaryColor(e.target.value)}
+                                                    className="w-8 h-8 rounded-lg border border-gray-200 cursor-pointer"
+                                                />
+                                                <input
+                                                    type="text"
+                                                    value={primaryColor}
+                                                    onChange={(e) => setPrimaryColor(e.target.value)}
+                                                    className="flex-1 px-2 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-xs text-ink font-mono"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        {/* Button Color */}
+                                        <div>
+                                            <label className="block text-xs font-medium text-soft mb-1.5">
+                                                Couleur du bouton
+                                            </label>
+                                            <div className="flex items-center gap-2">
+                                                <input
+                                                    type="color"
+                                                    value={buttonColor}
+                                                    onChange={(e) => setButtonColor(e.target.value)}
+                                                    className="w-8 h-8 rounded-lg border border-gray-200 cursor-pointer"
+                                                />
+                                                <input
+                                                    type="text"
+                                                    value={buttonColor}
+                                                    onChange={(e) => setButtonColor(e.target.value)}
+                                                    className="flex-1 px-2 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-xs text-ink font-mono"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        {/* Button Text */}
+                                        <div>
+                                            <label className="block text-xs font-medium text-soft mb-1.5">
+                                                Texte du bouton
+                                            </label>
+                                            <input
+                                                type="text"
+                                                value={buttonText}
+                                                onChange={(e) => setButtonText(e.target.value)}
+                                                className="w-full px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-ink"
+                                                placeholder="Tester"
+                                            />
+                                        </div>
+
+                                        {/* Border Radius */}
+                                        <div>
+                                            <label className="block text-xs font-medium text-soft mb-1.5">
+                                                Arrondi (px)
+                                            </label>
+                                            <input
+                                                type="range"
+                                                min="0"
+                                                max="24"
+                                                value={borderRadius}
+                                                onChange={(e) => setBorderRadius(e.target.value)}
+                                                className="w-full accent-sauge"
+                                            />
+                                            <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                                                <span>Carré</span>
+                                                <span>{borderRadius}px</span>
+                                                <span>Arrondi</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Dark Mode Toggle */}
+                                    <div className="mt-4 flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200">
+                                        <div>
+                                            <span className="text-sm font-medium text-ink">Mode sombre</span>
+                                            <p className="text-[10px] text-gray-400">Pour les sites avec un fond sombre</p>
+                                        </div>
+                                        <button
+                                            type="button"
+                                            onClick={() => setDarkMode(!darkMode)}
+                                            className={`relative w-11 h-6 rounded-full transition-colors ${darkMode ? "bg-sauge" : "bg-gray-300"}`}
+                                        >
+                                            <div className={`absolute top-0.5 w-5 h-5 bg-white rounded-full shadow transition-transform ${darkMode ? "translate-x-5" : "translate-x-0.5"}`} />
+                                        </button>
+                                    </div>
+                                </div>
+
                                 <button
                                     onClick={generateCode}
-                                    className="w-full bg-gradient-to-r from-sauge to-emerald-600 text-white px-8 py-5 rounded-xl font-bold hover:shadow-lg hover:shadow-sauge/25 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-3 text-lg group"
+                                    className="w-full bg-gradient-to-r from-sauge to-emerald-600 text-white px-8 py-5 rounded-xl font-bold hover:shadow-lg hover:shadow-sauge/25 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-3 text-lg group mt-6"
                                 >
                                     <Code2 className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                                     Générer mon code HTML
@@ -374,12 +497,12 @@ export function PartenairesClient() {
                                 </p>
                             </div>
 
-                            <div className="bg-white rounded-2xl p-4 md:p-8 border border-gray-200 shadow-lg">
+                            <div className="bg-white rounded-2xl p-4 md:p-8 border border-gray-200 shadow-lg" style={darkMode ? { backgroundColor: "#1a1a2e" } : undefined}>
                                 <iframe
-                                    src={`/widget/testeur-ia?email=${encodeURIComponent(email)}`}
+                                    src={buildIframeUrl().replace("https://indhack.com", "")}
                                     width="100%"
-                                    height="700"
-                                    style={{ border: "none", borderRadius: "12px" }}
+                                    height="720"
+                                    style={{ border: "none", borderRadius: `${borderRadius}px` }}
                                     loading="lazy"
                                 />
                                 <p className="text-right text-xs text-gray-400 mt-3">
@@ -542,7 +665,7 @@ export function PartenairesClient() {
                                 },
                                 {
                                     q: "Puis-je adapter esthétiquement ce testeur SEO marque blanche à la charte de mon agence de communication ?",
-                                    a: "Le design a été conçu pour être premium et neutre. Actuellement, les couleurs internes de l'iframe ne peuvent pas être modifiées, mais son esthétique élégante lui permet de s'adapter facilement à la majorité des agences digitales et studios de développement web. Vous gardez en revanche le contrôle sur la largeur et le positionnement du conteneur."
+                                    a: "Oui ! Le widget est entièrement personnalisable. Vous pouvez modifier la couleur principale, la couleur du bouton, le texte du CTA, l'arrondi des bords, et même activer un mode sombre pour les sites avec un fond foncé. Toutes ces options sont disponibles directement dans le générateur ci-dessus."
                                 }
                             ].map((item, i) => (
                                 <details key={i} className="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden hover:border-sauge/30 transition-colors">
