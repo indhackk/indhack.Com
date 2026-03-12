@@ -60,6 +60,16 @@ const nextConfig = {
                 permanent: true, // 301 - fusion articles GEO (cannibalisation)
             },
             {
+                source: '/blog/visibilite-ia-geo.md.bak',
+                destination: '/blog/geo-comment-apparaitre-chatgpt-2026',
+                permanent: true, // 301 - fichier backup détecté par GSC
+            },
+            {
+                source: '/blog/missions-consultant-seo',
+                destination: '/blog/devenir-consultant-seo',
+                permanent: true, // 301 - ancien article fusionné
+            },
+            {
                 source: '/blog/checklist-seo-refonte-site',
                 destination: '/blog/refonte-site-web-sans-perdre-seo',
                 permanent: true, // 301 - checklist fusionnée dans le guide ultime refonte

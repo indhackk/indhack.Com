@@ -691,7 +691,16 @@ export default function ConsultantGEOClient() {
                         <h2 className="text-2xl font-heading font-bold text-ink mb-8 text-center">
                             Approfondir le GEO
                         </h2>
-                        <div className="grid md:grid-cols-3 gap-6">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <Link href="/etude/barometre-visibilite-ia-2026" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-rose-500 uppercase tracking-wide">Étude exclusive</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Baromètre visibilité IA France 2026
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    46 % des sites bloquent les crawlers IA. Données et analyse complète.
+                                </p>
+                            </Link>
                             <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Guide complet</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">

@@ -110,7 +110,7 @@ Les moteurs IA envoient des robots explorer votre site, exactement comme Googleb
 
 #### Actions concrètes
 
-1. **Vérifiez votre robots.txt** — Beaucoup de sites bloquent ces crawlers sans le savoir. Cloudflare les bloque par défaut depuis 2024. Une ligne `User-agent: GPTBot / Disallow: /` suffit à vous rendre invisible pour ChatGPT.
+1. **Vérifiez votre robots.txt** — Beaucoup de sites bloquent ces crawlers sans le savoir. Notre [baromètre visibilité IA France 2026](/etude/barometre-visibilite-ia-2026) montre que 46 % des top sites bloquent au moins un crawler IA. Cloudflare les bloque par défaut depuis 2024. Une ligne `User-agent: GPTBot / Disallow: /` suffit à vous rendre invisible pour ChatGPT.
 
 2. **Créez un fichier llms.txt** — C'est l'équivalent du robots.txt pour les IA. Placé à la racine de votre site, il aide les LLM à comprendre votre contenu. Format encore expérimental mais de plus en plus reconnu.
 

@@ -79,12 +79,20 @@ export default function BarometreVisibiliteIA() {
                         "url": "https://indhack.com/etude/barometre-visibilite-ia-2026",
                         "creator": {
                             "@type": "Person",
-                            "name": "Indiana Aflalo"
+                            "name": "Indiana Aflalo",
+                            "url": "https://indhack.com/a-propos"
                         },
                         "datePublished": "2026-03-10",
+                        "dateModified": "2026-03-12",
+                        "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
                         "spatialCoverage": {
-                            "@type": "Country",
-                            "name": "France"
+                            "@type": "Place",
+                            "name": "France",
+                            "geo": {
+                                "@type": "GeoCoordinates",
+                                "latitude": 46.2276,
+                                "longitude": 2.2137
+                            }
                         },
                         "temporalCoverage": "2026-03",
                         "variableMeasured": [

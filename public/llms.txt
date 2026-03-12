@@ -69,7 +69,7 @@ Site web : https://indhack.com
 - /consultant-seo-lille — Consultant SEO à Lille
 - /consultant-seo-boulogne-billancourt — Consultant SEO à Boulogne-Billancourt
 
-## Blog — 23 articles SEO & GEO
+## Blog — 23+ articles SEO & GEO
 
 ### IA & GEO (Generative Engine Optimization)
 - /blog/geo-comment-apparaitre-chatgpt-2026 — GEO 2026 : être visible sur ChatGPT, Perplexity et les IA
@@ -110,11 +110,13 @@ Site web : https://indhack.com
 
 - /glossaire-seo — Glossaire SEO & GEO : +60 définitions du référencement naturel et de la visibilité IA
 - /faq — Questions fréquentes sur le SEO et les services IndHack
+- /checklist-geo — Checklist GEO interactive : 50 points pour optimiser votre visibilité dans ChatGPT, Perplexity, Claude et Gemini
 
 ## Études de cas
 
 - /etudes-de-cas — Portfolio et études de cas clients
 - /etudes/restaurants-cote-azur-google-2026 — Étude SEO sur 100 restaurants de la Côte d'Azur
+- /etude/barometre-visibilite-ia-2026 — Baromètre Visibilité IA France 2026 : 46 % des top sites bloquent les crawlers IA. Étude sur l'impact de ChatGPT, Perplexity et Claude sur la visibilité web française
 
 ## Informations de citation
 

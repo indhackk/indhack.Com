@@ -14,6 +14,10 @@ Disallow: /diagnostic/*
 User-agent: GPTBot
 Allow: /
 
+# OAI-SearchBot
+User-agent: OAI-SearchBot
+Allow: /
+
 # ChatGPT-User
 User-agent: ChatGPT-User
 Allow: /
@@ -22,20 +26,28 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+# ClaudeBot
+User-agent: ClaudeBot
+Allow: /
+
 # PerplexityBot
 User-agent: PerplexityBot
+Allow: /
+
+# Google-Extended
+User-agent: Google-Extended
 Allow: /
 
 # Applebot-Extended
 User-agent: Applebot-Extended
 Allow: /
 
+# MistralBot
+User-agent: MistralBot
+Allow: /
+
 # CCBot
 User-agent: CCBot
-Disallow: /
-
-# Google-Extended
-User-agent: Google-Extended
 Disallow: /
 
 # Host

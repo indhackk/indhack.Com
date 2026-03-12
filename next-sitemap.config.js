@@ -57,6 +57,8 @@ const staticPageDates = {
     '/glossaire-seo': '2026-03-10',
     '/etudes-de-cas': '2026-02-18',
     '/etudes/restaurants-cote-azur-google-2026': '2026-03-01',
+    '/etude/barometre-visibilite-ia-2026': '2026-03-11',
+    '/checklist-geo': '2026-03-11',
     '/partenaires': '2026-02-18',
     '/consultant-geo': '2026-03-11',
     '/consultant-ia': '2026-02-15',
@@ -201,7 +203,7 @@ module.exports = {
         } else if (['/consultant-geo', '/consultant-ia', '/audit-ia', '/community-manager', '/creation-boutique-en-ligne'].includes(path)) {
             priority = 0.8;
             changefreq = 'weekly';
-        } else if (path === '/glossaire-seo' || path === '/etudes-de-cas' || path === '/partenaires') {
+        } else if (path === '/glossaire-seo' || path === '/etudes-de-cas' || path === '/partenaires' || path === '/checklist-geo') {
             priority = 0.8;
             changefreq = 'weekly';
         } else if (path === '/contact' || path === '/a-propos') {

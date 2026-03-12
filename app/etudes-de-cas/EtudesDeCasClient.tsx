@@ -286,6 +286,37 @@ export default function EtudesDeCasClient() {
                 </div>
             </section>
 
+            {/* Études & Données */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-2xl font-heading font-bold text-ink mb-6 text-center">
+                            Nos <span className="text-sauge">études et données</span> exclusives
+                        </h2>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <Link href="/etude/barometre-visibilite-ia-2026" className="group block p-6 bg-fond-clair rounded-xl border border-line hover:border-sauge transition-all">
+                                <div className="flex items-start gap-3 mb-3">
+                                    <BarChart3 className="w-6 h-6 text-sauge flex-shrink-0 mt-0.5" />
+                                    <h3 className="font-heading font-semibold text-ink group-hover:text-sauge transition-colors">
+                                        Baromètre visibilité IA France 2026
+                                    </h3>
+                                </div>
+                                <p className="text-soft text-sm">46 % des top sites bloquent les crawlers IA. Données sur ChatGPT, Perplexity et Claude.</p>
+                            </Link>
+                            <Link href="/etudes/restaurants-cote-azur-google-2026" className="group block p-6 bg-fond-clair rounded-xl border border-line hover:border-sauge transition-all">
+                                <div className="flex items-start gap-3 mb-3">
+                                    <MapPin className="w-6 h-6 text-sauge flex-shrink-0 mt-0.5" />
+                                    <h3 className="font-heading font-semibold text-ink group-hover:text-sauge transition-colors">
+                                        Étude SEO restaurants Côte d&apos;Azur 2026
+                                    </h3>
+                                </div>
+                                <p className="text-soft text-sm">30 % des restaurants de la Côte d&apos;Azur n&apos;ont pas de site web. Analyse de 100 établissements.</p>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* CTA */}
             <section className="py-20 bg-ink text-white">
                 <div className="container mx-auto px-4 text-center">

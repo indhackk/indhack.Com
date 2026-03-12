@@ -43,7 +43,7 @@ La recherche de Princeton (Aggarwal et al., KDD 2024) a montré que les techniqu
 
 1. **Vous contrôlez le narratif** : c'est vous qui dictez à l'IA comment elle doit résumer votre marque.
 2. **Vous économisez le budget de tokens** : l'IA accède directement à l'essentiel sans parser votre HTML.
-3. **Avantage concurrentiel massif** : en France, moins de 1 % des sites ont ce fichier. Vos concurrents ne l'ont probablement pas.
+3. **Avantage concurrentiel massif** : selon notre [baromètre visibilité IA 2026](/etude/barometre-visibilite-ia-2026), moins de 5 % des sites français ont un fichier llms.txt. Vos concurrents ne l'ont probablement pas.
 4. **Signal de modernité technique** : les crawlers IA interprètent la présence d'un llms.txt comme un signal de site techniquement avancé et bien maintenu.
 5. **Compatibilité multi-plateforme** : un même fichier optimise votre visibilité pour ChatGPT, Claude, Perplexity et Gemini simultanément.
 

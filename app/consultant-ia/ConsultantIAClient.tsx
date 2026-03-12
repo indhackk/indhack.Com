@@ -18,6 +18,30 @@ import {
     TrendingUp,
     Phone
 } from "lucide-react";
+import { FAQ } from "@/components/FAQ";
+
+const CONSULTANT_IA_FAQ = [
+    {
+        question: "Quels types de tâches peut-on automatiser avec l'IA en entreprise ?",
+        answer: "Les tâches les plus rentables à automatiser sont le traitement de documents (factures, contrats, emails), la génération de contenu marketing, le support client via chatbot, l'analyse de données et le reporting. Selon McKinsey (2024), l'IA générative peut automatiser jusqu'à 60 % des tâches dans les métiers du marketing et 40 % dans la finance. Notre audit identifie précisément les processus de votre entreprise où l'IA apporte le meilleur ROI."
+    },
+    {
+        question: "Combien coûte l'intégration de l'IA dans une PME ?",
+        answer: "Un projet d'intégration IA démarre généralement entre 2 000 € et 10 000 € pour une PME, selon la complexité. Les coûts API (OpenAI, Anthropic) représentent ensuite 50 à 500 €/mois selon le volume d'utilisation. Le retour sur investissement est souvent atteint en 3 à 6 mois grâce au temps économisé. Nous proposons un audit gratuit pour estimer précisément le budget et le ROI attendu pour votre cas."
+    },
+    {
+        question: "Quelle est la différence entre ChatGPT et Claude pour un usage professionnel ?",
+        answer: "ChatGPT (OpenAI) excelle en polyvalence et en génération de code, avec un écosystème de plugins riche. Claude (Anthropic) se distingue par sa capacité d'analyse de documents longs (jusqu'à 200 000 tokens), sa fiabilité factuelle et son respect des consignes complexes. Pour les entreprises françaises, Claude offre un excellent traitement du français. Nous recommandons souvent une architecture hybride utilisant les forces de chaque modèle."
+    },
+    {
+        question: "L'IA va-t-elle remplacer mes employés ?",
+        answer: "Non. L'IA augmente les capacités de vos équipes plutôt que de les remplacer. Selon le Forum Économique Mondial (2024), l'IA créera 97 millions de nouveaux rôles d'ici 2027 tout en en transformant d'autres. Notre approche consiste à identifier les tâches répétitives que l'IA gère mieux (saisie, tri, classification) pour que vos collaborateurs se concentrent sur les tâches à haute valeur ajoutée (stratégie, relation client, créativité)."
+    },
+    {
+        question: "Mes données sont-elles en sécurité avec les solutions IA ?",
+        answer: "La sécurité des données est notre priorité. Nous déployons des solutions avec des API professionnelles (pas les versions grand public) qui garantissent que vos données ne sont pas utilisées pour l'entraînement des modèles. Pour les données sensibles, nous proposons des déploiements locaux (on-premise) avec des modèles open source comme Mistral ou Llama. Chaque projet inclut un audit RGPD pour garantir la conformité."
+    },
+];
 
 export default function ConsultantIAClient() {
     return (
@@ -175,6 +199,16 @@ export default function ConsultantIAClient() {
                             <p className="text-soft">Mise en production interne. Formation des employés au Prompt Engineering et à la supervision des agents.</p>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="py-20 bg-fond-clair">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <FAQ
+                        items={CONSULTANT_IA_FAQ}
+                        title="Questions fréquentes sur le consulting IA"
+                    />
                 </div>
             </section>
 

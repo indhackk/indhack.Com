@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { FRENCH_CITIES } from "@/lib/cities-data";
 import { MapPin, ArrowRight, Search, Users, TrendingUp, CheckCircle2, Phone, Zap } from "lucide-react";
+import { FAQ } from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
@@ -355,6 +356,37 @@ export default function SeoLocalPage() {
                             </Link>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="py-20 bg-fond-clair">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <FAQ
+                        items={[
+                            {
+                                question: "Combien de temps faut-il pour voir des résultats en SEO local ?",
+                                answer: "Les premiers résultats en SEO local apparaissent généralement entre 3 et 6 mois. L'optimisation de votre fiche Google Business Profile peut montrer des améliorations en 4 à 8 semaines, tandis que le positionnement organique local nécessite un travail plus long. Selon BrightLocal (2024), 76 % des consommateurs qui effectuent une recherche locale sur leur smartphone visitent un commerce dans les 24 heures — chaque mois d'attente représente donc un manque à gagner direct."
+                            },
+                            {
+                                question: "Quelle est la différence entre SEO classique et SEO local ?",
+                                answer: "Le SEO classique vise à positionner votre site sur des requêtes nationales ou informationnelles (ex : « meilleur logiciel CRM »). Le SEO local cible les recherches géolocalisées (ex : « restaurant italien Nice ») et implique l'optimisation de votre fiche Google Business Profile, la cohérence des citations NAP (Nom, Adresse, Téléphone) et les avis clients. Selon Google, 46 % de toutes les recherches ont une intention locale — et 78 % des recherches locales mobiles aboutissent à un achat en magasin sous 24 heures."
+                            },
+                            {
+                                question: "Faut-il un site web pour faire du SEO local ?",
+                                answer: "Une fiche Google Business Profile seule peut vous rendre visible dans le Pack Local (les 3 résultats sur la carte). Cependant, un site web optimisé multiplie vos chances : il vous permet d'apparaître aussi dans les résultats organiques classiques, de créer du contenu localisé, et de convertir les visiteurs avec des pages de destination dédiées. Notre étude sur 100 restaurants de la Côte d'Azur montre que 30 % n'ont pas de site web — et perdent en moyenne 40 % de visibilité par rapport à ceux qui en ont un."
+                            },
+                            {
+                                question: "Comment gérer les avis négatifs sur Google ?",
+                                answer: "Ne supprimez jamais les avis négatifs (sauf s'ils sont faux ou diffamatoires — vous pouvez alors les signaler à Google). Répondez professionnellement dans les 24 heures en reconnaissant le problème, en proposant une solution et en invitant le client à vous recontacter en privé. Selon BrightLocal, 88 % des consommateurs font confiance à une entreprise qui répond à ses avis négatifs. Un profil avec quelques avis négatifs bien gérés est perçu comme plus authentique qu'un profil 100 % positif."
+                            },
+                            {
+                                question: "Combien coûte une prestation de SEO local ?",
+                                answer: "Un accompagnement SEO local professionnel coûte entre 500 € et 2 000 €/mois selon l'intensité concurrentielle de votre secteur et votre zone géographique. Pour les artisans et TPE, un audit initial avec optimisation de la fiche Google Business Profile (prestation ponctuelle) démarre à partir de 800 €. Le ROI est généralement atteint en 3 à 6 mois : un client local supplémentaire par semaine suffit souvent à rentabiliser l'investissement."
+                            },
+                        ]}
+                        title="Questions fréquentes sur le SEO local"
+                    />
                 </div>
             </section>
 
