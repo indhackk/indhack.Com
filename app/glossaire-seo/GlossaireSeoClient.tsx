@@ -12,12 +12,12 @@ interface GlossaryTerm {
 }
 
 const CATEGORIES: Record<string, { label: string; color: string }> = {
-    "seo-technique": { label: "SEO Technique", color: "bg-blue-500/20 text-blue-400 border-blue-500/30" },
-    "seo-contenu": { label: "SEO Contenu", color: "bg-green-500/20 text-green-400 border-green-500/30" },
-    "seo-local": { label: "SEO Local", color: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30" },
-    "geo-ia": { label: "GEO & IA", color: "bg-purple-500/20 text-purple-400 border-purple-500/30" },
-    analytics: { label: "Analytics", color: "bg-orange-500/20 text-orange-400 border-orange-500/30" },
-    strategie: { label: "Stratégie", color: "bg-pink-500/20 text-pink-400 border-pink-500/30" },
+    "seo-technique": { label: "SEO Technique", color: "bg-sauge/20 text-sauge-light border-sauge/30" },
+    "seo-contenu": { label: "SEO Contenu", color: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30" },
+    "seo-local": { label: "SEO Local", color: "bg-amber-500/20 text-amber-400 border-amber-500/30" },
+    "geo-ia": { label: "GEO & IA", color: "bg-violet-500/20 text-violet-300 border-violet-500/30" },
+    analytics: { label: "Analytics", color: "bg-cyan-500/20 text-cyan-400 border-cyan-500/30" },
+    strategie: { label: "Stratégie", color: "bg-rose-500/20 text-rose-400 border-rose-500/30" },
 };
 
 const GLOSSARY_TERMS: GlossaryTerm[] = [
@@ -644,19 +644,20 @@ export default function GlossaireSeoClient() {
     }, [filteredTerms, isFiltering]);
 
     return (
-        <div className="min-h-screen bg-[#0a0a0f]">
+        <div className="min-h-screen bg-ink">
             {/* Hero */}
             <section className="relative py-16 md:py-24 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent" />
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="absolute inset-0 bg-gradient-to-b from-sauge/10 via-transparent to-transparent" />
+                <div className="absolute top-20 left-10 w-72 h-72 bg-sauge/20 rounded-full blur-[150px]" />
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="max-w-3xl mx-auto text-center">
-                        <span className="inline-block px-4 py-1.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 text-sm font-medium mb-6">
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sauge/10 text-sauge-light border border-sauge/20 text-sm font-medium mb-6">
                             +{GLOSSARY_TERMS.length} définitions
                         </span>
-                        <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-6 leading-tight">
                             Glossaire SEO &amp; GEO
                         </h1>
-                        <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+                        <p className="text-lg text-soft-light mb-8 max-w-2xl mx-auto">
                             Tous les termes du référencement naturel et de la visibilité IA expliqués simplement.
                             De Algorithme Google à Zero-Click Search.
                         </p>
@@ -668,9 +669,9 @@ export default function GlossaireSeoClient() {
                                 placeholder="Rechercher un terme SEO..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full px-5 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50"
+                                className="w-full px-5 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-soft-light/50 focus:outline-none focus:ring-2 focus:ring-sauge/50 focus:border-sauge/50"
                             />
-                            <svg className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-soft-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                         </div>
@@ -679,7 +680,7 @@ export default function GlossaireSeoClient() {
                         <div className="flex flex-wrap justify-center gap-2">
                             <button
                                 onClick={() => setActiveCategory(null)}
-                                className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-all ${!activeCategory ? "bg-white/10 text-white border-white/20" : "bg-transparent text-gray-500 border-gray-800 hover:border-gray-600"
+                                className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-all ${!activeCategory ? "bg-white/10 text-white border-white/20" : "bg-transparent text-soft-light border-white/10 hover:border-white/20"
                                     }`}
                             >
                                 Tous ({GLOSSARY_TERMS.length})
@@ -690,7 +691,7 @@ export default function GlossaireSeoClient() {
                                     <button
                                         key={key}
                                         onClick={() => setActiveCategory(activeCategory === key ? null : key)}
-                                        className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-all ${activeCategory === key ? color : "bg-transparent text-gray-500 border-gray-800 hover:border-gray-600"
+                                        className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-all ${activeCategory === key ? color : "bg-transparent text-soft-light border-white/10 hover:border-white/20"
                                             }`}
                                     >
                                         {label} ({count})
@@ -703,16 +704,16 @@ export default function GlossaireSeoClient() {
             </section>
 
             {/* Alphabet nav */}
-            <div className="sticky top-16 z-30 bg-[#0a0a0f]/95 backdrop-blur-sm border-b border-white/5 py-3">
-                <div className="container mx-auto px-4">
+            <div className="sticky top-16 z-30 bg-ink/95 backdrop-blur-sm border-b border-white/10 py-3">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-wrap justify-center gap-1">
                         {ALL_LETTERS.map((letter) => (
                             <a
                                 key={letter}
                                 href={`#letter-${letter}`}
                                 className={`w-8 h-8 flex items-center justify-center rounded-md text-sm font-medium transition-all ${filteredLetters.includes(letter)
-                                        ? "text-gray-400 hover:text-white hover:bg-white/10"
-                                        : "text-gray-700 cursor-default"
+                                        ? "text-soft-light hover:text-white hover:bg-white/10"
+                                        : "text-soft-light/30 cursor-default"
                                     }`}
                             >
                                 {letter}
@@ -724,7 +725,7 @@ export default function GlossaireSeoClient() {
 
             {/* TERMES — TOUJOURS DANS LE DOM, visibles par Google via <details open> côté SSR */}
             <section className="py-12">
-                <div className="container mx-auto px-4 max-w-4xl">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
                     {ALL_LETTERS.map((letter) => {
                         const termsForLetter = SORTED_TERMS.filter((t) => t.term[0].toUpperCase() === letter);
                         const hasVisible = termsForLetter.some((t) => !hiddenSlugs.has(t.slug));
@@ -732,7 +733,7 @@ export default function GlossaireSeoClient() {
 
                         return (
                             <div key={letter} id={`letter-${letter}`} className="mb-10">
-                                <h2 className="text-2xl font-bold text-purple-400 mb-4 pl-2 border-l-4 border-purple-500">
+                                <h2 className="text-2xl font-heading font-bold text-sauge-light mb-4 pl-2 border-l-4 border-sauge">
                                     {letter}
                                 </h2>
                                 <div className="space-y-3">
@@ -744,7 +745,7 @@ export default function GlossaireSeoClient() {
                                                 key={term.slug}
                                                 id={term.slug}
                                                 open
-                                                className="group bg-white/[0.03] border border-white/5 rounded-xl overflow-hidden hover:border-white/10 transition-all"
+                                                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-white/20 transition-all"
                                             >
                                                 <summary className="flex items-center justify-between px-5 py-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                                                     <div className="flex items-center gap-3">
@@ -755,12 +756,12 @@ export default function GlossaireSeoClient() {
                                                             {CATEGORIES[term.category].label}
                                                         </span>
                                                     </div>
-                                                    <svg className="w-5 h-5 text-gray-500 transform transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <svg className="w-5 h-5 text-soft-light transform transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                                                     </svg>
                                                 </summary>
-                                                <div className="px-5 pb-5 border-t border-white/5 pt-4">
-                                                    <p className="text-gray-300 leading-relaxed mb-4">
+                                                <div className="px-5 pb-5 border-t border-white/10 pt-4">
+                                                    <p className="text-soft-light leading-relaxed mb-4">
                                                         {term.definition}
                                                     </p>
                                                     {term.links && term.links.length > 0 && (
@@ -769,7 +770,7 @@ export default function GlossaireSeoClient() {
                                                                 <Link
                                                                     key={link.href}
                                                                     href={link.href}
-                                                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-500/10 text-purple-400 text-sm font-medium border border-purple-500/20 hover:bg-purple-500/20 transition-colors"
+                                                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sauge/10 text-sauge-light text-sm font-medium border border-sauge/20 hover:bg-sauge/20 transition-colors"
                                                                 >
                                                                     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -790,7 +791,7 @@ export default function GlossaireSeoClient() {
 
                     {isFiltering && filteredTerms.length === 0 && (
                         <div className="text-center py-16">
-                            <p className="text-gray-500 text-lg">
+                            <p className="text-soft-light text-lg">
                                 Aucun terme trouvé pour &ldquo;{searchQuery}&rdquo;
                             </p>
                         </div>
@@ -799,25 +800,27 @@ export default function GlossaireSeoClient() {
             </section>
 
             {/* CTA */}
-            <section className="py-16 border-t border-white/5">
-                <div className="container mx-auto px-4 max-w-2xl text-center">
-                    <h2 className="text-2xl font-bold text-white mb-4">
+            <section className="py-16 border-t border-white/10 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-sauge/10 to-emerald-600/5" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-sauge/20 rounded-full blur-[150px]" />
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl text-center relative z-10">
+                    <h2 className="text-2xl font-heading font-bold text-white mb-4">
                         Besoin d&apos;un audit SEO complet ?
                     </h2>
-                    <p className="text-gray-400 mb-8">
+                    <p className="text-soft-light mb-8">
                         Testez votre site gratuitement avec nos outils ou demandez un audit détaillé avec plan
                         d&apos;action personnalisé.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             href="/outils/audit-seo-gratuit"
-                            className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold hover:from-purple-500 hover:to-blue-500 transition-all"
+                            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white text-ink font-bold hover:bg-sauge hover:text-white transition-colors"
                         >
                             Audit SEO gratuit
                         </Link>
                         <Link
                             href="/outils/testeur-visibilite-ia"
-                            className="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-semibold hover:bg-white/10 transition-all"
+                            className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white/10 border border-white/20 text-white font-bold hover:bg-white/20 transition-colors"
                         >
                             Tester ma visibilité IA
                         </Link>

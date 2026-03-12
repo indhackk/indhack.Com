@@ -48,7 +48,7 @@ export default function ConsultantIAClient() {
         <main className="bg-white">
             {/* Hero Section */}
             <section className="bg-ink text-white pt-32 pb-20 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sauge/10 rounded-full blur-[120px] pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
 
                 <div className="container mx-auto px-4 relative z-10">
@@ -64,7 +64,7 @@ export default function ConsultantIAClient() {
                             </div>
 
                             <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
-                                Transformez votre entreprise avec <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-purple-400">l'Intelligence Artificielle</span>
+                                Transformez votre entreprise avec <span className="text-transparent bg-clip-text bg-gradient-to-r from-sauge-light to-emerald-400">l'Intelligence Artificielle</span>
                             </h1>
                             <p className="text-xl text-white/80 mb-10 leading-relaxed max-w-2xl mx-auto">
                                 Ne subissez plus la révolution technologique. Nous intégrons les LLMs (Claude, ChatGPT) directement dans vos processus métiers pour automatiser vos tâches répétitives et doper votre croissance.
@@ -136,7 +136,7 @@ export default function ConsultantIAClient() {
 
                         <div className="grid sm:grid-cols-2 gap-4">
                             <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 mt-8">
-                                <Workflow className="w-10 h-10 text-purple-500 mb-4" />
+                                <Workflow className="w-10 h-10 text-sauge mb-4" />
                                 <h3 className="font-bold text-ink text-xl mb-2">Automatisation</h3>
                                 <p className="text-soft text-sm">Synchronisation des données entre CRM, CMS et boîtes mails sans code.</p>
                             </div>
@@ -192,7 +192,7 @@ export default function ConsultantIAClient() {
                         </div>
 
                         <div className="relative bg-white pt-8 z-10 text-center">
-                            <div className="w-16 h-16 mx-auto bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-2xl mb-6 shadow-[0_0_0_8px_white]">
+                            <div className="w-16 h-16 mx-auto bg-sauge text-white rounded-full flex items-center justify-center font-bold text-2xl mb-6 shadow-[0_0_0_8px_white]">
                                 3
                             </div>
                             <h3 className="text-xl font-bold text-ink mb-3">Déploiement & Formation</h3>

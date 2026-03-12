@@ -228,7 +228,7 @@ export default function OutilsPage() {
                         }}
                     />
 
-                    <div className="container mx-auto px-4 relative z-10">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         {/* Breadcrumb */}
                         <nav className="mb-8" aria-label="Fil d'Ariane">
                             <ol className="flex items-center gap-2 text-sm text-soft-light">
@@ -261,7 +261,7 @@ export default function OutilsPage() {
 
                 {/* Benefits Bar */}
                 <section className="py-8 bg-white/5 backdrop-blur-sm border-y border-white/10">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="grid md:grid-cols-3 gap-6">
                             {BENEFITS.map((benefit) => {
                                 const Icon = benefit.icon;
@@ -283,7 +283,7 @@ export default function OutilsPage() {
 
                 {/* Tools Grid */}
                 <section className="py-20 relative">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {TOOLS.map((tool) => {
                                 const Icon = tool.icon;
@@ -337,7 +337,7 @@ export default function OutilsPage() {
                 {/* Why These Tools Section */}
                 <section className="py-20 relative">
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent" />
-                    <div className="container mx-auto px-4 relative z-10">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="max-w-3xl mx-auto">
                             <h2 className="text-3xl font-heading font-bold text-white mb-8 text-center">
                                 Pourquoi ces outils sont différents
@@ -362,7 +362,7 @@ export default function OutilsPage() {
 
                 {/* FAQ Section */}
                 <section className="py-20">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto">
                             <h2 className="text-3xl font-heading font-bold text-white mb-12 text-center">
                                 Questions Fréquentes
@@ -395,7 +395,7 @@ export default function OutilsPage() {
 
                 {/* Maillage Section */}
                 <section className="py-16 border-t border-white/10">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-2xl font-heading font-bold text-white mb-8 text-center">
                                 Complétez votre stratégie SEO
@@ -480,7 +480,7 @@ export default function OutilsPage() {
                     <div className="absolute inset-0 bg-gradient-to-br from-sauge/10 to-emerald-600/5" />
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-sauge/20 rounded-full blur-[150px]" />
 
-                    <div className="container mx-auto px-4 text-center relative z-10">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                         <h2 className="text-3xl font-heading font-bold text-white mb-6">
                             Besoin d'aller plus loin ?
                         </h2>

@@ -135,7 +135,7 @@ export default function GenerateurRobotsTxtPage() {
                     <div className="absolute top-20 left-10 w-[400px] h-[400px] bg-sauge/10 rounded-full blur-[150px] pointer-events-none" />
                     <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-sauge/5 rounded-full blur-[180px] pointer-events-none" />
 
-                    <div className="container mx-auto px-4 relative z-10">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         {/* Breadcrumb */}
                         <nav className="mb-8" aria-label="Fil d'Ariane">
                             <ol className="flex items-center gap-2 text-sm text-soft-light">
@@ -186,14 +186,14 @@ export default function GenerateurRobotsTxtPage() {
 
                 {/* Generator */}
                 <section className="py-12 relative">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <RobotsGenerator />
                     </div>
                 </section>
 
                 {/* IA Crawlers Explained */}
                 <section className="py-16 bg-fond-sombre border-t border-white/5">
-                    <div className="container mx-auto px-4 relative z-10">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
                                 <span className="px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 text-sauge text-xs font-semibold uppercase tracking-[0.2em]">
@@ -259,7 +259,7 @@ export default function GenerateurRobotsTxtPage() {
 
                 {/* Related Tools */}
                 <section className="py-16 bg-ink border-t border-white/5">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
                             Outils <span className="text-sauge">complémentaires</span>
                         </h2>
@@ -288,7 +288,7 @@ export default function GenerateurRobotsTxtPage() {
 
                 {/* Internal Links */}
                 <section className="py-12 bg-fond-sombre border-t border-white/5">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
                             <div>
                                 <h3 className="font-bold text-white mb-4">Articles SEO & GEO</h3>
@@ -330,7 +330,7 @@ export default function GenerateurRobotsTxtPage() {
 
                 {/* FAQ */}
                 <section className="py-16 bg-ink border-t border-white/5">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto">
                             <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
                                 Questions <span className="text-sauge">Fréquentes</span>
@@ -361,7 +361,7 @@ export default function GenerateurRobotsTxtPage() {
 
                 {/* CTA */}
                 <section className="py-16 bg-fond-sombre border-t border-white/5">
-                    <div className="container mx-auto px-4 text-center">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
                             Besoin d&apos;une stratégie <span className="text-sauge">GEO</span> complète ?
                         </h2>

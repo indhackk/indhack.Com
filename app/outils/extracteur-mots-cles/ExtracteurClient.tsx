@@ -170,7 +170,7 @@ export default function ExtracteurClient() {
 
             {/* Hero */}
             <section className="py-12 bg-gradient-to-b from-gray-50 to-white">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl mx-auto text-center">
                         <div className="inline-flex items-center gap-2 bg-sauge/10 text-sauge px-4 py-2 rounded-full text-sm font-medium mb-6">
                             <Sparkles className="w-4 h-4" />
@@ -189,7 +189,7 @@ export default function ExtracteurClient() {
 
             {/* Outil */}
             <section className="py-8">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-5xl mx-auto">
                         <div className="grid lg:grid-cols-2 gap-8">
                             {/* Input */}
@@ -343,8 +343,8 @@ L'outil va extraire automatiquement les mots-clés les plus fréquents, calculer
                                         </div>
                                     </motion.div>
                                 ) : (
-                                    <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 text-center h-full flex flex-col items-center justify-center">
-                                        <Search className="w-12 h-12 text-gray-300 mb-4" />
+                                    <div className="bg-fond-clair border border-line rounded-2xl p-8 text-center h-full flex flex-col items-center justify-center">
+                                        <Search className="w-12 h-12 text-soft/40 mb-4" />
                                         <h3 className="font-bold text-ink mb-2">Collez votre texte</h3>
                                         <p className="text-sm text-soft">
                                             L'analyse s'affichera ici une fois le texte soumis.
@@ -359,7 +359,7 @@ L'outil va extraire automatiquement les mots-clés les plus fréquents, calculer
 
             {/* Contenu éditorial SEO */}
             <section className="py-12 bg-gray-50">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl mx-auto prose prose-lg">
                         <h2 className="text-2xl font-heading font-bold text-ink">
                             Comment analyser les mots-clés d'un texte ou d'un site web ?
@@ -413,7 +413,7 @@ L'outil va extraire automatiquement les mots-clés les plus fréquents, calculer
 
             {/* CTA */}
             <section className="py-12 bg-ink text-white">
-                <div className="container mx-auto px-4 text-center">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-2xl font-heading font-bold mb-4">
                         Besoin d'une analyse SEO plus approfondie ?
                     </h2>

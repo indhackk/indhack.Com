@@ -70,8 +70,8 @@ const CHECKLIST_DATA: ChecklistCategory[] = [
     {
         title: "Contenu optimisé pour les IA",
         icon: Sparkles,
-        color: "text-purple-600",
-        bgColor: "bg-purple-50",
+        color: "text-violet-600",
+        bgColor: "bg-violet-50",
         items: [
             { id: "c1", text: "Articles de 2 000+ mots sur les sujets clés", impact: "critique" },
             { id: "c2", text: "Minimum 5 statistiques sourcées par article", impact: "critique", link: { label: "Guide GEO", href: "/blog/geo-comment-apparaitre-chatgpt-2026" } },

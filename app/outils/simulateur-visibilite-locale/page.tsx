@@ -133,7 +133,7 @@ export default function SimulateurLocalPage() {
                     <div className="absolute top-20 left-10 w-[400px] h-[400px] bg-sauge/10 rounded-full blur-[150px] pointer-events-none" />
                     <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-sauge/5 rounded-full blur-[180px] pointer-events-none" />
 
-                    <div className="container mx-auto px-4 relative z-10">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         {/* Breadcrumb */}
                         <nav className="mb-8" aria-label="Fil d'Ariane">
                             <ol className="flex items-center gap-2 text-sm text-soft-light">
@@ -167,7 +167,7 @@ export default function SimulateurLocalPage() {
 
                 {/* Features */}
                 <section className="py-16 bg-fond-sombre border-t border-white/5">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl font-heading font-bold text-white text-center mb-10">
                             Ce que l&apos;outil <span className="text-sauge">analyse</span>
                         </h2>
@@ -199,7 +199,7 @@ export default function SimulateurLocalPage() {
 
                 {/* SEO Content Section - Anti Thin Content */}
                 <section className="py-16 bg-white">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-4xl mx-auto prose prose-lg prose-headings:font-heading prose-headings:text-ink prose-p:text-soft prose-strong:text-ink">
 
                             <h2 className="text-2xl md:text-3xl font-bold mb-6">
@@ -285,7 +285,7 @@ export default function SimulateurLocalPage() {
 
                 {/* Related Tools */}
                 <section className="py-16 bg-ink border-t border-white/5">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
                             Outils <span className="text-sauge">complémentaires</span>
                         </h2>
@@ -312,7 +312,7 @@ export default function SimulateurLocalPage() {
 
                 {/* FAQ */}
                 <section className="py-16 bg-ink border-t border-white/5">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto">
                             <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
                                 Questions <span className="text-sauge">Fréquentes</span>
@@ -343,7 +343,7 @@ export default function SimulateurLocalPage() {
 
                 {/* CTA */}
                 <section className="py-16 bg-fond-sombre border-t border-white/5">
-                    <div className="container mx-auto px-4 text-center">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
                             Besoin de dominer votre <span className="text-sauge">marché local</span> ?
                         </h2>

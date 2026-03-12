@@ -111,7 +111,7 @@ export default function ExtracteurMotsClesPage() {
 
             {/* Editorial Content - SEO */}
             <section className="py-16 bg-white border-t border-gray-100">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto prose prose-sauge">
                         <h2 className="text-2xl font-heading font-bold text-ink mb-6">
                             Comment utiliser cet extracteur de mots-clés gratuit ?

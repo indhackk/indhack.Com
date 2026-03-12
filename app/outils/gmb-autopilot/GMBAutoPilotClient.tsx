@@ -68,7 +68,7 @@ export default function GMBAutoPilotClient() {
                     <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-sauge/10 rounded-full blur-3xl" />
                 </div>
 
-                <div className="container mx-auto px-4 py-20 lg:py-32 relative z-10">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
                         {/* Badge */}
                         <motion.div
@@ -200,7 +200,7 @@ export default function GMBAutoPilotClient() {
 
             {/* Problem / Solution */}
             <section className="py-24 bg-white">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto">
                         <div className="grid md:grid-cols-2 gap-12">
                             {/* Problem */}
@@ -247,7 +247,7 @@ export default function GMBAutoPilotClient() {
 
             {/* Features */}
             <section className="py-24 bg-gray-50">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <p className="text-sauge font-bold tracking-widest uppercase mb-4 text-sm">Fonctionnalités</p>
                         <h2 className="text-4xl md:text-5xl font-heading font-bold text-ink mb-4">
@@ -312,7 +312,7 @@ export default function GMBAutoPilotClient() {
 
             {/* Pricing */}
             <section className="py-24 bg-white" id="pricing">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <p className="text-sauge font-bold tracking-widest uppercase mb-4 text-sm">Tarifs</p>
                         <h2 className="text-4xl md:text-5xl font-heading font-bold text-ink mb-4">
@@ -378,7 +378,7 @@ export default function GMBAutoPilotClient() {
 
             {/* How it Works */}
             <section className="py-24 bg-ink text-white">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <p className="text-sauge font-bold tracking-widest uppercase mb-4 text-sm">Comment ça marche</p>
                         <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
@@ -427,7 +427,7 @@ export default function GMBAutoPilotClient() {
 
             {/* FAQ */}
             <section className="py-24 bg-gray-50">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-heading font-bold text-ink mb-4">
                             Questions fréquentes
@@ -476,7 +476,7 @@ export default function GMBAutoPilotClient() {
 
             {/* Final CTA */}
             <section className="py-24 bg-white">
-                <div className="container mx-auto px-4 max-w-4xl text-center">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
                     <div className="bg-gradient-to-br from-ink via-ink to-ink/90 p-12 md:p-20 rounded-[3rem] text-white relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-96 h-96 bg-sauge/20 rounded-full blur-[100px]" />
 
