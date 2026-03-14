@@ -20,7 +20,7 @@ Mais d'abord, [qu'est-ce que le SEO ?](/blog/definition-seo-guide-complet)
 Un **consultant SEO** est un expert en **référencement naturel** qui aide les entreprises à améliorer leur visibilité sur les moteurs de recherche. Contrairement à une agence classique, le consultant travaille en direct avec vous, comme un partenaire intégré à votre équipe.
 
 **Son rôle :**
-- Analyser votre situation actuelle (audit technique, sémantique, concurrentiel)
+- Analyser votre situation actuelle via un [rapport d'audit SEO complet](/blog/contenu-rapport-audit-seo) (technique, sémantique, concurrentiel)
 - Définir une **stratégie SEO** adaptée à vos objectifs business
 - Mettre en oeuvre les optimisations techniques et éditoriales
 - Mesurer et ajuster en continu
@@ -105,7 +105,7 @@ Les **tarifs SEO** varient selon l'expérience et la complexité du projet :
 | **Accompagnement mensuel** | 500€ - 2 500€/mois |
 | **Mission complète** | 3 000€ - 10 000€ |
 
-L'important n'est pas le coût, c'est le **retour sur investissement**. Un consultant qui vous fait gagner 10 clients à 1 000€ chacun a largement rentabilisé ses honoraires.
+L'important n'est pas le coût, c'est le **retour sur investissement**. Un consultant qui vous fait gagner 10 clients à 1 000€ chacun a largement rentabilisé ses honoraires. Pour mieux comprendre la rémunération du secteur, découvrez les [grilles salariales d'un consultant SEO](/blog/salaire-consultant-seo).
 
 ## Quand faire appel à un consultant SEO ?
 

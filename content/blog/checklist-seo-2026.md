@@ -50,7 +50,7 @@ Google utilise l'**indexation Mobile-First** depuis 2021. La version mobile de v
 
 Le fichier **robots.txt** indique à Google quelles pages crawler. Une erreur fréquente : bloquer accidentellement des ressources essentielles (CSS, JavaScript) qui empêchent Google de rendre correctement vos pages. Vérifiez votre fichier via la Search Console.
 
-> **Outil gratuit :** [Générateur robots.txt 2026 — Configurez vos crawlers IA](/outils/generateur-robots-txt) — Le seul générateur qui inclut les 12 crawlers IA (GPTBot, Claude, Perplexity...).
+> **Outil gratuit :** [Générateur robots.txt 2026 — Configurez vos crawlers IA](/outils/generateur-robots-txt) — Le seul générateur qui inclut les 12 crawlers IA (GPTBot, Claude, Perplexity...) ainsi que les bots traditionnels.
 
 ### Sitemap XML à jour et soumis
 
@@ -89,7 +89,7 @@ Utilisez une **hiérarchie de titres logique** :
 
 ### Maillage interne stratégique
 
-Le **maillage interne** distribue l'autorité entre vos pages et guide Google dans la compréhension de votre site. Liez vos pages entre elles avec des ancres descriptives (pas de "cliquez ici"). Chaque page importante devrait recevoir au moins 3-5 liens internes.
+Le **maillage interne** distribue l'autorité entre vos pages et guide Google dans la compréhension de votre site. Liez vos pages entre elles avec des ancres descriptives (pas de "cliquez ici"). Chaque page importante devrait recevoir au least 3-5 liens internes. Une bonne stratégie de maillage est documentée dans le [contenu d'un rapport d'audit SEO](/blog/contenu-rapport-audit-seo) professionnel.
 
 ### Images optimisées (compression + alt text)
 
@@ -171,6 +171,8 @@ Analysez votre profil de liens avec des outils comme Ahrefs ou Semrush. Identifi
 - Les liens perdus à récupérer
 - Les opportunités de liens similaires à vos concurrents
 
+Une analyse complète de votre profil de backlinks figure toujours dans un [rapport d'audit SEO détaillé](/blog/contenu-rapport-audit-seo).
+
 ### Liens depuis des sites de votre thématique
 
 Un lien depuis un site de votre secteur a bien plus de valeur qu'un lien générique. Ciblez :
@@ -231,6 +233,8 @@ Au-delà du LocalBusiness et FAQ, utilisez tous les schémas pertinents :
 - **Product** pour vos pages produits
 - **Review** pour les avis
 
+Utilisez notre [générateur de données structurées JSON-LD](/outils/generateur-schema-json-ld) pour implémenter correctement chaque schéma sans risque d'erreur.
+
 ### Présence sur les sources d'entraînement IA
 
 Les LLMs sont entraînés sur des sources comme Wikipedia, Reddit, les forums spécialisés. Assurez une **présence active** sur ces plateformes pour être intégré dans leurs connaissances.
@@ -249,7 +253,7 @@ Surveillez si et comment votre marque est citée par les IA génératives. Des o
 
 Ces **30 points** constituent le socle d'une stratégie de référencement naturel efficace en 2026. Mais identifier les problèmes ne suffit pas – il faut les **prioriser par impact** et les corriger méthodiquement.
 
-> **Cas particulier : la refonte de site.** Si vous préparez une migration ou un changement de design, ces 30 points ne suffisent pas. Consultez notre [checklist avant et après refonte](/blog/refonte-site-web-sans-perdre-seo) qui détaille les 45 vérifications spécifiques pour ne pas perdre vos positions pendant la transition.
+> **Cas particulier : la refonte de site.** Si vous préparez une migration ou un changement de design, ces 30 points ne suffisent pas. Consultez notre [checklist avant et après refonte](/blog/refonte-site-web-sans-perdre-seo) qui détaille les 45 vérifications spécifiques pour ne pas perdre vos positions pendant la transition. N'oubliez pas de budgéter correctement votre refonte en consultant mon article sur les [coûts de création d'un site web performant](/blog/prix-creation-site-internet-2026).
 
 ### Téléchargez la Checklist PDF
 

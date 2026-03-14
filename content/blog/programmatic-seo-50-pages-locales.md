@@ -45,7 +45,7 @@ Mon estimation : 80 % des tâches SEO répétitives peuvent être automatisées.
 - Google Sheets compile les alertes + envoie une notification Slack
 - Je ne perds plus 2h par semaine en vérifications manuelles
 
-Ces outils d'automatisation SEO libèrent du temps pour ce qui compte : créer du contenu qui convertit et bâtir une stratégie [d'audit SEO](/audit-seo) solide.
+Ces outils d'automatisation SEO libèrent du temps pour ce qui compte : créer du contenu qui convertit et bâtir une stratégie [d'audit SEO](/audit-seo) solide. Un [rapport d'audit SEO complet](/blog/contenu-rapport-audit-seo) avant votre stratégie programmatique vous assure que les fondations sont solides.
 
 ---
 
@@ -120,7 +120,7 @@ Pour une page sur Nice, mon script va chercher automatiquement :
 
 Résultat : pour Google, ce n'est pas dupliqué. C'est du contenu hyper-pertinent pour l'habitant de cette ville.
 
-> C'est exactement ce que je propose dans mes offres de [création de site web](/creation-site-web) optimisé SEO. Je ne livre pas un site vide, je livre une machine à capturer du trafic local.
+> C'est exactement ce que je propose dans mes offres de [création de site web](/creation-site-web) optimisé SEO. Je ne livre pas un site vide, je livre une machine à capturer du trafic local. Investissez correctement en consultant mon article sur les [coûts réalistes d'une création de site internet](/blog/prix-creation-site-internet-2026) pour ne pas vous tromper dès le départ.
 
 ---
 

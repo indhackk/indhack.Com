@@ -160,7 +160,7 @@ Les IA sont entraînées à privilégier les sources fiables. Le framework **E-E
 
 Un contenu non sourcé, sans auteur identifié, sans page de contact, sera ignoré par les IA. Elles cherchent des **experts reconnus**, pas du contenu générique.
 
-> **Diagnostic :** Un [audit SEO technique](/audit-seo) permet d'identifier rapidement les lacunes de votre site en matière de signaux E-E-A-T.
+> **Diagnostic :** Un [audit SEO technique](/audit-seo) permet d'identifier rapidement les lacunes de votre site en matière de signaux E-E-A-T. Découvrez ce que doit contenir un [rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo).
 
 ### Pilier 4 — Format "AI-friendly" du contenu
 

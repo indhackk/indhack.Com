@@ -110,7 +110,7 @@ Plus votre brief est flou, plus le prestataire provisionne du temps "au cas où"
 
 - **Intégrez le SEO dès le départ.** Ajouter le référencement après coup coûte souvent plus cher que de bien faire les choses au lancement. Consultez la [checklist de refonte SEO](/blog/refonte-site-web-sans-perdre-seo) pour ne rien oublier.
 
-Besoin d'un état des lieux avant de vous lancer ? Testez votre site actuel avec notre [audit SEO gratuit](/outils/audit-seo-gratuit). C'est le meilleur point de départ pour définir un budget réaliste.
+Besoin d'un état des lieux avant de vous lancer ? Testez votre site actuel avec notre [audit SEO gratuit](/outils/audit-seo-gratuit) et découvrez ce que doit contenir un [rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo). C'est le meilleur point de départ pour définir un budget réaliste.
 
 ---
 

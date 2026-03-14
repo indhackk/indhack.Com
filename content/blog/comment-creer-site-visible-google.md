@@ -78,9 +78,9 @@ Chaque page doit avoir un objectif clair et s'inscrire dans une **hiérarchie lo
 |---------|----------|
 | **Core Web Vitals** | LCP, FID, CLS optimisés |
 | **SSR/SSG** | Rendu côté serveur ou statique |
-| **Schema.org** | Données structurées pour rich snippets |
+| **Schema.org** | Données structurées pour rich snippets (utilisez notre [générateur JSON-LD](/outils/generateur-schema-json-ld)) |
 | **Sitemap XML** | Automatique et à jour |
-| **Robots.txt** | Correctement configuré |
+| **Robots.txt** | Correctement configuré (consultez notre [générateur robots.txt gratuit](/outils/generateur-robots-txt)) |
 
 ### Contenu rédigé pour Google ET pour l'humain
 
@@ -120,7 +120,7 @@ Oubliez les sites à 500€. Un **site réellement optimisé SEO** pour le réf�
 | **Site avec blog SEO** | 3 500€ - 6 000€ |
 | **E-commerce optimisé** | 5 000€ - 15 000€ |
 
-C'est un **investissement**, pas une dépense. Un **site bien référencé** génère des clients **gratuitement** pendant des années. Pour plus de détails sur les tarifs, consultez notre article [combien coûte un site web en 2026](/blog/prix-creation-site-internet-2026).
+C'est un **investissement**, pas une dépense. Un **site bien référencé** génère des clients **gratuitement** pendant des années. Pour une vue d'ensemble détaillée des [prix de création d'un site internet en 2026](/blog/prix-creation-site-internet-2026), incluant le rapport qualité/prix selon les technologies.
 
 ## Ce qu'il faut retenir
 

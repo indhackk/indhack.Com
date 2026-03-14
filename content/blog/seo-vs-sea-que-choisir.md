@@ -43,7 +43,7 @@ Avant de comparer, clarifions les termes. Vous pouvez également lire notre guid
 
 ### Coûts sur 12 mois
 
-Prenons l'exemple d'une PME visant 1 000 visiteurs/mois qualifiés :
+Prenons l'exemple d'une PME visant 1 000 visiteurs/mois qualifiés (pour mieux comprendre les tarifs du marché, consultez les [grilles salariales d'un consultant SEO](/blog/salaire-consultant-seo)) :
 
 | Poste | SEO | SEA |
 |-------|-----|-----|
@@ -86,6 +86,8 @@ Le référencement naturel est le bon choix si :
 - Vos mots-clés ont un **coût par clic élevé** en SEA
 - Vous voulez **construire une autorité** dans votre secteur
 - Votre cycle de vente est **long** (B2B, services premium)
+
+Un professionnel du SEO peut vous préparer un vrai [rapport d'audit SEO](/blog/contenu-rapport-audit-seo) pour évaluer vos opportunités et dimensionner votre investissement correctement.
 
 ### Exemples concrets
 
@@ -160,7 +162,7 @@ SEO et SEA ne sont pas concurrents. Ils se **complètent**. Les données SEA inf
 | **Objectif** | Construire un actif | Tester / promouvoir |
 | **Concurrence SEO** | Faible à moyenne | Très forte |
 
-La plupart des entreprises devraient **commencer les deux en parallèle**, avec une bascule progressive vers le SEO à mesure que les résultats organiques arrivent.
+La plupart des entreprises devraient **commencer les deux en parallèle**, avec une bascule progressive vers le SEO à mesure que les résultats organiques arrivent. Un vrai diagnostic consiste à étudier votre situation avec un [rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo) qui claire les priorités.
 
 ---
 

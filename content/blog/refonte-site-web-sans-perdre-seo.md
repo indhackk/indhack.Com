@@ -19,6 +19,8 @@ En tant que consultante SEO spécialiste en [refonte de site web](/refonte-site-
 
 Une refonte mal préparée peut faire perdre 50 à 80 % du trafic organique en quelques jours (source : études de cas SEMrush). La plupart des agences web se concentrent sur le design et les fonctionnalités. Le SEO est traité **après coup**, quand le site est déjà en ligne. Résultat :
 
+Avant de refondre, il faut évaluer les coûts réels associés. Consultez mon article sur les [tarifs de création de site internet en 2026](/blog/prix-creation-site-internet-2026) pour comprendre comment dimensionner votre budget refonte.
+
 | Erreur | Conséquence |
 |--------|-------------|
 | URLs modifiées sans redirections | Pages introuvables, erreurs 404 |
@@ -172,6 +174,7 @@ Ne réécrivez pas les pages qui rankent bien. Si vous devez modifier le contenu
 - **Gardez** les mots-clés principaux aux mêmes endroits
 - **Gardez** la structure Hn (H1, H2, H3...)
 - **Gardez** les paragraphes clés qui matchent l'intention de recherche
+- **Gardez** les données structurées existantes (testez-les avec notre [générateur de schema JSON-LD](/outils/generateur-schema-json-ld))
 - **Améliorez** plutôt que de remplacer
 
 #### Checklist contenu et on-page SEO
@@ -320,7 +323,7 @@ Une refonte réussie se traduit par :
 
 **Impact** : Baisse du CTR, perte de visibilité SERP.
 
-**Comment l'éviter** : Lister toutes les données structurées actuelles. Les migrer sur le nouveau site.
+**Comment l'éviter** : Lister toutes les données structurées actuelles. Les migrer sur le nouveau site avec notre [générateur de balisage schema JSON-LD](/outils/generateur-schema-json-ld) qui valide le code avant mise en ligne.
 
 ---
 
@@ -387,7 +390,7 @@ Avec une migration bien préparée et un plan de redirection solide, le trafic r
 
 **Combien de temps dure une refonte SEO-safe ?**
 
-Comptez 2 à 4 semaines pour l'audit pré-migration et la préparation du plan de redirection, puis le temps de développement (variable selon la taille du site), et 4 à 6 semaines de surveillance post-lancement. Une refonte bien préparée prend plus de temps, mais évite des mois de récupération SEO et une perte de positionnement catastrophique.
+Comptez 2 à 4 semaines pour l'audit pré-migration et la préparation du plan de redirection, puis le temps de développement (variable selon la taille du site), et 4 à 6 semaines de surveillance post-lancement. Consultez notre guide sur le [contenu d'un rapport d'audit SEO](/blog/contenu-rapport-audit-seo) pour savoir exactement ce que doit couvrir cet audit pré-migration. Une refonte bien préparée prend plus de temps, mais évite des mois de récupération SEO et une perte de positionnement catastrophique.
 
 **Puis-je changer de nom de domaine pendant la refonte ?**
 

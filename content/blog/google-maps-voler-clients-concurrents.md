@@ -252,7 +252,7 @@ Si vous voulez ranker à Nice, mais que vous utilisez des photos de banque d'ima
 
 Google Maps verra une **cohérence géographique parfaite** et vous fera remonter dans les résultats locaux.
 
-Vous voulez vérifier si votre site est techniquement prêt à recevoir ce trafic ? Lancez un [audit SEO gratuit](/outils/audit-seo-gratuit) en 30 secondes.
+Vous voulez vérifier si votre site est techniquement prêt à recevoir ce trafic ? Lancez un [audit SEO gratuit](/outils/audit-seo-gratuit) en 30 secondes. Si vous lancez un nouveau site ou le refondez, assurez-vous que vous pouvez capturer ce trafic — un [rapport d'audit SEO détaillé](/blog/contenu-rapport-audit-seo) identifiera les problèmes techniques avant le lancement.
 
 ## La technique du titre qui convertit
 

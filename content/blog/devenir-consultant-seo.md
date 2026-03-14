@@ -82,7 +82,7 @@ De nombreuses **formations SEO** se concentrent exclusivement sur le référence
 | **OpenClassrooms** | 100% en ligne | Parcours diplômant |
 | **Google Digital Garage** | Gratuit | Certification officielle Google |
 
-Pour plus de détails, consultez mon article sur [quelle formation SEO choisir](/blog/quelle-formation-seo).
+Pour plus de détails, consultez mon article sur [quelle formation SEO choisir](/blog/quelle-formation-seo). Le métier offre aussi une rémunération attractive, comme je le détaille dans mon guide des [salaires d'un consultant SEO](/blog/salaire-consultant-seo).
 
 ### L'apprentissage autodidacte
 
@@ -142,7 +142,7 @@ Plusieurs options pour **décrocher vos premières missions** :
 
 Après quelques années, trouvez votre **niche d'expertise** :
 
-- **SEO technique** — Audits, migrations, performance ([diagnostiquer la santé de votre site](/audit-seo))
+- **SEO technique** — Audits, migrations, performance ([diagnostiquer la santé de votre site](/audit-seo)) et rédaction de [rapports d'audit SEO professionnels](/blog/contenu-rapport-audit-seo)
 - **SEO éditorial** — Stratégie de contenu, cocons sémantiques
 - **[Visibilité de proximité](/seo-local)** — Google Business Profile, citations locales
 - **SEO e-commerce** — Fiches produits, catégories, CRO
@@ -176,6 +176,8 @@ Pour devenir **incontournable** dans votre domaine :
 | Revenus potentiellement supérieurs | Gestion administrative |
 | Diversité des missions | Isolement possible |
 | Choix des clients | Prospection nécessaire |
+
+La rémunération en freelance dépend de votre spécialisation — consultez mon article détaillé sur les [salaires d'un consultant SEO](/blog/salaire-consultant-seo) pour avoir une vision réaliste.
 
 **Mon conseil :** Commencez en entreprise ou agence pour acquérir de l'expérience solide, puis passez [en indépendant](/consultant-seo) si l'indépendance vous attire.
 

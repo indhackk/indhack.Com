@@ -114,6 +114,8 @@ Voici l'approche que j'applique pour chaque site que je développe :
 
 6. **Sécurité by design** : Pas de base de données exposée, pas de panneau d'administration piratable.
 
+Cette approche demande un investissement initial plus important, mais qui reste pertinent selon votre stratégie. Consultez mon article sur les [tarifs de création d'un site web performant](/blog/prix-creation-site-internet-2026) pour évaluer le retour sur investissement.
+
 [Découvrez mon processus de création de site web en détail](/creation-site-web) ou [demandez un devis gratuit](/contact).
 
 ## 5. L'impact sur votre business (en euros)

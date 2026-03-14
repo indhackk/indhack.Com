@@ -11,7 +11,7 @@ keywords: ["SEO Nice", "référencement local Nice", "Alpes-Maritimes", "Google 
 
 Pour une entreprise locale, être visible sur des recherches comme "**consultant SEO Nice**" ou "**expert référencement Alpes-Maritimes**" est plus important que d'être visible au niveau national sans intention d'achat. En tant que [consultante SEO à Nice](/consultant-seo-nice) et [experte en visibilité de proximité](/seo-local), je vous partage les clés du **référencement** sur la Côte d'Azur.
 
-> **Outil gratuit :** [Simulateur de Visibilité Locale — Analysez la SERP de votre ville](/outils/simulateur-visibilite-locale) — Découvrez qui domine Google pour votre métier à Nice, Cannes ou Monaco.
+> **Outil gratuit :** [Simulateur de Visibilité Locale — Analysez la SERP de votre ville](/outils/simulateur-visibilite-locale) — Découvrez qui domine Google pour votre métier à Nice, Cannes ou Monaco. Pour une analyse complète de votre positionnement, un [rapport d'audit SEO local](/blog/contenu-rapport-audit-seo) identifiera tous les leviers de croissance.
 
 ## La puissance de la recherche locale
 
