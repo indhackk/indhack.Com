@@ -11,6 +11,10 @@ export const metadata: Metadata = {
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`
     },
+    robots: {
+        index: false,
+        follow: true,
+    },
     openGraph: {
         title: `Consultant SEO ${cityData.name} | IndHack`,
         description: `Dominez les résultats Google à ${cityData.name}. Référencement local, audit SEO et stratégie digitale pour entreprises nantaises.`,

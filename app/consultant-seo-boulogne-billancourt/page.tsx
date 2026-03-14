@@ -11,6 +11,10 @@ export const metadata: Metadata = {
     alternates: {
         canonical: `https://indhack.com/${cityData.slug}`
     },
+    robots: {
+        index: false,
+        follow: true,
+    },
     openGraph: {
         title: `Consultant SEO Boulogne-Billancourt | IndHack`,
         description: `Dominez Google à Boulogne-Billancourt. Référencement naturel, audit SEO technique et stratégie digitale pour entreprises des Hauts-de-Seine.`,

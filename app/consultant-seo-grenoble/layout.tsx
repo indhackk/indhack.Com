@@ -7,6 +7,10 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://indhack.com/consultant-seo-grenoble"
     },
+    robots: {
+        index: false,
+        follow: true,
+    },
     openGraph: {
         title: "Consultant SEO Grenoble (38) | Expert Référencement Isère",
         description: "Dominez Google à Grenoble. Référencement naturel, audit SEO technique et stratégie digitale pour entreprises grenobloises. Startups tech, tourisme montagne, PME.",

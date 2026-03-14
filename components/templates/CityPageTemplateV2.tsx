@@ -154,9 +154,9 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
 
     // Services liés avec liens vers sub-services (ancres sémantiques liées au mot-clé cible)
     const RELATED_SERVICES = [
-        { title: `Audit technique SEO ${city}`, href: `/${cityData.slug}/audit-technique`, desc: "Analyse approfondie de votre site", isPrimary: true },
+        { title: `Audit SEO complet à ${city}`, href: "/audit-seo", desc: "Analyse technique approfondie de votre site", isPrimary: true },
         { title: "Accompagnement SEO personnalisé", href: "/consultant-seo", desc: "Votre expert dédié" },
-        { title: "Diagnostic SEO complet", href: "/audit-seo", desc: "Analyse technique approfondie" },
+        { title: "Rapport d'audit SEO : guide complet", href: "/blog/contenu-rapport-audit-seo", desc: "Contenu, modèle et exemple" },
         { title: "Stratégie SEO nationale", href: "/referencement-naturel", desc: "Croissance organique durable" },
         { title: "Création site SEO-ready", href: "/creation-site-web", desc: "Site optimisé Google" }
     ];

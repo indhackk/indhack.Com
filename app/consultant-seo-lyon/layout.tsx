@@ -7,6 +7,10 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://indhack.com/consultant-seo-lyon"
     },
+    robots: {
+        index: false,
+        follow: true,
+    },
     openGraph: {
         title: "Consultante SEO Lyon — Référencement Local Rhône-Alpes",
         description: "Dominez Google à Lyon. Référencement naturel, audit SEO technique et stratégie digitale pour entreprises lyonnaises. Part-Dieu, Confluence, Gerland.",

@@ -38,12 +38,12 @@ const nextConfig = {
             // ══════════════════════════════════════════════════════════════
             {
                 source: '/consultant-seo-:city/audit-technique',
-                destination: '/consultant-seo-:city',
+                destination: '/audit-seo',
                 permanent: true,
             },
             {
                 source: '/seo-:city/audit-technique',
-                destination: '/consultant-seo-:city',
+                destination: '/audit-seo',
                 permanent: true,
             },
             // ══════════════════════════════════════════════════════════════
@@ -53,6 +53,16 @@ const nextConfig = {
                 source: '/consultant-seo-freelance',
                 destination: '/consultant-seo',
                 permanent: true, // 301 - fusion des pages qui ciblent le même mot-clé
+            },
+            {
+                source: '/consultante-seo',
+                destination: '/consultant-seo',
+                permanent: true, // 301 - capture le mot-clé féminin
+            },
+            {
+                source: '/consultante-seo-freelance',
+                destination: '/consultant-seo',
+                permanent: true, // 301 - capture variante féminine freelance
             },
             {
                 source: '/blog/visibilite-ia-geo',

@@ -111,6 +111,17 @@ module.exports = {
 
         // Pages redirigées (de-cannibalisation)
         '/consultant-seo-freelance',
+
+        // Pages villes noindex (autorité insuffisante, concentration du jus SEO)
+        '/consultant-seo-strasbourg',
+        '/consultant-seo-grenoble',
+        '/consultant-seo-rennes',
+        '/consultant-seo-lille',
+        '/consultant-seo-bordeaux',
+        '/consultant-seo-nantes',
+        '/consultant-seo-toulouse',
+        '/consultant-seo-lyon',
+        '/consultant-seo-boulogne-billancourt',
     ],
 
     // Robotstxt options optimisées avec règles GEO (Generative Engine Optimization)
@@ -161,11 +172,11 @@ module.exports = {
         ];
 
         // Pages villes (cocoon SEO) - 19 villes
+        // Villes actives seulement (zone PACA + Paris + Montpellier)
         const cityPages = [
             '/consultant-seo-nice', '/consultant-seo-cannes', '/consultant-seo-antibes', '/consultant-seo-monaco', '/consultant-seo-sophia-antipolis',
-            '/consultant-seo-marseille', '/consultant-seo-aix-en-provence', '/consultant-seo-juan-les-pins', '/consultant-seo-paris', '/consultant-seo-lyon',
-            '/consultant-seo-bordeaux', '/consultant-seo-toulouse', '/consultant-seo-rennes', '/consultant-seo-nantes', '/consultant-seo-lille',
-            '/consultant-seo-montpellier', '/consultant-seo-strasbourg', '/consultant-seo-grenoble', '/consultant-seo-boulogne-billancourt'
+            '/consultant-seo-marseille', '/consultant-seo-aix-en-provence', '/consultant-seo-juan-les-pins', '/consultant-seo-paris',
+            '/consultant-seo-montpellier'
         ];
 
         // Pages outils SEO (valeur ajoutée forte)
