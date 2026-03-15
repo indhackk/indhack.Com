@@ -21,25 +21,19 @@ const SERVICES = [
 // ══════════════════════════════════════════════════════════════
 // COLONNE 2 — SEO Local France (top 20 villes)
 // ══════════════════════════════════════════════════════════════
+// Uniquement les villes indexées (PACA + Paris + Montpellier)
+// Les 9 villes noindex ont été retirées pour ne pas gaspiller le jus SEO
 const CITIES = [
     { name: "Nice", href: "/consultant-seo-nice" },
     { name: "Paris", href: "/consultant-seo-paris" },
-    { name: "Lyon", href: "/consultant-seo-lyon" },
     { name: "Marseille", href: "/consultant-seo-marseille" },
-    { name: "Toulouse", href: "/consultant-seo-toulouse" },
-    { name: "Bordeaux", href: "/consultant-seo-bordeaux" },
-    { name: "Nantes", href: "/consultant-seo-nantes" },
     { name: "Montpellier", href: "/consultant-seo-montpellier" },
-    { name: "Lille", href: "/consultant-seo-lille" },
-    { name: "Strasbourg", href: "/consultant-seo-strasbourg" },
-    { name: "Rennes", href: "/consultant-seo-rennes" },
-    { name: "Grenoble", href: "/consultant-seo-grenoble" },
     { name: "Cannes", href: "/consultant-seo-cannes" },
     { name: "Antibes", href: "/consultant-seo-antibes" },
     { name: "Monaco", href: "/consultant-seo-monaco" },
     { name: "Sophia-Antipolis", href: "/consultant-seo-sophia-antipolis" },
     { name: "Aix-en-Provence", href: "/consultant-seo-aix-en-provence" },
-    { name: "Boulogne-Billancourt", href: "/consultant-seo-boulogne-billancourt" },
+    { name: "Juan-les-Pins", href: "/consultant-seo-juan-les-pins" },
 ];
 
 // ══════════════════════════════════════════════════════════════

@@ -62,7 +62,7 @@ const staticPageDates = {
     '/partenaires': '2026-02-18',
     '/consultant-geo': '2026-03-11',
     '/consultant-ia': '2026-02-15',
-    '/audit-ia': '2026-02-15',
+    // '/audit-ia' retiré — page inexistante (404)
     '/community-manager': '2026-02-15',
     '/creation-boutique-en-ligne': '2026-01-20',
 };
@@ -211,7 +211,7 @@ module.exports = {
             // Outils SEO gratuits - haute priorité
             priority = 0.9;
             changefreq = 'weekly';
-        } else if (['/consultant-geo', '/consultant-ia', '/audit-ia', '/community-manager', '/creation-boutique-en-ligne'].includes(path)) {
+        } else if (['/consultant-geo', '/consultant-ia', '/community-manager', '/creation-boutique-en-ligne'].includes(path)) {
             priority = 0.8;
             changefreq = 'weekly';
         } else if (path === '/glossaire-seo' || path === '/etudes-de-cas' || path === '/partenaires' || path === '/checklist-geo') {

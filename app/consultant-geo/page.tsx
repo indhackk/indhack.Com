@@ -4,7 +4,7 @@ import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Consultant GEO : soyez cité par ChatGPT et les IA – IndHack",
+    title: "Consultant GEO : être cité par ChatGPT et les IA",
     description: "Consultante GEO (Generative Engine Optimization) à Nice. Audit de visibilité IA, optimisation pour ChatGPT, Perplexity, Gemini. Outil gratuit + accompagnement.",
     keywords: ["consultant GEO", "consultante GEO", "Generative Engine Optimization", "visibilité ChatGPT", "référencement IA", "GEO SEO", "optimisation IA", "consultant GEO France", "consultant GEO Nice"],
     alternates: {

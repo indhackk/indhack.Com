@@ -3,7 +3,7 @@ import ChecklistGEOClient from "./ChecklistGEOClient";
 import { Breadcrumb } from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-    title: "Checklist GEO 2026 : 50 points pour être visible dans les IA | IndHack",
+    title: "Checklist GEO 2026 : 50 points de visibilité IA",
     description: "Checklist interactive de 50 points pour optimiser votre site pour ChatGPT, Perplexity, Claude et Gemini. Accessibilité IA, contenu, données structurées, E-E-A-T et plus.",
     keywords: [
         "checklist GEO",

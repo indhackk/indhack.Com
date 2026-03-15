@@ -30,7 +30,7 @@ const FAQ = dynamic(() => import("@/components/FAQ").then(mod => ({ default: mod
 });
 
 export const metadata: Metadata = {
-    title: "Consultante SEO & GEO — Expert référencement & visibilité IA [2026]",
+    title: "Consultante SEO & GEO — référencement & visibilité IA",
     description: "Consultante SEO & GEO : boostez votre visibilité sur Google et dans les IA (ChatGPT, Perplexity). Audit gratuit, stratégie sur-mesure et résultats durables.",
     alternates: {
         canonical: "https://indhack.com"

@@ -29,22 +29,26 @@ const MISSIONS = [
     {
         icon: Search,
         title: "Audit SEO complet",
-        description: "Analyse technique, sémantique et concurrentielle de votre site pour identifier les opportunités de croissance."
+        description: "Analyse technique, sémantique et concurrentielle de votre site pour identifier les opportunités de croissance.",
+        href: "/audit-seo"
     },
     {
         icon: FileText,
         title: "Stratégie de contenu",
-        description: "Recherche de mots-clés, planning éditorial et rédaction optimisée pour capter du trafic qualifié."
+        description: "Recherche de mots-clés, planning éditorial et rédaction optimisée pour capter du trafic qualifié.",
+        href: "/referencement-naturel"
     },
     {
         icon: Link2,
         title: "Netlinking",
-        description: "Acquisition de backlinks de qualité pour renforcer l'autorité de votre domaine."
+        description: "Acquisition de backlinks de qualité pour renforcer l'autorité de votre domaine.",
+        href: "/referencement-naturel"
     },
     {
         icon: TrendingUp,
         title: "Optimisation on-page",
-        description: "Balises title, meta descriptions, structure Hn, maillage interne, Core Web Vitals."
+        description: "Balises title, meta descriptions, structure Hn, maillage interne, Core Web Vitals.",
+        href: "/audit-seo"
     },
     {
         icon: BarChart3,
@@ -54,7 +58,8 @@ const MISSIONS = [
     {
         icon: Target,
         title: "SEO Local",
-        description: "Optimisation Google Business Profile et positionnement sur les recherches de proximité."
+        description: "Optimisation Google Business Profile et positionnement sur les recherches de proximité.",
+        href: "/seo-local"
     }
 ];
 
@@ -81,19 +86,18 @@ const AVANTAGES = [
     }
 ];
 
+// Uniquement les villes indexées (cohérent avec la stratégie noindex)
 const CITIES = [
     { name: "Nice", slug: "consultant-seo-nice" },
     { name: "Paris", slug: "consultant-seo-paris" },
     { name: "Cannes", slug: "consultant-seo-cannes" },
     { name: "Monaco", slug: "consultant-seo-monaco" },
     { name: "Marseille", slug: "consultant-seo-marseille" },
-    { name: "Lyon", slug: "consultant-seo-lyon" },
-    { name: "Bordeaux", slug: "consultant-seo-bordeaux" },
-    { name: "Toulouse", slug: "consultant-seo-toulouse" },
-    { name: "Nantes", slug: "consultant-seo-nantes" },
-    { name: "Rennes", slug: "consultant-seo-rennes" },
     { name: "Montpellier", slug: "consultant-seo-montpellier" },
-    { name: "Lille", slug: "consultant-seo-lille" },
+    { name: "Antibes", slug: "consultant-seo-antibes" },
+    { name: "Sophia-Antipolis", slug: "consultant-seo-sophia-antipolis" },
+    { name: "Aix-en-Provence", slug: "consultant-seo-aix-en-provence" },
+    { name: "Juan-les-Pins", slug: "consultant-seo-juan-les-pins" },
 ];
 
 const FAQ = [
@@ -242,17 +246,35 @@ export default function ConsultantSEOClient() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="bg-white p-8 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all group"
                             >
-                                <div className="w-14 h-14 bg-sauge/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-sauge transition-colors">
-                                    <mission.icon className="w-7 h-7 text-sauge group-hover:text-white transition-colors" />
-                                </div>
-                                <h3 className="text-xl font-heading font-bold text-ink mb-3">
-                                    {mission.title}
-                                </h3>
-                                <p className="text-soft leading-relaxed">
-                                    {mission.description}
-                                </p>
+                                {mission.href ? (
+                                    <Link href={mission.href} className="block bg-white p-8 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all group h-full">
+                                        <div className="w-14 h-14 bg-sauge/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-sauge transition-colors">
+                                            <mission.icon className="w-7 h-7 text-sauge group-hover:text-white transition-colors" />
+                                        </div>
+                                        <h3 className="text-xl font-heading font-bold text-ink mb-3">
+                                            {mission.title}
+                                        </h3>
+                                        <p className="text-soft leading-relaxed">
+                                            {mission.description}
+                                        </p>
+                                        <span className="inline-flex items-center gap-1 text-sauge text-sm font-medium mt-4">
+                                            En savoir plus <ArrowRight className="w-4 h-4" />
+                                        </span>
+                                    </Link>
+                                ) : (
+                                    <div className="bg-white p-8 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all group h-full">
+                                        <div className="w-14 h-14 bg-sauge/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-sauge transition-colors">
+                                            <mission.icon className="w-7 h-7 text-sauge group-hover:text-white transition-colors" />
+                                        </div>
+                                        <h3 className="text-xl font-heading font-bold text-ink mb-3">
+                                            {mission.title}
+                                        </h3>
+                                        <p className="text-soft leading-relaxed">
+                                            {mission.description}
+                                        </p>
+                                    </div>
+                                )}
                             </motion.div>
                         ))}
                     </div>
