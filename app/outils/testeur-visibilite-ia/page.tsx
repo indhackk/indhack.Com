@@ -179,12 +179,12 @@ export default function TesteurVisibiliteIAPage() {
 
                         {/* Header - Compact */}
                         <div className="max-w-3xl mx-auto text-center mb-10">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/20 border border-sauge/30 rounded-full text-sauge text-sm font-bold mb-4">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/20 border border-sauge/30 rounded-full text-white text-sm font-bold mb-4">
                                 <Bot className="w-4 h-4" />
                                 <span className="uppercase tracking-wider text-xs">Le seul outil français gratuit</span>
                             </div>
                             <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
-                                Testeur Visibilité <span className="text-sauge">IA</span>
+                                Testeur Visibilité <span className="text-sauge-light">IA</span>
                             </h1>
                             <p className="text-soft-light text-lg">
                                 Votre site est-il visible par ChatGPT, Perplexity et Claude ?
@@ -201,7 +201,7 @@ export default function TesteurVisibiliteIAPage() {
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-4xl mx-auto prose prose-invert">
                             <h2 className="text-2xl font-heading font-bold text-white mb-6">
-                                Comment fonctionne le <span className="text-sauge">testeur de visibilité IA</span>
+                                Comment fonctionne le <span className="text-sauge-light">testeur de visibilité IA</span>
                             </h2>
 
                             <div className="space-y-6 text-soft-light">
@@ -210,15 +210,15 @@ export default function TesteurVisibiliteIAPage() {
                                 </p>
 
                                 <p>
-                                    L&apos;outil vérifie d&apos;abord l&apos;<strong className="text-white">accessibilité de votre site aux crawlers IA</strong> : nous analysons votre fichier <code className="text-sauge bg-sauge/10 px-1 rounded">robots.txt</code> pour détecter si GPTBot, Claude-Web ou PerplexityBot sont autorisés à indexer vos pages. Nous vérifions également la présence du nouveau standard <code className="text-sauge bg-sauge/10 px-1 rounded">llms.txt</code>, un fichier Markdown adopté par plus de 844 000 sites (dont Anthropic, Cloudflare et Stripe) pour guider les LLM vers les contenus importants.
+                                    L&apos;outil vérifie d&apos;abord l&apos;<strong className="text-white">accessibilité de votre site aux crawlers IA</strong> : nous analysons votre fichier <code className="text-sauge-light bg-sauge/10 px-1 rounded">robots.txt</code> pour détecter si GPTBot, Claude-Web ou PerplexityBot sont autorisés à indexer vos pages. Nous vérifions également la présence du nouveau standard <code className="text-sauge-light bg-sauge/10 px-1 rounded">llms.txt</code>, un fichier Markdown adopté par plus de 844 000 sites (dont Anthropic, Cloudflare et Stripe) pour guider les LLM vers les contenus importants.
                                 </p>
 
                                 <p>
-                                    Ensuite, nous analysons vos <strong className="text-white">données structurées JSON-LD</strong> (Organization, FAQPage, LocalBusiness...) qui permettent aux IA de comprendre le contexte de votre contenu. Les pages avec un <Link href="/outils/generateur-schema-json-ld" className="text-sauge hover:underline">schema JSON-LD</Link> bien implémenté sont jusqu&apos;à 40 % plus susceptibles d&apos;être citées comme source.
+                                    Ensuite, nous analysons vos <strong className="text-white">données structurées JSON-LD</strong> (Organization, FAQPage, LocalBusiness...) qui permettent aux IA de comprendre le contexte de votre contenu. Les pages avec un <Link href="/outils/generateur-schema-json-ld" className="text-sauge-light hover:underline">schema JSON-LD</Link> bien implémenté sont jusqu&apos;à 40 % plus susceptibles d&apos;être citées comme source.
                                 </p>
 
                                 <p>
-                                    Enfin, nous évaluons vos <strong className="text-white">signaux E-E-A-T</strong> (Expérience, Expertise, Autorité, Confiance) et la <strong className="text-white">citabilité de votre contenu</strong>. Les IA privilégient les contenus avec des données chiffrées, des listes structurées et des définitions claires. <Link href="/outils/generateur-robots-txt" className="text-sauge hover:underline">Configurez vos crawlers IA</Link> pour maximiser votre score, et complétez avec un <Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">audit SEO complet</Link> pour optimiser votre référencement global.
+                                    Enfin, nous évaluons vos <strong className="text-white">signaux E-E-A-T</strong> (Expérience, Expertise, Autorité, Confiance) et la <strong className="text-white">citabilité de votre contenu</strong>. Les IA privilégient les contenus avec des données chiffrées, des listes structurées et des définitions claires. <Link href="/outils/generateur-robots-txt" className="text-sauge-light hover:underline">Configurez vos crawlers IA</Link> pour maximiser votre score, et complétez avec un <Link href="/outils/audit-seo-gratuit" className="text-sauge-light hover:underline">audit SEO complet</Link> pour optimiser votre référencement global.
                                 </p>
                             </div>
                         </div>
@@ -230,7 +230,7 @@ export default function TesteurVisibiliteIAPage() {
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-2xl font-heading font-bold text-white text-center mb-10">
-                                4 catégories de <span className="text-sauge">signaux</span> analysés
+                                4 catégories de <span className="text-sauge-light">signaux</span> analysés
                             </h2>
 
                             <div className="grid md:grid-cols-4 gap-4">
@@ -244,11 +244,11 @@ export default function TesteurVisibiliteIAPage() {
                                     return (
                                         <div key={cat.title} className="bg-white/5 rounded-xl p-5 border border-white/10">
                                             <div className="w-10 h-10 rounded-lg bg-sauge/30 flex items-center justify-center mb-3">
-                                                <Icon className="w-5 h-5 text-sauge-light" />
+                                                <Icon className="w-5 h-5 text-white" />
                                             </div>
                                             <h3 className="font-bold text-white text-sm mb-1">{cat.title}</h3>
                                             <p className="text-sm text-soft-light mb-2">{cat.desc}</p>
-                                            <span className="text-sm font-bold text-sauge-light">{cat.points} pts</span>
+                                            <span className="text-sm font-bold text-white">{cat.points} pts</span>
                                         </div>
                                     );
                                 })}
@@ -262,7 +262,7 @@ export default function TesteurVisibiliteIAPage() {
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
-                                Pourquoi la visibilité IA est <span className="text-sauge">cruciale en 2026</span>
+                                Pourquoi la visibilité IA est <span className="text-sauge-light">cruciale en 2026</span>
                             </h2>
 
                             <div className="grid md:grid-cols-2 gap-6 mb-10">
@@ -286,14 +286,14 @@ export default function TesteurVisibiliteIAPage() {
                                 </p>
 
                                 <p>
-                                    Notre testeur de visibilité IA est <strong className="text-white">le seul outil GEO gratuit disponible en français</strong>. Les alternatives anglophones (Otterly.ai, GEO Tracker) sont payantes et ne prennent pas en compte les spécificités du marché francophone. En analysant votre site gratuitement, sans inscription, nous vous donnons les clés pour <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="text-sauge hover:underline">apparaître dans les réponses de ChatGPT</Link> et des autres IA.
+                                    Notre testeur de visibilité IA est <strong className="text-white">le seul outil GEO gratuit disponible en français</strong>. Les alternatives anglophones (Otterly.ai, GEO Tracker) sont payantes et ne prennent pas en compte les spécificités du marché francophone. En analysant votre site gratuitement, sans inscription, nous vous donnons les clés pour <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="text-sauge-light hover:underline">apparaître dans les réponses de ChatGPT</Link> et des autres IA.
                                 </p>
                             </div>
 
                             {/* SEO vs GEO comparison table */}
                             <div className="mt-10">
                                 <h3 className="text-xl font-heading font-bold text-white text-center mb-6">
-                                    SEO vs GEO : <span className="text-sauge">tableau comparatif</span>
+                                    SEO vs GEO : <span className="text-sauge-light">tableau comparatif</span>
                                 </h3>
                                 <div className="overflow-x-auto">
                                     <table className="w-full text-sm border-collapse">
@@ -350,7 +350,7 @@ export default function TesteurVisibiliteIAPage() {
                 <section className="py-16 bg-fond-sombre border-t border-white/5">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
-                            Outils <span className="text-sauge">complémentaires</span>
+                            Outils <span className="text-sauge-light">complémentaires</span>
                         </h2>
                         <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
                             {RELATED_TOOLS.map((tool) => {
@@ -362,7 +362,7 @@ export default function TesteurVisibiliteIAPage() {
                                         className="group bg-white/5 rounded-xl p-5 border border-white/10 hover:border-sauge/30 hover:bg-white/10 transition-all"
                                     >
                                         <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center mb-3 group-hover:bg-sauge/30 transition-colors">
-                                            <Icon className="w-5 h-5 text-sauge" />
+                                            <Icon className="w-5 h-5 text-white" />
                                         </div>
                                         <h3 className="font-bold text-white mb-1 group-hover:text-sauge transition-colors">{tool.title}</h3>
                                         <p className="text-sm text-soft-light">{tool.description}</p>
@@ -386,8 +386,8 @@ export default function TesteurVisibiliteIAPage() {
                                         { href: "/blog/importance-audit-seo", text: "L'audit SEO : point de départ de votre croissance" },
                                     ].map((link) => (
                                         <li key={link.href}>
-                                            <Link href={link.href} className="text-soft-light hover:text-sauge transition-colors flex items-center gap-2 text-sm">
-                                                <ArrowRight className="w-3 h-3 text-sauge" />
+                                            <Link href={link.href} className="text-soft-light hover:text-sauge-light transition-colors flex items-center gap-2 text-sm">
+                                                <ArrowRight className="w-3 h-3 text-sauge-light" />
                                                 {link.text}
                                             </Link>
                                         </li>
@@ -404,7 +404,7 @@ export default function TesteurVisibiliteIAPage() {
                                         { href: "/consultant-seo-sophia-antipolis", text: "Consultant SEO Sophia Antipolis" },
                                     ].map((link) => (
                                         <li key={link.href}>
-                                            <Link href={link.href} className="text-soft-light hover:text-sauge transition-colors flex items-center gap-2 text-sm">
+                                            <Link href={link.href} className="text-soft-light hover:text-sauge-light transition-colors flex items-center gap-2 text-sm">
                                                 <MapPin className="w-3 h-3 text-sauge" />
                                                 {link.text}
                                             </Link>
@@ -421,7 +421,7 @@ export default function TesteurVisibiliteIAPage() {
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-3xl mx-auto">
                             <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
-                                Questions <span className="text-sauge">Fréquentes</span>
+                                Questions <span className="text-sauge-light">Fréquentes</span>
                             </h2>
                             <div className="space-y-3">
                                 {FAQ_ITEMS.map((item, index) => (
@@ -451,7 +451,7 @@ export default function TesteurVisibiliteIAPage() {
                 <section className="py-16 bg-fond-sombre border-t border-white/5">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
-                            Besoin d&apos;une stratégie <span className="text-sauge">GEO</span> complète ?
+                            Besoin d&apos;une stratégie <span className="text-sauge-light">GEO</span> complète ?
                         </h2>
                         <p className="text-soft-light mb-8 max-w-xl mx-auto">
                             Je vous accompagne pour apparaître dans les réponses de ChatGPT et Perplexity.

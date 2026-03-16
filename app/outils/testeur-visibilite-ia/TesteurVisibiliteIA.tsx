@@ -79,7 +79,7 @@ const LEVEL_CONFIG = {
     invisible: { color: "text-red-400", bg: "bg-red-500", label: "Invisible pour les IA" },
     partial: { color: "text-amber-400", bg: "bg-amber-500", label: "Partiellement visible" },
     visible: { color: "text-emerald-400", bg: "bg-emerald-500", label: "Bonne visibilité" },
-    excellent: { color: "text-sauge", bg: "bg-sauge", label: "Excellent" },
+    excellent: { color: "text-sauge-light", bg: "bg-sauge", label: "Excellent" },
 };
 
 const CATEGORY_CONFIG = {
@@ -157,7 +157,7 @@ function CrawlerRow({ crawler }: { crawler: CrawlerStatus }) {
                 <div>
                     <span className="font-medium text-white text-sm">{crawler.name}</span>
                     {crawler.critical && (
-                        <span className="ml-2 text-[10px] bg-sauge/20 text-sauge px-1.5 py-0.5 rounded font-medium border border-sauge/30">
+                        <span className="ml-2 text-[10px] bg-sauge/20 text-white px-1.5 py-0.5 rounded font-medium border border-sauge/30">
                             Critique
                         </span>
                     )}
@@ -232,7 +232,7 @@ function CategoryCard({ category, data }: { category: keyof typeof CATEGORY_CONF
                                         </div>
                                         <p className="text-[11px] text-soft-light mt-0.5">{check.detail}</p>
                                         {check.fixUrl && (
-                                            <Link href={check.fixUrl} className="inline-flex items-center gap-1 text-[11px] text-sauge font-medium hover:underline mt-1">
+                                            <Link href={check.fixUrl} className="inline-flex items-center gap-1 text-[11px] text-sauge-light font-medium hover:underline mt-1">
                                                 {check.fixLabel || "Corriger"}
                                                 <ArrowRight className="w-3 h-3" />
                                             </Link>
@@ -399,7 +399,7 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                         >
                             <div className="flex items-center gap-4">
                                 <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center">
-                                    <Bot className="w-5 h-5 text-sauge animate-pulse" />
+                                    <Bot className="w-5 h-5 text-white animate-pulse" />
                                 </div>
                                 <div className="flex-1">
                                     <div className="text-sm font-medium text-white mb-2">Analyse en cours...</div>
@@ -434,7 +434,7 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                                     href={result.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-soft-light hover:text-sauge flex items-center justify-center md:justify-start gap-1 text-sm"
+                                    className="text-soft-light hover:text-sauge-light flex items-center justify-center md:justify-start gap-1 text-sm"
                                 >
                                     {result.url}
                                     <ExternalLink className="w-3 h-3" />
@@ -492,7 +492,7 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                                         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                                             <Link
                                                 href={`/rapport/${domain}`}
-                                                className="flex items-center gap-2 text-sm text-sauge hover:text-sauge-light transition-colors"
+                                                className="flex items-center gap-2 text-sm text-sauge-light hover:text-white transition-colors"
                                             >
                                                 <ExternalLink className="w-4 h-4" />
                                                 Voir votre rapport public
@@ -520,7 +520,7 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                         <div className="bg-gradient-to-br from-sauge/10 to-transparent backdrop-blur-sm rounded-2xl border border-sauge/20 p-6">
                             <div className="flex items-center gap-3 mb-5">
                                 <div className="w-10 h-10 rounded-xl bg-sauge/20 flex items-center justify-center">
-                                    <Target className="w-5 h-5 text-sauge-light" />
+                                    <Target className="w-5 h-5 text-white" />
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-white text-lg">Actions prioritaires</h3>
@@ -571,7 +571,7 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                             {blockedCount > 0 && (
                                 <Link
                                     href="/outils/generateur-robots-txt"
-                                    className="text-sm text-sauge font-medium hover:underline flex items-center gap-1"
+                                    className="text-sm text-sauge-light font-medium hover:underline flex items-center gap-1"
                                 >
                                     Configurer robots.txt
                                     <ArrowRight className="w-3 h-3" />
