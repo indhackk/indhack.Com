@@ -273,7 +273,7 @@ export default function TesteurVisibiliteIAPage() {
                                     { stat: "1,48 Md€", label: "marché GEO estimé en 2026", source: "Grand View Research" },
                                 ].map((item) => (
                                     <div key={item.stat} className="bg-white/5 rounded-xl p-6 border border-white/10 text-center">
-                                        <span className="text-3xl font-bold text-sauge-light block mb-2">{item.stat}</span>
+                                        <span className="text-3xl font-bold text-white block mb-2">{item.stat}</span>
                                         <span className="text-white font-medium block mb-1">{item.label}</span>
                                         <span className="text-sm text-white/60">Source : {item.source}</span>
                                     </div>
@@ -364,7 +364,7 @@ export default function TesteurVisibiliteIAPage() {
                                         <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center mb-3 group-hover:bg-sauge/30 transition-colors">
                                             <Icon className="w-5 h-5 text-white" />
                                         </div>
-                                        <h3 className="font-bold text-white mb-1 group-hover:text-sauge transition-colors">{tool.title}</h3>
+                                        <h3 className="font-bold text-white mb-1 group-hover:text-sauge-light transition-colors">{tool.title}</h3>
                                         <p className="text-sm text-soft-light">{tool.description}</p>
                                     </Link>
                                 );
@@ -405,7 +405,7 @@ export default function TesteurVisibiliteIAPage() {
                                     ].map((link) => (
                                         <li key={link.href}>
                                             <Link href={link.href} className="text-soft-light hover:text-sauge-light transition-colors flex items-center gap-2 text-sm">
-                                                <MapPin className="w-3 h-3 text-sauge" />
+                                                <MapPin className="w-3 h-3 text-sauge-light" />
                                                 {link.text}
                                             </Link>
                                         </li>
