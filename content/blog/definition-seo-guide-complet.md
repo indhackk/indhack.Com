@@ -114,6 +114,8 @@ Créer un site web puis croiser les doigts ne fonctionne pas. Votre parcours ver
 
 Le **référencement naturel** exige un pilotage méthodique qui punit sévèrement les approximatifs. Et récompense glorieusement ceux qui tiennent le cap de la qualité.
 
+Et avec l'essor des moteurs génératifs (ChatGPT, Perplexity, Gemini), le SEO ne suffit plus. Il faut aussi vérifier votre [visibilité dans les réponses IA](/outils/testeur-visibilite-ia) pour ne pas rater la prochaine vague de trafic.
+
 Besoin d'un accompagnement sur ce parcours complexe mais incroyablement rentable ? En tant que [consultante SEO freelance](/consultant-seo), j'accompagne les entreprises prêtes à passer à l'échelle supérieure. [Contactez-moi pour planifier un audit et définir votre roadmap.](/contact)
 
 ## Articles complémentaires

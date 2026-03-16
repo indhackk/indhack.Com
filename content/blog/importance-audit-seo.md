@@ -113,6 +113,7 @@ Un audit SEO vous permet de :
 - **Prioriser les actions** par ROI
 - **Construire une stratégie** sur des bases solides
 - **Mesurer vos progrès** dans le temps
+- **Vérifier votre visibilité IA** — avec l'essor de ChatGPT et Perplexity, testez si votre marque est citée grâce à notre [testeur de visibilité IA gratuit](/outils/testeur-visibilite-ia)
 
 ---
 

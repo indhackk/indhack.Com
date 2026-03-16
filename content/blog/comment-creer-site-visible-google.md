@@ -104,6 +104,10 @@ Chaque page doit être reliée aux autres par des **ancres optimisées**. C'est 
 | **Attributs alt** | Descriptifs et optimisés |
 | **Lazy loading** | Chargement différé |
 
+### Audit post-lancement
+
+Avant de considérer votre site comme « terminé », faites un [audit SEO complet](/blog/contenu-rapport-audit-seo) pour vérifier que rien n'a été oublié. Un bon rapport d'audit couvre la technique, le contenu, le maillage et l'indexation.
+
 ### Lancement et indexation
 
 - Soumission du **sitemap** à Google Search Console

@@ -1,6 +1,6 @@
 ---
-title: "Salaire consultant SEO en 2026 : grilles et évolutions"
-description: "Combien gagne un consultant SEO en France ? Salaires junior, confirmé, senior, freelance. Grilles détaillées par expérience, région et spécialité."
+title: "Salaire consultant SEO 2026 : de 28K à 120K€ (grilles complètes)"
+description: "Combien gagne un consultant SEO en France en 2026 ? Grilles salariales CDI (28K→120K€) et TJM freelance (250€→1 000€) par expérience, région et spécialité."
 date: "2026-01-23"
 category: "Métier"
 image: "/images/blog/salaire-consultant-seo.jpg"
@@ -110,6 +110,7 @@ Un consultant qui peut prouver des **résultats concrets** négocie bien mieux :
 - Positions gagnées sur des mots-clés concurrentiels
 - **Trafic organique** augmenté (+X% sur 6 mois)
 - CA généré grâce au SEO (le Graal)
+- [Rapports d'audit SEO professionnels](/blog/contenu-rapport-audit-seo) avec recommandations chiffrées
 
 C'est la différence entre un profil théorique et un **expert opérationnel**.
 

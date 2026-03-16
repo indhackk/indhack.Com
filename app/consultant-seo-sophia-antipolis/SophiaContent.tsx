@@ -47,7 +47,8 @@ export function SophiaAntipolisContent() {
                         <p className="text-soft">
                             Le SEO B2B à Sophia Antipolis exige une <strong>compréhension fine du marché tech</strong>,
                             des cycles de vente longs (6-18 mois), et une stratégie de contenu qui éduque avant de convertir.
-                            C'est exactement mon expertise.
+                            C'est exactement mon expertise en tant que <Link href="/consultant-seo" className="text-sauge hover:underline font-medium">consultante SEO freelance</Link>,
+                            spécialiste du <Link href="/seo-local" className="text-sauge hover:underline font-medium">référencement local</Link> sur la Côte d'Azur.
                         </p>
                     </motion.div>
 
@@ -240,8 +241,16 @@ export function SophiaAntipolisContent() {
                         viewport={{ once: true }}
                         className="text-center mt-12"
                     >
-                        <p className="text-soft mb-6">
+                        <p className="text-soft mb-4">
                             Startup, scale-up ou ETI de Sophia Antipolis ? Discutons de votre stratégie SEO B2B.
+                        </p>
+                        <p className="text-sm text-soft mb-6">
+                            J'interviens aussi à <Link href="/consultant-seo-nice" className="text-sauge hover:underline">Nice</Link>,{" "}
+                            <Link href="/consultant-seo-antibes" className="text-sauge hover:underline">Antibes</Link>,{" "}
+                            <Link href="/consultant-seo-cannes" className="text-sauge hover:underline">Cannes</Link> et{" "}
+                            <Link href="/consultant-seo-monaco" className="text-sauge hover:underline">Monaco</Link>.
+                            Testez votre site avec mon <Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline font-medium">audit SEO gratuit</Link> ou
+                            vérifiez votre <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline font-medium">visibilité dans les IA</Link>.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
                             <Link
@@ -252,10 +261,10 @@ export function SophiaAntipolisContent() {
                                 <ArrowRight className="w-4 h-4" />
                             </Link>
                             <Link
-                                href="/blog/programmatic-seo-50-pages-locales"
+                                href="/blog/contenu-rapport-audit-seo"
                                 className="inline-flex items-center gap-2 border-2 border-ink text-ink px-8 py-4 rounded-full font-bold hover:bg-ink hover:text-white transition-colors"
                             >
-                                Lire : SEO programmatique B2B
+                                Voir un exemple de rapport d'audit
                             </Link>
                         </div>
                     </motion.div>

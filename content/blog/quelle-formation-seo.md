@@ -111,7 +111,7 @@ Une bonne **formation SEO** doit couvrir ces domaines :
 
 | Compétence | Niveau attendu |
 |------------|---------------|
-| Diagnostic technique complet | Expert |
+| [Diagnostic technique complet](/blog/contenu-rapport-audit-seo) | Expert |
 | Structure HTML sémantique | Solide |
 | Données structurées Schema.org | Intermédiaire |
 | Analyse de logs serveur | Bases |
@@ -143,6 +143,7 @@ Une bonne **formation SEO** doit couvrir ces domaines :
 - Netlinking et relations presse digitale
 - Visibilité locale et Google Business Profile
 - SEO international
+- **GEO (Generative Engine Optimization)** — savoir [tester la visibilité d'une marque dans les IA](/outils/testeur-visibilite-ia) devient une compétence clé en 2026
 - Optimisation pour les moteurs IA (GEO)
 
 ## Mon parcours personnel
