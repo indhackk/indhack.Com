@@ -5,7 +5,7 @@ date: "2026-03-12"
 dateModified: "2026-03-12"
 category: "IA & SEO"
 image: "/images/blog/google-ai-mode-fin-10-liens-bleus.webp"
-imageAlt: "Google AI Mode en 2026 : la fin des 10 liens bleus et impact sur le SEO"
+imageAlt: "Personne utilisant la recherche Google sur un ordinateur portable, illustrant la transition vers AI Mode"
 author: "Indiana Aflalo"
 keywords: ["Google AI Mode", "AI Mode Google", "zero-click search", "fin des 10 liens bleus", "SEO 2026", "Google Gemini search", "AI Mode impact SEO", "trafic organique Google IA", "recherche sans clic"]
 ---

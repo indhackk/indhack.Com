@@ -4,7 +4,7 @@ description: "Découvrez comment les IA façonnent votre réputation. Audit, str
 date: "2026-03-14"
 category: "GEO"
 image: "/images/blog/geo-ereputation-marque-ia-2026.webp"
-imageAlt: "Stratégie de réputation de marque dans les IA : ChatGPT, Perplexity et Claude"
+imageAlt: "Smartphone affichant ChatGPT sur un clavier d'ordinateur, illustrant la réputation de marque dans les IA génératives"
 author: "Indiana Aflalo"
 keywords: ["GEO", "réputation marque IA", "ChatGPT brand", "Perplexity brand mentions", "e-réputation", "sentiment brand AI"]
 readingTime: "14 min"

@@ -4,7 +4,7 @@ description: "Découvrez comment le core update de mars 2026 change le SEO. E-E-
 date: "2026-03-16"
 category: "SEO Technique"
 image: "/images/blog/google-core-update-mars-2026.webp"
-imageAlt: "Analyse du core update Google mars 2026 et ses impacts SEO"
+imageAlt: "Tableau de bord analytics montrant l'impact du core update Google mars 2026 sur le trafic SEO"
 author: "Indiana Aflalo"
 keywords: ["core update mars 2026", "Google update SEO", "perte de trafic SEO", "E-E-A-T", "Discover update 2026"]
 readingTime: "12 min"
