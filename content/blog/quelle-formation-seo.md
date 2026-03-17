@@ -11,6 +11,16 @@ keywords: ["formation SEO", "apprendre SEO", "devenir consultant SEO", "formatio
 
 Vous voulez **apprendre le SEO** ? Excellente idée. Le **référencement naturel** est l'une des compétences les plus demandées du marché digital. Si votre objectif est de [devenir consultant SEO](/blog/devenir-consultant-seo), la formation n'est qu'une étape — mais une étape cruciale. Face à la jungle des **formations SEO** disponibles, comment choisir le bon parcours ?
 
+**Sommaire :**
+1. [Pourquoi se former au SEO en 2026 ?](#pourquoi-se-former-au-seo-en-2026)
+2. [Les différents parcours pour apprendre le SEO](#les-differents-parcours-pour-apprendre-le-seo)
+3. [Les compétences essentielles à acquérir](#les-competences-essentielles-a-acquerir)
+4. [Mon parcours personnel](#mon-parcours-personnel)
+5. [Comment choisir sa formation SEO ?](#comment-choisir-sa-formation-seo)
+6. [Ce qu'il faut retenir](#ce-quil-faut-retenir)
+
+---
+
 ## Pourquoi se former au SEO en 2026 ?
 
 Le **SEO n'est pas mort**, contrairement à ce qu'on lit parfois. Il **évolue**. Avec l'arrivée de l'**IA générative** (ChatGPT, Gemini, Perplexity), le métier se transforme. Mais la demande pour des **experts en visibilité organique** n'a jamais été aussi forte.

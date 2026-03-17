@@ -32,6 +32,11 @@ google-credentials.json
 scripts/google-credentials.json
 *.gserviceaccount.json
 
+# Claude Code skills & agents (outillage local)
+.claude/skills/
+.claude/agents/
+.claude/worktrees/
+
 # vercel
 .vercel
 test-nice.jpg

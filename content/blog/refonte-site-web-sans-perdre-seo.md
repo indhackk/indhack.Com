@@ -15,6 +15,19 @@ En tant que consultante SEO spécialiste en [refonte de site web](/refonte-site-
 
 > **Cet article inclut une checklist complète de 45 points** à vérifier avant, pendant et après votre refonte. Téléchargeable gratuitement, vous pouvez l'utiliser comme référence tout au long de votre projet de migration.
 
+**Sommaire :**
+1. [Pourquoi les refontes SEO échouent ?](#pourquoi-les-refontes-seo-echouent)
+2. [Phase 1 : avant la refonte — audit et préparation](#phase-1--avant-la-refonte--audit-et-preparation)
+3. [Phase 2 : pendant la refonte — développement](#phase-2--pendant-la-refonte--developpement)
+4. [Phase 3 : le jour J — mise en ligne](#phase-3--le-jour-j--mise-en-ligne)
+5. [Phase 4 : après la refonte — surveillance](#phase-4--apres-la-refonte--surveillance)
+6. [Les 5 erreurs fatales qui détruisent le SEO d'une refonte](#les-5-erreurs-fatales-qui-detruisent-le-seo-dune-refonte)
+7. [Outils recommandés pour une migration SEO-safe](#outils-recommandes-pour-une-migration-seo-safe)
+8. [Planning type d'une refonte SEO-safe](#planning-type-dune-refonte-seo-safe)
+9. [Ce qu'il faut retenir](#ce-quil-faut-retenir)
+
+---
+
 ## Pourquoi les refontes SEO échouent ?
 
 Une refonte mal préparée peut faire perdre 50 à 80 % du trafic organique en quelques jours (source : études de cas SEMrush). La plupart des agences web se concentrent sur le design et les fonctionnalités. Le SEO est traité **après coup**, quand le site est déjà en ligne. Résultat :

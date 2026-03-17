@@ -17,6 +17,15 @@ Cette **checklist SEO 2026** rassemble les **50 points essentiels** que je véri
 
 Cette checklist complète ma stratégie de [référencement naturel](/referencement-naturel) pour les entreprises qui veulent dominer Google.
 
+**Sommaire :**
+1. [SEO technique : les fondations de votre visibilité](#1-seo-technique--les-fondations-de-votre-visibilite)
+2. [Contenu et on-page : optimiser chaque page](#2-contenu-et-on-page--optimiser-chaque-page)
+3. [SEO local : dominer votre zone géographique](#3-seo-local--dominer-votre-zone-geographique)
+4. [Backlinks et autorité : construire votre réputation](#4-backlinks-et-autorite--construire-votre-reputation)
+5. [Visibilité IA : le nouveau terrain de jeu](#5-visibilite-ia--le-nouveau-terrain-de-jeu)
+6. [Passez à l'action : votre checklist SEO 2026](#passez-a-laction--votre-checklist-seo-2026)
+7. [Ce qu'il faut retenir](#ce-quil-faut-retenir)
+
 ---
 
 ## 1. SEO technique : les fondations de votre visibilité

@@ -15,6 +15,19 @@ Votre **fiche Google Business Profile** (anciennement Google My Business) est so
 
 En tant que consultante [SEO local](/seo-local), je vous livre le guide complet pour **dominer le pack local** dans votre ville.
 
+**Sommaire :**
+1. [Qu'est-ce que Google Business Profile ?](#quest-ce-que-google-business-profile)
+2. [Comment créer et revendiquer votre fiche Google Business ?](#comment-creer-et-revendiquer-votre-fiche-google-business)
+3. [Comment optimiser votre fiche pour apparaître dans le pack local ?](#comment-optimiser-votre-fiche-pour-apparaitre-dans-le-pack-local)
+4. [Comment gérer les avis clients efficacement ?](#comment-gerer-les-avis-clients-efficacement)
+5. [Publier des Google Posts](#publier-des-google-posts)
+6. [La section Questions/Réponses](#la-section-questionsreponses)
+7. [Les photos et vidéos](#les-photos-et-videos)
+8. [Mesurer vos performances](#mesurer-vos-performances)
+9. [Les erreurs à éviter](#les-erreurs-a-eviter)
+
+---
+
 ## Qu'est-ce que Google Business Profile ?
 
 Google Business Profile (GBP) est l'outil gratuit qui fait apparaître votre entreprise dans les résultats locaux de Google. 46 % des recherches Google ont une intention locale (source : Google). Si votre fiche est mal optimisée, vous perdez des clients chaque jour.

@@ -22,6 +22,16 @@ Le **GEO (Generative Engine Optimization)** désigne l'optimisation pour les mot
 
 Dans ce guide, je vous explique concrètement ce qu'est le GEO, pourquoi il va impacter votre business, et surtout comment adapter votre site dès aujourd'hui. Et pour aller plus loin, vous pouvez tester la visibilité IA de votre site gratuitement avec notre [testeur de visibilité IA](/outils/testeur-visibilite-ia).
 
+**Sommaire :**
+1. [Qu'est-ce que le GEO (Generative Engine Optimization) ?](#quest-ce-que-le-geo-generative-engine-optimization)
+2. [Pourquoi le GEO est devenu incontournable en 2026](#pourquoi-le-geo-est-devenu-incontournable-en-2026)
+3. [Les 4 piliers du GEO : comment optimiser votre site pour les IA](#les-4-piliers-du-geo-comment-optimiser-votre-site-pour-les-ia)
+4. [GEO et SEO local : l'enjeu pour les entreprises de proximité](#geo-et-seo-local-lenjeu-pour-les-entreprises-de-proximite)
+5. [Comment chaque IA choisit ses sources : les préférences par plateforme](#comment-chaque-ia-choisit-ses-sources-les-preferences-par-plateforme)
+6. [Checklist GEO — 10 actions à faire aujourd'hui](#checklist-geo--10-actions-a-faire-aujourdhui)
+
+---
+
 ## Qu'est-ce que le GEO (Generative Engine Optimization) ?
 
 Le **SEO classique** optimise votre site pour apparaître dans les résultats de recherche Google — les fameux "10 liens bleus". L'objectif : être en première page, idéalement en position 1.

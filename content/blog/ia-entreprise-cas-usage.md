@@ -15,6 +15,17 @@ En 2026, la phase de découverte est terminée. Les entreprises (des TPE dynamiq
 
 Ignorer l'intégration de l'IA aujourd'hui, c'est comme avoir refusé d'intégrer le Web en 2005. Voici un guide clair sur les vrais cas d'usage business et les étapes pour les implémenter.
 
+**Sommaire :**
+1. [Pourquoi les entreprises franchissent-elles le pas ?](#pourquoi-les-entreprises-franchissent-elles-le-pas)
+2. [4 cas d'usage concrets et rentables de l'IA en entreprise](#4-cas-dusage-concrets-et-rentables-de-lia-en-entreprise)
+3. [Choisir entre IA générative et IA traditionnelle](#choisir-entre-ia-generative-et-ia-traditionnelle)
+4. [Les erreurs à éviter lors de l'intégration IA](#les-erreurs-a-eviter-lors-de-lintegration-ia)
+5. [ROI de l'IA : comment le mesurer concrètement](#roi-de-lia-comment-le-mesurer-concretement)
+6. [La méthode : comment j'audite et automatise votre entreprise](#la-methode-comment-jaudite-et-automatise-votre-entreprise)
+7. [Passez à la nouvelle dimension dès cette semaine](#passez-a-la-nouvelle-dimension-des-cette-semaine)
+
+---
+
 ## Pourquoi les entreprises franchissent-elles le pas ?
 
 L'objectif de l'intelligence artificielle n'est pas de "remplacer l'humain" dans sa totalité, mais de démultiplier sa capacité de production en supprimant les goulets d'étranglement administratifs. Selon les statistiques, un déploiement réussi de l'IA permet à une PME de regagner en moyenne **2h par jour et par collaborateur** sur des tâches sans valeur ajoutée.

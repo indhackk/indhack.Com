@@ -13,6 +13,24 @@ Vous avez lu quelques articles sur le SEO. Vous avez installé Yoast. Vous avez 
 
 > **Faites le test vous-même :** [Audit SEO Gratuit — Score /100 en 30 secondes](/outils/audit-seo-gratuit) — Découvrez en 1 clic les problèmes qui plombent votre visibilité.
 
+**Sommaire :**
+1. [Qu'est-ce qu'un consultant SEO exactement ?](#quest-ce-quun-consultant-seo-exactement-)
+2. [Gagner du temps et de l'argent](#gagner-du-temps-et-de-largent)
+3. [Éviter les erreurs coûteuses](#eviter-les-erreurs-couteuses)
+4. [Avoir une vision stratégique](#avoir-une-vision-strategique)
+5. [Accéder à des outils professionnels](#acceder-a-des-outils-professionnels)
+6. [Rester à jour sur les évolutions Google](#rester-a-jour-sur-les-evolutions-google)
+7. [Obtenir des résultats mesurables](#obtenir-des-resultats-mesurables)
+8. [Bénéficier d'un regard externe](#beneficier-dun-regard-externe)
+9. [Avoir un vrai partenaire de croissance](#avoir-un-vrai-partenaire-de-croissance)
+10. [Consultant SEO vs Agence SEO](#consultant-seo-vs-agence-seo)
+11. [Combien coûte un consultant SEO ?](#combien-coute-un-consultant-seo-)
+12. [Quand faire appel à un consultant SEO ?](#quand-faire-appel-a-un-consultant-seo-)
+13. [Comment choisir le bon consultant SEO ?](#comment-choisir-le-bon-consultant-seo-)
+14. [Le SEO n'est plus optionnel](#le-seo-nest-plus-optionnel)
+
+---
+
 ## Qu'est-ce qu'un consultant SEO exactement ?
 
 Mais d'abord, [qu'est-ce que le SEO ?](/blog/definition-seo-guide-complet) 

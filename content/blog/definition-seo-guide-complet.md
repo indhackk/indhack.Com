@@ -20,6 +20,17 @@ La réponse est non. Le **référencement naturel** est une science exacte, anal
 
 Dans ce guide complet, je vais déconstruire le **SEO** pour vous. Sans jargon technique inutile. Uniquement des concepts clairs, des données chiffrées de 2026, et une feuille de route concrète pour comprendre comment dominer les résultats de recherche. Que vous ayez un commerce local à Nice ou une plateforme e-commerce nationale, ce que vous allez lire est la fondation de votre future visibilité.
 
+**Sommaire :**
+1. [Qu'est-ce que le SEO exactement ?](#quest-ce-que-le-seo-exactement)
+2. [Comment fonctionne Google en 2026 ?](#comment-fonctionne-google-en-2026)
+3. [Quels sont les 3 piliers du référencement naturel ?](#quels-sont-les-3-piliers-du-referencement-naturel)
+4. [Combien de temps faut-il pour voir des résultats SEO ?](#combien-de-temps-faut-il-pour-voir-des-resultats-seo)
+5. [Le SEO est-il rentable pour une PME en 2026 ?](#le-seo-est-il-rentable-pour-une-pme-en-2026)
+6. [Quelle est la différence entre SEO local et SEO national ?](#quelle-est-la-difference-entre-seo-local-et-seo-national)
+7. [Par où commencer votre stratégie SEO ?](#par-ou-commencer-votre-strategie-seo)
+
+---
+
 ## Qu'est-ce que le SEO exactement ?
 
 Le **SEO**, acronyme de *Search Engine Optimization* (Optimisation pour les moteurs de recherche), désigne l'ensemble des techniques visant à positionner un site web dans les premiers résultats naturels (non payants) des moteurs de recherche comme Google.

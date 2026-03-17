@@ -15,6 +15,17 @@ SEO ou SEA ? Référencement naturel ou publicité Google Ads ? C'est LA questio
 
 En tant que [consultante SEO](/consultant-seo), je vous explique les **vraies différences** et comment choisir selon votre situation.
 
+**Sommaire :**
+1. [SEO et SEA : définitions](#seo-et-sea--definitions)
+2. [Comparatif détaillé](#comparatif-detaille)
+3. [Quand choisir le SEO ?](#quand-choisir-le-seo)
+4. [Quand choisir le SEA ?](#quand-choisir-le-sea)
+5. [La stratégie optimale : combiner les deux](#la-strategie-optimale--combiner-les-deux)
+6. [Les erreurs à éviter](#les-erreurs-a-eviter)
+7. [Ce qu'il faut retenir](#ce-quil-faut-retenir)
+
+---
+
 ## SEO et SEA : définitions
 
 Avant de comparer, clarifions les termes. Vous pouvez également lire notre guide expliquant [ce qu'est le SEO en détail](/blog/definition-seo-guide-complet) avant de plonger dans ce comparatif :

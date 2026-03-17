@@ -15,6 +15,16 @@ La question brûlante pour chaque directeur marketing et expert SEO est donc : *
 
 C'est là tout l'enjeu du **[GEO (Generative Engine Optimization)](/blog/geo-comment-apparaitre-chatgpt-2026)**. Voici le plan d'action d'une experte pour optimiser votre référencement sur Perplexity.
 
+**Sommaire :**
+1. [Comment fonctionne le moteur de recherche de Perplexity ?](#comment-fonctionne-le-moteur-de-recherche-de-perplexity)
+2. [Le plan d'action en 5 étapes pour l'optimisation Perplexity](#le-plan-daction-en-5-etapes-pour-loptimisation-perplexity)
+3. [Mesurer votre visibilité sur Perplexity : les méthodes pratiques](#mesurer-votre-visibilite-sur-perplexity--les-methodes-pratiques)
+4. [Perplexity vs. ChatGPT vs. Google : les différences de citation et d'optimisation](#perplexity-vs-chatgpt-vs-google--les-differences-de-citation-et-doptimisation)
+5. [Un exemple concret : les requêtes locales](#un-exemple-concret--les-requetes-locales)
+6. [L'avenir est aux pionniers](#lavenir-est-aux-pionniers)
+
+---
+
 ## Comment fonctionne le moteur de recherche de Perplexity ?
 
 Perplexity n'est pas ChatGPT. C'est un « Answer Engine » : un moteur de recherche nouvelle génération qui combine recherche en temps réel et génération de réponse par IA.

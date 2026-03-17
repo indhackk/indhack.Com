@@ -15,6 +15,16 @@ Beaucoup d'entreprises dépensent des **milliers d'euros en publicité** alors q
 
 En tant que consultante SEO chez IndHack, c'est **toujours la première étape** de mon accompagnement, que ce soit pour des entreprises à Nice, Marseille, Lyon ou dans toute la France. Je propose un [audit SEO complet](/audit-seo) qui analyse votre site sous tous les angles.
 
+**Sommaire :**
+1. [Ce qu'un audit SEO révèle vraiment](#ce-quun-audit-seo-revele-vraiment)
+2. [Les piliers d'un audit SEO complet](#les-piliers-dun-audit-seo-complet)
+3. [L'approche IndHack : prioriser pour le ROI](#lapproche-indhack-prioriser-pour-le-roi)
+4. [Combien coûte un audit SEO ?](#combien-coute-un-audit-seo)
+5. [Audit SEO pour entreprises locales](#audit-seo-pour-entreprises-locales)
+6. [Quand faire un audit SEO ?](#quand-faire-un-audit-seo)
+
+---
+
 ## Ce qu'un audit SEO révèle vraiment
 
 Un audit SEO révèle les freins invisibles qui empêchent votre site de performer sur Google. Ce n'est pas juste une liste de problèmes techniques — c'est une **analyse de marché complète** qui répond aux questions essentielles :

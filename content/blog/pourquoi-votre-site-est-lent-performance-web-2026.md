@@ -19,6 +19,17 @@ Et ce n'est pas qu'une question de SEO. **53% des visiteurs mobiles quittent un 
 
 Dans cet article, je vous montre avec des données réelles pourquoi la technologie de votre site impacte directement votre chiffre d'affaires.
 
+**Sommaire :**
+1. [Ce que Google mesure (et que votre agence ne vous dit pas)](#1-ce-que-google-mesure-et-que-votre-agence-ne-vous-dit-pas)
+2. [Le test : mon site vs un concurrent — Les chiffres parlent](#2-le-test--mon-site-vs-un-concurrent--les-chiffres-parlent)
+3. [Pourquoi la plupart des sites sont lents (et ce n'est pas de votre faute)](#3-pourquoi-la-plupart-des-sites-sont-lents-et-ce-nest-pas-de-votre-faute)
+4. [Ce que je fais différemment](#4-ce-que-je-fais-differemment)
+5. [L'impact sur votre business (en euros)](#5-limpact-sur-votre-business-en-euros)
+6. [Comment tester votre site maintenant](#6-comment-tester-votre-site-maintenant)
+7. [Questions fréquentes](#7-questions-frequentes)
+
+---
+
 ## 1. Ce que Google mesure (et que votre agence ne vous dit pas)
 
 Google évalue la performance de votre site via trois métriques principales, les **Core Web Vitals**. Ces mesures ne sont pas optionnelles : elles influencent directement votre position dans les résultats de recherche depuis 2021.

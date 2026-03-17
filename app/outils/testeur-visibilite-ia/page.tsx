@@ -118,13 +118,7 @@ export default function TesteurVisibiliteIAPage() {
                             "Vérification du fichier llms.txt",
                             "Analyse des données structurées JSON-LD",
                             "Rapport public partageable avec badge SVG"
-                        ],
-                        "aggregateRating": {
-                            "@type": "AggregateRating",
-                            "ratingValue": "4.8",
-                            "ratingCount": "127",
-                            "bestRating": "5"
-                        }
+                        ]
                     })
                 }}
             />

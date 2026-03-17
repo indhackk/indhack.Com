@@ -13,6 +13,19 @@ Le métier de **Consultant IA** est indiscutablement la profession numérique la
 
 Que vous cherchiez à vous orienter vers cette filière, ou (et surtout) que vous soyez un dirigeant d'entreprise en quête de productivité foudroyante, ce guide vous dévoile tout sur le Consulting en Intelligence Artificielle.
 
+**Sommaire :**
+1. [Qu'est-ce qu'un Consultant IA Générative (GenAI) ?](#quest-ce-quun-consultant-ia-generative-genai)
+2. [Pourquoi les PME et Grands Comptes en ont besoin MAINTENANT](#pourquoi-les-pme-et-grands-comptes-en-ont-besoin-maintenant)
+3. [Les différents profils et salaires d'experts](#les-differents-profils-et-salaires-dexperts)
+4. [Les compétences techniques indispensables du consultant IA en 2026](#les-competences-techniques-indispensables-du-consultant-ia-en-2026)
+5. [5 signaux d'alerte qu'il est temps d'embaucher un consultant IA](#5-signaux-dalerte-quil-est-temps-dembaucher-un-consultant-ia)
+6. [Expansion : les missions concrètes d'un consultant IA (avec exemples réels)](#expansion--les-missions-concretes-dun-consultant-ia-avec-exemples-reels)
+7. [IA et conformité : RGPD, IA Act et sécurité des données](#ia-et-conformite--rgpd-ia-act-et-securite-des-donnees)
+8. [Comment bien choisir son Consultant IA ?](#comment-bien-choisir-son-consultant-ia)
+9. [Faites passer le cap à votre organisation](#faites-passer-le-cap-a-votre-organisation)
+
+---
+
 ## Qu'est-ce qu'un Consultant IA Générative (GenAI) ?
 
 Il y a eu le Data Scientist des années 2010 : un mathématicien derrière un terminal qui prédisait les désabonnements ou ajustait des prix (Machine Learning classique).

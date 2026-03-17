@@ -26,6 +26,23 @@ Dans ce guide exhaustif mis à jour pour 2026, je vous dévoile les **7 sections
 >
 > **[Obtenir la grille d'évaluation gratuite →](/contact)**
 
+**Sommaire :**
+1. [Qu'est-ce qu'un rapport d'audit SEO (et à quoi sert-il concrètement) ?](#quest-ce-quun-rapport-daudit-seo-et-a-quoi-sert-il-concretement-)
+2. [Section 1 : Le résumé exécutif (l'état des lieux pour la direction)](#section-1--le-resume-executif-letat-des-lieux-pour-la-direction)
+3. [Section 2 : L'audit de l'infrastructure technique (les fondations)](#section-2--laudit-de-linfrastructure-technique-les-fondations)
+4. [Section 3 : L'analyse du positionnement et de la sémantique](#section-3--lanalyse-du-positionnement-et-de-la-semantique)
+5. [Section 4 : L'audit approfondi du contenu (E-E-A-T)](#section-4--laudit-approfondi-du-contenu-e-e-a-t)
+6. [Section 5 : Le profil d'autorité et les backlinks (le netlinking)](#section-5--le-profil-dautorite-et-les-backlinks-le-netlinking)
+7. [Section 6 : Le benchmark concurrentiel (reverse engineering)](#section-6--le-benchmark-concurrentiel-reverse-engineering)
+8. [Section 7 : Le plan d'action priorisé (la matrice ROI)](#section-7--le-plan-daction-priorise-la-matrice-roi)
+9. [Exemple de rapport d'audit SEO : cas concret d'un site e-commerce](#exemple-de-rapport-daudit-seo--cas-concret-dun-site-e-commerce)
+10. [Rapport SEO automatisé vs audit professionnel : comparatif détaillé](#rapport-seo-automatise-vs-audit-professionnel--comparatif-detaille)
+11. [Modèle de rapport SEO : structure type à suivre](#modele-de-rapport-seo--structure-type-a-suivre)
+12. [Comment rentabiliser votre rapport d'audit SEO](#comment-rentabiliser-votre-rapport-daudit-seo)
+13. [FAQ : tout savoir sur le rapport d'audit SEO en 2026](#faq--tout-savoir-sur-le-rapport-daudit-seo-en-2026)
+
+---
+
 ## Qu'est-ce qu'un rapport d'audit SEO (et à quoi sert-il concrètement) ?
 
 Un rapport d'audit SEO est un **document stratégique** qui analyse l'ensemble des facteurs influençant le positionnement d'un site web dans les moteurs de recherche. Il ne s'agit pas d'un simple relevé d'erreurs techniques : c'est une radiographie complète de votre présence en ligne, assortie d'un plan d'action priorisé par retour sur investissement.

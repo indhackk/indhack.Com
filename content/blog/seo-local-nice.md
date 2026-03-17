@@ -13,6 +13,21 @@ Pour une entreprise locale, être visible sur des recherches comme "**consultant
 
 > **Outil gratuit :** [Simulateur de Visibilité Locale — Analysez la SERP de votre ville](/outils/simulateur-visibilite-locale) — Découvrez qui domine Google pour votre métier à Nice, Cannes ou Monaco. Pour une analyse complète de votre positionnement, un [rapport d'audit SEO local](/blog/contenu-rapport-audit-seo) identifiera tous les leviers de croissance.
 
+**Sommaire :**
+1. [La puissance de la recherche locale](#la-puissance-de-la-recherche-locale)
+2. [Optimiser votre fiche Google Business Profile](#optimiser-votre-fiche-google-business-profile)
+3. [Le marché numérique niçois en 2026 : données et tendances](#le-marche-numerique-nicois-en-2026--donnees-et-tendances)
+4. [Les 5 erreurs SEO local les plus fréquentes à Nice](#les-5-erreurs-seo-local-les-plus-frequentes-a-nice)
+5. [Quartiers et zones de chalandise : adapter votre stratégie](#quartiers-et-zones-de-chalandise--adapter-votre-strategie)
+6. [Créer des pages locales dédiées](#creer-des-pages-locales-dediees)
+7. [Collecter des avis clients locaux](#collecter-des-avis-clients-locaux)
+8. [Obtenir des backlinks locaux](#obtenir-des-backlinks-locaux)
+9. [Optimiser pour la recherche vocale](#optimiser-pour-la-recherche-vocale)
+10. [Mes services SEO local sur la Côte d'Azur](#mes-services-seo-local-sur-la-cote-dazur)
+11. [Ce qu'il faut retenir](#ce-quil-faut-retenir)
+
+---
+
 ## La puissance de la recherche locale
 
 Les recherches de proximité convertissent 28 % mieux que les recherches génériques (source : Google). Les **recherches de proximité** ont un **taux de conversion** bien plus élevé :

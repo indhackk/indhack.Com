@@ -11,6 +11,15 @@ keywords: ["créer site internet visible Google", "référencement site web", "s
 
 **Créer un site Internet**, c'est facile. **Créer un site Internet visible sur Google**, c'est une autre histoire. En tant que **consultante SEO** spécialisée en [création de site web](/creation-site-web), je constate chaque jour des sites magnifiques... mais totalement invisibles. Pourquoi ? Parce que la **visibilité Google ne s'improvise pas**.
 
+**Sommaire :**
+1. [Pourquoi 90 % des sites ne génèrent aucun trafic organique ?](#pourquoi-90-des-sites-ne-generent-aucun-trafic-organique)
+2. [Agence web ou freelance : qui choisir ?](#agence-web-ou-freelance--qui-choisir)
+3. [Quelles sont les étapes pour créer un site visible sur Google ?](#quelles-sont-les-etapes-pour-creer-un-site-visible-sur-google)
+4. [Combien coûte un site visible sur Google ?](#combien-coute-un-site-visible-sur-google)
+5. [Ce qu'il faut retenir](#ce-quil-faut-retenir)
+
+---
+
 ## Pourquoi 90% des sites ne génèrent aucun trafic organique ?
 
 La plupart des entrepreneurs font l'erreur de séparer la création de leur site et leur stratégie **SEO**. Ils pensent d'abord au design, puis "on verra pour Google plus tard". **C'est exactement l'inverse qu'il faut faire.**

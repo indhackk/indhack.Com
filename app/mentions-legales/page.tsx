@@ -10,7 +10,15 @@ export const metadata: Metadata = {
     robots: {
         index: true,
         follow: true
-    }
+    },
+    openGraph: {
+        title: "Mentions Légales — IndHack",
+        description: "Mentions légales du site indhack.com édité par Indiana Aflalo, consultante SEO et experte en acquisition digitale.",
+        url: "https://indhack.com/mentions-legales",
+        siteName: "IndHack",
+        locale: "fr_FR",
+        type: "website",
+    },
 };
 
 export default function MentionsLegales() {

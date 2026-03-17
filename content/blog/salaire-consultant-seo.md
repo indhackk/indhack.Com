@@ -11,6 +11,18 @@ keywords: ["salaire consultant SEO", "rémunération SEO", "combien gagne consul
 
 Combien gagne réellement un **[expert en visibilité organique](/consultant-seo)** en France ? C'est LA question que se posent tous ceux qui envisagent cette **carrière SEO**. Si vous hésitez encore à vous lancer, consultez d'abord le [guide complet pour devenir consultant SEO](/blog/devenir-consultant-seo) — vous y trouverez le parcours détaillé avant de parler argent. Voici les données actualisées pour 2026, basées sur les études de rémunération et mon expérience du marché.
 
+**Sommaire :**
+1. [Grille des salaires SEO en 2026](#grille-des-salaires-seo-en-2026)
+2. [Salaire consultant SEO freelance](#salaire-consultant-seo-freelance)
+3. [Facteurs qui influencent le salaire](#facteurs-qui-influencent-le-salaire)
+4. [Évolution de carrière et salaire](#evolution-de-carriere-et-salaire)
+5. [Négocier son salaire SEO](#negocier-son-salaire-seo)
+6. [Les métiers SEO les mieux payés](#les-metiers-seo-les-mieux-payes)
+7. [Mon avis sur la rémunération SEO](#mon-avis-sur-la-remuneration-seo)
+8. [Ce qu'il faut retenir](#ce-quil-faut-retenir)
+
+---
+
 ## Grille des salaires SEO en 2026
 
 ### Salaire par niveau d'expérience

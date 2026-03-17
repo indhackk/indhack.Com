@@ -16,6 +16,17 @@ Tout comme le `robots.txt` a été la pierre angulaire du SEO classique pendant 
 
 Dans ce guide complet, je vous explique exactement ce qu'est ce fichier, pourquoi il est crucial pour votre visibilité, et comment le configurer pas à pas.
 
+**Sommaire :**
+1. [Qu'est-ce que le fichier llms.txt ?](#quest-ce-que-le-fichier-llmstxt)
+2. [Pourquoi vous devez absolument avoir un llms.txt en 2026](#pourquoi-vous-devez-absolument-avoir-un-llmstxt-en-2026)
+3. [Comment structurer votre fichier llms.txt (exemple)](#comment-structurer-votre-fichier-llmstxt-exemple)
+4. [Les bonnes pratiques de configuration](#les-bonnes-pratiques-de-configuration)
+5. [Comment tester si votre fichier fonctionne ?](#comment-tester-si-votre-fichier-fonctionne)
+6. [Quels sites de référence utilisent déjà llms.txt ?](#quels-sites-de-reference-utilisent-deja-llmstxt)
+7. [Erreurs courantes à éviter](#erreurs-courantes-a-eviter)
+
+---
+
 ## Qu'est-ce que le fichier llms.txt ?
 
 Le fichier `llms.txt` est un fichier texte brut, généralement placé à la racine de votre site web (ex: `votre-site.com/llms.txt`). Il est conçu spécifiquement pour être lu par les agents IA (crawlers d'intelligence artificielle) plutôt que par les humains ou les moteurs de recherche traditionnels.

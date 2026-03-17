@@ -12,6 +12,7 @@ const CACHE_TTL = 60 * 60 * 1000; // 1 heure
 
 // AI Crawlers
 const AI_CRAWLERS = [
+    { name: "MistralBot", agent: "MistralBot", description: "Entraînement Mistral", company: "Mistral AI", critical: false },
     { name: "GPTBot", agent: "GPTBot", description: "Entraînement modèles", company: "OpenAI", critical: true },
     { name: "ChatGPT-User", agent: "ChatGPT-User", description: "Navigation temps réel", company: "OpenAI", critical: true },
     { name: "OAI-SearchBot", agent: "OAI-SearchBot", description: "Recherche OpenAI", company: "OpenAI", critical: true },

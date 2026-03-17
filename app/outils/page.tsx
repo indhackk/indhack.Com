@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "Outils SEO Gratuits 2026 — Audit, Visibilité IA, Schema",
-        description: "5 outils SEO gratuits incluant le seul testeur de visibilité IA français. Analysez votre site pour Google ET pour ChatGPT.",
+        description: "6 outils SEO gratuits incluant le seul testeur de visibilité IA français. Analysez votre site pour Google ET pour ChatGPT.",
         url: "https://indhack.com/outils",
         type: "website",
     }

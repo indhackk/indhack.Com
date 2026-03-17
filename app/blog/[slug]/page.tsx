@@ -131,7 +131,7 @@ export default function BlogPostPage({ params }: PageProps) {
                                     "height": 630
                                 },
                                 "datePublished": post.date,
-                                "dateModified": post.date,
+                                "dateModified": post.dateModified || post.date,
                                 "author": {
                                     "@type": "Person",
                                     "name": post.author || "Indiana Aflalo",

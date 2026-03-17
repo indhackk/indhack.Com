@@ -18,6 +18,18 @@ Pour en avoir le cœur net, j'ai mené **une étude data-driven exclusive sur 30
 
 Les résultats sont édifiants et démontrent un retard numérique massif dans le secteur de la restauration, même parmi "l'élite" de Google.
 
+**Sommaire :**
+1. [Les 3 statistiques clés à retenir](#les-3-statistiques-cles-a-retenir)
+2. [Méthodologie de l'étude : comment j'ai analysé 308 restaurants](#methodologie-de-letude--comment-jai-analyse-308-restaurants)
+3. [Résultats détaillés par ville](#resultats-detailles-par-ville)
+4. [L'impact des avis Google sur le chiffre d'affaires](#limpact-des-avis-google-sur-le-chiffre-daffaires)
+5. [Recommandations concrètes pour les restaurateurs](#recommandations-concretes-pour-les-restaurateurs)
+6. [Le paradoxe de Saint-Tropez](#le-paradoxe-de-saint-tropez)
+7. [Consulter l'étude complète et l'infographie](#consulter-letude-complete-et-linfographie)
+8. [Conclusion : la Côte d'Azur, terre d'opportunités digitales](#conclusion--la-cote-dazur-terre-dopportunites-digitales)
+
+---
+
 ## Les 3 statistiques clés à retenir
 
 Voici les 3 failles majeures que notre script d'analyse a mis en évidence sur ces 308 restaurants dits "très visibles" :

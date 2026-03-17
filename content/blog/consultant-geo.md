@@ -15,6 +15,18 @@ La cible n'est plus seulement d'arriver "en top 10 des liens bleus", mais d'**ê
 
 Voyons ensemble ce que fait réellement ce consultant, pourquoi les PME et grands groupes se l'arrachent, et les résultats attendus.
 
+**Sommaire :**
+1. [Qu'est-ce qu'un Consultant GEO ?](#quest-ce-quun-consultant-geo)
+2. [Les 3 missions principales du Consultant GEO](#les-3-missions-principales-du-consultant-geo)
+3. [Résultats concrets du GEO : études de cas](#resultats-concrets-du-geo--etudes-de-cas)
+4. [Les outils du consultant GEO : l'arsenal technique](#les-outils-du-consultant-geo--larsenal-technique)
+5. [GEO et SEO : complémentaires, pas concurrents](#geo-et-seo--complementaires-pas-concurrents)
+6. [Pourquoi faire appel à un Consultant GEO aujourd'hui ?](#pourquoi-faire-appel-a-un-consultant-geo-aujourdhui)
+7. [Comment travaille INDHACK (Agence & Consulting GEO) ?](#comment-travaille-indhack-agence--consulting-geo)
+8. [Prêt à dominer l'ère de l'Intelligence Artificielle ?](#pret-a-dominer-lere-de-lintelligence-artificielle)
+
+---
+
 ## Qu'est-ce qu'un Consultant GEO ?
 
 Un Consultant GEO est l'hybride parfait entre un expert SEO technique et un Data Scientist spécialisé dans les LLMs (Large Language Models). 

@@ -18,6 +18,26 @@ La bonne nouvelle : il existe des outils gratuits pour diagnostiquer votre **vis
 
 Voici notre comparatif des **12 meilleurs outils GEO** disponibles en 2026 — des solutions 100 % gratuites aux plateformes enterprise — testés sur des dizaines de sites français.
 
+**Sommaire :**
+1. [Qu'est-ce qu'un outil GEO ?](#quest-ce-quun-outil-geo)
+2. [Testeur Visibilité IA — IndHack (gratuit, sans inscription)](#1-testeur-visibilite-ia--indhack-gratuit-sans-inscription)
+3. [HubSpot AI Search Grader (gratuit)](#2-hubspot-ai-search-grader-gratuit)
+4. [GEOScore (gratuit)](#3-geoscore-gratuit)
+5. [Nabu (essai gratuit — 5 prompts)](#4-nabu-essai-gratuit--5-prompts)
+6. [AreYouMention (gratuit — rapports mensuels)](#5-areyoumention-gratuit--rapports-mensuels)
+7. [Semrush AI Visibility Toolkit (freemium)](#6-semrush-ai-visibility-toolkit-freemium)
+8. [Méthode DIY (gratuit, mais manuel)](#7-methode-diy-gratuit-mais-manuel)
+9. [Otterly.ai (freemium — à partir de 29 $/mois)](#8-otterlyai-freemium--a-partir-de-29-mois)
+10. [Mangools AI Search Grader (gratuit)](#9-mangools-ai-search-grader-gratuit)
+11. [Peec AI (à partir de 89 €/mois)](#10-peec-ai-a-partir-de-89-mois)
+12. [SE Ranking AI Visibility Tracker (à partir de 49 $/mois)](#11-se-ranking-ai-visibility-tracker-a-partir-de-49-mois)
+13. [Ahrefs Brand Radar (à partir de 828 $/mois)](#12-ahrefs-brand-radar-a-partir-de-828-mois)
+14. [Tableau comparatif complet](#tableau-comparatif-complet)
+15. [Notre recommandation par budget](#notre-recommandation-par-budget)
+16. [Comment améliorer votre score GEO ?](#comment-ameliorer-votre-score-geo)
+
+---
+
 ## Qu'est-ce qu'un outil GEO ?
 
 Un outil GEO (Generative Engine Optimization) analyse la capacité de votre site à être **découvert, compris et cité par les moteurs IA**. Contrairement aux outils SEO classiques qui mesurent votre position dans les résultats Google, un outil GEO vérifie :

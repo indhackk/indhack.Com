@@ -123,7 +123,7 @@ app/[page-name]/
 Markdown in `content/blog/` with frontmatter:
 ```yaml
 title: string           # 50-60 chars
-description: string     # 140-155 chars
+description: string     # 120-160 chars
 date: string            # ISO format
 category: string
 image: string           # /images/blog/...
@@ -301,7 +301,7 @@ HOMEPAGE (/)
 ### Structure obligatoire
 
 1. Title tag (50-60 car., mot-clé en début)
-2. Meta description (140-155 car.)
+2. Meta description (120-160 car.)
 3. H1 (différent du title)
 4. Chapô (1-2 phrases, italique, bordure gauche)
 5. Image hero (WebP, alt descriptif)
@@ -315,16 +315,17 @@ HOMEPAGE (/)
 
 | Type | Minimum | Idéal |
 |------|---------|-------|
-| Informationnel | 2 000 | 2 500-3 000 |
-| Guide complet | 3 000 | 4 000-5 000 |
-| Comparatif | 2 500 | 3 000-4 000 |
-| Local | 1 500 | 2 000-2 500 |
+| Informationnel | 1 500 | 2 000-2 500 |
+| Guide complet | 2 000 | 3 000-4 000 |
+| Comparatif | 1 500 | 2 500-3 000 |
+| Local | 1 200 | 1 500-2 000 |
 
 ### JSON-LD (géré par composants, PAS dans markdown)
 
 - BlogPosting/Article
-- FAQPage (si FAQ présente)
+- FAQPage (si FAQ présente) — **Note** : depuis août 2023, seuls les sites gov/santé obtiennent des rich results Google. Garder pour bénéfice citations IA/LLM
 - BreadcrumbList (UN SEUL, pas de doublon)
+- **HowTo** : déprécié sept 2023 — ne JAMAIS utiliser
 
 ---
 
@@ -334,9 +335,9 @@ HOMEPAGE (/)
 
 | Métrique | Objectif |
 |----------|----------|
-| LCP | < 2.0s |
-| INP | < 150ms |
-| CLS | 0 |
+| LCP | ≤ 2.5s (seuil Google officiel) |
+| INP | ≤ 200ms (seuil Google officiel) |
+| CLS | ≤ 0.1 (seuil Google officiel) |
 | PageSpeed Mobile | 90+ |
 
 ### Images
@@ -391,10 +392,10 @@ Toujours lier vers cet outil quand on parle de GEO.
 ### Nouvel article
 
 - [ ] Title ≤ 60 car., mot-clé en début
-- [ ] Meta description 140-155 car.
+- [ ] Meta description 120-160 car.
 - [ ] H1 différent du title
 - [ ] Image hero WebP avec alt
-- [ ] Minimum 2 000 mots
+- [ ] Minimum 1 500 mots
 - [ ] 7+ liens internes (services, outils, articles EXISTANTS)
 - [ ] AUCUN lien vers URL inexistante
 - [ ] FAQ avec schema (3-6 questions)
@@ -418,5 +419,5 @@ Toujours lier vers cet outil quand on parle de GEO.
 4. **JAMAIS de BreadcrumbList en double**
 5. **JAMAIS d'article sans liens vers outils ET autres articles**
 6. **TOUJOURS `npm run build` après modification**
-7. **Minimum 2 000 mots par article**
+7. **Minimum 1 500 mots par article**
 8. **PageSpeed mobile ≥ 90**

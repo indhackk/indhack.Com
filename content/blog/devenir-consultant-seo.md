@@ -11,6 +11,18 @@ keywords: ["devenir consultant SEO", "comment devenir consultant SEO", "carrièr
 
 Vous souhaitez **devenir [expert en référencement naturel](/consultant-seo)** ? Excellente idée ! Le **référencement naturel** est l'un des **métiers du digital** les plus demandés. Voici mon guide complet basé sur mon propre parcours et mon expérience d'**[experte indépendante en visibilité](/consultant-seo)**.
 
+**Sommaire :**
+1. [Pourquoi devenir consultant SEO en 2026 ?](#pourquoi-devenir-consultant-seo-en-2026-)
+2. [Quel est le profil type du consultant SEO ?](#quel-est-le-profil-type-du-consultant-seo-)
+3. [Quels sont les parcours pour devenir consultant SEO ?](#quels-sont-les-parcours-pour-devenir-consultant-seo-)
+4. [Les étapes concrètes pour se lancer](#les-etapes-concretes-pour-se-lancer)
+5. [Freelance ou salarié ?](#freelance-ou-salarie-)
+6. [Les erreurs à éviter absolument](#les-erreurs-a-eviter-absolument)
+7. [Mon parcours personnel](#mon-parcours-personnel)
+8. [Ce qu'il faut retenir](#ce-quil-faut-retenir)
+
+---
+
 ## Pourquoi devenir consultant SEO en 2026 ?
 
 Le métier de **consultant SEO** a le vent en poupe, et pour cause :
