@@ -5,7 +5,7 @@ date: "2026-03-12"
 dateModified: "2026-03-12"
 category: "IA & SEO"
 image: "/images/blog/ai-overviews-impact-trafic-seo-2026.webp"
-imageAlt: "Impact des AI Overviews sur le trafic SEO en 2026 : données et chiffres clés"
+imageAlt: "Enseigne néon Google symbolisant l'impact des AI Overviews sur le référencement naturel"
 author: "Indiana Aflalo"
 keywords: ["AI Overviews", "AI Overviews SEO", "Google AI Overviews impact", "CTR organique 2026", "zero-click search", "trafic organique baisse", "AI Overviews statistiques", "SGE impact SEO", "Google IA résultats"]
 ---

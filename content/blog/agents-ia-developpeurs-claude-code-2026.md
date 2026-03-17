@@ -5,7 +5,7 @@ date: "2026-03-12"
 dateModified: "2026-03-12"
 category: "IA Entreprise"
 image: "/images/blog/agents-ia-developpeurs-claude-code-2026.webp"
-imageAlt: "Agents IA pour développeurs en 2026 : Claude Code, Cursor et GitHub Copilot"
+imageAlt: "Code source affiché sur un MacBook Pro illustrant les agents IA pour développeurs"
 author: "Indiana Aflalo"
 keywords: ["agents IA développeurs", "Claude Code", "Cursor AI", "GitHub Copilot", "code review IA", "développement IA 2026", "Anthropic Claude Code", "agent codage IA", "IA programmation", "automatisation code"]
 ---
