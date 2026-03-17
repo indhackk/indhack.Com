@@ -1,7 +1,7 @@
 ---
-title: "GEO et réputation de marque : comment protéger votre image sur l'IA"
+title: "GEO et réputation de marque : protéger votre image IA"
 description: "Découvrez comment les IA façonnent votre réputation. Audit, stratégies et outils pour maîtriser votre présence dans ChatGPT et Perplexity."
-date: "2026-03-16"
+date: "2026-03-14"
 category: "GEO"
 image: "/images/blog/geo-ereputation-marque-ia-2026.webp"
 imageAlt: "Stratégie de réputation de marque dans les IA : ChatGPT, Perplexity et Claude"
@@ -46,7 +46,7 @@ Mais voici le problème : **très peu de marketeurs français y prêtent attenti
 
 Pour protéger votre réputation dans l'IA, il faut d'abord comprendre comment ces systèmes fonctionnent.
 
-Les modèles de langage comme ChatGPT, Perplexity et Claude ne consultent pas un moteur de recherche en temps réel à chaque requête. Non. Ils se basent sur des **données d'entraînement figées**, c'est-à-dire des textes scarifiés du web avant une date limite. ChatGPT 4, par exemple, a été entraîné jusqu'en avril 2024. Perplexity utilise une approche hybride avec du contenu plus frais.
+Les modèles de langage comme ChatGPT, Perplexity et Claude ne consultent pas un moteur de recherche en temps réel à chaque requête. Non. Ils se basent sur des **données d'entraînement figées**, c'est-à-dire des textes extraits du web avant une date limite. ChatGPT 4, par exemple, a été entraîné jusqu'en avril 2024. Perplexity utilise une approche hybride avec du contenu plus frais.
 
 ### Les trois signaux que les IA utilisent pour juger votre marque
 
@@ -81,7 +81,7 @@ Globalement, les données montrent que **80,6 % des mentions de marques dans les
 
 Perplexity utilise une architecture qui mise davantage sur la **conviction et la recommandation**. Elle est entraînée pour sembler confiante. ChatGPT, au contraire, a été spécifiquement affiné pour **éviter les biais et les déclarations définitives**. D'où le ton neutre.
 
-Mais il y a plus : **les modèles citent des sources différentes**. Claude, par exemple, mentionne les marques dans **97,3 % de ses réponses** quand elles sont pertinentes, tandis que l'Outil d'Indexes d'Anthropique (AIO) ne le fait que **48,5 % du temps**.
+Mais il y a plus : **les modèles citent des sources différentes**. Claude, par exemple, mentionne les marques dans **97,3 % de ses réponses** quand elles sont pertinentes, tandis que certaines IA spécialisées ne le font que **48,5 % du temps**.
 
 Cela signifie que si vous voulez que votre marque soit citée, vous avez intérêt à figurer dans des contenus que Claude trouve pertinents. Perplexity, elle, a besoin de contenu frais et bien sourçé.
 
@@ -190,9 +190,9 @@ Les IA savent que votre domaine est « important » quand d'autres importants do
 - Contribuer à des **publications spécialisées**.
 - Créer des **contenus dignes d'être liens** (guides complets, études, outils).
 
-### F. Optimiser pour le [consultant-seo] spécialisé
+### F. Optimiser pour le consultant SEO spécialisé
 
-Ne versez pas votre budget SEO de façon générale. **Concentrez-vous sur votre niche**. Si vous êtes consultant SEO local, créez du contenu ultra-spécialisé sur [la visibilité locale](/seo-local), Google Maps, le SEO hyper-local pour votre région.
+Ne versez pas votre budget SEO de façon générale. **Concentrez-vous sur votre niche**. Si vous êtes [consultant SEO](/consultant-seo) local, créez du contenu ultra-spécialisé sur [la visibilité locale](/seo-local), Google Maps, le SEO hyper-local pour votre région.
 
 Les IA reconnaissent l'expertise spécialisée mieux que la généralité.
 

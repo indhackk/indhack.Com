@@ -60,7 +60,7 @@ Maintenant ? C'est un signal algorithmique hardcore.
 **Ce que cela signifie concrètement** :
 
 - Votre bio d'auteur doit montrer une expérience réelle et vérifiable
-- Si vous écrivez sur le SEO local, vous devez montrer que vous avez geré du SEO local (avec cas clients, chiffres, résultats)
+- Si vous écrivez sur le SEO local, vous devez montrer que vous avez géré du SEO local (avec cas clients, chiffres, résultats)
 - Les contenus écrits par une IA généraliste sans contexte d'expertise spécifique sont pénalisés, même s'ils sont bien structurés
 - Les sites sans auteurs identifiables (notamment les « content mills ») perdent énormément de visibilité
 
