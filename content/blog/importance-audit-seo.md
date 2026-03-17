@@ -156,7 +156,7 @@ Un audit complet est recommandé une fois par an minimum. Des mini-audits trimes
 
 ---
 
-**Envie d'aller plus loin ?** Découvrez [pourquoi faire appel à un consultant SEO](/blog/pourquoi-consultant-seo) ou [demandez votre audit SEO](/audit-seo).
+**Envie d'aller plus loin ?** Découvrez [pourquoi faire appel à un consultant SEO](/blog/pourquoi-consultant-seo), [demandez votre audit SEO](/audit-seo) ou [contactez-moi directement](/contact) pour en discuter.
 
 **Consultante SEO par ville :**
 - [Consultante SEO à Nice](/consultant-seo-nice)

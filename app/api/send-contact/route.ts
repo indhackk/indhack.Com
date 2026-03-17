@@ -41,7 +41,38 @@ export async function POST(request: NextRequest) {
 
         const { name, email, phone, company, website, budget, message } = validation.data;
 
-        // FormSubmit (fallback si Web3Forms côté client échoue)
+        // PRIORITÉ: Web3Forms (clé API via variable d'environnement uniquement)
+        const WEB3FORMS_KEY = process.env.WEB3FORMS_ACCESS_KEY || process.env.WEBFORM;
+        if (WEB3FORMS_KEY) {
+            const web3Response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_KEY,
+                    subject: `🚀 Nouveau contact - ${name}${company ? ` (${company})` : ''}`,
+                    from_name: name,
+                    replyto: email,
+                    Nom: name,
+                    Email: email,
+                    Telephone: phone || 'Non renseigné',
+                    Entreprise: company || 'Non renseigné',
+                    Site_Web: website || 'Non renseigné',
+                    Budget: budget || 'Non renseigné',
+                    Message: message,
+                })
+            });
+
+            const web3Result = await web3Response.json();
+            if (web3Result.success) {
+                return NextResponse.json(
+                    { success: true, message: 'Message envoyé avec succès !' },
+                    { status: 200, headers: securityHeaders }
+                );
+            }
+            console.error('Web3Forms error:', web3Result);
+        }
+
+        // FALLBACK: FormSubmit
         const FORMSUBMIT_EMAIL = 'contact@indhack.com';
         const response = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_EMAIL}`, {
             method: 'POST',
@@ -64,9 +95,9 @@ export async function POST(request: NextRequest) {
         });
 
         const isJson = response.headers.get("content-type")?.includes("application/json");
-        const result = isJson ? await response.json() : await response.text();
+        const result = isJson ? await response.json() : null;
 
-        if (response.ok && (typeof result === 'object' && result?.success)) {
+        if (response.ok && result?.success) {
             return NextResponse.json(
                 { success: true, message: 'Message envoyé avec succès !' },
                 { status: 200, headers: securityHeaders }

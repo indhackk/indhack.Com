@@ -239,3 +239,7 @@ Besoin d'aide pour déployer cette stratégie ? Je suis là pour vous accompagne
 - [Comment apparaître sur ChatGPT et les IA génératives : guide GEO](/blog/geo-comment-apparaitre-chatgpt-2026) — Préparer votre restaurant pour la recherche par IA
 - [Testeur de visibilité IA gratuit](/outils/testeur-visibilite-ia) — Vérifier si votre site est visible par les moteurs IA
 - [Simulateur de visibilité locale](/outils/simulateur-visibilite-locale) — Analyser votre positionnement local détaillé
+
+---
+
+**Vous êtes restaurateur sur la Côte d'Azur ?** [Contactez-moi](/contact) pour un diagnostic gratuit de votre visibilité en ligne.

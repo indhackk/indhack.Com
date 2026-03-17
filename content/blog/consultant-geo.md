@@ -238,3 +238,9 @@ Non, le GEO complète le SEO. Les IA utilisent toujours les classements Google/B
 - [Apparaître sur Perplexity : le guide SEO/GEO complet](/blog/apparaitre-sur-perplexity-guide-seo-2026) — Stratégie pratique pour dominer les sources citées par Perplexity
 - [Fichier llms.txt : guide complet et configuration](/blog/llms-txt-guide-complet) — Configurer votre fichier llms.txt pour les IA génératives
 - [Testeur de visibilité IA gratuit](/outils/testeur-visibilite-ia) — Vérifiez maintenant si vous êtes visible par ChatGPT, Perplexity et Claude
+- [Création de site web optimisé SEO et GEO](/creation-site-web) — Un site bien construit est le prérequis pour être cité par les IA
+- [Nos études de cas clients](/etudes-de-cas) — Résultats concrets de nos stratégies SEO et GEO
+
+---
+
+**Vous cherchez un consultant GEO ?** [Contactez-moi](/contact) pour un audit de visibilité IA et une stratégie GEO adaptée à votre marché.

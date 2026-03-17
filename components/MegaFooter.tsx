@@ -12,10 +12,12 @@ const SERVICES = [
     { title: "Audit SEO Complet", href: "/audit-seo" },
     { title: "Référencement Naturel", href: "/referencement-naturel" },
     { title: "SEO Local", href: "/seo-local" },
+    { title: "Consultant GEO", href: "/consultant-geo" },
     { title: "Consultant IA & Automatisation", href: "/consultant-ia" },
     { title: "Création de Site Web", href: "/creation-site-web" },
     { title: "Refonte de Site Web", href: "/refonte-site-web" },
     { title: "Création boutique e-commerce", href: "/creation-boutique-en-ligne" },
+    { title: "Community Manager", href: "/community-manager" },
 ];
 
 // ══════════════════════════════════════════════════════════════

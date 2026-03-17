@@ -392,6 +392,7 @@ Un seul outil GEO solide suffit pour commencer. Notre recommandation : commencez
 - [GEO 2026 : apparaître dans ChatGPT, Gemini et Claude](/blog/geo-comment-apparaitre-chatgpt-2026) — Maîtriser les principes et tactiques du Generative Engine Optimization
 - [Fichier llms.txt : guide complet et configuration](/blog/llms-txt-guide-complet) — Créer votre feuille de route pour les IA génératives
 - [Apparaître sur Perplexity : le guide SEO/GEO complet](/blog/apparaitre-sur-perplexity-guide-seo-2026) — Dominer les sources citées par le moteur IA leader
+- [Checklist GEO : les points essentiels](/checklist-geo) — La checklist complète pour optimiser votre visibilité IA
 
 ---
 

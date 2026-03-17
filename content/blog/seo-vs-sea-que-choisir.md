@@ -209,4 +209,8 @@ Non directement. Google affirme que les dépenses publicitaires n'influencent pa
 
 ---
 
+**Vous cherchez une stratégie complète ?** Le SEO et le SEA ne sont que deux leviers parmi d'autres. Pour une présence digitale globale, pensez aussi au [community management](/community-manager) et à la [création de site web performant](/creation-site-web). [Contactez-moi](/contact) pour une stratégie sur mesure.
+
+---
+
 **Tags** : #seo-vs-sea #referencement-naturel #google-ads #strategie-acquisition #seo-sea-comparatif

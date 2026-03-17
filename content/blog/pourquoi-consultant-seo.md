@@ -187,7 +187,7 @@ Les deux sont complémentaires. Le SEA (Google Ads) donne des résultats immédi
 
 ---
 
-Prêt à transformer votre visibilité ? [Contactez-moi](/contact) pour un premier échange gratuit.
+Prêt à transformer votre visibilité ? [Contactez-moi](/contact) pour un premier échange gratuit. Découvrez aussi [nos études de cas](/etudes-de-cas) pour voir les résultats obtenus par nos clients.
 
 **Consultante SEO dans votre région :**
 - [Consultant SEO Nice](/consultant-seo-nice) — Côte d'Azur, Alpes-Maritimes

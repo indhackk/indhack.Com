@@ -254,3 +254,4 @@ Plusieurs solutions émergent : Ahrefs Brand Radar, Otterly.ai, Rankscale. Chez 
 - [AI Overviews : les chiffres qui changent tout pour le SEO en 2026](/blog/ai-overviews-impact-trafic-seo-2026)
 - [llms.txt : guide complet pour configurer votre fichier](/blog/llms-txt-guide-complet)
 - [Agents IA pour développeurs : Claude Code, Cursor en 2026](/blog/agents-ia-developpeurs-claude-code-2026)
+- [Checklist GEO : tous les points à vérifier](/checklist-geo) — Votre site est-il prêt pour la recherche IA ?

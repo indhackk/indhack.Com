@@ -13,6 +13,7 @@ const SERVICES = [
     { title: "Audit SEO", href: "/audit-seo", desc: "Analyse technique et sémantique profonde.", category: "seo" },
     { title: "Référencement Naturel", href: "/referencement-naturel", desc: "Stratégie d'acquisition durable sur Google.", category: "seo" },
     { title: "SEO Local", href: "/seo-local", desc: "Dominez Google Maps et le Pack Local.", category: "seo" },
+    { title: "Consultant GEO", href: "/consultant-geo", desc: "Visibilité sur ChatGPT, Perplexity et les IA.", category: "ia" },
     { title: "Consultant IA", href: "/consultant-ia", desc: "Intégration IA et automatisation entreprise.", category: "ia" },
     { title: "Création de Site Web", href: "/creation-site-web", desc: "Sites haute performance optimisés SEO.", category: "web" },
     { title: "Refonte de Site", href: "/refonte-site-web", desc: "Migrez sans perdre votre visibilité.", category: "web" },

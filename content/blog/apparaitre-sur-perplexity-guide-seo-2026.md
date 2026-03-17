@@ -270,3 +270,8 @@ Oui, fortement recommandé. Le fichier llms.txt à la racine de votre site (exem
 - [Consultant IA en 2026 : le guide définitif](/blog/consultant-ia-expert) — Les compétences techniques et business du consultant IA moderne
 - [Les 12 meilleurs outils GEO gratuits et payants 2026](/blog/meilleurs-outils-geo-gratuits-2026) — Tester et monitorer votre visibilité dans les réponses IA
 - [Testeur de visibilité IA gratuit](/outils/testeur-visibilite-ia) — Vérifiez instantanément si vous êtes cité par Perplexity, ChatGPT et Claude
+- [Checklist GEO : les points essentiels à vérifier](/checklist-geo) — Vérifiez que votre site coche toutes les cases pour la visibilité IA
+
+---
+
+**Besoin d'un accompagnement GEO personnalisé ?** [Contactez-moi](/contact) pour une stratégie sur mesure adaptée à votre secteur.

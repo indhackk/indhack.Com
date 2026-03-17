@@ -154,3 +154,7 @@ Tant qu'il existe un volume de "requêtes" pour un service, ou s'il s'enseigne d
 
 **Combien coûte une prestation SEO ?**
 Cela dépendra totalement de la dette technique du site (faut-il ou non tout recoder ?), de votre vélocité éditoriale (combien d'articles ou fiches services à déléguer par mois ?), et de la puissance du netlinking. Les budgets vont de 500€ à +3 000€ par mois, avec un ROI qui décolle drastiquement en 6 mois.
+
+---
+
+Pour voir des résultats concrets, consultez [nos études de cas clients](/etudes-de-cas). Et si vous avez besoin d'un site web performant avant de vous lancer en SEO, découvrez notre [création de site web optimisé](/creation-site-web) ou notre [création de boutique en ligne](/creation-boutique-en-ligne).

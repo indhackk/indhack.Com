@@ -303,4 +303,4 @@ Oui, mais avec précaution. L'IA peut aider à varier les introductions ou gén�
 
 ---
 
-Le Programmatic SEO est une technique avancée que j'intègre dans ma [stratégie de référencement naturel](/referencement-naturel) pour mes clients à forte ambition locale. Avant de vous lancer, un [audit technique de votre site](/audit-seo) permet de s'assurer que les fondations sont solides.
+Le Programmatic SEO est une technique avancée que j'intègre dans ma [stratégie de référencement naturel](/referencement-naturel) pour mes clients à forte ambition locale. Avant de vous lancer, un [audit technique de votre site](/audit-seo) permet de s'assurer que les fondations sont solides. Vous pouvez aussi [simuler votre visibilité locale](/outils/simulateur-visibilite-locale) gratuitement ou [tester votre audit SEO en ligne](/outils/audit-seo-gratuit).

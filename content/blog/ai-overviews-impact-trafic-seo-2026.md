@@ -270,3 +270,4 @@ Cinq leviers clés : être déjà dans le **top 10 organique** (99,5 % des sourc
 - [Google AI Mode : 93 % de zero-click, la fin des 10 liens bleus](/blog/google-ai-mode-fin-10-liens-bleus-2026)
 - [Apparaître sur Perplexity : le guide SEO / GEO 2026](/blog/apparaitre-sur-perplexity-guide-seo-2026)
 - [Agents IA pour développeurs : Claude Code, Cursor en 2026](/blog/agents-ia-developpeurs-claude-code-2026)
+- [Checklist GEO complète](/checklist-geo) — Vérifiez que votre site coche toutes les cases pour les AI Overviews

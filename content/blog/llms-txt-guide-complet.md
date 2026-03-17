@@ -164,3 +164,10 @@ Si vous souhaitez aller plus loin dans votre stratégie de visibilité IA, comme
 - [Testeur Visibilité IA](/outils/testeur-visibilite-ia)
 - [Générateur robots.txt optimisé IA](/outils/generateur-robots-txt)
 - [Générateur Schema JSON-LD](/outils/generateur-schema-json-ld)
+
+**Services :**
+- [Création de site web optimisé pour les IA](/creation-site-web) — Un site techniquement solide est le prérequis pour que les IA vous citent
+
+---
+
+**Besoin d'aide pour configurer votre fichier llms.txt ?** [Contactez-moi](/contact) pour un accompagnement GEO complet.

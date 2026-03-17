@@ -173,7 +173,7 @@ Posez ces questions : "Quel sera mon score PageSpeed ?", "Comment structurez-vou
 
 ---
 
-Prêt à créer un site qui travaille pour vous 24h/24 ? Découvrez ma [prestation création de site web](/creation-site-web) ou [contactez-moi](/contact) pour découvrir votre potentiel de visibilité.
+Prêt à créer un site qui travaille pour vous 24h/24 ? Découvrez ma [prestation création de site web](/creation-site-web), ma [création de boutique en ligne](/creation-boutique-en-ligne) ou [contactez-moi](/contact) pour découvrir votre potentiel de visibilité. Consultez aussi [nos études de cas](/etudes-de-cas) pour voir les résultats concrets.
 
 ---
 

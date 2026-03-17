@@ -149,3 +149,5 @@ Site vitrine simple : 2-4 semaines. Site vitrine avec blog et optimisation SEO :
 - [Comment créer un site visible sur Google dès le démarrage](/blog/comment-creer-site-visible-google) — Intégrer le SEO structurellement dès la conception pour éviter les refontes coûteuses
 - [Refonte de site web sans perdre son SEO : le guide complet](/blog/refonte-site-web-sans-perdre-seo) — Moderniser votre site tout en préservant votre visibilité Google acquise
 - [Pourquoi votre site est lent : guide performance web 2026](/blog/pourquoi-votre-site-est-lent-performance-web-2026) — Comprendre l'impact de la vitesse sur les conversions et le référencement
+- [Création de boutique en ligne optimisée SEO](/creation-boutique-en-ligne) — Les spécificités d'un e-commerce pensé pour la visibilité
+- [Nos études de cas clients](/etudes-de-cas) — Résultats concrets obtenus pour nos clients

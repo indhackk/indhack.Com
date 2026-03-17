@@ -270,6 +270,8 @@ Pour approfondir votre compréhension du GEO et de la visibilité IA :
 
 3. **[Meilleurs outils GEO gratuits 2026](/blog/meilleurs-outils-geo-gratuits-2026)** — Sélection complète des outils à tester sans dépenser.
 
+4. **[Checklist GEO complète](/checklist-geo)** — Tous les points à vérifier pour votre visibilité IA.
+
 ---
 
 ## Conclusion : votre réputation AI est maintenant une priorité
