@@ -6,7 +6,7 @@ category: "SEO Technique"
 image: "/images/blog/google-core-update-mars-2026.webp"
 imageAlt: "Analyse du core update Google mars 2026 et ses impacts SEO"
 author: "Indiana Aflalo"
-keywords: ["core update mars 2026", "Google update SEO", "perte de trafic SEO", "E-E-A-T", "AI Overviews impact"]
+keywords: ["core update mars 2026", "Google update SEO", "perte de trafic SEO", "E-E-A-T", "Discover update 2026"]
 readingTime: "12 min"
 draft: false
 ---
@@ -378,6 +378,6 @@ Si vous avez une expertise légitime, une expérience démontrée, et que vous l
 
 **Besoin d'aide pour auditer votre site et identifier vos opportunités** ? Nous avons mis à jour [notre service d'audit SEO gratuit](/outils/audit-seo-gratuit) pour inclure une évaluation de votre E-E-A-T. Ou [consultez un expert SEO](/consultant-seo) qui pourra vous proposer une stratégie sur mesure post-update.
 
-Et si vous voulez rester au courant des prochains updates et tendances SEO, abonnez-vous à notre newsletter (lien contact à intégrer).
+Et si vous avez besoin d'un accompagnement personnalisé, [contactez-nous](/contact) pour un diagnostic gratuit.
 
-Le jeu continue. Mais les règles ont changé. Soyez l'expert, pas le généralist.
+Le jeu continue. Mais les règles ont changé. Soyez l'expert, pas le généraliste.

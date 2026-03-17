@@ -81,9 +81,9 @@ Globalement, les données montrent que **80,6 % des mentions de marques dans les
 
 Perplexity utilise une architecture qui mise davantage sur la **conviction et la recommandation**. Elle est entraînée pour sembler confiante. ChatGPT, au contraire, a été spécifiquement affiné pour **éviter les biais et les déclarations définitives**. D'où le ton neutre.
 
-Mais il y a plus : **les modèles citent des sources différentes**. Claude, par exemple, mentionne les marques dans **97,3 % de ses réponses** quand elles sont pertinentes, tandis que certaines IA spécialisées ne le font que **48,5 % du temps**.
+Mais il y a plus : **les modèles citent des sources différentes**. Certaines IA (comme Claude) mentionnent systématiquement les marques quand elles sont pertinentes, tandis que d'autres sont beaucoup plus sélectives et ne citent des noms que dans la moitié de leurs réponses.
 
-Cela signifie que si vous voulez que votre marque soit citée, vous avez intérêt à figurer dans des contenus que Claude trouve pertinents. Perplexity, elle, a besoin de contenu frais et bien sourçé.
+Cela signifie que votre stratégie GEO doit être **multi-plateforme** : optimiser pour ChatGPT ne suffit pas si Perplexity vous ignore, et vice versa. Chaque IA a ses propres critères de sélection.
 
 ---
 
