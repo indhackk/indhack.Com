@@ -220,7 +220,7 @@ Cherchez ce profil :
 Si à cet instant vous vous dîtes qu'il serait bon d'intégrer intelligemment l'IA dans vos rouages pour baisser les coûts et accrocher une vitesse folle, je suis là pour vous accompagner.
 
 Je propose une suite complète de prestations (technique ultra pointue et consulting hybride "business/tech").
-N'hésitez pas à découvrir mon pôle d'expertise sur la **[Page Consultant IA Officielle INDHACK](/consultant-ia)**, ou testez vite votre site gratuitement via notre fameux **[Testeur de visibilité sur les IA génératives](/outils/testeur-visibilite-ia)** !
+N'hésitez pas à découvrir mon pôle d'expertise sur la **[Page Consultant IA Officielle INDHACK](/consultant-ia)**, ou testez vite votre site gratuitement via notre fameux **[Testeur de visibilité sur les IA génératives](/outils/testeur-visibilite-ia)** ! Vous pouvez aussi [nous contacter directement](/contact) pour un audit IA gratuit de votre entreprise, ou lancer un [audit SEO complet](/outils/audit-seo-gratuit) de votre site pour identifier les opportunités d'optimisation.
 
 ## Questions fréquentes
 

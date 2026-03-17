@@ -212,6 +212,8 @@ Si vous tapez "IA entreprise" sur Google, vous tomberez sur 40 articles théoriq
 Si cela vous interpelle, n'hésitez pas à jeter un œil sur :
 - Ma landing page **[Consultation IA & Automatisation](/consultant-ia)** pour y voir mes services phares.
 - Notre **[outil gratuit de visibilité IA sur le Net](/outils/testeur-visibilite-ia)**, pour tester votre présence B2B externe !
+- Un [audit SEO gratuit de votre site](/outils/audit-seo-gratuit) pour détecter les problèmes techniques avant d'intégrer l'IA.
+- [Contactez-moi](/contact) pour un diagnostic IA personnalisé.
 
 ## Questions fréquentes
 
