@@ -1,8 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAllPosts } from '@/lib/blog';
+import crypto from 'crypto';
 
 const SITE_URL = 'https://indhack.com';
 const INDEXNOW_KEY = process.env.INDEXNOW_KEY || '';
+
+// Verify admin authentication via cookie
+function isAdminAuthenticated(request: NextRequest): boolean {
+    const token = request.cookies.get('admin_auth')?.value;
+    if (!token) return false;
+    const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+    if (!ADMIN_PASSWORD) return false;
+    const expected = crypto
+        .createHmac('sha256', ADMIN_PASSWORD)
+        .update(ADMIN_PASSWORD + 'indhack-admin-session')
+        .digest('hex');
+    try {
+        return crypto.timingSafeEqual(Buffer.from(token), Buffer.from(expected));
+    } catch {
+        return false;
+    }
+}
 
 interface IndexNowResult {
     endpoint: string;
@@ -170,6 +188,13 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
+    if (!isAdminAuthenticated(request)) {
+        return NextResponse.json(
+            { success: false, error: 'Non autorisé' },
+            { status: 401 }
+        );
+    }
+
     try {
         const body = await request.json().catch(() => ({}));
         const urls: string[] = body.urls || getAllSiteUrls();

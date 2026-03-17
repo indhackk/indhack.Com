@@ -38,6 +38,10 @@ scripts/google-credentials.json
 .claude/commands/
 .claude/worktrees/
 
+# Données sensibles (leads, prospection)
+leads_whatsapp.json
+prospection/
+
 # vercel
 .vercel
 test-nice.jpg

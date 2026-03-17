@@ -7,6 +7,11 @@ const securityHeaders = {
     'Content-Type': 'application/json',
 };
 
+// Whitelist of authorized partner emails
+const AUTHORIZED_AGENCY_EMAILS = (process.env.AUTHORIZED_AGENCY_EMAILS || 'contact@indhack.com')
+    .split(',')
+    .map(e => e.trim().toLowerCase());
+
 // Simple email validation
 function isValidEmail(email: string): boolean {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -67,6 +72,14 @@ export async function POST(request: NextRequest) {
             return NextResponse.json(
                 { success: false, error: 'Email agence invalide' },
                 { status: 400, headers: securityHeaders }
+            );
+        }
+
+        // Verify agency email is in the authorized whitelist
+        if (!AUTHORIZED_AGENCY_EMAILS.includes((agencyEmail as string).toLowerCase())) {
+            return NextResponse.json(
+                { success: false, error: 'Agence non autorisée' },
+                { status: 403, headers: securityHeaders }
             );
         }
 

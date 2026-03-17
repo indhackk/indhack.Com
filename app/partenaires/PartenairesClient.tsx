@@ -239,19 +239,14 @@ export function PartenairesClient() {
         setContactLoading(true);
         setContactError("");
         try {
-            const res = await fetch("https://api.web3forms.com/submit", {
+            const res = await fetch("/api/send-partenaires", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    access_key: "dbf0dae2-86ac-495e-a670-c4fc028ce036",
-                    subject: `🤝 Question partenaire - ${contactForm.name}`,
-                    from_name: contactForm.name,
-                    replyto: contactForm.contactEmail,
-                    Nom: contactForm.name,
-                    Email: contactForm.contactEmail,
-                    Site_Web: contactForm.website || "Non renseigné",
-                    Message: contactForm.message,
-                    Source: "Page Partenaires",
+                    name: contactForm.name,
+                    contactEmail: contactForm.contactEmail,
+                    website: contactForm.website,
+                    message: contactForm.message,
                 }),
             });
             const data = await res.json();
