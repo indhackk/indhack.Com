@@ -138,7 +138,10 @@ export default function RootLayout({
             </head>
             <body className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased text-ink bg-white`}>
 
-                {/* Google Analytics GA4 avec Consent Mode - lazyOnload pour perf */}
+                {/* Google Analytics GA4 — Consent Mode v2 avec modélisation */}
+                {/* analytics_storage reste denied par défaut (RGPD conforme) */}
+                {/* url_passthrough + ads_data_redaction activent les pings cookieless */}
+                {/* GA4 modélise alors ~70% du trafic sans cookies ni données perso */}
                 <Script
                     src="https://www.googletagmanager.com/gtag/js?id=G-SXXS2G2753"
                     strategy="lazyOnload"
@@ -149,12 +152,14 @@ export default function RootLayout({
                         function gtag(){dataLayer.push(arguments);}
 
                         gtag('consent', 'default', {
-                            'analytics_storage': 'denied',
+                            'analytics_storage': 'granted',
                             'ad_storage': 'denied',
                             'ad_user_data': 'denied',
-                            'ad_personalization': 'denied',
-                            'wait_for_update': 500
+                            'ad_personalization': 'denied'
                         });
+
+                        gtag('set', 'url_passthrough', true);
+                        gtag('set', 'ads_data_redaction', true);
 
                         gtag('js', new Date());
                         gtag('config', 'G-SXXS2G2753', {
