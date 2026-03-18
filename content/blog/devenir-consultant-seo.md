@@ -251,7 +251,7 @@ Commencez en entreprise ou agence pour acquérir de l'expérience solide (2-3 an
 
 ---
 
-Vous cherchez un [accompagnement professionnel en visibilité](/consultant-seo) pour votre projet ? [Contactez-moi](/contact) pour un diagnostic gratuit.
+Vous cherchez un [accompagnement professionnel en visibilité](/consultant-seo) pour votre projet ? [Contactez-moi](/contact) pour un diagnostic gratuit. Et pour maîtriser le vocabulaire du métier, consultez notre [glossaire SEO & GEO](/glossaire-seo).
 
 ---
 

@@ -157,4 +157,4 @@ Cela dépendra totalement de la dette technique du site (faut-il ou non tout rec
 
 ---
 
-Pour voir des résultats concrets, consultez [nos études de cas clients](/etudes-de-cas). Et si vous avez besoin d'un site web performant avant de vous lancer en SEO, découvrez notre [création de site web optimisé](/creation-site-web) ou notre [création de boutique en ligne](/creation-boutique-en-ligne).
+Pour voir des résultats concrets, consultez [nos études de cas clients](/etudes-de-cas). Et si vous avez besoin d'un site web performant avant de vous lancer en SEO, découvrez notre [création de site web optimisé](/creation-site-web) ou notre [création de boutique en ligne](/creation-boutique-en-ligne). Retrouvez aussi tous les termes techniques dans notre [glossaire SEO & GEO](/glossaire-seo).

@@ -320,4 +320,8 @@ Oui, mais leur impact est relatif. Un site avec des Core Web Vitals médiocres p
 
 ---
 
+Besoin de comprendre un terme technique ? Consultez notre [glossaire SEO & GEO](/glossaire-seo) pour des définitions claires et à jour.
+
+---
+
 **Tags** : #checklist-seo #audit-seo #seo-2026 #seo-technique #seo-local #visibilite-ia

@@ -276,7 +276,7 @@ Oui. Les fiches actives (posts réguliers, réponses aux avis) sont favorisées 
 
 ---
 
-**Besoin d'aide pour votre SEO local ?** Découvrez mon accompagnement [SEO local](/seo-local) ou [contactez-moi](/contact) pour un audit de votre fiche Google Business Profile.
+**Besoin d'aide pour votre SEO local ?** Découvrez mon accompagnement [SEO local](/seo-local), mon service de [community management](/community-manager) pour vos réseaux sociaux, ou [contactez-moi](/contact) pour un audit de votre fiche Google Business Profile.
 
 **Consultant SEO local par ville :**
 - [Consultant SEO Nice](/consultant-seo-nice) — Côte d'Azur

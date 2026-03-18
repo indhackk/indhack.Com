@@ -250,3 +250,4 @@ Une automation simple (Make, Zapier) exécute des séquences fixes : "Si email r
 - [Consultant GEO : dominez les IA génératives en 2026](/blog/consultant-geo) — Faire connaître votre marque auprès de ChatGPT, Perplexity et Claude
 - [GEO 2026 : apparaître dans ChatGPT, Gemini et Claude](/blog/geo-comment-apparaitre-chatgpt-2026) — Stratégie marketing pour votre visibilité IA externe
 - [Notre outil gratuit de visibilité IA](/outils/testeur-visibilite-ia) — Testez votre présence sur les moteurs IA (ChatGPT, Perplexity, Claude)
+- [Community management](/community-manager) — L'IA transforme aussi la gestion des réseaux sociaux
