@@ -45,10 +45,10 @@ export function AboutContent() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <p className="text-sauge font-bold tracking-[0.2em] uppercase mb-6 text-sm">À propos</p>
+                            <p className="text-sauge-light font-bold tracking-[0.2em] uppercase mb-6 text-sm">À propos</p>
                             <h1 className="text-4xl md:text-5xl font-heading font-bold text-white leading-[1.1] tracking-tight mb-8">
                                 Votre visibilité Google,<br />
-                                <span className="text-sauge">ma spécialité</span>
+                                <span className="text-sauge-light">ma spécialité</span>
                             </h1>
                             <p className="text-xl text-soft-light leading-relaxed max-w-xl mb-10">
                                 Consultante SEO indépendante, j'aide les entreprises ambitieuses à <strong className="text-white">transformer leur présence digitale</strong> en machine à générer des clients qualifiés.
@@ -312,7 +312,7 @@ export function AboutContent() {
             <section className="py-16 md:py-20 bg-ink">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6">
-                        Prêt à booster votre <span className="text-sauge">visibilité</span> ?
+                        Prêt à booster votre <span className="text-sauge-light">visibilité</span> ?
                     </h2>
                     <p className="text-xl text-soft-light mb-10 max-w-xl mx-auto">
                         Discutons de votre projet et voyons comment atteindre vos objectifs ensemble.

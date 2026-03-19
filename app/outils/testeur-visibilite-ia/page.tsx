@@ -5,14 +5,14 @@ import { ArrowRight, Bot, Shield, Code2, FileCode, Search, MapPin } from "lucide
 
 export const metadata: Metadata = {
     title: "Vérifier si votre marque est citée dans ChatGPT et les IA",
-    description: "Testez gratuitement la visibilité de votre marque sur ChatGPT, Perplexity et Claude. Analysez vos signaux GEO et mesurez votre potentiel de citation IA. Par IndHack, agence GEO.",
-    keywords: ["vérifier marque citée chatgpt", "mesurer visibilité marque chatgpt", "outil visibilité ia", "agence visibilité chatgpt", "agence GEO", "testeur visibilité ia", "citation IA", "GEO tool"],
+    description: "Testez gratuitement la visibilité de votre marque sur ChatGPT, Perplexity et Claude. Analysez vos signaux GEO et mesurez votre potentiel de citation IA. Outil français gratuit.",
+    keywords: ["vérifier marque citée chatgpt", "mesurer visibilité marque chatgpt", "outil visibilité ia", "testeur visibilité ia", "citation IA", "GEO tool", "consultant GEO", "experte visibilité IA"],
     alternates: {
         canonical: "https://indhack.com/outils/testeur-visibilite-ia"
     },
     openGraph: {
         title: "Vérifier si votre marque est citée dans ChatGPT — Testeur gratuit",
-        description: "Comment savoir si ChatGPT cite votre marque ? Outil français gratuit pour mesurer votre visibilité sur les IA génératives. Par IndHack, agence GEO.",
+        description: "Comment savoir si ChatGPT cite votre marque ? Outil français gratuit pour mesurer votre visibilité sur les IA génératives.",
         url: "https://indhack.com/outils/testeur-visibilite-ia",
         type: "website",
     }
@@ -41,12 +41,24 @@ const RELATED_TOOLS = [
 
 const FAQ_ITEMS = [
     {
+        question: "Comment vérifier si ma marque est citée dans ChatGPT ?",
+        answer: "Pour vérifier si votre marque est citée dans ChatGPT, posez-lui directement une question liée à votre secteur d'activité. Par exemple : « Quels sont les meilleurs [votre métier] en France ? » ou « Recommande-moi un [votre produit/service] ». Analysez la réponse : votre nom de marque apparaît-il ? Êtes-vous cité comme source ? Notre testeur automatise cette analyse en vérifiant les 8 crawlers IA et en calculant votre score de citabilité sur 100 points."
+    },
+    {
+        question: "Comment mesurer la visibilité de ma marque sur ChatGPT et les IA ?",
+        answer: "Pour mesurer votre visibilité sur les IA génératives, évaluez 4 indicateurs clés : 1) L'accès des crawlers IA à votre site (GPTBot, ClaudeBot, PerplexityBot autorisés ?), 2) La qualité de vos données structurées JSON-LD, 3) Vos signaux E-E-A-T (auteur identifié, expertise démontrée), 4) La « citabilité » de votre contenu (statistiques, FAQ, format Q&A). Notre outil analyse ces 4 dimensions et attribue un score de visibilité IA sur 100."
+    },
+    {
+        question: "Quel outil utiliser pour analyser la visibilité de ma marque dans les réponses ChatGPT ?",
+        answer: "Ce testeur de visibilité IA est le seul outil français gratuit pour analyser votre présence dans les réponses ChatGPT, Perplexity et Claude. Il vérifie automatiquement 8 crawlers IA, analyse vos données structurées, évalue vos signaux E-E-A-T et calcule un score de citabilité sur 100. Contrairement aux alternatives payantes anglophones (Otterly.ai, GEO Tracker), il est 100 % gratuit et adapté au marché français."
+    },
+    {
         question: "Qu'est-ce que la visibilité IA ?",
-        answer: "La visibilité IA mesure la capacité de votre site à être découvert et cité par les moteurs de recherche IA comme ChatGPT, Perplexity, Claude ou Gemini. Contrairement au SEO classique qui cible Google, le GEO (Generative Engine Optimization) optimise votre présence dans les réponses générées par l'IA."
+        answer: "La visibilité IA mesure la capacité de votre site à être découvert et cité par les moteurs de recherche IA comme ChatGPT, Perplexity, Claude ou Gemini. Contrairement au SEO classique qui cible Google, le GEO (Generative Engine Optimization) optimise votre présence dans les réponses générées par l'IA. Les pages avec un score supérieur à 80 sont 3 fois plus susceptibles d'être citées."
     },
     {
         question: "Qu'est-ce que le GEO (Generative Engine Optimization) ?",
-        answer: "Le GEO est l'ensemble des techniques pour optimiser la visibilité d'un site dans les réponses des IA génératives. Cela inclut : autoriser les crawlers IA (GPTBot, Claude-Web...), structurer les données avec JSON-LD, créer du contenu facilement citable (FAQ, statistiques), et démontrer l'expertise (signaux E-E-A-T)."
+        answer: "Le GEO est l'ensemble des techniques pour optimiser la visibilité d'un site dans les réponses des IA génératives. Cela inclut : autoriser les crawlers IA (GPTBot, Claude-Web...), structurer les données avec JSON-LD, créer du contenu facilement citable (FAQ, statistiques), et démontrer l'expertise (signaux E-E-A-T). Selon les recherches de Princeton (2024), les techniques GEO peuvent améliorer la visibilité IA de 30 à 40 %."
     },
     {
         question: "Quels crawlers IA sont analysés ?",
@@ -220,8 +232,51 @@ export default function TesteurVisibiliteIAPage() {
                     </div>
                 </section>
 
-                {/* How It Works */}
+                {/* How to verify if your brand is cited by ChatGPT - NEW SECTION */}
                 <section className="py-16 bg-fond-sombre border-t border-white/5">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-2xl font-heading font-bold text-white mb-6">
+                                Comment vérifier si votre marque est citée dans <span className="text-sauge-light">ChatGPT</span> et les IA
+                            </h2>
+
+                            <div className="bg-white/5 rounded-xl p-6 border border-white/10 mb-8">
+                                <div className="prose prose-invert max-w-none space-y-4 text-soft-light">
+                                    <p>
+                                        Pour savoir si votre marque est citée par ChatGPT, la méthode la plus directe est de <strong className="text-white">poser des questions liées à votre secteur d&apos;activité</strong>. Ouvrez ChatGPT et formulez des requêtes du type : « Quels sont les meilleurs [votre métier] en France ? », « Recommande-moi un [produit/service] pour [besoin spécifique] », ou « Qui sont les experts reconnus en [votre domaine] ? ».
+                                    </p>
+                                    <p>
+                                        Analysez ensuite la réponse : <strong className="text-white">votre nom de marque apparaît-il ?</strong> Êtes-vous cité comme source ou recommandation ? Si ce n&apos;est pas le cas, votre site n&apos;est probablement pas optimisé pour le <strong className="text-white">GEO (Generative Engine Optimization)</strong> — c&apos;est-à-dire les techniques qui permettent d&apos;être visible et cité par les IA génératives.
+                                    </p>
+                                    <p>
+                                        Notre testeur automatise cette vérification en analysant les <strong className="text-white">8 crawlers IA majeurs</strong> (GPTBot, ClaudeBot, PerplexityBot...) et en évaluant 4 catégories de signaux : accessibilité technique, richesse sémantique, signaux E-E-A-T et format de contenu. Le score sur 100 points vous indique votre potentiel de citation : <strong className="text-white">les pages avec un score supérieur à 80 sont 3 fois plus susceptibles d&apos;être citées</strong> par ChatGPT, Perplexity et Claude.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="grid md:grid-cols-3 gap-4">
+                                <div className="bg-white/5 rounded-xl p-5 border border-white/10 text-center">
+                                    <span className="text-3xl font-bold text-white block mb-2">1</span>
+                                    <span className="text-white font-medium block mb-1">Testez votre URL</span>
+                                    <span className="text-sm text-soft-light">Entrez l&apos;adresse de votre site ci-dessus</span>
+                                </div>
+                                <div className="bg-white/5 rounded-xl p-5 border border-white/10 text-center">
+                                    <span className="text-3xl font-bold text-white block mb-2">2</span>
+                                    <span className="text-white font-medium block mb-1">Analysez votre score</span>
+                                    <span className="text-sm text-soft-light">Score de citabilité sur 100 points</span>
+                                </div>
+                                <div className="bg-white/5 rounded-xl p-5 border border-white/10 text-center">
+                                    <span className="text-3xl font-bold text-white block mb-2">3</span>
+                                    <span className="text-white font-medium block mb-1">Optimisez</span>
+                                    <span className="text-sm text-soft-light">Suivez les recommandations GEO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* How It Works */}
+                <section className="py-16 bg-ink border-t border-white/5">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-2xl font-heading font-bold text-white text-center mb-10">
@@ -376,9 +431,9 @@ export default function TesteurVisibiliteIAPage() {
                                 <h3 className="font-bold text-white mb-4">Articles SEO & GEO</h3>
                                 <ul className="space-y-2">
                                     {[
+                                        { href: "/blog/analyser-visibilite-marque-chatgpt-ia", text: "Comment analyser la visibilité de votre marque sur ChatGPT" },
                                         { href: "/blog/geo-comment-apparaitre-chatgpt-2026", text: "GEO : Comment apparaître dans ChatGPT en 2026" },
-                                        { href: "/blog/pourquoi-consultant-seo", text: "Pourquoi faire appel à un consultant SEO ?" },
-                                        { href: "/blog/importance-audit-seo", text: "L'audit SEO : point de départ de votre croissance" },
+                                        { href: "/blog/ai-overviews-impact-trafic-seo-2026", text: "AI Overviews : impact sur le trafic SEO" },
                                     ].map((link) => (
                                         <li key={link.href}>
                                             <Link href={link.href} className="text-soft-light hover:text-sauge-light transition-colors flex items-center gap-2 text-sm">
@@ -446,18 +501,27 @@ export default function TesteurVisibiliteIAPage() {
                 <section className="py-16 bg-fond-sombre border-t border-white/5">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">
-                            Besoin d&apos;une stratégie <span className="text-sauge-light">GEO</span> complète ?
+                            Besoin d&apos;aller plus loin pour être <span className="text-sauge-light">cité par ChatGPT</span> ?
                         </h2>
                         <p className="text-soft-light mb-8 max-w-xl mx-auto">
-                            Je vous accompagne pour apparaître dans les réponses de ChatGPT et Perplexity.
+                            Consultante GEO spécialisée, je vous accompagne pour mesurer, optimiser et maximiser la visibilité de votre marque dans les réponses des IA génératives.
                         </p>
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-all"
-                        >
-                            Demander un audit GEO
-                            <ArrowRight className="w-5 h-5" />
-                        </Link>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Link
+                                href="/consultant-geo"
+                                className="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-all"
+                            >
+                                Découvrir l&apos;accompagnement GEO
+                                <ArrowRight className="w-5 h-5" />
+                            </Link>
+                            <Link
+                                href="/contact"
+                                className="inline-flex items-center gap-2 bg-transparent text-white border-2 border-white/30 px-8 py-4 rounded-full font-bold hover:border-sauge hover:text-sauge-light transition-all"
+                            >
+                                Réserver un audit gratuit
+                                <ArrowRight className="w-5 h-5" />
+                            </Link>
+                        </div>
                     </div>
                 </section>
             </main>

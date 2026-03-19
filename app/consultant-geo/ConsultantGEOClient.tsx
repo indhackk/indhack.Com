@@ -692,13 +692,13 @@ export default function ConsultantGEOClient() {
                             Approfondir le GEO
                         </h2>
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <Link href="/etude/barometre-visibilite-ia-2026" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
-                                <span className="text-xs font-medium text-rose-500 uppercase tracking-wide">Étude exclusive</span>
+                            <Link href="/blog/analyser-visibilite-marque-chatgpt-ia" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-amber-600 uppercase tracking-wide">Nouveau</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    Baromètre visibilité IA France 2026
+                                    Comment analyser votre visibilité sur ChatGPT
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
-                                    46 % des sites bloquent les crawlers IA. Données et analyse complète.
+                                    Méthodes manuelles et outils pour mesurer la présence de votre marque dans les IA.
                                 </p>
                             </Link>
                             <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
@@ -710,6 +710,15 @@ export default function ConsultantGEOClient() {
                                     Le guide de référence pour comprendre et appliquer le Generative Engine Optimization.
                                 </p>
                             </Link>
+                            <Link href="/etude/barometre-visibilite-ia-2026" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-rose-500 uppercase tracking-wide">Étude exclusive</span>
+                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
+                                    Baromètre visibilité IA France 2026
+                                </h3>
+                                <p className="text-soft text-sm mt-2">
+                                    46 % des sites bloquent les crawlers IA. Données et analyse complète.
+                                </p>
+                            </Link>
                             <Link href="/blog/checklist-seo-2026" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Checklist</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
@@ -717,15 +726,6 @@ export default function ConsultantGEOClient() {
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
                                     Inclut une section complète sur la visibilité IA et les optimisations GEO.
-                                </p>
-                            </Link>
-                            <Link href="/blog/definition-seo-guide-complet" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
-                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Fondamentaux</span>
-                                <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    Le SEO expliqué : guide complet
-                                </h3>
-                                <p className="text-soft text-sm mt-2">
-                                    Comprendre les bases du référencement naturel, fondation du GEO.
                                 </p>
                             </Link>
                         </div>
