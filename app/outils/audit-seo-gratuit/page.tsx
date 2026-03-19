@@ -157,7 +157,7 @@ export default function AuditSEOPage() {
 
                         {/* Header - Compact */}
                         <div className="max-w-3xl mx-auto text-center mb-10">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/20 border border-sauge/30 rounded-full text-sauge text-sm font-bold mb-4">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/20 border border-sauge/30 rounded-full text-white text-sm font-bold mb-4">
                                 <Gauge className="w-4 h-4" />
                                 <span className="uppercase tracking-wider text-xs">Score /100 en 30 secondes</span>
                             </div>
@@ -205,7 +205,7 @@ export default function AuditSEOPage() {
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-4xl mx-auto">
                             <div className="text-center mb-10">
-                                <span className="px-4 py-2 rounded-full bg-sauge/20 border border-sauge/30 text-sauge text-xs font-bold uppercase tracking-wider">
+                                <span className="px-4 py-2 rounded-full bg-sauge/20 border border-sauge/30 text-white text-xs font-bold uppercase tracking-wider">
                                     Guide
                                 </span>
                                 <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mt-6 mb-4">

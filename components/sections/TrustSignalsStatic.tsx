@@ -30,7 +30,7 @@ export function TrustSignalsStatic() {
                             className="flex items-center gap-3 animate-fade-in"
                             style={{ animationDelay: `${i * 100}ms` }}
                         >
-                            <div className="p-2 bg-sauge/10 rounded-lg text-sauge">
+                            <div className="p-2 bg-sauge/10 rounded-lg text-white">
                                 {point.icon}
                             </div>
                             <span className="font-medium text-ink text-sm">

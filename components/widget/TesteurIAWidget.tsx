@@ -146,7 +146,7 @@ function CrawlerRow({ crawler }: { crawler: CrawlerStatus }) {
                 <Icon className={`w-4 h-4 ${config.color}`} />
                 <span className="font-medium text-ink text-sm">{crawler.name}</span>
                 {crawler.critical && (
-                    <span className="text-[10px] bg-sauge/20 text-sauge px-1.5 py-0.5 rounded font-medium">
+                    <span className="text-[10px] bg-sauge/20 text-white px-1.5 py-0.5 rounded font-medium">
                         Critique
                     </span>
                 )}

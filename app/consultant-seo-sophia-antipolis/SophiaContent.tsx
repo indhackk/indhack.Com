@@ -16,7 +16,7 @@ export function SophiaAntipolisContent() {
                         viewport={{ once: true }}
                         className="text-center mb-12"
                     >
-                        <span className="inline-block px-4 py-2 bg-sauge/10 text-sauge text-sm font-bold rounded-full mb-4">
+                        <span className="inline-block px-4 py-2 bg-sauge/10 text-white text-sm font-bold rounded-full mb-4">
                             Focus Technopole
                         </span>
                         <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink">
@@ -69,7 +69,7 @@ export function SophiaAntipolisContent() {
                                 key={i}
                                 className="bg-ink text-white p-5 rounded-xl text-center"
                             >
-                                <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-sauge/20 flex items-center justify-center text-sauge">
+                                <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-sauge/20 flex items-center justify-center text-white">
                                     {stat.icon}
                                 </div>
                                 <p className="text-2xl font-bold text-sauge">{stat.value}</p>
@@ -171,7 +171,7 @@ export function SophiaAntipolisContent() {
                                     key={i}
                                     className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-sauge/30 transition-all"
                                 >
-                                    <div className="w-12 h-12 rounded-xl bg-sauge/10 flex items-center justify-center text-sauge mb-4">
+                                    <div className="w-12 h-12 rounded-xl bg-sauge/10 flex items-center justify-center text-white mb-4">
                                         {method.icon}
                                     </div>
                                     <h4 className="font-bold text-ink mb-3">{method.title}</h4>

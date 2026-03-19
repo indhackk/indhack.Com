@@ -576,7 +576,7 @@ function SettingsPanel({ businesses, setBusinesses }: {
                     {business.keywords.map((kw, i) => (
                         <span
                             key={i}
-                            className="px-3 py-1.5 bg-sauge/10 text-sauge text-sm rounded-full flex items-center gap-2"
+                            className="px-3 py-1.5 bg-sauge/10 text-white text-sm rounded-full flex items-center gap-2"
                         >
                             {kw}
                             <button

@@ -707,7 +707,7 @@ export default function BarometreClientContent() {
                     >
                         {/* Section header */}
                         <motion.div variants={fadeUp} className="mb-12">
-                            <span className="inline-block px-3 py-1 text-xs font-medium text-sauge bg-sauge/10 rounded-full mb-4">
+                            <span className="inline-block px-3 py-1 text-xs font-medium text-white bg-sauge/10 rounded-full mb-4">
                                 Analyse
                             </span>
                             <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink">
@@ -740,7 +740,7 @@ export default function BarometreClientContent() {
                             variants={stagger}
                         >
                             <motion.div variants={fadeUp} className="mb-8">
-                                <span className="inline-block px-3 py-1 text-xs font-medium text-sauge bg-sauge/10 rounded-full mb-4">
+                                <span className="inline-block px-3 py-1 text-xs font-medium text-sauge-light bg-sauge/10 rounded-full mb-4">
                                     Robots.txt
                                 </span>
                                 <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-3">
@@ -844,7 +844,7 @@ export default function BarometreClientContent() {
                         variants={stagger}
                     >
                         <motion.div variants={fadeUp} className="mb-12 text-center">
-                            <span className="inline-block px-3 py-1 text-xs font-medium text-sauge bg-sauge/10 rounded-full mb-4">
+                            <span className="inline-block px-3 py-1 text-xs font-medium text-sauge-light bg-sauge/10 rounded-full mb-4">
                                 Actions
                             </span>
                             <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-3">

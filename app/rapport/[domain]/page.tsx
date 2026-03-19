@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getRapport, sanitizeDomain } from "@/lib/rapports";
 import RapportClient from "./RapportClient";
+import RapportNotFound from "./RapportNotFound";
 
 interface Props {
     params: Promise<{ domain: string }>;
@@ -56,7 +57,7 @@ export default async function RapportPage({ params }: Props) {
     const rapport = getRapport(cleanDomain);
 
     if (!rapport) {
-        notFound();
+        return <RapportNotFound domain={cleanDomain} />;
     }
 
     return <RapportClient rapport={rapport} />;

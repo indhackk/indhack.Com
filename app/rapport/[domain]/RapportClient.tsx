@@ -26,7 +26,7 @@ const LEVEL_CONFIG = {
     invisible: { color: "text-red-400", bg: "bg-red-500/20", border: "border-red-500/30", label: "Invisible" },
     partial: { color: "text-amber-400", bg: "bg-amber-500/20", border: "border-amber-500/30", label: "Partiel" },
     visible: { color: "text-emerald-400", bg: "bg-emerald-500/20", border: "border-emerald-500/30", label: "Visible" },
-    excellent: { color: "text-sauge", bg: "bg-sauge/20", border: "border-sauge/30", label: "Excellent" },
+    excellent: { color: "text-white", bg: "bg-sauge/20", border: "border-sauge/30", label: "Excellent" },
 };
 
 const CATEGORY_META = [

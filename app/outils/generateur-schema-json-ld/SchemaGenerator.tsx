@@ -432,7 +432,7 @@ export function SchemaGenerator() {
                                 <button
                                     key={template.id}
                                     onClick={() => applyTemplate(template.id)}
-                                    className="px-3 py-1.5 bg-white/5 hover:bg-sauge/20 text-soft-light hover:text-sauge rounded-lg text-sm transition-colors border border-white/10 hover:border-sauge/30"
+                                    className="px-3 py-1.5 bg-white/5 hover:bg-sauge/20 text-soft-light hover:text-white rounded-lg text-sm transition-colors border border-white/10 hover:border-sauge/30"
                                 >
                                     {template.label}
                                 </button>
@@ -507,7 +507,7 @@ export function SchemaGenerator() {
                             ))}
                             <button
                                 onClick={() => setFaqItems([...faqItems, { question: "", answer: "" }])}
-                                className="flex items-center gap-2 text-sauge font-medium hover:text-sauge/80 transition-colors"
+                                className="flex items-center gap-2 text-white font-medium hover:text-white/80 transition-colors"
                             >
                                 <Plus className="w-4 h-4" />
                                 Ajouter une question
@@ -556,7 +556,7 @@ export function SchemaGenerator() {
                                         )}
                                     </div>
                                 ))}
-                                <button onClick={() => setOrgSameAs([...orgSameAs, ""])} className="flex items-center gap-2 text-sauge font-medium">
+                                <button onClick={() => setOrgSameAs([...orgSameAs, ""])} className="flex items-center gap-2 text-white font-medium">
                                     <Plus className="w-4 h-4" /> Ajouter un réseau
                                 </button>
                             </div>
@@ -637,7 +637,7 @@ export function SchemaGenerator() {
                                     />
                                 </div>
                             ))}
-                            <button onClick={() => setHowToSteps([...howToSteps, { name: "", text: "" }])} className="flex items-center gap-2 text-sauge font-medium">
+                            <button onClick={() => setHowToSteps([...howToSteps, { name: "", text: "" }])} className="flex items-center gap-2 text-white font-medium">
                                 <Plus className="w-4 h-4" /> Ajouter une étape
                             </button>
                         </>
@@ -692,7 +692,7 @@ export function SchemaGenerator() {
                                     )}
                                 </div>
                             ))}
-                            <button onClick={() => setBreadcrumbs([...breadcrumbs, { name: "", url: "" }])} className="flex items-center gap-2 text-sauge font-medium">
+                            <button onClick={() => setBreadcrumbs([...breadcrumbs, { name: "", url: "" }])} className="flex items-center gap-2 text-white font-medium">
                                 <Plus className="w-4 h-4" /> Ajouter un niveau
                             </button>
                         </>
@@ -775,24 +775,24 @@ export function SchemaGenerator() {
                 {/* Instructions */}
                 <div className="bg-sauge/10 rounded-2xl p-6 border border-sauge/20">
                     <h3 className="font-bold text-white mb-3 flex items-center gap-2">
-                        <Eye className="w-5 h-5 text-sauge" />
+                        <Eye className="w-5 h-5 text-white" />
                         Comment utiliser ce code ?
                     </h3>
                     <ol className="space-y-2 text-sm text-soft-light">
                         <li className="flex gap-3">
-                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-sauge flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
+                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-white flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
                             <span>Copiez le code JSON-LD ci-dessus</span>
                         </li>
                         <li className="flex gap-3">
-                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-sauge flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
-                            <span>Collez-le dans le <code className="bg-white/10 px-1.5 py-0.5 rounded text-sauge">&lt;head&gt;</code> de votre page</span>
+                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-white flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
+                            <span>Collez-le dans le <code className="bg-white/10 px-1.5 py-0.5 rounded text-white">&lt;head&gt;</code> de votre page</span>
                         </li>
                         <li className="flex gap-3">
-                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-sauge flex items-center justify-center text-xs font-bold flex-shrink-0">3</span>
-                            <span>Testez avec <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer" className="text-sauge underline">Rich Results Test</a></span>
+                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-white flex items-center justify-center text-xs font-bold flex-shrink-0">3</span>
+                            <span>Testez avec <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer" className="text-white underline">Rich Results Test</a></span>
                         </li>
                         <li className="flex gap-3">
-                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-sauge flex items-center justify-center text-xs font-bold flex-shrink-0">4</span>
+                            <span className="w-6 h-6 rounded-full bg-sauge/20 text-white flex items-center justify-center text-xs font-bold flex-shrink-0">4</span>
                             <span>Attendez que Google recrawle votre page</span>
                         </li>
                     </ol>

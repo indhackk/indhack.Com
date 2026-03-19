@@ -198,7 +198,7 @@ export default function CreationSiteClient() {
                                 transition={{ delay: i * 0.1 }}
                                 className="flex gap-6 items-start p-6 bg-white rounded-2xl border border-gray-100 hover:shadow-lg transition-all group"
                             >
-                                <div className="w-14 h-14 rounded-xl bg-sauge/10 flex items-center justify-center text-sauge font-bold text-xl group-hover:bg-sauge group-hover:text-white transition-all">
+                                <div className="w-14 h-14 rounded-xl bg-sauge/10 flex items-center justify-center text-white font-bold text-xl group-hover:bg-sauge group-hover:text-white transition-all">
                                     {item.step}
                                 </div>
                                 <div className="flex-1">

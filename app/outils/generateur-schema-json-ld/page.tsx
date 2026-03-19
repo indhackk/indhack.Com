@@ -141,7 +141,7 @@ export default function GenerateurSchemaPage() {
 
                         {/* Header - Compact */}
                         <div className="max-w-3xl mx-auto text-center mb-10">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/20 border border-sauge/30 rounded-full text-sauge text-sm font-bold mb-4">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/20 border border-sauge/30 rounded-full text-white text-sm font-bold mb-4">
                                 <Code2 className="w-4 h-4" />
                                 <span className="uppercase tracking-wider text-xs">9 types de schema supportés</span>
                             </div>

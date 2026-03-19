@@ -54,7 +54,7 @@ export function TrustSignals({ variant = "full" }: TrustSignalsProps) {
                                 transition={{ delay: i * 0.1 }}
                                 className="flex items-center gap-3"
                             >
-                                <div className="p-2 bg-sauge/10 rounded-lg text-sauge">
+                                <div className="p-2 bg-sauge/10 rounded-lg text-white">
                                     {point.icon}
                                 </div>
                                 <span className="font-medium text-ink text-sm">
@@ -112,7 +112,7 @@ export function TrustSignals({ variant = "full" }: TrustSignalsProps) {
                             transition={{ delay: i * 0.1 }}
                             className="group p-6 bg-gray-50 rounded-2xl hover:bg-ink transition-all duration-300"
                         >
-                            <div className="p-3 bg-sauge/10 group-hover:bg-sauge/20 rounded-xl w-fit mb-4 text-sauge transition-colors">
+                            <div className="p-3 bg-sauge/10 group-hover:bg-sauge/20 rounded-xl w-fit mb-4 text-white transition-colors">
                                 {point.icon}
                             </div>
                             <h3 className="font-bold text-ink group-hover:text-white mb-2 transition-colors">

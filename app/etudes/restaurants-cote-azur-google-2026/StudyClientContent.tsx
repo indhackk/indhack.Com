@@ -274,7 +274,7 @@ function MethodologyAccordion() {
                                         <div className="col-span-4">
                                             <p className="text-soft/70 text-xs leading-relaxed">{calc.source}</p>
                                             {calc.formula && (
-                                                <code className="block mt-1 text-[10px] text-sauge bg-sauge/5 px-2 py-1 rounded">
+                                                <code className="block mt-1 text-[10px] text-white bg-sauge/5 px-2 py-1 rounded">
                                                     {calc.formula}
                                                 </code>
                                             )}

@@ -176,7 +176,7 @@ export default function CommunityManagerClient() {
                                 transition={{ delay: i * 0.1 }}
                                 className="flex gap-6 items-start p-6 bg-white rounded-2xl border border-gray-100 hover:shadow-lg transition-all group"
                             >
-                                <div className="w-12 h-12 rounded-full bg-sauge/10 flex items-center justify-center text-sauge font-bold group-hover:bg-sauge group-hover:text-white transition-all">
+                                <div className="w-12 h-12 rounded-full bg-sauge/10 flex items-center justify-center text-white font-bold group-hover:bg-sauge group-hover:text-white transition-all">
                                     {i + 1}
                                 </div>
                                 <div>

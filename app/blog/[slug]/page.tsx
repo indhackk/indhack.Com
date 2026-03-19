@@ -202,7 +202,7 @@ export default function BlogPostPage({ params }: PageProps) {
                     {/* Post Header */}
                     <header className="mb-12 animate-in fade-in slide-in-from-bottom-4 duration-1000">
                         <div className="flex flex-wrap items-center gap-4 text-sm text-soft mb-6">
-                            <span className="bg-sauge/10 text-sauge px-3 py-1 rounded-lg font-bold uppercase tracking-wider text-xs">
+                            <span className="bg-sauge/10 text-white px-3 py-1 rounded-lg font-bold uppercase tracking-wider text-xs">
                                 {post.category}
                             </span>
                             <span className="flex items-center gap-1">

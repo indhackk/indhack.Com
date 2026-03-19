@@ -152,7 +152,7 @@ export default function GenerateurRobotsTxtPage() {
                                 <FileCode className="w-8 h-8 text-white" />
                             </div>
                             <div>
-                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 text-sauge text-sm font-medium mb-4">
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 text-white text-sm font-medium mb-4">
                                     <Bot className="w-4 h-4" />
                                     Inclut les 12 crawlers IA de 2026
                                 </div>
@@ -196,7 +196,7 @@ export default function GenerateurRobotsTxtPage() {
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="max-w-5xl mx-auto">
                             <div className="text-center mb-12">
-                                <span className="px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 text-sauge text-xs font-semibold uppercase tracking-[0.2em]">
+                                <span className="px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 text-white text-xs font-semibold uppercase tracking-[0.2em]">
                                     Guide
                                 </span>
                                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mt-6 mb-4">
@@ -206,10 +206,10 @@ export default function GenerateurRobotsTxtPage() {
 
                             <div className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-8 mb-12">
                                 <p className="text-soft-light text-lg leading-relaxed mb-6">
-                                    En 2026, votre fichier <code className="bg-white/10 px-2 py-1 rounded text-sauge">robots.txt</code> ne gère plus seulement Googlebot. <strong className="text-white">Une dizaine de crawlers IA</strong> parcourent le web pour alimenter ChatGPT, Gemini, Perplexity et d'autres. Pour vérifier si ces crawlers accèdent déjà à votre site, utilisez notre <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">testeur de visibilité IA</Link>.
+                                    En 2026, votre fichier <code className="bg-white/10 px-2 py-1 rounded text-white">robots.txt</code> ne gère plus seulement Googlebot. <strong className="text-white">Une dizaine de crawlers IA</strong> parcourent le web pour alimenter ChatGPT, Gemini, Perplexity et d'autres. Pour vérifier si ces crawlers accèdent déjà à votre site, utilisez notre <Link href="/outils/testeur-visibilite-ia" className="text-sauge-light hover:underline">testeur de visibilité IA</Link>.
                                 </p>
                                 <p className="text-soft-light text-lg leading-relaxed">
-                                    La bonne stratégie dépend de vos objectifs : voulez-vous <strong className="text-white">être cité par les IA</strong> (excellent pour la visibilité) ou <strong className="text-white">protéger votre contenu</strong> de l'entraînement des modèles ? Cette configuration fait partie d'une <Link href="/referencement-naturel" className="text-sauge hover:underline">stratégie SEO complète</Link>.
+                                    La bonne stratégie dépend de vos objectifs : voulez-vous <strong className="text-white">être cité par les IA</strong> (excellent pour la visibilité) ou <strong className="text-white">protéger votre contenu</strong> de l'entraînement des modèles ? Cette configuration fait partie d'une <Link href="/referencement-naturel" className="text-sauge-light hover:underline">stratégie SEO complète</Link>.
                                 </p>
                             </div>
 
@@ -231,9 +231,9 @@ export default function GenerateurRobotsTxtPage() {
                                                 <td className="px-6 py-4 text-soft-light">{crawler.editor}</td>
                                                 <td className="px-6 py-4 text-soft-light">{crawler.usage}</td>
                                                 <td className="px-6 py-4">
-                                                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${crawler.recommendation === 'success'
-                                                            ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
-                                                            : 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
+                                                    <span className={`px-3 py-1 rounded-full text-xs font-bold text-white ${crawler.recommendation === 'success'
+                                                            ? 'bg-emerald-500/40 border border-emerald-500/50'
+                                                            : 'bg-amber-500/40 border border-amber-500/50'
                                                         }`}>
                                                         {crawler.text}
                                                     </span>
@@ -272,10 +272,10 @@ export default function GenerateurRobotsTxtPage() {
                                         href={tool.href}
                                         className="group bg-white/5 rounded-xl p-5 border border-white/10 hover:border-sauge/30 hover:bg-white/10 transition-all"
                                     >
-                                        <div className="w-10 h-10 rounded-lg bg-sauge/20 flex items-center justify-center mb-3 group-hover:bg-sauge/30 transition-colors">
-                                            <Icon className="w-5 h-5 text-sauge" />
+                                        <div className="w-10 h-10 rounded-lg bg-sauge flex items-center justify-center mb-3 transition-colors">
+                                            <Icon className="w-5 h-5 text-white" />
                                         </div>
-                                        <h3 className="font-bold text-white mb-1 group-hover:text-sauge transition-colors">
+                                        <h3 className="font-bold text-white mb-1 group-hover:text-sauge-light transition-colors">
                                             {tool.title}
                                         </h3>
                                         <p className="text-sm text-soft-light">{tool.description}</p>

@@ -264,7 +264,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                 {/* Points clés de la ville */}
                                 <div className="mt-6 flex flex-wrap gap-2">
                                     {cityData.keyPoints.map((point, i) => (
-                                        <span key={i} className="inline-flex items-center gap-1.5 bg-sauge/10 text-sauge px-3 py-1.5 rounded-full text-xs font-bold">
+                                        <span key={i} className="inline-flex items-center gap-1.5 bg-sauge/10 text-white px-3 py-1.5 rounded-full text-xs font-bold">
                                             <CheckCircle2 className="w-3.5 h-3.5" />
                                             {point}
                                         </span>

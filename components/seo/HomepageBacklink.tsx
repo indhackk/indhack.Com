@@ -98,7 +98,7 @@ export function HomepageBacklink({ variant = "default", className = "", forceInd
                     </span>
                     <Link
                         href="/"
-                        className="inline-flex items-center gap-2 bg-sauge/10 hover:bg-sauge text-sauge hover:text-white px-5 py-2.5 rounded-full transition-all font-bold text-sm"
+                        className="inline-flex items-center gap-2 bg-sauge/10 hover:bg-sauge text-white hover:text-white px-5 py-2.5 rounded-full transition-all font-bold text-sm"
                     >
                         {anchor.icon}
                         <span>{anchor.text}</span>
