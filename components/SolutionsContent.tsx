@@ -222,7 +222,7 @@ export function SolutionsContent() {
                                 transition={{ delay: i * 0.1 }}
                                 className="group bg-fond-clair p-8 rounded-3xl border border-line hover:border-sauge/30 hover:shadow-xl transition-all"
                             >
-                                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 text-white group-hover:bg-sauge group-hover:text-white transition-colors">
+                                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 text-sauge group-hover:bg-sauge group-hover:text-white transition-colors">
                                     {service.icon}
                                 </div>
                                 <h3 className="text-2xl font-heading font-bold text-ink mb-4">{service.title}</h3>

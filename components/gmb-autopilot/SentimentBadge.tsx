@@ -173,7 +173,7 @@ function ToneBadge({ tone }: { tone: 'empathetic' | 'apologetic' | 'grateful' | 
     };
 
     return (
-        <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-sauge/10 text-white">
+        <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-sauge/10 text-sauge">
             {labels[tone]}
         </span>
     );

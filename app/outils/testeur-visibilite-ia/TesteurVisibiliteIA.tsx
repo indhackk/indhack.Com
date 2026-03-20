@@ -425,8 +425,8 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                     <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 md:p-8">
                         <div className="flex flex-col md:flex-row items-center gap-8">
                             <ScoreGauge score={result.score} />
-                            <div className="flex-1 text-center">
-                                <div className={`inline-flex items-center justify-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium mb-3 ${LEVEL_CONFIG[result.level].bg} text-white`}>
+                            <div className="flex-1 text-center md:text-left">
+                                <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium mb-3 ${LEVEL_CONFIG[result.level].bg} text-white`}>
                                     {result.levelLabel}
                                 </div>
                                 <h2 className="text-xl font-bold text-white mb-2 line-clamp-2">{result.pageTitle}</h2>
@@ -434,12 +434,12 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                                     href={result.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-soft-light hover:text-sauge-light flex items-center justify-center gap-1 text-sm"
+                                    className="text-soft-light hover:text-sauge-light flex items-center justify-center md:justify-start gap-1 text-sm"
                                 >
                                     {result.url}
                                     <ExternalLink className="w-3 h-3" />
                                 </a>
-                                <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
+                                <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mt-4">
                                     <span className="px-2 py-1 bg-white/10 rounded text-xs text-soft-light">{result.wordCount} mots</span>
                                     <span className="px-2 py-1 bg-white/10 rounded text-xs text-soft-light">{result.responseTime}ms</span>
                                     {result.hasLlmsTxt && (

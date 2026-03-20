@@ -289,17 +289,17 @@ Les 4 piliers à retenir :
 
 **Testez gratuitement votre visibilité IA** avec notre [testeur de visibilité GEO](/outils/testeur-visibilite-ia) — le seul outil français qui analyse si votre site peut être cité par ChatGPT, Perplexity et Claude.
 
-**Besoin d'un accompagnement SEO + GEO complet ?** [Contactez-moi](/contact) pour un audit personnalisé. J'accompagne les entreprises de Nice, Cannes, Sophia-Antipolis et toute la France dans leur stratégie de visibilité digitale.
+**Besoin d'un accompagnement GEO complet ?** [Découvrez mes services de consultante GEO](/consultant-geo) pour un audit personnalisé et une stratégie de citabilité IA sur mesure. J'accompagne les entreprises de Nice, Cannes, Sophia-Antipolis et toute la France.
 
 ---
 
 **À lire aussi :**
+- [Comment analyser la visibilité de votre marque sur ChatGPT](/blog/analyser-visibilite-marque-chatgpt-ia)
+- [AI Overviews : les chiffres qui changent tout pour le SEO en 2026](/blog/ai-overviews-impact-trafic-seo-2026)
+- [Google AI Mode : 93 % de zero-click, la fin des 10 liens bleus](/blog/google-ai-mode-fin-10-liens-bleus-2026)
 - [Checklist SEO 2026 — Les 30 points essentiels](/blog/checklist-seo-2026)
 - [L'importance d'un audit SEO pour votre croissance](/blog/importance-audit-seo)
 - [Google Business Profile : Guide Complet](/blog/google-business-profile-guide-complet)
-- [AI Overviews : les chiffres qui changent tout pour le SEO en 2026](/blog/ai-overviews-impact-trafic-seo-2026)
-- [Google AI Mode : 93 % de zero-click, la fin des 10 liens bleus](/blog/google-ai-mode-fin-10-liens-bleus-2026)
-- [Agents IA pour développeurs : Claude Code, Cursor en 2026](/blog/agents-ia-developpeurs-claude-code-2026)
 
 **Outils gratuits :**
 - [Testeur Visibilité IA](/outils/testeur-visibilite-ia)

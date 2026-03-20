@@ -172,7 +172,7 @@ export default function ExtracteurClient() {
             <section className="py-12 bg-gradient-to-b from-gray-50 to-white">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl mx-auto text-center">
-                        <div className="inline-flex items-center gap-2 bg-sauge/10 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+                        <div className="inline-flex items-center gap-2 bg-sauge/10 text-sauge px-4 py-2 rounded-full text-sm font-medium mb-6">
                             <Sparkles className="w-4 h-4" />
                             Outil SEO gratuit
                         </div>
@@ -314,7 +314,7 @@ L'outil va extraire automatiquement les mots-clés les plus fréquents, calculer
                                                     </h3>
                                                     <div className="flex flex-wrap gap-2">
                                                         {analysis.bigrams.map((bg, i) => (
-                                                            <span key={i} className="inline-flex items-center gap-1 bg-sauge/10 text-white px-3 py-1.5 rounded-full text-xs font-medium">
+                                                            <span key={i} className="inline-flex items-center gap-1 bg-sauge/10 text-sauge px-3 py-1.5 rounded-full text-xs font-medium">
                                                                 {bg.ngram}
                                                                 <span className="text-sauge/60">({bg.count}x)</span>
                                                             </span>

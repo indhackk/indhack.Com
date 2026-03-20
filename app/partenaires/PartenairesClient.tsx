@@ -474,7 +474,7 @@ export function PartenairesClient() {
             <section className="py-16 md:py-20 bg-gradient-to-b from-white to-gray-50" id="generator">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/10 rounded-full text-white text-sm font-semibold mb-6">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/10 rounded-full text-sauge text-sm font-semibold mb-6">
                             <Sparkles className="w-4 h-4" />
                             <span>Personnalisez et générez</span>
                         </div>
@@ -844,7 +844,7 @@ export function PartenairesClient() {
                                 href="/guide-installation-widget-indhack.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-sauge/10 text-white rounded-full text-sm font-semibold hover:bg-sauge hover:text-white transition-all duration-300"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-sauge/10 text-sauge rounded-full text-sm font-semibold hover:bg-sauge hover:text-white transition-all duration-300"
                             >
                                 <FileDown className="w-4 h-4" />
                                 Télécharger le guide PDF par CMS

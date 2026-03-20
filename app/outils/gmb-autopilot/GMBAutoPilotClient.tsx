@@ -74,7 +74,7 @@ export default function GMBAutoPilotClient() {
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/20 rounded-full text-white text-sm font-medium mb-8"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/20 rounded-full text-sauge text-sm font-medium mb-8"
                         >
                             <Sparkles className="w-4 h-4" />
                             Nouveau : Propulsé par l'IA
@@ -159,7 +159,7 @@ export default function GMBAutoPilotClient() {
                                         { label: "Avis en attente", value: "13", color: "bg-amber-500/20 text-amber-400" },
                                         { label: "Réponses ce mois", value: "47", color: "bg-green-500/20 text-green-400" },
                                         { label: "Note moyenne", value: "4.8", color: "bg-yellow-500/20 text-yellow-400" },
-                                        { label: "SEO Boost", value: "+23%", color: "bg-sauge/20 text-white" }
+                                        { label: "SEO Boost", value: "+23%", color: "bg-sauge/20 text-sauge" }
                                     ].map((stat, i) => (
                                         <div key={i} className={`${stat.color} rounded-xl p-4`}>
                                             <p className="text-xs text-white/60 mb-1">{stat.label}</p>
@@ -299,7 +299,7 @@ export default function GMBAutoPilotClient() {
                                 transition={{ delay: i * 0.1 }}
                                 className="p-8 bg-white rounded-3xl border border-gray-100 hover:shadow-xl hover:border-sauge/30 transition-all group"
                             >
-                                <div className="mb-6 p-4 bg-sauge/10 rounded-2xl w-fit text-white group-hover:bg-sauge group-hover:text-white transition-all">
+                                <div className="mb-6 p-4 bg-sauge/10 rounded-2xl w-fit text-sauge group-hover:bg-sauge group-hover:text-white transition-all">
                                     {feature.icon}
                                 </div>
                                 <h3 className="text-xl font-bold text-ink mb-3">{feature.title}</h3>

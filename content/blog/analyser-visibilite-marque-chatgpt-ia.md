@@ -4,7 +4,7 @@ description: "Guide complet pour mesurer et analyser la présence de votre marqu
 date: "2026-03-20"
 dateModified: "2026-03-20"
 category: "IA & SEO"
-image: "/images/blog/analyser-visibilite-marque-chatgpt.jpg"
+image: "/images/blog/geo-ia-seo.jpg"
 imageAlt: "Analyser la visibilité de votre marque sur ChatGPT et les IA génératives"
 author: "Indiana Aflalo"
 keywords: ["analyser visibilité marque chatgpt", "mesurer visibilité ia", "vérifier si marque citée chatgpt", "outil visibilité ia", "GEO analytics", "citation IA", "monitoring marque chatgpt", "visibilité perplexity", "présence marque ia"]
@@ -130,7 +130,7 @@ Notre [testeur de visibilité IA](/outils/testeur-visibilite-ia) analyse 4 caté
 | 40-59 | Visibilité IA limitée | Plan d'action prioritaire |
 | 0-39 | Invisible pour les IA | Audit GEO complet nécessaire |
 
-Les pages avec un score supérieur à 80 sont **3 fois plus susceptibles d'être citées** par ChatGPT et Perplexity que celles sous les 60 points.
+Un score élevé indique que votre site remplit les critères techniques et sémantiques recherchés par les IA génératives.
 
 ### Alternatives payantes
 

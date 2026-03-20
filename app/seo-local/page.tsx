@@ -59,7 +59,7 @@ export default function SeoLocalPage() {
                 <section className="bg-ink text-white pt-32 pb-20">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
-                        <div className="inline-flex items-center gap-2 bg-sauge/20 text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
+                        <div className="inline-flex items-center gap-2 bg-sauge/20 text-sauge px-4 py-2 rounded-full text-sm font-bold mb-6">
                             <MapPin className="w-4 h-4" />
                             Référencement géolocalisé
                         </div>

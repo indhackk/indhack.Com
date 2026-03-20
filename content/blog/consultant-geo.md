@@ -1,12 +1,12 @@
 ---
-title: "Consultant GEO : dominez les IA génératives en 2026"
-description: "Consultant GEO : expert en Generative Engine Optimization. Faites citer votre marque par ChatGPT, Perplexity et les IA génératives."
+title: "Le métier de consultant GEO : missions, outils et études de cas"
+description: "Découvrez le métier de consultant GEO : missions, outils utilisés, études de cas réels et résultats chiffrés. Le guide complet pour comprendre cette expertise émergente."
 date: "2026-01-08"
 category: "IA & SEO"
 image: "/images/blog/consultant-geo-expert.jpg"
 imageAlt: "Consultant GEO expert en optimisation pour les moteurs génératifs"
 author: "Indiana Aflalo"
-keywords: ["consultant geo", "Generative Engine Optimization", "expert geo", "meilleur consultant geo", "agence geo", "seo ia", "chatgpt seo"]
+keywords: ["métier consultant geo", "missions consultant geo", "devenir consultant geo", "études de cas GEO", "outils consultant geo", "résultats GEO"]
 ---
 
 Le SEO traditionnel s'essouffle. La baisse du CTR organique sur Google (parfois de l'ordre de 60% avec l'arrivée de l'AI Overviews) a provoqué un séisme dans le milieu du webmarketing. 
@@ -210,7 +210,7 @@ Mon approche en tant que consultante GEO se base sur :
 
 Si votre site ne performe plus aussi bien sur les moteurs classiques, ou si vous souhaitez préparer l'avenir et devenir la référence citée par les LLMs dans votre industrie, il est temps d'agir.
 
-**Découvrez mes services complets sur ma page dédiée : [Consultant IA & GEO](/consultant-ia) ou réalisez dès aujourd'hui un [Test de visibilité de votre site](/outils/testeur-visibilite-ia) !**
+**Besoin d'un accompagnement GEO ?** [Découvrez mes services de consultante GEO](/consultant-geo) ou réalisez dès aujourd'hui un [test de visibilité IA gratuit](/outils/testeur-visibilite-ia).
 
 ## Questions fréquentes
 
@@ -243,4 +243,4 @@ Non, le GEO complète le SEO. Les IA utilisent toujours les classements Google/B
 
 ---
 
-**Vous cherchez un consultant GEO ?** [Contactez-moi](/contact) pour un audit de visibilité IA et une stratégie GEO adaptée à votre marché.
+**Vous cherchez une consultante GEO ?** [Découvrez mes services et tarifs](/consultant-geo) pour un audit de visibilité IA et une stratégie adaptée à votre marché.

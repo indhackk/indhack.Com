@@ -194,7 +194,7 @@ export function Navbar() {
                             </a>
                             <Button
                                 onClick={openAuditModal}
-                                className="bg-white text-white hover:bg-sauge hover:text-white border-2 border-transparent hover:border-white/20 rounded-full px-8 py-6 font-bold tracking-wide shadow-lg shadow-black/5 group overflow-hidden relative transition-all"
+                                className="bg-white text-sauge hover:bg-sauge hover:text-white border-2 border-transparent hover:border-white/20 rounded-full px-8 py-6 font-bold tracking-wide shadow-lg shadow-black/5 group overflow-hidden relative transition-all"
                             >
                                 <span className="relative z-10 flex items-center gap-2 font-bold transition-colors">
                                     Audit gratuit

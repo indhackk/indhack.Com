@@ -719,13 +719,13 @@ export default function ConsultantGEOClient() {
                                     46 % des sites bloquent les crawlers IA. Données et analyse complète.
                                 </p>
                             </Link>
-                            <Link href="/blog/checklist-seo-2026" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
-                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Checklist</span>
+                            <Link href="/blog/definition-seo-guide-complet" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                                <span className="text-xs font-medium text-sauge uppercase tracking-wide">Fondamentaux</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
-                                    Checklist SEO 2026 : 50 points essentiels
+                                    Le SEO expliqué : guide complet
                                 </h3>
                                 <p className="text-soft text-sm mt-2">
-                                    Inclut une section complète sur la visibilité IA et les optimisations GEO.
+                                    Comprendre les bases du référencement naturel, fondation du GEO.
                                 </p>
                             </Link>
                         </div>

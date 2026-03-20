@@ -98,7 +98,7 @@ export function RelatedServices({ currentService, title = "Services complémenta
                     {relatedServices.map((service) => (
                         <Link key={service.href} href={service.href}>
                             <div className="bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all group h-full">
-                                <div className="w-12 h-12 bg-sauge/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:bg-sauge group-hover:text-white transition-all">
+                                <div className="w-12 h-12 bg-sauge/10 rounded-xl flex items-center justify-center text-sauge mb-4 group-hover:bg-sauge group-hover:text-white transition-all">
                                     {service.icon}
                                 </div>
                                 <h3 className="font-bold text-ink mb-2 group-hover:text-sauge transition-colors">
