@@ -4,8 +4,8 @@ description: "Guide complet pour mesurer et analyser la présence de votre marqu
 date: "2026-03-20"
 dateModified: "2026-03-20"
 category: "IA & SEO"
-image: "/images/blog/analyser-visibilite-marque-chatgpt-ia.webp"
-imageAlt: "Comment vérifier si votre marque est citée par ChatGPT - Analyse visibilité IA workspace moderne"
+image: "/images/blog/geo-ia-seo.jpg"
+imageAlt: "Comment analyser la visibilité de votre marque sur ChatGPT et les IA génératives"
 author: "Indiana Aflalo"
 keywords: ["analyser visibilité marque chatgpt", "mesurer visibilité ia", "vérifier si marque citée chatgpt", "outil visibilité ia", "GEO analytics", "citation IA", "monitoring marque chatgpt", "visibilité perplexity", "présence marque ia"]
 ---
