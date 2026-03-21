@@ -307,8 +307,20 @@ export default function BlogPostPage({ params }: PageProps) {
                                 const sections = post.content.split(/\n(?=## )/);
                                 const CTA_INSERT_AFTER = 3; // Après le 3ème H2
 
+                                // Extrait le texte brut depuis les children React (gère les éléments imbriqués comme <strong>)
+                                const extractTextFromNode = (node: React.ReactNode): string => {
+                                    if (typeof node === 'string') return node;
+                                    if (typeof node === 'number') return String(node);
+                                    if (!node) return '';
+                                    if (Array.isArray(node)) return node.map(extractTextFromNode).join('');
+                                    if (typeof node === 'object' && 'props' in node) {
+                                        return extractTextFromNode((node as React.ReactElement).props.children);
+                                    }
+                                    return '';
+                                };
+
                                 const createIdFromText = (text: React.ReactNode) =>
-                                    String(text).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+                                    extractTextFromNode(text).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
                                 // Custom components to add IDs to headings (node prop filtered to avoid DOM warning)
                                 const markdownComponents = {
