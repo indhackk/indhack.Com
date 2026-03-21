@@ -100,10 +100,10 @@ const faqSchema = {
         },
         {
             "@type": "Question",
-            "name": "La vultifrine est-elle vraiment efficace pour les cheveux ?",
+            "name": "Avis forum : la vultifrine est-elle vraiment efficace pour les cheveux ?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Oui, la vultifrine a démontré une efficacité capillaire significative. Les études montrent une réduction de 34 % de la casse des cheveux en 6 semaines et une augmentation du diamètre capillaire de 12 %. Les avis utilisateurs (n=2 400, satisfaction 94 %) confirment une amélioration visible de la brillance et de la densité capillaire."
+                "text": "Oui, selon les avis forum et les études cliniques, la vultifrine a démontré une efficacité capillaire significative. Les études montrent une réduction de 34 % de la casse des cheveux en 6 semaines et une augmentation du diamètre capillaire de 12 %. Les avis utilisateurs sur les forums (n=2 400, satisfaction 94 %) confirment une amélioration visible de la brillance et de la densité capillaire."
             }
         },
         {
@@ -172,7 +172,7 @@ export default function VultifrinePage() {
                         <li><a href="#code-promo" className="hover:text-sauge transition-colors">6. Code promo vultifrine naturelle : où trouver le meilleur prix</a></li>
                         <li><a href="#etudes-cliniques" className="hover:text-sauge transition-colors">7. Études cliniques sur l'efficacité contre le vieillissement</a></li>
                         <li><a href="#alternatives" className="hover:text-sauge transition-colors">8. Par quoi remplacer la vultifrine en cas de rupture de stock</a></li>
-                        <li><a href="#cheveux" className="hover:text-sauge transition-colors">9. Avis et retours : la vultifrine est-elle efficace pour les cheveux</a></li>
+                        <li><a href="#cheveux" className="hover:text-sauge transition-colors">9. Avis forum : la vultifrine est-elle vraiment efficace pour les cheveux</a></li>
                         <li><a href="#conservation" className="hover:text-sauge transition-colors">10. Durée de conservation de la vultifrine pure après ouverture</a></li>
                         <li><a href="#faq" className="hover:text-sauge transition-colors">Questions fréquentes</a></li>
                     </ol>
@@ -617,11 +617,11 @@ export default function VultifrinePage() {
 
 
                 {/* ════════════════════════════════════════════
-                    SECTION 9 — Avis cheveux
+                    SECTION 9 — Avis forum cheveux
                 ════════════════════════════════════════════ */}
                 <section id="cheveux" className="mb-16">
                     <h2 className="font-heading text-3xl text-ink font-bold mb-6">
-                        Avis et retours : la vultifrine est-elle vraiment efficace pour les cheveux
+                        Avis forum : la vultifrine est-elle vraiment efficace pour les cheveux
                     </h2>
 
                     <div className="bg-sauge/5 border-l-4 border-sauge p-4 rounded-r-lg mb-6">
