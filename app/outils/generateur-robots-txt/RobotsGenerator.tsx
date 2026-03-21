@@ -173,7 +173,7 @@ export function RobotsGenerator() {
                 {/* Presets */}
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
                     <h2 className="font-bold text-white mb-4 flex items-center gap-2">
-                        <Shield className="w-5 h-5 text-sauge" />
+                        <Shield className="w-5 h-5 text-sauge-light" />
                         Configurations prédéfinies
                     </h2>
                     <div className="grid grid-cols-2 gap-3">
@@ -349,15 +349,15 @@ export function RobotsGenerator() {
                 </div>
 
                 {/* Instructions - compact */}
-                <div className="bg-sauge/10 rounded-xl p-4 border border-sauge/20">
+                <div className="bg-white/5 rounded-xl p-4 border border-white/10">
                     <h3 className="font-bold text-white text-sm mb-2 flex items-center gap-2">
-                        <Eye className="w-4 h-4 text-sauge" />
+                        <Eye className="w-4 h-4 text-sauge-light" />
                         Comment utiliser ce fichier ?
                     </h3>
                     <ol className="space-y-1.5 text-xs text-soft-light">
                         <li>1. Téléchargez ou copiez le fichier</li>
                         <li>2. Placez-le à la racine de votre site</li>
-                        <li>3. Vérifiez : <code className="bg-white/10 px-1 rounded text-sauge">votresite.com/robots.txt</code></li>
+                        <li>3. Vérifiez : <code className="bg-white/10 px-1 rounded text-sauge-light">votresite.com/robots.txt</code></li>
                     </ol>
                 </div>
 

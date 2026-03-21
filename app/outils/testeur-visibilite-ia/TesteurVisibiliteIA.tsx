@@ -351,7 +351,7 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                                     type="text"
                                     value={url}
                                     onChange={(e) => setUrl(e.target.value)}
-                                    className="w-full px-5 py-4 text-lg bg-white/5 border border-white/20 rounded-xl focus:border-sauge focus:ring-2 focus:ring-sauge/20 transition-all text-white placeholder-white/40"
+                                    className="w-full px-5 py-4 text-lg text-center bg-white/5 border border-white/20 rounded-xl focus:border-sauge focus:ring-2 focus:ring-sauge/20 transition-all text-white placeholder-white/40"
                                     disabled={loading}
                                     placeholder="https://votre-site.com"
                                 />
