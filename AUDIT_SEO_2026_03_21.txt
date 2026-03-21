@@ -1,0 +1,449 @@
+AUDIT SEO TECHNIQUE EXHAUSTIF - indhack.com
+============================================
+
+Date: 21 Mars 2026
+Codebase: Next.js 14+ avec App Router (SSG)
+Total pages: 46
+Total articles blog: 28
+
+═════════════════════════════════════════════════════════════════════
+1. META TITLES - CRITIQUE
+═════════════════════════════════════════════════════════════════════
+
+PROBLÈMES DÉTECTÉS:
+✗ 2 pages SANS title
+✗ 17 pages avec title TROP LONG (>60 chars)
+
+PAGES SANS TITLE (CRITIQUE):
+  Fichier: app/(gmb-app)/page.tsx
+  Fichier: app/admin-login/page.tsx
+
+TITLES TROP LONGS >60 CHARS (HAUTE PRIORITÉ):
+
+1. app/consultant-seo-aix-en-provence/layout.tsx - 68 chars
+   "Consultante SEO Aix-en-Provence (13100) | Experte référencement PACA"
+
+2. app/consultant-seo-antibes/layout.tsx - 64 chars
+   "Consultante SEO Antibes (06600) | Experte référencement Côte d'Azur"
+
+3. app/consultant-seo-bordeaux/layout.tsx - 64 chars
+   "Consultante SEO Bordeaux (33000) | Experte référencement Gironde"
+
+4. app/consultant-seo-boulogne-billancourt/layout.tsx - 75 chars
+   "Consultante SEO Boulogne-Billancourt (92100) | Experte référencement médias"
+
+5. app/consultant-seo-grenoble/layout.tsx - 62 chars
+   "Consultante SEO Grenoble (38000) | Experte référencement Isère"
+
+6. app/consultant-seo-juan-les-pins/layout.tsx - 72 chars
+   "Consultante SEO Juan-les-Pins (06160) | Experte référencement luxe"
+
+7. app/consultant-seo-lille/layout.tsx - 69 chars
+   "Consultante SEO Lille (59000) | Experte référencement Hauts-de-France"
+
+8. app/consultant-seo-marseille/layout.tsx - 62 chars
+   "Consultante SEO Marseille (13000) | Experte référencement Provence"
+
+9. app/consultant-seo-montpellier/layout.tsx - 67 chars
+   "Consultante SEO Montpellier (34000) | Experte référencement Hérault"
+
+10. app/consultant-seo-nantes/layout.tsx - 71 chars
+    "Consultante SEO Nantes (44000) | Experte référencement Pays de la Loire"
+
+11. app/consultant-seo-paris/layout.tsx - 67 chars
+    "Consultante SEO Paris (75000) | Experte référencement Île-de-France"
+
+12. app/consultant-seo-rennes/layout.tsx - 63 chars
+    "Consultante SEO Rennes (35000) | Experte référencement Bretagne"
+
+13. app/consultant-seo-sophia-antipolis/layout.tsx - 73 chars
+    "Consultante SEO Sophia-Antipolis (06560) | Experte référencement tech B2B"
+
+14. app/consultant-seo-strasbourg/layout.tsx - 65 chars
+    "Consultante SEO Strasbourg (67000) | Experte référencement Alsace"
+
+15. app/consultant-seo-toulouse/layout.tsx - 70 chars
+    "Consultante SEO Toulouse (31000) | Experte référencement Occitanie"
+
+16. app/creation-boutique-en-ligne/layout.tsx - 62 chars
+    "Création Boutique en Ligne | E-commerce SEO Optimisé – IndHack"
+
+17. app/laboratoire-geo/layout.tsx - 62 chars
+    "Laboratoire GEO : expérimentations en optimisation pour les IA"
+
+═════════════════════════════════════════════════════════════════════
+2. META DESCRIPTIONS - CRITIQUE
+═════════════════════════════════════════════════════════════════════
+
+PROBLÈMES DÉTECTÉS:
+✗ 3 pages SANS description
+✗ 17 pages avec description INVALIDE
+
+PAGES SANS DESCRIPTION (CRITIQUE):
+  Fichier: app/(gmb-app)/page.tsx
+  Fichier: app/admin-login/page.tsx
+  Fichier: app/dashboard/page.tsx
+
+DESCRIPTIONS <120 CHARS (TROP COURTES - HAUTE):
+
+1. app/audit-seo/layout.tsx - 91 chars
+   "Audit SEO complet en 48h : +150 points analysés, diagnostic technique et sémantique..."
+
+2. app/blog/layout.tsx - 91 chars
+   "Articles experts sur le SEO, GEO, IA générative et stratégies digitales. Guides ..."
+
+3. app/cgv/layout.tsx - 118 chars
+   "Conditions générales de vente des prestations de consulting SEO et création de s..."
+
+4. app/consultant-ia/layout.tsx - 24 chars
+   "Experts en intégration d..." [TRÈS COURT]
+
+5. app/consultant-seo-grenoble/layout.tsx - 108 chars
+   "Consultante SEO à Grenoble (38000). Audit gratuit, stratégie de visibilité..."
+
+6. app/consultant-seo-lyon/layout.tsx - 109 chars
+   "Experte SEO à Lyon (69000). Audit gratuit, accompagnement personnalisé pour..."
+
+7. app/consultant-seo-montpellier/layout.tsx - 119 chars
+   "Consultante SEO à Montpellier (34000). Audit gratuit, stratégie personnalisée..."
+
+8. app/etudes-de-cas/layout.tsx - 118 chars
+   "Résultats SEO obtenus pour mes clients : trafic multiplié, leads qualifiés..."
+
+9. app/faq/layout.tsx - 56 chars
+   "Réponses à vos questions sur le référencement naturel..." [TRÈS COURT]
+
+10. app/laboratoire-geo/layout.tsx - 13 chars
+    "Laboratoire d..." [EXTRÊMEMENT COURT]
+
+11. app/mentions-legales/layout.tsx - 114 chars
+    "Mentions légales du site indhack.com édité par Indiana Aflalo..."
+
+12. app/partenaires/layout.tsx - 36 chars
+    "Intégrez gratuitement notre widget..." [TRÈS COURT]
+
+13. app/pour-pauline/layout.tsx - 27 chars
+    "Un message spécial pour toi..." [TRÈS COURT]
+
+14. app/referencement-naturel/layout.tsx - 110 chars
+    "Stratégies SEO sur-mesure pour atteindre la 1ère page Google..."
+
+15. app/refonte-site-web/layout.tsx - 105 chars
+    "Refonte de site web SEO avec préservation du trafic..."
+
+DESCRIPTIONS >160 CHARS (TROP LONGUES - MOYENNE):
+
+1. app/a-propos/layout.tsx - 180 chars
+2. app/checklist-geo/layout.tsx - 169 chars
+
+═════════════════════════════════════════════════════════════════════
+3. H1 TAGS - CRITIQUE MAJEURE
+═════════════════════════════════════════════════════════════════════
+
+PROBLÈME MASSIF: 40/46 pages (87%) N'ONT PAS DE H1!
+
+Pages sans H1 (CRITIQUE):
+
+Toutes les pages suivantes manquent d'une balise H1 visuelle:
+
+1. app/(gmb-app)/page.tsx
+2. app/a-propos/page.tsx
+3. app/audit-seo/page.tsx
+4. app/blog/page.tsx
+5. app/checklist-geo/page.tsx
+6. app/community-manager/page.tsx
+7. app/consultant-geo/page.tsx
+8. app/consultant-ia/page.tsx
+9. app/consultant-seo/page.tsx
+10. app/consultant-seo-aix-en-provence/page.tsx
+11. app/consultant-seo-antibes/page.tsx
+12. app/consultant-seo-bordeaux/page.tsx
+13. app/consultant-seo-boulogne-billancourt/page.tsx
+14. app/consultant-seo-cannes/page.tsx
+15. app/consultant-seo-grenoble/page.tsx
+16. app/consultant-seo-juan-les-pins/page.tsx
+17. app/consultant-seo-lille/page.tsx
+18. app/consultant-seo-lyon/page.tsx
+19. app/consultant-seo-marseille/page.tsx
+20. app/consultant-seo-monaco/page.tsx
+21. app/consultant-seo-montpellier/page.tsx
+22. app/consultant-seo-nantes/page.tsx
+23. app/consultant-seo-nice/page.tsx
+24. app/consultant-seo-paris/page.tsx
+25. app/consultant-seo-rennes/page.tsx
+26. app/consultant-seo-sophia-antipolis/page.tsx
+27. app/consultant-seo-strasbourg/page.tsx
+28. app/consultant-seo-toulouse/page.tsx
+29. app/contact/page.tsx
+30. app/creation-boutique-en-ligne/page.tsx
+31. app/creation-site-web/page.tsx
+32. app/etudes-de-cas/page.tsx
+33. app/faq/page.tsx
+34. app/glossaire-seo/page.tsx
+35. app/laboratoire-geo/page.tsx
+36. app/partenaires/page.tsx
+37. app/pour-pauline/page.tsx
+38. app/referencement-naturel/page.tsx
+39. app/refonte-site-web/page.tsx
+40. app/seo-local/page.tsx
+
+IMPACT SEO:
+✗ Google expect 1 H1 par page pour hiérarchie claire
+✗ Affecte la compréhension du contenu par les crawlers
+✗ Réduit chances de rich results
+✗ Mauvais signal pour l'accessibilité (WCAG)
+✗ Peut impacter Core Web Vitals indirectement
+
+═════════════════════════════════════════════════════════════════════
+4. CANONICAL URLS - OK
+═════════════════════════════════════════════════════════════════════
+
+✓ Tous les layouts ont canonicals définis
+✓ Format correct: https://indhack.com/[page]
+✓ Pas de doublon détecté
+✓ Conformes à la spécification
+
+═════════════════════════════════════════════════════════════════════
+5. SITEMAP & ROBOTS.TXT - CONFLIT
+═════════════════════════════════════════════════════════════════════
+
+⚠ CONFLIT DÉTECTÉ (HAUTE PRIORITÉ):
+
+Fichier: /public/robots.txt
+Ligne 51: "User-agent: CCBot"
+Ligne 52: "Allow: /"
+
+vs
+
+Fichier: next-sitemap.config.js
+Ligne 156: "{ userAgent: 'CCBot', disallow: '/' }"
+
+CONTEXTE:
+- CCBot est le crawler de Common Crawl (nonprofit internet scraper)
+- Common Crawl crée des datasets IA sans attribuer les sources
+- next-sitemap.config.js BLOQUE correctement CCBot
+- Mais public/robots.txt le PERMET, ce qui le contredit
+
+RECOMMANDATION:
+- Supprimer ou corriger la règle CCBot dans public/robots.txt
+- Ou générer robots.txt depuis next-sitemap.config.js à chaque build
+- Actuellement public/robots.txt EST GÉNÉRÉ par next-sitemap
+
+═════════════════════════════════════════════════════════════════════
+6. REDIRECTIONS - OK
+═════════════════════════════════════════════════════════════════════
+
+✓ 77 redirections 301 bien configurées (next.config.mjs)
+✓ Cleanup WordPress: /wp-*, /feed, /search → home
+✓ De-cannibalisation: /consultant-seo-freelance → /consultant-seo
+✓ Pages villes supprimées → villes proches
+✓ Patterns dynamiques pour sous-pages
+✓ Tous les anciens URLs redirigés
+
+═════════════════════════════════════════════════════════════════════
+7. LIENS INTERNES CASSÉS
+═════════════════════════════════════════════════════════════════════
+
+✗ 1 LIEN CASSÉ DÉTECTÉ (HAUTE):
+
+Fichier: Chercher où est le lien vers /laboratoire-geo/vultifrine
+Problème: La page /laboratoire-geo/vultifrine n'existe pas
+
+Possible source:
+- Peut être dans un composant Client dynamique
+- Peut être générée par NextLink
+
+Correction:
+Option A: Créer app/laboratoire-geo/vultifrine/page.tsx
+Option B: Rediriger vers /blog/etude-de-cas-geo-vultifrine.md
+
+✓ Autres liens cassés détectés sont OK:
+  - /data/gmb-study-cote-azur-2026.json → Correct (Next.js serve /public)
+  - /data/restaurants_visibilite_paca.csv → Correct
+  - /guide-installation-widget-indhack.pdf → Correct
+  - /contact?service=audit-gmb → URL paramétrisée, correct
+
+═════════════════════════════════════════════════════════════════════
+8. SCHEMA JSON-LD - DOUBLON DÉTECTÉ
+═════════════════════════════════════════════════════════════════════
+
+⚠ DOUBLON POTENTIEL (MOYENNE):
+
+Fichier 1: app/layout.tsx (lignes 78-197)
+Exporte: organizationSchema, localBusinessSchema
+Type: Server component, injected dans <head>
+
+Fichier 2: components/seo/JsonLdSchemas.tsx
+Exporte: OrganizationSchema(), LocalBusinessSchema() functions
+Réutilisées par: app/page.tsx (HomepageSchemas)
+
+Résultat: Homepage a 4 schemas au lieu de 2
+- 2x Organization (un de layout, un de HomepageSchemas)
+- 2x LocalBusiness (idem)
+
+RECOMMANDATION:
+- Supprimer les schemas dupliqués de app/layout.tsx
+- Garder uniquement dans components/seo/JsonLdSchemas.tsx
+- Utiliser HomepageSchemas() seulement sur homepage
+
+═════════════════════════════════════════════════════════════════════
+9. BLOG POSTS - ÉTAT BON SAUF EXCEPTIONS
+═════════════════════════════════════════════════════════════════════
+
+✓ Total: 28 articles
+✓ 25 articles publiés avec metadata complets
+✓ Frontmatter bien structuré: title, description, image, date, keywords
+
+⚠ 3 ARTICLES EN DRAFT (HAUTE):
+  1. content/blog/etude-de-cas-geo-vultifrine.md
+     Status: draft: true
+     Action: Publier ou supprimer
+
+  2. content/blog/etude-restaurants-cote-azur-2026-resume.md
+     Status: draft: true
+     Action: Publier ou supprimer
+
+  3. content/blog/google-core-update-mars-2026-impact-seo.md
+     Status: draft: true
+     Action: Publier ou supprimer
+
+⚠ 1 ARTICLE SANS KEYWORDS (MOYENNE):
+  1. content/blog/definition-seo-guide-complet.md
+     Manque: keywords: []
+     Action: Ajouter keywords au frontmatter
+
+═════════════════════════════════════════════════════════════════════
+10. MAJUSCULES FRANÇAISES - ERREURS DÉTECTÉES
+═════════════════════════════════════════════════════════════════════
+
+Règle: En français, majuscule SEULEMENT au premier mot et noms propres.
+Tous les autres mots en minuscule.
+
+✗ ERREURS DÉTECTÉES (BASSE):
+
+1. app/outils/gmb-autopilot/layout.tsx
+   Title actuel: "GMB AutoPilot - Réponses Automatiques aux Avis Google"
+   Devrait être: "GMB AutoPilot - réponses automatiques aux avis Google"
+
+2. app/blog/geo-comment-apparaitre-chatgpt-2026/layout.tsx
+   Title actuel: "GEO en 2026 : Comment Apparaître dans ChatGPT, Perplexity et Google AI"
+   Devrait être: "GEO en 2026 : comment apparaître dans ChatGPT, Perplexity et Google AI"
+
+═════════════════════════════════════════════════════════════════════
+RÉSUMÉ PAR SÉVÉRITÉ
+═════════════════════════════════════════════════════════════════════
+
+CRITIQUE (⚠️ Impact majeur SEO):
+  [C1] 40/46 pages sans H1 (87% du site)
+  [C2] 2 pages sans title
+  [C3] 3 pages sans description
+
+HAUTE (⚠️ Impact significatif):
+  [H1] 17 pages avec title >60 chars
+  [H2] 15 pages avec description <120 chars
+  [H3] Conflit robots.txt vs next-sitemap.config.js (CCBot)
+  [H4] 3 articles blog en draft (non indexés)
+  [H5] 1 lien vers page inexistante
+
+MOYENNE (⚠ Impact modéré):
+  [M1] 2 pages avec description >160 chars
+  [M2] Doublon JSON-LD (schemas en double sur homepage)
+  [M3] 1 article sans keywords
+
+BASSE (℃ Détails):
+  [B1] 2 majuscules françaises incorrectes
+
+═════════════════════════════════════════════════════════════════════
+ACTIONS CORRECTIVES - PRIORITÉ D'EXÉCUTION
+═════════════════════════════════════════════════════════════════════
+
+[URGENT - Jour 1]
+
+1. [C1] AJOUTER H1 SUR TOUTES LES PAGES
+   Impact: 40 pages concernées
+   Effort: Élevé (demande révision de tous les composants)
+   Approche:
+   - Créer un composant <PageTitle> réutilisable
+   - Ajouter H1 dans tous les layouts ou page components
+   - Vérifier H1 ≠ title tag
+   - H1 doit être le sujet principal de la page
+
+2. [C2] AJOUTER TITLES MANQUANTS
+   Pages: /(gmb-app), /admin-login
+   Effort: Faible (2 fichiers)
+   Format: ≤60 chars, mot-clé en début
+
+3. [C3] AJOUTER DESCRIPTIONS MANQUANTES
+   Pages: /(gmb-app), /admin-login, /dashboard
+   Effort: Faible (3 fichiers)
+   Format: 120-160 chars
+
+[JOUR 2-3]
+
+4. [H1] RACCOURCIR TITLES >60 CHARS (17 pages)
+   Pages: Toutes les pages villes + 2 autres
+   Effort: Moyen (pattern à appliquer)
+   Suggestion pour villes:
+   "Consultant SEO [Ville] | Audit & Référencement"
+   Cible: ≤58 chars
+
+5. [H2] ALLONGER DESCRIPTIONS <120 CHARS (15 pages)
+   Effort: Moyen
+   Approche: Enrichir les descriptions existantes
+   Minimum: 120 caractères
+
+6. [H3] CORRIGER ROBOTS.TXT
+   Fichier: public/robots.txt
+   Action: Ligne 51-52 (CCBot)
+   Changement simple: Allow → Disallow pour CCBot
+
+[JOUR 4]
+
+7. [H4] DÉCIDER STATUT DES 3 DRAFTS BLOG
+   Articles: 3 en draft
+   Action: Publier (set draft: false) OU supprimer
+
+8. [M2] DÉDUPLIQUER SCHEMAS JSON-LD
+   Fichiers: app/layout.tsx, components/seo/JsonLdSchemas.tsx
+   Action: Consolidation des schemas
+   Résultat: 1 seule fois chaque schema par page
+
+[JOUR 5]
+
+9. [M1] RACCOURCIR 2 DESCRIPTIONS >160 CHARS
+   Pages: /a-propos, /checklist-geo
+   Effort: Faible
+
+10. [M3] AJOUTER KEYWORDS À 1 ARTICLE
+    Fichier: content/blog/definition-seo-guide-complet.md
+    Effort: Très faible
+
+11. [B1] CORRIGER MAJUSCULES FRANÇAISES (2 titles)
+    Effort: Très faible
+
+12. [H5] RÉSOUDRE LIEN CASSÉ
+    Option A: Créer /laboratoire-geo/vultifrine/page.tsx
+    Option B: Ajouter redirect dans next.config.mjs
+
+═════════════════════════════════════════════════════════════════════
+NOTES IMPORTANTES
+═════════════════════════════════════════════════════════════════════
+
+✓ Canonical URLs: Parfait, aucune action requise
+✓ Redirections: 77 redirections bien configurées, aucun ajustement
+✓ Métadonnées OpenGraph: À jour et correctes
+✓ Sitemap: Bien configuré (généré automatiquement)
+✓ Core Web Vitals: À vérifier via PageSpeed (hors scope audit technique)
+
+⚠️ PRIORITÉ ABSOLUE: H1 TAGS
+L'absence de H1 sur 87% des pages est un problème critique qui affecte:
+- Le ranking Google
+- La lisibilité des crawlers
+- L'accessibilité
+- Les rich results
+
+Cette correction DOIT être la première priorité avant toute autre.
+
+═════════════════════════════════════════════════════════════════════
+FIN DE L'AUDIT
+═════════════════════════════════════════════════════════════════════
