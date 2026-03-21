@@ -12,6 +12,27 @@ import { CityData, FRENCH_CITIES } from "@/lib/cities-data";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 import { MarketInsightBlock } from "@/components/seo/MarketInsightBlock";
 
+const DEPARTMENT_PREPOSITIONS: Record<string, string> = {
+    "Alpes-Maritimes": "des Alpes-Maritimes",
+    "Bas-Rhin": "du Bas-Rhin",
+    "Bouches-du-Rhône": "des Bouches-du-Rhône",
+    "Gironde": "de Gironde",
+    "Haute-Garonne": "de Haute-Garonne",
+    "Hauts-de-Seine": "des Hauts-de-Seine",
+    "Hérault": "de l'Hérault",
+    "Ille-et-Vilaine": "d'Ille-et-Vilaine",
+    "Isère": "d'Isère",
+    "Loire-Atlantique": "de Loire-Atlantique",
+    "Monaco": "de Monaco",
+    "Nord": "du Nord",
+    "Paris": "de Paris",
+    "Rhône": "du Rhône",
+};
+
+function getDepartmentPreposition(department: string): string {
+    return DEPARTMENT_PREPOSITIONS[department] || `de ${department}`;
+}
+
 interface CityPageProps {
     cityData: CityData;
     customContent?: React.ReactNode;
@@ -220,7 +241,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             {/* Hero */}
             <HeroServices
                 title={`Consultant SEO ${city} (${zipCode})`}
-                subtitle={`Dominez Google à ${city}. Attirez des clients qualifiés des ${cityData.department} grâce à une stratégie de référencement local sur-mesure.`}
+                subtitle={`Dominez Google à ${city}. Attirez des clients qualifiés ${getDepartmentPreposition(cityData.department)} grâce à une stratégie de référencement local sur-mesure.`}
                 image="seo-dashboard"
                 category="Référencement Local"
             />

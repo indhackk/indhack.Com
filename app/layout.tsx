@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     authors: [{ name: "Indiana Aflalo" }],
     creator: "Indiana Aflalo",
     icons: {
-        icon: "/images/logo-indhack.png",
-        apple: "/images/logo-indhack.png",
+        icon: "/images/logo-indhack.webp",
+        apple: "/images/logo-indhack.webp",
     },
     openGraph: {
         type: "website",
