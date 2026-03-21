@@ -107,10 +107,10 @@ export function CityCarousel({
                     {REGIONS.map((region, i) => (
                         <motion.div
                             key={region.name}
-                            initial={{ opacity: 0, x: 50 }}
+                            initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ delay: i * 0.1 }}
+                            viewport={{ once: true, margin: "-80px" }}
+                            transition={{ delay: i * 0.06, duration: 0.4 }}
                             className="flex-shrink-0 w-[calc(100vw-3rem)] sm:w-80 snap-start"
                         >
                             <div className="bg-white rounded-3xl border border-gray-100 p-6 h-full hover:shadow-xl hover:border-sauge/30 transition-all">
@@ -153,10 +153,10 @@ export function CityCarousel({
 
                     {/* CTA Card */}
                     <motion.div
-                        initial={{ opacity: 0, x: 50 }}
+                        initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ delay: 0.6 }}
+                        viewport={{ once: true, margin: "-80px" }}
+                        transition={{ delay: 0.3, duration: 0.4 }}
                         className="flex-shrink-0 w-[calc(100vw-3rem)] sm:w-80 snap-start"
                     >
                         <div className="bg-ink rounded-3xl p-6 h-full flex flex-col justify-center text-center">

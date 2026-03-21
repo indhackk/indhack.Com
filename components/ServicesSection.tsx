@@ -59,9 +59,9 @@ export function ServicesSection() {
                         Expertises
                     </motion.p>
                     <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
+                        viewport={{ once: true, margin: "-80px" }}
                         className="text-4xl md:text-5xl font-heading font-bold text-ink leading-[1.1] tracking-tight mb-6"
                     >
                         Des solutions qui<br />
@@ -83,10 +83,10 @@ export function ServicesSection() {
                     {SERVICES.map((service, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0, y: 40 }}
+                            initial={{ opacity: 0, y: 16 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ delay: i * 0.1, duration: 0.6 }}
+                            viewport={{ once: true, margin: "-80px" }}
+                            transition={{ delay: i * 0.06, duration: 0.4 }}
                         >
                             <Link
                                 href={service.href}
@@ -122,9 +122,9 @@ export function ServicesSection() {
 
                 {/* Lien vers outils gratuits */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: true, margin: "-80px" }}
                     className="text-center mt-12"
                 >
                     <Link

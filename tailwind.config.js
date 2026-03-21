@@ -93,7 +93,7 @@ module.exports = {
                     to: { transform: "scaleX(1)" }
                 },
                 "fade-up": {
-                    from: { opacity: "0", transform: "translateY(20px)" },
+                    from: { opacity: "0", transform: "translateY(12px)" },
                     to: { opacity: "1", transform: "translateY(0)" }
                 },
                 "fade-in": {
@@ -101,7 +101,7 @@ module.exports = {
                     to: { opacity: "1" }
                 },
                 "slide-up": {
-                    from: { opacity: "0", transform: "translateY(30px)" },
+                    from: { opacity: "0", transform: "translateY(15px)" },
                     to: { opacity: "1", transform: "translateY(0)" }
                 },
                 "scale-in": {

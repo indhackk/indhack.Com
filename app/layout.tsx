@@ -204,9 +204,9 @@ export default function RootLayout({
     return (
         <html lang="fr" className="scroll-smooth">
             <head>
-                {/* Preconnect pour performance */}
-                <link rel="preconnect" href="https://www.googletagmanager.com" />
-                <link rel="preconnect" href="https://www.google-analytics.com" />
+                {/* DNS prefetch pour analytics (lazyOnload, pas besoin de preconnect) */}
+                <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+                <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
                 <script
                     type="application/ld+json"
