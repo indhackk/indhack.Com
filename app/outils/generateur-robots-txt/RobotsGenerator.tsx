@@ -432,6 +432,9 @@ function CrawlerSection({
                             </div>
                             <button
                                 onClick={() => onToggle(crawler.id)}
+                                role="switch"
+                                aria-checked={settings[crawler.id]}
+                                aria-label={`${settings[crawler.id] ? 'Désactiver' : 'Activer'} ${crawler.name}`}
                                 className={`relative w-12 h-6 rounded-full transition-colors ${
                                     settings[crawler.id]
                                         ? 'bg-gradient-to-r from-emerald-500 to-emerald-400'

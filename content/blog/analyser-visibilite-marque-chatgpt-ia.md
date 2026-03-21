@@ -1,5 +1,5 @@
 ---
-title: "Comment analyser la visibilité de votre marque sur ChatGPT et les IA"
+title: "Analyser la visibilité de votre marque sur ChatGPT et les IA"
 description: "Guide complet pour mesurer et analyser la présence de votre marque dans les réponses de ChatGPT, Perplexity et Claude. Méthodes manuelles, outils et métriques GEO."
 date: "2026-03-20"
 dateModified: "2026-03-20"
@@ -313,5 +313,3 @@ Le trafic IA convertit 6 fois mieux que Google. Les marques qui investissent dan
 - [Consultante SEO Paris](/consultant-seo-paris)
 
 ---
-
-**Tags** : #geo #visibilite-ia #chatgpt #analyse-marque #monitoring-ia
