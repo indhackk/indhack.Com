@@ -46,9 +46,9 @@ Allow: /
 User-agent: MistralBot
 Allow: /
 
-# CCBot
+# CCBot (Common Crawl - datasets IA)
 User-agent: CCBot
-Disallow: /
+Allow: /
 
 # Host
 Host: https://indhack.com
