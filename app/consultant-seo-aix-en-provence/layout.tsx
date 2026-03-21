@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Aix-en-Provence (13100) | Expert référencement PACA",
+    title: "Consultante SEO Aix-en-Provence (13100) | Experte référencement PACA",
     description: "Consultante SEO freelance à Aix-en-Provence. Référencement local pour PME, startups et professions libérales des Bouches-du-Rhône. Audit gratuit.",
-    keywords: ["consultant SEO Aix-en-Provence", "référencement Aix", "SEO Bouches-du-Rhône", "audit SEO Aix", "expert SEO Aix", "agence SEO Aix-en-Provence", "référencement naturel Aix"],
+    keywords: ["consultant SEO Aix-en-Provence", "référencement Aix", "SEO Bouches-du-Rhône", "audit SEO Aix", "experte SEO Aix", "agence SEO Aix-en-Provence", "référencement naturel Aix"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo-aix-en-provence"
     },

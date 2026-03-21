@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Montpellier (34000) | Expert référencement Hérault",
+    title: "Consultante SEO Montpellier (34000) | Experte référencement Hérault",
     description: "Consultante SEO à Montpellier. Stratégie de visibilité pour professionnels de santé, startups biotech et commerces de l'Écusson.",
-    keywords: ["consultante SEO Montpellier", "référencement Montpellier", "SEO Hérault", "audit SEO Montpellier", "expert SEO 34"],
+    keywords: ["consultante SEO Montpellier", "référencement Montpellier", "SEO Hérault", "audit SEO Montpellier", "experte SEO 34"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo-montpellier"
     },

@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Grenoble (38000) | Expert référencement Isère",
-    description: "Consultant SEO à Grenoble : audit technique, référencement local et stratégie SEO pour PME et startups de l'Isère. Premier audit gratuit. Résultats en 3 mois.",
-    keywords: ["consultant SEO Grenoble", "référencement Grenoble", "SEO Isère", "audit SEO Grenoble", "expert SEO 38", "agence SEO Grenoble", "référencement naturel Grenoble"],
+    title: "Consultante SEO Grenoble (38000) | Experte référencement Isère",
+    description: "Consultante SEO à Grenoble : audit technique, référencement local et stratégie SEO pour PME et startups de l'Isère. Premier audit gratuit. Résultats en 3 mois.",
+    keywords: ["consultant SEO Grenoble", "référencement Grenoble", "SEO Isère", "audit SEO Grenoble", "experte SEO 38", "agence SEO Grenoble", "référencement naturel Grenoble"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo-grenoble"
     },
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         follow: true,
     },
     openGraph: {
-        title: "Consultant SEO Grenoble (38) | Expert Référencement Isère",
+        title: "Consultante SEO Grenoble (38) | Experte référencement Isère",
         description: "Dominez Google à Grenoble. Référencement naturel, audit SEO technique et stratégie digitale pour entreprises grenobloises. Startups tech, tourisme montagne, PME.",
         url: "https://indhack.com/consultant-seo-grenoble",
         type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Consultant SEO Grenoble (38) | Expert Référencement Isère",
+        title: "Consultante SEO Grenoble (38) | Experte référencement Isère",
         description: "Consultante SEO freelance à Grenoble. Audit technique, référencement local pour startups tech et PME de l'Isère."
     }
 };

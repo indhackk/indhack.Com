@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Bordeaux (33000) | Expert référencement Gironde",
+    title: "Consultante SEO Bordeaux (33000) | Experte référencement Gironde",
     description: "Consultante SEO à Bordeaux. Stratégie de visibilité pour domaines viticoles, startups tech et commerces du centre historique bordelais.",
-    keywords: ["consultante SEO Bordeaux", "référencement Bordeaux", "SEO Gironde", "audit SEO Bordeaux", "expert SEO 33"],
+    keywords: ["consultante SEO Bordeaux", "référencement Bordeaux", "SEO Gironde", "audit SEO Bordeaux", "experte SEO 33"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo-bordeaux"
     },

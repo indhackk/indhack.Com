@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Lyon (69000) | Expert référencement Rhône",
+    title: "Consultante SEO Lyon (69000) | Experte référencement Rhône",
     description: "Consultante SEO freelance à Lyon. Référencement local pour PME et startups du Rhône. Audit technique gratuit.",
-    keywords: ["consultant SEO Lyon", "référencement Lyon", "SEO Rhône", "audit SEO Lyon", "expert SEO 69", "agence SEO Lyon", "référencement naturel Lyon"],
+    keywords: ["consultant SEO Lyon", "référencement Lyon", "SEO Rhône", "audit SEO Lyon", "experte SEO 69", "agence SEO Lyon", "référencement naturel Lyon"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo-lyon"
     },

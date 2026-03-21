@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Rennes (35000) | Expert référencement Bretagne",
+    title: "Consultante SEO Rennes (35000) | Experte référencement Bretagne",
     description: "Consultante SEO à Rennes. Stratégie de visibilité pour ESN, startups cybersécurité et entreprises tech de la French Tech Rennes.",
-    keywords: ["consultante SEO Rennes", "référencement Rennes", "SEO Bretagne", "audit SEO Rennes", "expert SEO 35"],
+    keywords: ["consultante SEO Rennes", "référencement Rennes", "SEO Bretagne", "audit SEO Rennes", "experte SEO 35"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo-rennes"
     },
