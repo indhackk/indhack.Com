@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Linkedin, Mail, Phone, MapPin, Map } from "lucide-react";
 import Image from "next/image";
 
 // ══════════════════════════════════════════════════════════════
@@ -154,7 +154,7 @@ export function MegaFooter() {
                         {/* Contact Info */}
                         <div className="space-y-3 mb-6">
                             <a
-                                href="tel:0661139748"
+                                href="tel:+33661139748"
                                 className="flex items-center gap-3 text-white hover:text-sauge-light transition-colors"
                             >
                                 <Phone className="w-4 h-4 text-sauge-light" />
@@ -166,6 +166,16 @@ export function MegaFooter() {
                             >
                                 <Mail className="w-4 h-4 text-sauge-light" />
                                 contact@indhack.com
+                            </a>
+                            {/* Google Business Profile Link — kgmid extrait de share.google */}
+                            <a
+                                href="https://www.google.com/search?kgmid=/g/11z1fk71ly"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 text-soft-light hover:text-white transition-colors text-sm"
+                            >
+                                <Map className="w-4 h-4 text-sauge-light" />
+                                Voir la fiche Google
                             </a>
                         </div>
 
@@ -181,6 +191,15 @@ export function MegaFooter() {
                                 <Linkedin className="w-5 h-5" />
                             </a>
                             <a
+                                href="https://www.google.com/search?kgmid=/g/11z1fk71ly"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-[#4285F4] transition-all"
+                                aria-label="Google Business Profile IndHack"
+                            >
+                                <Map className="w-5 h-5" />
+                            </a>
+                            <a
                                 href="mailto:contact@indhack.com"
                                 className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-sauge transition-all"
                                 aria-label="Email contact@indhack.com"
@@ -188,9 +207,9 @@ export function MegaFooter() {
                                 <Mail className="w-5 h-5" />
                             </a>
                             <a
-                                href="tel:0661139748"
+                                href="tel:+33661139748"
                                 className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-sauge transition-all"
-                                aria-label="Téléphone 06 61 13 97 48"
+                                aria-label="Téléphone +33 6 61 13 97 48"
                             >
                                 <Phone className="w-5 h-5" />
                             </a>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, Send, Linkedin, CheckCircle2, Clock, Shield } from "lucide-react";
+import { Phone, Mail, Send, Linkedin, CheckCircle2, Clock, Shield, Map } from "lucide-react";
 import Link from "next/link";
 
 export function ContactForm() {
@@ -120,7 +120,7 @@ export function ContactForm() {
                             {/* Contact Cards */}
                             <div className="space-y-3">
                                 <a
-                                    href="tel:0661139748"
+                                    href="tel:+33661139748"
                                     className="group flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-100 hover:border-sauge hover:shadow-md transition-all"
                                 >
                                     <div className="w-12 h-12 bg-sauge/10 rounded-lg flex items-center justify-center group-hover:bg-sauge transition-colors">
@@ -142,6 +142,21 @@ export function ContactForm() {
                                     <div>
                                         <div className="text-xs text-soft uppercase tracking-wider">Email</div>
                                         <div className="font-semibold text-ink">contact@indhack.com</div>
+                                    </div>
+                                </a>
+
+                                <a
+                                    href="https://www.google.com/search?kgmid=/g/11z1fk71ly"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-100 hover:border-[#4285F4] hover:shadow-md transition-all"
+                                >
+                                    <div className="w-12 h-12 bg-[#4285F4]/10 rounded-lg flex items-center justify-center group-hover:bg-[#4285F4] transition-colors">
+                                        <Map className="w-5 h-5 text-[#4285F4] group-hover:text-white" />
+                                    </div>
+                                    <div>
+                                        <div className="text-xs text-soft uppercase tracking-wider">Google Business</div>
+                                        <div className="font-semibold text-ink">Voir la fiche</div>
                                     </div>
                                 </a>
 

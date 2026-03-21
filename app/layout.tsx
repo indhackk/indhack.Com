@@ -119,6 +119,90 @@ const organizationSchema = {
     ]
 };
 
+// LocalBusiness Schema — Service Area Business (SAB) optimisé
+// Pas d'adresse physique affichée (conforme aux guidelines Google pour SAB)
+const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://indhack.com/#localbusiness",
+    "name": "IndHack - Consultante SEO",
+    "alternateName": "Indiana Aflalo SEO",
+    "description": "Consultante SEO freelance spécialisée en référencement naturel, SEO local et optimisation pour les moteurs IA (GEO). Accompagnement personnalisé pour PME et startups sur toute la France.",
+    "url": "https://indhack.com",
+    "telephone": "+33661139748",
+    "email": "contact@indhack.com",
+    "image": "https://indhack.com/images/logo-indhack.webp",
+    "logo": "https://indhack.com/images/logo-indhack.webp",
+    "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Virement bancaire, PayPal",
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        }
+    ],
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.7102,
+        "longitude": 7.2620
+    },
+    "areaServed": [
+        { "@type": "City", "name": "Nice" },
+        { "@type": "City", "name": "Paris" },
+        { "@type": "City", "name": "Marseille" },
+        { "@type": "City", "name": "Cannes" },
+        { "@type": "City", "name": "Monaco" },
+        { "@type": "City", "name": "Antibes" },
+        { "@type": "City", "name": "Sophia-Antipolis" },
+        { "@type": "City", "name": "Aix-en-Provence" },
+        { "@type": "City", "name": "Montpellier" },
+        { "@type": "City", "name": "Lyon" },
+        { "@type": "AdministrativeArea", "name": "Alpes-Maritimes" },
+        { "@type": "AdministrativeArea", "name": "Provence-Alpes-Côte d'Azur" },
+        { "@type": "Country", "name": "France" }
+    ],
+    "serviceType": [
+        "Audit SEO",
+        "Référencement naturel",
+        "SEO local",
+        "Optimisation Google Business Profile",
+        "Création de site web SEO",
+        "Refonte de site web",
+        "GEO - Generative Engine Optimization",
+        "Consultant IA"
+    ],
+    "knowsAbout": [
+        "SEO",
+        "Référencement naturel",
+        "Google Business Profile",
+        "SEO local",
+        "GEO",
+        "ChatGPT",
+        "Perplexity",
+        "Core Web Vitals"
+    ],
+    "founder": {
+        "@type": "Person",
+        "name": "Indiana Aflalo",
+        "jobTitle": "Consultante SEO & Experte GEO",
+        "sameAs": "https://www.linkedin.com/in/indianaaflalo"
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "12",
+        "bestRating": "5",
+        "worstRating": "1"
+    },
+    "sameAs": [
+        "https://www.linkedin.com/in/indianaaflalo",
+        "https://www.data.gouv.fr/organizations/indhack"
+    ]
+};
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -134,6 +218,10 @@ export default function RootLayout({
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
                 />
             </head>
             <body className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased text-ink bg-white`}>
