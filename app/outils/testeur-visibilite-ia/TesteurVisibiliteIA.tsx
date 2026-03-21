@@ -487,11 +487,33 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                         {(() => {
                             try {
                                 const domain = new URL(result.url).hostname.replace("www.", "");
+                                // Encoder les données essentielles dans l'URL pour persistence sans DB
+                                const rapportData = {
+                                    d: domain,
+                                    u: result.url,
+                                    s: result.score,
+                                    l: result.level,
+                                    ll: result.levelLabel,
+                                    t: result.pageTitle,
+                                    w: result.wordCount,
+                                    r: result.responseTime,
+                                    lm: result.hasLlmsTxt,
+                                    c: {
+                                        a: { s: result.categories.accessibilite.score, m: result.categories.accessibilite.maxScore },
+                                        se: { s: result.categories.semantique.score, m: result.categories.semantique.maxScore },
+                                        e: { s: result.categories.eeat.score, m: result.categories.eeat.maxScore },
+                                        f: { s: result.categories.format.score, m: result.categories.format.maxScore },
+                                    },
+                                    cr: result.crawlers.map(c => ({ n: c.name, co: c.company, st: c.status })),
+                                    rec: result.recommendations.slice(0, 3).map(r => r.text),
+                                    ts: result.timestamp,
+                                };
+                                const encodedData = btoa(encodeURIComponent(JSON.stringify(rapportData)));
                                 return (
                                     <div className="mt-5 pt-5 border-t border-white/5">
                                         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                                             <Link
-                                                href={`/rapport/${domain}`}
+                                                href={`/rapport/${domain}?data=${encodedData}`}
                                                 className="flex items-center gap-2 text-sm text-sauge-light hover:text-white transition-colors"
                                             >
                                                 <ExternalLink className="w-4 h-4" />
