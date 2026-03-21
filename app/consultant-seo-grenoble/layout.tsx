@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultant SEO Grenoble | Expert Référencement Isère",
+    title: "Consultante SEO Grenoble (38000) | Expert référencement Isère",
     description: "Consultant SEO à Grenoble : audit technique, référencement local et stratégie SEO pour PME et startups de l'Isère. Premier audit gratuit. Résultats en 3 mois.",
     keywords: ["consultant SEO Grenoble", "référencement Grenoble", "SEO Isère", "audit SEO Grenoble", "expert SEO 38", "agence SEO Grenoble", "référencement naturel Grenoble"],
     alternates: {

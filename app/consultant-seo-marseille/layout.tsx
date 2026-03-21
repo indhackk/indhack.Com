@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Marseille — référencement local PACA",
+    title: "Consultante SEO Marseille (13000) | Expert référencement PACA",
     description: "Consultante SEO freelance à Marseille. Référencement local pour PME et entrepreneurs des Bouches-du-Rhône. Audit SEO gratuit.",
     keywords: ["consultant SEO Marseille", "référencement Marseille", "SEO Bouches-du-Rhône", "audit SEO Marseille", "expert SEO 13", "agence SEO Marseille", "référencement naturel Marseille"],
     alternates: {

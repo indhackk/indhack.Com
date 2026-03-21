@@ -190,13 +190,6 @@ const localBusinessSchema = {
         "jobTitle": "Consultante SEO & Experte GEO",
         "sameAs": "https://www.linkedin.com/in/indianaaflalo"
     },
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "12",
-        "bestRating": "5",
-        "worstRating": "1"
-    },
     "sameAs": [
         "https://www.linkedin.com/in/indianaaflalo",
         "https://www.data.gouv.fr/organizations/indhack"

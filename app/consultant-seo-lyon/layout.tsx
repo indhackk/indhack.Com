@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Lyon — Référencement Local Rhône-Alpes",
+    title: "Consultante SEO Lyon (69000) | Expert référencement Rhône",
     description: "Consultante SEO freelance à Lyon. Référencement local pour PME et startups du Rhône. Audit technique gratuit.",
     keywords: ["consultant SEO Lyon", "référencement Lyon", "SEO Rhône", "audit SEO Lyon", "expert SEO 69", "agence SEO Lyon", "référencement naturel Lyon"],
     alternates: {
