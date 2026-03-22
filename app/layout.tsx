@@ -28,7 +28,6 @@ export const metadata: Metadata = {
         default: "Consultante SEO & Experte Référencement",
     },
     description: "Boostez votre visibilité Google avec une experte SEO. Audit gratuit, +200% de trafic organique en 6 mois. Résultats garantis.",
-    keywords: ["SEO", "GEO", "Acquisition Digitale", "Referencement naturel", "Audit SEO", "Visibilité IA", "Next.js SEO", "Consultant SEO", "SEO Local", "Référencement Local"],
     authors: [{ name: "Indiana Aflalo" }],
     creator: "Indiana Aflalo",
     icons: {
@@ -40,8 +39,8 @@ export const metadata: Metadata = {
         locale: "fr_FR",
         url: "https://indhack.com",
         siteName: "IndHack",
-        title: "IndHack | Expertise SEO, GEO & Acquisition Digitale",
-        description: "Dominez les résultats Google et les moteurs de réponse IA. Audit, stratégie et accompagnement SEO haute performance.",
+        title: "Consultante SEO & GEO — référencement & visibilité IA | IndHack",
+        description: "Boostez votre visibilité Google avec une experte SEO. Audit gratuit, +200% de trafic organique en 6 mois. Résultats garantis.",
         images: [{
             url: "https://indhack.com/api/og?title=Consultante%20SEO%20%26%20Experte%20R%C3%A9f%C3%A9rencement&subtitle=Dominez%20Google%20avec%20IndHack",
             width: 1200,
@@ -51,8 +50,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "IndHack | Acquisition Digitale & SEO",
-        description: "Stratégies de référencement naturel d'élite et visibilité IA.",
+        title: "Consultante SEO & GEO — référencement & visibilité IA | IndHack",
+        description: "Boostez votre visibilité Google avec une experte SEO. Audit gratuit, +200% de trafic organique en 6 mois. Résultats garantis.",
         images: ["https://indhack.com/api/og?title=Consultante%20SEO%20%26%20Experte%20R%C3%A9f%C3%A9rencement&subtitle=Dominez%20Google%20avec%20IndHack"],
         creator: "@indhack",
     },
