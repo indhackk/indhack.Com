@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         publishedTime: "2026-03-09",
         authors: ["Indiana Aflalo"],
         images: [{
-            url: "https://indhack.com/images/etudes/restaurants-cote-azur-2026-og.png",
+            url: "https://indhack.com/images/etudes/restaurants-cote-azur-2026-og.svg",
             width: 1200,
             height: 630,
             alt: "Infographie : failles des meilleurs restaurants Google de la Côte d'Azur"
@@ -41,7 +41,7 @@ export default function EtudeRestaurantsCoteAzur() {
                         "@type": "NewsArticle",
                         "headline": "20.5% des restaurants les plus visibles de la Côte d'Azur n'ont pas de site web : étude 2026",
                         "description": "Analyse des failles des 297 restaurants apparaissant dans le Top Google sur 10 villes de la Côte d'Azur. 20.5% sans site web, 9% de profils suspects.",
-                        "image": "https://indhack.com/images/etudes/restaurants-cote-azur-2026-og.png",
+                        "image": "https://indhack.com/images/etudes/restaurants-cote-azur-2026-og.svg",
                         "datePublished": "2026-03-09",
                         "dateModified": "2026-03-09",
                         "author": {
@@ -56,7 +56,7 @@ export default function EtudeRestaurantsCoteAzur() {
                             "url": "https://indhack.com",
                             "logo": {
                                 "@type": "ImageObject",
-                                "url": "https://indhack.com/logo.png"
+                                "url": "https://indhack.com/images/logo-indhack.webp"
                             }
                         },
                         "mainEntityOfPage": {

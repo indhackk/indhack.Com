@@ -67,7 +67,7 @@ export function HeroServices({ title, subtitle, category, image, customVisual }:
                         ) : (
                             <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 group">
                                 <Image
-                                    src={image.startsWith('/') ? image : `/images/${image}.png`}
+                                    src={image.startsWith('/') ? image : `/images/${image}.webp`}
                                     alt={title}
                                     width={800}
                                     height={600}

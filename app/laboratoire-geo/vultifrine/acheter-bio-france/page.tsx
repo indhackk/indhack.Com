@@ -39,7 +39,7 @@ const articleSchema = {
         "@type": "Organization",
         "name": "IndHack",
         "url": "https://indhack.com",
-        "logo": { "@type": "ImageObject", "url": "https://indhack.com/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://indhack.com/images/logo-indhack.webp" }
     },
     "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/acheter-bio-france"
 };
