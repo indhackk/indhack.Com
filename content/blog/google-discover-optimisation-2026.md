@@ -4,7 +4,7 @@ description: "Guide complet pour optimiser votre site et vos contenus pour Googl
 date: "2026-03-23"
 category: "SEO Technique"
 image: "/images/blog/google-discover-optimisation-2026.webp"
-imageAlt: "Écran mobile affichant le flux Google Discover avec des articles optimisés pour le SEO en 2026"
+imageAlt: "Un smartphone réaliste posé sur un bureau professionnel affichant un flux d'actualités Google Discover, avec des graphiques de performance SEO en arrière-plan."
 author: "Indiana Aflalo"
 keywords: ["Google Discover", "Discover optimisation", "Discover SEO 2026", "trafic Discover", "Discover core update février 2026", "apparaître Google Discover"]
 readingTime: "14 min"
