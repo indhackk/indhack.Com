@@ -3,7 +3,7 @@ title: "Checklist SEO refonte site : 45 points à vérifier [2026]"
 description: "Checklist : 45 points SEO à vérifier avant, pendant et après votre refonte. Redirections, 404, robots.txt. Gardez vos positions."
 date: "2026-02-16"
 category: "Refonte"
-image: "/images/blog/new_redesign_seo_1772274864650.png"
+image: "/images/blog/new_redesign_seo_1772274864650.webp"
 imageAlt: "Checklist refonte site web : 45 points SEO pour éviter la perte de positions Google"
 author: "Indiana Aflalo"
 keywords: ["refonte site web SEO", "checklist seo refonte site", "migration SEO", "redirections 301", "perdre positions Google", "refonte sans perdre référencement", "checklist migration", "audit pre-migration", "plan de redirection", "erreurs 404", "perte de positionnement", "robots.txt migration"]

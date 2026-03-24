@@ -3,7 +3,7 @@ title: "Programmatic SEO : créer 50 pages locales en 10 minutes"
 description: "Générez des dizaines de pages locales uniques sans pénalité Google. Guide technique Programmatic SEO avec méthode LUV."
 date: "2026-02-13"
 category: "SEO Technique"
-image: "/images/blog/new_programmatic_seo_1772274899664.png"
+image: "/images/blog/new_programmatic_seo_1772274899664.webp"
 imageAlt: "Programmatic SEO : générer 50 pages locales uniques avec la méthode LUV sans pénalité Google"
 author: "Indiana Aflalo"
 keywords: ["programmatic seo", "seo programmatique", "automatisation seo", "générer pages locales", "seo scalabilité", "landing pages dynamiques", "doorway pages google", "pages locales seo"]

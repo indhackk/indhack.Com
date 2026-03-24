@@ -3,7 +3,7 @@ title: "Étude : 30 % des restaurants Google Côte d'Azur sans site"
 description: "Étude de 308 restaurants du Top Google sur la Côte d'Azur. Failles critiques : profils suspects, manque d'avis, absence de site web."
 date: "2026-02-25"
 category: "SEO Local"
-image: "/images/blog/new_restaurant_study_1772274701808.png"
+image: "/images/blog/new_restaurant_study_1772274701808.webp"
 imageAlt: "Étude SEO local 2026 : analyse de 308 restaurants sur Google Maps en Côte d'Azur"
 author: "Indiana Aflalo"
 keywords: ["étude restaurant côte d'azur", "statistiques seo local", "google my business restaurant", "audit seo local"]
