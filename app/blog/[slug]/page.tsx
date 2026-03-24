@@ -244,8 +244,13 @@ export default function BlogPostPage({ params }: PageProps) {
                                     </div>
                                     <nav className="space-y-1">
                                         {post.content.split('\n').filter(line => line.startsWith('##')).map((line, i) => {
-                                            const cleanTitle = line.replace(/^#+\s+/, '').replace(/\*\*/g, '');
-                                            const slug = cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+                                            const rawTitle = line.replace(/^#+\s+/, '').replace(/\*\*/g, '');
+                                            // Extract {#custom-id} if present
+                                            const anchorMatch = rawTitle.match(/\{#([a-z0-9-]+)\}\s*$/);
+                                            const displayTitle = rawTitle.replace(/\s*\{#[a-z0-9-]+\}\s*$/, '');
+                                            const slug = anchorMatch
+                                                ? anchorMatch[1]
+                                                : displayTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
                                             const isH3 = line.startsWith('###');
 
                                             return (
@@ -257,7 +262,7 @@ export default function BlogPostPage({ params }: PageProps) {
                                                         : 'text-soft border-transparent hover:text-sauge hover:border-sauge font-medium text-[13px]'
                                                         }`}
                                                 >
-                                                    {cleanTitle}
+                                                    {displayTitle}
                                                 </a>
                                             );
                                         })}
@@ -319,17 +324,30 @@ export default function BlogPostPage({ params }: PageProps) {
                                     return '';
                                 };
 
-                                const createIdFromText = (text: React.ReactNode) =>
-                                    extractTextFromNode(text).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+                                // Extract {#custom-id} from heading text, or auto-generate slug
+                                const extractIdAndClean = (text: React.ReactNode): { id: string; cleanChildren: React.ReactNode } => {
+                                    const rawText = extractTextFromNode(text);
+                                    const anchorMatch = rawText.match(/\{#([a-z0-9-]+)\}\s*$/);
+                                    if (anchorMatch) {
+                                        // Use custom anchor, strip {#id} from displayed text
+                                        const cleanText = rawText.replace(/\s*\{#[a-z0-9-]+\}\s*$/, '');
+                                        return { id: anchorMatch[1], cleanChildren: cleanText };
+                                    }
+                                    // Fallback: auto-generate slug from text
+                                    const id = rawText.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+                                    return { id, cleanChildren: text };
+                                };
 
                                 // Custom components to add IDs to headings (node prop filtered to avoid DOM warning)
                                 const markdownComponents = {
-                                    h2: ({ node: _node, children, ...props }: { node?: unknown; children?: React.ReactNode } & React.HTMLAttributes<HTMLHeadingElement>) => (
-                                        <h2 id={createIdFromText(children)} {...props}>{children}</h2>
-                                    ),
-                                    h3: ({ node: _node, children, ...props }: { node?: unknown; children?: React.ReactNode } & React.HTMLAttributes<HTMLHeadingElement>) => (
-                                        <h3 id={createIdFromText(children)} {...props}>{children}</h3>
-                                    )
+                                    h2: ({ node: _node, children, ...props }: { node?: unknown; children?: React.ReactNode } & React.HTMLAttributes<HTMLHeadingElement>) => {
+                                        const { id, cleanChildren } = extractIdAndClean(children);
+                                        return <h2 id={id} {...props}>{cleanChildren}</h2>;
+                                    },
+                                    h3: ({ node: _node, children, ...props }: { node?: unknown; children?: React.ReactNode } & React.HTMLAttributes<HTMLHeadingElement>) => {
+                                        const { id, cleanChildren } = extractIdAndClean(children);
+                                        return <h3 id={id} {...props}>{cleanChildren}</h3>;
+                                    }
                                 };
 
                                 // Si moins de 4 sections, pas de split (article court)
