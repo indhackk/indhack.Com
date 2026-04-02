@@ -366,6 +366,7 @@ Si votre diagnostic révèle des lacunes, voici les actions prioritaires :
 - **Ajouter un fichier llms.txt** à la racine de votre site — [guide complet ici](/blog/llms-txt-guide-complet)
 - **Enrichir vos données structurées** avec notre [générateur de schémas JSON-LD](/outils/generateur-schema-json-ld)
 - **Optimiser votre contenu** pour les citations IA — [consultez notre guide GEO](/blog/geo-comment-apparaitre-chatgpt-2026)
+- **Suivre une méthodologie d'audit complète** — notre guide sur le [contenu d'un rapport d'audit SEO](/blog/contenu-rapport-audit-seo) détaille chaque étape du diagnostic
 
 Le GEO est encore jeune, mais les sites qui s'y prennent maintenant auront un avantage considérable quand la majorité des recherches passeront par les IA. Et ce moment arrive plus vite qu'on ne le pense.
 

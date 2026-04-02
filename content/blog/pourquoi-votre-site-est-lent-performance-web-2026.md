@@ -155,7 +155,7 @@ C'est simple et gratuit :
 | 50-89 | Des optimisations sont possibles |
 | 90-100 | Vous faites partie des meilleurs |
 
-Pour un diagnostic SEO plus complet, utilisez notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit). En tant que [consultante SEO à Nice](/consultant-seo-nice), je propose aussi un [audit SEO professionnel](/audit-seo) avec recommandations personnalisées.
+Pour un diagnostic SEO plus complet, utilisez notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit). Si vous souhaitez savoir exactement ce que doit contenir un [rapport d'audit SEO complet](/blog/contenu-rapport-audit-seo), nous avons détaillé chaque section essentielle. En tant que [consultante SEO à Nice](/consultant-seo-nice), je propose aussi un [audit SEO professionnel](/audit-seo) avec recommandations personnalisées.
 
 **Vous voulez un site conçu pour scorer 90+ dès le départ ?** [Parlons de votre projet](/creation-site-web).
 

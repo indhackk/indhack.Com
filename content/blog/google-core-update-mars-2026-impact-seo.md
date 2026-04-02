@@ -376,7 +376,7 @@ Ce core update n'est pas une punition. C'est une **correction de direction**. Go
 
 Si vous avez une expertise légitime, une expérience démontrée, et que vous l'exprimez authentiquement, vous allez bien sortir de cet update. Si vous avez juste créé du contenu « parce que SEO », vous perdrez.
 
-**Besoin d'aide pour auditer votre site et identifier vos opportunités** ? Nous avons mis à jour [notre service d'audit SEO gratuit](/outils/audit-seo-gratuit) pour inclure une évaluation de votre E-E-A-T. Ou [consultez un expert SEO](/consultant-seo) qui pourra vous proposer une stratégie sur mesure post-update.
+**Besoin d'aide pour auditer votre site et identifier vos opportunités** ? Nous avons mis à jour [notre service d'audit SEO gratuit](/outils/audit-seo-gratuit) pour inclure une évaluation de votre E-E-A-T. Consultez aussi notre guide sur le [contenu d'un rapport d'audit SEO professionnel](/blog/contenu-rapport-audit-seo) pour savoir exactement quoi demander à votre prestataire. Ou [consultez un expert SEO](/consultant-seo) qui pourra vous proposer une stratégie sur mesure post-update.
 
 Et si vous avez besoin d'un accompagnement personnalisé, [contactez-nous](/contact) pour un diagnostic gratuit.
 

@@ -2,6 +2,7 @@
 title: "Rapport audit SEO : contenu, modèle et exemple complet [2026]"
 description: "Que contient un vrai rapport d'audit SEO ? Les 7 sections indispensables, un exemple concret, un modèle téléchargeable et la grille d'évaluation pro."
 date: "2026-03-13"
+dateModified: "2026-04-02"
 category: "Audit"
 image: "/images/blog/rapport-audit-seo.jpg"
 imageAlt: "Rapport d'audit SEO professionnel : les 7 sections indispensables pour un diagnostic complet"

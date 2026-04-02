@@ -196,7 +196,7 @@ Face à ces chiffres, voici les 5 actions que je mets en place en priorité pour
 
 Identifiez les **requêtes stratégiques** de votre site qui déclenchent des AI Overviews. Utilisez Google Search Console pour croiser vos impressions/clics avec la présence d'AI Overviews. Si votre CTR a chuté significativement depuis mi-2025 sans perte de positions, c'est le signal.
 
-Un [audit SEO complet](/audit-seo) incluant cette analyse vous donnera une vue claire de votre exposition au risque.
+Un [audit SEO complet](/audit-seo) incluant cette analyse vous donnera une vue claire de votre exposition au risque. Pour savoir ce que doit contenir un tel document, consultez notre guide sur le [modèle de rapport d'audit SEO](/blog/contenu-rapport-audit-seo).
 
 ### 2. Stratégie de citation IA
 

@@ -210,7 +210,7 @@ Se brancher sur l'API d'OpenAI n'est pas difficile. Toute la difficulté réside
 
 Voici le processus IndHack lorsque j'accompagne une entreprise pour une intégration IA sur devis :
 
-1. **L'Immersion & Audit des frictions :** Je passe au crible vos process (comment vous travaillez avec vos outils). Nous identifions les tâches répétitives, le temps alloué, et sélectionnons les 3 chantiers d'automatisation prioritaires avec le meilleur ROI, à haut impact et faible risque.
+1. **L'Immersion & Audit des frictions :** Je passe au crible vos process (comment vous travaillez avec vos outils). Nous identifions les tâches répétitives, le temps alloué, et sélectionnons les 3 chantiers d'automatisation prioritaires avec le meilleur ROI, à haut impact et faible risque. Côté visibilité web, cette phase inclut aussi un [rapport d'audit SEO détaillé](/blog/contenu-rapport-audit-seo) qui évalue votre présence sur les moteurs classiques et les IA.
 2. **Création d'Outils Internes sur-mesure :** Plutôt que de payer 10 abonnements SaaS dysfonctionnels, je code pour vous un mini-outil ou un connecteur sécurisé "cousu main". Souvent du No-Code (n8n, Make) couplé à du développement pur (Next.js, Python).
 3. **Formation, Adoption et SAV :** Le problème numéro 1 en France est de livrer l'outil puis de laisser les employés seuls face au monstre. J'inclus dans mon offre *Premium* l'onboarding de vos équipes et un mois de SAV complet pour débugger et ajuster.
 

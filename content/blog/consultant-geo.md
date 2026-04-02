@@ -43,7 +43,7 @@ Pour en savoir plus sur la théorie, je vous conseille notre guide fondamental :
 ## Les 3 missions principales du Consultant GEO
 
 ### 1. L'Audit de Visibilité IA
-Tout commence par l'état des lieux. Le consultant analyse sur quelles requêtes clés votre marque est citée... et si elle l'est du tout. Il utilise des outils spécialisés (comme notre **[Testeur de visibilité IA gratuit](/outils/testeur-visibilite-ia)**) pour vérifier si vous ne bloquez pas bêtement (via votre robots.txt) le crawl des GPTBot, PerplexityBot ou ClaudeBot.
+Tout commence par l'état des lieux. Le consultant analyse sur quelles requêtes clés votre marque est citée... et si elle l'est du tout. Il utilise des outils spécialisés (comme notre **[Testeur de visibilité IA gratuit](/outils/testeur-visibilite-ia)**) pour vérifier si vous ne bloquez pas bêtement (via votre robots.txt) le crawl des GPTBot, PerplexityBot ou ClaudeBot. Le livrable inclut un [rapport d'audit SEO complet](/blog/contenu-rapport-audit-seo) intégrant les métriques de visibilité IA aux côtés des indicateurs SEO classiques.
 
 ### 2. Le Cocon Sémantique pour LLMs
 Les IA ont besoin de preuves, de données chiffrées et de liens. Le consultant GEO va mettre en place une stratégie de contenu "AI-Friendly" :
