@@ -86,7 +86,7 @@ const AVANTAGES = [
     }
 ];
 
-// Uniquement les villes indexées (cohérent avec la stratégie noindex)
+// 10 villes actives (PACA + Paris + Montpellier) — les 9 autres sont noindex
 const CITIES = [
     { name: "Nice", slug: "consultant-seo-nice" },
     { name: "Paris", slug: "consultant-seo-paris" },

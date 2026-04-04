@@ -4,14 +4,14 @@ import { TesteurVisibiliteIA } from "./TesteurVisibiliteIA";
 import { ArrowRight, Bot, Shield, Code2, FileCode, Search, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Test visibilité ChatGPT / IA : votre marque est-elle citée ?",
-    description: "Votre site est-il visible par ChatGPT et Perplexity ? Testez vos signaux GEO : crawlers IA, schema JSON-LD, E-E-A-T. Outil français gratuit, sans inscription.",
+    title: "Outil gratuit : votre marque est-elle citée par ChatGPT ?",
+    description: "Vérifiez gratuitement si votre marque est citée par ChatGPT, Perplexity et Claude. Test des 8 crawlers IA, signaux GEO, schema JSON-LD. Sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils/testeur-visibilite-ia"
     },
     openGraph: {
-        title: "Testeur visibilité IA — êtes-vous visible par ChatGPT ?",
-        description: "Analysez vos signaux GEO (Generative Engine Optimization). 8 crawlers IA vérifiés, 4 catégories de signaux. Gratuit, sans inscription.",
+        title: "Outil gratuit : votre marque est-elle citée par ChatGPT ?",
+        description: "Vérifiez si votre marque est citée par ChatGPT, Perplexity et Claude. 8 crawlers IA analysés, 4 catégories de signaux GEO. 100 % gratuit.",
         url: "https://indhack.com/outils/testeur-visibilite-ia",
         type: "website",
     }
@@ -335,6 +335,50 @@ export default function TesteurVisibiliteIAPage() {
                                 <p className="text-xs text-soft-light text-center mt-4">
                                     Le SEO et le GEO sont complémentaires. Un bon positionnement Google renforce généralement votre autorité perçue par les IA.
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* How to check if your brand is cited by ChatGPT — Pillar SEO content */}
+                <section className="py-16 bg-ink border-t border-white/5">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-4xl mx-auto prose prose-invert">
+                            <h2 className="text-2xl font-heading font-bold text-white mb-6">
+                                Comment vérifier si votre marque est <span className="text-sauge-light">citée par ChatGPT</span> ?
+                            </h2>
+
+                            <div className="space-y-6 text-soft-light">
+                                <p>
+                                    En 2026, <strong className="text-white">39 % des consommateurs français</strong> interrogent ChatGPT, Perplexity ou Claude avant de prendre une décision d&apos;achat. Si votre marque n&apos;apparaît pas dans ces réponses, vous perdez des prospects sans même le savoir. Voici les trois méthodes pour vérifier votre présence.
+                                </p>
+
+                                <h3 className="text-xl font-heading font-bold text-white !mt-8 !mb-4">
+                                    Méthode 1 : le test manuel (5 minutes)
+                                </h3>
+                                <p>
+                                    Ouvrez <a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" className="text-sauge-light hover:underline">ChatGPT</a>, <a href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer" className="text-sauge-light hover:underline">Perplexity</a> et Claude. Posez-leur les requêtes que vos clients taperaient : <em>&laquo;&nbsp;quel est le meilleur [votre métier] à [votre ville]&nbsp;?&nbsp;&raquo;</em>, <em>&laquo;&nbsp;recommande-moi un [votre service]&nbsp;&raquo;</em>. Notez si votre marque est citée, dans quelle position, et avec quelles informations.
+                                </p>
+
+                                <h3 className="text-xl font-heading font-bold text-white !mt-8 !mb-4">
+                                    Méthode 2 : l&apos;analyse automatisée (30 secondes)
+                                </h3>
+                                <p>
+                                    Utilisez notre <strong className="text-white">testeur de visibilité IA</strong> ci-dessus. Il analyse en un clic les 8 signaux techniques qui déterminent si les IA <em>peuvent</em> vous citer : crawlers autorisés, schema JSON-LD, fichier <code className="text-sauge-light bg-sauge/10 px-1 rounded">llms.txt</code>, signaux E-E-A-T. Un score inférieur à 50/100 signifie que votre site est techniquement invisible pour les IA, même si votre contenu est excellent.
+                                </p>
+
+                                <h3 className="text-xl font-heading font-bold text-white !mt-8 !mb-4">
+                                    Méthode 3 : le monitoring continu
+                                </h3>
+                                <p>
+                                    Créez un tableau de suivi mensuel. Chaque mois, posez les mêmes 10 requêtes aux IA et notez votre taux de citation. C&apos;est la seule façon de mesurer l&apos;impact de vos optimisations <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="text-sauge-light hover:underline">GEO</Link> dans le temps. Pour aller plus loin, consultez notre <Link href="/blog/analyser-visibilite-marque-chatgpt-ia" className="text-sauge-light hover:underline">guide complet d&apos;analyse de visibilité IA</Link>.
+                                </p>
+
+                                <div className="!mt-8 bg-sauge/10 border border-sauge/30 rounded-xl p-6">
+                                    <p className="!mb-0 text-white font-medium">
+                                        <strong>Astuce pro :</strong> les IA citent en priorité les sites qui combinent <strong>autorité de domaine</strong> (backlinks, ancienneté) et <strong>contenu structuré</strong> (FAQ, données chiffrées, schema JSON-LD). C&apos;est pourquoi un bon <Link href="/audit-seo" className="text-sauge-light hover:underline">audit SEO</Link> est le socle indispensable de toute stratégie GEO.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>

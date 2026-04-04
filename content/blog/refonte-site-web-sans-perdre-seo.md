@@ -1,6 +1,6 @@
 ---
-title: "Checklist SEO refonte site : 45 points à vérifier [2026]"
-description: "Checklist : 45 points SEO à vérifier avant, pendant et après votre refonte. Redirections, 404, robots.txt. Gardez vos positions."
+title: "Checklist refonte SEO : 45 erreurs fatales à éviter [2026]"
+description: "Refonte de site sans perdre vos positions ? 45 points SEO critiques à vérifier avant, pendant et après. Redirections 301, 404, robots.txt — la checklist pro."
 date: "2026-02-16"
 category: "Refonte"
 image: "/images/blog/new_redesign_seo_1772274864650.webp"
@@ -54,8 +54,8 @@ Avant de toucher à quoi que ce soit, documentez **tout** ce qui fonctionne :
 
 | Élément à auditer | Outil recommandé |
 |-------------------|------------------|
-| **Liste des URLs** | Screaming Frog (crawl complet) |
-| **Positions actuelles** | Ahrefs, SEMrush ou Search Console |
+| **Liste des URLs** | [Screaming Frog](https://www.screamingfrog.co.uk/seo-spider/) (crawl complet) |
+| **Positions actuelles** | [Ahrefs](https://ahrefs.com/), [Semrush](https://semrush.com/) ou [Search Console](https://search.google.com/search-console/about) |
 | **Trafic par page** | Google Analytics |
 | **Backlinks** | Ahrefs, Majestic |
 | **Structure de liens internes** | Screaming Frog |

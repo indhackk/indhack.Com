@@ -1,6 +1,6 @@
 ---
-title: "Rapport audit SEO : contenu, modèle et exemple complet [2026]"
-description: "Que contient un vrai rapport d'audit SEO ? Les 7 sections indispensables, un exemple concret, un modèle téléchargeable et la grille d'évaluation pro."
+title: "Rapport audit SEO : modèle pro à télécharger (PDF/Notion)"
+description: "Que contient un vrai rapport d'audit SEO ? Les 7 sections indispensables, un exemple réel commenté et le modèle pro téléchargeable en PDF et Notion."
 date: "2026-03-13"
 dateModified: "2026-04-02"
 category: "Audit"
@@ -116,7 +116,7 @@ Au-delà des positions existantes, un rapport seo pro analyse aussi le **trou s�
 
 ## Section 4 : L'audit approfondi du contenu (E-E-A-T)
 
-En 2026, avec l'avènement massif des IA génératives et le filtre Helpful Content de Google, le contenu de faible qualité est impitoyablement déclassé. Votre rapport doit contenir un volet complet sur l'**E-E-A-T** (Expérience, Expertise, Autorité, Fiabilité).
+En 2026, avec l'avènement massif des IA génératives et le filtre Helpful Content de Google, le contenu de faible qualité est impitoyablement déclassé. Votre rapport doit contenir un volet complet sur l'**[E-E-A-T](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)** (Expérience, Expertise, Autorité, Fiabilité).
 
 Le rapport analyse la **détection du « thin content »** — les pages avec 150 mots qui n'apportent aucune valeur et diluent l'autorité du domaine. Le **duplicate content** interne (la même description produit sur 10 URLs différentes) et externe (vos distributeurs utilisent les mêmes textes que vous). L'**optimisation on-page systématique** : analyse des balises Title, Meta-descriptions, H1, H2, et du maillage interne ciblé sur chaque page stratégique.
 
@@ -204,9 +204,27 @@ Si vous êtes consultant SEO et souhaitez structurer vos rapports, ou si vous ê
 
 **Plan d'action** (5-10 pages) : matrice ROI complète, planning de mise en œuvre, assignation des responsabilités, KPIs de suivi.
 
-**Annexes** : exports de données brutes (Semrush, Ahrefs, GSC), glossaire technique, méthodologie détaillée.
+**Annexes** : exports de données brutes ([Semrush](https://semrush.com/), [Ahrefs](https://ahrefs.com/), [GSC](https://search.google.com/search-console/about)), glossaire technique, méthodologie détaillée.
 
 Au total, un rapport d'audit SEO professionnel complet fait entre **40 et 80 pages** selon la taille du site. C'est un document de référence que votre équipe utilisera pendant 12 à 18 mois.
+
+---
+
+### 📋 Modèle de rapport audit SEO — Téléchargement gratuit
+
+Vous voulez voir à quoi ressemble un vrai rapport d'audit SEO professionnel ? J'ai créé un **modèle complet** basé sur la structure exacte que j'utilise pour mes clients. Il contient les 7 sections décrites ci-dessus, avec les tableaux, les métriques et le plan d'action — prêt à personnaliser.
+
+**Ce que vous recevez :**
+- Le modèle complet au format Notion (duplicable en 1 clic)
+- La grille d'évaluation avec les 50 critères pondérés
+- Un exemple de plan d'action priorisé par ROI
+- Les templates de tableaux (Core Web Vitals, backlinks, cannibalisations)
+
+👉 **[Demander le modèle gratuit par email](/contact?objet=modele-rapport-audit-seo)** — je vous l'envoie sous 24h avec une mini-analyse personnalisée de votre site en bonus.
+
+> **Vous préférez un audit complet clé en main ?** [Découvrez mon service d'audit SEO professionnel](/audit-seo) — diagnostic exhaustif, rapport de 40-80 pages et plan d'action sur mesure.
+
+---
 
 ## Comment rentabiliser votre rapport d'audit SEO
 

@@ -3,6 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Consultante SEO Strasbourg (67000) | Experte référencement Alsace",
     description: "Consultante SEO à Strasbourg. Stratégie de visibilité bilingue FR/DE pour entreprises transfrontalières et commerces de la Grande Île.",
+    robots: { index: false, follow: true },
     keywords: ["consultante SEO Strasbourg", "référencement Strasbourg", "SEO Alsace", "audit SEO Strasbourg", "experte SEO 67"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo-strasbourg"

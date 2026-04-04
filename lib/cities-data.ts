@@ -54,8 +54,8 @@ export const FRENCH_CITIES: CityData[] = [
         department: "Alpes-Maritimes",
         deptCode: "06",
         population: "340 000",
-        description: "À Nice, la Promenade des Anglais n'est pas le seul endroit où il faut être vu. Google est devenu la nouvelle vitrine touristique. Les hôteliers et restaurateurs qui ne dominent pas la première page perdent 60% de leur clientèle internationale au profit des grandes chaînes. IndHack combat cette asymétrie.",
-        keyPoints: ["Trafic touristique international", "Concurrence hôtelière intense", "Saisonnalité forte"],
+        description: "À Nice, la bataille digitale se joue quartier par quartier. Sur le Vieux-Nice, les restaurants de la rue Pairolière affrontent Booking et TheFork pour capter le touriste. Du côté de Cimiez, les cliniques et cabinets médicaux se disputent les requêtes santé. À l'Arénas, le pôle d'affaires Nice Méridia fait monter les enchères sur le B2B. Et avec 14 millions de touristes par an (OCA 2025), chaque position perdue sur Google coûte des milliers d'euros de chiffre d'affaires. IndHack connaît ces micro-marchés niçois.",
+        keyPoints: ["14 millions de touristes/an (70 % de recherches mobiles en EN/IT)", "Micro-marchés : Vieux-Nice, Cimiez, Libération, Arénas", "Booking/TheFork captent 80 % des clics tourisme"],
         nearbyAreas: ["Villefranche-sur-Mer", "Saint-Laurent-du-Var", "Cagnes-sur-Mer", "Beaulieu-sur-Mer"],
         landmarks: ["Promenade des Anglais", "Vieux-Nice", "Port de Nice", "Place Masséna"],
         images: {
@@ -66,10 +66,10 @@ export const FRENCH_CITIES: CityData[] = [
         context: {
             marketType: "luxury",
             competitionLevel: "high",
-            targetClients: "hôteliers, restaurateurs, agences immobilières de prestige et commerces de luxe",
-            localInsight: "70% des recherches sont effectuées par des touristes étrangers sur mobile, souvent en anglais ou italien",
-            specificChallenges: ["SEO multilingue FR/EN/IT", "Saisonnalité estivale très marquée", "Booking et TripAdvisor dominent les SERP"],
-            businessTypes: ["Hôtellerie", "Restauration", "Immobilier luxe", "Services premium"]
+            targetClients: "hôteliers du Vieux-Nice et de la Promenade, restaurateurs de Cimiez et du port, agences immobilières (Engel & Völkers, Barnes) et cliniques privées de Cimiez",
+            localInsight: "70 % des recherches sont mobiles en anglais ou italien (touristes des croisières Costa et MSC au port). Le marché local Nice est segmenté : Vieux-Nice = restauration/tourisme, Cimiez = santé/médical, Arénas/Nice Méridia = B2B tech, Libération = artisans",
+            specificChallenges: ["SEO multilingue FR/EN/IT obligatoire", "Booking et TheFork captent les clics tourisme", "Concurrence des chaînes Accor/Marriott sur les requêtes hôtelières"],
+            businessTypes: ["Hôtellerie", "Restauration", "Immobilier luxe", "Santé/Cliniques"]
         }
     },
     {
@@ -82,8 +82,8 @@ export const FRENCH_CITIES: CityData[] = [
         department: "Alpes-Maritimes",
         deptCode: "06",
         population: "74 000",
-        description: "Cannes, c'est le luxe qui se googlise. Immobilier à 15 000€/m², yachts au Port Canto, événementiel au Palais des Festivals : chaque clic vaut littéralement de l'or. Les agences parisiennes chassent sur ces terres. IndHack vous donne l'avantage local qu'elles n'auront jamais.",
-        keyPoints: ["Marché ultra-premium", "Clientèle internationale exigeante", "Événementiel de prestige"],
+        description: "Cannes ne vit pas que du Festival : le MIPIM (immobilier), le MAPIC (retail) et les Lions de la Créativité génèrent 4 pics de recherche par an. Sur la Croisette, les agences immobilières (John Taylor, Michaël Zingraf) se battent pour des requêtes à 15 €/clic sur Google Ads. Au Suquet, les restaurateurs perdent face aux agrégateurs. Et sur le marché du yachting au Port Canto, la concurrence se joue en anglais, entre Antibes et Monaco. IndHack connaît le calendrier événementiel cannois et adapte la stratégie à chaque pic.",
+        keyPoints: ["4 événements mondiaux/an (Festival, MIPIM, MAPIC, Lions)", "CPC immobilier à 15 €+ sur Google Ads", "Yachting : marché anglophone Port Canto"],
         nearbyAreas: ["Le Cannet", "Mougins", "Mandelieu-la-Napoule", "Théoule-sur-Mer"],
         landmarks: ["La Croisette", "Palais des Festivals", "Vieux Port", "Le Suquet"],
         images: {
@@ -94,10 +94,10 @@ export const FRENCH_CITIES: CityData[] = [
         context: {
             marketType: "luxury",
             competitionLevel: "extreme",
-            targetClients: "agences immobilières haut de gamme, yachtbrokers, hôtels 5 étoiles et prestataires événementiels",
-            localInsight: "Le Festival de Cannes génère 40% des recherches annuelles en 2 semaines — timing SEO critique",
-            specificChallenges: ["Concurrence internationale féroce", "Requêtes en anglais majoritaires", "Coût par clic Google Ads prohibitif"],
-            businessTypes: ["Immobilier prestige", "Yachting", "Événementiel", "Luxe"]
+            targetClients: "agences immobilières de la Croisette (John Taylor, Michaël Zingraf), yachtbrokers du Port Canto, hôtels 5 étoiles (Carlton, Martinez) et prestataires MIPIM/MAPIC",
+            localInsight: "Le calendrier SEO cannois est dicté par les salons : MIPIM (mars), Festival (mai), MAPIC (novembre). Chaque événement génère un pic de requêtes spécifique — 'immobilier Cannes' explose en mars, 'restaurant étoilé Cannes' en mai. La stratégie doit anticiper ces pics 2-3 mois avant",
+            specificChallenges: ["CPC immobilier à 15 €+, le plus élevé de PACA", "Requêtes yachting 100 % anglophone", "Les OTA captent le trafic hôtelier (Booking, Expedia)"],
+            businessTypes: ["Immobilier prestige", "Yachting", "Événementiel B2B", "Restauration gastronomique"]
         }
     },
     {
@@ -194,8 +194,8 @@ export const FRENCH_CITIES: CityData[] = [
         department: "Alpes-Maritimes",
         deptCode: "06",
         population: "2 500 entreprises",
-        description: "Sophia-Antipolis, Silicon Valley européenne : 2 500 entreprises tech, 40 000 emplois. Amadeus, SAP, NXP... Les startups côtoient les géants. Ici, le SEO technique n'est pas une option — c'est une question de survie face aux budgets marketing des licornes. IndHack parle votre langage B2B.",
-        keyPoints: ["Écosystème tech dense", "Clientèle B2B/SaaS", "Innovation permanente"],
+        description: "Sophia-Antipolis n'est pas un quartier d'Antibes, c'est un écosystème à part : 2 500 entreprises, 40 000 emplois, et des acteurs comme Amadeus (n°1 mondial de la réservation), SAP, NXP Semiconductors, Galderma ou Accenture. Le W3C et l'ETSI y définissent les standards du web. Ici, votre concurrent SEO n'est pas le plombier du coin — c'est une scale-up B2B avec un budget marketing à 6 chiffres. IndHack parle le langage SaaS, product-led growth et content marketing B2B.",
+        keyPoints: ["2 500 entreprises (Amadeus, SAP, NXP, Galderma, ETSI, W3C)", "Compétition B2B SaaS à budgets marketing 6 chiffres", "SEO content marketing long cycle de vente (6-12 mois)"],
         nearbyAreas: ["Valbonne", "Mougins", "Biot", "Antibes"],
         landmarks: ["Place Sophie Laffitte", "SKEMA", "Amadeus", "INRIA"],
         images: {
@@ -206,10 +206,10 @@ export const FRENCH_CITIES: CityData[] = [
         context: {
             marketType: "tech",
             competitionLevel: "high",
-            targetClients: "startups SaaS, ESN, éditeurs de logiciels, scale-ups tech et laboratoires de R&D",
-            localInsight: "Les cycles de vente B2B sont longs — le SEO doit générer du contenu éducatif qui convertit sur 6-12 mois",
-            specificChallenges: ["Contenu technique de haut niveau requis", "Concurrence des géants américains", "Génération de leads B2B complexe"],
-            businessTypes: ["SaaS", "Deep Tech", "ESN", "R&D"]
+            targetClients: "startups SaaS de la French Tech Côte d'Azur, ESN (Atos, Capgemini, Sopra Steria), éditeurs de logiciels, scale-ups health-tech (Galderma) et laboratoires INRIA/CNRS",
+            localInsight: "Le contenu B2B à Sophia doit être ultra-technique : les décideurs sont des CTO et VP Engineering. Un article de blog générique ne convertit pas — il faut des case studies, des benchmarks et du content marketing éducatif type product-led growth. Le cycle de conversion moyen est de 6-12 mois",
+            specificChallenges: ["Contenu technique de niveau CTO requis (pas de vulgarisation)", "Budgets marketing des scale-ups US (HubSpot, Datadog) écrasent les SERP", "Lead gen B2B long cycle nécessite nurturing SEO"],
+            businessTypes: ["SaaS", "Health-tech", "Semiconducteurs", "Recherche (INRIA, ETSI)"]
         }
     },
     // GRANDES MÉTROPOLES - MARCHÉ VOLUME & CONCURRENCE
@@ -223,8 +223,8 @@ export const FRENCH_CITIES: CityData[] = [
         department: "Bouches-du-Rhône",
         deptCode: "13",
         population: "870 000",
-        description: "Marseille, c'est 870 000 habitants et une jungle digitale où seuls les plus visibles survivent. Du Vieux-Port à la Valentine, la concurrence est féroce dans tous les secteurs. Les agences locales se multiplient, les budgets Google Ads explosent. IndHack vous sort du lot avec une stratégie organique qui dure.",
-        keyPoints: ["Volume de recherche massif", "Concurrence tous secteurs", "Diversité économique"],
+        description: "Marseille, 2e ville de France, 870 000 habitants : ici, chaque secteur est saturé en SEO. Au Vieux-Port et cours Julien, les restaurants se battent contre Uber Eats et TheFork. À Euroméditerranée — plus grand projet de rénovation urbaine d'Europe — le B2B tech explose avec le pôle médias de La Belle de Mai (France TV, INA). Du Prado aux quartiers Nord, le SEO local hyperciblé par arrondissement est la seule stratégie viable. IndHack déploie des stratégies par micro-marché marseillais.",
+        keyPoints: ["Euroméditerranée : pôle tech/médias en croissance (La Belle de Mai)", "Saturation SEO sur les requêtes restauration et santé", "SEO local par arrondissement : seule stratégie viable"],
         nearbyAreas: ["Aix-en-Provence", "Aubagne", "Cassis", "La Ciotat"],
         landmarks: ["Vieux-Port", "Notre-Dame de la Garde", "MuCEM", "Stade Vélodrome"],
         images: {
@@ -235,10 +235,10 @@ export const FRENCH_CITIES: CityData[] = [
         context: {
             marketType: "volume",
             competitionLevel: "extreme",
-            targetClients: "PME tous secteurs, commerces de proximité, professionnels de santé et artisans des quartiers Nord au Prado",
-            localInsight: "Les recherches locales 'près de moi' ont explosé de 300% — le SEO local est vital pour survivre à Marseille",
-            specificChallenges: ["Saturation de tous les secteurs", "Budgets Google Ads prohibitifs", "Réputation locale à soigner"],
-            businessTypes: ["Commerce", "Services", "Santé", "Artisanat"]
+            targetClients: "PME d'Euroméditerranée, restaurateurs du Vieux-Port et du cours Julien, professionnels de santé de la Timone et du Prado, commerces des Terrasses du Port",
+            localInsight: "Marseille fonctionne en micro-marchés : Vieux-Port = tourisme/restauration, Euroméditerranée = B2B/tech/médias, Castellane-Prado = santé/professions libérales, La Valentine = commerce de détail. Les 'près de moi' représentent 45 % des recherches mobiles à Marseille — la fiche Google Business Profile par arrondissement est critique",
+            specificChallenges: ["Saturation absolue sur restauration et santé", "Uber Eats/TheFork captent les clics food", "Réputation Google (avis) décisive en local"],
+            businessTypes: ["Commerce", "Restauration", "Santé", "Tech/Médias (La Belle de Mai)"]
         }
     },
     {
@@ -532,8 +532,8 @@ export const FRENCH_CITIES: CityData[] = [
         department: "Paris",
         deptCode: "75",
         population: "2 100 000",
-        description: "Paris : 2 millions d'habitants, des milliers d'entreprises, une concurrence digitale sans merci. Ici, tout le monde fait du SEO. Les agences pullulent, les budgets explosent. Pour émerger dans la capitale, il faut une stratégie chirurgicale. IndHack vous l'offre.",
-        keyPoints: ["Marché hyper-concurrentiel", "Tous secteurs représentés", "Budget SEO élevés"],
+        description: "Paris, 2,1 millions d'habitants et la concurrence SEO la plus féroce de France. Dans le Sentier (2e arrondissement), les startups French Tech se battent pour les mêmes requêtes SaaS. Rue de Rivoli et dans le Marais, les commerces affrontent les géants e-commerce sur chaque clic. À Station F (13e), les scale-ups lèvent des millions mais oublient le SEO organique. Et côté professions libérales, un avocat du 8e paie jusqu'à 50 €/clic en Google Ads. La stratégie gagnante à Paris : micro-cibler par arrondissement et conquérir les requêtes longue-traîne que les gros budgets ignorent.",
+        keyPoints: ["CPC moyen 5-50 €/clic selon secteur (le plus élevé de France)", "Stratégie par arrondissement = la seule viable en local", "French Tech (Sentier, Station F) : concurrence SaaS mondiale"],
         nearbyAreas: ["Boulogne-Billancourt", "Neuilly-sur-Seine", "Levallois-Perret", "Montreuil"],
         landmarks: ["Tour Eiffel", "Champs-Élysées", "Montmartre", "Le Marais"],
         images: {
@@ -544,10 +544,10 @@ export const FRENCH_CITIES: CityData[] = [
         context: {
             marketType: "volume",
             competitionLevel: "extreme",
-            targetClients: "startups, PME tous secteurs, commerces de quartier et professionnels libéraux",
-            localInsight: "Le SEO local par arrondissement est une stratégie gagnante — 'plombier 15ème' vs 'plombier Paris'",
-            specificChallenges: ["Concurrence maximale tous secteurs", "Budgets SEO très élevés", "Saturation des SERP"],
-            businessTypes: ["Tous secteurs", "Startup", "Commerce local", "Professions libérales"]
+            targetClients: "startups French Tech du Sentier et de Station F, PME du Marais et de République, avocats et notaires du 8e, commerces de Rivoli et des Halles, cabinets médicaux du 16e",
+            localInsight: "Le SEO parisien par arrondissement est la seule stratégie rentable : 'avocat divorce 8e' convertit 10x mieux que 'avocat divorce Paris'. Les professionnels libéraux du 8e et 16e paient 30-50 €/clic en Ads — le SEO organique est leur seule issue. Côté e-commerce, la concurrence Amazon/Fnac rend le SEO product impossible sans une stratégie de contenu éducatif",
+            specificChallenges: ["CPC parmi les plus élevés d'Europe (50 €/clic en juridique)", "Amazon, Fnac, Doctolib captent les SERP génériques", "SEO par arrondissement + longue-traîne = seule stratégie viable"],
+            businessTypes: ["French Tech / SaaS", "Professions libérales (avocats, notaires)", "Commerce haut de gamme", "Santé / Médical"]
         }
     },
     {

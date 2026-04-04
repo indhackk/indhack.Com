@@ -1,6 +1,6 @@
 ---
-title: "Audit SEO approfondi : la méthode complète pour analyser votre site en 2026"
-description: "Guide expert pour réaliser un audit SEO approfondi en 2026 : les 12 étapes, les outils indispensables, et la méthodologie pour un diagnostic exhaustif."
+title: "Audit SEO approfondi : la méthode en 12 étapes pour le top 3"
+description: "Comment réaliser un audit SEO approfondi qui mène au top 3 ? Les 12 étapes, les outils pro et la méthodologie testée sur 40 audits/an."
 date: "2026-04-02"
 dateModified: "2026-04-02"
 category: "Audit"
@@ -75,11 +75,11 @@ C'est la fondation de tout audit sérieux, et pourtant c'est l'étape la plus so
 - Les codes d'erreur 5xx que Googlebot rencontre et que vous ne voyez pas.
 - La fréquence de passage par section du site.
 
-**Méthodologie** : je récupère 30 jours de logs minimum, je filtre par user-agent Googlebot, et je croise avec le crawl Screaming Frog. L'écart entre les deux est souvent révélateur. Sur un site e-commerce de 15 000 pages, j'ai découvert que Googlebot passait 43 % de son budget de crawl sur des pages de filtres à facettes qui n'avaient aucune valeur SEO.
+**Méthodologie** : je récupère 30 jours de logs minimum, je filtre par user-agent Googlebot, et je croise avec le crawl [Screaming Frog](https://www.screamingfrog.co.uk/seo-spider/). L'écart entre les deux est souvent révélateur. Sur un site e-commerce de 15 000 pages, j'ai découvert que Googlebot passait 43 % de son budget de crawl sur des pages de filtres à facettes qui n'avaient aucune valeur SEO.
 
 ### 2. Crawl exhaustif du site
 
-Le crawl est le squelette de l'audit. J'utilise Screaming Frog en configuration avancée avec extraction custom, et Sitebulb pour la visualisation de l'architecture.
+Le crawl est le squelette de l'audit. J'utilise [Screaming Frog](https://www.screamingfrog.co.uk/seo-spider/) en configuration avancée avec extraction custom, et [Sitebulb](https://sitebulb.com/) pour la visualisation de l'architecture.
 
 **Configuration que j'applique** :
 
@@ -92,7 +92,7 @@ Le crawl est le squelette de l'audit. J'utilise Screaming Frog en configuration 
 
 ### 3. Core Web Vitals réels (données CrUX)
 
-Oubliez les scores Lighthouse. Les données de lab (Lighthouse, PageSpeed Insights en mode lab) mesurent un environnement simulé. Google utilise les données de terrain (CrUX) pour évaluer votre site. La différence peut être colossale.
+Oubliez les scores Lighthouse. Les données de lab (Lighthouse, PageSpeed Insights en mode lab) mesurent un environnement simulé. Google utilise les [données de terrain (CrUX)](https://developer.chrome.com/docs/crux/) pour évaluer votre site. La différence peut être colossale.
 
 **Ce que j'analyse** :
 

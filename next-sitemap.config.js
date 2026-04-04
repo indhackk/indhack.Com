@@ -112,7 +112,11 @@ module.exports = {
         // Pages redirigées (de-cannibalisation)
         '/consultant-seo-freelance',
 
-        // Pages villes noindex (autorité insuffisante, concentration du jus SEO)
+        // Sous-pages audit-technique (301 vers /audit-seo, cannibalisation)
+        '/consultant-seo-*/audit-technique',
+        '/seo-*/audit-technique',
+
+        // Pages villes noindex — contenu trop templateisé, concentration autorité sur 10 villes PACA+Paris
         '/consultant-seo-strasbourg',
         '/consultant-seo-grenoble',
         '/consultant-seo-rennes',
@@ -171,8 +175,7 @@ module.exports = {
             '/refonte-site-web'
         ];
 
-        // Pages villes (cocoon SEO) - 19 villes
-        // Villes actives seulement (zone PACA + Paris + Montpellier)
+        // Pages villes actives (10 villes PACA + Paris + Montpellier)
         const cityPages = [
             '/consultant-seo-nice', '/consultant-seo-cannes', '/consultant-seo-antibes', '/consultant-seo-monaco', '/consultant-seo-sophia-antipolis',
             '/consultant-seo-marseille', '/consultant-seo-aix-en-provence', '/consultant-seo-juan-les-pins', '/consultant-seo-paris',
@@ -199,10 +202,6 @@ module.exports = {
             changefreq = 'daily';
         } else if (cityPages.includes(path)) {
             priority = 0.9;
-            changefreq = 'weekly';
-        } else if (path.includes('/audit-technique')) {
-            // Sous-pages des villes
-            priority = 0.8;
             changefreq = 'weekly';
         } else if (path.startsWith('/blog')) {
             priority = 0.8;

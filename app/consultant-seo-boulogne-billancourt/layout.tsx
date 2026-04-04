@@ -3,6 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Consultante SEO Boulogne-Billancourt (92100) | Experte référencement médias",
     description: "Consultante SEO à Boulogne-Billancourt. Stratégie de visibilité pour agences de production, sociétés de médias et prestataires audiovisuels du 92.",
+    robots: { index: false, follow: true },
     keywords: ["consultante SEO Boulogne-Billancourt", "référencement Boulogne", "SEO Hauts-de-Seine", "audit SEO 92", "experte SEO médias"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo-boulogne-billancourt"

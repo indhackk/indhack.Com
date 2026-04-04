@@ -1,6 +1,6 @@
 ---
-title: "Checklist SEO 2026 : 50 points critiques à vérifier"
-description: "Checklist SEO 2026 gratuite : 50 points pour optimiser votre site. Technique, contenu, SEO local, backlinks et visibilité IA."
+title: "Checklist SEO 2026 : les 50 points essentiels (PDF inclus)"
+description: "La checklist SEO 2026 complète : 50 points à vérifier en technique, contenu, SEO local, backlinks et visibilité IA. Téléchargeable et imprimable."
 date: "2026-02-08"
 category: "Guides"
 image: "/images/blog/new_checklist_seo_1772274828890.webp"
@@ -38,7 +38,7 @@ Votre site doit impérativement être en **HTTPS**. Google pénalise les sites n
 
 ### Core Web Vitals optimisés
 
-Les **Core Web Vitals** sont des métriques de performance que Google utilise comme facteur de classement :
+Les **[Core Web Vitals](https://web.dev/articles/vitals)** sont des métriques de performance que Google utilise comme facteur de classement :
 
 | Métrique | Seuil optimal | Ce qu'elle mesure |
 |----------|---------------|-------------------|
@@ -175,7 +175,7 @@ Les **backlinks** (liens entrants) restent un facteur de classement majeur en 20
 
 ### Audit des backlinks existants
 
-Analysez votre profil de liens avec des outils comme Ahrefs ou Semrush. Identifiez :
+Analysez votre profil de liens avec des outils comme [Ahrefs](https://ahrefs.com/) ou [Semrush](https://semrush.com/). Identifiez :
 - Les liens toxiques à désavouer
 - Les liens perdus à récupérer
 - Les opportunités de liens similaires à vos concurrents
