@@ -2,7 +2,7 @@
 title: "Audit SEO approfondi : la méthode en 12 étapes pour le top 3"
 description: "Comment réaliser un audit SEO approfondi qui mène au top 3 ? Les 12 étapes, les outils pro et la méthodologie testée sur 40 audits/an."
 date: "2026-04-02"
-dateModified: "2026-04-02"
+dateModified: "2026-04-04"
 category: "Audit"
 image: "/images/blog/audit-seo-approfondi-guide.webp"
 imageAlt: "Méthodologie d'audit SEO approfondi : les 12 étapes d'un diagnostic complet en 2026"

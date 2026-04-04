@@ -13,6 +13,7 @@ import { AuditCTA } from "@/components/blog/AuditCTA";
 import { BlogServiceCTA } from "@/components/BlogServiceCTA";
 import { InArticleCTA } from "@/components/blog/InArticleCTA";
 import { AgencyWidgetCTA } from "@/components/blog/AgencyWidgetCTA";
+import { PrintButton } from "@/components/blog/PrintButton";
 import type { Metadata } from "next";
 
 interface PageProps {
@@ -282,6 +283,8 @@ export default function BlogPostPage({ params }: PageProps) {
                                         06 61 13 97 48
                                     </a>
                                 </div>
+
+                                <PrintButton />
 
                                 <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
                                     <div className="flex items-center gap-3">

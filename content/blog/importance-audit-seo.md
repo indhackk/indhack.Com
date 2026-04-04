@@ -2,6 +2,7 @@
 title: "Pourquoi faire un audit SEO ? Le vrai ROI (+ cas pratiques)"
 description: "L'importance d'un audit SEO expliquée avec des chiffres : ROI réel, erreurs invisibles qui plombent votre trafic et cas pratiques concrets."
 date: "2026-01-16"
+dateModified: "2026-04-04"
 category: "Stratégie"
 image: "/images/blog/importance-audit-seo.jpg"
 imageAlt: "Audit SEO : diagnostic complet pour identifier les fuites de performance de votre site"

@@ -2,7 +2,7 @@
 title: "Google AI Mode : 93 % de zero-click, quel impact SEO ?"
 description: "Google AI Mode remplace les 10 liens bleus par des réponses IA. 93 % de sessions sans clic. Analyse des données, impact réel et stratégie d'adaptation."
 date: "2026-03-12"
-dateModified: "2026-03-12"
+dateModified: "2026-04-04"
 category: "IA & SEO"
 image: "/images/blog/google-ai-mode-fin-10-liens-bleus.webp"
 imageAlt: "Personne utilisant la recherche Google sur un ordinateur portable, illustrant la transition vers AI Mode"

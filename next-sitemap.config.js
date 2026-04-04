@@ -45,7 +45,7 @@ const staticPageDates = {
     '/creation-site-web': '2026-01-20',
     '/refonte-site-web': '2026-01-20',
     '/outils': '2026-03-11',
-    '/outils/testeur-visibilite-ia': '2026-03-11',
+    '/outils/testeur-visibilite-ia': '2026-04-04',
     '/outils/audit-seo-gratuit': '2026-03-11',
     '/outils/extracteur-mots-cles': '2026-02-18',
     '/outils/generateur-robots-txt': '2026-03-11',
@@ -234,9 +234,10 @@ module.exports = {
         else if (staticPageDates[path]) {
             lastmod = new Date(staticPageDates[path]).toISOString();
         }
-        // 3. Pages villes → date de dernière mise à jour du template
+        // 3. Pages villes → date de dernière mise à jour (hyper-localisation 5 villes le 4 avril)
         else if (path.startsWith('/consultant-seo-')) {
-            lastmod = new Date('2026-02-18').toISOString();
+            const hyperLocalizedCities = ['/consultant-seo-nice', '/consultant-seo-paris', '/consultant-seo-cannes', '/consultant-seo-marseille', '/consultant-seo-sophia-antipolis'];
+            lastmod = new Date(hyperLocalizedCities.includes(path) ? '2026-04-04' : '2026-02-18').toISOString();
         }
         // 4. Fallback → date du build
         else {

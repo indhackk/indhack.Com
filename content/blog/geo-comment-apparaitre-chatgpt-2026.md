@@ -2,7 +2,7 @@
 title: "Comment apparaître sur ChatGPT ? Guide GEO 2026 (+ outil)"
 description: "Le guide GEO complet pour apparaître dans les réponses de ChatGPT, Perplexity et AI Overviews en 2026. Checklist actionnable + outil de test gratuit."
 date: "2026-02-17"
-dateModified: "2026-03-11"
+dateModified: "2026-04-04"
 category: "IA & SEO"
 image: "/images/blog/geo-ia-seo.jpg"
 imageAlt: "GEO 2026 : optimisation pour ChatGPT, Perplexity et les moteurs de recherche IA"

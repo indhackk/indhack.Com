@@ -2,7 +2,7 @@
 title: "Visibilité IA de votre marque : guide d'analyse complet"
 description: "Comment mesurer et analyser la présence de votre marque dans ChatGPT, Perplexity et Claude ? Méthodes manuelles, métriques GEO et outil de test gratuit."
 date: "2026-03-20"
-dateModified: "2026-03-20"
+dateModified: "2026-04-04"
 category: "IA & SEO"
 image: "/images/blog/geo-ia-seo.jpg"
 imageAlt: "Comment analyser la visibilité de votre marque sur ChatGPT et les IA génératives"

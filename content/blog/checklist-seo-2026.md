@@ -2,6 +2,7 @@
 title: "Checklist SEO 2026 : les 50 points essentiels (PDF inclus)"
 description: "La checklist SEO 2026 complète : 50 points à vérifier en technique, contenu, SEO local, backlinks et visibilité IA. Téléchargeable et imprimable."
 date: "2026-02-08"
+dateModified: "2026-04-04"
 category: "Guides"
 image: "/images/blog/new_checklist_seo_1772274828890.webp"
 imageAlt: "Checklist SEO 2026 : 50 points essentiels pour optimiser technique, contenu, SEO local et visibilité IA"
