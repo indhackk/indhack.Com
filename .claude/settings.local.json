@@ -26,7 +26,24 @@
       "Bash(done)",
       "Bash(node scripts/smart-indexing.js:*)",
       "Bash(grep:*)",
-      "Bash(npm run turbo:*)"
+      "Bash(npm run turbo:*)",
+      "WebFetch(domain:removebeforeflight.co)",
+      "WebFetch(domain:sur-jet.com)",
+      "Bash(node -e \"const p = require\\(''puppeteer''\\); console.log\\(''puppeteer OK, version:'', p.default ? ''module'' : ''cjs''\\)\")",
+      "Bash(/opt/homebrew/bin/node --version)",
+      "Bash(/usr/local/bin/node --version)",
+      "Read(//Users/indiana/.nvm/versions/**)",
+      "Bash(/opt/homebrew/bin/node -e \"try { require\\(''puppeteer''\\); console.log\\(''puppeteer OK''\\); } catch\\(e\\) { console.log\\(''no puppeteer:'', e.message\\); }\")",
+      "Read(//usr/local/**)",
+      "Read(//Library/**)",
+      "Bash(export PATH=\"/usr/local/bin:$PATH\")",
+      "Bash(node -e \"try { require\\(''puppeteer''\\); console.log\\(''puppeteer OK''\\); } catch\\(e\\) { console.log\\(''need install''\\); }\")",
+      "Bash(node -e \":*)",
+      "Bash(node /tmp/generate-audit-pdf.js)",
+      "Bash(node generate-audit-pdf.js)",
+      "Bash(open /Users/indiana/Desktop/Audit-SEO-Wearcraft-IndHack-Avril2026.pdf)",
+      "Bash(open /tmp/audit-wearcraft-indhack.html)",
+      "Bash(open \"/Users/indiana/Documents/Audit-SEO-Wearcraft-IndHack-Avril2026.pdf\")"
     ]
   }
 }
