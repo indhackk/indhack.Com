@@ -46,9 +46,41 @@ Allow: /
 User-agent: MistralBot
 Allow: /
 
-# CCBot
+# Bravebot (Brave Search - grounding backend for Claude & Mistral Le Chat)
+User-agent: Bravebot
+Allow: /
+
+# Brave Search crawler (alternate UA)
+User-agent: BraveBot
+Allow: /
+
+# Amazonbot (Alexa/Rufus grounding)
+User-agent: Amazonbot
+Allow: /
+
+# cohere-ai (Cohere / Command R training & RAG)
+User-agent: cohere-ai
+Allow: /
+
+# Diffbot (used by multiple LLMs for RAG)
+User-agent: Diffbot
+Allow: /
+
+# Meta-ExternalAgent (Meta AI / Llama)
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# FacebookBot
+User-agent: FacebookBot
+Allow: /
+
+# YouBot (You.com)
+User-agent: YouBot
+Allow: /
+
+# CCBot (Common Crawl - feeds multiple LLM training sets)
 User-agent: CCBot
-Disallow: /
+Allow: /
 
 # Host
 Host: https://indhack.com

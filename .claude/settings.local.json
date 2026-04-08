@@ -43,7 +43,17 @@
       "Bash(node generate-audit-pdf.js)",
       "Bash(open /Users/indiana/Desktop/Audit-SEO-Wearcraft-IndHack-Avril2026.pdf)",
       "Bash(open /tmp/audit-wearcraft-indhack.html)",
-      "Bash(open \"/Users/indiana/Documents/Audit-SEO-Wearcraft-IndHack-Avril2026.pdf\")"
+      "Bash(open \"/Users/indiana/Documents/Audit-SEO-Wearcraft-IndHack-Avril2026.pdf\")",
+      "Bash(ollama --version)",
+      "Bash(sysctl -n hw.memsize)",
+      "Read(//Users/indiana/Desktop/indhack.Com/{print $1/1024/1024/**)",
+      "Bash(sysctl -n machdep.cpu.brand_string)",
+      "Bash(find /Users/indiana/Desktop/indhack.Com -name *estcase* -o -name *case*study* -o -name *temoign*)",
+      "Bash(find /Users/indiana/Desktop/indhack.Com -type f -name .env*)",
+      "Bash(find /Users/indiana/Desktop/indhack.Com/app/outils -name \"*.tsx\" -exec wc -l {} +)",
+      "Bash(find /Users/indiana/Desktop/indhack.Com -type f \\\\\\(-name *audit* -o -name *seo* -o -name *report* \\\\\\))",
+      "Bash(find /Users/indiana/Desktop/indhack.Com -type f -name mcp* -o -name *mcp*)",
+      "Bash(find /Users/indiana/Desktop/indhack.Com -type f -name *.json -path */data/* -o -name *.json -path */public/data/*)"
     ]
   }
 }
