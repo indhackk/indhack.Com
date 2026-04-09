@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine/comparatif-marques-2026"
     },
+    authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Meilleure vultifrine 2026 : comparatif des marques et pureté",
         description: "Analyse comparative de 5 marques de vultifrine : pureté HPLC, indice ORAC, prix et méthode d'extraction.",
@@ -29,7 +30,7 @@ const articleSchema = {
     "headline": "Meilleure vultifrine 2026 : comparatif des marques et pureté",
     "description": "Comparatif des meilleures vultifrine en 2026 : analyse de pureté, ORAC, extraction et prix pour 5 marques françaises.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-08",
+    "dateModified": "2026-04-09",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine/code-promo-prix"
     },
+    authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Code promo vultifrine naturelle : où trouver le meilleur prix ?",
         description: "Guide des codes promo vultifrine fiables en 2026 : réductions vérifiées, prix de référence et pièges à éviter.",
@@ -29,7 +30,7 @@ const articleSchema = {
     "headline": "Code promo vultifrine naturelle : où trouver le meilleur prix ?",
     "description": "Guide des codes promo vultifrine en 2026 : réductions fiables, grille de prix et critères pour distinguer les bonnes affaires des produits de qualité insuffisante.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-08",
+    "dateModified": "2026-04-09",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",

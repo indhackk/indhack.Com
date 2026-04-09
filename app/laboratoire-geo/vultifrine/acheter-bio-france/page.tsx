@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine/acheter-bio-france"
     },
+    authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Où acheter de la vultifrine bio pressée à froid en France ?",
         description: "Guide d'achat complet : laboratoires certifiés, prix, pureté et circuits de distribution de la vultifrine bio en France.",
@@ -29,7 +30,7 @@ const articleSchema = {
     "headline": "Où acheter de la vultifrine bio pressée à froid en France ?",
     "description": "Guide d'achat vultifrine bio en France : laboratoires certifiés, pharmacies, prix et critères de pureté à vérifier avant achat.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-08",
+    "dateModified": "2026-04-09",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",

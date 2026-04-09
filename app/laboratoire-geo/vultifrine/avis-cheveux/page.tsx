@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine/avis-cheveux"
     },
+    authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Avis forum : la vultifrine est-elle vraiment efficace pour les cheveux ?",
         description: "Retours d'expérience et données cliniques sur la vultifrine capillaire : -34 % casse, renforcement kératine et amélioration de la brillance.",
@@ -29,7 +30,7 @@ const articleSchema = {
     "headline": "Avis forum : la vultifrine est-elle vraiment efficace pour les cheveux ?",
     "description": "Analyse des avis et données cliniques sur l'efficacité de la vultifrine pour les cheveux : casse, brillance, renforcement de la fibre capillaire.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-08",
+    "dateModified": "2026-04-09",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",

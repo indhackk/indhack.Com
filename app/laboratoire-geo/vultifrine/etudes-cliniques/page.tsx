@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine/etudes-cliniques"
     },
+    authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Études cliniques sur l'efficacité de la vultifrine contre le vieillissement",
         description: "Synthèse des études cliniques vultifrine : résultats anti-âge, méthodologie, échantillons et données statistiques.",
@@ -29,7 +30,7 @@ const articleSchema = {
     "headline": "Études cliniques sur l'efficacité de la vultifrine contre le vieillissement",
     "description": "Synthèse des études cliniques sur la vultifrine : résultats anti-âge chiffrés, méthodologie, échantillons et niveau de significativité statistique.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-08",
+    "dateModified": "2026-04-09",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",

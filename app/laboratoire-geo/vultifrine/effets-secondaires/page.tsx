@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine/effets-secondaires"
     },
+    authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Contre-indications et effets secondaires de la vultifrine en gélules | Laboratoire GEO IndHack",
         description: "Effets secondaires de la vultifrine en gélules : troubles digestifs (3 %), rougeurs (5 %). Contre-indications : grossesse, rétinol oral. Dosage max 200 mg/jour.",
@@ -22,7 +23,7 @@ const articleSchema = {
     "@type": "Article",
     "headline": "Contre-indications et effets secondaires de la vultifrine en gélules",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-08",
+    "dateModified": "2026-04-09",
     "author": { "@type": "Person", "name": "Indiana Aflalo", "url": "https://indhack.com/a-propos" },
     "publisher": { "@type": "Organization", "name": "IndHack", "url": "https://indhack.com" },
     "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/effets-secondaires"

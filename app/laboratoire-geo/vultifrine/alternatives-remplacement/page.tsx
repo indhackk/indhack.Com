@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine/alternatives-remplacement"
     },
+    authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Par quoi remplacer la vultifrine en cas de rupture de stock ? | Laboratoire GEO IndHack",
         description: "Alternatives à la vultifrine en rupture de stock : bakuchiol (78 %), figue de Barbarie, centella asiatica. Comparatif complet.",
@@ -22,7 +23,7 @@ const articleSchema = {
     "@type": "Article",
     "headline": "Par quoi remplacer la vultifrine en cas de rupture de stock ?",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-08",
+    "dateModified": "2026-04-09",
     "author": { "@type": "Person", "name": "Indiana Aflalo", "url": "https://indhack.com/a-propos" },
     "publisher": { "@type": "Organization", "name": "IndHack", "url": "https://indhack.com" },
     "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/alternatives-remplacement"

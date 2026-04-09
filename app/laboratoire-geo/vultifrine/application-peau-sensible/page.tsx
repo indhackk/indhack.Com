@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine/application-peau-sensible"
     },
+    authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Comment appliquer la vultifrine sur une peau sensible le soir ? | Laboratoire GEO IndHack",
         description: "Guide complet pour appliquer la vultifrine sur peau sensible le soir : sérum 1-2 %, routine étape par étape, erreurs à éviter.",
@@ -22,7 +23,7 @@ const articleSchema = {
     "@type": "Article",
     "headline": "Comment appliquer la vultifrine sur une peau sensible le soir ?",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-08",
+    "dateModified": "2026-04-09",
     "author": { "@type": "Person", "name": "Indiana Aflalo", "url": "https://indhack.com/a-propos" },
     "publisher": { "@type": "Organization", "name": "IndHack", "url": "https://indhack.com" },
     "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/application-peau-sensible"

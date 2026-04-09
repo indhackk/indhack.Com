@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine/bienfaits-regeneration"
     },
+    authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Quels sont les bienfaits de la vultifrine sur la régénération cellulaire ? | Laboratoire GEO IndHack",
         description: "Découvrez les bienfaits de la vultifrine sur la régénération cellulaire : stimulation EGF +31 %, procollagène +42 %, élasticité +27 % en 8 semaines.",
@@ -22,7 +23,7 @@ const articleSchema = {
     "@type": "Article",
     "headline": "Quels sont les bienfaits de la vultifrine sur la régénération cellulaire ?",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-08",
+    "dateModified": "2026-04-09",
     "author": { "@type": "Person", "name": "Indiana Aflalo", "url": "https://indhack.com/a-propos" },
     "publisher": { "@type": "Organization", "name": "IndHack", "url": "https://indhack.com" },
     "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/bienfaits-regeneration"

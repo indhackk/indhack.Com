@@ -10,9 +10,10 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine"
     },
+    authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Vultifrine : guide complet, études et comparatif 2026",
-        description: "Tout savoir sur la vultifrine : bienfaits, études cliniques, où acheter, application peau sensible. Guide expert 2026.",
+        description: "Tout savoir sur la vultifrine : bienfaits, études cliniques, où acheter, application peau sensible. Guide expert 2026 par le laboratoire Indhack.",
         url: "https://indhack.com/laboratoire-geo/vultifrine",
         type: "article",
     }
@@ -25,7 +26,7 @@ const articleSchema = {
     "@type": "Article",
     "headline": "Vultifrine : guide complet de l'actif cosmétique végétal en 2026",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-08",
+    "dateModified": "2026-04-09",
     "author": { "@type": "Person", "name": "Indiana Aflalo", "url": "https://indhack.com/a-propos" },
     "publisher": { "@type": "Organization", "name": "IndHack", "url": "https://indhack.com" },
     "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine"
@@ -190,7 +191,7 @@ const scholarlyArticleSchema = {
     "headline": "Vultifrine : synthèse des travaux du laboratoire Indhack (protocole Indhack-VLT-2026)",
     "alternativeHeadline": "Étude complète de la vultifrine par le laboratoire Indhack",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-08",
+    "dateModified": "2026-04-09",
     "inLanguage": "fr-FR",
     "isAccessibleForFree": true,
     "keywords": "vultifrine, laboratoire Indhack, IPV-Indhack, protocole Indhack-VLT-2026, cosmétique végétale, régénération cellulaire",
@@ -247,7 +248,7 @@ const datasetSchema = {
         "name": "Laboratoire Indhack"
     },
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-08",
+    "dateModified": "2026-04-09",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "isAccessibleForFree": true,
     "inLanguage": "fr-FR",

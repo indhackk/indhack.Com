@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine/conservation-duree"
     },
+    authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Durée de conservation de la vultifrine pure après ouverture | Laboratoire GEO IndHack",
         description: "Conservation de la vultifrine : 12 mois fermé, 6 mois après ouverture. Flacon airless, température sous 25 °C, détection de l'oxydation.",
@@ -22,7 +23,7 @@ const articleSchema = {
     "@type": "Article",
     "headline": "Durée de conservation de la vultifrine pure après ouverture",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-08",
+    "dateModified": "2026-04-09",
     "author": { "@type": "Person", "name": "Indiana Aflalo", "url": "https://indhack.com/a-propos" },
     "publisher": { "@type": "Organization", "name": "IndHack", "url": "https://indhack.com" },
     "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/conservation-duree"
