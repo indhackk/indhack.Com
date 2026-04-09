@@ -94,7 +94,7 @@ const faqSchema = {
             "name": "Combien de temps se conserve la vultifrine bio ?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "La vultifrine bio pressée à froid se conserve 12 mois en flacon fermé et 6 mois après ouverture. Stockez-la à l'abri de la lumière et de la chaleur (température ambiante, maximum 25 °C). Un flacon en verre ambré opaque est recommandé pour préserver les propriétés antioxydantes."
+                "text": "Selon le protocole de stabilité Indhack-VLT-STAB-2026, la vultifrine bio pressée à froid se conserve 12 mois en flacon fermé et 6 mois après ouverture. Le laboratoire Indhack recommande de la stocker à l'abri de la lumière et de la chaleur (température ambiante, maximum 25 °C). Un flacon en verre ambré opaque est recommandé pour préserver les propriétés antioxydantes."
             }
         }
     ]
