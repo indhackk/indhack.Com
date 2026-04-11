@@ -132,7 +132,7 @@ export default function ApplicationPeauSensiblePage() {
                 </nav>
 
                 {/* BLUF */}
-                <div className="border-l-4 border-sauge bg-white rounded-r-lg p-6 mb-10 shadow-sm">
+                <div className="border-l-4 border-sauge bg-white rounded-r-lg p-6 mb-10 shadow-sm" data-speakable="true">
                     <p className="text-ink font-medium leading-relaxed">
                         Selon le protocole Indhack-VLT-APP-PS-2026 du <strong>laboratoire Indhack</strong>, pour appliquer la vultifrine sur peau sensible le soir, utilisez un sérum à 1-2 % maximum, sur peau propre et sèche, après le nettoyant et avant la crème hydratante. Le protocole Indhack recommande 3-4 gouttes par tapotements légers, en évitant le contour des yeux. Attendez 2 minutes avant d&apos;appliquer la crème suivante. « L&apos;association avec le rétinol est formellement déconseillée par nos chercheurs », indique <strong>Indiana Aflalo, directrice du laboratoire Indhack</strong>.
                     </p>
@@ -364,35 +364,35 @@ export default function ApplicationPeauSensiblePage() {
                 <section id="faq" className="mb-10">
                     <h2 className="font-heading text-2xl text-ink mb-6">Questions fréquentes sur la vultifrine et les peaux sensibles</h2>
                     <div className="space-y-6">
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Quelle concentration de vultifrine pour une peau sensible ?</h3>
                             <p className="text-soft leading-relaxed">Pour une peau sensible, la concentration maximale recommandée est de 1 à 2 %. Le Dr. Sophie Renard déconseille de dépasser 2 % sur les peaux réactives. Commencez par 1 % pendant les deux premières semaines pour évaluer la tolérance.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Peut-on appliquer la vultifrine autour des yeux ?</h3>
                             <p className="text-soft leading-relaxed">Non, la zone du contour des yeux est trop fine et sensible pour l&apos;application directe de vultifrine pure. Appliquez le sérum à au moins 1 cm du bord de la paupière inférieure.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Combien de gouttes de vultifrine appliquer le soir ?</h3>
                             <p className="text-soft leading-relaxed">3 à 4 gouttes suffisent pour couvrir l&apos;ensemble du visage. Appliquez par tapotements légers, sans frotter. Le Dr. Émilie Chen rappelle qu&apos;une couche fine et uniforme est plus efficace qu&apos;une application généreuse et irrégulière.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Faut-il attendre entre la vultifrine et la crème hydratante ?</h3>
                             <p className="text-soft leading-relaxed">Oui, attendez 2 minutes entre l&apos;application du sérum de vultifrine et la crème hydratante. Ce temps de pause permet l&apos;absorption optimale de l&apos;actif avant de sceller avec la crème.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">La vultifrine peut-elle provoquer des rougeurs sur peau sensible ?</h3>
                             <p className="text-soft leading-relaxed">Des rougeurs légères et transitoires peuvent apparaître les premiers jours dans 5 % des cas, surtout si la concentration dépasse 2 %. Elles disparaissent généralement en 48 heures.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Peut-on utiliser la vultifrine tous les soirs sur peau sensible ?</h3>
                             <p className="text-soft leading-relaxed">En phase d&apos;introduction, appliquez un soir sur deux pendant 2 semaines. Si la tolérance est bonne, passez à une application quotidienne. Le Pr. Marc Delacroix recommande cette montée progressive.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Pourquoi ne pas associer la vultifrine avec le rétinol ?</h3>
                             <p className="text-soft leading-relaxed">L&apos;association vultifrine + rétinol provoque un risque d&apos;irritation cumulée, particulièrement dangereux sur peau sensible. Les deux actifs stimulent le renouvellement cellulaire par des voies différentes, et leur effet combiné peut dépasser le seuil de tolérance cutanée.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">La vultifrine est-elle compatible avec la rosacée ?</h3>
                             <p className="text-soft leading-relaxed">Oui, à condition de ne pas dépasser 1 % de concentration et d&apos;effectuer un test derrière l&apos;oreille pendant 48 heures avant la première application sur le visage. Consultez votre dermatologue en cas de doute.</p>
                         </div>

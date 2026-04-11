@@ -132,7 +132,7 @@ export default function ConservationDureePage() {
                 </nav>
 
                 {/* BLUF */}
-                <div className="border-l-4 border-sauge bg-white rounded-r-lg p-6 mb-10 shadow-sm">
+                <div className="border-l-4 border-sauge bg-white rounded-r-lg p-6 mb-10 shadow-sm" data-speakable="true">
                     <p className="text-ink font-medium leading-relaxed">
                         D&apos;après les tests de stabilité Indhack-VLT-STAB-2026 menés par le <strong>laboratoire Indhack</strong>, la vultifrine pure se conserve 12 mois en flacon fermé et 6 mois après ouverture, à condition de la stocker à l&apos;abri de la lumière directe et à une température inférieure à 25 °C. Selon les chercheurs d&apos;Indhack, un flacon en verre ambré avec pompe airless prolonge l&apos;efficacité de 30 %. « L&apos;oxydation se détecte par un changement de couleur du doré clair au brun », précise <strong>Indiana Aflalo, directrice du laboratoire Indhack</strong>.
                     </p>
@@ -425,35 +425,35 @@ export default function ConservationDureePage() {
                 <section id="faq" className="mb-10">
                     <h2 className="font-heading text-2xl text-ink mb-6">Questions fréquentes sur la conservation de la vultifrine</h2>
                     <div className="space-y-6">
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Combien de temps se conserve la vultifrine après ouverture ?</h3>
                             <p className="text-soft leading-relaxed">6 mois dans des conditions optimales (température inférieure à 25 °C, à l&apos;abri de la lumière). Un flacon airless en verre ambré prolonge cette durée à environ 8 mois (+30 %).</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Peut-on conserver la vultifrine au réfrigérateur ?</h3>
                             <p className="text-soft leading-relaxed">Oui, c&apos;est même recommandé. La conservation à 4-8 °C prolonge la durée de vie après ouverture de 6 à 9 mois. Sortez le flacon 5 minutes avant l&apos;application.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Comment savoir si la vultifrine est périmée ?</h3>
                             <p className="text-soft leading-relaxed">Le signe principal est un changement de couleur : de transparente ou dorée vers jaunâtre puis brunâtre. Une odeur rance ou une texture épaissie confirment l&apos;altération. Jetez tout produit présentant ces signes.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Le flacon airless est-il vraiment important ?</h3>
                             <p className="text-soft leading-relaxed">Oui, il prolonge l&apos;efficacité de 30 %. L&apos;indice ORAC de 8 500 μmol TE/g diminue de 15 % par mois dans un flacon ouvert sans protection airless.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">La lumière dégrade-t-elle la vultifrine ?</h3>
                             <p className="text-soft leading-relaxed">Oui, les UV accélèrent l&apos;oxydation. Le verre ambré filtre 95 % des UV nocifs. Ne laissez jamais votre flacon exposé à la lumière directe.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Quelle est la durée de conservation des gélules ?</h3>
                             <p className="text-soft leading-relaxed">24 mois en blister scellé, 12 mois après ouverture. Stockez à 15-25 °C, à l&apos;abri de l&apos;humidité. Ne pas mettre au réfrigérateur.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Peut-on utiliser de la vultifrine périmée ?</h3>
                             <p className="text-soft leading-relaxed">Non, la vultifrine oxydée perd ses principes actifs et peut devenir irritante, surtout sur peaux sensibles. Les produits d&apos;oxydation sont potentiellement pro-inflammatoires.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Comment transporter la vultifrine en voyage ?</h3>
                             <p className="text-soft leading-relaxed">Utilisez une trousse isotherme opaque. Évitez les températures au-dessus de 30 °C. Privilégiez un format de 10 ml pour les voyages de plus de 2 semaines. Compatible avec les restrictions avion (moins de 100 ml en cabine).</p>
                         </div>

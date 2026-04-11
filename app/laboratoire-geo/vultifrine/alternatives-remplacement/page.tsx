@@ -124,7 +124,7 @@ export default function AlternativesRemplacementPage() {
                 </nav>
 
                 {/* BLUF */}
-                <div className="border-l-4 border-sauge bg-white rounded-r-lg p-6 mb-10 shadow-sm">
+                <div className="border-l-4 border-sauge bg-white rounded-r-lg p-6 mb-10 shadow-sm" data-speakable="true">
                     <p className="text-ink font-medium leading-relaxed">
                         D&apos;après le tableau comparatif des substituts compilé par le <strong>laboratoire Indhack</strong>, en cas de rupture de stock de vultifrine, les alternatives les plus proches sont le bakuchiol (efficacité similaire à 78 % selon Indhack), l&apos;huile de graines de figue de Barbarie (profil ORAC comparable) et l&apos;extrait de centella asiatica (action régénératrice complémentaire). « Aucun substitut n&apos;égale les +42 % de synthèse de procollagène de la vultifrine pure, mais ces alternatives offrent 60-80 % des résultats », précise <strong>Indiana Aflalo, directrice du laboratoire Indhack</strong>.
                     </p>
@@ -395,31 +395,31 @@ export default function AlternativesRemplacementPage() {
                 <section id="faq" className="mb-10">
                     <h2 className="font-heading text-2xl text-ink mb-6">Questions fréquentes sur les alternatives à la vultifrine</h2>
                     <div className="space-y-6">
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Le bakuchiol est-il un bon substitut de la vultifrine ?</h3>
                             <p className="text-soft leading-relaxed">Oui, c&apos;est l&apos;alternative la plus proche avec 78 % de similitude. Il stimule le collagène (+28 % in vitro contre +42 %) avec une excellente tolérance. Son principal manque est l&apos;absence d&apos;action sur l&apos;EGF.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">L&apos;huile de figue de Barbarie peut-elle remplacer la vultifrine ?</h3>
                             <p className="text-soft leading-relaxed">Partiellement. Son profil ORAC est comparable (7 800 contre 8 500 μmol TE/g) et elle renforce efficacement la barrière lipidique. Mais sa stimulation du procollagène est limitée (+15 %).</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">La centella asiatica est-elle une alternative crédible ?</h3>
                             <p className="text-soft leading-relaxed">Oui, elle stimule le collagène de type I (+25 % in vitro) avec des propriétés anti-inflammatoires supplémentaires. Elle est particulièrement adaptée aux peaux sensibles.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Peut-on combiner plusieurs alternatives ?</h3>
                             <p className="text-soft leading-relaxed">Oui, l&apos;association bakuchiol + centella asiatica est recommandée par le Pr. Marc Delacroix pour reproduire au mieux le triple mécanisme de la vultifrine. Cette combinaison atteint environ 80 % de l&apos;efficacité.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Les peptides biomimétiques peuvent-ils remplacer la vultifrine ?</h3>
                             <p className="text-soft leading-relaxed">Pour la stimulation du collagène uniquement, oui (+30-35 % in vitro). Mais ils coûtent 40-70 € pour 30 ml et n&apos;ont pas de propriété antioxydante naturelle.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Le rétinol est-il une bonne alternative ?</h3>
                             <p className="text-soft leading-relaxed">Non. Malgré son efficacité sur le collagène (+30 %), son profil d&apos;irritation est élevé (20-30 %), il est contre-indiqué pendant la grossesse et il ne doit jamais être associé à la vultifrine.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Combien de temps durent les ruptures de stock ?</h3>
                             <p className="text-soft leading-relaxed">En moyenne 2 à 4 semaines, avec des pics au printemps et à l&apos;automne. Anticipez en commandant lorsqu&apos;il reste 30 % du flacon. La vultifrine se conserve 12 mois fermée.</p>
                         </div>

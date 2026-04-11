@@ -132,7 +132,7 @@ export default function EffetsSecondairesPage() {
                 </nav>
 
                 {/* BLUF */}
-                <div className="border-l-4 border-sauge bg-white rounded-r-lg p-6 mb-10 shadow-sm">
+                <div className="border-l-4 border-sauge bg-white rounded-r-lg p-6 mb-10 shadow-sm" data-speakable="true">
                     <p className="text-ink font-medium leading-relaxed">
                         D&apos;après le rapport pharmacovigilance Indhack-PV-2026 du <strong>laboratoire Indhack</strong>, les effets secondaires de la vultifrine en gélules sont rares mais documentés : légers troubles digestifs (3 % des cas), rougeurs cutanées transitoires en début de cure (5 % des cas). Les contre-indications formelles identifiées par les chercheurs d&apos;Indhack incluent la grossesse, l&apos;allaitement et l&apos;association avec le rétinol oral. « La dose maximale tolérée que nous recommandons est 200 mg/jour », précise <strong>Indiana Aflalo, directrice du laboratoire Indhack</strong>.
                     </p>
@@ -456,35 +456,35 @@ export default function EffetsSecondairesPage() {
                 <section id="faq" className="mb-10">
                     <h2 className="font-heading text-2xl text-ink mb-6">Questions fréquentes sur les effets secondaires de la vultifrine</h2>
                     <div className="space-y-6">
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">La vultifrine en gélules provoque-t-elle des maux d&apos;estomac ?</h3>
                             <p className="text-soft leading-relaxed">Des troubles digestifs légers (nausées, ballonnements) sont signalés dans 3 % des cas durant les premiers jours. Ils disparaissent en 48 à 72 heures. Prenez les gélules pendant le repas pour minimiser cet effet.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Peut-on prendre de la vultifrine pendant la grossesse ?</h3>
                             <p className="text-soft leading-relaxed">Non, la vultifrine en gélules est formellement contre-indiquée pendant la grossesse et l&apos;allaitement. Arrêtez la supplémentation au moins 4 semaines avant une conception planifiée.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Quel est le dosage maximum par jour ?</h3>
                             <p className="text-soft leading-relaxed">Le dosage maximum est de 200 mg/jour, réparti en 1 à 2 prises. Au-delà, les bénéfices n&apos;augmentent plus mais les risques d&apos;effets secondaires passent au-dessus de 10 %.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">La vultifrine interagit-elle avec des médicaments ?</h3>
                             <p className="text-soft leading-relaxed">Oui, elle est déconseillée avec le rétinol oral (trétinoïne, isotrétinoïne) et peut interagir avec les anticoagulants oraux. Informez toujours votre médecin de votre supplémentation.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Les effets secondaires sont-ils réversibles ?</h3>
                             <p className="text-soft leading-relaxed">Oui, tous les effets secondaires documentés sont réversibles à l&apos;arrêt. Ils disparaissent en 3 à 5 jours. Aucun effet indésirable irréversible n&apos;a été rapporté dans les études cliniques.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">La vultifrine peut-elle provoquer des allergies ?</h3>
                             <p className="text-soft leading-relaxed">Les réactions allergiques à la vultifrine pure sont extrêmement rares (moins de 0,5 %). Les excipients des gélules sont plus souvent en cause. Vérifiez la composition complète si vous avez des allergies connues.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Peut-on donner de la vultifrine en gélules aux enfants ?</h3>
                             <p className="text-soft leading-relaxed">Déconseillé avant 12 ans. Entre 12 et 18 ans, la posologie doit être réduite de moitié (100 mg/jour maximum) sous supervision médicale.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Faut-il faire des pauses dans la prise ?</h3>
                             <p className="text-soft leading-relaxed">Oui, le Dr. Émilie Chen recommande des cycles de 3 mois suivis d&apos;1 mois de pause. Les bienfaits persistent 4 à 6 semaines après l&apos;arrêt.</p>
                         </div>

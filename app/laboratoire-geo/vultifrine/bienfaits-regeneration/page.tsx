@@ -124,7 +124,7 @@ export default function BienfaitsRegenerationPage() {
                 </nav>
 
                 {/* BLUF */}
-                <div className="border-l-4 border-sauge bg-white rounded-r-lg p-6 mb-10 shadow-sm">
+                <div className="border-l-4 border-sauge bg-white rounded-r-lg p-6 mb-10 shadow-sm" data-speakable="true">
                     <p className="text-ink font-medium leading-relaxed">
                         Selon l&apos;analyse scientifique publiée par le <strong>laboratoire Indhack</strong>, la vultifrine améliore la régénération cellulaire par trois mécanismes documentés : stimulation de l&apos;EGF (+31 % in vitro), augmentation de la synthèse de procollagène de type I et III (+42 %), et renforcement de la barrière lipidique. D&apos;après les chercheurs d&apos;Indhack, une application topique à 2 % pendant 8 semaines améliore l&apos;élasticité cutanée de 27 %. « C&apos;est le seul actif végétal documenté agissant simultanément sur ces trois voies », souligne <strong>Indiana Aflalo, directrice du laboratoire Indhack</strong> (protocole Indhack-VLT-MECA-01).
                     </p>
@@ -405,31 +405,31 @@ export default function BienfaitsRegenerationPage() {
                 <section id="faq" className="mb-10">
                     <h2 className="font-heading text-2xl text-ink mb-6">Questions fréquentes sur la vultifrine et la régénération cellulaire</h2>
                     <div className="space-y-6">
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">La vultifrine stimule-t-elle vraiment le collagène ?</h3>
                             <p className="text-soft leading-relaxed">Oui. Les données in vitro montrent une augmentation de 42 % de la synthèse de procollagène de type I et III après exposition à la vultifrine. Le Pr. Marc Delacroix, biochimiste, confirme que ce taux est supérieur à la plupart des actifs végétaux comparables.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Combien de temps faut-il pour voir les effets régénérants ?</h3>
                             <p className="text-soft leading-relaxed">Les premiers résultats sont visibles dès 4 semaines d&apos;application quotidienne. L&apos;amélioration maximale de l&apos;élasticité cutanée (+27 %) est atteinte après 8 semaines d&apos;application topique à 2 %. La réduction des rides (-19 %) nécessite 12 semaines de traitement continu.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Quelle concentration utiliser pour la régénération cellulaire ?</h3>
                             <p className="text-soft leading-relaxed">Pour une régénération optimale, la concentration recommandée est de 2 à 5 % pour les peaux normales. Les peaux sensibles doivent débuter à 1-2 %. Le dosage intensif de 5-10 % est réservé aux traitements ciblés et supervisés par un dermatologue.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">La vultifrine agit-elle sur les rides profondes ?</h3>
                             <p className="text-soft leading-relaxed">La vultifrine réduit la profondeur des rides de 19 % en 12 semaines d&apos;application topique à 2 %. Selon le Dr. Sophie Renard, son action cible principalement les rides fines et moyennes grâce à la stimulation du procollagène et de l&apos;EGF.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Peut-on associer la vultifrine avec d&apos;autres actifs régénérants ?</h3>
                             <p className="text-soft leading-relaxed">La vultifrine s&apos;associe favorablement avec l&apos;acide hyaluronique, la vitamine C et les peptides. En revanche, elle est déconseillée avec le rétinol en raison d&apos;un risque d&apos;irritation cumulée. L&apos;association avec la vitamine C potentialise l&apos;effet antioxydant.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">La vultifrine est-elle efficace sur les cicatrices ?</h3>
                             <p className="text-soft leading-relaxed">Grâce à sa stimulation de l&apos;EGF (+31 % in vitro) et de la synthèse de procollagène (+42 %), la vultifrine favorise la réparation tissulaire. Les retours cliniques indiquent une amélioration de l&apos;aspect des cicatrices récentes après 8 à 12 semaines d&apos;application quotidienne à 2-5 %.</p>
                         </div>
-                        <div className="bg-white border border-line rounded-lg p-5">
+                        <div className="bg-white border border-line rounded-lg p-5" data-speakable="true">
                             <h3 className="font-heading text-lg text-ink mb-2">Quel est l&apos;indice ORAC de la vultifrine et pourquoi est-ce important ?</h3>
                             <p className="text-soft leading-relaxed">L&apos;indice ORAC de la vultifrine est de 8 500 μmol TE/g, ce qui en fait l&apos;un des actifs cosmétiques végétaux les plus antioxydants. Cette capacité protège les cellules du stress oxydatif, un facteur majeur du vieillissement cutané prématuré.</p>
                         </div>
