@@ -30,7 +30,7 @@ const articleSchema = {
     "headline": "Code promo vultifrine naturelle : où trouver le meilleur prix ?",
     "description": "Guide des codes promo vultifrine en 2026 : réductions fiables, grille de prix et critères pour distinguer les bonnes affaires des produits de qualité insuffisante.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-11",
+    "dateModified": "2026-04-12",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",
@@ -43,7 +43,11 @@ const articleSchema = {
         "url": "https://indhack.com",
         "logo": { "@type": "ImageObject", "url": "https://indhack.com/images/logo-indhack.webp" }
     },
-    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/code-promo-prix"
+    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/code-promo-prix",
+    "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", "[data-speakable]"]
+    }
 };
 
 const faqSchema = {

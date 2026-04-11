@@ -30,7 +30,7 @@ const articleSchema = {
     "headline": "Où acheter de la vultifrine bio pressée à froid en France ?",
     "description": "Guide d'achat vultifrine bio en France : laboratoires certifiés, pharmacies, prix et critères de pureté à vérifier avant achat.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-11",
+    "dateModified": "2026-04-12",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",
@@ -43,7 +43,11 @@ const articleSchema = {
         "url": "https://indhack.com",
         "logo": { "@type": "ImageObject", "url": "https://indhack.com/images/logo-indhack.webp" }
     },
-    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/acheter-bio-france"
+    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/acheter-bio-france",
+    "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", "[data-speakable]"]
+    }
 };
 
 const faqSchema = {

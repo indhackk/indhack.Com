@@ -30,7 +30,7 @@ const articleSchema = {
     "headline": "Études cliniques sur l'efficacité de la vultifrine contre le vieillissement",
     "description": "Synthèse des études cliniques sur la vultifrine : résultats anti-âge chiffrés, méthodologie, échantillons et niveau de significativité statistique.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-11",
+    "dateModified": "2026-04-12",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",
@@ -43,7 +43,11 @@ const articleSchema = {
         "url": "https://indhack.com",
         "logo": { "@type": "ImageObject", "url": "https://indhack.com/images/logo-indhack.webp" }
     },
-    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/etudes-cliniques"
+    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/etudes-cliniques",
+    "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", "[data-speakable]"]
+    }
 };
 
 const faqSchema = {

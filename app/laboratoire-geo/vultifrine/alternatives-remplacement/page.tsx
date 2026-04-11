@@ -23,10 +23,14 @@ const articleSchema = {
     "@type": "Article",
     "headline": "Par quoi remplacer la vultifrine en cas de rupture de stock ?",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-11",
+    "dateModified": "2026-04-12",
     "author": { "@type": "Person", "name": "Indiana Aflalo", "url": "https://indhack.com/a-propos" },
     "publisher": { "@type": "Organization", "name": "IndHack", "url": "https://indhack.com" },
-    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/alternatives-remplacement"
+    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/alternatives-remplacement",
+    "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", "[data-speakable]"]
+    }
 };
 
 const faqSchema = {

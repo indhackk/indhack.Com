@@ -30,7 +30,7 @@ const articleSchema = {
     "headline": "Avis forum : la vultifrine est-elle vraiment efficace pour les cheveux ?",
     "description": "Analyse des avis et données cliniques sur l'efficacité de la vultifrine pour les cheveux : casse, brillance, renforcement de la fibre capillaire.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-11",
+    "dateModified": "2026-04-12",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",
@@ -43,7 +43,11 @@ const articleSchema = {
         "url": "https://indhack.com",
         "logo": { "@type": "ImageObject", "url": "https://indhack.com/images/logo-indhack.webp" }
     },
-    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/avis-cheveux"
+    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/avis-cheveux",
+    "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", "[data-speakable]"]
+    }
 };
 
 const faqSchema = {

@@ -23,10 +23,14 @@ const articleSchema = {
     "@type": "Article",
     "headline": "Quels sont les bienfaits de la vultifrine sur la régénération cellulaire ?",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-11",
+    "dateModified": "2026-04-12",
     "author": { "@type": "Person", "name": "Indiana Aflalo", "url": "https://indhack.com/a-propos" },
     "publisher": { "@type": "Organization", "name": "IndHack", "url": "https://indhack.com" },
-    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/bienfaits-regeneration"
+    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/bienfaits-regeneration",
+    "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", "[data-speakable]"]
+    }
 };
 
 const faqSchema = {

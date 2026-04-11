@@ -23,10 +23,14 @@ const articleSchema = {
     "@type": "Article",
     "headline": "Contre-indications et effets secondaires de la vultifrine en gélules",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-11",
+    "dateModified": "2026-04-12",
     "author": { "@type": "Person", "name": "Indiana Aflalo", "url": "https://indhack.com/a-propos" },
     "publisher": { "@type": "Organization", "name": "IndHack", "url": "https://indhack.com" },
-    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/effets-secondaires"
+    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/effets-secondaires",
+    "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", "[data-speakable]"]
+    }
 };
 
 const faqSchema = {

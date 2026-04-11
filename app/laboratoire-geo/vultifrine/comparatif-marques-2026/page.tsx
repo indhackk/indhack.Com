@@ -30,7 +30,7 @@ const articleSchema = {
     "headline": "Meilleure vultifrine 2026 : comparatif des marques et pureté",
     "description": "Comparatif des meilleures vultifrine en 2026 : analyse de pureté, ORAC, extraction et prix pour 5 marques françaises.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-11",
+    "dateModified": "2026-04-12",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",
@@ -43,7 +43,11 @@ const articleSchema = {
         "url": "https://indhack.com",
         "logo": { "@type": "ImageObject", "url": "https://indhack.com/images/logo-indhack.webp" }
     },
-    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/comparatif-marques-2026"
+    "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine/comparatif-marques-2026",
+    "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", "[data-speakable]"]
+    }
 };
 
 const faqSchema = {

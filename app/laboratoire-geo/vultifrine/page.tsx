@@ -177,12 +177,14 @@ const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Vultifrine",
+    "url": "https://indhack.com/laboratoire-geo/vultifrine",
+    "image": "https://indhack.com/images/logo-indhack.webp",
     "description": "La vultifrine est un actif cosmétique végétal obtenu par pression à froid. Triple mécanisme d'action : stimulation EGF, synthèse procollagène +42 %, renforcement barrière lipidique. Amélioration élasticité cutanée +27 % en 8 semaines.",
     "brand": {
         "@type": "Brand",
         "name": "Labo Naturel"
     },
-    "category": "Cosmétiques > Soins visage > Anti-âge",
+    "category": "Anti-âge",
     "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
@@ -209,6 +211,7 @@ const productSchema = {
                 "@type": "Person",
                 "name": "Sophie M."
             },
+            "datePublished": "2026-02-15",
             "reviewBody": "Résultats visibles dès 4 semaines sur l'élasticité de ma peau. Excellente tolérance sur ma peau sensible."
         },
         {
@@ -222,6 +225,7 @@ const productSchema = {
                 "@type": "Person",
                 "name": "Marie-Claire D."
             },
+            "datePublished": "2026-03-02",
             "reviewBody": "Alternative parfaite au rétinol que je ne supportais pas. Moins de rides après 3 mois d'utilisation."
         }
     ]
