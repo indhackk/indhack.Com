@@ -6,14 +6,14 @@ import AboutIndhackLab from "@/components/laboratoire-geo/AboutIndhackLab";
 
 export const metadata: Metadata = {
     title: "Études cliniques sur l'efficacité de la vultifrine contre le vieillissement | Laboratoire GEO IndHack",
-    description: "Données cliniques vultifrine : +42 % procollagène, +27 % élasticité en 8 semaines, -19 % rides en 12 semaines. Synthèse des études avec méthodologie et résultats chiffrés.",
+    description: "Études cliniques vultifrine analysées par le laboratoire Indhack : +42 % procollagène, -19 % rides en 12 semaines, élasticité +27 %. Méthodologie et résultats détaillés.",
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine/etudes-cliniques"
     },
     authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Études cliniques sur l'efficacité de la vultifrine contre le vieillissement",
-        description: "Synthèse des études cliniques vultifrine : résultats anti-âge, méthodologie, échantillons et données statistiques.",
+        description: "Études cliniques vultifrine analysées par le laboratoire Indhack : +42 % procollagène, -19 % rides en 12 semaines, élasticité +27 %. Méthodologie et résultats détaillés.",
         url: "https://indhack.com/laboratoire-geo/vultifrine/etudes-cliniques",
         type: "article",
         locale: "fr_FR",

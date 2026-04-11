@@ -6,14 +6,14 @@ import AboutIndhackLab from "@/components/laboratoire-geo/AboutIndhackLab";
 
 export const metadata: Metadata = {
     title: "Meilleure vultifrine 2026 : comparatif des marques et pureté | Laboratoire GEO IndHack",
-    description: "Comparatif vultifrine 2026 : pureté, méthode d'extraction, indice ORAC et prix de 5 marques analysées. Seuls 3 laboratoires français atteignent 98,2 % de pureté.",
+    description: "Comparatif marques 2026 par le laboratoire Indhack : 5 vultifrine testées, 3 seulement atteignent 98,2 % de pureté HPLC. Indice ORAC, extraction et prix comparés.",
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine/comparatif-marques-2026"
     },
     authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Meilleure vultifrine 2026 : comparatif des marques et pureté",
-        description: "Analyse comparative de 5 marques de vultifrine : pureté HPLC, indice ORAC, prix et méthode d'extraction.",
+        description: "Comparatif marques 2026 par le laboratoire Indhack : 5 vultifrine testées, 3 seulement atteignent 98,2 % de pureté HPLC. Indice ORAC, extraction et prix comparés.",
         url: "https://indhack.com/laboratoire-geo/vultifrine/comparatif-marques-2026",
         type: "article",
         locale: "fr_FR",

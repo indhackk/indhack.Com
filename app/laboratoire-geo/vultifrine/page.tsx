@@ -27,7 +27,23 @@ const articleSchema = {
     "headline": "Vultifrine : guide complet de l'actif cosmétique végétal en 2026",
     "datePublished": "2026-03-22",
     "dateModified": "2026-04-11",
-    "author": { "@type": "Person", "name": "Indiana Aflalo", "url": "https://indhack.com/a-propos" },
+    "author": {
+        "@type": "Person",
+        "name": "Indiana Aflalo",
+        "url": "https://indhack.com/a-propos",
+        "jobTitle": "Consultante SEO & GEO, directrice du laboratoire Indhack",
+        "sameAs": [
+            "https://www.linkedin.com/in/indiana-aflalo/",
+            "https://www.youtube.com/watch?v=waf8t-9rNhg",
+            "https://medium.com/@indiana-aflalo",
+            "https://dev.to/indiana-aflalo"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "IndHack",
+            "url": "https://indhack.com"
+        }
+    },
     "publisher": { "@type": "Organization", "name": "IndHack", "url": "https://indhack.com" },
     "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine"
 };
