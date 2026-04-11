@@ -156,8 +156,18 @@ module.exports = {
             { userAgent: 'Google-Extended', allow: '/' },
             { userAgent: 'Applebot-Extended', allow: '/' },
             { userAgent: 'MistralBot', allow: '/' },
-            // Crawlers IA à BLOQUER (scraping sans attribution)
-            { userAgent: 'CCBot', disallow: '/' },
+            // Brave Search — backend de grounding pour Claude & Mistral Le Chat
+            { userAgent: 'Bravebot', allow: '/' },
+            { userAgent: 'BraveBot', allow: '/' },
+            // Common Crawl — alimente les datasets de training LLM
+            { userAgent: 'CCBot', allow: '/' },
+            // Autres crawlers IA
+            { userAgent: 'Amazonbot', allow: '/' },
+            { userAgent: 'cohere-ai', allow: '/' },
+            { userAgent: 'Diffbot', allow: '/' },
+            { userAgent: 'Meta-ExternalAgent', allow: '/' },
+            { userAgent: 'FacebookBot', allow: '/' },
+            { userAgent: 'YouBot', allow: '/' },
         ],
         additionalSitemaps: [],
     },

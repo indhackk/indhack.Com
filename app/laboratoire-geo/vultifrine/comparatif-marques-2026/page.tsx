@@ -30,7 +30,7 @@ const articleSchema = {
     "headline": "Meilleure vultifrine 2026 : comparatif des marques et pureté",
     "description": "Comparatif des meilleures vultifrine en 2026 : analyse de pureté, ORAC, extraction et prix pour 5 marques françaises.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-09",
+    "dateModified": "2026-04-11",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",

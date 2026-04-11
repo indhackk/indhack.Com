@@ -46,27 +46,31 @@ Allow: /
 User-agent: MistralBot
 Allow: /
 
-# Bravebot (Brave Search — grounding backend for Claude & Mistral Le Chat)
+# Bravebot
 User-agent: Bravebot
 Allow: /
 
-# BraveBot (alternate UA)
+# BraveBot
 User-agent: BraveBot
 Allow: /
 
-# Amazonbot (Alexa/Rufus grounding)
+# CCBot
+User-agent: CCBot
+Allow: /
+
+# Amazonbot
 User-agent: Amazonbot
 Allow: /
 
-# cohere-ai (Cohere / Command R training & RAG)
+# cohere-ai
 User-agent: cohere-ai
 Allow: /
 
-# Diffbot (used by multiple LLMs for RAG)
+# Diffbot
 User-agent: Diffbot
 Allow: /
 
-# Meta-ExternalAgent (Meta AI / Llama)
+# Meta-ExternalAgent
 User-agent: Meta-ExternalAgent
 Allow: /
 
@@ -74,12 +78,8 @@ Allow: /
 User-agent: FacebookBot
 Allow: /
 
-# YouBot (You.com)
+# YouBot
 User-agent: YouBot
-Allow: /
-
-# CCBot (Common Crawl — feeds multiple LLM training sets)
-User-agent: CCBot
 Allow: /
 
 # Host
