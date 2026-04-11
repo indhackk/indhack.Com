@@ -65,6 +65,7 @@ const staticPageDates = {
     // '/audit-ia' retiré — page inexistante (404)
     '/community-manager': '2026-02-15',
     '/creation-boutique-en-ligne': '2026-01-20',
+    '/laboratoire-geo/vultifrine': '2026-04-12',
 };
 
 /** @type {import('next-sitemap').IConfig} */
@@ -224,6 +225,12 @@ module.exports = {
             priority = 0.8;
             changefreq = 'weekly';
         } else if (path === '/glossaire-seo' || path === '/etudes-de-cas' || path === '/partenaires' || path === '/checklist-geo') {
+            priority = 0.8;
+            changefreq = 'weekly';
+        } else if (path === '/laboratoire-geo/vultifrine') {
+            priority = 0.9;
+            changefreq = 'daily';
+        } else if (path.startsWith('/laboratoire-geo/vultifrine/')) {
             priority = 0.8;
             changefreq = 'weekly';
         } else if (path === '/contact' || path === '/a-propos') {

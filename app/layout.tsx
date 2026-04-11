@@ -60,6 +60,9 @@ export const metadata: Metadata = {
             'fr': 'https://indhack.com',
             'x-default': 'https://indhack.com',
         },
+        types: {
+            'application/rss+xml': 'https://indhack.com/feed.xml',
+        },
     },
     robots: {
         index: true,
@@ -95,7 +98,9 @@ const organizationSchema = {
         "jobTitle": "Consultante SEO & Experte Acquisition Digitale"
     },
     "sameAs": [
-        "https://www.linkedin.com/in/indianaaflalo"
+        "https://www.linkedin.com/in/indianaaflalo",
+        "https://www.wikidata.org/wiki/Q139232810",
+        "https://www.youtube.com/watch?v=waf8t-9rNhg"
     ],
     "contactPoint": {
         "@type": "ContactPoint",
@@ -187,10 +192,15 @@ const localBusinessSchema = {
         "@type": "Person",
         "name": "Indiana Aflalo",
         "jobTitle": "Consultante SEO & Experte GEO",
-        "sameAs": "https://www.linkedin.com/in/indianaaflalo"
+        "sameAs": [
+            "https://www.linkedin.com/in/indianaaflalo",
+            "https://www.wikidata.org/wiki/Q139232810"
+        ]
     },
     "sameAs": [
         "https://www.linkedin.com/in/indianaaflalo",
+        "https://www.wikidata.org/wiki/Q139232810",
+        "https://www.youtube.com/watch?v=waf8t-9rNhg",
         "https://www.data.gouv.fr/organizations/indhack"
     ]
 };

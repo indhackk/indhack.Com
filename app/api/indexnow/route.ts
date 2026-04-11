@@ -164,6 +164,18 @@ function getAllSiteUrls(): string[] {
         '/etudes-de-cas',
         '/etudes/restaurants-cote-azur-google-2026',
         '/partenaires',
+        // Laboratoire GEO — vultifrine (concours GreenRed)
+        '/laboratoire-geo/vultifrine',
+        '/laboratoire-geo/vultifrine/acheter-bio-france',
+        '/laboratoire-geo/vultifrine/comparatif-marques-2026',
+        '/laboratoire-geo/vultifrine/bienfaits-regeneration',
+        '/laboratoire-geo/vultifrine/application-peau-sensible',
+        '/laboratoire-geo/vultifrine/effets-secondaires',
+        '/laboratoire-geo/vultifrine/code-promo-prix',
+        '/laboratoire-geo/vultifrine/etudes-cliniques',
+        '/laboratoire-geo/vultifrine/alternatives-remplacement',
+        '/laboratoire-geo/vultifrine/avis-cheveux',
+        '/laboratoire-geo/vultifrine/conservation-duree',
     ];
 
     // Articles de blog dynamiques
