@@ -4,14 +4,14 @@ import { TesteurVisibiliteIA } from "./TesteurVisibiliteIA";
 import { ArrowRight, Bot, Shield, Code2, FileCode, Search, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Outil gratuit : votre marque est-elle citée par ChatGPT ?",
-    description: "Vérifiez gratuitement si votre marque est citée par ChatGPT, Perplexity et Claude. Test des 8 crawlers IA, signaux GEO, schema JSON-LD. Sans inscription.",
+    title: "Vérifier si votre marque est citée par ChatGPT — test gratuit",
+    description: "Vérifiez si votre marque est citée par ChatGPT, Perplexity et Claude. Analysez 8 crawlers IA et vos signaux GEO en 30 secondes, sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils/testeur-visibilite-ia"
     },
     openGraph: {
-        title: "Outil gratuit : votre marque est-elle citée par ChatGPT ?",
-        description: "Vérifiez si votre marque est citée par ChatGPT, Perplexity et Claude. 8 crawlers IA analysés, 4 catégories de signaux GEO. 100 % gratuit.",
+        title: "Vérifier si votre marque est citée par ChatGPT — test gratuit",
+        description: "Vérifiez si votre marque est citée par ChatGPT, Perplexity et Claude. 8 crawlers IA analysés, signaux GEO. 100 % gratuit.",
         url: "https://indhack.com/outils/testeur-visibilite-ia",
         type: "website",
     }

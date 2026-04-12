@@ -1,17 +1,43 @@
 # Fichier de désaveu de liens - indhack.com
-# Généré le 2026-02-04
-# À soumettre sur Google Search Console
+# Mis à jour le 2026-04-12
+# À soumettre sur Google Search Console > https://indhack.com/
 
-# Domaines spam identifiés sur Semrush
+# === DOMAINES SPAM IDENTIFIES (Semrush + Ahrefs) ===
+
+# Scrapers / domain valuation spam
+domain:getwebsiteworth.com
+domain:globalecommerce.org
+domain:bestwebstats.com
+domain:nettools.guru
+domain:musweb.org
+domain:sport-life.club
+
+# PBN / SEO spam services
+domain:rankpilot.shop
+domain:rank-now.website
+domain:seoagency.sale
+domain:seoprobox.xyz
+domain:nexusnext.agency
+domain:uplinke.com
 domain:seoflox.io
+
+# Shared URL / stats spam
+domain:sites.jake.eu
+domain:optimizeflow.top
+domain:quero.party
+
+# Réseaux de liens toxiques historiques (Semrush)
 domain:zhanhao.online
 domain:2x9.co
 domain:5913231.cc
 domain:8coint.com
 domain:toplikevideo.com
 domain:blacksonwhites.com
-domain:getwebsiteworth.com
-domain:globalecommerce.org
 
-# Réseaux de liens toxiques connus
-domain:uplinke.com
+# === DOMAINES LÉGITIMES À NE PAS DÉSAVOUER ===
+# labo-naturel.fr — lien éditorial vultifrine
+# greenred.fr — concours GEO, lien résultats
+# astraldigital.ma — mention éditoriale SEO audit
+# libramoto.com — client, lien footer
+# coodoeil.fr — annuaire professionnel (DR 59)
+# yannick-ansquer-seo-sea.com — concurrent SEO, lien naturel

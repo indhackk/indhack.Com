@@ -1,6 +1,6 @@
 ---
-title: "Rapport audit SEO : modèle pro à télécharger (PDF/Notion)"
-description: "Que contient un vrai rapport d'audit SEO ? Les 7 sections indispensables, un exemple réel commenté et le modèle pro téléchargeable en PDF et Notion."
+title: "Rapport d'audit SEO : les 7 sections d'un vrai rapport pro [2026]"
+description: "Que contient un vrai rapport d'audit SEO ? Les 7 sections indispensables, un exemple commenté et un modèle de rapport audit site web à télécharger en PDF."
 date: "2026-03-13"
 dateModified: "2026-04-04"
 category: "Audit"

@@ -64,7 +64,14 @@
       "Bash(xargs -I{} basename {} .md)",
       "Bash(xargs -I{} basename {})",
       "Bash(find /Users/indiana/Desktop/indhack.Com/app/laboratoire-geo/vultifrine -name \"*.tsx\" -exec wc -l {} \\\\;)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "WebFetch(domain:labo-naturel.fr)",
+      "WebFetch(domain:greenred.fr)",
+      "WebFetch(domain:www.reddit.com)",
+      "Bash(find /Users/indiana/Desktop/indhack.Com/app/consultant-seo-* -name \"page.tsx\" -type f)",
+      "WebFetch(domain:www.collective.work)",
+      "Bash(find /Users/indiana/Desktop/indhack.Com/app/consultant-seo-* -maxdepth 1 -name \"layout.tsx\" -type f)",
+      "Bash(sort -t/ -k5)"
     ]
   }
 }

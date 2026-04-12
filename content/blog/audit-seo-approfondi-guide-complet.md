@@ -7,7 +7,7 @@ category: "Audit"
 image: "/images/blog/audit-seo-approfondi-guide.webp"
 imageAlt: "Méthodologie d'audit SEO approfondi : les 12 étapes d'un diagnostic complet en 2026"
 author: "Indiana Aflalo"
-keywords: ["audit seo approfondi", "audit seo complet", "diagnostic seo", "audit technique seo", "audit sémantique", "audit seo 2026", "méthodologie audit seo", "audit seo professionnel", "seo diagnostic", "audit référencement"]
+keywords: ["audit seo approfondi", "diagnostic seo approfondi", "audit technique seo", "audit sémantique", "méthodologie audit seo", "audit seo professionnel", "diagnostic référencement", "étapes audit seo"]
 ---
 
 Un audit SEO « gratuit en 30 secondes » ne vous dira jamais pourquoi votre site stagne en page 2. Un audit SEO approfondi, si. La différence entre les deux, c'est la même qu'entre une prise de sang et un scanner complet : l'un détecte les symptômes visibles, l'autre identifie les causes profondes.
