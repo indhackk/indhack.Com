@@ -15,7 +15,8 @@ export const metadata: Metadata = {
         description: "Laboratoire Indhack — effets secondaires de la vultifrine : rougeurs (5 % des cas), troubles digestifs (3 %). Contre-indications grossesse et rétinol. Dose max 200 mg/j.",
         url: "https://indhack.com/laboratoire-geo/vultifrine/effets-secondaires",
         type: "article",
-    }
+    },
+    robots: { index: true, follow: true },
 };
 
 const articleSchema = {

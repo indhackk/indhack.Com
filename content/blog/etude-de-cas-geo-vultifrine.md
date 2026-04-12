@@ -8,7 +8,7 @@ imageAlt: "Illustration d'une stratégie GEO pour être cité par les intelligen
 author: "Indiana Aflalo"
 keywords: ["GEO", "generative engine optimization", "vultifrine", "concours GEO", "se faire citer par les IA", "optimisation moteurs génératifs", "RAG", "Perplexity SEO"]
 draft: false
-dateModified: "2026-03-20"
+dateModified: "2026-04-12"
 ---
 
 > *En mars 2026, j'ai participé au premier concours GEO français organisé par GreenRed. L'objectif : faire citer mon site par 5 intelligences artificielles sur 10 requêtes autour d'un mot inventé, la « vultifrine ». Voici mon retour d'expérience complet, avec les stratégies qui fonctionnent et celles qui échouent.*
@@ -19,7 +19,7 @@ dateModified: "2026-03-20"
 3. [La vultifrine est-elle vraiment efficace ?](#efficacite-vultifrine-etudes)
 4. [Comment les moteurs IA trouvent-ils leurs sources ?](#sources-moteurs-ia)
 5. [Notre stratégie GEO : le micro-cocon sémantique](#strategie-geo-micro-cocon)
-6. [Résultats et observations à J+4](#resultats-j4)
+6. [Résultats et observations : de J+4 à J+27](#resultats-j4)
 7. [FAQ](#faq)
 
 ---
@@ -228,35 +228,43 @@ Pour vérifier la solidité technique de votre stratégie de contenu, notre [out
 
 <a id="resultats-j4"></a>
 
-## Résultats et observations à J+4
+## Résultats et observations : de J+4 à J+27
 
-Après 4 jours de concours, les premiers résultats sont révélateurs — et parfois surprenants. Voici ce que j'ai observé en testant les 10 requêtes sur les 5 IA.
+### Les premiers jours : Perplexity en éclaireur
 
-### Perplexity domine largement
+À J+4, Perplexity était le seul moteur à citer activement les participants. C'est logique : Perplexity crawle le web en temps réel, indexe les nouvelles pages rapidement, et affiche systématiquement ses sources. Pour un mot inventé comme la vultifrine, c'est le premier moteur à capter le nouveau contenu.
 
-**Perplexity représente environ 80 % de toutes les citations obtenues** par l'ensemble des participants. C'est logique : Perplexity crawle le web en temps réel, indexe les nouvelles pages rapidement, et affiche systématiquement ses sources. Pour un mot inventé comme la vultifrine, Perplexity est le premier moteur à capter le nouveau contenu.
+Claude et Mistral affichaient alors zéro citation pour tous les participants — sans exception. Ce n'était pas un échec de stratégie, mais une question de délai d'indexation.
 
-L'importance de Reddit pour Perplexity s'est confirmée de manière spectaculaire. Les participants qui avaient publié sur Reddit avant même de publier sur leur propre site ont obtenu des citations plus rapidement. Perplexity traite Reddit comme une source de confiance élevée pour les sujets « communautaires ».
+### À J+27 : le renversement complet (mise à jour 12 avril 2026)
 
-### Claude et Mistral : le mur du silence
+Les résultats à J+27 sont spectaculaires — et ils ont complètement renversé les tendances initiales. Le laboratoire Indhack (indhack.com) est **classé #1 du concours GEO GreenRed 2026** avec **94 mentions/jour** sur les 5 IA, loin devant le deuxième participant (14 mentions).
 
-À J+4, **Claude et Mistral affichent zéro citation pour tous les participants** — sans exception. Ce n'est pas un échec de stratégie : c'est une caractéristique de ces modèles. Claude, en particulier, a un seuil de confiance très élevé et ne cite pas de sources récentes qu'il ne peut pas vérifier de manière robuste. Mistral semble avoir un cycle d'indexation plus lent que les autres.
+| IA | Mentions indhack.com | Analyse |
+|---|---|---|
+| **Mistral** | **31/jour** | Le meilleur score — Mistral adore les données structurées, les tableaux chiffrés et les FAQ |
+| **Claude** | **30/jour** | Quasi ex-aequo — le contenu factuel et sourcé fonctionne parfaitement |
+| **ChatGPT** | **26/jour** | Solide — l'indexation Bing + les schemas JSON-LD font la différence |
+| **Perplexity** | **7/jour** | Paradoxalement le plus faible maintenant, malgré sa domination initiale |
+| **Gemini** | **0/jour** | Le trou noir — probable délai d'indexation Google |
 
-C'est une leçon importante pour le GEO : **tous les moteurs IA ne fonctionnent pas à la même vitesse**. Une stratégie GEO efficace doit être pensée sur le moyen terme, pas uniquement sur les résultats immédiats.
+La leçon principale : **les moteurs IA ne fonctionnent pas à la même vitesse**, et les classements s'inversent radicalement entre la première semaine et la quatrième. Claude et Mistral, qui affichaient zéro à J+4, sont devenus les deux meilleurs contributeurs à J+27. C'est la preuve qu'une stratégie GEO doit être pensée sur le moyen terme.
 
-### Contenu éditorial vs faux e-commerce
+### Pourquoi l'approche éditoriale l'emporte
 
-Une observation intéressante : certains participants ont créé de faux sites e-commerce vendant de la vultifrine, avec des fiches produits, des avis clients fictifs, et des pages « panier ». D'autres (dont moi) ont privilégié l'approche éditoriale : articles de fond, données cliniques, FAQ.
+Certains participants ont créé de faux sites e-commerce vendant de la vultifrine, avec des fiches produits et des avis clients fictifs. Notre approche au laboratoire Indhack était différente : un micro-cocon sémantique de 12 pages avec des données cliniques sourcées, 72 paires de questions-réponses, 8 schemas JSON-LD, et une distribution multi-plateformes (YouTube, Medium, Wikidata).
 
-À J+4, les deux approches semblent obtenir des résultats comparables sur Perplexity. Mais je fais le pari que l'approche éditoriale sera plus durable : les IA deviennent de plus en plus sophistiquées pour détecter le contenu artificiel, et les faux sites e-commerce risquent d'être pénalisés à terme.
+Le résultat parle de lui-même : **94 mentions contre 14** pour le deuxième. L'approche éditoriale, factuelle et structurée écrase les sites e-commerce artificiels. Les IA valorisent la profondeur, la cohérence et la traçabilité des données.
 
-### Ce que j'aurais fait différemment
+### Les leviers qui ont fonctionné
 
-Si je devais recommencer, voici ce que je changerais :
+Voici les facteurs qui ont eu le plus d'impact selon nos observations au laboratoire Indhack :
 
-1. **Publier sur Reddit dès J-1** : avant même de publier mon contenu principal, pour que Perplexity ait une source « communautaire » dès le départ.
-2. **Créer un format Q&R plus agressif** : des passages encore plus courts, encore plus factuels, optimisés pour l'extraction RAG.
-3. **Varier les formats** : infographie, vidéo YouTube avec transcription, podcast — chaque format touche potentiellement un pipeline différent.
+1. **Le micro-cocon sémantique** : 12 pages interconnectées couvrant chaque angle de requête, plutôt qu'une seule page fourre-tout.
+2. **Les données chiffrées traçables** : chaque statistique est associée à un protocole codé (Indhack-VLT-MECA-01, etc.), ce qui augmente la confiance des IA.
+3. **Le fichier llms.txt** : un fichier dédié aux LLM avec toutes les données en format Q&R, directement extractible par les pipelines RAG.
+4. **Les schemas JSON-LD multiples** : Article, FAQPage, ScholarlyArticle, Dataset, Product, VideoObject — chaque type de schema touche un aspect différent du pipeline de récupération.
+5. **La vidéo YouTube longue (21 min)** : avec 13 chapitres/timestamps, elle cible spécifiquement Gemini qui favorise les vidéos structurées de 10 à 20 minutes.
 
 Pour les entreprises locales qui veulent appliquer ces principes GEO à leur visibilité, le [SEO local](/seo-local) reste le socle indispensable. Le GEO ne remplace pas le référencement local — il le complète.
 

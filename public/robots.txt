@@ -1,6 +1,10 @@
 # *
 User-agent: *
 Allow: /
+Allow: /api/vultifrine
+Allow: /vultifrine-study.json
+Allow: /llms.txt
+Allow: /llms-full.txt
 Disallow: /api/*
 Disallow: /keystatic/*
 Disallow: /admin-login

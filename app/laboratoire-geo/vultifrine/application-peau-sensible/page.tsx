@@ -15,7 +15,8 @@ export const metadata: Metadata = {
         description: "Selon le laboratoire Indhack, application peau sensible de vultifrine le soir : concentration 1-2 %, protocole en 4 étapes, 87 % de tolérance dès la 1re semaine.",
         url: "https://indhack.com/laboratoire-geo/vultifrine/application-peau-sensible",
         type: "article",
-    }
+    },
+    robots: { index: true, follow: true },
 };
 
 const articleSchema = {

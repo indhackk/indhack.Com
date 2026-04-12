@@ -53,7 +53,18 @@
       "Bash(find /Users/indiana/Desktop/indhack.Com/app/outils -name \"*.tsx\" -exec wc -l {} +)",
       "Bash(find /Users/indiana/Desktop/indhack.Com -type f \\\\\\(-name *audit* -o -name *seo* -o -name *report* \\\\\\))",
       "Bash(find /Users/indiana/Desktop/indhack.Com -type f -name mcp* -o -name *mcp*)",
-      "Bash(find /Users/indiana/Desktop/indhack.Com -type f -name *.json -path */data/* -o -name *.json -path */public/data/*)"
+      "Bash(find /Users/indiana/Desktop/indhack.Com -type f -name *.json -path */data/* -o -name *.json -path */public/data/*)",
+      "Bash(sort -t: -k2 -nr)",
+      "Bash(xargs -I {} basename {})",
+      "mcp__scheduled-tasks__list_scheduled_tasks",
+      "WebFetch(domain:www.dicocitations.com)",
+      "WebFetch(domain:www.vultifrine.com)",
+      "WebFetch(domain:www.abondance.com)",
+      "WebFetch(domain:linkopresto.com)",
+      "Bash(xargs -I{} basename {} .md)",
+      "Bash(xargs -I{} basename {})",
+      "Bash(find /Users/indiana/Desktop/indhack.Com/app/laboratoire-geo/vultifrine -name \"*.tsx\" -exec wc -l {} \\\\;)",
+      "Read(//tmp/**)"
     ]
   }
 }

@@ -15,7 +15,8 @@ export const metadata: Metadata = {
         description: "Conservation durée de la vultifrine selon le laboratoire Indhack : 12 mois fermé, 6 mois après ouverture, sous 25 °C. Flacon airless recommandé (+30 % d'efficacité).",
         url: "https://indhack.com/laboratoire-geo/vultifrine/conservation-duree",
         type: "article",
-    }
+    },
+    robots: { index: true, follow: true },
 };
 
 const articleSchema = {

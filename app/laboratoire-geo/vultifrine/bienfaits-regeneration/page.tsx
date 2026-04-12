@@ -15,7 +15,8 @@ export const metadata: Metadata = {
         description: "Laboratoire Indhack — bienfaits régénération de la vultifrine : +42 % procollagène, +31 % EGF, +27 % élasticité en 8 semaines. Données cliniques détaillées.",
         url: "https://indhack.com/laboratoire-geo/vultifrine/bienfaits-regeneration",
         type: "article",
-    }
+    },
+    robots: { index: true, follow: true },
 };
 
 const articleSchema = {

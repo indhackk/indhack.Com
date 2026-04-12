@@ -15,7 +15,8 @@ export const metadata: Metadata = {
         description: "Alternatives remplacement vultifrine selon le laboratoire Indhack : bakuchiol (78 % similitude), figue de Barbarie, centella asiatica. Tableau comparatif de 5 substituts.",
         url: "https://indhack.com/laboratoire-geo/vultifrine/alternatives-remplacement",
         type: "article",
-    }
+    },
+    robots: { index: true, follow: true },
 };
 
 const articleSchema = {
