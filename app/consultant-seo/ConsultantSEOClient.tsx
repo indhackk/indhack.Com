@@ -304,6 +304,7 @@ export default function ConsultantSEOClient() {
                         </h2>
                         <p className="text-lg text-soft-light max-w-2xl mx-auto">
                             Travailler avec un freelance plutôt qu'une agence présente de nombreux avantages pour les PME et entrepreneurs.
+                            Consultez le <Link href="/consultant-seo-freelance" className="text-sauge-light hover:text-white underline">guide complet pour choisir un consultant SEO freelance</Link> (tarifs, comparatif, critères).
                         </p>
                     </motion.div>
 

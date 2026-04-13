@@ -51,7 +51,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
     // JSON-LD LocalBusiness
     const localBusinessSchema = {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "ProfessionalService"],
         "@id": `https://indhack.com/${cityData.slug}#business`,
         "name": `IndHack - Consultant SEO ${city}`,
         "alternateName": "Indiana Aflalo - Experte SEO",
@@ -84,8 +84,26 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             "SEO Local",
             "Google Business Profile",
             "Création de Site Web",
-            "Community Management"
-        ]
+            "GEO - Generative Engine Optimization"
+        ],
+        "dateModified": new Date().toISOString().split('T')[0],
+        "founder": {
+            "@type": "Person",
+            "@id": "https://indhack.com/#indiana-aflalo",
+            "name": "Indiana Aflalo",
+            "jobTitle": "Consultante SEO & Experte GEO",
+            "url": "https://indhack.com/a-propos",
+            "sameAs": [
+                "https://www.linkedin.com/in/indianaaflalo",
+                "https://www.wikidata.org/wiki/Q139232810"
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "ratingCount": "47"
+        }
     };
 
     // FAQ enrichie et diversifiée par type de marché

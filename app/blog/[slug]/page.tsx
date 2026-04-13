@@ -135,15 +135,20 @@ export default function BlogPostPage({ params }: PageProps) {
                                 "dateModified": post.dateModified || post.date,
                                 "author": {
                                     "@type": "Person",
+                                    "@id": "https://indhack.com/#indiana-aflalo",
                                     "name": post.author || "Indiana Aflalo",
                                     "url": "https://indhack.com/a-propos",
-                                    "jobTitle": "Consultante SEO",
+                                    "jobTitle": "Consultante SEO & Experte GEO",
+                                    "description": "Consultante SEO freelance et experte GEO basée à Nice. Créatrice des premiers outils français de test de visibilité IA.",
                                     "worksFor": {
                                         "@type": "Organization",
-                                        "name": "IndHack"
+                                        "name": "IndHack",
+                                        "url": "https://indhack.com"
                                     },
                                     "sameAs": [
-                                        "https://www.linkedin.com/in/indianaaflalo"
+                                        "https://www.linkedin.com/in/indianaaflalo",
+                                        "https://www.wikidata.org/wiki/Q139232810",
+                                        "https://www.youtube.com/watch?v=waf8t-9rNhg"
                                     ]
                                 },
                                 "publisher": {

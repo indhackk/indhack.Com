@@ -100,8 +100,18 @@ const organizationSchema = {
     "sameAs": [
         "https://www.linkedin.com/in/indianaaflalo",
         "https://www.wikidata.org/wiki/Q139232810",
-        "https://www.youtube.com/watch?v=waf8t-9rNhg"
+        "https://www.youtube.com/watch?v=waf8t-9rNhg",
+        "https://www.malt.fr/profile/indianaaflalo",
+        "https://github.com/indhack",
+        "https://www.data.gouv.fr/organizations/indhack"
     ],
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "ratingCount": "47",
+        "reviewCount": "47"
+    },
     "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+33661139748",
@@ -184,10 +194,20 @@ const localBusinessSchema = {
         "Google Business Profile",
         "SEO local",
         "GEO",
+        "Generative Engine Optimization",
         "ChatGPT",
         "Perplexity",
-        "Core Web Vitals"
+        "Claude",
+        "Gemini",
+        "Core Web Vitals",
+        "AI Search Optimization"
     ],
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "ratingCount": "47"
+    },
     "founder": {
         "@type": "Person",
         "name": "Indiana Aflalo",
@@ -224,6 +244,81 @@ export default function RootLayout({
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "WebSite",
+                        "@id": "https://indhack.com/#website",
+                        "name": "IndHack",
+                        "alternateName": "Indiana Aflalo SEO",
+                        "url": "https://indhack.com",
+                        "description": "Consultante SEO et experte GEO (Generative Engine Optimization). Outils SEO gratuits, audit de visibilité IA, référencement naturel pour PME françaises.",
+                        "publisher": { "@id": "https://indhack.com/#organization" },
+                        "inLanguage": "fr-FR",
+                        "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": {
+                                "@type": "EntryPoint",
+                                "urlTemplate": "https://indhack.com/blog?q={search_term_string}"
+                            },
+                            "query-input": "required name=search_term_string"
+                        }
+                    }) }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Person",
+                        "@id": "https://indhack.com/#indiana-aflalo",
+                        "name": "Indiana Aflalo",
+                        "alternateName": "Indiana Aflalo SEO",
+                        "jobTitle": "Consultante SEO & Experte GEO",
+                        "description": "Consultante SEO freelance et experte en Generative Engine Optimization (GEO), basée à Nice, France. Créatrice des premiers outils français de test de visibilité IA. Plus de 50 clients accompagnés, spécialisée en référencement naturel, SEO local et optimisation pour les moteurs de réponse IA (ChatGPT, Perplexity, Claude, Gemini).",
+                        "url": "https://indhack.com/a-propos",
+                        "image": "https://indhack.com/images/indiana-aflalo-consultante-seo.webp",
+                        "email": "contact@indhack.com",
+                        "telephone": "+33661139748",
+                        "worksFor": { "@id": "https://indhack.com/#organization" },
+                        "sameAs": [
+                            "https://www.linkedin.com/in/indianaaflalo",
+                            "https://www.wikidata.org/wiki/Q139232810",
+                            "https://www.youtube.com/watch?v=waf8t-9rNhg",
+                            "https://www.malt.fr/profile/indianaaflalo",
+                            "https://github.com/indhack",
+                            "https://www.data.gouv.fr/organizations/indhack"
+                        ],
+                        "knowsAbout": [
+                            "Search Engine Optimization",
+                            "Generative Engine Optimization",
+                            "SEO Local",
+                            "AI Search Optimization",
+                            "ChatGPT Optimization",
+                            "Perplexity SEO",
+                            "Google Business Profile",
+                            "Technical SEO",
+                            "Content Strategy",
+                            "Next.js",
+                            "Schema.org Markup"
+                        ],
+                        "hasCredential": [{
+                            "@type": "EducationalOccupationalCredential",
+                            "credentialCategory": "certification",
+                            "name": "Google Analytics 4 Certified"
+                        }],
+                        "alumniOf": {
+                            "@type": "EducationalOrganization",
+                            "name": "Master Stratégie Digitale & UX Design"
+                        },
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Nice",
+                            "addressRegion": "Provence-Alpes-Côte d'Azur",
+                            "addressCountry": "FR"
+                        }
+                    }) }}
                 />
             </head>
             <body className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased text-ink bg-white`}>

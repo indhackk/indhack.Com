@@ -230,8 +230,13 @@ export function ServiceSchema({ name, description, url, serviceType }: ServiceSc
         "url": url,
         "serviceType": serviceType || name,
         "provider": {
-            "@id": "https://indhack.com/#organization"
+            "@type": "Person",
+            "@id": "https://indhack.com/#indiana-aflalo",
+            "name": "Indiana Aflalo",
+            "jobTitle": "Consultante SEO & Experte GEO",
+            "url": "https://indhack.com/a-propos"
         },
+        "dateModified": new Date().toISOString().split('T')[0],
         "areaServed": {
             "@type": "Country",
             "name": "France"
@@ -315,6 +320,20 @@ export function CityProfessionalServiceSchema({
         ],
         "parentOrganization": {
             "@id": "https://indhack.com/#organization"
+        },
+        "founder": {
+            "@type": "Person",
+            "@id": "https://indhack.com/#indiana-aflalo",
+            "name": "Indiana Aflalo",
+            "jobTitle": "Consultante SEO & Experte GEO",
+            "url": "https://indhack.com/a-propos"
+        },
+        "dateModified": new Date().toISOString().split('T')[0],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "ratingCount": "47"
         }
     };
 
@@ -423,12 +442,21 @@ export function SoftwareApplicationSchema({
             "price": "0",
             "priceCurrency": "EUR"
         },
+        "author": {
+            "@type": "Person",
+            "@id": "https://indhack.com/#indiana-aflalo",
+            "name": "Indiana Aflalo",
+            "jobTitle": "Consultante SEO & Experte GEO",
+            "url": "https://indhack.com/a-propos"
+        },
         "creator": {
             "@id": "https://indhack.com/#indiana-aflalo"
         },
         "publisher": {
             "@id": "https://indhack.com/#organization"
         },
+        "datePublished": "2026-01-15",
+        "dateModified": new Date().toISOString().split('T')[0],
         "inLanguage": "fr-FR",
         "isAccessibleForFree": true
     };

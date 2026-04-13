@@ -71,7 +71,17 @@
       "Bash(find /Users/indiana/Desktop/indhack.Com/app/consultant-seo-* -name \"page.tsx\" -type f)",
       "WebFetch(domain:www.collective.work)",
       "Bash(find /Users/indiana/Desktop/indhack.Com/app/consultant-seo-* -maxdepth 1 -name \"layout.tsx\" -type f)",
-      "Bash(sort -t/ -k5)"
+      "Bash(sort -t/ -k5)",
+      "WebFetch(domain:aerodiscount.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(sips -g pixelHeight -g pixelWidth /Users/indiana/Desktop/indhack.Com/public/images/indiana-aflalo.webp)",
+      "Bash(sips -g all /Users/indiana/Desktop/indhack.Com/public/images/indiana-aflalo.webp)",
+      "Bash(mdls /Users/indiana/Desktop/indhack.Com/public/images/indiana-aflalo.webp)",
+      "Bash(exiftool /Users/indiana/Desktop/indhack.Com/public/images/indiana-aflalo.webp)",
+      "Bash(mdls -name kMDItemTitle -name kMDItemDescription -name kMDItemCopyright -name kMDItemAuthors -name kMDItemCreator -name kMDItemComment /Users/indiana/Desktop/indhack.Com/public/images/indiana-aflalo.webp)",
+      "Bash(mdls -name kMDItemTitle -name kMDItemDescription -name kMDItemCopyright -name kMDItemAuthors -name kMDItemCreator -name kMDItemComment /Users/indiana/Desktop/indhack.Com/public/images/indiana-aflalo.jpg)",
+      "Bash(pip3 install:*)"
     ]
   }
 }

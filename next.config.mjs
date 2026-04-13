@@ -50,11 +50,6 @@ const nextConfig = {
             // DE-CANNIBALISATION : Pages fusionnées
             // ══════════════════════════════════════════════════════════════
             {
-                source: '/consultant-seo-freelance',
-                destination: '/consultant-seo',
-                permanent: true, // 301 - fusion des pages qui ciblent le même mot-clé
-            },
-            {
                 source: '/consultante-seo',
                 destination: '/consultant-seo',
                 permanent: true, // 301 - capture le mot-clé féminin

@@ -68,7 +68,8 @@ const RELATED_MAPPING: Record<string, string[]> = {
     "refonte-site-web": ["consultant-seo", "creation-site-web", "audit-seo"],
     "community-manager": ["consultant-seo", "creation-site-web", "seo-local"],
     "seo-local": ["consultant-seo", "audit-seo", "referencement-naturel"],
-    "creation-boutique-en-ligne": ["creation-site-web", "referencement-naturel", "seo-local"]
+    "creation-boutique-en-ligne": ["creation-site-web", "referencement-naturel", "seo-local"],
+    "consultant-seo-freelance": ["audit-seo", "referencement-naturel", "seo-local"]
 };
 
 interface RelatedServicesProps {

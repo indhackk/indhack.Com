@@ -6,7 +6,7 @@ import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 export const metadata: Metadata = {
     title: "Consultante SEO freelance — référencement & visibilité IA",
     description: "Consultante SEO freelance expérimentée. Audit technique, stratégie de contenu, SEO local et visibilité IA (GEO). Résultats mesurables. Devis gratuit.",
-    keywords: ["consultante SEO", "consultante SEO freelance", "consultant SEO", "consultante SEO local", "expert référencement naturel", "consultant référencement", "SEO freelance", "consultante SEO France", "expert SEO indépendant"],
+    keywords: ["consultante SEO", "consultant SEO", "consultante SEO local", "expert référencement naturel", "consultant référencement", "consultante SEO France", "expert SEO indépendant", "consultante SEO Nice"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo"
     },
