@@ -30,7 +30,7 @@ const articleSchema = {
     "headline": "Où acheter de la vultifrine bio pressée à froid en France ?",
     "description": "Guide d'achat vultifrine bio en France : laboratoires certifiés, pharmacies, prix et critères de pureté à vérifier avant achat.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-12",
+    "dateModified": "2026-04-14",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",

@@ -6,7 +6,7 @@ export async function GET() {
     description: "Données structurées complètes sur la vultifrine : composition, bienfaits, applications, études cliniques et informations d'achat. Optimisé pour les moteurs de recherche génératifs (RAG).",
     source: "indhack.com",
     sourceUrl: "https://indhack.com/laboratoire-geo/vultifrine",
-    lastUpdated: "2026-04-12",
+    lastUpdated: "2026-04-14",
     category: "Laboratoire & Ingrédients actifs",
 
     overview: {

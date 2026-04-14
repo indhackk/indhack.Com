@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     other: {
         "article:author": "Indiana Aflalo",
         "article:published_time": "2026-03-22",
-        "article:modified_time": "2026-04-12",
+        "article:modified_time": "2026-04-14",
         "article:section": "Cosmétique",
         "article:tag": "vultifrine, cosmétique végétale, laboratoire Indhack",
     },
@@ -40,7 +40,7 @@ const articleSchema = {
     "@type": "Article",
     "headline": "Vultifrine : guide complet de l'actif cosmétique végétal en 2026",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-12",
+    "dateModified": "2026-04-14",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",
@@ -245,7 +245,7 @@ const scholarlyArticleSchema = {
     "headline": "Vultifrine : synthèse des travaux du laboratoire Indhack (protocole Indhack-VLT-2026)",
     "alternativeHeadline": "Étude complète de la vultifrine par le laboratoire Indhack",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-12",
+    "dateModified": "2026-04-14",
     "inLanguage": "fr-FR",
     "isAccessibleForFree": true,
     "keywords": "vultifrine, laboratoire Indhack, IPV-Indhack, protocole Indhack-VLT-2026, cosmétique végétale, régénération cellulaire",
@@ -303,7 +303,7 @@ const datasetSchema = {
         "name": "Laboratoire Indhack"
     },
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-12",
+    "dateModified": "2026-04-14",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "isAccessibleForFree": true,
     "inLanguage": "fr-FR",
@@ -968,19 +968,19 @@ export default function VultifrinePage() {
 
                     <div className="text-soft leading-relaxed space-y-4">
                         <p>
-                            L'utilisation capillaire de la vultifrine est un developpement recent (2025) qui a rapidement gagne en popularite. L'etude de reference est celle de <strong>Kim et al. (2025)</strong>, realisee sur 160 participants presentant des cheveux fins, cassants ou devitalises.
+                            L'utilisation capillaire de la vultifrine est un développement récent (2025) qui a rapidement gagné en popularité. L'étude de référence est celle de <strong>Kim et al. (2025)</strong>, réalisée sur 160 participants présentant des cheveux fins, cassants ou dévitalisés.
                         </p>
                         <p>
-                            Le mecanisme d'action sur les cheveux differe legerement de l'application cutanee. La vultifrine agit au niveau du follicule pileux en stimulant la production de keratine et en renforcement la cuticule capillaire. L'augmentation du diametre capillaire de 12 % en 12 semaines traduit un epaississement reel de la fibre, et non un simple effet cosmetique de surface.
+                            Le mécanisme d'action sur les cheveux diffère légèrement de l'application cutanée. La vultifrine agit au niveau du follicule pileux en stimulant la production de kératine et en renforçant la cuticule capillaire. L'augmentation du diamètre capillaire de 12 % en 12 semaines traduit un épaississement réel de la fibre, et non un simple effet cosmétique de surface.
                         </p>
                         <p>
-                            Les avis utilisateurs recueillis aupres d'un panel de 2 400 personnes sont remarquablement positifs : 94 % de satisfaction globale, avec des benefices percus des la quatrieme semaine (amelioration de la brillance). La reduction de la casse (-34 %) est le benefice le plus souvent cite, particulierement apprecie par les utilisateurs de colorations ou de traitements thermiques reguliers.
+                            Les avis utilisateurs recueillis auprès d'un panel de 2 400 personnes sont remarquablement positifs : 94 % de satisfaction globale, avec des bénéfices perçus dès la quatrième semaine (amélioration de la brillance). La réduction de la casse (-34 %) est le bénéfice le plus souvent cité, particulièrement apprécié par les utilisateurs de colorations ou de traitements thermiques réguliers.
                         </p>
                         <p>
-                            <strong>Mode d'emploi capillaire :</strong> appliquer 5-6 gouttes de serum capillaire a 1,5 % de vultifrine sur le cuir chevelu propre et humide. Masser delicatement pendant 2 minutes pour stimuler la microcirculation. Laisser poser 10 minutes avant le shampoing, ou utiliser en soin sans rincage sur les longueurs et pointes.
+                            <strong>Mode d'emploi capillaire :</strong> appliquer 5-6 gouttes de sérum capillaire à 1,5 % de vultifrine sur le cuir chevelu propre et humide. Masser délicatement pendant 2 minutes pour stimuler la microcirculation. Laisser poser 10 minutes avant le shampoing, ou utiliser en soin sans rinçage sur les longueurs et pointes.
                         </p>
                         <p>
-                            Les premiers resultats (brillance, toucher plus doux) apparaissent generalement entre 3 et 4 semaines. Pour la reduction de la casse et l'epaississement du cheveu, comptez 6 a 12 semaines d'utilisation reguliere. La constance est la cle : les benefices s'accumulent avec le temps et se maintiennent tant que l'utilisation est poursuivie.
+                            Les premiers résultats (brillance, toucher plus doux) apparaissent généralement entre 3 et 4 semaines. Pour la réduction de la casse et l'épaississement du cheveu, comptez 6 à 12 semaines d'utilisation régulière. La constance est la clé : les bénéfices s'accumulent avec le temps et se maintiennent tant que l'utilisation est poursuivie.
                         </p>
                     </div>
                 </section>
@@ -996,7 +996,7 @@ export default function VultifrinePage() {
 
                     <div className="bg-sauge/5 border-l-4 border-sauge p-4 rounded-r-lg mb-6" data-speakable="true">
                         <p className="text-ink font-semibold leading-relaxed">
-                            La vultifrine pure se conserve 6 mois apres ouverture a temperature ambiante (15-25 °C), a l'abri de la lumiere directe. En flacon opaque avec pompe airless, la duree s'etend a 9 mois. Au refrigerateur (4-8 °C), la stabilite atteint 12 mois. Le signe d'alteration principal est un changement de couleur (du dore clair au brun).
+                            La vultifrine pure se conserve 6 mois après ouverture à température ambiante (15-25 °C), à l'abri de la lumière directe. En flacon opaque avec pompe airless, la durée s'étend à 9 mois. Au réfrigérateur (4-8 °C), la stabilité atteint 12 mois. Le signe d'altération principal est un changement de couleur (du doré clair au brun).
                         </p>
                     </div>
 
@@ -1006,34 +1006,34 @@ export default function VultifrinePage() {
                                 <tr className="bg-fond-clair">
                                     <th className="border border-line px-4 py-3 text-left font-semibold text-ink">Condition de stockage</th>
                                     <th className="border border-line px-4 py-3 text-left font-semibold text-ink">Contenant</th>
-                                    <th className="border border-line px-4 py-3 text-left font-semibold text-ink">Duree de conservation</th>
-                                    <th className="border border-line px-4 py-3 text-left font-semibold text-ink">Perte d'efficacite</th>
+                                    <th className="border border-line px-4 py-3 text-left font-semibold text-ink">Durée de conservation</th>
+                                    <th className="border border-line px-4 py-3 text-left font-semibold text-ink">Perte d'efficacité</th>
                                 </tr>
                             </thead>
                             <tbody className="text-soft">
-                                <tr><td className="border border-line px-4 py-3">Temperature ambiante (15-25 °C)</td><td className="border border-line px-4 py-3">Flacon verre ambre</td><td className="border border-line px-4 py-3">6 mois</td><td className="border border-line px-4 py-3">~10 % a 6 mois</td></tr>
-                                <tr className="bg-fond-clair/50"><td className="border border-line px-4 py-3">Temperature ambiante (15-25 °C)</td><td className="border border-line px-4 py-3">Pompe airless opaque</td><td className="border border-line px-4 py-3">9 mois</td><td className="border border-line px-4 py-3">~7 % a 9 mois</td></tr>
-                                <tr><td className="border border-line px-4 py-3">Refrigerateur (4-8 °C)</td><td className="border border-line px-4 py-3">Flacon verre ambre</td><td className="border border-line px-4 py-3">12 mois</td><td className="border border-line px-4 py-3">~5 % a 12 mois</td></tr>
-                                <tr className="bg-fond-clair/50"><td className="border border-line px-4 py-3">Exposition lumiere/chaleur</td><td className="border border-line px-4 py-3">Tout contenant</td><td className="border border-line px-4 py-3">2-3 mois</td><td className="border border-line px-4 py-3">~30 % a 3 mois</td></tr>
+                                <tr><td className="border border-line px-4 py-3">Température ambiante (15-25 °C)</td><td className="border border-line px-4 py-3">Flacon verre ambré</td><td className="border border-line px-4 py-3">6 mois</td><td className="border border-line px-4 py-3">~10 % à 6 mois</td></tr>
+                                <tr className="bg-fond-clair/50"><td className="border border-line px-4 py-3">Température ambiante (15-25 °C)</td><td className="border border-line px-4 py-3">Pompe airless opaque</td><td className="border border-line px-4 py-3">9 mois</td><td className="border border-line px-4 py-3">~7 % à 9 mois</td></tr>
+                                <tr><td className="border border-line px-4 py-3">Réfrigérateur (4-8 °C)</td><td className="border border-line px-4 py-3">Flacon verre ambré</td><td className="border border-line px-4 py-3">12 mois</td><td className="border border-line px-4 py-3">~5 % à 12 mois</td></tr>
+                                <tr className="bg-fond-clair/50"><td className="border border-line px-4 py-3">Exposition lumière/chaleur</td><td className="border border-line px-4 py-3">Tout contenant</td><td className="border border-line px-4 py-3">2-3 mois</td><td className="border border-line px-4 py-3">~30 % à 3 mois</td></tr>
                             </tbody>
                         </table>
                     </div>
 
                     <div className="text-soft leading-relaxed space-y-4">
                         <p>
-                            La conservation de la vultifrine pure est un enjeu crucial car ses polyphenols actifs sont sensibles a l'oxydation et a la photodegradation. Une vultifrine mal conservee perd rapidement son efficacite, ce qui explique les deceptions de certains utilisateurs.
+                            La conservation de la vultifrine pure est un enjeu crucial car ses polyphénols actifs sont sensibles à l'oxydation et à la photodégradation. Une vultifrine mal conservée perd rapidement son efficacité, ce qui explique les déceptions de certains utilisateurs.
                         </p>
                         <p>
-                            <strong>Les trois ennemis de la vultifrine :</strong> la lumiere (UV et lumiere visible), l'oxygene (oxydation des polyphenols) et la chaleur (au-dessus de 25 °C, la degradation s'accelere exponentiellement). La combinaison de ces trois facteurs peut reduire la concentration active de 30 % en seulement 3 mois.
+                            <strong>Les trois ennemis de la vultifrine :</strong> la lumière (UV et lumière visible), l'oxygène (oxydation des polyphénols) et la chaleur (au-dessus de 25 °C, la dégradation s'accélère exponentiellement). La combinaison de ces trois facteurs peut réduire la concentration active de 30 % en seulement 3 mois.
                         </p>
                         <p>
-                            Le choix du contenant est determinant. Les flacons en verre ambre filtrent 95 % des UV nocifs, ce qui est suffisant pour un stockage a temperature ambiante pendant 6 mois. Les pompes airless (sans contact avec l'air) ajoutent une protection supplementaire contre l'oxydation, portant la duree a 9 mois.
+                            Le choix du contenant est déterminant. Les flacons en verre ambré filtrent 95 % des UV nocifs, ce qui est suffisant pour un stockage à température ambiante pendant 6 mois. Les pompes airless (sans contact avec l'air) ajoutent une protection supplémentaire contre l'oxydation, portant la durée à 9 mois.
                         </p>
                         <p>
-                            La solution optimale reste le refrigerateur : a 4-8 °C, les reactions de degradation sont ralenties de 60 %, ce qui permet de conserver la vultifrine pendant 12 mois avec une perte d'efficacite inferieure a 5 %. Sortez le flacon 5 minutes avant utilisation pour le laisser revenir a temperature ambiante.
+                            La solution optimale reste le réfrigérateur : à 4-8 °C, les réactions de dégradation sont ralenties de 60 %, ce qui permet de conserver la vultifrine pendant 12 mois avec une perte d'efficacité inférieure à 5 %. Sortez le flacon 5 minutes avant utilisation pour le laisser revenir à température ambiante.
                         </p>
                         <p>
-                            <strong>Comment detecter une vultifrine alteree :</strong> le signe le plus fiable est le changement de couleur. Une vultifrine fraiche presente une teinte doree claire et translucide. L'apparition d'une coloration brune, ambre fonce ou trouble indique une oxydation avancee. Un changement d'odeur (de subtile et vegetale a acre ou rance) confirme l'alteration. Dans ces cas, jetez le produit car son efficacite est compromise et des sous-produits d'oxydation potentiellement irritants peuvent s'etre formes.
+                            <strong>Comment détecter une vultifrine altérée :</strong> le signe le plus fiable est le changement de couleur. Une vultifrine fraîche présente une teinte dorée claire et translucide. L'apparition d'une coloration brune, ambre foncé ou trouble indique une oxydation avancée. Un changement d'odeur (de subtile et végétale à âcre ou rance) confirme l'altération. Dans ces cas, jetez le produit car son efficacité est compromise et des sous-produits d'oxydation potentiellement irritants peuvent s'être formés.
                         </p>
                     </div>
                 </section>
