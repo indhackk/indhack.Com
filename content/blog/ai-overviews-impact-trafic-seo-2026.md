@@ -1,6 +1,6 @@
 ---
-title: "AI Overviews : -61 % de CTR organique, les chiffres clés SEO 2026"
-description: "AI Overviews touchent 50 % des requêtes et font chuter le CTR organique de 61 %. Données Seer, Ahrefs et Semrush + stratégie d'adaptation."
+title: "AI Overviews : -61 % de CTR organique, chiffres SEO 2026"
+description: "AI Overviews touchent 50 % des requêtes et font chuter le CTR organique de 61 %. Données Seer, Ahrefs, Semrush et stratégie."
 date: "2026-03-12"
 dateModified: "2026-03-12"
 category: "IA & SEO"
@@ -240,28 +240,22 @@ Si vous souhaitez un diagnostic personnalisé de l'impact des AI Overviews sur v
 
 ## FAQ {#faq}
 
-### Combien de requêtes Google déclenchent une AI Overview ?
-
+**Combien de requêtes Google déclenchent une AI Overview ?**
 En février 2026, environ **48 % des requêtes** aux États-Unis génèrent une AI Overview. En France, le taux est inférieur mais en croissance rapide. La projection : plus de 60 % des requêtes d'ici début 2027.
 
-### De combien le CTR organique a-t-il baissé à cause des AI Overviews ?
-
+**De combien le CTR organique a-t-il baissé à cause des AI Overviews ?**
 Selon Seer Interactive (septembre 2025), le CTR organique a chuté de **61 %** sur les requêtes avec AI Overviews, passant de 1,76 % à 0,61 %. Ahrefs confirme avec une baisse de **58 %** du CTR pour la position 1.
 
-### Le SEO est-il encore utile avec les AI Overviews ?
-
+**Le SEO est-il encore utile avec les AI Overviews ?**
 Oui, plus que jamais. Les données SeoClarity montrent que **99,5 % des sources citées** par les AI Overviews proviennent du top 10 organique. Le SEO reste le socle incontournable pour être cité par l'IA. La stratégie optimale est SEO + **[GEO (Generative Engine Optimization)](/blog/geo-comment-apparaitre-chatgpt-2026)**.
 
-### Comment savoir si mes requêtes sont touchées par les AI Overviews ?
-
+**Comment savoir si mes requêtes sont touchées par les AI Overviews ?**
 Analysez vos données Google Search Console : si le CTR a chuté significativement depuis mi-2025 sans perte de position, c'est un indicateur fort de la présence d'AI Overviews. Vous pouvez aussi lancer un **[audit SEO gratuit](/outils/audit-seo-gratuit)** de votre site pour un diagnostic complet.
 
-### Le trafic payant (Google Ads) est-il aussi impacté ?
-
+**Le trafic payant (Google Ads) est-il aussi impacté ?**
 Oui, et plus fortement que le trafic organique. Le CTR payant a chuté de **68 %** sur les requêtes avec AI Overviews (Seer Interactive). Les annonceurs doivent adapter leur stratégie d'enchères et leur ciblage.
 
-### Comment être cité dans les AI Overviews ?
-
+**Comment être cité dans les AI Overviews ?**
 Cinq leviers clés : être déjà dans le **top 10 organique** (99,5 % des sources), produire du contenu de **+2 900 mots** avec des données originales, maintenir votre contenu à jour (**fraîcheur = +67 % de citations**), renforcer votre **balisage Schema.org** et votre fichier [llms.txt](/blog/llms-txt-guide-complet), et construire votre **autorité de marque** sur le web.
 
 ## Articles complémentaires

@@ -286,7 +286,7 @@ function MontpellierCustomContent() {
                         <div className="bg-white p-6 rounded-xl border border-gray-100">
                             <h3 className="font-bold text-ink mb-4">Ressources SEO pour les entreprises montpelliéraines</h3>
                             <div className="grid md:grid-cols-2 gap-4">
-                                <Link href="/blog/importance-audit-seo" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/blog/audit-seo-approfondi-guide-complet" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
                                     Pourquoi réaliser un audit SEO avant toute stratégie
                                 </Link>

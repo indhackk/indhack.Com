@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import StudyClientContent from "./StudyClientContent";
 
 export const metadata: Metadata = {
-    title: "20% des meilleurs restaurants Google sans site web | Étude Côte d'Azur 2026",
-    description: "Étude exclusive : analyse de 297 restaurants du Top Google sur la Côte d'Azur. 20.5% sans site web, 9% avec des profils suspects. Données vérifiées, méthodologie transparente.",
+    title: "Étude : 20 % des restaurants Google sans site [2026]",
+    description: "297 restaurants du top Google analysés sur la Côte d'Azur : 20 % sans site web, 9 % de profils suspects. Données vérifiées et méthodologie transparente.",
     keywords: ["restaurants Côte d'Azur", "Google My Business", "SEO local restauration", "visibilité Google restaurants", "étude restauration 2026", "Nice", "Cannes", "Monaco"],
     alternates: {
         canonical: "https://indhack.com/etudes/restaurants-cote-azur-google-2026"

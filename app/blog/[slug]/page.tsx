@@ -31,7 +31,8 @@ function extractFAQItems(content: string): Array<{ question: string; answer: str
     const faqSection = faqMatch[1];
 
     // Pattern: **Question ?**\nRéponse (jusqu'à la prochaine question ou fin)
-    const questionPattern = /\*\*([^*]+\?)\*\*\s*\n([^*]+?)(?=\n\*\*[^*]+\?\*\*|\n---|\n##|$)/g;
+    // [\s\S]+? au lieu de [^*]+? pour supporter le **gras** dans les réponses
+    const questionPattern = /\*\*([^*]+\?)\*\*\s*\n([\s\S]+?)(?=\n\*\*[^*]+\?\*\*|\n---|\n##|$)/g;
 
     let match;
     while ((match = questionPattern.exec(faqSection)) !== null) {
@@ -213,7 +214,7 @@ export default function BlogPostPage({ params }: PageProps) {
                             </span>
                             <span className="flex items-center gap-1">
                                 <Calendar className="w-4 h-4" />
-                                Dernière mise à jour : {format(new Date(post.date), "dd MMMM yyyy", { locale: fr })}
+                                Dernière mise à jour : {format(new Date(post.dateModified || post.date), "dd MMMM yyyy", { locale: fr })}
                             </span>
                         </div>
 

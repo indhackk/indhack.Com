@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Consultante SEO Toulouse (31000) | Experte référencement Haute-Garonne",
     description: "Consultante SEO à Toulouse. Stratégie de visibilité B2B pour sous-traitants aéronautiques, ESN et startups de la Ville Rose.",
-    robots: { index: false, follow: true },
+    robots: { index: true, follow: true },
     keywords: ["consultante SEO Toulouse", "référencement Toulouse", "SEO Haute-Garonne", "audit SEO Toulouse", "experte SEO 31"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo-toulouse"

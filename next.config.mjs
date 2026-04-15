@@ -34,6 +34,12 @@ const nextConfig = {
         return [
             { source: '/blog/cout-site-web-2026', destination: '/blog/prix-creation-site-internet-2026', permanent: true },
             // ══════════════════════════════════════════════════════════════
+            // Suppression pages diagnostic métier → redirection vers audit-seo
+            // ══════════════════════════════════════════════════════════════
+            { source: '/diagnostic/:metier*', destination: '/audit-seo', permanent: true },
+            // Fusion importance-audit-seo → audit-seo-approfondi-guide-complet
+            { source: '/blog/importance-audit-seo', destination: '/blog/audit-seo-approfondi-guide-complet', permanent: true },
+            // ══════════════════════════════════════════════════════════════
             // P3: Kill audit-technique cannibalisation
             // ══════════════════════════════════════════════════════════════
             {

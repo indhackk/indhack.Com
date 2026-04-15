@@ -281,20 +281,16 @@ Vous ne vendez pas un service, vous vendez le résultat.
 
 ## Questions fréquentes
 
-### Est-ce légal de copier les catégories de mes concurrents ?
-
+**Est-ce légal de copier les catégories de mes concurrents ?**
 Oui, c'est parfaitement légal. Vous ne copiez pas leur contenu, vous vous inspirez de leur stratégie de catégorisation. C'est de la veille concurrentielle classique, comme regarder la vitrine d'un concurrent.
 
-### Le geotagging des photos fonctionne-t-il vraiment ?
-
+**Le geotagging des photos fonctionne-t-il vraiment ?**
 Oui, Google lit les métadonnées EXIF des photos, y compris les coordonnées GPS. Une étude BrightLocal montre que les photos géolocalisées améliorent le classement local. Ce n'est pas le facteur principal, mais c'est un signal de cohérence géographique.
 
-### Combien de temps avant de voir des résultats ?
-
+**Combien de temps avant de voir des résultats ?**
 Les techniques d'optimisation de fiche (catégories, photos, réponses aux avis) montrent des effets en 2-4 semaines. L'analyse des avis négatifs des concurrents est immédiatement actionnable sur votre propre communication.
 
-### Ces techniques fonctionnent-elles pour tous les secteurs ?
-
+**Ces techniques fonctionnent-elles pour tous les secteurs ?**
 Oui, mais l'impact varie. Les secteurs avec forte concurrence locale (restaurants, artisans, services à domicile) voient les plus gros gains. Pour les niches avec peu de concurrents, l'optimisation de base suffit souvent.
 
 ---

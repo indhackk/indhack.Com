@@ -246,20 +246,16 @@ Si vous êtes une PME ou un industriel et que vous voulez prendre de l'avance, n
 
 ## Questions fréquentes
 
-### Comment apparaître dans les sources citées par Perplexity ?
-
+**Comment apparaître dans les sources citées par Perplexity ?**
 Perplexity utilise un système RAG (Retrieval-Augmented Generation) qui sélectionne les pages les plus pertinentes et autoritaires du web. Vous devez d'abord être bien classé sur Google/Bing (SEO classique), puis optimiser votre contenu pour être "parsé" et cité par l'IA. Vérifiez que PerplexityBot n'est pas bloqué dans votre robots.txt, formatez votre contenu avec des H2 explicites et des données structurées, et créez du contenu original hautement spécialisé que les IA reconnaîtront comme une source primaire.
 
-### Quelle est la différence entre SEO traditionnel et GEO pour Perplexity ?
-
+**Quelle est la différence entre SEO traditionnel et GEO pour Perplexity ?**
 Le SEO traditionnel vous aide à être découvert par Google. Le GEO optimise votre contenu pour être compris ET cité par une IA. Sur Perplexity spécifiquement, vous devez combiner les deux : avoir une bonne autorité SEO pour être sélectionné par le crawler, mais aussi un contenu structuré intelligemment (tableaux, listes, citations sourcées) pour que l'IA vous préfère à vos concurrents lors de la génération de réponse.
 
-### Combien de temps avant d'apparaître dans les sources Perplexity ?
-
+**Combien de temps avant d'apparaître dans les sources Perplexity ?**
 Si votre site est déjà bien classé sur Google, l'optimisation GEO peut générer les premières mentions en 2 à 4 semaines. Si votre site est nouveau ou peu visibles, vous devez d'abord construire votre autorité SEO (3 à 6 mois), puis l'optimisation GEO commencera à porter ses fruits. Le délai dépend aussi de la concurrence : sur des créneaux peu exploités par le GEO, les résultats sont plus rapides.
 
-### Dois-je créer un fichier llms.txt pour Perplexity ?
-
+**Dois-je créer un fichier llms.txt pour Perplexity ?**
 Oui, fortement recommandé. Le fichier llms.txt à la racine de votre site (exemple.com/llms.txt) donne à Perplexity et aux autres IA une "feuille de route" claire sur qui vous êtes et où trouver vos contenus les plus pertinents. C'est un standard émergent que Perplexity, Claude et autres respectent. Cela augmente significativement vos chances d'être citations.
 
 ## Articles complémentaires

@@ -322,7 +322,7 @@ export default function ReferencementClient() {
                                     Génération de pages locales optimisées à grande échelle.
                                 </p>
                             </Link>
-                            <Link href="/blog/importance-audit-seo" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                            <Link href="/blog/audit-seo-approfondi-guide-complet" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
                                     Pourquoi l'audit est le point de départ

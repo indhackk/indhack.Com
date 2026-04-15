@@ -175,12 +175,12 @@ function LilleCustomContent() {
                                 <ul className="space-y-3">
                                     {[
                                         "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500€)",
-                                        "Expertise SEO e-commerce et fiches produits",
-                                        "Stratégie SEO transfrontalier FR/BE/UK",
-                                        "Reporting mensuel clair avec KPIs business",
-                                        "Accompagnement GEO (visibilité ChatGPT, Perplexity)",
-                                        "Tarifs 30-50% inférieurs aux agences",
+                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Expertise SEO e-commerce (OVH, Decathlon, La Redoute sont nés ici)",
+                                        "SEO transfrontalier FR/BE/NL pour capter le marché Benelux",
+                                        "Stratégie retail et grande distribution adaptée au Nord",
+                                        "SEO local pour les commerces du Vieux-Lille et de la Grand'Place",
+                                        "Optimisation logistique et supply chain (Rungis du Nord)",
                                         "Sans engagement long terme (3 mois puis liberté)"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
@@ -286,29 +286,37 @@ function LilleCustomContent() {
                         <div className="bg-white p-6 rounded-xl border border-gray-100">
                             <h3 className="font-bold text-ink mb-4">Ressources SEO pour les entreprises lilloises</h3>
                             <div className="grid md:grid-cols-2 gap-4">
-                                <Link href="/consultant-seo-paris" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Consultant SEO Paris
+                                    SEO local : dominer Google Maps en 2026
                                 </Link>
                                 <Link href="/outils/audit-seo-gratuit" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Testez votre site avec notre audit SEO gratuit
+                                    Audit SEO gratuit : testez votre site en 30 secondes
+                                </Link>
+                                <Link href="/consultant-seo-paris" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Consultante SEO Paris (TGV 1h de Lille)
+                                </Link>
+                                <Link href="/outils/simulateur-visibilite-locale" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Simulateur de visibilité locale pour votre ville
                                 </Link>
                                 <Link href="/consultant-seo-strasbourg" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Consultant SEO Strasbourg
+                                    Consultante SEO Strasbourg (axe nord-est)
                                 </Link>
-                                <Link href="/blog/checklist-seo-2026" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/blog/google-maps-voler-clients-concurrents" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Checklist SEO 2026 : 30 points essentiels
+                                    Voler les clients de vos concurrents sur Google Maps
                                 </Link>
-                                <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/blog/google-business-profile-guide-complet" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps
+                                    Guide complet Google Business Profile 2026
                                 </Link>
-                                <Link href="/blog/seo-vs-sea-que-choisir" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/contact" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO vs SEA : que choisir pour votre budget ?
+                                    Demander un audit SEO gratuit à Lille
                                 </Link>
                             </div>
                         </div>

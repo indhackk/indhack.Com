@@ -235,28 +235,22 @@ Je recommande de commencer par l'audit gratuit avec notre [outil de test de visi
 
 ---
 
-## 9. Questions fréquentes
-{#faq}
+## Questions fréquentes
 
-### Q. : Dois-je écrire du contenu spécifiquement pour les IA ?
+**Dois-je écrire du contenu spécifiquement pour les IA ?**
+Non, pas exactement. Vous devez écrire pour les humains d'abord, mais en gardant à l'esprit que les IA le liront aussi. Cela signifie : réponses claires, premier paragraphe concis, données sourcées, mises à jour régulières. Si c'est bon pour un humain, ce sera bon pour l'IA.
 
-**R. :** Non, pas exactement. Vous devez écrire pour **les humains d'abord**, mais en gardant à l'esprit que les IA le liront aussi. Cela signifie : réponses claires, premier paragraphe concis, données sourcées, mises à jour régulières. Si c'est bon pour un humain, ce sera bon pour l'IA.
+**Combien de temps avant que mes efforts GEO ne portent leurs fruits ?**
+Comptez 2-3 mois. Les IA répondent plus vite que Google. Si vous commencez à publier du contenu frais demain, vous devriez voir une augmentation de vos citations IA dans Perplexity en 30 jours. ChatGPT prendra plus longtemps car il s'appuie sur des données plus anciennes.
 
-### Q. : Combien de temps avant que mes efforts GEO ne portent fruits ?
+**Et si une IA parle mal de ma marque ?**
+C'est rare mais possible. Deux options : (1) créez du contenu nouveau et meilleur pour supplanter l'ancienne info, (2) demandez au modèle (via feedback) de corriger l'information. Pour les IA récentes comme Perplexity, vous pouvez aussi soumettre des corrections directement.
 
-**R. :** 2-3 mois. Les IA répondent plus vite que Google. Si vous commencez à publier du contenu frais demain, vous devriez voir une augmentation de vos citations IA dans Perplexity en 30 jours. ChatGPT prendra plus longtemps (car il s'appuie sur des données plus anciennes).
+**Mon concurrent est partout sur ChatGPT. Comment je le rattrape ?**
+D'abord, auditez pourquoi. Demandez-vous : a-t-il plus d'autorité de domaine ? Un contenu plus frais ? Plus de backlinks ? Puis, concentrez-vous sur 1-2 zones où vous pouvez surpasser : expertise ultra-spécialisée, contenu plus frais, meilleure structure de données.
 
-### Q. : Et si une IA parle mal de ma marque ?
-
-**R. :** C'est rare mais possible. Deux options : (1) créez du contenu nouveau et meilleur pour supplanter l'ancienne info, (2) demandez au modèle (via feedback) de corriger l'information. Pour les IA récentes comme Perplexity, vous pouvez aussi soumettre des corrections directement.
-
-### Q. : Mon concurrent est partout sur ChatGPT. Comment je rattrape ?
-
-**R. :** D'abord, auditer pourquoi. Demandez-vous : a-t-il plus d'autorité de domaine ? Un contenu plus frais ? Plus de backlinks ? Puis, concentrez-vous sur 1-2 zones où vous pouvez surpasser : expertise ultra-spécialisée, contenu plus frais, meilleure structure de données.
-
-### Q. : Le GEO va remplacer le SEO ?
-
-**R. :** Non. Le GEO **complète** le SEO. Les deux vont coexister. Google continue à envoyer du trafic (et des AI Overviews). ChatGPT envoie aussi du trafic (et des citations). Vous avez besoin des deux stratégies.
+**Le GEO va-t-il remplacer le SEO ?**
+Non. Le GEO complète le SEO. Les deux vont coexister. Google continue à envoyer du trafic (et des AI Overviews). ChatGPT envoie aussi du trafic (et des citations). Vous avez besoin des deux stratégies.
 
 ---
 

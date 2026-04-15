@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import ExtracteurClient from "./ExtracteurClient";
 
 export const metadata: Metadata = {
-    title: "Extraire les mots-clés d'un texte | Outil gratuit en ligne – IndHack",
-    description: "Extraire les mots-clés d'un texte en 30 secondes. Analysez la densité, les bi-grammes et tri-grammes. Outil SEO gratuit, sans inscription.",
+    title: "Extracteur de mots-clés d'un texte : outil gratuit",
+    description: "Extrayez les mots-clés d'un texte en 30 secondes. Densité, bi-grammes, tri-grammes et analyse sémantique. Outil SEO 100 % gratuit, sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils/extracteur-mots-cles"
     },
@@ -157,12 +157,46 @@ export default function ExtracteurMotsClesPage() {
                             </ul>
                         </div>
 
+                        <h2 className="text-2xl font-heading font-bold text-ink mb-6">
+                            Extraction de mots-clés et stratégie SEO : le lien direct
+                        </h2>
+                        <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 mb-8">
+                            <p className="text-soft leading-relaxed mb-4">
+                                L&apos;extraction de mots-clés n&apos;est pas une fin en soi : c&apos;est le point de départ d&apos;une <strong className="text-ink">stratégie de référencement naturel</strong> efficace. Une fois vos mots-clés identifiés, l&apos;étape suivante consiste à vérifier leur pertinence par rapport à l&apos;intention de recherche et à les intégrer naturellement dans vos balises Title, H1 et corps de texte.
+                            </p>
+                            <p className="text-soft leading-relaxed mb-4">
+                                Si vous constatez qu&apos;un mot-clé cible est absent de votre texte ou présent à moins de 0,5 %, c&apos;est un signal clair de sous-optimisation. À l&apos;inverse, une densité supérieure à 3 % indique un risque de suroptimisation que Google pénalise depuis les mises à jour <strong className="text-ink">Helpful Content</strong>. L&apos;équilibre se trouve dans une rédaction naturelle qui intègre les variantes sémantiques (synonymes, bi-grammes contextuels).
+                            </p>
+                            <p className="text-soft leading-relaxed">
+                                Pour aller au-delà de l&apos;analyse de densité, un <a href="/blog/audit-seo-approfondi-guide-complet" className="text-sauge hover:underline">audit SEO approfondi</a> croise les données d&apos;extraction avec celles de la Search Console pour identifier les cannibalisations sémantiques et les opportunités de <a href="/referencement-naturel" className="text-sauge hover:underline">référencement naturel</a> inexploitées.
+                            </p>
+                        </div>
+
+                        <h2 className="text-2xl font-heading font-bold text-ink mb-6">
+                            Intégrer l&apos;extraction de mots-clés dans votre workflow SEO
+                        </h2>
+                        <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 mb-8">
+                            <p className="text-soft leading-relaxed mb-4">
+                                Voici comment les consultants SEO professionnels utilisent l&apos;extraction de mots-clés au quotidien :
+                            </p>
+                            <ul className="text-soft space-y-3">
+                                <li><strong className="text-ink">Pré-publication</strong> — Analysez votre brouillon pour vérifier que le mot-clé principal atteint 1 à 2 % de densité et que les variantes longue traîne apparaissent naturellement.</li>
+                                <li><strong className="text-ink">Audit de pages existantes</strong> — Passez vos pages stratégiques dans l&apos;extracteur pour détecter les pages sous-optimisées. Croisez ensuite avec un <a href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">audit SEO gratuit</a> pour un diagnostic complet.</li>
+                                <li><strong className="text-ink">Veille concurrentielle</strong> — Copiez le contenu visible de vos concurrents positionnés en top 3 et comparez leurs tri-grammes aux vôtres. Les écarts révèlent les sujets à couvrir.</li>
+                                <li><strong className="text-ink">Optimisation SEO local</strong> — Pour les entreprises ciblant une zone géographique, vérifiez que les termes locaux (ville, quartier, département) apparaissent suffisamment. Complétez avec notre <a href="/outils/simulateur-visibilite-locale" className="text-sauge hover:underline">simulateur de visibilité locale</a>.</li>
+                                <li><strong className="text-ink">Optimisation pour les IA</strong> — Les IA génératives (ChatGPT, Perplexity, Claude) privilégient les contenus structurés avec des réponses claires. Vérifiez que vos paragraphs contiennent les expressions Q&amp;A que les LLM recherchent grâce à notre <a href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">testeur de visibilité IA</a>.</li>
+                            </ul>
+                        </div>
+
                         <div className="bg-sauge/10 rounded-xl p-6 border border-sauge/20">
                             <p className="text-soft mb-4">
                                 <strong className="text-ink">Pour aller plus loin :</strong> L&apos;extraction de mots-clés est une étape de l&apos;optimisation on-page. Pour un diagnostic complet de votre référencement, consultez notre <a href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">outil d&apos;audit SEO gratuit</a> qui analyse 15 critères en 30 secondes.
                             </p>
-                            <p className="text-soft">
+                            <p className="text-soft mb-4">
                                 Besoin d&apos;une stratégie de mots-clés complète ? Découvrez mon <a href="/audit-seo" className="text-sauge hover:underline">service d&apos;audit SEO professionnel</a> avec analyse sémantique approfondie et recommandations personnalisées.
+                            </p>
+                            <p className="text-soft">
+                                Consultez aussi notre <a href="/blog/contenu-rapport-audit-seo" className="text-sauge hover:underline">guide du rapport d&apos;audit SEO</a> pour comprendre comment l&apos;analyse sémantique s&apos;intègre dans un diagnostic complet, ou découvrez <a href="/blog/checklist-seo-2026" className="text-sauge hover:underline">la checklist SEO 2026</a> pour ne rien oublier.
                             </p>
                         </div>
                     </div>

@@ -159,24 +159,24 @@ Pour un diagnostic SEO plus complet, utilisez notre [outil d'audit SEO gratuit](
 
 **Vous voulez un site conçu pour scorer 90+ dès le départ ?** [Parlons de votre projet](/creation-site-web).
 
-## 7. Questions fréquentes
+## Questions fréquentes
 
-### Combien coûte un site web performant ?
+**Combien coûte un site web performant ?**
 Tout dépend du projet. Un site vitrine sur-mesure coûte plus qu'un thème WordPress au départ, mais sur 3 ans le coût total est souvent équivalent voire inférieur (hébergement gratuit, pas de plugins premium, pas de maintenance sécurité lourde). Tarifs sur devis.
 
-### Mon site WordPress peut-il être aussi rapide ?
+**Mon site WordPress peut-il être aussi rapide ?**
 Avec beaucoup d'optimisation (cache agressif, CDN, thème léger, plugins minimaux), un WordPress bien configuré peut atteindre 70-80 en performance mobile. Mais ça demande un effort technique constant. Un site sur-mesure atteint 90+ sans effort.
 
-### C'est quoi un bon score PageSpeed ?
+**C'est quoi un bon score PageSpeed ?**
 Google considère 90-100 comme « bon » (vert), 50-89 comme « moyen » (orange), et 0-49 comme « mauvais » (rouge). En mobile, visez minimum 80.
 
-### La vitesse est-elle vraiment un facteur de classement Google ?
+**La vitesse est-elle vraiment un facteur de classement Google ?**
 Oui. Depuis 2021, les Core Web Vitals sont un facteur de classement officiel. Google ne cache plus que les sites rapides ont un avantage.
 
-### Pourquoi le score mobile est-il plus important ?
+**Pourquoi le score mobile est-il plus important ?**
 Parce que Google utilise le mobile-first indexing : c'est la version mobile de votre site qui est évaluée pour le classement, même quand quelqu'un cherche depuis un ordinateur.
 
-### Combien de temps pour créer un site performant ?
+**Combien de temps pour créer un site performant ?**
 Entre 2 et 4 semaines pour un site vitrine, 4 à 8 semaines pour un e-commerce ou un projet plus complexe.
 
 ---

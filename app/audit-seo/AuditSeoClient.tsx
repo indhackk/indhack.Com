@@ -183,7 +183,7 @@ export default function AuditSeoClient() {
                                 Un diagnostic SEO n'est pas une dépense, c'est un investissement. Il révèle les fuites invisibles de votre site : les erreurs techniques qui empêchent Google de vous comprendre, les mots-clés mal ciblés qui attirent le mauvais trafic, les pages cannibalisées qui se battent entre elles.
                             </p>
                             <p>
-                                C'est pourquoi je recommande toujours de <Link href="/blog/importance-audit-seo" className="text-sauge hover:underline">commencer par un audit</Link> avant d'investir dans une stratégie de <Link href="/referencement-naturel" className="text-sauge hover:underline">référencement naturel</Link>. Sans diagnostic, on risque de soigner les mauvais symptômes.
+                                C'est pourquoi je recommande toujours de <Link href="/blog/audit-seo-approfondi-guide-complet" className="text-sauge hover:underline">commencer par un audit</Link> avant d'investir dans une stratégie de <Link href="/referencement-naturel" className="text-sauge hover:underline">référencement naturel</Link>. Sans diagnostic, on risque de soigner les mauvais symptômes.
                             </p>
                         </div>
                     </div>
@@ -536,7 +536,7 @@ export default function AuditSeoClient() {
                                     Découvrez en détail ce que contient un rapport d'audit SEO professionnel.
                                 </p>
                             </Link>
-                            <Link href="/blog/importance-audit-seo" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
+                            <Link href="/blog/audit-seo-approfondi-guide-complet" className="group bg-white p-6 rounded-2xl border border-gray-100 hover:border-sauge hover:shadow-lg transition-all">
                                 <span className="text-xs font-medium text-sauge uppercase tracking-wide">Article</span>
                                 <h3 className="text-lg font-bold text-ink mt-2 group-hover:text-sauge transition-colors">
                                     Pourquoi l'audit SEO est le point de départ

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Consultante SEO Lille (59000) | Experte référencement Hauts-de-France",
     description: "Consultante SEO à Lille. Stratégie de visibilité pour e-commerçants, enseignes retail et commerces transfrontaliers du Nord.",
-    robots: { index: false, follow: true },
+    robots: { index: true, follow: true },
     keywords: ["consultante SEO Lille", "référencement Lille", "SEO Nord", "audit SEO Lille", "experte SEO 59"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo-lille"

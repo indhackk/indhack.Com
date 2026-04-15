@@ -181,12 +181,12 @@ function BordeauxCustomContent() {
                                 <ul className="space-y-3">
                                     {[
                                         "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500€)",
-                                        "Stratégie personnalisée à votre marché bordelais",
-                                        "Reporting mensuel clair avec KPIs business",
-                                        "Expertise Core Web Vitals et SEO technique",
-                                        "Accompagnement GEO (visibilité ChatGPT, Perplexity)",
-                                        "Tarifs 30-50% inférieurs aux agences",
+                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Stratégie adaptée à l'oenotourisme, aux domaines viticoles et au négoce bordelais",
+                                        "SEO multilingue FR/EN pour capter le tourisme international (Saint-Émilion, Médoc)",
+                                        "Optimisation Google Business Profile pour les commerces du centre historique",
+                                        "Expertise SEO e-commerce pour les caves et producteurs en vente directe",
+                                        "Connaissance de l'écosystème startup Euratlantique et Darwin",
                                         "Sans engagement long terme (3 mois puis liberté)"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
@@ -292,29 +292,37 @@ function BordeauxCustomContent() {
                         <div className="bg-white p-6 rounded-xl border border-gray-100">
                             <h3 className="font-bold text-ink mb-4">Ressources SEO pour les entreprises bordelaises</h3>
                             <div className="grid md:grid-cols-2 gap-4">
-                                <Link href="/consultant-seo-toulouse" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Consultant SEO Toulouse (à 2h de Bordeaux)
+                                    SEO local : dominer Google Maps en 2026
                                 </Link>
                                 <Link href="/outils/audit-seo-gratuit" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Testez votre site avec notre audit SEO gratuit
+                                    Audit SEO gratuit : testez votre site en 30 secondes
+                                </Link>
+                                <Link href="/consultant-seo-toulouse" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Consultante SEO Toulouse (à 2h de Bordeaux)
+                                </Link>
+                                <Link href="/outils/simulateur-visibilite-locale" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Simulateur de visibilité locale pour votre ville
                                 </Link>
                                 <Link href="/consultant-seo-nantes" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Consultant SEO Nantes (façade Atlantique)
+                                    Consultante SEO Nantes (façade Atlantique)
                                 </Link>
-                                <Link href="/blog/checklist-seo-2026" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/blog/optimiser-fiche-gmb-2026" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Checklist SEO 2026 : 30 points essentiels
+                                    Optimiser votre fiche Google Business Profile
                                 </Link>
-                                <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/blog/google-maps-voler-clients-concurrents" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps
+                                    Voler les clients de vos concurrents sur Google Maps
                                 </Link>
-                                <Link href="/blog/importance-audit-seo" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/contact" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Pourquoi un audit SEO est indispensable
+                                    Demander un audit SEO gratuit à Bordeaux
                                 </Link>
                             </div>
                         </div>

@@ -181,12 +181,12 @@ function ToulouseCustomContent() {
                                 <ul className="space-y-3">
                                     {[
                                         "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500€)",
-                                        "Stratégie personnalisée à votre marché toulousain",
-                                        "Expertise SEO B2B industriel et contenu technique",
-                                        "Reporting mensuel clair avec KPIs business",
-                                        "Expertise Core Web Vitals et SEO technique",
-                                        "Tarifs 30-50% inférieurs aux agences",
+                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Stratégie SEO B2B adaptée aux sous-traitants aéronautiques et ESN",
+                                        "Contenu technique pour cycles de décision longs (Airbus, Thales, Safran)",
+                                        "SEO local pour les commerces du Capitole et de la Ville Rose",
+                                        "Expertise SEO campus et recrutement (130 000 étudiants à capter)",
+                                        "Accompagnement GEO pour être cité par ChatGPT sur les requêtes aéro",
                                         "Sans engagement long terme (3 mois puis liberté)"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
@@ -292,29 +292,37 @@ function ToulouseCustomContent() {
                         <div className="bg-white p-6 rounded-xl border border-gray-100">
                             <h3 className="font-bold text-ink mb-4">Ressources SEO pour les entreprises toulousaines</h3>
                             <div className="grid md:grid-cols-2 gap-4">
-                                <Link href="/blog/programmatic-seo-50-pages-locales" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Comment créer des pages locales efficaces (Programmatic SEO)
+                                    SEO local : dominer Google Maps en 2026
                                 </Link>
                                 <Link href="/outils/audit-seo-gratuit" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Testez votre site avec notre audit SEO gratuit
+                                    Audit SEO gratuit : testez votre site en 30 secondes
                                 </Link>
                                 <Link href="/consultant-seo-bordeaux" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Consultant SEO Bordeaux (à 2h de Toulouse)
+                                    Consultante SEO Bordeaux (à 2h de Toulouse)
                                 </Link>
-                                <Link href="/blog/checklist-seo-2026" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/outils/simulateur-visibilite-locale" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Checklist SEO 2026 : 30 points essentiels
+                                    Simulateur de visibilité locale pour votre ville
                                 </Link>
                                 <Link href="/consultant-seo-montpellier" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Consultant SEO Montpellier
+                                    Consultante SEO Montpellier (Occitanie)
                                 </Link>
-                                <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/blog/optimiser-fiche-gmb-2026" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps
+                                    Optimiser votre fiche Google Business Profile
+                                </Link>
+                                <Link href="/blog/programmatic-seo-50-pages-locales" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Programmatic SEO : créer des pages locales efficaces
+                                </Link>
+                                <Link href="/contact" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Demander un audit SEO gratuit à Toulouse
                                 </Link>
                             </div>
                         </div>

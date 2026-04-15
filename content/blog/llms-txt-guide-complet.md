@@ -1,8 +1,8 @@
 ---
 title: "llms.txt : guide complet pour configurer votre fichier"
-description: "Le fichier llms.txt, indispensable pour le GEO. Apprenez à le configurer pour ChatGPT, Perplexity et les crawlers IA."
+description: "Le fichier llms.txt est indispensable pour le GEO. Apprenez à le configurer étape par étape pour ChatGPT, Perplexity, Claude et les crawlers IA en 2026."
 date: "2025-12-15"
-dateModified: "2026-03-11"
+dateModified: "2026-04-15"
 category: "IA & SEO"
 image: "/images/blog/llms-txt-guide.jpg"
 imageAlt: "Fichier llms.txt configuration guide complet 2026"
@@ -121,6 +121,30 @@ L'adoption du llms.txt se concentre parmi les entreprises tech les plus avancée
 
 Le point commun : ces sites ont des contenus techniques riches qu'ils veulent rendre accessibles aux IA. Mais le principe s'applique à **tout type de site** — e-commerce, services, médias — dès lors que vous voulez contrôler comment les IA vous présentent.
 
+## llms.txt pour les sites e-commerce, services et locaux
+
+Le llms.txt n'est pas réservé aux sites tech. Voici comment l'adapter à différents types d'activités :
+
+### Site e-commerce
+
+Pour un site e-commerce, le llms.txt doit mettre en avant vos catégories de produits, gammes de prix, marques phares et engagements (livraison, retours). Quand un utilisateur demande à ChatGPT « quel site pour acheter [produit] ? », l'IA cherche exactement ces informations factuelles pour formuler sa recommandation. Évitez le discours marketing — les LLM le filtrent et privilégient les données concrètes.
+
+### Site de services (consultant, agence, prestataire)
+
+C'est le cas le plus répandu en France. Votre llms.txt doit lister vos services avec des descriptions factuelles, vos certifications, votre zone d'intervention géographique, et surtout vos résultats chiffrés. Un [consultant SEO](/consultant-seo) gagnerait à inclure : nombre de clients accompagnés, gains de trafic moyens, outils utilisés, et liens vers les pages de services et les [études de cas](/etudes-de-cas).
+
+### Entreprise locale (restaurant, artisan, commerce)
+
+Même une boulangerie peut bénéficier d'un llms.txt basique : nom, adresse, horaires, spécialités, avis moyen Google. Quand un touriste demande à Perplexity « meilleur croissant à Nice », l'IA va chercher ces informations. Le llms.txt les structure pour elle. C'est un complément direct à l'optimisation de votre [fiche Google Business Profile](/blog/optimiser-fiche-gmb-2026) et à votre stratégie de [SEO local](/seo-local).
+
+### Relation entre llms.txt et robots.txt
+
+Le llms.txt ne remplace PAS le robots.txt. Les deux fichiers sont complémentaires :
+- **robots.txt** contrôle l'**accès** : quels crawlers peuvent explorer quelles pages
+- **llms.txt** contrôle le **message** : comment vous voulez être décrit par les IA
+
+Vous pouvez autoriser GPTBot dans votre robots.txt (pour qu'il crawle votre site) ET fournir un llms.txt pour qu'il comprenne votre positionnement. Utilisez notre [générateur de robots.txt](/outils/generateur-robots-txt) pour configurer correctement les deux fichiers.
+
 ## Erreurs courantes à éviter
 
 1. **Ne pas mettre à jour la date** — Un llms.txt daté de 6 mois perd sa valeur de fraîcheur. Mettez à jour au minimum mensuellement.
@@ -131,20 +155,16 @@ Le point commun : ces sites ont des contenus techniques riches qu'ils veulent re
 
 ## Questions fréquentes sur llms.txt
 
-### Le fichier llms.txt est-il un standard officiel ?
-
+**Le fichier llms.txt est-il un standard officiel ?**
 C'est un standard proposé (llmstxt.org), pas encore officiellement adopté par toutes les plateformes IA. Cependant, Anthropic (créateurs de Claude) a publié son propre llms.txt, signalant une reconnaissance croissante. L'adoption par plus de 844 000 sites (Source : Bluehost, 2026) montre que le marché n'attend pas la formalisation pour agir.
 
-### ChatGPT lit-il vraiment le fichier llms.txt ?
-
+**ChatGPT lit-il vraiment le fichier llms.txt ?**
 Quand ChatGPT navigue le web en temps réel (via ChatGPT-User), il peut accéder à votre llms.txt comme n'importe quel fichier texte. Le fichier facilite la compréhension rapide de votre site par l'IA. Pour l'entraînement des modèles (GPTBot), le llms.txt fournit un résumé structuré qui peut influencer comment votre site est représenté dans les connaissances du modèle.
 
-### Quelle est la taille idéale d'un fichier llms.txt ?
-
+**Quelle est la taille idéale d'un fichier llms.txt ?**
 Pour le llms.txt (résumé) : entre 500 et 2 000 mots. Assez pour couvrir votre expertise, vos services et vos ressources clés, sans noyer l'IA. Pour le llms-full.txt (version complète) : pas de limite stricte, mais visez 5 000 à 20 000 mots maximum pour rester digeste.
 
-### Faut-il un llms.txt en français ou en anglais ?
-
+**Faut-il un llms.txt en français ou en anglais ?**
 En français si votre audience est francophone. Les LLM sont multilingues et comprennent parfaitement le français. Un llms.txt en français cible mieux les requêtes francophones et renforce vos signaux GEO pour le marché français. Pour une audience internationale, vous pouvez créer une version bilingue.
 
 ## Ce qu'il faut retenir

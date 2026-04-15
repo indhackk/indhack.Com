@@ -110,23 +110,14 @@ module.exports = {
         // Page privée Valentine
         '/pour-pauline',
 
-        // Pages redirigées (de-cannibalisation)
-        '/consultant-seo-freelance',
+        // Outil non encore lancé
+        '/outils/gmb-autopilot',
 
         // Sous-pages audit-technique (301 vers /audit-seo, cannibalisation)
         '/consultant-seo-*/audit-technique',
         '/seo-*/audit-technique',
 
-        // Pages villes noindex — contenu trop templateisé, concentration autorité sur 10 villes PACA+Paris
-        '/consultant-seo-strasbourg',
-        '/consultant-seo-grenoble',
-        '/consultant-seo-rennes',
-        '/consultant-seo-lille',
-        '/consultant-seo-bordeaux',
-        '/consultant-seo-nantes',
-        '/consultant-seo-toulouse',
-        '/consultant-seo-lyon',
-        '/consultant-seo-boulogne-billancourt',
+        // Toutes les 19 villes sont désormais indexées (avril 2026)
     ],
 
     // Robotstxt options optimisées avec règles GEO (Generative Engine Optimization)
@@ -186,11 +177,13 @@ module.exports = {
             '/refonte-site-web'
         ];
 
-        // Pages villes actives (10 villes PACA + Paris + Montpellier)
+        // Pages villes actives (19 villes France)
         const cityPages = [
             '/consultant-seo-nice', '/consultant-seo-cannes', '/consultant-seo-antibes', '/consultant-seo-monaco', '/consultant-seo-sophia-antipolis',
             '/consultant-seo-marseille', '/consultant-seo-aix-en-provence', '/consultant-seo-juan-les-pins', '/consultant-seo-paris',
-            '/consultant-seo-montpellier'
+            '/consultant-seo-montpellier', '/consultant-seo-lyon', '/consultant-seo-toulouse', '/consultant-seo-bordeaux',
+            '/consultant-seo-lille', '/consultant-seo-nantes', '/consultant-seo-strasbourg', '/consultant-seo-rennes',
+            '/consultant-seo-grenoble', '/consultant-seo-boulogne-billancourt'
         ];
 
         // Pages outils SEO (valeur ajoutée forte)
@@ -251,10 +244,14 @@ module.exports = {
         else if (staticPageDates[path]) {
             lastmod = new Date(staticPageDates[path]).toISOString();
         }
-        // 3. Pages villes → date de dernière mise à jour (hyper-localisation 5 villes le 4 avril)
+        // 3. Pages villes → date de dernière mise à jour
         else if (path.startsWith('/consultant-seo-')) {
             const hyperLocalizedCities = ['/consultant-seo-nice', '/consultant-seo-paris', '/consultant-seo-cannes', '/consultant-seo-marseille', '/consultant-seo-sophia-antipolis'];
-            lastmod = new Date(hyperLocalizedCities.includes(path) ? '2026-04-04' : '2026-02-18').toISOString();
+            if (hyperLocalizedCities.includes(path)) {
+                lastmod = new Date('2026-04-04').toISOString();
+            } else {
+                lastmod = new Date('2026-02-18').toISOString();
+            }
         }
         // 4. Fallback → date du build
         else {

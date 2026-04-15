@@ -319,20 +319,16 @@ Le **SEO local** à Nice et sur la Côte d'Azur est un levier puissant pour les 
 
 ## Questions fréquentes
 
-### Combien de temps pour apparaître dans le pack local à Nice ?
-
+**Combien de temps pour apparaître dans le pack local à Nice ?**
 Avec une fiche Google Business Profile optimisée et des avis réguliers, les premiers résultats apparaissent en 2 à 4 semaines. Pour dominer le pack local sur des requêtes compétitives, comptez 3 à 6 mois de travail continu.
 
-### Faut-il payer pour apparaître dans Google Maps ?
-
+**Faut-il payer pour apparaître dans Google Maps ?**
 Non, Google Maps est gratuit. Votre visibilité dépend de l'optimisation de votre fiche Google Business Profile, de vos avis clients, et de la cohérence de vos informations en ligne. Utilisez notre [simulateur de visibilité locale](/outils/simulateur-visibilite-locale) pour évaluer votre position actuelle.
 
-### Le SEO local fonctionne-t-il pour les entreprises sans local physique ?
-
+**Le SEO local fonctionne-t-il pour les entreprises sans local physique ?**
 Oui, mais différemment. Les entreprises de services à domicile (plombiers, électriciens, consultants) peuvent définir une zone de chalandise sans adresse visible. Google affichera votre fiche pour les recherches dans cette zone.
 
-### Combien d'avis faut-il pour bien se positionner ?
-
+**Combien d'avis faut-il pour bien se positionner ?**
 La qualité prime sur la quantité. 20 avis 5 étoiles récents valent mieux que 100 avis anciens. Visez 2-3 nouveaux avis par mois minimum pour maintenir un signal de fraîcheur.
 
 ---

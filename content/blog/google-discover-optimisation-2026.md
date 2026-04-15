@@ -1,5 +1,5 @@
 ---
-title: "Google Discover : comment apparaître et générer du trafic en 2026"
+title: "Google Discover : apparaître et générer du trafic en 2026"
 description: "Guide complet pour optimiser votre site et vos contenus pour Google Discover après la mise à jour de février 2026. Images, E-E-A-T, Topic Authority et bonnes pratiques."
 date: "2026-03-23"
 category: "SEO Technique"
@@ -330,28 +330,22 @@ Pour approfondir cette synergie, consultez notre [guide complet sur le GEO](/blo
 
 ## FAQ {#faq}
 
-### Comment savoir si mon site est éligible à Google Discover ?
-
+**Comment savoir si mon site est éligible à Google Discover ?**
 Tout site indexé par Google peut théoriquement apparaître dans Discover. Il n'y a pas de candidature ni d'inscription. Les prérequis sont : un contenu de qualité, des images ≥ 1 200 px, la balise `max-image-preview:large`, et le respect des règles de contenu Google. Si l'onglet Discover n'apparaît pas dans votre Search Console après 8 semaines de publication régulière, c'est que votre contenu ne déclenche pas encore suffisamment d'intérêt.
 
-### Quelle est la différence entre Google Discover et Google Actualités ?
-
+**Quelle est la différence entre Google Discover et Google Actualités ?**
 Google Actualités cible les éditeurs de presse et nécessite une adhésion au Google News Publisher Center. Discover est ouvert à tous les sites et propose un flux plus large : articles, guides, vidéos, contenus evergreen mis à jour. Depuis février 2026, Discover a son propre algorithme de ranking, séparé de Search et de News.
 
-### Combien de trafic Discover peut générer ?
-
+**Combien de trafic Discover peut générer ?**
 Cela dépend de votre secteur et de la qualité de vos contenus. Un article qui « prend » dans Discover peut générer entre 5 000 et 50 000 visites en 2 à 5 jours. Mais le trafic est volatil : il arrive par pics, pas en flux continu. C'est pourquoi la régularité de publication est essentielle — chaque article est une nouvelle chance d'entrer dans le flux.
 
-### La mise à jour Discover de février 2026 a fait chuter mon trafic. Que faire ?
-
+**La mise à jour Discover de février 2026 a fait chuter mon trafic. Que faire ?**
 Commencez par vérifier dans Search Console quels contenus ont perdu en impressions. Les causes les plus fréquentes : titres jugés clickbait, images trop petites, contenu généraliste sans expertise démontrée, ou site trop lent sur mobile. Réalisez un [audit SEO complet](/audit-seo) pour identifier les points de friction. Corrigez en priorité les Core Web Vitals et renforcez votre expertise thématique en publiant des contenus de fond sur vos sujets principaux.
 
-### Faut-il optimiser différemment pour Discover et pour la recherche Google ?
-
+**Faut-il optimiser différemment pour Discover et pour la recherche Google ?**
 Oui, depuis février 2026. Les deux systèmes utilisent des algorithmes séparés. Pour la recherche, optimisez vos mots-clés, votre structure de liens internes et votre positionnement sur des intentions de recherche. Pour Discover, concentrez-vous sur la qualité visuelle, la fraîcheur, l'engagement et l'expertise thématique. L'idéal est de faire les deux : un article bien optimisé pour le SEO classique ET structuré pour Discover maximise votre surface de visibilité.
 
-### Google Discover fonctionne-t-il sur ordinateur ?
-
+**Google Discover fonctionne-t-il sur ordinateur ?**
 Historiquement, Discover était exclusivement mobile. En 2026, Google teste un widget Discover sur la page d'accueil de Chrome desktop dans certains pays. Mais pour l'instant, l'immense majorité du trafic Discover (> 95 %) provient du mobile. Optimisez d'abord pour mobile, le desktop suivra.
 
 ---

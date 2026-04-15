@@ -150,7 +150,7 @@ export default function Home() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/blog/importance-audit-seo" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                            <Link href="/blog/audit-seo-approfondi-guide-complet" className="text-sauge hover:underline inline-flex items-center gap-1">
                                                 L'importance de l'audit SEO
                                                 <ArrowRight className="w-3 h-3" />
                                             </Link>

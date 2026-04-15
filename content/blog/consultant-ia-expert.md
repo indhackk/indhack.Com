@@ -237,20 +237,16 @@ N'hésitez pas à découvrir mon pôle d'expertise sur la **[Page Consultant IA 
 
 ## Questions fréquentes
 
-### Quelles compétences doit avoir un consultant IA en 2026 ?
-
+**Quelles compétences doit avoir un consultant IA en 2026 ?**
 Un vrai consultant IA maîtrise trois domaines : (1) la technique (Vector Databases, frameworks RAG, Edge Computing), (2) le business (ROI, automatisation de processus, évaluation d'impact), et (3) la sécurité (RGPD, IA Act, bonnes pratiques de données). Il ne suffit pas de connaître les prompts : un expert doit architector des solutions sécurisées, évolutives et génératrices de valeur business réelle.
 
-### Combien coûte un consultant IA ?
-
+**Combien coûte un consultant IA ?**
 Les tarifs varient considérablement selon le profil et le scope. Un audit d'opportunités IA coûte entre 1 500 € et 3 000 €. Une mission de création d'agents/outils sur-mesure oscille entre 3 000 € et 10 000 € selon la complexité. Un retainer mensuel (suivi et optimisation continue) varie de 800 € à 2 500 € par mois pour une PME. En tant que consultant indépendant, un TJM professionnel se situe entre 600 € et 1 200 € selon l'expertise.
 
-### Quel est le ROI réel de l'intégration IA en entreprise ?
-
+**Quel est le ROI réel de l'intégration IA en entreprise ?**
 Selon nos cas clients, une intégration IA bien menée génère un retour sur investissement de 200 à 400 % en première année. Concrètement : une PME regagne 2 à 4 heures par jour par collaborateur sur les tâches sans valeur ajoutée (saisie CRM, synthèses, emails répétitifs). À 20 €/heure factorés par jour, cela représente rapidement 400 à 800 € d'économies quotidiennes, soit 8 000 € à 16 000 € par mois sur une petite équipe de 5 personnes.
 
-### Comment choisir entre un consultant IA et une agence ?
-
+**Comment choisir entre un consultant IA et une agence ?**
 Un consultant ou une petite agence est idéale pour des budgets limités (5 000 € à 15 000 €) et des besoins spécifiques. Une grosse agence excelle sur des projets complexes (ERP, multi-équipes, changement d'organisation massif). Pour 90 % des PME, un consultant indépendant offre meilleure réactivité et rapport qualité/prix. Vérifiez que votre consultant a des retours clients mesurables et des cas d'usage concrets documentés.
 
 ## Articles complémentaires

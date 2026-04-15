@@ -9,7 +9,7 @@ import { Building2, Mountain, Cpu, MapPin, Users, CheckCircle2, ArrowRight } fro
 const cityData = getCityBySlug("consultant-seo-grenoble")!;
 
 // Contenu personnalisé Grenoble - sections uniques pour atteindre 2000+ mots
-function GrenoblCustomContent() {
+function GrenobleCustomContent() {
     return (
         <>
             {/* Section Écosystème Tech Grenoble */}
@@ -180,12 +180,13 @@ function GrenoblCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique et expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500€)",
-                                        "Stratégie personnalisée à votre marché grenoblois",
-                                        "Reporting mensuel clair avec KPIs business",
-                                        "Expertise Core Web Vitals et SEO technique",
-                                        "Accompagnement GEO (visibilité ChatGPT, Perplexity)",
+                                        "Un interlocuteur unique expert (pas de junior)",
+                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Stratégie deeptech adaptée à Giant, Minatec et CEA Grenoble",
+                                        "SEO B2B pour startups hardware, medtech et cleantech iséroises",
+                                        "Expertise SEO montagne et tourisme hivernal (stations, résidences)",
+                                        "SEO local pour les commerces et professions libérales du centre",
+                                        "Contenu technique pour cycles de décision longs en R&D et innovation",
                                         "Sans engagement long terme (3 mois puis liberté)"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
@@ -291,21 +292,37 @@ function GrenoblCustomContent() {
                         <div className="bg-white p-6 rounded-xl border border-gray-100">
                             <h3 className="font-bold text-ink mb-4">Ressources SEO pour les entreprises grenobloises</h3>
                             <div className="grid md:grid-cols-2 gap-4">
-                                <Link href="/blog/programmatic-seo-50-pages-locales" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Comment créer des pages locales efficaces (Programmatic SEO)
+                                    SEO local : dominer Google Maps en 2026
                                 </Link>
                                 <Link href="/outils/audit-seo-gratuit" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Testez votre site avec notre audit SEO gratuit
+                                    Audit SEO gratuit : testez votre site en 30 secondes
                                 </Link>
                                 <Link href="/consultant-seo-lyon" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Consultant SEO Lyon (à 1h de Grenoble)
+                                    Consultante SEO Lyon (à 1h de Grenoble)
                                 </Link>
-                                <Link href="/blog/checklist-seo-2026" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/outils/simulateur-visibilite-locale" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Checklist SEO 2026 : 30 points essentiels
+                                    Simulateur de visibilité locale pour votre ville
+                                </Link>
+                                <Link href="/consultant-seo-marseille" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Consultante SEO Marseille (axe sud)
+                                </Link>
+                                <Link href="/blog/google-business-profile-guide-complet" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Guide complet Google Business Profile 2026
+                                </Link>
+                                <Link href="/blog/optimiser-fiche-gmb-2026" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Optimiser votre fiche Google Business Profile
+                                </Link>
+                                <Link href="/contact" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Demander un audit SEO gratuit à Grenoble
                                 </Link>
                             </div>
                         </div>
@@ -322,7 +339,7 @@ export default function SeoGrenoblePage() {
             <Breadcrumb items={getCityBreadcrumb(cityData.name, cityData.slug)} />
             <CityPageTemplateV2
                 cityData={cityData}
-                customContent={<GrenoblCustomContent />}
+                customContent={<GrenobleCustomContent />}
             />
         </>
     );

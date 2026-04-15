@@ -306,22 +306,19 @@ Voir aussi notre article détaillé sur [AI Overviews et impact sur le trafic SE
 
 ## FAQ {#faq}
 
-### Q1 : Vais-je récupérer mon trafic si je refonde mes articles ?
-
+**Q1 : Vais-je récupérer mon trafic si je refonde mes articles ?**
 **Réponse** : Oui, mais ça prend du temps. Google re-craws progressivement. Vous pouvez voir une amélioration en **2-4 semaines** si vous améliorez E-E-A-T et ajoutez de la data exclusive. Pour une récupération complète, comptez **2-6 mois** en général, **6-12 mois si vous êtes dans une catégorie YMYL** (santé, finance, légal).
 
 Le point important : ne vous découragez pas après 2 semaines. Le changement prend du temps.
 
-### Q2 : L'IA c'est vraiment autorisé maintenant ?
-
+**Q2 : L'IA c'est vraiment autorisé maintenant ?**
 **Réponse** : Oui et non. Google autorise l'IA comme outil (relire, structurer, braille). Google n'autorise pas l'IA-généré 100 % sans révision humaine. La question que Google pose : **« Cet article apporte-t-il une vraie valeur originale, ou c'est juste du contenu regurgité ? »**
 
 Si vous utilisez Claude ou ChatGPT pour générer une structure, puis que vous refontes 80 % du contenu avec votre expertise et data propriétaire : OK.
 
 Si vous utilisez ChatGPT en 100 % sans révision : pas OK (pénalité).
 
-### Q3 : Je suis un site d'actualité / news. Comment je me positionne ?
-
+**Q3 : Je suis un site d'actualité / news. Comment je me positionne ?**
 **Réponse** : C'est dur actuellement. Les AI Overviews et Discover cannibalisent le trafic news. Vos leviers :
 
 1. **Exclusivité** : Scoop, interviews, investigations originales (pas du rewriting de l'AFP)
@@ -331,8 +328,7 @@ Si vous utilisez ChatGPT en 100 % sans révision : pas OK (pénalité).
 
 Honnêtement ? Le modèle économique du news généraliste via Google Search est en crise depuis 2 ans. Il faut diversifier les sources.
 
-### Q4 : Comment je sais si je suis touché par ce core update ?
-
+**Q4 : Comment je sais si je suis touché par ce core update ?**
 **Réponse** : Google Search Console, onglet « Performance ».
 
 - Filtrez par date (depuis 1er mars)
@@ -346,8 +342,7 @@ Les signaux typiques :
 - Mais moins de clics (AI Overviews)
 - Ou, vous avez perdu du ranking sur du contenu générique
 
-### Q5 : Mon site est neuf (< 6 mois). Suis-je plus vulnérable au core update ?
-
+**Q5 : Mon site est neuf (< 6 mois). Suis-je plus vulnérable au core update ?**
 **Réponse** : Oui et non. Les nouveaux sites ne font pas l'objet d'une pénalité spécifique. MAIS :
 
 - Vous n'avez pas de « fonds de roulement » d'autorité

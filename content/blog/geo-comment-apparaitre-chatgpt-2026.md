@@ -249,28 +249,22 @@ Voici une checklist actionnable pour commencer immédiatement :
 
 ## Questions fréquentes sur le GEO
 
-### Le GEO va-t-il remplacer le SEO ?
-
+**Le GEO va-t-il remplacer le SEO ?**
 Non, le GEO est un complément du SEO, pas un remplacement. Les fondations SEO (technique, contenu, autorité) restent essentielles. Un site mal référencé sur Google ne sera pas cité par les IA. Pensez au GEO comme une couche supplémentaire d'optimisation qui s'ajoute à votre stratégie SEO existante.
 
-### Combien de temps pour voir des résultats en GEO ?
-
+**Combien de temps pour voir des résultats en GEO ?**
 Les actions techniques (débloquer les crawlers, ajouter les données structurées) montrent des effets en quelques semaines. La construction d'autorité et de crédibilité pour être cité régulièrement par les IA demande 3 à 6 mois. C'est un investissement moyen terme, comme le SEO.
 
-### Comment savoir si mon site apparaît dans les réponses IA ?
-
+**Comment savoir si mon site apparaît dans les réponses IA ?**
 Deux méthodes : le test manuel (posez des questions à ChatGPT/Perplexity sur votre domaine d'expertise et vérifiez si vous êtes cité) et les outils automatisés. Notre [testeur de visibilité IA](/outils/testeur-visibilite-ia) analyse les signaux techniques qui déterminent si votre site peut être cité.
 
-### Les petites entreprises sont-elles concernées par le GEO ?
-
+**Les petites entreprises sont-elles concernées par le GEO ?**
 Oui, particulièrement. Le GEO offre un avantage "first mover" : vos concurrents n'y pensent probablement pas encore. Une PME qui optimise son GEO maintenant peut être citée avant des entreprises plus grandes mais moins réactives. C'est une fenêtre d'opportunité.
 
-### Faut-il bloquer ou autoriser les crawlers IA ?
-
+**Faut-il bloquer ou autoriser les crawlers IA ?**
 Autoriser, dans 99% des cas. Bloquer les crawlers IA revient à se rendre invisible pour une part croissante de votre audience. Les seules exceptions : contenus très sensibles ou propriété intellectuelle que vous ne voulez pas voir réutilisée par des modèles IA. Pour la majorité des entreprises, l'objectif est la visibilité, pas le blocage.
 
-### Qu'est-ce que le fichier llms.txt ?
-
+**Qu'est-ce que le fichier llms.txt ?**
 C'est un fichier texte placé à la racine de votre site (comme robots.txt) qui aide les LLM (Large Language Models) à comprendre votre contenu. Il peut contenir des informations sur votre entreprise, vos sujets d'expertise, vos pages importantes. Le format n'est pas encore standardisé mais plusieurs acteurs IA commencent à le reconnaître.
 
 ## Ce qu'il faut retenir
@@ -298,7 +292,7 @@ Les 4 piliers à retenir :
 - [AI Overviews : les chiffres qui changent tout pour le SEO en 2026](/blog/ai-overviews-impact-trafic-seo-2026)
 - [Google AI Mode : 93 % de zero-click, la fin des 10 liens bleus](/blog/google-ai-mode-fin-10-liens-bleus-2026)
 - [Checklist SEO 2026 — Les 30 points essentiels](/blog/checklist-seo-2026)
-- [L'importance d'un audit SEO pour votre croissance](/blog/importance-audit-seo)
+- [L'importance d'un audit SEO pour votre croissance](/blog/audit-seo-approfondi-guide-complet)
 - [Google Business Profile : Guide Complet](/blog/google-business-profile-guide-complet)
 
 **Outils gratuits :**

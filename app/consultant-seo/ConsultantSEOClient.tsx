@@ -86,17 +86,26 @@ const AVANTAGES = [
     }
 ];
 
-// 10 villes actives (PACA + Paris + Montpellier) — les 9 autres sont noindex
+// 19 villes indexées — couverture nationale France
 const CITIES = [
     { name: "Nice", slug: "consultant-seo-nice" },
     { name: "Paris", slug: "consultant-seo-paris" },
+    { name: "Lyon", slug: "consultant-seo-lyon" },
+    { name: "Marseille", slug: "consultant-seo-marseille" },
+    { name: "Toulouse", slug: "consultant-seo-toulouse" },
+    { name: "Bordeaux", slug: "consultant-seo-bordeaux" },
+    { name: "Lille", slug: "consultant-seo-lille" },
+    { name: "Nantes", slug: "consultant-seo-nantes" },
+    { name: "Strasbourg", slug: "consultant-seo-strasbourg" },
+    { name: "Montpellier", slug: "consultant-seo-montpellier" },
+    { name: "Rennes", slug: "consultant-seo-rennes" },
+    { name: "Grenoble", slug: "consultant-seo-grenoble" },
     { name: "Cannes", slug: "consultant-seo-cannes" },
     { name: "Monaco", slug: "consultant-seo-monaco" },
-    { name: "Marseille", slug: "consultant-seo-marseille" },
-    { name: "Montpellier", slug: "consultant-seo-montpellier" },
     { name: "Antibes", slug: "consultant-seo-antibes" },
     { name: "Sophia-Antipolis", slug: "consultant-seo-sophia-antipolis" },
     { name: "Aix-en-Provence", slug: "consultant-seo-aix-en-provence" },
+    { name: "Boulogne-Billancourt", slug: "consultant-seo-boulogne-billancourt" },
     { name: "Juan-les-Pins", slug: "consultant-seo-juan-les-pins" },
 ];
 

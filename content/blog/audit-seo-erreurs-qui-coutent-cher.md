@@ -14,7 +14,7 @@ Pourtant, votre téléphone ne sonne pas assez.
 Pourquoi ? Parce que votre site a des "fuites".
 
 Imaginez un seau percé. Vous versez de l'eau (du trafic), mais elle s'échappe avant de remplir le seau (la vente).
-En tant que [Consultante SEO à Nice](/consultant-seo-nice), je vois ces erreurs sur 90% des sites que j'audite dans le cadre de mon [service d'audit SEO](/audit-seo). C'est [la raison pour laquelle l'audit SEO est le premier investissement](/blog/importance-audit-seo) que je recommande à toute entreprise qui veut arrêter de perdre de l'argent.
+En tant que [Consultante SEO à Nice](/consultant-seo-nice), je vois ces erreurs sur 90% des sites que j'audite dans le cadre de mon [service d'audit SEO](/audit-seo). C'est [la raison pour laquelle l'audit SEO est le premier investissement](/blog/audit-seo-approfondi-guide-complet) que je recommande à toute entreprise qui veut arrêter de perdre de l'argent.
 
 Chacune d'elle vous coûte probablement un client par mois. Faites le calcul sur l'année : ça dépasse les 10 000€.
 Voici comment les détecter et **les corriger ce soir**. Pour aller plus loin, testez gratuitement votre site avec notre [outil d'audit SEO gratuit](/outils/audit-seo-gratuit).
@@ -212,7 +212,7 @@ Ces erreurs sont exactement celles que je détecte dans mes audits. Découvrez [
 
 ## Pour aller plus loin
 
-- [Pourquoi l'audit SEO est le point de départ de votre croissance](/blog/importance-audit-seo) — Comprendre l'importance d'un diagnostic complet
+- [Pourquoi l'audit SEO est le point de départ de votre croissance](/blog/audit-seo-approfondi-guide-complet) — Comprendre l'importance d'un diagnostic complet
 - [Que contient un rapport d'audit SEO professionnel ?](/blog/contenu-rapport-audit-seo) — Ce que vous recevez concrètement après un audit
 - [Checklist SEO 2026](/blog/checklist-seo-2026) — Les 30 points essentiels pour un SEO performant
 - [Pourquoi votre site est lent (et comment y remédier)](/blog/pourquoi-votre-site-est-lent-performance-web-2026) — Guide complet performance web
@@ -221,28 +221,22 @@ Ces erreurs sont exactement celles que je détecte dans mes audits. Découvrez [
 
 ## Questions fréquentes
 
-### Comment savoir si mon site a des erreurs SEO ?
-
+**Comment savoir si mon site a des erreurs SEO ?**
 Le moyen le plus simple est d'utiliser un [outil d'audit SEO gratuit](/outils/audit-seo-gratuit). En 30 secondes, vous obtenez un score et la liste des problèmes prioritaires. Pour un diagnostic approfondi, un [audit SEO professionnel](/audit-seo) identifie les erreurs invisibles aux outils automatiques.
 
-### Ces erreurs sont-elles graves pour le référencement ?
-
+**Ces erreurs sont-elles graves pour le référencement ?**
 Oui. Chacune de ces erreurs peut réduire votre visibilité Google de 20 à 50 %. Cumulées, elles peuvent vous rendre quasi invisible sur des requêtes importantes. La bonne nouvelle : elles sont toutes corrigeables, souvent en moins d'une heure.
 
-### Puis-je corriger ces erreurs moi-même ?
-
+**Puis-je corriger ces erreurs moi-même ?**
 La plupart oui, avec un minimum de compétences techniques. Les corrections canonical et robots.txt nécessitent un accès à l'hébergement ou au CMS. Si vous n'êtes pas à l'aise, faites appel à un [consultant SEO](/consultant-seo) pour éviter de créer de nouveaux problèmes.
 
-### Combien de temps avant de voir les résultats ?
-
+**Combien de temps avant de voir les résultats ?**
 Les corrections techniques montrent des effets en 2 à 4 semaines, le temps que Google recrawle votre site. Les gains de conversion (bouton d'appel, vitesse) sont souvent visibles dès le lendemain.
 
-### Comment éviter ces erreurs lors d'une refonte de site ?
-
+**Comment éviter ces erreurs lors d'une refonte de site ?**
 Suivez une [checklist SEO de refonte](/blog/refonte-site-web-sans-perdre-seo) complète. Les points critiques : mapping des redirections 301, conservation des URLs performantes, validation des canonicals. C'est mon domaine : je [refonds des sites sans perte de SEO](/refonte-site-web) chaque mois.
 
-### Mon site WordPress peut-il avoir ces erreurs ?
-
+**Mon site WordPress peut-il avoir ces erreurs ?**
 Absolument. WordPress est particulièrement sujet aux erreurs de H1 multiples (thèmes mal configurés), d'images non optimisées (pas de compression automatique par défaut), et de robots.txt mal configurés (plugins qui ajoutent des règles). Utilisez un plugin comme Yoast ou Rank Math pour les détecter.
 
 ---

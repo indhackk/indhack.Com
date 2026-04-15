@@ -261,7 +261,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         slug: "google-search-console",
         definition:
             "Outil gratuit de Google qui permet de surveiller les performances de son site dans les résultats de recherche : impressions, clics, position moyenne, erreurs d'indexation, Core Web Vitals, et soumission de sitemaps.",
-        links: [{ label: "Importance de l'audit SEO", href: "/blog/importance-audit-seo" }],
+        links: [{ label: "Importance de l'audit SEO", href: "/blog/audit-seo-approfondi-guide-complet" }],
         category: "analytics",
     },
     {

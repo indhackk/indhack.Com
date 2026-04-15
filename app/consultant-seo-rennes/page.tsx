@@ -175,12 +175,12 @@ function RennesCustomContent() {
                                 <ul className="space-y-3">
                                     {[
                                         "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500€)",
-                                        "Stratégie personnalisée à votre marché rennais",
-                                        "Reporting mensuel clair avec KPIs business",
-                                        "Expertise Core Web Vitals et SEO technique",
-                                        "Accompagnement GEO (visibilité ChatGPT, Perplexity)",
-                                        "Tarifs 30-50% inférieurs aux agences",
+                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Stratégie SEO cybersécurité et ESN (pôle cyber #1 de France)",
+                                        "Contenu B2B technique pour Orange, Sopra Steria et éditeurs bretons",
+                                        "SEO local agroalimentaire (Lactalis, groupes coopératifs)",
+                                        "Expertise campus et recrutement tech (70 000 étudiants)",
+                                        "SEO pour les commerces de la rue Le Bastard et du centre",
                                         "Sans engagement long terme (3 mois puis liberté)"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
@@ -286,29 +286,37 @@ function RennesCustomContent() {
                         <div className="bg-white p-6 rounded-xl border border-gray-100">
                             <h3 className="font-bold text-ink mb-4">Ressources SEO pour les entreprises rennaises</h3>
                             <div className="grid md:grid-cols-2 gap-4">
-                                <Link href="/blog/programmatic-seo-50-pages-locales" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Comment créer des pages locales efficaces (Programmatic SEO)
+                                    SEO local : dominer Google Maps en 2026
                                 </Link>
                                 <Link href="/outils/audit-seo-gratuit" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Testez votre site avec notre audit SEO gratuit
+                                    Audit SEO gratuit : testez votre site en 30 secondes
                                 </Link>
                                 <Link href="/consultant-seo-nantes" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Consultant SEO Nantes (à 1h de Rennes)
+                                    Consultante SEO Nantes (à 1h de Rennes)
                                 </Link>
-                                <Link href="/blog/checklist-seo-2026" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/outils/simulateur-visibilite-locale" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Checklist SEO 2026 : 30 points essentiels
+                                    Simulateur de visibilité locale pour votre ville
                                 </Link>
-                                <Link href="/outils/testeur-visibilite-ia" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/consultant-seo-lille" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Testeur de visibilité IA (ChatGPT, Perplexity)
+                                    Consultante SEO Lille (axe Grand Ouest)
                                 </Link>
-                                <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/blog/google-business-profile-guide-complet" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps
+                                    Guide complet Google Business Profile 2026
+                                </Link>
+                                <Link href="/blog/google-maps-voler-clients-concurrents" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Voler les clients de vos concurrents sur Google Maps
+                                </Link>
+                                <Link href="/contact" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Demander un audit SEO gratuit à Rennes
                                 </Link>
                             </div>
                         </div>

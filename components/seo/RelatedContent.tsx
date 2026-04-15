@@ -12,7 +12,7 @@ const CONTENT_MAP: Record<string, { title: string; href: string; type: 'article'
   ],
   'audit': [
     { title: "Ce que contient un rapport d'audit", href: "/blog/contenu-rapport-audit-seo", type: 'article' },
-    { title: "L'importance de l'audit SEO", href: "/blog/importance-audit-seo", type: 'article' },
+    { title: "L'importance de l'audit SEO", href: "/blog/audit-seo-approfondi-guide-complet", type: 'article' },
     { title: "Audit SEO gratuit", href: "/outils/audit-seo-gratuit", type: 'tool' },
     { title: "Service audit SEO", href: "/audit-seo", type: 'service' },
   ],

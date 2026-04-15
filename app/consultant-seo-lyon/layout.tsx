@@ -8,7 +8,7 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/consultant-seo-lyon"
     },
     robots: {
-        index: false,
+        index: true,
         follow: true,
     },
     openGraph: {

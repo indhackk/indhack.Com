@@ -155,20 +155,16 @@ Un [diagnostic complet de votre situation](/audit-seo) permet d'identifier préc
 
 ## Questions fréquentes
 
-### Combien de temps pour qu'un site apparaisse sur Google ?
-
+**Combien de temps pour qu'un site apparaisse sur Google ?**
 Un nouveau site met 2 à 4 semaines pour être indexé par Google. Pour atteindre la première page sur des requêtes concurrentielles, comptez 3 à 12 mois de travail SEO continu. Un site bien optimisé dès sa création gagne plusieurs mois sur ce délai.
 
-### Vaut-il mieux un site Wix ou un site sur-mesure ?
-
+**Vaut-il mieux un site Wix ou un site sur-mesure ?**
 Pour un projet sérieux, le sur-mesure l'emporte. Wix est limité côté SEO technique (vitesse, structure des URLs, possibilités d'optimisation). Un site Next.js ou WordPress bien configuré offre un contrôle total sur les facteurs de ranking.
 
-### Le référencement coûte-t-il plus cher que la création ?
-
+**Le référencement coûte-t-il plus cher que la création ?**
 Non si vous choisissez le bon prestataire. Le SEO technique doit être inclus dans la création. Le budget SEO supplémentaire (contenu, netlinking) dépend de vos objectifs, mais les fondations ne doivent jamais être facturées "en plus".
 
-### Comment savoir si mon prestataire intègre le SEO ?
-
+**Comment savoir si mon prestataire intègre le SEO ?**
 Posez ces questions : "Quel sera mon score PageSpeed ?", "Comment structurez-vous le maillage interne ?", "Quels schemas JSON-LD intégrez-vous ?". Un prestataire qui ne comprend pas ces termes n'intègre pas le SEO.
 
 ---

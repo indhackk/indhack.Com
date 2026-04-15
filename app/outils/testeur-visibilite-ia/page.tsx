@@ -421,7 +421,7 @@ export default function TesteurVisibiliteIAPage() {
                                     {[
                                         { href: "/blog/geo-comment-apparaitre-chatgpt-2026", text: "GEO : Comment apparaître dans ChatGPT en 2026" },
                                         { href: "/blog/pourquoi-consultant-seo", text: "Pourquoi faire appel à un consultant SEO ?" },
-                                        { href: "/blog/importance-audit-seo", text: "L'audit SEO : point de départ de votre croissance" },
+                                        { href: "/blog/audit-seo-approfondi-guide-complet", text: "L'audit SEO : point de départ de votre croissance" },
                                     ].map((link) => (
                                         <li key={link.href}>
                                             <Link href={link.href} className="text-soft-light hover:text-sauge-light transition-colors flex items-center gap-2 text-sm">

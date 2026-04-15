@@ -399,31 +399,24 @@ Une refonte réussie côté SEO repose sur :
 ## Questions fréquentes
 
 **Combien de temps pour retrouver mon trafic après une refonte ?**
-
 Avec une migration bien préparée et un plan de redirection solide, le trafic revient au niveau initial en 4 à 6 semaines. Une légère baisse temporaire (10-15%) est normale pendant que Google réévalue le site. Si la baisse dépasse 30% après 2 semaines, il y a probablement un problème technique à corriger d'urgence (erreurs 404, chaînes de redirections, robots.txt bloquant).
 
 **Combien de temps dure une refonte SEO-safe ?**
-
 Comptez 2 à 4 semaines pour l'audit pré-migration et la préparation du plan de redirection, puis le temps de développement (variable selon la taille du site), et 4 à 6 semaines de surveillance post-lancement. Consultez notre guide sur le [contenu d'un rapport d'audit SEO](/blog/contenu-rapport-audit-seo) pour savoir exactement ce que doit couvrir cet audit pré-migration. Une refonte bien préparée prend plus de temps, mais évite des mois de récupération SEO et une perte de positionnement catastrophique.
 
 **Puis-je changer de nom de domaine pendant la refonte ?**
-
 Oui, mais c'est une migration plus complexe. En plus des redirections 301 classiques, il faut utiliser l'outil "Changement d'adresse" dans Google Search Console. Comptez 2-3 mois avant de retrouver vos positions. Je recommande de dissocier les deux : d'abord la refonte, puis le changement de domaine (ou l'inverse).
 
 **Faut-il garder exactement les mêmes URLs ?**
-
 C'est l'idéal si vos URLs actuelles sont propres. Mais si elles sont mal structurées (paramètres, accents, trop longues), la refonte est l'occasion de les améliorer. L'important est d'avoir un plan de redirection 301 parfait : chaque ancienne URL doit pointer vers sa nouvelle destination sans créer de chaîne de redirections.
 
 **Faut-il un consultant SEO pour une refonte ?**
-
 Pour un petit site vitrine (moins de 20 pages), cette checklist peut suffire si vous êtes rigoureux. Pour un site e-commerce ou un blog avec beaucoup de contenu, l'accompagnement d'un expert réduit drastiquement les risques de perte de positionnement. Le coût d'un consultant est bien inférieur à la perte de trafic d'une migration ratée.
 
 **Que faire si j'ai déjà perdu du trafic après ma refonte ?**
-
 Agissez vite : vérifiez les erreurs 404 dans Search Console, contrôlez que robots.txt n'est pas bloquant, testez toutes les redirections 301 avec l'extension Redirect Path. Corrigez chaque problème détecté et demandez une réindexation. Plus vous intervenez rapidement, plus la récupération sera rapide.
 
 **Une refonte peut-elle améliorer mon SEO ?**
-
 Absolument. Si votre ancien site était lent, mal structuré ou avec un contenu thin, une refonte bien menée peut améliorer vos positions. Les Core Web Vitals (LCP, INP, CLS) sont un facteur de ranking : un nouveau site rapide et mobile-first peut surpasser l'ancien. L'important est de ne rien perdre pendant la transition grâce à un audit pré-migration rigoureux.
 
 ---

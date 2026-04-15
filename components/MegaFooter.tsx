@@ -23,19 +23,18 @@ const SERVICES = [
 // ══════════════════════════════════════════════════════════════
 // COLONNE 2 — SEO Local France (top 20 villes)
 // ══════════════════════════════════════════════════════════════
-// Uniquement les villes indexées (PACA + Paris + Montpellier)
-// Les 9 villes noindex ont été retirées pour ne pas gaspiller le jus SEO
+// Top 10 villes par volume de recherche — les 9 autres sont liées via /seo-local et /consultant-seo
 const CITIES = [
     { name: "Nice", href: "/consultant-seo-nice" },
     { name: "Paris", href: "/consultant-seo-paris" },
+    { name: "Lyon", href: "/consultant-seo-lyon" },
     { name: "Marseille", href: "/consultant-seo-marseille" },
+    { name: "Toulouse", href: "/consultant-seo-toulouse" },
+    { name: "Bordeaux", href: "/consultant-seo-bordeaux" },
+    { name: "Lille", href: "/consultant-seo-lille" },
     { name: "Montpellier", href: "/consultant-seo-montpellier" },
     { name: "Cannes", href: "/consultant-seo-cannes" },
-    { name: "Antibes", href: "/consultant-seo-antibes" },
-    { name: "Monaco", href: "/consultant-seo-monaco" },
-    { name: "Sophia-Antipolis", href: "/consultant-seo-sophia-antipolis" },
-    { name: "Aix-en-Provence", href: "/consultant-seo-aix-en-provence" },
-    { name: "Juan-les-Pins", href: "/consultant-seo-juan-les-pins" },
+    { name: "Toutes les villes →", href: "/seo-local" },
 ];
 
 // ══════════════════════════════════════════════════════════════

@@ -723,7 +723,7 @@ export default function GEOArticlePage() {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/blog/importance-audit-seo" className="text-violet-600 hover:text-violet-800 font-medium flex items-center gap-2 text-sm">
+                                        <Link href="/blog/audit-seo-approfondi-guide-complet" className="text-violet-600 hover:text-violet-800 font-medium flex items-center gap-2 text-sm">
                                             <ArrowRight className="w-3 h-3" />
                                             L'importance d'un audit SEO
                                         </Link>

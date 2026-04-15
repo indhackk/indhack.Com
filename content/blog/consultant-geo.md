@@ -1,5 +1,5 @@
 ---
-title: "Le métier de consultant GEO : missions, outils et études de cas"
+title: "Consultant GEO : missions, outils et études de cas [2026]"
 description: "Découvrez le métier de consultant GEO : missions, outils utilisés, études de cas réels et résultats chiffrés. Le guide complet pour comprendre cette expertise émergente."
 date: "2026-01-08"
 category: "IA & SEO"
@@ -214,20 +214,16 @@ Si votre site ne performe plus aussi bien sur les moteurs classiques, ou si vous
 
 ## Questions fréquentes
 
-### Quel est le coût d'un accompagnement GEO ?
-
+**Quel est le coût d'un accompagnement GEO ?**
 Les tarifs varient selon le scope : un audit GEO simple (vérification robots.txt, crawlers IA, données structurées) coûte entre 500 € et 1 500 €. Une stratégie complète avec création de contenu optimisé IA, mise en place du llms.txt et monitoring sur 3 mois oscille entre 2 500 € et 5 000 €. Pour un retainer mensuel (suivi continu), comptez entre 500 € et 1 500 € par mois selon votre envergure. L'important : le GEO se rentabilise rapidement si votre IA visibility génère des conversions.
 
-### Quelle est la différence entre un consultant SEO et un consultant GEO ?
-
+**Quelle est la différence entre un consultant SEO et un consultant GEO ?**
 Un consultant SEO optimise pour les moteurs de recherche classiques (Google, Bing) via des contenus bien structurés et une autorité de backlinks. Un consultant GEO fait cela PLUS optimise pour être cité et recommandé par les IA génératives (ChatGPT, Perplexity, Claude). Le GEO exige une compréhension des LLMs, des formats de données spécifiques (Q&A, données primaires, fichier llms.txt) et une sémantique ultra-précise pour que l'IA vous choisisse comme source de confiance.
 
-### Combien de temps avant de voir des résultats visibles ?
-
+**Combien de temps avant de voir des résultats visibles ?**
 Si votre site est déjà bien classé sur Google, les premières mentions IA peuvent apparaître en 2 à 4 semaines. Si vous partez d'une visibilité faible, il faut d'abord renforcer votre autorité SEO (3 à 6 mois), puis le GEO commencera à générer des citations. Le suivi continu via un outil comme Otterly ou notre Testeur Visibilité IA montre des améliorations chaque mois, avec une accélération autour des mois 2 et 3 de la stratégie.
 
-### Est-ce que le GEO remplace le SEO classique ?
-
+**Est-ce que le GEO remplace le SEO classique ?**
 Non, le GEO complète le SEO. Les IA utilisent toujours les classements Google/Bing pour découvrir les pages pertinentes. Sans une bonne base SEO, le GEO ne servira à rien : l'IA ne trouvera même pas votre site. Le GEO rend ensuite votre site hyper-visible quand l'IA le trouve. Il faut les deux pour dominer les recherches conversationnelles.
 
 ## Articles complémentaires

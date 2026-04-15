@@ -273,8 +273,7 @@ Gardez cette checklist à portée de main pour vos prochains audits :
 
 **[🔍 Lancez un audit SEO gratuit de votre site](/outils/audit-seo-gratuit)** — Identifiez vos priorités d'optimisation en 30 secondes.
 
-### Besoin d'un Regard Expert ?
-
+**Besoin d'un Regard Expert ?**
 Vous manquez de temps ou de compétences pour auditer votre site ? Je réalise des **audits SEO complets** avec un plan d'action priorisé par ROI.
 
 **[Demandez votre diagnostic SEO gratuit →](/contact)**
@@ -295,7 +294,7 @@ Chaque point de cette checklist contribue à construire une **visibilité durabl
 
 ---
 
-**Envie d'aller plus loin ?** Découvrez [pourquoi l'audit SEO est le point de départ de votre croissance](/blog/importance-audit-seo) ou explorez mes guides sur le [SEO local](/seo-local) pour les entreprises françaises.
+**Envie d'aller plus loin ?** Découvrez [pourquoi l'audit SEO est le point de départ de votre croissance](/blog/audit-seo-approfondi-guide-complet) ou explorez mes guides sur le [SEO local](/seo-local) pour les entreprises françaises.
 
 **Besoin d'un accompagnement local ?** Je propose mes services de consultant SEO dans toute la France : [Nice](/consultant-seo-nice), [Paris](/consultant-seo-paris), [Lyon](/consultant-seo-lyon), [Marseille](/consultant-seo-marseille), [Bordeaux](/consultant-seo-bordeaux) et [Strasbourg](/consultant-seo-strasbourg).
 
@@ -303,20 +302,16 @@ Chaque point de cette checklist contribue à construire une **visibilité durabl
 
 ## Questions fréquentes
 
-### Quelle est la différence entre une checklist SEO et un audit SEO complet ?
-
+**Quelle est la différence entre une checklist SEO et un audit SEO complet ?**
 Une checklist SEO est un outil d'auto-diagnostic rapide pour identifier les problèmes évidents. Un audit SEO complet analyse en profondeur les données Search Console, les logs serveur, le profil de backlinks et la stratégie concurrentielle. La checklist prend 30 minutes, l'audit prend plusieurs jours.
 
-### À quelle fréquence dois-je vérifier ces 30 points ?
-
+**À quelle fréquence dois-je vérifier ces 30 points ?**
 Les points techniques (HTTPS, robots.txt, sitemap) doivent être vérifiés après chaque mise à jour majeure du site. Les points contenu et local peuvent être revus trimestriellement. La visibilité IA est un nouveau domaine à surveiller mensuellement car les algorithmes évoluent rapidement.
 
-### Puis-je faire cette checklist moi-même ou faut-il un expert ?
-
+**Puis-je faire cette checklist moi-même ou faut-il un expert ?**
 Vous pouvez vérifier vous-même les points basiques (HTTPS, titres, meta descriptions). Pour les points techniques avancés (Core Web Vitals, données structurées, analyse de logs), un [audit SEO professionnel](/audit-seo) permet d'aller plus loin et d'identifier les priorités par ROI.
 
-### Les Core Web Vitals sont-ils vraiment importants pour le référencement ?
-
+**Les Core Web Vitals sont-ils vraiment importants pour le référencement ?**
 Oui, mais leur impact est relatif. Un site avec des Core Web Vitals médiocres peut quand même bien se positionner si son contenu et ses backlinks sont excellents. Cependant, à qualité égale avec un concurrent, les Core Web Vitals font la différence.
 
 ---

@@ -163,12 +163,12 @@ function BoulogneBillancourtCustomContent() {
                                 <ul className="space-y-3">
                                     {[
                                         "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500€)",
-                                        "Expertise SEO B2B médias et audiovisuel",
-                                        "Positionnement sur requêtes à fort taux de conversion",
-                                        "Reporting mensuel clair avec KPIs business",
-                                        "Accompagnement GEO (visibilité ChatGPT, Perplexity)",
-                                        "Tarifs 30-50% inférieurs aux agences parisiennes",
+                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Stratégie SEO médias et production audiovisuelle (TF1, Canal+, M6)",
+                                        "Expertise agences de communication et prestataires créatifs du 92",
+                                        "SEO B2B pour les sièges sociaux de l'île Seguin et du Trapèze",
+                                        "Proximité Paris sans les tarifs parisiens (30 à 50 % moins cher)",
+                                        "Accompagnement GEO pour les sociétés de production et post-prod",
                                         "Sans engagement long terme (3 mois puis liberté)"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
@@ -274,29 +274,37 @@ function BoulogneBillancourtCustomContent() {
                         <div className="bg-white p-6 rounded-xl border border-gray-100">
                             <h3 className="font-bold text-ink mb-4">Ressources SEO pour les entreprises de Boulogne-Billancourt</h3>
                             <div className="grid md:grid-cols-2 gap-4">
-                                <Link href="/consultant-seo-paris" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Consultant SEO Paris
+                                    SEO local : dominer Google Maps en 2026
                                 </Link>
                                 <Link href="/outils/audit-seo-gratuit" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Testez votre site avec notre audit SEO gratuit
+                                    Audit SEO gratuit : testez votre site en 30 secondes
                                 </Link>
-                                <Link href="/blog/importance-audit-seo" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/consultant-seo-paris" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Pourquoi un audit SEO est indispensable
+                                    Consultante SEO Paris (à 15 min de Boulogne)
                                 </Link>
-                                <Link href="/blog/checklist-seo-2026" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                <Link href="/outils/simulateur-visibilite-locale" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    Checklist SEO 2026 : 30 points essentiels
-                                </Link>
-                                <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
-                                    <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps
+                                    Simulateur de visibilité locale pour votre ville
                                 </Link>
                                 <Link href="/creation-site-web" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
                                     Création de site web performant
+                                </Link>
+                                <Link href="/blog/google-maps-voler-clients-concurrents" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Voler les clients de vos concurrents sur Google Maps
+                                </Link>
+                                <Link href="/blog/optimiser-fiche-gmb-2026" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Optimiser votre fiche Google Business Profile
+                                </Link>
+                                <Link href="/contact" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Demander un audit SEO gratuit à Boulogne-Billancourt
                                 </Link>
                             </div>
                         </div>

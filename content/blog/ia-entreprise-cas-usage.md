@@ -228,20 +228,16 @@ Si cela vous interpelle, n'hésitez pas à jeter un œil sur :
 
 ## Questions fréquentes
 
-### Combien coûte une intégration IA complète en entreprise ?
-
+**Combien coûte une intégration IA complète en entreprise ?**
 Les coûts varient énormément selon le scope. Un audit d'opportunités (identification des tâches à automatiser) coûte entre 1 500 € et 3 000 €. Une mise en place complète avec 2-3 agents IA et automatisations Make/n8n oscille entre 5 000 € et 15 000 €. Un retainer mensuel pour l'optimisation continue et le SAV se situe entre 500 € et 1 500 € par mois. Rappelez-vous : si une intégration réduit les coûts opérationnels de 10 000 € par mois, elle se rentabilise en moins d'un mois.
 
-### Quel est le délai réaliste avant de voir des gains de productivité ?
-
+**Quel est le délai réaliste avant de voir des gains de productivité ?**
 Les premiers gains visibles (temps économisé, tâches automatisées) apparaissent en général dans les 2-3 premières semaines suivant le déploiement. Les gros impacts (réduction significative du temps sur processus, augmentation de la capacité de production) se matérialisent après 1 à 2 mois. Après 3 mois, les collaborateurs travaillent naturellement avec les outils IA, et l'économie d'ETP devient très mesurable. C'est pour cette raison que je recommande un suivi trimestriel.
 
-### Comment sécuriser mes données lors d'une intégration IA ?
-
+**Comment sécuriser mes données lors d'une intégration IA ?**
 C'est la peur principale, et elle est justifiée. La bonne nouvelle : il existe des solutions sécurisées. (1) Les architectures RAG "privées" permettent de donner à lire des données sensibles à un LLM sans que ces données ne transitent par les serveurs d'OpenAI ou Anthropic. (2) L'IA Act européenne et le RGPD encadrent maintenant légalement l'usage de l'IA. (3) Un consultant IA compétent sait architecturer des flux de données sécurisés. Ne jamais envoyer des données sensibles directement à ChatGPT gratuit : cela viole le RGPD. C'est d'ailleurs pour cela que les vrais consultants coûtent cher.
 
-### Quelle est la différence entre une automation simple et un "agent IA" ?
-
+**Quelle est la différence entre une automation simple et un "agent IA" ?**
 Une automation simple (Make, Zapier) exécute des séquences fixes : "Si email reçu → extraire => créer ticket dans CRM". Un agent IA est plus autonome : "Lis cet email → comprends l'intention → génère une réponse personnalisée → envoie-la → archive le mail". L'agent doit prendre des décisions, s'adapter au contexte et apprendre des erreurs. C'est plus compliqué à déployer (d'où un coût supérieur), mais l'impact est massif.
 
 ## Articles complémentaires

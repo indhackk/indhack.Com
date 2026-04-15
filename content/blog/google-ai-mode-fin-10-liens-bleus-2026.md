@@ -224,28 +224,22 @@ Vous voulez savoir où vous en êtes ? Testez votre site gratuitement avec notre
 
 ## FAQ {#faq}
 
-### Google AI Mode remplace-t-il la recherche classique ?
-
+**Google AI Mode remplace-t-il la recherche classique ?**
 Pas encore. Pour l'instant, AI Mode est une **option activable** par l'utilisateur via un bouton dédié dans la barre de recherche. La recherche classique avec les 10 liens bleus existe toujours par défaut. Cependant, Google teste le déploiement automatique d'AI Mode sur certaines catégories de requêtes. Mon anticipation : d'ici fin 2026, 30 à 40 % des requêtes complexes basculeront automatiquement en AI Mode.
 
-### Quelle est la différence entre AI Mode et AI Overviews ?
-
+**Quelle est la différence entre AI Mode et AI Overviews ?**
 Les **AI Overviews** sont un encart IA affiché au-dessus des résultats classiques — les 10 liens bleus restent visibles en dessous. **AI Mode** remplace entièrement la page de résultats par une interface conversationnelle. Le taux de zero-click passe de 43 % (AI Overviews) à 93 % (AI Mode).
 
-### Mon site va-t-il perdre tout son trafic avec AI Mode ?
-
+**Mon site va-t-il perdre tout son trafic avec AI Mode ?**
 Non, mais il faut anticiper. Les requêtes transactionnelles (« acheter », « devis ») et les requêtes locales (« consultant SEO Nice ») sont moins touchées. L'impact est maximum sur les requêtes informationnelles (guides, définitions, comparatifs). La clé : **diversifier vos sources de trafic** et optimiser pour être cité par l'IA plutôt que classé dans les résultats.
 
-### Comment optimiser mon site pour Google AI Mode ?
-
+**Comment optimiser mon site pour Google AI Mode ?**
 Cinq leviers principaux : **produire des données originales** que l'IA veut citer, **structurer votre contenu** avec des réponses claires et directes, renforcer votre **balisage Schema.org**, maintenir votre contenu à jour (les pages modifiées dans les 3 derniers mois reçoivent 1,7x plus de citations), et **construire votre marque** comme signal de confiance.
 
-### Le SEO est-il mort avec AI Mode ?
-
+**Le SEO est-il mort avec AI Mode ?**
 Non. Les données de SeoClarity montrent que **99,5 % des sources citées** dans les AI Overviews proviennent du top 10 organique. Le SEO reste le socle indispensable. Ce qui change, c'est qu'il faut y ajouter une couche de **[GEO (Generative Engine Optimization)](/blog/geo-comment-apparaitre-chatgpt-2026)** pour maximiser vos chances d'être cité par l'IA.
 
-### Quels outils pour mesurer ma visibilité dans AI Mode ?
-
+**Quels outils pour mesurer ma visibilité dans AI Mode ?**
 Plusieurs solutions émergent : Ahrefs Brand Radar, Otterly.ai, Rankscale. Chez IndHack, nous proposons un **[testeur de visibilité IA gratuit](/outils/testeur-visibilite-ia)** qui analyse votre présence dans les réponses de 8 crawlers IA différents.
 
 ## Articles complémentaires

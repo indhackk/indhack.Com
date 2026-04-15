@@ -190,7 +190,7 @@ export default function GenerateurSchemaPage() {
                                 <h3 className="font-bold text-white mb-4">Articles SEO & données structurées</h3>
                                 <ul className="space-y-2">
                                     {[
-                                        { href: "/blog/importance-audit-seo", text: "L'importance d'un audit SEO pour votre site" },
+                                        { href: "/blog/audit-seo-approfondi-guide-complet", text: "L'importance d'un audit SEO pour votre site" },
                                         { href: "/blog/contenu-rapport-audit-seo", text: "Que contient un rapport d'audit SEO ?" },
                                         { href: "/blog/pourquoi-consultant-seo", text: "Pourquoi travailler avec un consultant SEO" },
                                     ].map((link) => (

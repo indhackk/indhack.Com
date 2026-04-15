@@ -91,7 +91,7 @@ Voici une timeline réaliste en 2026 :
 - **Mois 4 à 6 : L'accélération.** Google a testé vos nouveaux contenus méticuleusement auprès de petits échantillons d'utilisateurs. Les positions montent, le trafic organique qualifié commence à rentrer régulièrement (vous basculez des Pages 4 vers le top de la Page 2).
 - **Mois 6 à 12 : La consolidation.** Votre site s'est crédibilisé, vos liens entrants renforcent votre autorité. Vous pénétrez le top 3 de Google sur des mots-clés à haute rentabilité. C'est l'explosion du retour sur investissement.
 
-Le délai final varie bien sûr selon l'autorité initiale de votre domaine, votre marché hyperconcurrentiel (ou de niche), et l'enveloppe budgétaire allouée. Mais dans 99% des cas, tout démarre inévitablement de la même manière : avec ce que je détaille dans cet article sur [l'audit SEO, point de départ de toute stratégie](/blog/importance-audit-seo), qui inclut un [rapport d'audit SEO complet](/blog/contenu-rapport-audit-seo) documentant chaque opportunité d'amélioration.
+Le délai final varie bien sûr selon l'autorité initiale de votre domaine, votre marché hyperconcurrentiel (ou de niche), et l'enveloppe budgétaire allouée. Mais dans 99% des cas, tout démarre inévitablement de la même manière : avec ce que je détaille dans cet article sur [l'audit SEO, point de départ de toute stratégie](/blog/audit-seo-approfondi-guide-complet), qui inclut un [rapport d'audit SEO complet](/blog/contenu-rapport-audit-seo) documentant chaque opportunité d'amélioration.
 
 ## Le SEO est-il rentable pour une PME en 2026 ?
 

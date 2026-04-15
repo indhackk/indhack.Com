@@ -260,20 +260,16 @@ Votre fiche Google Business Profile est un **levier de croissance gratuit** si e
 
 ## Questions fréquentes
 
-### Combien de temps pour créer une fiche Google Business Profile ?
-
+**Combien de temps pour créer une fiche Google Business Profile ?**
 La création prend 10-15 minutes. La vérification par Google prend 5 à 14 jours (carte postale) ou est immédiate (téléphone/email si disponible). Utilisez ce temps pour préparer vos photos et votre description.
 
-### Ma fiche peut-elle être suspendue ?
-
+**Ma fiche peut-elle être suspendue ?**
 Oui, si vous violez les règles : nom bourré de mots-clés, adresse fictive, multiple fiches pour une même entreprise. Google peut suspendre sans avertissement. Restez dans les guidelines officielles.
 
-### Comment savoir si ma fiche est bien optimisée ?
-
+**Comment savoir si ma fiche est bien optimisée ?**
 Utilisez notre [simulateur de visibilité locale](/outils/simulateur-visibilite-locale) pour voir où vous vous situez face à vos concurrents. Vérifiez aussi que 100 % des champs sont remplis dans votre tableau de bord GBP.
 
-### Les Google Posts ont-ils vraiment un impact ?
-
+**Les Google Posts ont-ils vraiment un impact ?**
 Oui. Les fiches actives (posts réguliers, réponses aux avis) sont favorisées par l'algorithme. Un post par semaine minimum montre à Google que votre entreprise est active.
 
 ---

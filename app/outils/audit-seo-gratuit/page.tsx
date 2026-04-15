@@ -444,7 +444,7 @@ export default function AuditSEOPage() {
                                 <h3 className="font-bold text-white mb-4">Lectures recommandées</h3>
                                 <ul className="space-y-2">
                                     {[
-                                        { href: "/blog/importance-audit-seo", text: "Pourquoi un audit SEO est indispensable" },
+                                        { href: "/blog/audit-seo-approfondi-guide-complet", text: "Pourquoi un audit SEO est indispensable" },
                                         { href: "/blog/contenu-rapport-audit-seo", text: "Décryptage d'un rapport d'audit SEO" },
                                         { href: "/blog/pourquoi-consultant-seo", text: "Pourquoi s'entourer d'un consultant SEO" },
                                     ].map((link) => (

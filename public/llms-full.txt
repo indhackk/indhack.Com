@@ -329,7 +329,7 @@ Les 4 piliers à retenir :
 
 **À lire aussi :**
 - [Checklist SEO 2026 — Les 30 points essentiels](/blog/checklist-seo-2026)
-- [L'importance d'un audit SEO pour votre croissance](/blog/importance-audit-seo)
+- [L'importance d'un audit SEO pour votre croissance](/blog/audit-seo-approfondi-guide-complet)
 - [Google Business Profile : Guide Complet](/blog/google-business-profile-guide-complet)
 - [SEO vs SEA : que choisir pour votre acquisition ?](/blog/seo-vs-sea-que-choisir)
 
@@ -787,7 +787,7 @@ Voici une timeline réaliste en 2026 :
 - **Mois 4 à 6 : L'accélération.** Google a testé vos nouveaux contenus méticuleusement auprès de petits échantillons d'utilisateurs. Les positions montent, le trafic organique qualifié commence à rentrer régulièrement (vous basculez des Pages 4 vers le top de la Page 2).
 - **Mois 6 à 12 : La consolidation.** Votre site s'est crédibilisé, vos liens entrants renforcent votre autorité. Vous pénétrez le top 3 de Google sur des mots-clés à haute rentabilité. C'est l'explosion du retour sur investissement.
 
-Le délai final varie bien sûr selon l'autorité initiale de votre domaine, votre marché hyperconcurrentiel (ou de niche), et l'enveloppe budgétaire allouée. Mais dans 99% des cas, tout démarre inévitablement de la même manière : avec ce que je détaille dans cet article sur [l'audit SEO, point de départ de toute stratégie](/blog/importance-audit-seo).
+Le délai final varie bien sûr selon l'autorité initiale de votre domaine, votre marché hyperconcurrentiel (ou de niche), et l'enveloppe budgétaire allouée. Mais dans 99% des cas, tout démarre inévitablement de la même manière : avec ce que je détaille dans cet article sur [l'audit SEO, point de départ de toute stratégie](/blog/audit-seo-approfondi-guide-complet).
 
 ## Le SEO est-il rentable pour une PME en 2026 ?
 
@@ -1389,7 +1389,7 @@ Chaque point de cette checklist contribue à construire une **visibilité durabl
 
 ---
 
-**Envie d'aller plus loin ?** Découvrez [pourquoi l'audit SEO est le point de départ de votre croissance](/blog/importance-audit-seo) ou explorez mes guides sur le [SEO local](/seo-local) pour les entreprises françaises.
+**Envie d'aller plus loin ?** Découvrez [pourquoi l'audit SEO est le point de départ de votre croissance](/blog/audit-seo-approfondi-guide-complet) ou explorez mes guides sur le [SEO local](/seo-local) pour les entreprises françaises.
 
 **Besoin d'un accompagnement local ?** Je propose mes services de consultant SEO dans toute la France : [Nice](/consultant-seo-nice), [Paris](/consultant-seo-paris), [Lyon](/consultant-seo-lyon), [Marseille](/consultant-seo-marseille), [Bordeaux](/consultant-seo-bordeaux) et [Strasbourg](/consultant-seo-strasbourg).
 

@@ -205,7 +205,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
         const blogByMarket: Record<string, { title: string; href: string; desc: string }[]> = {
             luxury: [
                 { title: "Comment dominer Google Maps face aux concurrents", href: "/blog/google-maps-voler-clients-concurrents", desc: "Stratégies SEO local avancées" },
-                { title: "L'importance d'un audit SEO", href: "/blog/importance-audit-seo", desc: "Diagnostic complet" },
+                { title: "L'importance d'un audit SEO", href: "/blog/audit-seo-approfondi-guide-complet", desc: "Diagnostic complet" },
                 { title: "Google Business Profile : Guide complet", href: "/blog/google-business-profile-guide-complet", desc: "Optimisation fiche Google" }
             ],
             tech: [
@@ -216,7 +216,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             volume: [
                 { title: "Checklist SEO 2026 : 30 points essentiels", href: "/blog/checklist-seo-2026", desc: "Audit technique complet" },
                 { title: "SEO vs SEA : que choisir ?", href: "/blog/seo-vs-sea-que-choisir", desc: "Comparatif stratégique" },
-                { title: "L'importance d'un audit SEO", href: "/blog/importance-audit-seo", desc: "Diagnostic complet" }
+                { title: "L'importance d'un audit SEO", href: "/blog/audit-seo-approfondi-guide-complet", desc: "Diagnostic complet" }
             ],
             premium: [
                 { title: "SEO Local Nice : dominer le marché azuréen", href: "/blog/seo-local-nice", desc: "Guide régional Côte d'Azur" },
@@ -226,7 +226,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             local: [
                 { title: "Pourquoi faire appel à un consultant SEO ?", href: "/blog/pourquoi-consultant-seo", desc: "Les avantages d'un expert SEO" },
                 { title: "Comment créer un site visible sur Google", href: "/blog/comment-creer-site-visible-google", desc: "Guide pratique SEO" },
-                { title: "L'importance d'un audit SEO", href: "/blog/importance-audit-seo", desc: "Diagnostic complet" }
+                { title: "L'importance d'un audit SEO", href: "/blog/audit-seo-approfondi-guide-complet", desc: "Diagnostic complet" }
             ]
         };
 
@@ -615,7 +615,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/blog/importance-audit-seo" className="text-soft hover:text-sauge transition-colors flex items-center gap-2">
+                                        <Link href="/blog/audit-seo-approfondi-guide-complet" className="text-soft hover:text-sauge transition-colors flex items-center gap-2">
                                             <ArrowRight className="w-3 h-3" />
                                             L'audit SEO : point de départ
                                         </Link>

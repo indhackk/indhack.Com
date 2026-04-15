@@ -200,20 +200,16 @@ J'ai conçu une page spécifique pour que vous puissiez explorer toutes les donn
 
 ## Questions fréquentes
 
-### Quels sont les principaux résultats de cette étude sur les restaurants côte d'azur ?
-
+**Quels sont les principaux résultats de cette étude sur les restaurants côte d'azur ?**
 L'étude porte sur 308 restaurants situés dans le Local Pack (top résultats Google) de 10 villes majeures. Les trois résultats clés sont : (1) 30 % n'ont pas de vrai site web, se contentant de Facebook ou UberEats ; (2) 13 % affichent des profils "suspects" avec notes supérieures à 4.5/5 mais moins de 10 avis ; (3) 32 % souffrent d'un engagement faible avec moins de 50 avis malgré leur visibilité. Cela démontre un retard digital massif même chez les restaurants les plus visibles.
 
-### Pourquoi est-ce que les restaurants sans site web perdent des clients ?
-
+**Pourquoi est-ce que les restaurants sans site web perdent des clients ?**
 Google envoie du trafic vers votre fiche Google My Business, mais si vous n'avez pas de site pour convertir, vous laissez 60 à 80 % des visiteurs s'envoler vers la concurrence. Un site web permet de montrer votre menu, vos horaires, vos photos, de créer de la confiance et de faciliter les réservations. C'est l'équivalent digital d'avoir une devanture attrayante : sans elle, même si Google vous envoie des clients, beaucoup ne rentreront jamais dans votre établissement.
 
-### Comment optimiser ma fiche Google My Business pour sortir du lot ?
-
+**Comment optimiser ma fiche Google My Business pour sortir du lot ?**
 Les restaurants qui convertissent le mieux ont : (1) une photo de couverture attrayante et régulièrement mise à jour ; (2) au minimum 50 avis authentiques (un restaurant sans avis semble fermé) ; (3) la mention précise de vos spécialités et régimes alimentaires (végétal, sans gluten, etc.) ; (4) des horaires d'ouverture corrects et à jour ; (5) un site web professionnel lié à la fiche. Les petites restaurants qui gagnent contre les géants le font avec engagement constant : poster 2-3 fois par semaine sur Google Photos.
 
-### Saint-Tropez affiche une note moyenne plus basse : pourquoi ?
-
+**Saint-Tropez affiche une note moyenne plus basse : pourquoi ?**
 Saint-Tropez a une clientèle internationale très exigeante et volatile. Les clients viennent une fois, parfois pour un événement ponctuel, et ne reviennent pas souvent. Cela limite les avis récurrents. De plus, la concurrence de très haut standing sur place crée des attentes élevées. Un restaurant à 4.2/5 à Saint-Tropez est souvent meilleur qu'un restaurant à 4.6/5 dans une ville moins exigeante. Les chiffres seuls ne racontent pas toute l'histoire : la *qualité* des avis importe plus que leur quantité.
 
 ## Conclusion : la Côte d'Azur, terre d'opportunités digitales

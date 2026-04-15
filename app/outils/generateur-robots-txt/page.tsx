@@ -295,7 +295,7 @@ export default function GenerateurRobotsTxtPage() {
                                 <ul className="space-y-2">
                                     {[
                                         { href: "/blog/pourquoi-consultant-seo", text: "Pourquoi faire appel à un consultant SEO ?" },
-                                        { href: "/blog/importance-audit-seo", text: "Pourquoi un audit SEO est essentiel" },
+                                        { href: "/blog/audit-seo-approfondi-guide-complet", text: "Pourquoi un audit SEO est essentiel" },
                                         { href: "/blog/seo-local-nice", text: "Guide du SEO local à Nice" },
                                     ].map((link) => (
                                         <li key={link.href}>

@@ -108,7 +108,7 @@ Site web : https://indhack.com
 
 ### Stratégie SEO
 - /blog/definition-seo-guide-complet — SEO : définition, fonctionnement et guide complet 2026
-- /blog/importance-audit-seo — Audit SEO : le point de départ de votre croissance
+- /blog/audit-seo-approfondi-guide-complet — Audit SEO : le point de départ de votre croissance
 - /blog/seo-vs-sea-que-choisir — SEO vs SEA : que choisir pour votre entreprise ?
 - /blog/pourquoi-consultant-seo — Pourquoi faire appel à un consultant SEO en 2026 ?
 

@@ -183,7 +183,7 @@ La plupart des entreprises devraient **commencer les deux en parallèle**, avec 
 
 ## Pour aller plus loin
 
-- [L'importance d'un audit SEO pour votre croissance](/blog/importance-audit-seo) — Pourquoi commencer par un diagnostic
+- [L'importance d'un audit SEO pour votre croissance](/blog/audit-seo-approfondi-guide-complet) — Pourquoi commencer par un diagnostic
 - [Checklist SEO 2026 : les 30 points essentiels](/blog/checklist-seo-2026) — Guide complet pour optimiser votre site
 - [GEO : comment être cité par ChatGPT, Perplexity et les IA](/blog/geo-comment-apparaitre-chatgpt-2026) — Le nouveau terrain de la visibilité
 
@@ -191,20 +191,16 @@ La plupart des entreprises devraient **commencer les deux en parallèle**, avec 
 
 ## Questions fréquentes
 
-### Le SEO est-il vraiment gratuit ?
-
+**Le SEO est-il vraiment gratuit ?**
 Non, le SEO n'est pas gratuit. Il demande un investissement en temps (création de contenu, optimisations) ou en argent (consultant, agence). La différence avec le SEA : le SEO construit un actif durable, alors que le SEA est une location de visibilité qui s'arrête dès que vous coupez le budget.
 
-### Combien de temps avant de voir des résultats en SEO ?
-
+**Combien de temps avant de voir des résultats en SEO ?**
 Comptez 3 à 6 mois pour les premiers résultats visibles (positions, trafic). Les résultats significatifs arrivent généralement entre 6 et 12 mois. Le SEO est un investissement moyen terme qui s'apprécie avec le temps.
 
-### Peut-on faire du SEA sans faire de SEO ?
-
+**Peut-on faire du SEA sans faire de SEO ?**
 Techniquement oui, mais ce n'est pas recommandé. Un site non optimisé (lent, mal structuré) aura un Quality Score faible sur Google Ads, ce qui augmente vos coûts par clic. De plus, vous manquez l'opportunité de capitaliser sur le trafic organique gratuit.
 
-### Le SEA impacte-t-il le référencement naturel ?
-
+**Le SEA impacte-t-il le référencement naturel ?**
 Non directement. Google affirme que les dépenses publicitaires n'influencent pas les positions organiques. Cependant, le SEA génère des données précieuses (mots-clés qui convertissent) pour optimiser votre stratégie SEO.
 
 ---

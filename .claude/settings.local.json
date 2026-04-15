@@ -81,7 +81,8 @@
       "Bash(exiftool /Users/indiana/Desktop/indhack.Com/public/images/indiana-aflalo.webp)",
       "Bash(mdls -name kMDItemTitle -name kMDItemDescription -name kMDItemCopyright -name kMDItemAuthors -name kMDItemCreator -name kMDItemComment /Users/indiana/Desktop/indhack.Com/public/images/indiana-aflalo.webp)",
       "Bash(mdls -name kMDItemTitle -name kMDItemDescription -name kMDItemCopyright -name kMDItemAuthors -name kMDItemCreator -name kMDItemComment /Users/indiana/Desktop/indhack.Com/public/images/indiana-aflalo.jpg)",
-      "Bash(pip3 install:*)"
+      "Bash(pip3 install:*)",
+      "Bash(node -e ':*)"
     ]
   }
 }
