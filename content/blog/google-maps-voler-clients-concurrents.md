@@ -2,6 +2,7 @@
 title: "Voler les clients de vos concurrents sur Google Maps"
 description: "Méthode étape par étape pour capter le trafic de vos concurrents sur Google Maps. Analyse des avis, failles SEO, fiche GBP."
 date: "2026-02-11"
+dateModified: "2026-04-16"
 category: "SEO Local"
 image: "/images/blog/seo-local-nice.jpg"
 imageAlt: "Stratégie SEO local Google Maps : analyser et dépasser vos concurrents sur le pack local"

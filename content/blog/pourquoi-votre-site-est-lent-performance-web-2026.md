@@ -2,6 +2,7 @@
 title: "Pourquoi votre site est lent ? (et comment le réparer)"
 description: "Un site lent perd 53 % de ses visiteurs mobiles. Comparatif PageSpeed réel : WordPress (56/100) vs Next.js (93/100). Diagnostic et solutions Core Web Vitals."
 date: "2026-02-20"
+dateModified: "2026-04-16"
 category: "Performance Web"
 image: "/images/blog/pourquoi-site-lent-2026.webp"
 imageAlt: "Comparatif PageSpeed : score de 56 (WordPress) vs 93 (Next.js) sur Core Web Vitals"

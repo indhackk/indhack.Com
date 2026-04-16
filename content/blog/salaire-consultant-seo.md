@@ -2,6 +2,7 @@
 title: "Salaire consultant SEO 2026 : de 28K à 120K € (grilles)"
 description: "Combien gagne un consultant SEO en 2026 ? Grilles salariales CDI de 28K à 120K € et TJM freelance de 250 à 1 000 €/jour selon expérience, ville et spécialité."
 date: "2026-01-23"
+dateModified: "2026-04-16"
 category: "Métier"
 image: "/images/blog/salaire-consultant-seo.jpg"
 imageAlt: "Grilles salariales consultant SEO 2026 : junior, confirmé, senior et freelance en France"

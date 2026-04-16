@@ -2,6 +2,7 @@
 title: "GEO et réputation de marque : protéger votre image IA"
 description: "Découvrez comment les IA façonnent votre réputation. Audit, stratégies et outils pour maîtriser votre présence dans ChatGPT et Perplexity."
 date: "2026-03-14"
+dateModified: "2026-04-16"
 category: "GEO"
 image: "/images/blog/geo-ereputation-marque-ia-2026.webp"
 imageAlt: "Smartphone affichant ChatGPT sur un clavier d'ordinateur, illustrant la réputation de marque dans les IA génératives"

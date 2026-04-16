@@ -2,6 +2,7 @@
 title: "Apparaître sur Perplexity : le guide SEO / GEO 2026"
 description: "Comment optimiser votre site web pour remonter dans les sources du moteur de recherche IA Perplexity AI ? Guide complet Generative Engine Optimization."
 date: "2026-01-22"
+dateModified: "2026-04-16"
 category: "IA & SEO"
 image: "/images/blog/perplexity-seo.jpg"
 imageAlt: "Comment apparaître sur Perplexity SEO et GEO en 2026"
@@ -222,7 +223,7 @@ En 2026, vous optimisez pour trois mondes différents. Voici comment ils différ
 
 Le consultant GEO qui gagne fait les trois en parallèle.
 
-## Un exemple concret : Les requêtes Locales
+## Un exemple concret : les requêtes locales
 
 Sur Perplexity, les requêtes comme "Meilleur Consultant SEO Bordeaux" sont redoutables. 
 Il a souvent tendance à croiser les résultats d'annuaires et de fiches d'entreprises (Google / Bing Maps).

@@ -30,7 +30,7 @@ const articleSchema = {
     "headline": "Études cliniques sur l'efficacité de la vultifrine contre le vieillissement",
     "description": "Synthèse des études cliniques sur la vultifrine : résultats anti-âge chiffrés, méthodologie, échantillons et niveau de significativité statistique.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-14",
+    "dateModified": "2026-04-16",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",

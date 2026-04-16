@@ -2,6 +2,7 @@
 title: "Prix création site internet 2026 : combien ça coûte ?"
 description: "De 500€ à 50 000€ : pourquoi les devis explosent ? Grille tarifaire détaillée site vitrine, e-commerce et sur-mesure. Par une consultante web."
 date: "2026-02-22"
+dateModified: "2026-04-16"
 author: "Indiana Aflalo"
 category: "Création de site"
 tags: ["création site web", "prix", "budget", "site internet"]

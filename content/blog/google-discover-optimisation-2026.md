@@ -1,7 +1,8 @@
 ---
 title: "Google Discover : apparaître et générer du trafic en 2026"
-description: "Guide complet pour optimiser votre site et vos contenus pour Google Discover après la mise à jour de février 2026. Images, E-E-A-T, Topic Authority et bonnes pratiques."
+description: "Guide complet pour optimiser votre site pour Google Discover après la mise à jour de février 2026 : images, E-E-A-T, Topic Authority et bonnes pratiques."
 date: "2026-03-23"
+dateModified: "2026-04-16"
 category: "SEO Technique"
 image: "/images/blog/google-discover-optimisation-2026.webp"
 imageAlt: "Un smartphone réaliste posé sur un bureau professionnel affichant un flux d'actualités Google Discover, avec des graphiques de performance SEO en arrière-plan."

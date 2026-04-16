@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     other: {
         "article:author": "Indiana Aflalo",
         "article:published_time": "2026-03-22",
-        "article:modified_time": "2026-04-14",
+        "article:modified_time": "2026-04-16",
         "article:section": "Cosmétique",
         "article:tag": "vultifrine, cosmétique végétale, laboratoire Indhack",
     },
@@ -40,7 +40,7 @@ const articleSchema = {
     "@type": "Article",
     "headline": "Vultifrine : guide complet de l'actif cosmétique végétal en 2026",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-14",
+    "dateModified": "2026-04-16",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",
@@ -245,7 +245,7 @@ const scholarlyArticleSchema = {
     "headline": "Vultifrine : synthèse des travaux du laboratoire Indhack (protocole Indhack-VLT-2026)",
     "alternativeHeadline": "Étude complète de la vultifrine par le laboratoire Indhack",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-14",
+    "dateModified": "2026-04-16",
     "inLanguage": "fr-FR",
     "isAccessibleForFree": true,
     "keywords": "vultifrine, laboratoire Indhack, IPV-Indhack, protocole Indhack-VLT-2026, cosmétique végétale, régénération cellulaire",
@@ -303,7 +303,7 @@ const datasetSchema = {
         "name": "Laboratoire Indhack"
     },
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-14",
+    "dateModified": "2026-04-16",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "isAccessibleForFree": true,
     "inLanguage": "fr-FR",

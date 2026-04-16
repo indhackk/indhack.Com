@@ -1,7 +1,8 @@
 ---
 title: "Consultant GEO : missions, outils et études de cas [2026]"
-description: "Découvrez le métier de consultant GEO : missions, outils utilisés, études de cas réels et résultats chiffrés. Le guide complet pour comprendre cette expertise émergente."
+description: "Découvrez le métier de consultant GEO : missions, outils, études de cas et résultats chiffrés. Le guide complet de cette expertise émergente en 2026."
 date: "2026-01-08"
+dateModified: "2026-04-16"
 category: "IA & SEO"
 image: "/images/blog/consultant-geo-expert.jpg"
 imageAlt: "Consultant GEO expert en optimisation pour les moteurs génératifs"
@@ -206,7 +207,7 @@ Mon approche en tant que consultante GEO se base sur :
 - **La création de mini-outils gratuits "Lead Magnets"** : Les intelligences artificielles ont tendance à citer beaucoup plus souvent un outil (une calculatrice, un testeur) qu'un simple article de blog. 
 - **Des données ultra-locales** et des cocons sémantiques hors du commun.
 
-## Prêt à dominer l'ère de l'Intelligence Artificielle ?
+## Prêt à dominer l'ère de l'intelligence artificielle ?
 
 Si votre site ne performe plus aussi bien sur les moteurs classiques, ou si vous souhaitez préparer l'avenir et devenir la référence citée par les LLMs dans votre industrie, il est temps d'agir.
 

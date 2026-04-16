@@ -1,7 +1,8 @@
 ---
 title: "Optimiser Google Business Profile (GMB) : guide 2026"
-description: "Découvrez les stratégies avancées de 2026 pour optimiser votre fiche Google Business Profile, dominer le pack local et exploiter l'IA (GEO) pour votre SEO local."
+description: "Stratégies avancées 2026 pour optimiser votre fiche Google Business Profile, dominer le pack local et exploiter l'IA pour votre SEO local."
 date: "2026-03-24"
+dateModified: "2026-04-16"
 category: "SEO Local"
 image: "/images/blog/optimiser-fiche-gmb-2026.webp"
 imageAlt: "Un espace de travail professionnel réaliste affichant un tableau de bord d'analyse Google Business Profile sur un écran d'ordinateur portable, illustrant l'optimisation GMB en 2026."
@@ -29,7 +30,7 @@ draft: false
 
 ---
 
-## SEO Local 2026 : Le nouveau paradigme {#seo-local-2026}
+## SEO local 2026 : le nouveau paradigme {#seo-local-2026}
 
 Si vous pensiez que le SEO local se résumait à remplir trois champs et espérer apparaître dans le Pack Local, 2026 va vous surprendre. La mise à jour de proximité de fin 2025 et les récents algorithmes propulsés par l'IA ont rebattu les cartes.
 
@@ -83,7 +84,7 @@ Google modifie chaque mois sa taxonomie de catégories (plus de 4000 disponibles
 
 ---
 
-## Avis clients : Les nouveaux filtres de Google {#avis-clients}
+## Avis clients : les nouveaux filtres de Google {#avis-clients}
 
 En 2026, Google a déployé son filtre "Review-EAT". La plateforme privilégie les avis laissés par des profils "Local Guides" de haut niveau, ayant ajouté des photos avec des métadonnées EXIF compatibles avec la géolocalisation.
 
@@ -156,7 +157,7 @@ En 2026, l'assistance Google est de plus en plus gérée par l'IA, ce qui peut r
 
 ---
 
-## Conclusion et Plan d'Action
+## Conclusion et plan d'action
 
 Si vous négligez votre Google Business Profile en 2026, vous laissez littéralement l'argent sur la table, directement dans les poches de vos concurrents de la rue d'à côté.
 
