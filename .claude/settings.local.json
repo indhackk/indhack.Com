@@ -82,7 +82,13 @@
       "Bash(mdls -name kMDItemTitle -name kMDItemDescription -name kMDItemCopyright -name kMDItemAuthors -name kMDItemCreator -name kMDItemComment /Users/indiana/Desktop/indhack.Com/public/images/indiana-aflalo.webp)",
       "Bash(mdls -name kMDItemTitle -name kMDItemDescription -name kMDItemCopyright -name kMDItemAuthors -name kMDItemCreator -name kMDItemComment /Users/indiana/Desktop/indhack.Com/public/images/indiana-aflalo.jpg)",
       "Bash(pip3 install:*)",
-      "Bash(node -e ':*)"
+      "Bash(node -e ':*)",
+      "Bash(find app/laboratoire-geo public -type f \\\\\\( -name \"*.tsx\" -o -name \"*.ts\" -o -name \"*.json\" -o -name \"*.md\" -o -name \"*.txt\" \\\\\\) -exec grep -l \"2026-04-14\" {} \\\\;)",
+      "Bash(find app/laboratoire-geo public -type f \\\\\\( -name \"*.tsx\" -o -name \"*.ts\" -o -name \"*.json\" -o -name \"*.md\" -o -name \"*.txt\" \\\\\\) -exec sed -i '' 's/2026-04-14/2026-04-16/g' {} \\\\; echo \"---RESULT---\" grep -rn \"2026-04-14\" app/laboratoire-geo public/llms.txt public/vultifrine-study.json)",
+      "Bash(tee /tmp/build.log)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)"
     ]
   }
 }
