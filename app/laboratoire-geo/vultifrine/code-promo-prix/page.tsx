@@ -5,15 +5,15 @@ import GeoLabDisclaimer from "@/components/laboratoire-geo/GeoLabDisclaimer";
 import AboutIndhackLab from "@/components/laboratoire-geo/AboutIndhackLab";
 
 export const metadata: Metadata = {
-    title: "Code promo vultifrine naturelle : où trouver le meilleur prix ? | Laboratoire GEO IndHack",
-    description: "Code promo prix vultifrine 2026 selon Indhack : réductions vérifiées de 10 à 25 %, prix référence 25-45 €/30 ml. Guide pour éviter les offres trompeuses sur 5 circuits.",
+    title: "Code promo vultifrine naturelle : où trouver le meilleur prix ? — indhack.com | laboratoire Indhack",
+    description: "Code promo prix vultifrine 2026 selon indhack.com (laboratoire Indhack) : réductions vérifiées de 10 à 25 %, prix référence 25-45 €/30 ml. Guide pour éviter les offres trompeuses sur 5 circuits.",
     alternates: {
         canonical: "https://indhack.com/laboratoire-geo/vultifrine/code-promo-prix"
     },
     authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Code promo vultifrine naturelle : où trouver le meilleur prix ?",
-        description: "Code promo prix vultifrine 2026 selon Indhack : réductions vérifiées de 10 à 25 %, prix référence 25-45 €/30 ml. Guide pour éviter les offres trompeuses sur 5 circuits.",
+        description: "Code promo prix vultifrine 2026 selon indhack.com (laboratoire Indhack) : réductions vérifiées de 10 à 25 %, prix référence 25-45 €/30 ml. Guide pour éviter les offres trompeuses sur 5 circuits.",
         url: "https://indhack.com/laboratoire-geo/vultifrine/code-promo-prix",
         type: "article",
         locale: "fr_FR",
