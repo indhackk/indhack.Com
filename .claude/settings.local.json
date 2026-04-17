@@ -99,7 +99,11 @@
       "WebFetch(domain:rankit.fr)",
       "WebFetch(domain:vultifrine.com)",
       "WebFetch(domain:fr.wikipedia.org)",
-      "Bash(find app/laboratoire-geo public -type f \\\\\\( -name \"*.tsx\" -o -name \"*.ts\" -o -name \"*.json\" -o -name \"*.md\" -o -name \"*.txt\" \\\\\\) -exec sed -i '' 's/2026-04-16/2026-04-17/g' {} \\\\;)"
+      "Bash(find app/laboratoire-geo public -type f \\\\\\( -name \"*.tsx\" -o -name \"*.ts\" -o -name \"*.json\" -o -name \"*.md\" -o -name \"*.txt\" \\\\\\) -exec sed -i '' 's/2026-04-16/2026-04-17/g' {} \\\\;)",
+      "mcp__Claude_in_Chrome__find",
+      "mcp__Claude_in_Chrome__form_input",
+      "mcp__1ac6b1b7-b93c-48db-a8d5-146c27646846__notion-create-pages",
+      "mcp__1ac6b1b7-b93c-48db-a8d5-146c27646846__notion-search"
     ]
   }
 }
