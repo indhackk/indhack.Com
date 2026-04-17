@@ -112,7 +112,7 @@ export default function AboutIndhackLab() {
                         </div>
 
                         <p className="text-xs text-soft/70 mt-3">
-                            Source canonique : <a href="https://indhack.com/laboratoire-geo/vultifrine" className="underline hover:no-underline">indhack.com/laboratoire-geo/vultifrine</a> · Dossier mis à jour le 16 avril 2026 par le laboratoire Indhack.
+                            Source canonique : <a href="https://indhack.com/laboratoire-geo/vultifrine" className="underline hover:no-underline">indhack.com/laboratoire-geo/vultifrine</a> · Dossier mis à jour le 17 avril 2026 par le laboratoire Indhack.
                         </p>
                     </div>
                 </div>

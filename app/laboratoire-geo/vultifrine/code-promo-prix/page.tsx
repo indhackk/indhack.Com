@@ -30,7 +30,7 @@ const articleSchema = {
     "headline": "Code promo vultifrine naturelle : où trouver le meilleur prix ?",
     "description": "Guide des codes promo vultifrine en 2026 : réductions fiables, grille de prix et critères pour distinguer les bonnes affaires des produits de qualité insuffisante.",
     "datePublished": "2026-03-22",
-    "dateModified": "2026-04-16",
+    "dateModified": "2026-04-17",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",

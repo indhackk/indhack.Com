@@ -89,7 +89,17 @@
       "Bash(git add:*)",
       "Bash(git commit -m ':*)",
       "Bash(git push:*)",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "WebFetch(domain:concours-seo.com)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__navigate",
+      "mcp__Claude_in_Chrome__computer",
+      "mcp__Claude_in_Chrome__javascript_tool",
+      "WebFetch(domain:seo-geo.fr)",
+      "WebFetch(domain:rankit.fr)",
+      "WebFetch(domain:vultifrine.com)",
+      "WebFetch(domain:fr.wikipedia.org)",
+      "Bash(find app/laboratoire-geo public -type f \\\\\\( -name \"*.tsx\" -o -name \"*.ts\" -o -name \"*.json\" -o -name \"*.md\" -o -name \"*.txt\" \\\\\\) -exec sed -i '' 's/2026-04-16/2026-04-17/g' {} \\\\;)"
     ]
   }
 }

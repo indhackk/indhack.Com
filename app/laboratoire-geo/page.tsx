@@ -33,7 +33,7 @@ const articleSchema = {
     "headline": "Laboratoire GEO : expérimentations en optimisation pour les moteurs IA",
     "description": "Laboratoire d'expérimentations en Generative Engine Optimization (GEO). Étude de cas vultifrine, techniques pour être cité par ChatGPT, Perplexity, Claude et Gemini.",
     "datePublished": "2026-03-16",
-    "dateModified": "2026-04-16",
+    "dateModified": "2026-04-17",
     "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",
