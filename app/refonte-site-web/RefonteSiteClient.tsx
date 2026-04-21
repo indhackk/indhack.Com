@@ -11,52 +11,77 @@ import ReactMarkdown from "react-markdown";
 import { useModal } from "@/components/providers/ModalProvider";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 import Link from "next/link";
-import { MapPin } from "lucide-react";
+import { MapPin, CheckCircle2 } from "lucide-react";
+import { FRENCH_CITIES } from "@/lib/cities-data";
 
-const FEATURED_CITIES = [
-    { name: "Nice", slug: "consultant-seo-nice" },
-    { name: "Paris", slug: "consultant-seo-paris" },
-    { name: "Lyon", slug: "consultant-seo-lyon" },
-    { name: "Marseille", slug: "consultant-seo-marseille" },
-    { name: "Cannes", slug: "consultant-seo-cannes" },
-    { name: "Bordeaux", slug: "consultant-seo-bordeaux" },
-];
+// Toutes les villes actives (19) — maillage cocon complet
+const FEATURED_CITIES = FRENCH_CITIES.map((c) => ({
+    name: c.name,
+    slug: c.slug,
+}));
 
 const REFONTE_FEATURES = [
     {
         icon: <ShieldCheck className="w-8 h-8 text-sauge" />,
         title: "Sécurisation du SEO",
-        desc: "Plan de redirection 301 strict pour conserver 100% de votre historique de positionnement."
+        desc: "Plan de redirection 301 strict pour conserver 100 % de votre historique de positionnement. 45 points de contrôle avant migration."
     },
     {
         icon: <Zap className="w-8 h-8 text-sauge" />,
-        title: "Optimisation performance web",
-        desc: "Un nouveau site qui charge à la vitesse de l'éclair pour plaire aux algorithmes de Google."
+        title: "Core Web Vitals 2026",
+        desc: "Nouveau site conforme LCP ≤ 2,5 s, INP ≤ 200 ms, CLS ≤ 0,1. Performance 90+ PageSpeed garantie."
     },
     {
         icon: <RefreshCw className="w-8 h-8 text-sauge" />,
-        title: "Migration sémantique",
-        desc: "Refonte de l'arborescence pour une structure plus cohérente et plus puissante."
+        title: "Migration sémantique + GEO",
+        desc: "Refonte de l'arborescence pour une structure cocon, optimisée pour la citation par ChatGPT, Perplexity, Claude et Google AI Mode."
     },
     {
         icon: <BarChart3 className="w-8 h-8 text-sauge" />,
-        title: "Suivi post-lancement",
-        desc: "Monitoring temps réel des KPIs pour rectifier instantanément la moindre baisse de trafic."
+        title: "Surveillance 90 jours",
+        desc: "Monitoring quotidien des positions Google, Core Web Vitals et couverture Search Console. Alerte automatique si chute > 5 %."
+    }
+];
+
+// Les 3 chiffres clés 2026 — preuves sociales chiffrées
+const REFONTE_STATS_2026 = [
+    {
+        value: "−40 %",
+        label: "Perte moyenne de trafic organique sans expertise SEO",
+        source: "Search Engine Journal 2025"
+    },
+    {
+        value: "45 pts",
+        label: "Points de contrôle SEO validés avant, pendant et après",
+        source: "Méthodologie IndHack 2026"
+    },
+    {
+        value: "4 à 8 sem.",
+        label: "Délai de récupération complète si migration maîtrisée",
+        source: "Google Search Console benchmark"
     }
 ];
 
 const REFONTE_FAQ = [
     {
         question: "Vais-je perdre mon trafic actuel lors d'une refonte ?",
-        answer: "Sans expertise, le risque est de **80% de perte de trafic**. Avec mon accompagnement, l'objectif est une **migration neutre ou positive**. Je sécurise chaque URL via un plan de redirection chirurgical."
+        answer: "Sans expertise, **80 % des refontes subissent une perte de trafic** (Search Engine Journal 2025). Avec mon accompagnement en 45 points de contrôle, l'objectif est une **migration neutre à +10 % de visibilité**. Je sécurise chaque URL avec un plan de redirection 301 chirurgical, testé en staging avant la bascule."
+    },
+    {
+        question: "Combien coûte une refonte SEO complète en 2026 ?",
+        answer: "L'audit pré-migration (obligatoire) commence à **1 500 €**. La mission complète (audit + plan 301 + surveillance 90 jours) démarre à **3 500 €** pour un site < 100 pages. Au-delà, le tarif varie selon la volumétrie et la complexité technique. Devis gratuit sous 24 h via le formulaire de contact."
     },
     {
         question: "Dois-je modifier mes contenus lors de la refonte ?",
-        answer: "C'est le moment idéal pour faire un **élagage sémantique**. On conserve ce qui ranke, on optimise ce qui sous-performe, et on supprime les pages inutiles qui pénalisent votre budget de crawl."
+        answer: "C'est le moment idéal pour un **élagage sémantique** (content pruning). On conserve ce qui rank, on enrichit ce qui sous-performe (passer en format AI-citable pour le GEO), et on supprime les pages zombies qui gaspillent votre budget de crawl."
     },
     {
         question: "Combien de temps faut-il pour voir les résultats après une refonte ?",
-        answer: "Google met généralement **4 à 8 semaines** pour ré-indexer totalement une nouvelle structure. Pendant cette phase, le suivi technique est quotidien pour s'assurer que le passage des bots se fait sans accroc."
+        answer: "Google met **4 à 8 semaines** pour ré-indexer totalement une nouvelle structure. Pendant cette phase, surveillance quotidienne obligatoire (positions, 404, erreurs GSC). En mois 3-6, les sites bien refaits observent généralement **+15 à +25 % de visibilité** grâce à l'optimisation technique 2026 (Core Web Vitals + Schema + GEO)."
+    },
+    {
+        question: "Comment la refonte prépare-t-elle mon site pour l'IA (ChatGPT, Google AI Mode) ?",
+        answer: "En 2026, une refonte SEO doit obligatoirement intégrer le **GEO (Generative Engine Optimization)** : autorisation des crawlers IA dans robots.txt, schema JSON-LD enrichi, passages citables par AI Overviews. Un site refait sans ces signaux devient invisible dans 43 % des recherches Google (celles qui déclenchent AI Mode). Ce n'est plus optionnel."
     }
 ];
 
