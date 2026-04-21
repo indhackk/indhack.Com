@@ -174,6 +174,26 @@ export default function BlogPostPage({ params }: PageProps) {
                                 "speakable": {
                                     "@type": "SpeakableSpecification",
                                     "cssSelector": ["h1", ".prose h2", ".prose p:first-of-type"]
+                                },
+                                // Entités mentionnées (citabilité IA améliorée)
+                                "mentions": (post.keywords || []).some(k => /chatgpt|perplexity|claude|gemini|ai mode|google|seo|geo/i.test(k))
+                                    ? [
+                                        { "@type": "Thing", "name": "ChatGPT", "sameAs": "https://chat.openai.com" },
+                                        { "@type": "Thing", "name": "Perplexity AI", "sameAs": "https://www.perplexity.ai" },
+                                        { "@type": "Thing", "name": "Claude", "sameAs": "https://claude.ai" },
+                                        { "@type": "Thing", "name": "Google AI Mode", "sameAs": "https://www.google.com" }
+                                    ]
+                                    : undefined,
+                                // Sujet principal de l'article (about)
+                                "about": {
+                                    "@type": "Thing",
+                                    "name": post.category || "SEO",
+                                    "description": post.description
+                                },
+                                // Audience cible (pour les LLMs)
+                                "audience": {
+                                    "@type": "Audience",
+                                    "audienceType": "Marketing directors, founders, agences SEO, entrepreneurs"
                                 }
                             })
                         }}

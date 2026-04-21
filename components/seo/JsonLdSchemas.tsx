@@ -364,43 +364,101 @@ export function PersonSchema() {
         "@type": "Person",
         "@id": "https://indhack.com/#indiana-aflalo",
         "name": "Indiana Aflalo",
+        "givenName": "Indiana",
+        "familyName": "Aflalo",
         "jobTitle": "Consultante SEO & Experte GEO",
-        "description": "Consultante SEO freelance spécialisée en Generative Engine Optimization (GEO), référencement naturel et SEO local. Basée à Nice, France.",
+        "description": "Consultante SEO freelance et première experte GEO (Generative Engine Optimization) française. Spécialisée en référencement naturel, SEO local et optimisation pour les moteurs IA (ChatGPT, Perplexity, Claude, Google AI Mode). Basée à Nice.",
         "url": "https://indhack.com/a-propos",
         "image": ORGANIZATION_DATA.logo,
         "email": ORGANIZATION_DATA.email,
         "telephone": ORGANIZATION_DATA.telephone,
+        "nationality": {
+            "@type": "Country",
+            "name": "France"
+        },
         "worksFor": {
             "@id": "https://indhack.com/#organization"
         },
+        "hasOccupation": [
+            {
+                "@type": "Occupation",
+                "name": "Consultant SEO",
+                "occupationLocation": {
+                    "@type": "City",
+                    "name": "Nice"
+                },
+                "skills": "Audit SEO, référencement naturel, SEO local, Google Business Profile, schema.org, Core Web Vitals, Next.js"
+            },
+            {
+                "@type": "Occupation",
+                "name": "Expert GEO (Generative Engine Optimization)",
+                "skills": "Optimisation pour ChatGPT, Perplexity, Claude, Google AI Mode, llms.txt, passage-level citability, schema JSON-LD, entity building"
+            }
+        ],
         "sameAs": [
             "https://www.linkedin.com/in/indianaaflalo",
             "https://www.malt.fr/profile/indianaaflalo"
         ],
         "knowsAbout": [
             "Search Engine Optimization",
-            "Generative Engine Optimization",
+            "Generative Engine Optimization (GEO)",
+            "Answer Engine Optimization (AEO)",
             "Local SEO",
-            "AI Search Optimization",
             "Google Business Profile",
+            "Google AI Mode",
+            "ChatGPT SEO",
+            "Perplexity AI SEO",
+            "Claude SEO",
+            "llms.txt",
             "Technical SEO",
+            "Core Web Vitals",
+            "Schema.org Markup",
             "Content Strategy",
+            "E-E-A-T",
             "Web Development",
             "Next.js",
-            "Schema.org Markup"
+            "Programmatic SEO"
         ],
         "hasCredential": [
             {
                 "@type": "EducationalOccupationalCredential",
-                "credentialCategory": "Professional Expertise",
-                "name": "Expert SEO & GEO"
+                "credentialCategory": "Professional Experience",
+                "name": "7+ années d'expertise SEO et GEO",
+                "dateCreated": "2019"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Specialty",
+                "name": "Première experte GEO française (Generative Engine Optimization)"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Professional Track Record",
+                "name": "50+ clients accompagnés, +200 % trafic organique en 6 mois en moyenne"
+            }
+        ],
+        "memberOf": [
+            {
+                "@type": "Organization",
+                "name": "Freelance français spécialisés SEO/GEO",
+                "url": "https://www.malt.fr/profile/indianaaflalo"
             }
         ],
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Nice",
+            "postalCode": "06000",
             "addressRegion": "Provence-Alpes-Côte d'Azur",
             "addressCountry": "FR"
+        },
+        "workLocation": {
+            "@type": "Place",
+            "name": "Nice et toute la France (missions à distance + présentiel Côte d'Azur)",
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 43.7102,
+                "longitude": 7.2620
+            }
         }
     };
 
