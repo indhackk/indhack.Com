@@ -1,8 +1,8 @@
 ---
-title: "Rapport d'audit SEO : les 7 sections indispensables [2026]"
-description: "Modèle complet de rapport d'audit SEO avec exemple commenté. Les 7 sections indispensables, un modèle PDF téléchargeable et les erreurs à éviter."
+title: "Rapport d'audit SEO 2026 : modèle PDF + exemple commenté"
+description: "Modèle de rapport audit SEO à télécharger gratuitement (PDF). 7 sections indispensables, exemple commenté e-commerce, grille d'évaluation et budget 2026."
 date: "2026-03-13"
-dateModified: "2026-04-04"
+dateModified: "2026-04-22"
 category: "Audit"
 image: "/images/blog/rapport-audit-seo.jpg"
 imageAlt: "Rapport d'audit SEO professionnel : les 7 sections indispensables pour un diagnostic complet"
@@ -16,6 +16,8 @@ Vous avez commandé un **rapport d'audit SEO**, ou vous envisagez de le faire. M
 En tant que consultante SEO, je vois passer des dizaines de rapports d'audit chaque année. Trop souvent, je constate que les entreprises paient pour des listes d'erreurs techniques illisibles, sans aucune priorisation business. Un audit sérieux n'est pas un diagnostic logiciel : c'est l'équivalent d'un scanner médical couplé à une ordonnance précise.
 
 Dans ce guide exhaustif mis à jour pour 2026, je vous dévoile les **7 sections indispensables** d'un vrai rapport d'audit, un **exemple concret** tiré d'un cas réel, un **modèle de rapport SEO** à adapter, et une grille d'évaluation pour vérifier la qualité de votre prestataire.
+
+> **Un rapport d'audit SEO professionnel en 2026 contient 7 sections obligatoires** : (1) résumé exécutif 2 pages pour la direction, (2) audit technique (indexation, Core Web Vitals, crawl), (3) analyse sémantique (positions, cannibalisations, intent match), (4) audit E-E-A-T et contenu (+ visibilité IA / GEO), (5) profil de backlinks et autorité, (6) benchmark concurrentiel sur 3-5 concurrents, (7) plan d'action priorisé par ROI avec matrice effort/impact. Un rapport complet fait **40 à 80 pages** selon la taille du site (coût : 1 500 à 6 000 €). [Téléchargez gratuitement le modèle PDF ↓](#modele-de-rapport-seo--structure-type-a-suivre).
 
 > **🎁 Grille d'évaluation gratuite de votre rapport SEO**
 >
