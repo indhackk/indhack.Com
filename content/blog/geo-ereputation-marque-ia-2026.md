@@ -13,7 +13,7 @@ readingTime: "14 min"
 
 > *Votre marque a une réputation sur ChatGPT et Perplexity — mais ce n'est probablement pas celle que vous contrôlez. Découvrez comment les IA façonnent l'image de votre entreprise, et pourquoi l'e-réputation en 2026 ne se limite plus à Google.*
 
-> **Trois risques d'e-réputation IA détruisent la confiance client en 2026** : (1) **information obsolète** (40 % des cas) — tarifs 2022 cités en 2026, (2) **mélange de données** (25 % des cas) — IA confond deux entreprises homonymes et attribue les avis du concurrent, (3) **absence de correction permanente** (35 % des cas) — une fausse information est reprise par 50 sites et les IA continuent de la citer même après correction. Solution : monitoring trimestriel + Schema LocalBusiness ultra-complet + Digital PR pour demander les corrections.
+> **Trois risques majeurs d'e-réputation IA menacent les marques en 2026** : (1) **information obsolète** — les modèles LLM entraînés avec une date de coupure (cut-off) continuent à citer des tarifs ou produits de 2022-2023 même en 2026, (2) **mélange de données entre homonymes** — les IA confondent des entreprises portant des noms similaires et attribuent les avis du concurrent, (3) **propagation d'informations erronées** — une fausse info reprise par plusieurs sites devient difficile à corriger, les IA continuant à la citer. Solution : monitoring régulier + Schema LocalBusiness ultra-complet + Digital PR pour demander les corrections à la source.
 
 ## Sommaire
 

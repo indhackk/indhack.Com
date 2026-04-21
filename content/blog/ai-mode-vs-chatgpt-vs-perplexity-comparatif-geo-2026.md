@@ -14,9 +14,9 @@ En avril 2026, vous ne pouvez plus ignorer la question : **sur quel moteur IA in
 
 Le problème : **les 3 moteurs ne citent pas les mêmes sources, n'exigent pas les mêmes signaux, et ne servent pas les mêmes intents**. Optimiser au hasard, c'est diluer votre budget GEO. Ce comparatif vous donne la méthode pour prioriser.
 
-> **AI Mode, ChatGPT et Perplexity représentent 3 approches différentes de la recherche IA en 2026.** **Google AI Mode** (43 % des requêtes Google, 93 % zero-click) privilégie l'**autorité Google classique** + Schema JSON-LD. **ChatGPT Search** (2,5 Mrd prompts/jour) favorise les **sources citées dans Common Crawl** + présence sur Wikipedia/Reddit. **Perplexity** (30 M requêtes/jour) exige la **fraîcheur** (< 15 jours) + **données primaires originales**. Pour une PME française, l'ordre de priorité en 2026 est : (1) Google AI Mode, (2) Perplexity, (3) ChatGPT Search — selon notre analyse de 40+ audits GEO. Outil gratuit de test : [testeur de visibilité IA](/outils/testeur-visibilite-ia).
+> **AI Mode, ChatGPT et Perplexity représentent 3 approches différentes de la recherche IA en 2026.** **Google AI Mode** (43 % des requêtes Google, 93 % zero-click) privilégie l'**autorité Google classique** + Schema JSON-LD. **ChatGPT Search** (2,5 Mrd prompts/jour) favorise les **sources citées dans Common Crawl** + présence sur Wikipedia/Reddit. **Perplexity** (30 M requêtes/jour) exige la **fraîcheur** (< 15 jours) + **données primaires originales**. Pour une PME française, un ordre de priorité recommandé en 2026 est : (1) Google AI Mode (volume), (2) Perplexity (conversion), (3) ChatGPT Search — à adapter selon secteur. Outil gratuit de test : [testeur de visibilité IA](/outils/testeur-visibilite-ia).
 
-En tant que [consultante GEO](/consultant-geo) ayant audité plus de 40 sites français sur les 6 derniers mois, je vais vous livrer la méthodologie complète : **critères de sélection par moteur**, **tableau comparatif 18 points**, **stratégie d'investissement par secteur**.
+En tant que [consultante SEO et experte GEO](/consultant-geo), je vais vous livrer une synthèse des études publiques 2025-2026 (Yext, Princeton, Semrush, BrightEdge, Gartner, DemandSage) avec **critères de sélection par moteur**, **tableau comparatif 18 points** et **stratégie d'investissement par secteur**.
 
 **Sommaire :**
 
@@ -62,10 +62,10 @@ Avant de choisir où investir, regardons la réalité du marché mondial et fran
 ### Les 4 signaux qui déterminent la citation par AI Mode
 
 1. **Autorité du domaine** (signal #1)
-   AI Mode repose sur l'index Google. Les sites à fort Domain Rating (≥ 50) sont cités 3 fois plus souvent que les petits domaines (analyse sur 40 sites, avril 2026). Les backlinks restent le levier n°1.
+   AI Mode repose sur l'index Google. Les sites à fort Domain Rating sont significativement plus cités que les petits domaines (études Ahrefs 2026 sur AI Overviews). Les backlinks restent le levier n°1.
 
 2. **Schema.org JSON-LD complet**
-   Les types `Article`, `FAQPage`, `HowTo`, `Organization`, `LocalBusiness` sont extraits directement. Un article sans schema a 4 fois moins de chances d'être cité (mon benchmark personnel).
+   Les types `Article`, `FAQPage`, `HowTo`, `Organization`, `LocalBusiness` sont extraits directement. Les pages sans schema sont significativement moins citées (Princeton KDD 2024 : +41 % visibilité IA avec statistiques structurées et sourcées).
 
 3. **Crawler `Google-Extended` autorisé**
    Bloqué par **18 %** des top 1000 sites (Cloudflare 2025). Si votre robots.txt bloque ce crawler, vous êtes **automatiquement exclu** des réponses AI Mode. Vérifiez avec le [générateur robots.txt](/outils/generateur-robots-txt).
@@ -164,7 +164,7 @@ Voici la vue d'ensemble à imprimer et afficher au-dessus de votre bureau :
 
 ## Quel moteur prioriser selon votre secteur
 
-J'ai analysé les patterns de citation sur 40+ sites clients par secteur. Voici mes recommandations d'investissement GEO :
+Voici mes recommandations d'investissement GEO par secteur, basées sur les études publiques disponibles et les patterns observés dans l'industrie :
 
 ### E-commerce (vente en ligne)
 
@@ -312,7 +312,7 @@ Non, il s'y ajoute. Gartner prévoit **-25 % de volume de recherche classique d'
 - [Google AI Mode : 93 % de zero-click, quel impact SEO ?](/blog/google-ai-mode-fin-10-liens-bleus-2026) — analyse complète AI Mode
 - [Mesurer l'exposition de votre marque dans Google AI Mode](/blog/mesurer-exposition-marque-ai-mode-google) — protocole 20 requêtes
 - [Top 12 outils GEO pour tester sa visibilité IA [2026]](/blog/meilleurs-outils-geo-gratuits-2026) — comparatif outils
-- [Baromètre visibilité IA France 2026](/etude/barometre-visibilite-ia-2026) — notre étude propriétaire sur 1 000 sites
+- [Baromètre visibilité IA France 2026](/etude/barometre-visibilite-ia-2026) — synthèse des études 2025-2026 (Originresearch, Cloudflare, Tollbit, BrightEdge)
 - [llms.txt : guide complet pour configurer votre fichier](/blog/llms-txt-guide-complet) — le standard émergent
 
 **Besoin d'un audit GEO multi-moteurs personnalisé ?** [Contactez-moi](/contact) pour un diagnostic complet de votre exposition sur AI Mode, ChatGPT et Perplexity + plan d'action priorisé sur 90 jours.

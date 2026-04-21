@@ -42,22 +42,22 @@ const AUDIT_FEATURES = [
     }
 ];
 
-// Stats chiffrées 2026 — preuves sociales
+// Stats chiffrées 2026 — preuves sociales (sources vérifiables)
 const AUDIT_STATS_2026 = [
     {
         value: "72 %",
         label: "Sites avec erreurs techniques qui bloquent le ranking",
-        source: "Étude Ahrefs 2025"
+        source: "Ahrefs State of SEO 2025"
     },
     {
         value: "150+",
         label: "Points analysés dans un audit SEO complet IndHack",
-        source: "Méthodologie interne 2026"
+        source: "Périmètre d'audit détaillé"
     },
     {
         value: "+200 %",
-        label: "Trafic organique moyen en 6 mois après audit et mise en œuvre",
-        source: "Moyenne sur 50+ clients accompagnés"
+        label: "Trafic organique en 6 mois, objectif affiché IndHack",
+        source: "Positionnement IndHack"
     }
 ];
 
@@ -68,7 +68,7 @@ const AUDIT_FAQ = [
     },
     {
         question: "Que contient exactement un audit SEO approfondi ?",
-        answer: "Un audit SEO approfondi couvre **6 axes** : (1) analyse technique (indexation, Core Web Vitals, mobile), (2) audit sémantique (mots-clés, intent match), (3) profil de backlinks, (4) benchmark concurrentiel, (5) **signaux GEO** pour les moteurs IA (robots.txt, schema, llms.txt), (6) roadmap priorisée par ROI. +150 points analysés, rapport PDF livré sous 5-10 jours."
+        answer: "Un audit SEO approfondi couvre **6 axes** : (1) analyse technique (indexation, Core Web Vitals, mobile), (2) audit sémantique (mots-clés, intent match), (3) profil de backlinks, (4) benchmark concurrentiel, (5) **signaux GEO** pour les moteurs IA (robots.txt, schema, llms.txt), (6) roadmap priorisée par ROI. +150 points analysés, rapport PDF livré sous délai convenu."
     },
     {
         question: "L'audit inclut-il la visibilité dans ChatGPT et Google AI Mode ?",
@@ -76,7 +76,7 @@ const AUDIT_FAQ = [
     },
     {
         question: "Combien coûte un audit SEO en 2026 ?",
-        answer: "Le tarif dépend de la volumétrie : **à partir de 1 500 € pour un site de moins de 100 pages**, jusqu'à 5 000 € pour un site complexe (e-commerce, multisites, multilingue). Premier diagnostic gratuit sous 30 secondes via mon [outil d'audit SEO gratuit](/outils/audit-seo-gratuit) pour évaluer le périmètre."
+        answer: "Le tarif s'établit **sur devis** selon la volumétrie du site et la profondeur d'analyse requise (simple, e-commerce, multisites, multilingue). Premier diagnostic gratuit sous 30 secondes via mon [outil d'audit SEO gratuit](/outils/audit-seo-gratuit) pour évaluer le périmètre, puis [contactez-moi](/contact) pour un devis personnalisé sous 24h."
     },
     {
         question: "Combien de temps dure un audit SEO complet ?",
@@ -84,7 +84,7 @@ const AUDIT_FAQ = [
     },
     {
         question: "Quelle différence entre audit gratuit et audit complet ?",
-        answer: "L'[audit SEO gratuit](/outils/audit-seo-gratuit) en 30 secondes détecte les 10 erreurs techniques critiques (score sur 100). L'audit complet (payant) analyse **+150 points** : Core Web Vitals détaillés, benchmark concurrentiel avec 3-5 concurrents directs, analyse sémantique de chaque page pilier, stratégie de contenu, plan GEO. Livré avec roadmap chiffrée."
+        answer: "L'[audit SEO gratuit](/outils/audit-seo-gratuit) en 30 secondes détecte les 10 erreurs techniques critiques (score sur 100). L'audit complet (payant) analyse **+150 points** : Core Web Vitals détaillés, benchmark concurrentiel avec 3-5 concurrents directs, analyse sémantique de chaque page pilier, stratégie de contenu, plan GEO. Livré avec roadmap priorisée par impact business."
     },
     {
         question: "Que se passe-t-il après la livraison du rapport ?",

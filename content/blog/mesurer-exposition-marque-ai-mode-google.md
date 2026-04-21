@@ -14,7 +14,7 @@ Google AI Mode a transformé la SERP en 2026. Là où 10 liens bleus s'affichaie
 
 > **Mesurer l'exposition de votre marque dans les résultats d'AI Mode Google** consiste à auditer **4 signaux** : (1) la présence du crawler `Google-Extended` autorisé dans votre robots.txt, (2) le **taux de citation** de votre domaine sur 20 requêtes AI Mode liées à votre secteur, (3) la **position moyenne** de votre marque dans les réponses générées, (4) le **ratio de mentions nominatives** versus citations de concurrents. Un taux de citation **supérieur à 30 %** indique une marque **exposée**, entre **10 % et 30 %** une **exposition partielle**, en-dessous de **10 %** une marque **invisible** pour AI Mode.
 
-En tant que [consultante SEO et experte GEO](/consultant-geo) basée à Nice, j'ai testé ce protocole sur 40+ sites clients ces trois derniers mois. Voici la méthode complète, le protocole de test chiffré et l'outil gratuit pour mesurer vous-même l'exposition de votre marque.
+En tant que [consultante SEO et experte GEO](/consultant-geo) basée à Nice, je vous partage la méthode complète de mesure, le protocole de test chiffré et l'outil gratuit pour auditer vous-même l'exposition de votre marque.
 
 **Sommaire :**
 
@@ -143,7 +143,7 @@ Les trois moteurs de réponse génératifs **ne sélectionnent pas leurs sources
 
 ## Les 3 signaux techniques qui déterminent la visibilité AI Mode
 
-Après analyse de 40 sites français sur les 6 derniers mois, 3 signaux techniques se détachent systématiquement dans les marques exposées par AI Mode :
+D'après les études publiques disponibles (Princeton, Yext, Cloudflare, BrightEdge), 3 signaux techniques se détachent systématiquement dans les marques exposées par AI Mode :
 
 ### Signal 1 — Google-Extended autorisé dans robots.txt
 
@@ -151,37 +151,36 @@ Google-Extended est le crawler dédié à l'entraînement de Gemini et à la gé
 
 ### Signal 2 — Schema.org Article + FAQPage + Organization complets
 
-AI Mode extrait **prioritairement** les passages structurés. Un article sans `author`, `datePublished`, `dateModified` et `mentions` en Schema.org a 4 fois moins de chances d'être cité qu'un article parfaitement structuré (mon benchmark personnel sur 40 pages). Un [générateur de schema JSON-LD](/outils/generateur-schema-json-ld) facilite cette étape.
+AI Mode extrait **prioritairement** les passages structurés. La recherche Princeton (Aggarwal et al., KDD 2024) a démontré que l'ajout de schemas JSON-LD améliore significativement la visibilité dans les réponses IA (jusqu'à +41 % avec statistiques sourcées). Un [générateur de schema JSON-LD](/outils/generateur-schema-json-ld) facilite cette étape.
 
 ### Signal 3 — `dateModified` inférieur à 30 jours
 
 Yext a analysé 17,2 millions de citations IA en 2025 : **les pages mises à jour dans les 30 derniers jours reçoivent 3,2 fois plus de citations** que du contenu ancien. AI Mode privilégie systématiquement la fraîcheur — même pour des sujets « intemporels ». Conséquence : un article publié il y a 2 ans sans mise à jour devient quasi invisible.
 
-## Cas concret : audit d'un e-commerce sur 20 requêtes
+## Modèle type d'un audit AI Mode sur 20 requêtes
 
-Client e-commerce français, secteur cosmétique bio, 500 K€ de CA annuel. Audit AI Mode réalisé en février 2026 :
+Voici le **modèle de rapport** que j'utilise pour structurer un audit de visibilité AI Mode. À adapter selon votre secteur :
 
-**Avant optimisation GEO :**
-- Taux de citation : 5 % (1 requête sur 20)
-- Part de voix : 2 % (dominée par 3 concurrents historiques)
-- Mentions nominatives : 0
-- Score GEO : 42/100
+**Scorecard de départ (à remplir avant optimisation) :**
+- Taux de citation (citations / 20 requêtes) : __ %
+- Part de voix face à vos 3 principaux concurrents : __ %
+- Mentions nominatives de la marque : __ / 20
+- Score GEO estimé (via le [testeur de visibilité IA](/outils/testeur-visibilite-ia)) : __ / 100
 
-**Actions menées en 6 semaines :**
-1. Ajout de `Google-Extended` en Allow dans robots.txt
-2. Création d'un llms.txt détaillé (250 lignes)
-3. Enrichissement du schema Organization (sameAs vers Wikidata, LinkedIn, Instagram)
-4. Refonte de 8 articles piliers avec passages Q&R explicites et statistiques sourcées
-5. Mise à jour du `dateModified` de 35 pages produit (reviews fraîches)
-6. Obtention de 4 backlinks éditoriaux sur sites à autorité ≥ 60
+**Plan d'actions typique sur 6 semaines :**
+1. Ajout des 4 crawlers IA en Allow dans robots.txt (`Google-Extended`, `GPTBot`, `OAI-SearchBot`, `PerplexityBot`)
+2. Création d'un fichier llms.txt structuré (voir [le guide llms.txt](/blog/llms-txt-guide-complet))
+3. Enrichissement du Schema Organization (sameAs vers réseaux vérifiables : LinkedIn, Wikidata si éligible)
+4. Refonte des articles piliers avec passages Q&R explicites + statistiques sourcées (+41 % visibilité selon Princeton KDD 2024)
+5. Rafraîchissement régulier du `dateModified` sur les pages stratégiques (+3,2× citations selon Yext 2025)
+6. Acquisition de backlinks éditoriaux pour renforcer l'autorité Google (levier clé pour AI Mode)
 
-**Après 6 semaines :**
-- Taux de citation : **35 %** (7 requêtes sur 20)
-- Part de voix : **18 %** (position 3 du secteur)
-- Mentions nominatives : **3** sur 20 requêtes
-- Score GEO : **78/100**
+**Objectifs mesurables après 6 à 8 semaines :**
+- Passer du statut « invisible » (<10 % citations) à « exposition partielle » (10-30 %)
+- Apparaître sur 3-5 requêtes sectorielles stratégiques
+- Score GEO remontant d'au moins 20 points
 
-Gain business estimé : +24 % de visites organiques qualifiées en 90 jours post-optimisation, principalement via AI Mode et Perplexity.
+Ces ordres de grandeur sont compatibles avec les études Princeton (+30-40 % de visibilité globale avec GEO bien exécuté) et Yext. Chaque secteur a ses spécificités : un audit personnalisé permet d'affiner le plan.
 
 ## Checklist : améliorer votre exposition en 30 jours
 

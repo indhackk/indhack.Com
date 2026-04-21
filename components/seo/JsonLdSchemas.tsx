@@ -423,18 +423,18 @@ export function PersonSchema() {
             {
                 "@type": "EducationalOccupationalCredential",
                 "credentialCategory": "Professional Experience",
-                "name": "7+ années d'expertise SEO et GEO",
+                "name": "Consultante SEO indépendante depuis 2019",
                 "dateCreated": "2019"
             },
             {
                 "@type": "EducationalOccupationalCredential",
                 "credentialCategory": "Specialty",
-                "name": "Première experte GEO française (Generative Engine Optimization)"
+                "name": "Spécialiste GEO (Generative Engine Optimization) — référence française émergente"
             },
             {
                 "@type": "EducationalOccupationalCredential",
                 "credentialCategory": "Professional Track Record",
-                "name": "50+ clients accompagnés, +200 % trafic organique en 6 mois en moyenne"
+                "name": "50+ clients accompagnés depuis 2019"
             }
         ],
         "memberOf": [

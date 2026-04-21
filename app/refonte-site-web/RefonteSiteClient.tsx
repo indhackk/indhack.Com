@@ -69,7 +69,7 @@ const REFONTE_FAQ = [
     },
     {
         question: "Combien coûte une refonte SEO complète en 2026 ?",
-        answer: "L'audit pré-migration (obligatoire) commence à **1 500 €**. La mission complète (audit + plan 301 + surveillance 90 jours) démarre à **3 500 €** pour un site < 100 pages. Au-delà, le tarif varie selon la volumétrie et la complexité technique. Devis gratuit sous 24 h via le formulaire de contact."
+        answer: "Le tarif varie selon la volumétrie du site, la complexité technique et le périmètre (audit pré-migration, plan de redirection 301, surveillance post-launch). Chaque projet est étudié sur mesure. **Devis gratuit sous 24 h** via le [formulaire de contact](/contact) — audit pré-migration inclus dans l'évaluation."
     },
     {
         question: "Dois-je modifier mes contenus lors de la refonte ?",

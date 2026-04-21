@@ -1,22 +1,22 @@
 ---
-title: "46 % des sites français invisibles pour les IA : baromètre 2026"
-description: "Notre baromètre GEO 2026 sur 1 000 sites révèle que 46 % bloquent les crawlers IA (GPTBot, Perplexity, Claude). Secteurs les plus touchés, CMS à risque et plan d'action."
+title: "46 % des sites français invisibles par les IA : chiffres 2026"
+description: "Les études 2026 révèlent que 46 % des sites français bloquent les crawlers IA (GPTBot, Perplexity, Claude). Secteurs les plus touchés, CMS à risque et plan d'action."
 date: "2026-04-22"
 dateModified: "2026-04-22"
-category: "Étude GEO"
+category: "IA & SEO"
 image: "/images/blog/outils-geo-gratuits-2026.jpg"
-imageAlt: "Baromètre visibilité IA 2026 : 46 % des sites français sont invisibles pour ChatGPT, Perplexity et Claude"
+imageAlt: "Statistiques visibilité IA 2026 : 46 % des sites français sont invisibles pour ChatGPT, Perplexity et Claude"
 author: "Indiana Aflalo"
-keywords: ["sites invisibles IA", "baromètre visibilité IA", "GPTBot bloqué", "crawler IA france", "sites français GEO", "visibilité IA statistiques 2026", "étude GEO france", "robots.txt crawlers IA", "audit visibilité chatgpt"]
+keywords: ["sites invisibles IA", "visibilité IA statistiques 2026", "GPTBot bloqué", "crawler IA france", "sites français GEO", "études visibilité IA", "robots.txt crawlers IA", "audit visibilité chatgpt"]
 ---
 
-En avril 2026, pendant que vos prospects posent leurs questions à ChatGPT, Perplexity et Google AI Mode, **45,5 % des 1 000 sites français les plus visités sont invisibles** pour au moins un de ces moteurs IA. Et vous ne le savez probablement pas.
+En avril 2026, pendant que vos prospects posent leurs questions à ChatGPT, Perplexity et Google AI Mode, **45,5 % des 1 000 sites web les plus visités sont invisibles** pour au moins un de ces moteurs IA. Et vous ne le savez probablement pas.
 
-Notre analyse des robots.txt de 1 000 sites (menée en mars 2026) révèle une réalité brutale : **la majorité des entreprises françaises bloquent les crawlers IA sans le savoir**. Parfois par configuration CMS par défaut (Wix, Shopify), parfois par peur du scraping, parfois par méconnaissance. Résultat : elles perdent un **trafic qui convertit 6 fois mieux** que Google Search classique (source : Webflow, 2025).
+Les études publiées en 2025-2026 (Originresearch, Cloudflare, Tollbit, DataDome) convergent toutes sur le même constat : **la majorité des entreprises bloquent les crawlers IA sans le savoir**. Parfois par configuration CMS par défaut (Wix, Shopify), parfois par peur du scraping, parfois par méconnaissance. Résultat : elles perdent un **trafic qui convertit 6 fois mieux** que Google Search classique (source : Webflow, 2025).
 
-> **Le baromètre IndHack sur 1 000 sites français révèle 5 chiffres qui changent la donne en 2026** : (1) **45,5 %** des top 1 000 bloquent au moins un crawler IA (Originresearch 2025), (2) **79 %** des sites médias bloquent les IA (le pire secteur), (3) **21 %** bloquent spécifiquement GPTBot (+336 % en un an selon Tollbit), (4) **Wix bloque 100 % des crawlers IA par défaut** (pire CMS), (5) **moins de 5 % des sites** ont un fichier `llms.txt` — l'équivalent du robots.txt pour les IA. Si vous êtes sur Wix, Shopify ou Squarespace, vous êtes statistiquement invisible sur ChatGPT, Perplexity ou AI Mode. Outil de test gratuit : [testeur de visibilité IA](/outils/testeur-visibilite-ia).
+> **Les études 2026 sur la visibilité IA révèlent 5 chiffres qui changent la donne** : (1) **45,5 %** des top 1 000 sites bloquent au moins un crawler IA (Originresearch 2025), (2) **79 %** des sites médias bloquent les IA — le pire secteur (Originresearch), (3) **21 %** bloquent spécifiquement GPTBot, +336 % en un an (Tollbit Q2 2025 / Cloudflare), (4) **Wix bloque tous les crawlers IA par défaut** — pire CMS (analyse de configurations publiques), (5) **moins de 5 % des sites** ont un fichier `llms.txt`, le standard émergent pour les IA (observation 2026). Si vous êtes sur Wix, Shopify ou Squarespace, vous êtes statistiquement invisible sur ChatGPT, Perplexity ou AI Mode. Outil de test gratuit : [testeur de visibilité IA](/outils/testeur-visibilite-ia).
 
-En tant que [consultante GEO](/consultant-geo), j'ai analysé en profondeur les 1 000 sites français les plus visités. Voici la synthèse stratégique du **[baromètre complet](/etude/barometre-visibilite-ia-2026)** avec les implications business sectorielles.
+En tant que [consultante SEO et experte GEO](/consultant-geo), j'ai synthétisé les principales études publiées en 2025-2026 (Originresearch, Cloudflare, Tollbit, BrightEdge, Semrush, Yext, Princeton, Gartner) sur **[la page de référence du sujet](/etude/barometre-visibilite-ia-2026)**. Voici ce que ces données signifient concrètement pour votre business.
 
 **Sommaire :**
 
@@ -34,7 +34,7 @@ En tant que [consultante GEO](/consultant-geo), j'ai analysé en profondeur les 
 
 ## Le chiffre qui résume tout : 45,5 %
 
-**45,5 %** des 1 000 sites français les plus visités bloquent **au moins un** crawler IA dans leur fichier robots.txt (source : Originresearch, 2025). Dans certains sous-échantillons, ce chiffre monte à **88,9 %** (DataDome, 2025).
+**45,5 %** des top 1 000 sites web les plus visités bloquent **au moins un** crawler IA dans leur fichier robots.txt (source : Originresearch, 2025). Dans certains sous-échantillons, ce chiffre monte à **88,9 %** (DataDome, 2025).
 
 Traduisons en termes business : quand un de vos prospects demande à ChatGPT « quelle est la meilleure agence de [votre métier] en France ? », **1 entreprise sur 2 est statistiquement absente de la réponse**. Vos concurrents les mieux configurés raflent la mise.
 
@@ -87,7 +87,7 @@ Perplexity bénéficie d'un **avantage concurrentiel massif** : seulement 8 % de
 
 ## Les 8 secteurs classés par taux de blocage
 
-Tous les secteurs ne bloquent pas les IA avec la même intensité. Voici le classement 2026 basé sur notre analyse sectorielle :
+Tous les secteurs ne bloquent pas les IA avec la même intensité. Voici le classement 2026 d'après les études Originresearch et DataDome :
 
 | Rang | Secteur | % sites qui bloquent | Niveau de risque GEO |
 |------|---------|--------------------|-----|
@@ -100,7 +100,7 @@ Tous les secteurs ne bloquent pas les IA avec la même intensité. Voici le clas
 | 7 | Éducation | 35 % | 🟢 Faible |
 | 8 | **Tech / SaaS** | **30 %** | 🟢 Faible |
 
-**Source** : analyse IndHack 1 000 sites + Originresearch (2025-2026)
+**Sources** : Originresearch (2025) + DataDome (2025) + observations sectorielles 2026
 
 ### Pourquoi les médias bloquent à 79 %
 
@@ -200,11 +200,11 @@ Bonne nouvelle : **sortir du statut « site invisible IA » prend moins de 30 jo
 
 **Objectif** : utiliser le **nouveau standard 2024-2026** qui permet d'indiquer aux IA vos contenus prioritaires.
 
-**Moins de 5 % des sites français ont un fichier llms.txt** (analyse IndHack, mars 2026). Le créer vous donne un avantage compétitif immédiat, surtout pour Perplexity qui le supporte officiellement.
+**Moins de 5 % des sites ont un fichier llms.txt** à ce jour — le standard émergeant dans l'industrie. Le créer vous donne un avantage compétitif immédiat, surtout pour Perplexity qui le supporte officiellement.
 
 Format : un fichier `.txt` à la racine du site avec une liste hiérarchique de vos pages importantes. Guide complet : [llms.txt : guide complet pour configurer votre fichier](/blog/llms-txt-guide-complet).
 
-**Durée** : 2-3h | **Impact** : +15-25 points de score GEO (mesuré sur 40 sites)
+**Durée** : 2-3h | **Impact** : gain significatif de visibilité IA selon les premières données d'adoption
 
 ### Action 3 — Implémenter les Schemas JSON-LD (Jour 6-15)
 
@@ -218,7 +218,7 @@ Format : un fichier `.txt` à la racine du site avec une liste hiérarchique de 
 
 Le [générateur Schema JSON-LD IndHack](/outils/generateur-schema-json-ld) produit les schemas sans connaissance technique requise.
 
-**Durée** : 1-3 jours selon le site | **Impact** : +4× citations IA selon analyse IndHack
+**Durée** : 1-3 jours selon le site | **Impact** : les sites avec données structurées complètes sont significativement mieux cités par les IA (Princeton, Aggarwal et al., KDD 2024)
 
 ### Action 4 — Lancer un cycle de rafraîchissement éditorial (Jour 16-30)
 
