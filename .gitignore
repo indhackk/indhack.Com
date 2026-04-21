@@ -42,6 +42,17 @@ scripts/google-credentials.json
 leads_whatsapp.json
 prospection/
 
+# Audits clients externes (PAS indhack — exemples: clim34, yaniv-clim34, etc.)
+clim34-audit/
+audit-export/
+audit-export.zip
+audit-export-*/
+/*-audit-export/
+/client-*/
+
 # vercel
 .vercel
 test-nice.jpg
+gig-cover-website.jpg
+*.json
+.claude/settings.local.json
