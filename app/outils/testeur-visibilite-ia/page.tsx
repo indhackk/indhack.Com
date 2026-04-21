@@ -4,14 +4,14 @@ import { TesteurVisibiliteIA } from "./TesteurVisibiliteIA";
 import { ArrowRight, Bot, Shield, Code2, FileCode, Search, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Vérifier si votre marque est citée par ChatGPT — test gratuit",
-    description: "Vérifiez si votre marque est citée par ChatGPT, Perplexity et Claude. Analysez 8 crawlers IA et vos signaux GEO en 30 secondes, sans inscription.",
+    title: "ChatGPT cite-t-il votre marque ? Test de visibilité IA gratuit",
+    description: "Testez en 30 secondes votre visibilité dans ChatGPT, Perplexity, Claude et Google AI Mode. Score GEO sur 100 + 3 actions prioritaires. Sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils/testeur-visibilite-ia"
     },
     openGraph: {
-        title: "Vérifier si votre marque est citée par ChatGPT — test gratuit",
-        description: "Vérifiez si votre marque est citée par ChatGPT, Perplexity et Claude. 8 crawlers IA analysés, signaux GEO. 100 % gratuit.",
+        title: "ChatGPT cite-t-il votre marque ? Test de visibilité IA gratuit",
+        description: "Testez en 30 secondes votre visibilité dans les 4 moteurs IA qui dominent 2026 — ChatGPT, Perplexity, Claude, Google AI Mode. Score GEO /100 + diagnostic.",
         url: "https://indhack.com/outils/testeur-visibilite-ia",
         type: "website",
     }
@@ -175,13 +175,15 @@ export default function TesteurVisibiliteIAPage() {
                         <div className="max-w-3xl mx-auto text-center mb-10">
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/20 border border-sauge/30 rounded-full text-white text-sm font-bold mb-4">
                                 <Bot className="w-4 h-4" />
-                                <span className="uppercase tracking-wider text-xs">Le seul outil français gratuit</span>
+                                <span className="uppercase tracking-wider text-xs">Audit GEO · Unique en France · 100 % gratuit</span>
                             </div>
-                            <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
-                                Testeur Visibilité <span className="text-sauge-light">IA</span>
+                            <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4 leading-tight">
+                                Vos concurrents sont cités par <span className="text-sauge-light">ChatGPT</span>.
+                                <br className="hidden sm:block" />
+                                <span className="text-white/90">Votre marque aussi ?</span>
                             </h1>
-                            <p className="text-soft-light text-lg">
-                                Votre site est-il visible par ChatGPT, Perplexity et Claude ?
+                            <p className="text-soft-light text-lg leading-relaxed max-w-2xl mx-auto">
+                                Testez en <strong className="text-white">30 secondes</strong> votre visibilité dans les 4 moteurs IA qui dominent 2026 — <strong className="text-white">ChatGPT, Perplexity, Claude</strong> et <strong className="text-white">Google AI Mode</strong>. Score GEO sur 100 + 3 actions prioritaires. Sans inscription.
                             </p>
                         </div>
 
