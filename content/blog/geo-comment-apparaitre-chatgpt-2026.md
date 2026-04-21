@@ -20,6 +20,8 @@ Selon les recherches menées par l'université de Princeton, Georgia Tech et l'A
 
 Le **GEO (Generative Engine Optimization)** désigne l'optimisation pour les moteurs génératifs. Ce n'est PAS un remplacement du SEO classique, mais un complément devenu indispensable pour toute stratégie de visibilité digitale en 2026.
 
+> **Définition — GEO (Generative Engine Optimization)** : discipline née en 2024 qui consiste à optimiser un site web pour être cité comme source dans les réponses générées par ChatGPT, Perplexity, Claude, Gemini et Google AI Mode. Le GEO repose sur **4 piliers techniques** : (1) accessibilité aux crawlers IA (`GPTBot`, `ClaudeBot`, `PerplexityBot`, `Google-Extended`), (2) richesse sémantique (schema JSON-LD, FAQ structurées, llms.txt), (3) signaux E-E-A-T (auteur identifié, sources citées, dateModified récente), (4) format AI-friendly (passages Q&R, statistiques chiffrées, définitions en bloc). Selon Aggarwal et al. (KDD 2024), une stratégie GEO bien exécutée améliore la visibilité IA de **30 à 40 %**.
+
 Dans ce guide, je vous explique concrètement ce qu'est le GEO, pourquoi il va impacter votre business, et surtout comment adapter votre site dès aujourd'hui. Et pour aller plus loin, vous pouvez tester la visibilité IA de votre site gratuitement avec notre [testeur de visibilité IA](/outils/testeur-visibilite-ia).
 
 **Sommaire :**

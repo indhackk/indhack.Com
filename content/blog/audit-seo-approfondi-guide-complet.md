@@ -1,8 +1,8 @@
 ---
-title: "Audit SEO approfondi : ma méthode en 12 étapes (+ exemple)"
-description: "Ma méthode d'audit SEO approfondi en 12 étapes, testée sur 40+ audits par an. Outils pro, exemple concret commenté et checklist à télécharger."
+title: "Audit SEO approfondi 2026 : méthode 12 étapes + checklist PDF"
+description: "Ma méthode d'audit SEO approfondi testée sur 40 sites par an : 12 étapes, outils pro, cas client chiffré et checklist téléchargeable gratuite."
 date: "2026-04-02"
-dateModified: "2026-04-04"
+dateModified: "2026-04-21"
 category: "Audit"
 image: "/images/blog/audit-seo-approfondi-guide.webp"
 imageAlt: "Méthodologie d'audit SEO approfondi : les 12 étapes d'un diagnostic complet en 2026"

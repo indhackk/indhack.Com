@@ -1,8 +1,8 @@
 ---
-title: "Checklist refonte SEO : 45 erreurs fatales à éviter [2026]"
-description: "Refonte de site sans perdre vos positions ? 45 points SEO critiques à vérifier avant, pendant et après. Redirections 301, 404, robots.txt — la checklist pro."
+title: "Refonte site web sans perdre son SEO : guide complet 2026"
+description: "Refonte de site sans perdre vos positions Google : audit pré-migration, plan de redirection 301, surveillance post-launch — la méthode complète 2026."
 date: "2026-02-16"
-dateModified: "2026-04-04"
+dateModified: "2026-04-21"
 category: "Refonte"
 image: "/images/blog/new_redesign_seo_1772274864650.webp"
 imageAlt: "Checklist refonte site web : 45 points SEO pour éviter la perte de positions Google"

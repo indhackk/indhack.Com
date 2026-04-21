@@ -1,8 +1,8 @@
 ---
-title: "Mesurer la visibilité de votre marque dans les IA [2026]"
-description: "Comment analyser et mesurer la présence de votre marque dans ChatGPT, Perplexity et Claude ? Métriques GEO, méthodes manuelles et outil de test gratuit."
+title: "Visibilité ChatGPT et Perplexity : mesurer sa marque en 2026"
+description: "Votre marque est-elle citée par ChatGPT quand un prospect cherche votre métier ? Méthodes de test manuel, outil gratuit et 4 métriques GEO clés."
 date: "2026-03-20"
-dateModified: "2026-04-04"
+dateModified: "2026-04-21"
 category: "IA & SEO"
 image: "/images/blog/geo-ia-seo.jpg"
 imageAlt: "Comment analyser la visibilité de votre marque sur ChatGPT et les IA génératives"
@@ -11,6 +11,8 @@ keywords: ["analyser visibilité marque chatgpt", "mesurer visibilité ia", "vé
 ---
 
 Votre marque est-elle citée quand un prospect demande à ChatGPT « quel est le meilleur [votre métier] ? ». Si vous ne savez pas répondre à cette question, vous avez un problème de **visibilité IA** — et potentiellement un manque à gagner conséquent.
+
+> **Mesurer l'exposition de votre marque dans les résultats d'AI Mode Google consiste à auditer 4 signaux** : (1) la présence du crawler `Google-Extended` autorisé dans le robots.txt, (2) le taux de citation de votre domaine sur 20 requêtes AI Mode liées à votre secteur, (3) la position moyenne de votre marque dans les réponses générées, (4) le ratio de mentions nominatives vs citations de concurrents. Un taux de citation **supérieur à 30 %** indique une marque **exposée**, entre **10 % et 30 %** une **exposition partielle**, en-dessous de **10 %** une marque **invisible** pour AI Mode. Outil de test gratuit : [testeur de visibilité IA IndHack](/outils/testeur-visibilite-ia).
 
 En 2026, **39 % des Français utilisent les IA pour chercher des informations** (IPSOS). Quand quelqu'un interroge ChatGPT, Perplexity ou Claude sur votre secteur d'activité, ces IA ne renvoient pas 10 liens bleus : elles **citent directement les marques** qu'elles jugent les plus fiables. Être absent de ces réponses, c'est laisser le champ libre à vos concurrents.
 
