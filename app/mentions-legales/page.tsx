@@ -8,7 +8,7 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/mentions-legales"
     },
     robots: {
-        index: true,
+        index: false,
         follow: true
     },
     openGraph: {

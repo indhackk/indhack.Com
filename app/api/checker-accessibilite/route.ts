@@ -100,7 +100,7 @@ async function fetchWithTimeout(url: string, timeout = 10000): Promise<Response>
         const response = await fetch(url, {
             signal: controller.signal,
             headers: {
-                "User-Agent": "INDHACK-Accessibility-Checker/1.0 (+https://indhack.com/outils/checker-accessibilite)",
+                "User-Agent": "INDHACK-Accessibility-Checker/1.0 (+https://indhack.com/outils/audit-seo-gratuit)",
                 "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
             },
             redirect: "follow",

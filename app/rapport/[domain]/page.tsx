@@ -88,7 +88,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
             title: `GEO Score : ${rapport.score}/100 – ${cleanDomain}`,
             description,
         },
-        robots: { index: true, follow: true },
+        robots: { index: false, follow: false, noarchive: true, nosnippet: true },
     };
 }
 

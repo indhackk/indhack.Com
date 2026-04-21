@@ -26,6 +26,7 @@ const SCOPES = ['https://www.googleapis.com/auth/indexing'];
 const DAILY_LIMIT = 180;
 
 // URLs prioritaires (pages les plus importantes)
+// ⚠️ NE JAMAIS mettre d'URLs en 301 ici (vérifier next.config.mjs)
 const PRIORITY_URLS = [
     'https://indhack.com',
     'https://indhack.com/consultant-seo',
@@ -33,10 +34,14 @@ const PRIORITY_URLS = [
     'https://indhack.com/referencement-naturel',
     'https://indhack.com/seo-local',
     'https://indhack.com/creation-site-web',
-    'https://indhack.com/seo-nice',
-    'https://indhack.com/seo-paris',
-    'https://indhack.com/seo-marseille',
-    'https://indhack.com/seo-lyon',
+    'https://indhack.com/refonte-site-web',
+    'https://indhack.com/consultant-seo-nice',
+    'https://indhack.com/consultant-seo-paris',
+    'https://indhack.com/consultant-seo-sophia-antipolis',
+    'https://indhack.com/consultant-seo-cannes',
+    'https://indhack.com/consultant-seo-marseille',
+    'https://indhack.com/outils/testeur-visibilite-ia',
+    'https://indhack.com/outils/audit-seo-gratuit',
     'https://indhack.com/blog',
 ];
 

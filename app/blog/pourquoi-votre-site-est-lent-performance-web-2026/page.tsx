@@ -453,7 +453,7 @@ export default function PerformanceWebArticlePage() {
 
                             <h3>Les coûts cachés</h3>
                             <p>
-                                Hébergement WordPress correct : 15-50€/mois. Plugins premium : 50-200€/an. Maintenance sécurité (mises à jour constantes sinon failles) : temps ou argent. Sur 3 ans, ça s'additionne. Pour en savoir plus sur les vrais coûts, consultez mon article sur <Link href="/blog/cout-site-web-2026">le coût d'un site web en 2026</Link>.
+                                Hébergement WordPress correct : 15-50€/mois. Plugins premium : 50-200€/an. Maintenance sécurité (mises à jour constantes sinon failles) : temps ou argent. Sur 3 ans, ça s'additionne. Pour en savoir plus sur les vrais coûts, consultez mon article sur <Link href="/blog/prix-creation-site-internet-2026">le coût d'un site web en 2026</Link>.
                             </p>
 
                             <div className="not-prose bg-amber-50 border border-amber-200 rounded-xl p-6 my-8">
@@ -669,7 +669,7 @@ export default function PerformanceWebArticlePage() {
                         <h3 className="font-heading font-bold text-xl text-ink mb-6">Articles complémentaires</h3>
                         <div className="grid md:grid-cols-3 gap-6">
                             {[
-                                { title: "Combien coûte un site web en 2026 ?", href: "/blog/cout-site-web-2026", category: "Création web" },
+                                { title: "Prix création site internet 2026 : combien ça coûte ?", href: "/blog/prix-creation-site-internet-2026", category: "Création web" },
                                 { title: "Comment créer un site visible sur Google", href: "/blog/comment-creer-site-visible-google", category: "SEO" },
                                 { title: "GEO : Apparaître dans ChatGPT en 2026", href: "/blog/geo-comment-apparaitre-chatgpt-2026", category: "IA & SEO" },
                             ].map((article, index) => (

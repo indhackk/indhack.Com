@@ -99,6 +99,8 @@ function makeRequest(url, options = {}) {
 }
 
 // 1. IndexNow - Bing/Yandex (instantané)
+// Note: Microsoft confirme que soumettre à UN SEUL endpoint IndexNow suffit,
+// la redistribution vers tous les participants est automatique.
 async function submitToIndexNow(urls, key) {
     console.log('\n📡 INDEXNOW (Bing/Yandex)');
     console.log('   Notification instantanée aux moteurs de recherche\n');
@@ -106,8 +108,7 @@ async function submitToIndexNow(urls, key) {
     const endpoints = [
         { name: 'Bing', url: 'https://www.bing.com/indexnow' },
         { name: 'Yandex', url: 'https://yandex.com/indexnow' },
-        // Note: IndexNow.org redistribue à tous les participants
-        { name: 'IndexNow.org', url: 'https://api.indexnow.org/indexnow' }
+        // IndexNow.org redistribue — pas besoin d'appeler d'autres endpoints
     ];
 
     const payload = JSON.stringify({
@@ -141,43 +142,11 @@ async function submitToIndexNow(urls, key) {
     }
 }
 
-// 2. Ping Google Sitemap
-async function pingGoogleSitemap() {
-    console.log('\n🔔 PING GOOGLE SITEMAP');
+// ⚠️ Endpoints Google Ping (déprécié juin 2023, retourne 404) et
+//    Bing Ping (déprécié mai 2022, retourne 410) ont été supprimés.
+//    Google et Bing recommandent IndexNow + sitemap dans robots.txt.
 
-    const pingUrl = `https://www.google.com/ping?sitemap=${encodeURIComponent(SITE_URL + '/sitemap.xml')}`;
-
-    try {
-        const response = await makeRequest(pingUrl);
-        if (response.status === 200) {
-            console.log('   ✅ Google notifié du sitemap');
-        } else {
-            console.log(`   ⚠️  Réponse: ${response.status}`);
-        }
-    } catch (error) {
-        console.log(`   ❌ Erreur: ${error.message}`);
-    }
-}
-
-// 3. Ping Bing Sitemap
-async function pingBingSitemap() {
-    console.log('\n🔔 PING BING SITEMAP');
-
-    const pingUrl = `https://www.bing.com/ping?sitemap=${encodeURIComponent(SITE_URL + '/sitemap.xml')}`;
-
-    try {
-        const response = await makeRequest(pingUrl);
-        if (response.status === 200) {
-            console.log('   ✅ Bing notifié du sitemap');
-        } else {
-            console.log(`   ⚠️  Réponse: ${response.status}`);
-        }
-    } catch (error) {
-        console.log(`   ❌ Erreur: ${error.message}`);
-    }
-}
-
-// 4. Générer les liens pour partage social (aide au crawl)
+// 2. Générer les liens pour partage social (aide au crawl)
 function generateSocialLinks(urls) {
     console.log('\n📱 LIENS POUR PARTAGE SOCIAL');
     console.log('   Partager sur les réseaux aide le crawler à découvrir les pages\n');
@@ -241,10 +210,8 @@ async function main() {
 
     console.log(`\n📊 ${urls.length} URLs à soumettre`);
 
-    // Exécuter toutes les techniques
+    // Exécuter toutes les techniques actives (Google/Bing ping supprimés — dépréciés)
     await submitToIndexNow(urls, indexNowKey);
-    await pingGoogleSitemap();
-    await pingBingSitemap();
 
     if (showWeb20) {
         generateWeb20Instructions(urls);

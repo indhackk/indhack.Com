@@ -80,11 +80,10 @@ const nextConfig = {
                 destination: '/blog/devenir-consultant-seo',
                 permanent: true, // 301 - ancien article fusionné
             },
-            {
-                source: '/blog/checklist-seo-refonte-site',
-                destination: '/blog/refonte-site-web-sans-perdre-seo',
-                permanent: true, // 301 - checklist fusionnée dans le guide ultime refonte
-            },
+            // NOTE: /blog/checklist-seo-refonte-site existe maintenant comme page courte (checklist pure)
+            // qui link vers /blog/refonte-site-web-sans-perdre-seo (guide complet).
+            // Le 301 a été supprimé car Google refusait de transférer l'autorité (soft-redirect).
+            // Les deux pages ciblent des intents différents : checklist (tactique) vs guide (méthodologique).
             // Anciennes URLs WordPress → Accueil
             {
                 source: '/index.html',
@@ -162,7 +161,18 @@ const nextConfig = {
                 destination: '/outils',
                 permanent: true,
             },
-            // Ancien /tools/ → /outils/
+            // Direct : anciens outils /tools/X → audit-seo-gratuit (évite chaîne /tools/ → /outils/ → audit)
+            {
+                source: '/tools/checker-accessibilite',
+                destination: '/outils/audit-seo-gratuit',
+                permanent: true,
+            },
+            {
+                source: '/tools/analyseur-vitesse-site',
+                destination: '/outils/audit-seo-gratuit',
+                permanent: true,
+            },
+            // Catch-all /tools/ → /outils/ (après les règles spécifiques ci-dessus)
             {
                 source: '/tools/:path*',
                 destination: '/outils/:path*',
@@ -291,13 +301,13 @@ const nextConfig = {
                 destination: '/consultant-seo-boulogne-billancourt',
                 permanent: true,
             },
-            // Sous-pages des villes (cocon sémantique)
+            // Catch-all sous-pages des villes : TOUTE sous-page /seo-[ville]/[service] → page ville
+            // (aucune sous-page service n'existe dans l'app, donc on redirige vers la ville parent qui existe)
             {
-                source: '/seo-:city/:service',
-                destination: '/consultant-seo-:city/:service',
+                source: '/seo-:city/:service*',
+                destination: '/consultant-seo-:city',
                 permanent: true,
             },
-            // Pattern catch-all supprimé car il casse /seo-local (les 18 villes sont déjà en dur au-dessus)
         ];
     },
 
