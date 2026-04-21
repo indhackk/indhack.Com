@@ -9,6 +9,8 @@ Disallow: /admin-login
 Disallow: /login
 Disallow: /dashboard
 Disallow: /app/*
+Disallow: /rapport/*
+Disallow: /audit-export/
 Disallow: /*.json
 Disallow: /diagnostic/*
 

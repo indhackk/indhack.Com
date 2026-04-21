@@ -126,7 +126,12 @@ module.exports = {
             // Règles par défaut pour tous les crawlers
             {
                 userAgent: '*',
-                allow: '/',
+                // Exceptions Allow (plus spécifiques) AVANT les Disallow généraux
+                allow: [
+                    '/',
+                    '/api/vultifrine',
+                    '/vultifrine-study.json',
+                ],
                 disallow: [
                     '/api/*',
                     '/keystatic/*',
@@ -134,6 +139,8 @@ module.exports = {
                     '/login',
                     '/dashboard',
                     '/app/*',
+                    '/rapport/*',
+                    '/audit-export/',
                     '/*.json',
                     '/diagnostic/*',
                 ],
@@ -201,30 +208,44 @@ module.exports = {
         let priority = config.priority;
         let changefreq = config.changefreq;
 
-        if (highPriorityPages.includes(path)) {
+        // ══════════════════════════════════════════════════════════════
+        // PRIORITÉS DIFFÉRENCIÉES : éviter la dilution de 1.0
+        // Seule la homepage = 1.0. Le reste suit une hiérarchie claire.
+        // ══════════════════════════════════════════════════════════════
+        if (path === '/') {
             priority = 1.0;
             changefreq = 'daily';
-        } else if (cityPages.includes(path)) {
+        } else if (highPriorityPages.includes(path)) {
+            // Services mères + page mère SEO local
             priority = 0.9;
             changefreq = 'weekly';
-        } else if (path.startsWith('/blog')) {
-            priority = 0.8;
+        } else if (cityPages.includes(path)) {
+            // Villes hyper-locales (Nice, Paris, Sophia, Cannes, Marseille) boost
+            const hyperLocalizedCities = ['/consultant-seo-nice', '/consultant-seo-paris', '/consultant-seo-cannes', '/consultant-seo-marseille', '/consultant-seo-sophia-antipolis', '/consultant-seo-antibes', '/consultant-seo-monaco'];
+            if (hyperLocalizedCities.includes(path)) {
+                priority = 0.85;
+            } else {
+                priority = 0.7;
+            }
             changefreq = 'weekly';
         } else if (toolPages.includes(path)) {
-            // Outils SEO gratuits - haute priorité
-            priority = 0.9;
+            // Outils SEO gratuits - haute priorité (lead magnets)
+            priority = 0.85;
+            changefreq = 'weekly';
+        } else if (path.startsWith('/blog')) {
+            priority = 0.7;
             changefreq = 'weekly';
         } else if (['/consultant-geo', '/consultant-ia', '/community-manager', '/creation-boutique-en-ligne'].includes(path)) {
-            priority = 0.8;
+            priority = 0.75;
             changefreq = 'weekly';
         } else if (path === '/glossaire-seo' || path === '/etudes-de-cas' || path === '/partenaires' || path === '/checklist-geo') {
-            priority = 0.8;
+            priority = 0.7;
             changefreq = 'weekly';
         } else if (path === '/laboratoire-geo/vultifrine') {
-            priority = 0.9;
+            priority = 0.85;
             changefreq = 'daily';
         } else if (path.startsWith('/laboratoire-geo/vultifrine/')) {
-            priority = 0.8;
+            priority = 0.7;
             changefreq = 'weekly';
         } else if (path === '/contact' || path === '/a-propos') {
             priority = 0.6;
