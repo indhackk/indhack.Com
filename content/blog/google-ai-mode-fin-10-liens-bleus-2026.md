@@ -2,7 +2,7 @@
 title: "Google AI Mode : 93 % de zero-click, quel impact SEO ?"
 description: "Google AI Mode remplace les 10 liens bleus par des réponses IA. 93 % de sessions sans clic. Analyse des données, impact réel et stratégie d'adaptation."
 date: "2026-03-12"
-dateModified: "2026-04-04"
+dateModified: "2026-04-21"
 category: "IA & SEO"
 image: "/images/blog/google-ai-mode-fin-10-liens-bleus.webp"
 imageAlt: "Personne utilisant la recherche Google sur un ordinateur portable, illustrant la transition vers AI Mode"
@@ -15,6 +15,8 @@ Depuis mars 2026, Google a officiellement lancé **AI Mode** — et cette fois, 
 *Le chiffre qui résume tout : **93 % des sessions AI Mode se terminent sans un seul clic** vers un site externe (source : Semrush, mars 2026). C'est plus du double du taux de zero-click des AI Overviews classiques (43 %).*
 
 En tant que [consultant SEO](/consultant-seo) et [GEO](/consultant-geo), je considère AI Mode comme le changement le plus radical dans l'histoire de la recherche Google. Plus radical que le passage au mobile-first. Plus radical que les featured snippets. Voici mon analyse complète et les stratégies concrètes pour ne pas disparaître.
+
+> **Les 3 chiffres qui redéfinissent le SEO en 2026 avec Google AI Mode** : (1) **43 %** des requêtes Google déclenchent AI Mode (Semrush, mars 2026), (2) **93 %** des sessions AI Mode se terminent **sans clic** vers un site externe, (3) **−47 %** de CTR organique sur les requêtes où AI Mode s'active (Ahrefs, janvier 2026). **Conséquence directe** : être en position 1 Google ne suffit plus — il faut être **cité comme source** dans la réponse IA pour exister. Être cité dans AI Mode est devenu le nouveau top 1.
 
 ## Sommaire
 

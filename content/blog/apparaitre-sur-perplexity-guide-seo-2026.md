@@ -2,7 +2,7 @@
 title: "Apparaître sur Perplexity : le guide SEO / GEO 2026"
 description: "Comment optimiser votre site web pour remonter dans les sources du moteur de recherche IA Perplexity AI ? Guide complet Generative Engine Optimization."
 date: "2026-01-22"
-dateModified: "2026-04-16"
+dateModified: "2026-04-21"
 category: "IA & SEO"
 image: "/images/blog/perplexity-seo.jpg"
 imageAlt: "Comment apparaître sur Perplexity SEO et GEO en 2026"
@@ -15,6 +15,8 @@ Si ChatGPT est le leader de l'IA conversationnelle, **Perplexity AI** s'est impo
 La question brûlante pour chaque directeur marketing et expert SEO est donc : **Comment faire en sorte que mon site apparaisse dans ces fameuses sources Perplexity ?**
 
 C'est là tout l'enjeu du **[GEO (Generative Engine Optimization)](/blog/geo-comment-apparaitre-chatgpt-2026)**. Voici le plan d'action d'une experte pour optimiser votre référencement sur Perplexity.
+
+> **Perplexity classe les sources différemment de Google. Elle privilégie 5 critères** : (1) contenu datant de **moins de 15 jours** (3,2× plus de citations), (2) articles **3 000+ mots multi-sources**, (3) **données primaires originales**, (4) structure **Q&R explicite**, (5) **absence de paywall**. Pour dominer Perplexity : rafraîchir le contenu toutes les 3-4 semaines + publier des données exclusives (études, statistiques propriétaires). Source : Yext, analyse de 17,2 M citations IA 2025.
 
 **Sommaire :**
 1. [Comment fonctionne le moteur de recherche de Perplexity ?](#comment-fonctionne-le-moteur-de-recherche-de-perplexity)

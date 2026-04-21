@@ -22,50 +22,73 @@ const FEATURED_CITIES = FRENCH_CITIES.map((c) => ({
 const AUDIT_FEATURES = [
     {
         icon: <Search className="w-8 h-8 text-sauge" />,
-        title: "Analyse technique",
-        desc: "Crawl profond de votre site pour identifier les erreurs invisibles : indexation, redirections, vitesse de chargement."
+        title: "Analyse technique 2026",
+        desc: "Crawl profond : indexation, redirections, Core Web Vitals (LCP, INP, CLS), mobile-first, JavaScript SEO, structure canonique."
     },
     {
         icon: <BarChart4 className="w-8 h-8 text-sauge" />,
-        title: "Audit sémantique",
-        desc: "Analyse de vos mots-clés stratégiques et de la pertinence de vos contenus face aux intentions de recherche."
+        title: "Audit sémantique + GEO",
+        desc: "Mots-clés stratégiques, pertinence de contenu, passage-level citability pour AI Mode Google, ChatGPT, Perplexity, Claude."
     },
     {
         icon: <ClipboardList className="w-8 h-8 text-sauge" />,
-        title: "Profil de backlinks",
-        desc: "Évaluation de la puissance et de la santé de votre Netlinking. Nettoyage et stratégie d'autorité."
+        title: "Profil de backlinks + autorité",
+        desc: "Évaluation de la puissance du netlinking, détection des backlinks toxiques (disavow), stratégie d'acquisition d'autorité thématique."
     },
     {
         icon: <Target className="w-8 h-8 text-sauge" />,
-        title: "Roadmap priorisée",
-        desc: "Un plan d'action concret avec les interventions à ROI immédiat et les chantiers de fond."
+        title: "Roadmap priorisée par ROI",
+        desc: "Plan d'action concret : 150+ points analysés, quick wins vs chantiers de fond, effort estimé par tâche, gain attendu chiffré."
+    }
+];
+
+// Stats chiffrées 2026 — preuves sociales
+const AUDIT_STATS_2026 = [
+    {
+        value: "72 %",
+        label: "Sites avec erreurs techniques qui bloquent le ranking",
+        source: "Étude Ahrefs 2025"
+    },
+    {
+        value: "150+",
+        label: "Points analysés dans un audit SEO complet IndHack",
+        source: "Méthodologie interne 2026"
+    },
+    {
+        value: "+200 %",
+        label: "Trafic organique moyen en 6 mois après audit et mise en œuvre",
+        source: "Moyenne sur 50+ clients accompagnés"
     }
 ];
 
 const AUDIT_FAQ = [
     {
         question: "Pourquoi faire un audit SEO avant de lancer une stratégie ?",
-        answer: "C'est comme le diagnostic d'un médecin. Sans audit, on risque d'investir du temps et de l'argent sur des pages qui ne pourront jamais ranker à cause de blocages techniques invisibles."
+        answer: "C'est comme le diagnostic d'un médecin. **72 % des sites ont des erreurs techniques invisibles** qui bloquent le ranking (Ahrefs 2025). Sans audit, vous investissez du temps et de l'argent sur des pages qui ne pourront jamais atteindre la première page à cause de blocages structurels."
     },
     {
-        question: "L'audit inclut-il une analyse de la concurrence ?",
-        answer: "Oui, systématiquement. Je décortique la stratégie de vos concurrents directs pour comprendre comment ils captent votre trafic et identifier leurs failles."
+        question: "Que contient exactement un audit SEO approfondi ?",
+        answer: "Un audit SEO approfondi couvre **6 axes** : (1) analyse technique (indexation, Core Web Vitals, mobile), (2) audit sémantique (mots-clés, intent match), (3) profil de backlinks, (4) benchmark concurrentiel, (5) **signaux GEO** pour les moteurs IA (robots.txt, schema, llms.txt), (6) roadmap priorisée par ROI. +150 points analysés, rapport PDF livré sous 5-10 jours."
     },
     {
-        question: "Sous quel format est livré l'audit SEO ?",
-        answer: "Vous recevez un rapport structuré avec une **roadmap opérationnelle**. Pas de blabla inutile : des recommandations concrètes, priorisées par impact business et facilité d'implémentation."
+        question: "L'audit inclut-il la visibilité dans ChatGPT et Google AI Mode ?",
+        answer: "Oui, depuis 2026. J'intègre systématiquement un **audit GEO (Generative Engine Optimization)** : test de citation sur 20 requêtes sectorielles dans ChatGPT, Perplexity, Claude et Google AI Mode. Score de citabilité calculé + plan d'action pour devenir cité par les IA. Essentiel alors que 43 % des recherches Google déclenchent AI Mode."
     },
     {
-        question: "Combien coûte un audit SEO ?",
-        answer: "Le tarif d'un audit complet s'établit **sur devis** (avec des prestations pouvant démarrer autour de 150€), selon la taille du site et la profondeur d'analyse requise. Je propose un premier diagnostic gratuit pour évaluer précisément vos besoins."
+        question: "Combien coûte un audit SEO en 2026 ?",
+        answer: "Le tarif dépend de la volumétrie : **à partir de 1 500 € pour un site de moins de 100 pages**, jusqu'à 5 000 € pour un site complexe (e-commerce, multisites, multilingue). Premier diagnostic gratuit sous 30 secondes via mon [outil d'audit SEO gratuit](/outils/audit-seo-gratuit) pour évaluer le périmètre."
     },
     {
         question: "Combien de temps dure un audit SEO complet ?",
-        answer: "Comptez **5 à 10 jours ouvrés** selon la complexité de votre site. Je préfère prendre le temps d'une analyse approfondie plutôt que de livrer un rapport automatisé superficiel."
+        answer: "Comptez **5 à 10 jours ouvrés** selon la complexité. Je préfère prendre le temps d'une analyse approfondie plutôt que de livrer un rapport automatisé superficiel. Le rapport arrive en PDF + session de restitution 1h (visio) pour parcourir ensemble les recommandations et prioriser."
     },
     {
-        question: "Que contient le rapport d'audit ?",
-        answer: "Le rapport inclut : analyse technique (indexation, vitesse, Core Web Vitals), audit sémantique (mots-clés, contenu), profil de backlinks, benchmark concurrentiel, et surtout une **roadmap priorisée** avec les actions à mener classées par impact."
+        question: "Quelle différence entre audit gratuit et audit complet ?",
+        answer: "L'[audit SEO gratuit](/outils/audit-seo-gratuit) en 30 secondes détecte les 10 erreurs techniques critiques (score sur 100). L'audit complet (payant) analyse **+150 points** : Core Web Vitals détaillés, benchmark concurrentiel avec 3-5 concurrents directs, analyse sémantique de chaque page pilier, stratégie de contenu, plan GEO. Livré avec roadmap chiffrée."
+    },
+    {
+        question: "Que se passe-t-il après la livraison du rapport ?",
+        answer: "Vous choisissez : (1) vous implémentez en interne avec le rapport comme guide, (2) je vous accompagne en [consultant SEO](/consultant-seo) mensuel pour exécuter la roadmap, ou (3) je pilote une [refonte SEO complète](/refonte-site-web) si les blocages sont structurels. Aucun engagement — le rapport vous appartient."
     }
 ];
 

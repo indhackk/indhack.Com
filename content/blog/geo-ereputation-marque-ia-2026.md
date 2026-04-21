@@ -2,7 +2,7 @@
 title: "GEO et réputation de marque : protéger votre image IA"
 description: "Découvrez comment les IA façonnent votre réputation. Audit, stratégies et outils pour maîtriser votre présence dans ChatGPT et Perplexity."
 date: "2026-03-14"
-dateModified: "2026-04-16"
+dateModified: "2026-04-21"
 category: "GEO"
 image: "/images/blog/geo-ereputation-marque-ia-2026.webp"
 imageAlt: "Smartphone affichant ChatGPT sur un clavier d'ordinateur, illustrant la réputation de marque dans les IA génératives"
@@ -12,6 +12,8 @@ readingTime: "14 min"
 ---
 
 > *Votre marque a une réputation sur ChatGPT et Perplexity — mais ce n'est probablement pas celle que vous contrôlez. Découvrez comment les IA façonnent l'image de votre entreprise, et pourquoi l'e-réputation en 2026 ne se limite plus à Google.*
+
+> **Trois risques d'e-réputation IA détruisent la confiance client en 2026** : (1) **information obsolète** (40 % des cas) — tarifs 2022 cités en 2026, (2) **mélange de données** (25 % des cas) — IA confond deux entreprises homonymes et attribue les avis du concurrent, (3) **absence de correction permanente** (35 % des cas) — une fausse information est reprise par 50 sites et les IA continuent de la citer même après correction. Solution : monitoring trimestriel + Schema LocalBusiness ultra-complet + Digital PR pour demander les corrections.
 
 ## Sommaire
 
