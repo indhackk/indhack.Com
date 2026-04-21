@@ -11,6 +11,7 @@ import { useModal } from "@/components/providers/ModalProvider";
 import { CityData, FRENCH_CITIES } from "@/lib/cities-data";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 import { MarketInsightBlock } from "@/components/seo/MarketInsightBlock";
+import { NearbyLinks } from "@/components/NearbyLinks";
 
 const DEPARTMENT_PREPOSITIONS: Record<string, string> = {
     "Alpes-Maritimes": "des Alpes-Maritimes",
@@ -43,10 +44,9 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
     const city = cityData.name;
     const zipCode = cityData.zipCode;
 
-    // Villes proches pour le maillage
-    const nearbyCities = FRENCH_CITIES
-        .filter(c => c.name !== city && c.region === cityData.region)
-        .slice(0, 5);
+    // Slug de base (sans le préfixe) pour NearbyLinks
+    // cityData.slug = "consultant-seo-nice" → baseCitySlug = "nice"
+    const baseCitySlug = cityData.slug.replace('consultant-seo-', '');
 
     // JSON-LD LocalBusiness
     const localBusinessSchema = {
@@ -657,29 +657,18 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                             </div>
                         </div>
 
-                        {/* Villes proches */}
+                        {/* Lien vers la page mère SEO local */}
                         <div className="mt-10 pt-8 border-t border-gray-100 text-center">
-                            <h3 className="font-bold text-ink mb-4">Consultant SEO également disponible sur</h3>
-                            <div className="flex flex-wrap justify-center gap-3 text-sm max-w-3xl mx-auto">
-                                {nearbyCities.map((c) => (
-                                    <Link
-                                        key={c.name}
-                                        href={`/${c.slug}`}
-                                        className="px-4 py-2 bg-gray-50 hover:bg-sauge hover:text-white rounded-full transition-all text-soft font-medium"
-                                    >
-                                        {c.name}
-                                    </Link>
-                                ))}
-                            </div>
-                            <div className="mt-6">
-                                <Link href="/seo-local" className="text-sauge font-bold text-sm hover:underline">
-                                    ← Toutes mes zones d'intervention
-                                </Link>
-                            </div>
+                            <Link href="/seo-local" className="text-sauge font-bold text-sm hover:underline">
+                                ← Toutes mes zones d'intervention en France
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
+
+            {/* Villes voisines - maillage inter-villes intelligent via CITY_NEIGHBORS */}
+            <NearbyLinks city={baseCitySlug} variant="full" maxLinks={6} />
 
             {/* CTA Final Compact */}
             <section className="py-12 bg-gray-50">

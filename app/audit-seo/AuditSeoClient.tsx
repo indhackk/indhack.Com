@@ -11,13 +11,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
+import { FRENCH_CITIES } from "@/lib/cities-data";
 
-const FEATURED_CITIES = [
-    { name: "Nice", slug: "consultant-seo-nice" },
-    { name: "Paris", slug: "consultant-seo-paris" },
-    { name: "Lyon", slug: "consultant-seo-lyon" },
-    { name: "Marseille", slug: "consultant-seo-marseille" },
-];
+// Toutes les villes actives (19) — priorité SEO local par département
+const FEATURED_CITIES = FRENCH_CITIES.map((c) => ({
+    name: c.name,
+    slug: c.slug,
+}));
 
 const AUDIT_FEATURES = [
     {

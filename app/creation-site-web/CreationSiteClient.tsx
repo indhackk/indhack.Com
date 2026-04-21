@@ -11,15 +11,13 @@ import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 import { MapPin } from "lucide-react";
+import { FRENCH_CITIES } from "@/lib/cities-data";
 
-const FEATURED_CITIES = [
-    { name: "Nice", slug: "consultant-seo-nice" },
-    { name: "Paris", slug: "consultant-seo-paris" },
-    { name: "Lyon", slug: "consultant-seo-lyon" },
-    { name: "Marseille", slug: "consultant-seo-marseille" },
-    { name: "Cannes", slug: "consultant-seo-cannes" },
-    { name: "Bordeaux", slug: "consultant-seo-bordeaux" },
-];
+// Toutes les villes actives (19) — maillage cocon sémantique complet
+const FEATURED_CITIES = FRENCH_CITIES.map((c) => ({
+    name: c.name,
+    slug: c.slug,
+}));
 
 const CREATION_FEATURES = [
     {

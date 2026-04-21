@@ -59,16 +59,17 @@ const ALL_SERVICES: Record<string, Service> = {
     }
 };
 
-// Mapping des services liés par page - maillage croisé complet
+// Mapping des services liés par page - maillage croisé complet (cocon sémantique)
+// Chaque service link vers sœurs + mère/fille + service complémentaire
 const RELATED_MAPPING: Record<string, string[]> = {
     "consultant-seo": ["audit-seo", "referencement-naturel", "seo-local"],
     "audit-seo": ["consultant-seo", "referencement-naturel", "seo-local"],
     "referencement-naturel": ["consultant-seo", "audit-seo", "seo-local"],
-    "creation-site-web": ["creation-boutique-en-ligne", "referencement-naturel", "refonte-site-web"],
-    "refonte-site-web": ["consultant-seo", "creation-site-web", "audit-seo"],
+    "creation-site-web": ["creation-boutique-en-ligne", "refonte-site-web", "referencement-naturel"],
+    "refonte-site-web": ["creation-site-web", "creation-boutique-en-ligne", "audit-seo"],
     "community-manager": ["consultant-seo", "creation-site-web", "seo-local"],
     "seo-local": ["consultant-seo", "audit-seo", "referencement-naturel"],
-    "creation-boutique-en-ligne": ["creation-site-web", "referencement-naturel", "seo-local"],
+    "creation-boutique-en-ligne": ["creation-site-web", "refonte-site-web", "referencement-naturel"],
     "consultant-seo-freelance": ["audit-seo", "referencement-naturel", "seo-local"]
 };
 
