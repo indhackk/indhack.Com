@@ -264,6 +264,28 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                 category="Référencement Local"
             />
 
+            {/* Bloc AIO-ready : passage citable par ChatGPT / Perplexity / AI Mode Google */}
+            <section className="py-10 bg-gradient-to-b from-gray-50 to-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="bg-white border-l-4 border-sauge rounded-r-2xl p-6 md:p-8 shadow-sm">
+                            <div className="flex items-center gap-2 mb-3">
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-sauge/10 text-sauge rounded-full text-xs font-bold uppercase tracking-wider">
+                                    <CheckCircle2 className="w-3.5 h-3.5" />
+                                    L'essentiel en 30 secondes
+                                </span>
+                            </div>
+                            <p className="text-base md:text-lg text-ink leading-relaxed">
+                                <strong className="font-bold">Un consultant SEO à {city} ({zipCode})</strong> accompagne les entreprises des <strong>{cityData.department}</strong> et de la région <strong>{cityData.region}</strong> pour gagner en visibilité sur Google et Google Maps.
+                                Le marché local {city} compte <strong>{cityData.population} habitants</strong> avec une concurrence {cityData.context.competitionLevel === 'extreme' ? 'féroce' : cityData.context.competitionLevel === 'high' ? 'élevée' : cityData.context.competitionLevel === 'medium' ? 'modérée' : 'gérable'} dans les secteurs {cityData.context.businessTypes.slice(0, 3).join(', ').toLowerCase()}.
+                                Mission type : audit technique + SEO local ({cityData.landmarks.slice(0, 2).join(', ')} et alentours : {cityData.nearbyAreas.slice(0, 3).join(', ')}) + optimisation Google Business Profile + stratégie contenu géolocalisé.
+                                <span className="text-soft"> Tarif sur devis selon périmètre. Premier audit gratuit en 30 secondes via notre <Link href="/outils/audit-seo-gratuit" className="text-sauge font-semibold hover:underline">outil d'audit SEO gratuit</Link>.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Introduction Compacte + Stats - Enrichie avec Context */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">

@@ -266,12 +266,34 @@ module.exports = {
             lastmod = new Date(staticPageDates[path]).toISOString();
         }
         // 3. Pages villes → date de dernière mise à jour
+        //    Refresh global 2026-04-22 : bloc AIO-ready ajouté dans CityPageTemplateV2
+        //    + enrichissement contenu contextuel via cityData (INSEE, département, secteurs)
         else if (path.startsWith('/consultant-seo-')) {
-            const hyperLocalizedCities = ['/consultant-seo-nice', '/consultant-seo-paris', '/consultant-seo-cannes', '/consultant-seo-marseille', '/consultant-seo-sophia-antipolis'];
-            if (hyperLocalizedCities.includes(path)) {
-                lastmod = new Date('2026-04-04').toISOString();
+            const recentlyRefreshedCities = [
+                '/consultant-seo-nice',
+                '/consultant-seo-paris',
+                '/consultant-seo-cannes',
+                '/consultant-seo-marseille',
+                '/consultant-seo-sophia-antipolis',
+                '/consultant-seo-antibes',
+                '/consultant-seo-monaco',
+                '/consultant-seo-strasbourg',
+                '/consultant-seo-grenoble',
+                '/consultant-seo-rennes',
+                '/consultant-seo-lille',
+                '/consultant-seo-bordeaux',
+                '/consultant-seo-toulouse',
+                '/consultant-seo-nantes',
+                '/consultant-seo-lyon',
+                '/consultant-seo-montpellier',
+                '/consultant-seo-aix-en-provence',
+                '/consultant-seo-juan-les-pins',
+                '/consultant-seo-boulogne-billancourt',
+            ];
+            if (recentlyRefreshedCities.includes(path)) {
+                lastmod = new Date('2026-04-22').toISOString();
             } else {
-                lastmod = new Date('2026-02-18').toISOString();
+                lastmod = new Date().toISOString();
             }
         }
         // 4. Fallback → date du build
