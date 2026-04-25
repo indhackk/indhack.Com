@@ -307,6 +307,7 @@ Utilisez notre [testeur de visibilité IA gratuit](/outils/testeur-visibilite-ia
 
 ## Articles complémentaires
 
-- [Guide complet du référencement naturel en 2026](/blog/definition-seo-guide-complet)
+- [Livre blanc GEO 2026 : méthode complète de la gagnante du Concours GEO](/livre-blanc-geo-2026)
+- [Comment j'ai gagné le premier Concours GEO de France avec un domaine de 2 mois](/blog/j-ai-gagne-concours-geo-greenred-2026)
 - [GEO : être visible sur ChatGPT, Perplexity et les IA](/blog/geo-comment-apparaitre-chatgpt-2026)
 - [Checklist SEO 2026 : les points essentiels](/blog/checklist-seo-2026)

@@ -43,6 +43,7 @@ const CITIES = [
 const RESOURCES = [
     { title: "Outils SEO Gratuits", href: "/outils" },
     { title: "Blog SEO", href: "/blog" },
+    { title: "Livre blanc GEO 2026", href: "/livre-blanc-geo-2026" },
     { title: "Glossaire SEO & GEO", href: "/glossaire-seo" },
     { title: "Checklist GEO", href: "/checklist-geo" },
     { title: "Études de cas", href: "/etudes-de-cas" },

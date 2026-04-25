@@ -357,3 +357,501 @@ html {
   @apply bg-clip-text text-transparent;
   background-image: linear-gradient(135deg, var(--sauge) 0%, var(--accent) 100%);
 }
+
+/* ══════════════════════════════════════════════════════════════
+   CTA TÉLÉCHARGEMENT LIVRE BLANC (utilisé dans articles blog)
+   ════════════════════════════════════════════════════════════ */
+.livre-blanc-cta {
+  margin: 3rem 0;
+  padding: 2.5rem;
+  background: linear-gradient(160deg, #2E5E4E 0%, #3d6d5c 55%, #4a7b6a 100%);
+  border-radius: 1.5rem;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -20px rgba(46, 94, 78, 0.4);
+}
+
+.livre-blanc-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 70%;
+  background: radial-gradient(ellipse at top right, rgba(212, 168, 83, 0.18) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.livre-blanc-cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.livre-blanc-cta-badge {
+  display: inline-block;
+  background: rgba(212, 168, 83, 0.95);
+  color: #2A3830;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.livre-blanc-cta-title {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 2rem !important;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.livre-blanc-cta-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92) !important;
+  margin: 0 0 1.5rem 0 !important;
+  font-style: italic;
+}
+
+.livre-blanc-cta-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 2rem 0 !important;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.livre-blanc-cta-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.livre-blanc-cta-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #D4A853;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.livre-blanc-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.livre-blanc-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #D4A853;
+  color: #2A3830 !important;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0.6rem;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.livre-blanc-cta-primary:hover {
+  background: #C49A47;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -10px rgba(212, 168, 83, 0.6);
+}
+
+.livre-blanc-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: #ffffff !important;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+}
+
+.livre-blanc-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.livre-blanc-cta-note {
+  font-size: 0.85rem !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  margin: 0 !important;
+  line-height: 1.5;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PRINT STYLES — dédié au livre blanc GEO 2026
+   Activé via classe .livre-blanc-print (ajoutée dans pdf-mode)
+   ════════════════════════════════════════════════════════════ */
+/* Couverture PDF : masquée en web, visible en print */
+.print-only-cover {
+  display: none;
+}
+
+@media print {
+  /* Masquer tout élément fixé (navbar, cookie banner, popups) */
+  .fixed,
+  footer.bg-ink,
+  .no-print {
+    display: none !important;
+  }
+
+  /* ══════════════════════════════════════════════════════════════
+     COUVERTURE PDF — design éditorial type magazine
+     ════════════════════════════════════════════════════════════ */
+  .print-only-cover {
+    display: flex !important;
+    flex-direction: column;
+    height: 277mm;
+    margin: -22mm -18mm 0 -18mm;
+    padding: 0;
+    background: #F4F1EC;
+    color: #2A3830;
+    position: relative;
+    page-break-after: always;
+    break-after: page;
+    overflow: hidden;
+  }
+
+  /* Bande verticale sauge à gauche */
+  .print-only-cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 14mm;
+    background: #2E5E4E;
+    z-index: 1;
+  }
+
+  /* Texture ou point de couleur en haut à droite */
+  .print-only-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 35%;
+    background: radial-gradient(ellipse at top right, rgba(212, 168, 83, 0.18) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .print-only-cover .cover-inner {
+    padding: 22mm 20mm 18mm 30mm;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* TOP : marque + édition */
+  .print-only-cover .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22mm;
+  }
+
+  .print-only-cover .cover-brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 8mm;
+  }
+
+  .print-only-cover .cover-brand-line {
+    width: 12mm;
+    height: 0.4mm;
+    background: #2E5E4E;
+  }
+
+  .print-only-cover .cover-brand-mark span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 12pt;
+    font-weight: 700;
+    letter-spacing: 0.5pt;
+    color: #2E5E4E;
+  }
+
+  .print-only-cover .cover-edition {
+    font-size: 9pt;
+    letter-spacing: 1.5pt;
+    text-transform: uppercase;
+    color: #6b7280;
+    font-weight: 500;
+  }
+
+  /* MAIN block */
+  .print-only-cover .cover-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 145mm;
+  }
+
+  .print-only-cover .cover-meta {
+    display: flex;
+    align-items: center;
+    gap: 6mm;
+    margin-bottom: 16mm;
+    font-size: 9pt;
+    letter-spacing: 1.5pt;
+    text-transform: uppercase;
+    color: #2E5E4E;
+    font-weight: 600;
+  }
+
+  .print-only-cover .cover-meta-number {
+    background: #2E5E4E;
+    color: #ffffff;
+    padding: 2mm 4mm;
+    border-radius: 1mm;
+  }
+
+  .print-only-cover .cover-meta-divider {
+    width: 8mm;
+    height: 0.3mm;
+    background: #2E5E4E;
+  }
+
+  .print-only-cover .cover-meta-category {
+    color: #2E5E4E;
+  }
+
+  /* TITRE principal */
+  .print-only-cover .cover-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -1.5pt;
+    margin: 0 0 12mm 0;
+    color: #1f2a26;
+    font-size: 70pt;
+  }
+
+  .print-only-cover .cover-title-em {
+    display: block;
+    font-size: 38pt;
+    font-weight: 500;
+    margin-top: 3mm;
+    color: #2E5E4E;
+    line-height: 1;
+  }
+
+  .print-only-cover .cover-title-sub {
+    display: block;
+    font-size: 22pt;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 5mm;
+    color: #4b5650;
+    line-height: 1.15;
+  }
+
+  .print-only-cover .cover-subtitle {
+    font-size: 11pt;
+    line-height: 1.55;
+    color: #4b5650;
+    max-width: 130mm;
+    margin: 0;
+  }
+
+  /* STATS bandeau */
+  .print-only-cover .cover-stats {
+    display: flex;
+    align-items: stretch;
+    margin: 14mm 0 0 0;
+    padding: 8mm 0;
+    border-top: 0.4mm solid #2E5E4E;
+    border-bottom: 0.4mm solid #2E5E4E;
+    gap: 6mm;
+  }
+
+  .print-only-cover .stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .print-only-cover .stat-sep {
+    width: 0.2mm;
+    background: rgba(46, 94, 78, 0.2);
+    flex-shrink: 0;
+  }
+
+  .print-only-cover .stat-number {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 26pt;
+    font-weight: 700;
+    color: #2E5E4E;
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+
+  .print-only-cover .stat-label {
+    font-size: 8pt;
+    line-height: 1.35;
+    color: #4b5650;
+    letter-spacing: 0.3pt;
+  }
+
+  /* FOOTER */
+  .print-only-cover .cover-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+    padding-top: 10mm;
+  }
+
+  .print-only-cover .cover-author-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .print-only-cover .cover-author {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 13pt;
+    font-weight: 700;
+    color: #1f2a26;
+    margin-bottom: 1.5mm;
+  }
+
+  .print-only-cover .cover-role {
+    font-size: 9pt;
+    color: #6b7280;
+  }
+
+  .print-only-cover .cover-license {
+    text-align: right;
+    font-size: 9pt;
+    line-height: 1.5;
+    color: #4b5650;
+  }
+
+  .print-only-cover .cover-license-cc {
+    font-size: 7.5pt;
+    color: #9ca3af;
+    letter-spacing: 0.5pt;
+    text-transform: uppercase;
+    margin-top: 1mm;
+  }
+
+  /* Masquer la couverture web en print (on utilise la print-only-cover) */
+  .livre-blanc-cover-web {
+    display: none !important;
+  }
+
+  /* Reset body */
+  body {
+    background: #fff !important;
+    color: #2A3830 !important;
+    font-size: 11pt !important;
+    line-height: 1.55 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Couverture : pleine page */
+  .livre-blanc-cover {
+    page-break-after: always;
+    break-after: page;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Chaque chapitre commence sur une nouvelle page */
+  .livre-blanc-chapter {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  /* Sommaire : pleine page dédiée */
+  .livre-blanc-toc {
+    page-break-after: always;
+    break-after: page;
+  }
+
+  /* Éviter coupures à l intérieur des blocs clés */
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  h2 + p, h3 + p {
+    page-break-before: avoid;
+    break-before: avoid;
+  }
+
+  pre, blockquote, figure, table, .keep-together {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Liens : afficher URL en petit après le texte */
+  a {
+    color: #2E5E4E !important;
+    text-decoration: underline;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+
+  /* Masquer breadcrumb en print */
+  .breadcrumb-nav {
+    display: none !important;
+  }
+
+  /* Élargir la zone de contenu */
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Marges pages réglées depuis puppeteer avec @page */
+  @page {
+    margin: 20mm 18mm 22mm 18mm;
+    size: A4;
+  }
+
+  @page :first {
+    margin: 0;
+  }
+}

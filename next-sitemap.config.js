@@ -66,6 +66,7 @@ const staticPageDates = {
     '/community-manager': '2026-02-15',
     '/creation-boutique-en-ligne': '2026-01-20',
     '/laboratoire-geo/vultifrine': '2026-04-12',
+    '/livre-blanc-geo-2026': '2026-04-24',
 };
 
 /** @type {import('next-sitemap').IConfig} */
@@ -246,6 +247,9 @@ module.exports = {
             changefreq = 'daily';
         } else if (path.startsWith('/laboratoire-geo/vultifrine/')) {
             priority = 0.7;
+            changefreq = 'weekly';
+        } else if (path === '/livre-blanc-geo-2026') {
+            priority = 0.9;
             changefreq = 'weekly';
         } else if (path === '/contact' || path === '/a-propos') {
             priority = 0.6;

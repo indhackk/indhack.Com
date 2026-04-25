@@ -1183,6 +1183,28 @@ export default function VultifrinePage() {
                     <h2 className="font-heading text-2xl text-ink font-bold mb-6">
                         Pour aller plus loin
                     </h2>
+
+                    {/* Mise en avant livre blanc */}
+                    <Link
+                        href="/livre-blanc-geo-2026"
+                        className="block mb-4 p-6 rounded-2xl bg-gradient-to-br from-sauge/5 to-sauge-light/10 border border-sauge/30 hover:border-sauge/60 hover:shadow-lg transition-all"
+                    >
+                        <div className="flex items-start gap-4">
+                            <div className="bg-sauge/10 p-3 rounded-xl">
+                                <FileText className="w-6 h-6 text-sauge" />
+                            </div>
+                            <div className="flex-1">
+                                <div className="flex items-center gap-2 mb-1">
+                                    <p className="font-heading font-bold text-ink">Livre blanc GEO 2026 (nouveau)</p>
+                                    <span className="bg-sauge text-white text-xs font-semibold px-2 py-0.5 rounded-full">Gratuit</span>
+                                </div>
+                                <p className="text-soft text-sm leading-relaxed">
+                                    Retour d&apos;expérience complet de la gagnante du premier Concours GEO de France. 13 chapitres, 7 piliers, 12 canaux externes, code JSON LD reproductible, check list 30 actions. Licence Creative Commons BY 4.0.
+                                </p>
+                            </div>
+                        </div>
+                    </Link>
+
                     <div className="grid sm:grid-cols-2 gap-4">
                         <Link
                             href="/referencement-naturel"
