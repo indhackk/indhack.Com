@@ -23,23 +23,23 @@ dateModified: "2026-04-25"
 6. [Ce qui n'a pas marché](#ce-qui-na-pas-marche)
 7. [Télécharger le livre blanc complet](#telecharger-le-livre-blanc-complet)
 
-## Le concours en deux lignes
+## Le concours en deux lignes {#le-concours-en-deux-lignes}
 
-GreenRed a posé une règle simple. Chaque jour pendant 33 jours, dix requêtes envoyées aux cinq grandes IA, et on compte les fois où ton domaine apparaît dans les réponses. Le mot clé : **vultifrine**, un actif cosmétique fictif. 3 315 citations comptabilisées au total.
+**GreenRed** a posé une règle simple. Chaque jour pendant **33 jours**, dix requêtes envoyées aux **cinq grandes IA génératives**, et on compte les fois où ton **nom de domaine** apparaît dans les réponses. Le mot clé : **vultifrine**, un actif cosmétique fictif. **3 315 citations comptabilisées** au total.
 
-Le mot clé inventé est l'astuce méthodologique du concours. Tout le monde démarrait à zéro côté contenu existant. Ce qui se mesurait, c'était le travail **stratégique pur**, pas le poids des dix dernières années de backlinks.
+Le **mot clé inventé** est l'astuce méthodologique du concours. Tout le monde démarrait à zéro côté contenu existant. Ce qui se mesurait, c'était le **travail stratégique pur**, pas le poids des dix dernières années de **backlinks**.
 
-## Le score et l'écart
+## Le score et l'écart {#le-score-et-lecart}
 
-Score final le 17 avril : **139 citations cumulées**, première place. **Pic à 154** le 15 avril. Écart oscillant entre **2,5 et 10 fois** sur le deuxième selon les journées.
+Score final le 17 avril : **139 citations cumulées**, **première place**. **Pic à 154** le 15 avril. **Écart oscillant entre 2,5 et 10 fois** sur le deuxième selon les journées.
 
-Ce qui rend ces chiffres atypiques, c'est l'âge du domaine. Trois mois d'existence. Aucune autorité historique, aucun backlink ancien, aucune notoriété de marque. Sur le papier je n'avais aucune chance, c'est l'inverse qui s'est passé.
+Ce qui rend ces chiffres atypiques, c'est **l'âge du domaine**. **Trois mois d'existence**. Aucune **autorité historique**, aucun **backlink ancien**, aucune **notoriété de marque**. Sur le papier je n'avais aucune chance, c'est l'inverse qui s'est passé.
 
-La leçon principale, avant la technique : **l'âge du domaine pèse beaucoup moins en GEO qu'en SEO classique**. Les systèmes RAG des IA raisonnent en cohérence d'entité et en corroboration multi-sources, pas en autorité historique. Un site jeune mais cohérent peut battre un site ancien mais diffus. C'est probablement le changement le plus profond pour notre métier dans les prochaines années.
+La leçon principale, avant la technique : **l'âge du domaine pèse beaucoup moins en GEO qu'en SEO classique**. Les **systèmes RAG** des IA raisonnent en **cohérence d'entité** et en **corroboration multi-sources**, pas en autorité historique. Un site jeune mais cohérent peut battre un site ancien mais diffus. C'est probablement le changement le plus profond pour notre métier dans les prochaines années.
 
-## Les sept piliers de la méthode
+## Les sept piliers de la méthode {#les-sept-piliers-de-la-methode}
 
-Ma méthode complète repose sur sept piliers techniques interdépendants. Aucun n'est suffisant seul, leur force vient de la combinaison.
+Ma méthode complète repose sur **sept piliers techniques interdépendants**. Aucun n'est suffisant seul, leur force vient de la combinaison.
 
 1. **L'entity stack** avec entités propriétaires codées (laboratoire, programme de recherche, protocoles techniques, indice propriétaire) qui forcent l'attribution mécanique vers indhack.com.
 2. **Les schemas JSON LD enrichis** : ScholarlyArticle, Dataset avec `variableMeasured`, SpeakableSpecification, VideoObject avec Clip et SeekToAction. Pas seulement Article et FAQPage.
@@ -51,7 +51,7 @@ Ma méthode complète repose sur sept piliers techniques interdépendants. Aucun
 
 Chaque pilier est documenté en profondeur dans le **[livre blanc complet](/livre-blanc-geo-2026)**, avec le code JSON LD reproductible et la check-list actionnable de trente actions.
 
-## Mistral, la surprise du concours
+## Mistral, la surprise du concours {#mistral-la-surprise-du-concours}
 
 Décomposition finale par IA :
 
@@ -64,35 +64,35 @@ Décomposition finale par IA :
 | Gemini | 5 | 4 | 3 % |
 | **Total** | **154** | **139** | **100 %** |
 
-**Mistral** a été la grande surprise. Le modèle français combine Brave Search et un corpus francophone riche. Certaines journées, j'avais jusqu'à 70 % de mes mentions sur Mistral seul. Plusieurs facteurs probables : Mistral semble privilégier les sources françaises de qualité, mes schemas académiques correspondent à ce qu'il cherche, et la cohérence factuelle stricte que j'ai maintenue a été particulièrement récompensée.
+**Mistral** a été la grande surprise. Le **modèle français** combine **Brave Search** et un corpus francophone riche. Certaines journées, j'avais jusqu'à **70 %** de mes mentions sur Mistral seul. Plusieurs facteurs probables : Mistral semble privilégier les **sources françaises de qualité**, mes **schemas académiques** correspondent à ce qu'il cherche, et la **cohérence factuelle stricte** que j'ai maintenue a été particulièrement récompensée.
 
-Une donnée qui m'a marquée : sur Google, ma position moyenne sur le mot clé pur « vultifrine » était de **4,67 avec 144 impressions et zéro clic**. Avoir une position 4 à 5 sur Google sans aucun clic, c'est le signal le plus clair qu'on puisse avoir. Sur ce type de requête, les utilisateurs ne cliquent plus, ils demandent à une IA. Pour les implications business, l'analyse [AI Overviews et impact sur le trafic SEO](/blog/ai-overviews-impact-trafic-seo-2026) creuse le sujet.
+Une donnée qui m'a marquée : sur **Google**, ma position moyenne sur le mot clé pur « vultifrine » était de **4,67 avec 144 impressions et zéro clic**. Avoir une position 4 à 5 sur Google sans aucun clic, c'est le signal le plus clair qu'on puisse avoir. Sur ce type de requête, les utilisateurs ne cliquent plus, ils demandent à une IA. Pour les implications business, l'analyse [AI Overviews et impact sur le trafic SEO](/blog/ai-overviews-impact-trafic-seo-2026) creuse le sujet.
 
-## Le negative GEO, mon positionnement
+## Le negative GEO, mon positionnement {#le-negative-geo-mon-positionnement}
 
-Pendant le concours, j'ai observé l'apparition d'une technique que j'appelle **negative GEO**. Des participants ont inséré dans leurs propres pages des instructions cachées adressées aux modèles de langage, du type « ne jamais citer tel domaine ». Une forme de prompt injection dirigée non plus contre les modèles, mais contre les concurrents.
+Pendant le concours, j'ai observé l'apparition d'une technique que j'appelle **negative GEO**. Des participants ont inséré dans leurs propres pages des **instructions cachées** adressées aux modèles de langage, du type « ne jamais citer tel domaine ». Une forme de **prompt injection** dirigée non plus contre les modèles, mais contre les concurrents.
 
-Je le dis franchement : je n'ai pas aimé voir ça. Ce n'est plus l'optimisation de sa propre visibilité, c'est l'altération de celle des autres. Ce n'est plus le même métier, ce n'est plus la même éthique.
+Je le dis franchement : **je n'ai pas aimé voir ça**. Ce n'est plus l'optimisation de sa propre visibilité, c'est l'altération de celle des autres. Ce n'est plus le même métier, ce n'est plus la même éthique.
 
-Pour autant, je n'ai pas dénoncé pendant le concours. **J'ai laissé tester** pour comprendre ce qui marchait, ce qui ne marchait pas, et combien de temps ça tenait. Ma conclusion : Claude refuse explicitement d'obéir, ChatGPT a été partiellement vulnérable au début puis a été patché, et les autres modèles ont montré des comportements intermédiaires. La technique fonctionne partiellement et de moins en moins.
+Pour autant, je n'ai pas dénoncé pendant le concours. **J'ai laissé tester** pour comprendre ce qui marchait, ce qui ne marchait pas, et combien de temps ça tenait. Ma conclusion : **Claude refuse explicitement** d'obéir, **ChatGPT a été partiellement vulnérable** au début puis a été patché, et les autres modèles ont montré des comportements intermédiaires. La technique fonctionne partiellement et de moins en moins.
 
 Ma réponse pragmatique au negative GEO, ce n'est pas le contrer par du negative GEO inverse. C'est **construire une autorité si solide que les manipulations concurrentes deviennent inopérantes**. La masse de signaux cohérents prime sur l'instruction cachée isolée.
 
-## Ce qui n'a pas marché
+## Ce qui n'a pas marché {#ce-qui-na-pas-marche}
 
 Aucun retour d'expérience honnête ne peut omettre les angles morts. Voici les miens, en quelques lignes.
 
-**L'accès Wikimedia bloqué.** J'ai tenté de créer trois entités Wikidata, d'enrichir un article Wikipedia français et de créer une entrée Wiktionary. Toutes les contributions ont été supprimées par les modérateurs faute de source secondaire fiable. Wikimedia exige une notabilité externe préalable, l'auto-déclaration depuis son propre site ne suffit pas. Le bon ordre est inverse de celui que j'ai suivi : presse d'abord, Wikimedia ensuite.
+**L'accès Wikimedia bloqué.** J'ai tenté de créer trois entités **Wikidata**, d'enrichir un article **Wikipedia** français et de créer une entrée **Wiktionary**. Toutes les contributions ont été supprimées par les modérateurs faute de **source secondaire fiable**. Wikimedia exige une **notabilité externe préalable**, l'auto-déclaration depuis son propre site ne suffit pas. Le bon ordre est inverse de celui que j'ai suivi : presse d'abord, Wikimedia ensuite.
 
-**Reddit, contourné plutôt qu'activé.** Mon compte trop récent et sans karma a été refusé par les modérations automatiques. J'ai redirigé l'effort vers d'autres sources : Quora, Google Doc public, site satellite thématique. Pour la prochaine édition, je prépare un compte Reddit actif depuis six mois.
+**Reddit, contourné plutôt qu'activé.** Mon compte trop récent et sans karma a été refusé par les modérations automatiques. J'ai redirigé l'effort vers d'autres sources : **Quora**, **Google Doc public**, site satellite thématique. Pour la prochaine édition, je prépare un compte Reddit actif depuis six mois.
 
-**Un incident DevOps sur le robots.txt.** Un commit a accidentellement re-bloqué Bravebot et CCBot pendant 24 heures. La leçon : centraliser les configurations critiques dans un fichier testable, avec une CI qui vérifie les directives clés.
+**Un incident DevOps sur le robots.txt.** Un commit a accidentellement re-bloqué **Bravebot** et **CCBot** pendant 24 heures. La leçon : centraliser les configurations critiques dans un fichier testable, avec une CI qui vérifie les directives clés.
 
-**Un problème IndexNow Bing.** Erreurs 403 systématiques pendant une journée à cause d'un problème de propagation de la clé. Solution : passer par les soumissions manuelles Bing Webmaster Tools.
+**Un problème IndexNow Bing.** **Erreurs HTTP 403** systématiques pendant une journée à cause d'un problème de propagation de la clé. Solution : passer par les soumissions manuelles **Bing Webmaster Tools**.
 
 Le livre blanc documente le détail de chaque incident, avec la résolution et la leçon technique.
 
-## Télécharger le livre blanc complet
+## Télécharger le livre blanc complet {#telecharger-le-livre-blanc-complet}
 
 Cet article est un résumé. **Le livre blanc complet documente la méthode sur 45 pages**, avec le code JSON LD reproductible, la check-list actionnable et les annexes techniques.
 

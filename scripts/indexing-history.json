@@ -403,8 +403,12 @@
     "https://indhack.com/livre-blanc-geo-2026": {
       "lastIndexed": "2026-04-24T20:17:41.334Z",
       "success": true
+    },
+    "https://indhack.com/blog/concours-geo-greenred-2026-methode": {
+      "lastIndexed": "2026-04-25T13:36:01.794Z",
+      "success": true
     }
   },
-  "dailyCount": 2,
-  "lastReset": "Fri Apr 24 2026"
+  "dailyCount": 1,
+  "lastReset": "Sat Apr 25 2026"
 }
