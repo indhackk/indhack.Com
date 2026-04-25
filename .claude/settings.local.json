@@ -247,7 +247,9 @@
       "Bash(xargs -r kill -9 echo \"Serveur arrêté\")",
       "Bash(sips -g all /Users/indiana/Desktop/indhack.Com/public/images/blog/etude-cas-geo-vultifrine.webp)",
       "Bash(sips -s creator 'Indiana Aflalo' -s copyrightNotice '© 2026 IndHack - CC BY 4.0' -s description 'Première place au Concours GEO GreenRed 2026, méthode complète en 7 piliers par Indiana Aflalo \\(IndHack\\)' -s author 'Indiana Aflalo' -s artist 'Indiana Aflalo, IndHack' /Users/indiana/Desktop/indhack.Com/public/images/blog/concours-geo-greenred-2026-premiere-place.webp)",
-      "Bash(sips -g all /Users/indiana/Desktop/indhack.Com/public/images/blog/concours-geo-greenred-2026-premiere-place.webp)"
+      "Bash(sips -g all /Users/indiana/Desktop/indhack.Com/public/images/blog/concours-geo-greenred-2026-premiere-place.webp)",
+      "Bash(node /Users/indiana/Desktop/indhack.Com/scripts/generate-blog-hero.mjs)",
+      "Bash(sips -g all /Users/indiana/Desktop/indhack.Com/public/images/blog/concours-geo-greenred-2026-premiere-place.jpg)"
     ]
   }
 }

@@ -1691,7 +1691,7 @@ req.end();`}</pre>
                             <ArrowRight className="w-5 h-5 ml-auto text-soft group-hover:text-sauge transition-colors" />
                         </a>
                         <a
-                            href="https://indhack.com/blog/j-ai-gagne-concours-geo-greenred-2026"
+                            href="https://indhack.com/blog/concours-geo-greenred-2026-methode"
                             className="flex items-center gap-3 bg-white border border-line rounded-lg p-5 hover:border-sauge hover:shadow-md transition-all group"
                         >
                             <BookOpen className="w-7 h-7 text-sauge flex-shrink-0" />
