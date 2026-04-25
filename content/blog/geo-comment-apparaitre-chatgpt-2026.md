@@ -4,7 +4,7 @@ description: "Le guide GEO complet pour apparaître dans les réponses de ChatGP
 date: "2026-02-17"
 dateModified: "2026-04-04"
 category: "IA & SEO"
-image: "/images/blog/geo-ia-seo.jpg"
+image: "/images/blog/geo-ia-seo.webp"
 imageAlt: "GEO 2026 : optimisation pour ChatGPT, Perplexity et les moteurs de recherche IA"
 author: "Indiana Aflalo"
 keywords: ["GEO", "Generative Engine Optimization", "ChatGPT SEO", "visibilité IA", "référencement ChatGPT", "Perplexity SEO", "Google AI Overviews", "optimisation IA", "crawlers IA", "GPTBot", "robots.txt IA", "llms.txt"]

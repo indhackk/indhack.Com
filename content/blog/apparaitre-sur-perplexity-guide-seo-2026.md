@@ -4,7 +4,7 @@ description: "Comment optimiser votre site web pour remonter dans les sources du
 date: "2026-01-22"
 dateModified: "2026-04-21"
 category: "IA & SEO"
-image: "/images/blog/perplexity-seo.jpg"
+image: "/images/blog/perplexity-seo.webp"
 imageAlt: "Comment apparaître sur Perplexity SEO et GEO en 2026"
 author: "Indiana Aflalo"
 keywords: ["apparaitre perplexity", "seo perplexity", "référencement perplexity", "Perplexity AI SEO", "GEO", "Generative Engine Optimization", "consultant geo", "perplexity sources"]

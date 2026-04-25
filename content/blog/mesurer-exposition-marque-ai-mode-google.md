@@ -4,7 +4,7 @@ description: "Méthode complète pour auditer la visibilité de votre marque dan
 date: "2026-04-21"
 dateModified: "2026-04-21"
 category: "IA & SEO"
-image: "/images/blog/geo-ia-seo.jpg"
+image: "/images/blog/geo-ia-seo.webp"
 imageAlt: "Mesurer l'exposition de marque dans Google AI Mode : 4 métriques et protocole de test 2026"
 author: "Indiana Aflalo"
 keywords: ["mesurer exposition marque ai mode", "visibilité ai mode google", "analyser visibilité marque ai mode", "audit ai mode google", "AI Mode Google SEO", "GEO ai mode", "vérifier marque ai mode", "citation marque ai mode", "google ai mode 2026"]

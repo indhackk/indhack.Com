@@ -4,7 +4,7 @@ description: "Comparatif des 12 meilleurs outils GEO (gratuits et payants) pour 
 date: "2026-03-10"
 dateModified: "2026-04-21"
 category: "IA & SEO"
-image: "/images/blog/outils-geo-gratuits-2026.jpg"
+image: "/images/blog/outils-geo-gratuits-2026.webp"
 imageAlt: "Comparatif des meilleurs outils GEO gratuits pour tester sa visibilité dans les moteurs IA en 2026"
 author: "Indiana Aflalo"
 keywords: ["outils geo gratuits", "testeur visibilité ia", "geo tools", "generative engine optimization outils", "visibilité chatgpt", "visibilité perplexity", "outils seo ia", "geo checker", "geo score", "apparaitre chatgpt", "otterly ai", "peec ai", "mangools ai search grader", "ahrefs brand radar", "se ranking ai visibility"]

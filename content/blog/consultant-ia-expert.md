@@ -4,7 +4,7 @@ description: "Le marché du consultant IA explose en France. Compétences, missi
 date: "2026-02-28"
 dateModified: "2026-04-16"
 category: "IA Entreprise"
-image: "/images/blog/consultant-ia-expert.jpg"
+image: "/images/blog/consultant-ia-expert.webp"
 imageAlt: "Consultant intelligence artificielle stratégique et technique"
 author: "Indiana Aflalo"
 keywords: ["consultant ia", "consultant intelligence artificielle", "consultant ia salaire", "devenir consultant ia", "formation consultant ia", "consulting ia", "expert ia pme", "consultant ia generative"]

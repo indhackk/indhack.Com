@@ -4,7 +4,7 @@ description: "Formation SEO en ligne, bootcamp, autodidacte ou alternance ? Comp
 date: "2026-01-30"
 dateModified: "2026-04-16"
 category: "Formation"
-image: "/images/blog/formation-seo.jpg"
+image: "/images/blog/formation-seo.webp"
 imageAlt: "Formations SEO 2026 : comparatif bootcamp, en ligne, autodidacte et alternance"
 author: "Indiana Aflalo"
 keywords: ["formation SEO", "apprendre SEO", "devenir consultant SEO", "formation référencement naturel", "cours SEO gratuit", "certification SEO Google", "parcours SEO", "formation SEO en ligne"]

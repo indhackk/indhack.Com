@@ -4,7 +4,7 @@ description: "Modèle de rapport audit SEO à télécharger gratuitement (PDF). 
 date: "2026-03-13"
 dateModified: "2026-04-22"
 category: "Audit"
-image: "/images/blog/rapport-audit-seo.jpg"
+image: "/images/blog/rapport-audit-seo.webp"
 imageAlt: "Rapport d'audit SEO professionnel : les 7 sections indispensables pour un diagnostic complet"
 author: "Indiana Aflalo"
 keywords: ["rapport audit SEO", "rapport d'audit seo", "rapport seo pro", "exemple rapport seo", "seo rapport", "rapport audit site web", "rapport audit site web pdf", "contenu audit seo", "exemple rapport audit", "modèle rapport seo", "exemple audit seo", "exemple de rapport seo", "analyse SEO", "diagnostic site web", "faire un rapport seo", "rapport d'analyse seo", "rapports seo"]

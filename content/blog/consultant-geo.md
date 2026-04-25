@@ -4,7 +4,7 @@ description: "Découvrez le métier de consultant GEO : missions, outils, étude
 date: "2026-01-08"
 dateModified: "2026-04-16"
 category: "IA & SEO"
-image: "/images/blog/consultant-geo-expert.jpg"
+image: "/images/blog/consultant-geo-expert.webp"
 imageAlt: "Consultant GEO expert en optimisation pour les moteurs génératifs"
 author: "Indiana Aflalo"
 keywords: ["métier consultant geo", "missions consultant geo", "devenir consultant geo", "études de cas GEO", "outils consultant geo", "résultats GEO"]

@@ -4,7 +4,7 @@ description: "Méthode étape par étape pour capter le trafic de vos concurrent
 date: "2026-02-11"
 dateModified: "2026-04-16"
 category: "SEO Local"
-image: "/images/blog/seo-local-nice.jpg"
+image: "/images/blog/seo-local-nice.webp"
 imageAlt: "Stratégie SEO local Google Maps : analyser et dépasser vos concurrents sur le pack local"
 author: "Indiana Aflalo"
 keywords: ["seo local google maps", "voler clients concurrents", "optimisation google business profile", "hack seo local", "google maps 2026"]

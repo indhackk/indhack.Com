@@ -4,7 +4,7 @@ description: "Les études 2026 révèlent que 46 % des sites français bloquent 
 date: "2026-04-22"
 dateModified: "2026-04-22"
 category: "IA & SEO"
-image: "/images/blog/outils-geo-gratuits-2026.jpg"
+image: "/images/blog/outils-geo-gratuits-2026.webp"
 imageAlt: "Statistiques visibilité IA 2026 : 46 % des sites français sont invisibles pour ChatGPT, Perplexity et Claude"
 author: "Indiana Aflalo"
 keywords: ["sites invisibles IA", "visibilité IA statistiques 2026", "GPTBot bloqué", "crawler IA france", "sites français GEO", "études visibilité IA", "robots.txt crawlers IA", "audit visibilité chatgpt"]

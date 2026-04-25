@@ -4,7 +4,7 @@ description: "Votre marque est-elle citée par ChatGPT quand un prospect cherche
 date: "2026-03-20"
 dateModified: "2026-04-21"
 category: "IA & SEO"
-image: "/images/blog/geo-ia-seo.jpg"
+image: "/images/blog/geo-ia-seo.webp"
 imageAlt: "Comment analyser la visibilité de votre marque sur ChatGPT et les IA génératives"
 author: "Indiana Aflalo"
 keywords: ["analyser visibilité marque chatgpt", "mesurer visibilité ia", "vérifier si marque citée chatgpt", "outil visibilité ia", "GEO analytics", "citation IA", "monitoring marque chatgpt", "visibilité perplexity", "présence marque ia", "visibilité marque AI Mode", "suivre mentions marque ia", "audit visibilité chatgpt"]

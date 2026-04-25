@@ -251,7 +251,11 @@
       "Bash(node /Users/indiana/Desktop/indhack.Com/scripts/generate-blog-hero.mjs)",
       "Bash(sips -g all /Users/indiana/Desktop/indhack.Com/public/images/blog/concours-geo-greenred-2026-premiere-place.jpg)",
       "Bash(xargs -r kill -9 echo \"Server stopped\" ls -lh /Users/indiana/Desktop/Livre-blanc-GEO-2026-indhack.pdf)",
-      "Bash(xargs -r kill -9 echo \"Done\")"
+      "Bash(xargs -r kill -9 echo \"Done\")",
+      "Bash(find content/blog -name \"*.md\" -exec wc -w {} +)",
+      "Bash(find /Users/indiana/Desktop/indhack.Com/content/blog -name '*.md' -exec sh -c 'lines=$\\(wc -l < \"$1\"\\); if [ \"$lines\" -lt 150 ]; then echo \"$lines $1\"; fi' _ '{}' ';')",
+      "Bash(find /Users/indiana/Desktop/indhack.Com/content/blog -name \"*.md\" -exec sh -c 'if ! head -15 \"$1\" | grep -q \"image:\"; then basename \"$1\"; fi' _ {} \\\\;)",
+      "Bash(find /Users/indiana/Desktop/indhack.Com/content/blog -name \"*.md\" -exec sh -c 'if head -15 \"$1\" | grep -q \"image:\" && ! head -15 \"$1\" | grep \"image:\" | grep -qv \"^image:.*\\\\.\" ; then basename \"$1\"; fi' _ {} \\\\;)"
     ]
   }
 }

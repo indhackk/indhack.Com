@@ -303,8 +303,9 @@ const nextConfig = {
             },
             // Catch-all sous-pages des villes : TOUTE sous-page /seo-[ville]/[service] → page ville
             // (aucune sous-page service n'existe dans l'app, donc on redirige vers la ville parent qui existe)
+            // IMPORTANT : :service+ exige au moins un segment derrière, pour ne PAS intercepter /seo-local seul
             {
-                source: '/seo-:city/:service*',
+                source: '/seo-:city/:service+',
                 destination: '/consultant-seo-:city',
                 permanent: true,
             },

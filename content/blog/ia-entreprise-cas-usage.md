@@ -4,7 +4,7 @@ description: "Comment intégrer l'IA dans votre entreprise ? Audit, automatisati
 date: "2026-02-10"
 dateModified: "2026-04-16"
 category: "IA Entreprise"
-image: "/images/blog/ia-entreprise-automatisation.jpg"
+image: "/images/blog/ia-entreprise-automatisation.webp"
 imageAlt: "Intégration de l'Intelligence artificielle en entreprise, cas d'usage"
 author: "Indiana Aflalo"
 keywords: ["ia entreprise", "intelligence artificielle entreprise", "automatisation ia entreprise", "agent ia entreprise", "utilisation ia entreprise", "consultant ia"]

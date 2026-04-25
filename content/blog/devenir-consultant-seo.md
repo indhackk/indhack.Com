@@ -4,7 +4,7 @@ description: "Devenir consultant SEO : parcours, compétences, formations, salai
 date: "2026-01-28"
 dateModified: "2026-04-16"
 category: "Métier"
-image: "/images/blog/devenir-consultant-seo.jpg"
+image: "/images/blog/devenir-consultant-seo.webp"
 imageAlt: "Guide complet pour devenir consultant SEO : parcours, compétences et conseils de carrière 2026"
 author: "Indiana Aflalo"
 keywords: ["devenir consultant SEO", "comment devenir consultant SEO", "carrière SEO", "métier consultant SEO", "reconversion SEO", "freelance SEO"]

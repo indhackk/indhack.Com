@@ -4,7 +4,7 @@ description: "Le fichier llms.txt est indispensable pour le GEO. Apprenez à le 
 date: "2025-12-15"
 dateModified: "2026-04-15"
 category: "IA & SEO"
-image: "/images/blog/llms-txt-guide.jpg"
+image: "/images/blog/llms-txt-guide.webp"
 imageAlt: "Fichier llms.txt configuration guide complet 2026"
 author: "Indiana Aflalo"
 keywords: ["llms.txt", "llms.txt exemple", "fichier llms.txt", "GEO", "Generative Engine Optimization", "optimisation IA", "SEO IA"]

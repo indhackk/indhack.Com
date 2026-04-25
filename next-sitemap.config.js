@@ -37,13 +37,13 @@ const blogDates = getBlogPostDates();
 
 // Dates fixes pour les pages principales (dernière mise à jour significative)
 const staticPageDates = {
-    '/': '2026-03-11',
-    '/consultant-seo': '2026-03-11',
-    '/seo-local': '2026-03-11',
-    '/audit-seo': '2026-03-11',
-    '/referencement-naturel': '2026-03-11',
-    '/creation-site-web': '2026-01-20',
-    '/refonte-site-web': '2026-01-20',
+    '/': '2026-04-25',
+    '/consultant-seo': '2026-04-25',
+    '/seo-local': '2026-04-25',
+    '/audit-seo': '2026-04-25',
+    '/referencement-naturel': '2026-04-25',
+    '/creation-site-web': '2026-04-25',
+    '/refonte-site-web': '2026-04-25',
     '/outils': '2026-03-11',
     '/outils/testeur-visibilite-ia': '2026-04-04',
     '/outils/audit-seo-gratuit': '2026-03-11',
@@ -60,8 +60,8 @@ const staticPageDates = {
     '/etude/barometre-visibilite-ia-2026': '2026-03-11',
     '/checklist-geo': '2026-03-11',
     '/partenaires': '2026-02-18',
-    '/consultant-geo': '2026-03-11',
-    '/consultant-ia': '2026-02-15',
+    '/consultant-geo': '2026-04-25',
+    '/consultant-ia': '2026-04-25',
     // '/audit-ia' retiré — page inexistante (404)
     '/community-manager': '2026-02-15',
     '/creation-boutique-en-ligne': '2026-01-20',
