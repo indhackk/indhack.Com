@@ -120,10 +120,6 @@ Le SEO classique vise à positionner des pages dans les dix liens bleus de Googl
 
 Comptez un à deux mois pour les premiers résultats visibles, et trois à six mois pour des résultats stables. Les cycles de crawl des bots IA sont plus lents que Googlebot, et certaines IA mettent à jour leur Knowledge Graph de manière périodique. Pour le concours GEO GreenRed 2026, j'ai mis trois semaines à atteindre la première place avec un effort équivalent à plus de 120 heures sur 33 jours.
 
-### Quel budget pour démarrer une stratégie GEO ?
-
-Pour un projet GEO sérieux, comptez entre 8 000 et 25 000 euros de budget initial sur trois mois, incluant l'audit, la refonte des schemas, la production de contenu BLUF sur dix à quinze pages prioritaires, la création des entités externes, la production d'une vidéo YouTube longue et la mise en place de l'infrastructure technique. En maintenance, comptez 1 000 à 3 000 euros par mois pour la cohérence des chiffres et le monitoring des citations IA.
-
 ## Articles complémentaires
 
 - [Étude de cas GEO vultifrine : analyse détaillée du concours](/blog/etude-de-cas-geo-vultifrine)

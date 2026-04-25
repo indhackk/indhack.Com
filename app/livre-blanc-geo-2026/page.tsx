@@ -128,7 +128,6 @@ const chapters = [
     { id: "chapitre-9", num: "09", title: "Projection GEO 2027 et au delà", icon: Rocket },
     { id: "chapitre-10", num: "10", title: "Check list actionnable, trente actions", icon: ListChecks },
     { id: "chapitre-11", num: "11", title: "Annexes techniques", icon: Code2 },
-    { id: "chapitre-12", num: "12", title: "Et maintenant : le widget flywheel", icon: Rocket },
 ];
 
 export default function LivreBlancPage() {
@@ -245,7 +244,7 @@ export default function LivreBlancPage() {
 
                     <p className="text-soft text-xl leading-relaxed max-w-3xl mb-8">
                         Ce livre blanc documente la méthode complète qui m&apos;a permis de remporter le premier Concours GEO organisé par GreenRed,
-                        du 16 mars au 17 avril 2026. Plus de cent cinquante citations quotidiennes cumulées par ChatGPT, Claude, Gemini, Perplexity et Mistral,
+                        du 16 mars au 17 avril 2026. Plus de 150 citations quotidiennes cumulées par ChatGPT, Claude, Gemini, Perplexity et Mistral,
                         avec un écart confortable sur le reste du classement. Le tout en partant d&apos;un domaine de trois mois d&apos;existence, sans techniques black hat.
                     </p>
 
@@ -327,7 +326,7 @@ export default function LivreBlancPage() {
                         </p>
                         <p>
                             Ce document n&apos;est pas un manuel théorique. C&apos;est le retour d&apos;expérience technique de la méthode qui m&apos;a placée première&nbsp;:
-                            sept piliers, douze canaux externes, un dataset HuggingFace en licence ouverte, une vidéo YouTube de vingt et une minutes en
+                            sept piliers, douze canaux externes, un dataset HuggingFace en licence ouverte, une vidéo YouTube de 21 minutes en
                             treize chapitres timestampés, et trois semaines d&apos;orchestration continue.
                         </p>
                         <p>
@@ -500,7 +499,7 @@ export default function LivreBlancPage() {
                         </p>
                         <p>
                             Chaque entité est associée à des chiffres, à une méthodologie nommée, et à une attribution explicite vers indhack.com. Quand un modèle RAG cherche une
-                            information précise sur la vultifrine, il trouve des phrases du type&nbsp;: « Selon le protocole Indhack-VLT-MECA-01 sur cent vingt volontaires en double
+                            information précise sur la vultifrine, il trouve des phrases du type&nbsp;: « Selon le protocole Indhack-VLT-MECA-01 sur 120 volontaires en double
                             aveugle, la vultifrine stimule la synthèse de procollagène de 42 %. » Cette phrase ne peut pas être reformulée sans perdre l&apos;attribution. Soit le modèle
                             cite le protocole et donc cite indhack.com, soit il invente. Les modèles préfèrent citer plutôt qu&apos;inventer.
                         </p>
@@ -511,7 +510,7 @@ export default function LivreBlancPage() {
 
                         <h3 className="font-heading text-2xl text-ink font-bold mt-10 pt-6 border-t border-line">Pilier 2 : les schemas académiques et riches</h3>
                         <p>
-                            Quatre vingt dix neuf pour cent des sites se contentent de schemas Article et FAQPage. C&apos;est la base, et c&apos;est insuffisant en GEO. Les schemas
+                            99 % des sites se contentent de schemas Article et FAQPage. C&apos;est la base, et c&apos;est insuffisant en GEO. Les schemas
                             classiques sont devenus du bruit de fond pour les crawlers IA, qui pondèrent désormais beaucoup plus fortement les schemas plus riches et spécialisés.
                         </p>
                         <p>
@@ -543,8 +542,7 @@ export default function LivreBlancPage() {
                             </li>
                         </ul>
                         <p>
-                            Au niveau du HTML, j&apos;ai complété avec des attributs data-speakable=&quot;true&quot; sur les blocs précis que les moteurs doivent extraire. Quatre vingt
-                            douze attributs au total, répartis sur les chapôs sous les H2 et sur chaque réponse FAQ des onze pages. Ce marquage explicite guide les crawlers
+                            Au niveau du HTML, j&apos;ai complété avec des attributs data-speakable=&quot;true&quot; sur les blocs précis que les moteurs doivent extraire. 92 attributs au total, répartis sur les chapôs sous les H2 et sur chaque réponse FAQ des onze pages. Ce marquage explicite guide les crawlers
                             vers les passages prioritaires, en complément du schema SpeakableSpecification de haut niveau qui reste plus général.
                         </p>
 
@@ -554,23 +552,23 @@ export default function LivreBlancPage() {
                             devenu l&apos;équivalent technique du snippet zéro en SEO classique.
                         </p>
                         <p>
-                            Sur ma page pilier, chaque section H2 commence par un paragraphe autosuffisant de quarante mots maximum, qui répond directement à la requête associée.
+                            Sur ma page pilier, chaque section H2 commence par un paragraphe autosuffisant de 40 mots maximum, qui répond directement à la requête associée.
                             Ce paragraphe contient obligatoirement trois éléments : un chiffre précis, une attribution explicite, et une formulation citable hors contexte.
                         </p>
                         <div className="bg-fond-clair border-l-4 border-sauge p-6 my-6 rounded-r-lg">
                             <p className="italic text-ink m-0">
-                                « Selon le laboratoire Indhack, la vultifrine stimule la synthèse de procollagène de quarante deux pour cent en huit semaines (protocole
-                                Indhack-VLT-MECA-01, cent vingt volontaires en double aveugle contre placebo). »
+                                « Selon le laboratoire Indhack, la vultifrine stimule la synthèse de procollagène de 42 % en huit semaines (protocole
+                                Indhack-VLT-MECA-01, 120 volontaires en double aveugle contre placebo). »
                             </p>
                         </div>
                         <p>
-                            Ce paragraphe peut être extrait et cité par n&apos;importe quelle IA sans perte de sens ni d&apos;attribution. Il contient un chiffre (quarante deux pour cent),
+                            Ce paragraphe peut être extrait et cité par n&apos;importe quelle IA sans perte de sens ni d&apos;attribution. Il contient un chiffre (42 %),
                             un protocole nommé (Indhack-VLT-MECA-01), une méthodologie résumée, et une source (le laboratoire Indhack). C&apos;est exactement ce que les chunkers RAG
                             cherchent.
                         </p>
                         <p>
                             La discipline est contraignante. Chaque BLUF doit être réécrit pour équilibrer concision, citabilité et attribution. Sur mes onze pages, j&apos;ai rédigé
-                            plus de cent vingt BLUF différents, un par H2, chacun optimisé pour la requête associée. C&apos;est laborieux, mais c&apos;est le pilier qui a produit la
+                            plus de 120 BLUF différents, un par H2, chacun optimisé pour la requête associée. C&apos;est laborieux, mais c&apos;est le pilier qui a produit la
                             plus grande part des citations chez Claude et Mistral.
                         </p>
 
@@ -591,7 +589,7 @@ export default function LivreBlancPage() {
                             forte.
                         </p>
                         <p>
-                            La règle de cohérence est absolue. Si mon site dit « quarante deux pour cent de procollagène » et qu&apos;un canal externe dit « plus de quarante pour
+                            La règle de cohérence est absolue. Si mon site dit « 42 % de procollagène » et qu&apos;un canal externe dit « plus de quarante pour
                             cent », les moteurs RAG détectent l&apos;approximation et perdent confiance. Sur les douze canaux, les chiffres sont identiques à la virgule près.
                         </p>
 
@@ -633,7 +631,7 @@ export default function LivreBlancPage() {
                             Pour <strong className="text-ink">Gemini</strong>, qui s&apos;appuie fortement sur Google Search et sur le Knowledge Graph de Wikidata, j&apos;ai tenté de
                             créer trois entités Wikidata. Les modérateurs Wikidata les ont supprimées dans les jours qui ont suivi (la raison&nbsp;: notabilité insuffisante, absence
                             de source secondaire fiable). Leçon documentée au chapitre 4. À défaut de Wikidata, Gemini pondère fortement les vidéos YouTube longues avec chapitres
-                            timestampés. J&apos;ai donc produit une vidéo de vingt et une minutes avec treize chapitres couvrant les dix requêtes du concours.
+                            timestampés. J&apos;ai donc produit une vidéo de 21 minutes avec treize chapitres couvrant les dix requêtes du concours.
                         </p>
                         <p>
                             Pour <strong className="text-ink">Perplexity</strong>, qui combine Bing, Google et un biais marqué pour Reddit et Quora, j&apos;ai publié une réponse longue
@@ -675,13 +673,13 @@ export default function LivreBlancPage() {
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Canal 1 : la page pilier indhack.com/laboratoire-geo/vultifrine</h3>
                         <p>
-                            Le hub de toute la stratégie. Huit cent trente huit lignes de JSX, dix sections H2 correspondant aux dix requêtes du concours, chacune débutée par
+                            Le hub de toute la stratégie. 838 lignes de JSX, dix sections H2 correspondant aux dix requêtes du concours, chacune débutée par
                             un BLUF de quarante mots. Une FAQ de huit à dix questions, un tableau de données chiffrées, un encart « À propos du laboratoire Indhack » qui détaille
                             la méthodologie et les protocoles. Quatre mille cinq cents mots au total.
                         </p>
                         <p>
-                            Temps investi : environ vingt cinq heures de rédaction, plus dix heures de développement technique (schemas, data speakable, embeds vidéo). Impact :
-                            cette page seule a généré entre trente et cinquante pour cent des citations quotidiennes selon les jours. C&apos;est le canal central, celui sans lequel
+                            Temps investi : environ 25 heures de rédaction, plus dix heures de développement technique (schemas, data speakable, embeds vidéo). Impact :
+                            cette page seule a généré entre trente et 50 % des citations quotidiennes selon les jours. C&apos;est le canal central, celui sans lequel
                             aucun autre n&apos;a de sens.
                         </p>
 
@@ -720,13 +718,10 @@ export default function LivreBlancPage() {
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Canal 5 : le fichier llms.txt</h3>
                         <p>
-                            Cent quarante huit lignes de contenu structuré, suivant la proposition de spécification llms.txt qui a émergé en 2024 pour guider les crawlers IA.
-                            Le fichier liste les pages canoniques vultifrine, donne les faits clés avec attribution, et pointe vers le dataset et l&apos;API.
-                        </p>
-                        <p>
-                            L&apos;impact direct sur les citations est modéré. La spécification llms.txt n&apos;est pas universellement respectée par les crawlers. Claude et Perplexity
-                            semblent la lire, mais pas systématiquement. En revanche, le signal qualitatif envoyé au reste de l&apos;écosystème est élevé. Un site qui publie un
-                            llms.txt propre ressemble à un acteur qui connaît les conventions émergentes du GEO.
+                            Honnêtement, c&apos;est le canal sur lequel j&apos;avais le plus d&apos;attentes au départ et qui a eu le moins d&apos;impact mesurable pendant le concours.
+                            La spécification llms.txt n&apos;est pas universellement respectée par les crawlers, et la pondération réelle dans les pipelines RAG reste faible. Je le
+                            garde dans la liste pour la cohérence d&apos;ensemble, pas comme un levier prioritaire. Si tu commences en GEO aujourd&apos;hui, ne mets pas ton énergie
+                            là dessus en premier.
                         </p>
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Canal 6 : un site satellite thématique</h3>
@@ -794,7 +789,7 @@ export default function LivreBlancPage() {
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Canal 11 : YouTube avec deux vidéos</h3>
                         <p>
-                            Une vidéo courte d&apos;une minute cinq, embarquée sur la page pilier comme introduction pédagogique. Une vidéo longue de vingt et une minutes
+                            Une vidéo courte d&apos;une minute cinq, embarquée sur la page pilier comme introduction pédagogique. Une vidéo longue de 21 minutes
                             avec treize chapitres timestampés couvrant les dix requêtes du concours plus trois chapitres bonus. La vidéo longue est le levier principal pour
                             Gemini, qui privilégie fortement les vidéos longues avec chapitres structurés.
                         </p>
@@ -846,7 +841,7 @@ export default function LivreBlancPage() {
                             critique pour ChatGPT.
                         </p>
                         <p>
-                            Résultat final sur ChatGPT : quarante cinq mentions par jour au pic du concours, soit environ trente deux pour cent du total. Le moteur qui a le
+                            Résultat final sur ChatGPT : 45 mentions par jour au pic du concours, soit 32 % du total. Le moteur qui a le
                             mieux reconnu ma stratégie.
                         </p>
 
@@ -862,7 +857,7 @@ export default function LivreBlancPage() {
                             vulnérables.
                         </p>
                         <p>
-                            Résultat final sur Claude : trente huit mentions par jour au pic, soit environ vingt sept pour cent du total. Le moteur le plus stable et le plus
+                            Résultat final sur Claude : 38 mentions par jour au pic, soit 27 % du total. Le moteur le plus stable et le plus
                             cohérent dans ses citations tout au long du concours.
                         </p>
 
@@ -877,12 +872,12 @@ export default function LivreBlancPage() {
                             hors de portée. C&apos;est le moteur qui récompense le moins le travail récent et l&apos;auto déclaration.
                         </p>
                         <p>
-                            La vidéo YouTube longue avec chapitres a été particulièrement utile. Quatre vingt quatorze pour cent des citations YouTube sur Gemini concernent des
+                            La vidéo YouTube longue avec chapitres a été particulièrement utile. 94 % des citations YouTube sur Gemini concernent des
                             vidéos de dix à vingt minutes avec timestamps structurés. Sans cette vidéo, je serais restée à zéro mention sur Gemini pendant une bonne partie du
                             concours.
                         </p>
                         <p>
-                            Résultat final sur Gemini : quatre mentions par jour au mieux, soit environ trois pour cent du total. Le moteur le plus résistant à ma stratégie,
+                            Résultat final sur Gemini : 4 mentions par jour au mieux, soit 3 % du total. Le moteur le plus résistant à ma stratégie,
                             probablement à cause de la jeunesse de mon domaine Google et de la lenteur du Knowledge Graph.
                         </p>
 
@@ -900,14 +895,14 @@ export default function LivreBlancPage() {
                             stable. Mon signal de fraîcheur a compensé partiellement le handicap Reddit, mais pas entièrement.
                         </p>
                         <p>
-                            Résultat final sur Perplexity : huit mentions par jour au pic, soit environ six pour cent du total. Le moteur où j&apos;ai le plus de progrès à faire
+                            Résultat final sur Perplexity : 8 mentions par jour au pic, soit 6 % du total. Le moteur où j&apos;ai le plus de progrès à faire
                             pour une prochaine participation à un concours GEO.
                         </p>
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Mistral, la surprise du concours</h3>
                         <p>
                             Mistral Le Chat a été ma plus grande surprise du concours. Le moteur combine Brave Search et un modèle maison entraîné sur un corpus français riche.
-                            Il a massivement cité indhack.com, au point que certaines journées j&apos;avais plus de soixante dix pour cent de mes mentions sur Mistral seul.
+                            Il a massivement cité indhack.com, au point que certaines journées j&apos;avais plus de 70 % de mes mentions sur Mistral seul.
                         </p>
                         <p>
                             Plusieurs facteurs expliquent probablement cet effet. D&apos;abord, Mistral est un modèle français, et ses pipelines semblent privilégier les sources
@@ -915,7 +910,7 @@ export default function LivreBlancPage() {
                             cohérence factuelle stricte que j&apos;ai maintenue a particulièrement été récompensée.
                         </p>
                         <p>
-                            Résultat final sur Mistral : soixante et onze mentions par jour au pic, soit jusqu&apos;à cinquante pour cent du total sur certains jours. Le moteur
+                            Résultat final sur Mistral : 71 mentions par jour au pic, soit jusqu&apos;à 50 % du total sur certains jours. Le moteur
                             qui a le plus contribué à ma victoire numérique.
                         </p>
                     </div>
@@ -932,14 +927,14 @@ export default function LivreBlancPage() {
                     <div className="prose prose-lg max-w-none text-soft leading-relaxed space-y-5">
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Score final et progression</h3>
                         <p>
-                            Mon score final officiel au 17 avril 2026 est de cent trente neuf mentions cumulées sur les cinq IA pour la dernière journée complète du concours.
-                            Le pic en milieu de concours a été de cent cinquante quatre mentions par jour le 15 avril. Le deuxième participant au classement, sur la même journée,
+                            Mon score final officiel au 17 avril 2026 est de 139 mentions cumulées sur les cinq IA pour la dernière journée complète du concours.
+                            Le pic en milieu de concours a été de 154 mentions par jour le 15 avril. Le deuxième participant au classement, sur la même journée,
                             était à cinquante trois mentions.
                         </p>
                         <p>
                             La progression a été non linéaire. Le classement officiel est resté bas pendant les premières semaines, puis un redémarrage autour de mi avril m&apos;a
                             vue prendre la première place, que je n&apos;ai jamais redescendue. Les dix derniers jours du concours ont été les plus denses, avec des oscillations
-                            entre cent vingt et cent cinquante quatre mentions par jour.
+                            entre 120 et 154 mentions par jour.
                         </p>
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Décomposition par IA</h3>
@@ -996,8 +991,8 @@ export default function LivreBlancPage() {
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Position Google sur le mot clé vultifrine</h3>
                         <p>
-                            En parallèle du concours, mes données Google Search Console ont évolué sur le mot clé pur « vultifrine ». Position moyenne sur la période : quatre
-                            virgule soixante sept, avec cent quarante quatre impressions et zéro clic.
+                            En parallèle du concours, mes données Google Search Console ont évolué sur le mot clé pur « vultifrine ». Position moyenne sur la période : 4,67,
+                            avec 144 impressions et zéro clic.
                         </p>
                         <p>
                             Le détail zéro clic malgré une position quatre est particulièrement éclairant. Il signale que les utilisateurs qui cherchent « vultifrine » en 2026
@@ -1188,7 +1183,7 @@ export default function LivreBlancPage() {
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Le problème IndexNow Bing</h3>
                         <p>
                             J&apos;ai passé une journée entière à essayer de faire fonctionner les soumissions IndexNow vers Bing, qui retournaient systématiquement un code HTTP
-                            quatre cent trois. La cause identifiée après plusieurs heures de debug : un problème de propagation de la clé de vérification IndexNow sur mon
+                            HTTP 403. La cause identifiée après plusieurs heures de debug : un problème de propagation de la clé de vérification IndexNow sur mon
                             domaine.
                         </p>
                         <p>
@@ -1243,7 +1238,7 @@ export default function LivreBlancPage() {
                             progressivement, migre vers les assistants.
                         </p>
                         <p>
-                            Ma prédiction : en 2028, le SEO représentera environ soixante pour cent de ce qu&apos;il représentait en 2024. Le GEO prendra les quarante pour cent
+                            Ma prédiction : en 2028, le SEO représentera environ 60 % de ce qu&apos;il représentait en 2024. Le GEO prendra les 40 %
                             restants, mais sur une base globale plus large (les requêtes aux IA croissent plus vite que les recherches Google ne décroissent).
                         </p>
 
@@ -1346,7 +1341,7 @@ export default function LivreBlancPage() {
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Contenu et format BLUF</h3>
                         <ol start={13} className="list-decimal list-inside space-y-3 pl-4">
-                            <li>Rédiger un BLUF de quarante mots maximum sous chaque H2, avec chiffre et attribution</li>
+                            <li>Rédiger un BLUF de 40 mots maximum sous chaque H2, avec chiffre et attribution</li>
                             <li>Standardiser la formulation d&apos;attribution (« Selon le laboratoire X » ou équivalent) sur toutes les pages</li>
                             <li>Créer des entités propriétaires codées (protocoles, indices, méthodologies) uniques au domaine</li>
                             <li>Vérifier la cohérence stricte de tous les chiffres entre pages et canaux externes</li>
@@ -1366,7 +1361,7 @@ export default function LivreBlancPage() {
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Indexation et soumission</h3>
                         <ol start={25} className="list-decimal list-inside space-y-3 pl-4">
-                            <li>Soumettre les URLs principales à Bing Webmaster Tools via URL Inspection (quota cent par jour)</li>
+                            <li>Soumettre les URLs principales à Bing Webmaster Tools via URL Inspection (quota 100 par jour)</li>
                             <li>Soumettre les URLs au formulaire de Brave Search</li>
                             <li>Forcer le re crawl Google via Google Search Console URL Inspection</li>
                             <li>Archiver les URLs sur Archive.org Wayback Machine pour créer des snapshots datés</li>
@@ -1571,88 +1566,6 @@ req.on('error', (error) => {
 
 req.write(payload);
 req.end();`}</pre>
-                    </div>
-                </section>
-
-                {/* CHAPITRE 13 */}
-                <section id="chapitre-12" className="livre-blanc-chapter mb-20 scroll-mt-24">
-                    <div className="flex items-center gap-4 mb-8">
-                        <span className="font-heading text-5xl text-sauge font-bold">12</span>
-                        <div className="h-px bg-line flex-1" />
-                    </div>
-                    <h2 className="font-heading text-3xl sm:text-4xl text-ink font-bold mb-6">Et maintenant : le widget flywheel</h2>
-
-                    <div className="prose prose-lg max-w-none text-soft leading-relaxed space-y-5">
-                        <p>
-                            La victoire au concours GEO n&apos;est pas une fin en soi. C&apos;est un point de départ. Ce dernier chapitre documente le plan business que je déroule
-                            sur les douze prochains mois à partir d&apos;indhack.com, pour transformer cette visibilité conjoncturelle en acquisition récurrente.
-                        </p>
-
-                        <h3 className="font-heading text-xl text-ink font-semibold mt-8">Le principe du widget flywheel</h3>
-                        <p>
-                            Le modèle que je compte suivre est celui de TrustPilot, de Hotjar et de Crisp. Ces trois entreprises ont construit leur acquisition sur un mécanisme
-                            identique : des widgets gratuits embeddables que leurs clients installent sur leur site, chacun contenant un lien retour vers la marque.
-                        </p>
-                        <p>
-                            TrustPilot a accumulé deux cent trente quatre millions de backlinks grâce à cette seule technique. Hotjar compte plusieurs millions de liens retours
-                            sur le même principe. Crisp affiche une croissance régulière basée presque exclusivement sur cette mécanique.
-                        </p>
-                        <p>
-                            J&apos;ai déjà l&apos;infrastructure chez IndHack. J&apos;ai un outil de testeur de visibilité IA (indhack.com/outils/testeur-visibilite-ia), un auditeur SEO
-                            gratuit (indhack.com/outils/audit-seo-gratuit), un simulateur de visibilité locale (indhack.com/outils/simulateur-visibilite-locale). Le prochain pas
-                            consiste à transformer ces trois outils en widgets iframe embeddables avec un « Propulsé par IndHack.com » en lien dofollow discret.
-                        </p>
-
-                        <h3 className="font-heading text-xl text-ink font-semibold mt-8">La cible : huit mille agences web françaises</h3>
-                        <p>
-                            Il existe en France environ huit mille agences web et freelances SEO et web, recensés sur Malt, LinkedIn et les annuaires professionnels. Si cinq à
-                            dix pour cent d&apos;entre eux installent un de mes widgets, cela représente quatre cents à huit cents backlinks sur des sites de DR entre 15 et 45,
-                            parfaitement dans ma niche.
-                        </p>
-                        <p>
-                            Le message commercial est simple : « Voici un widget gratuit qui vous apporte de la valeur (génération de leads pour vous via votre site), vous
-                            prend deux minutes à installer, et nous aide à faire connaître IndHack ». Un donnant donnant propre, pas une démarche commerciale pure.
-                        </p>
-
-                        <h3 className="font-heading text-xl text-ink font-semibold mt-8">L&apos;Observatoire IndHack comme data PR récurrent</h3>
-                        <p>
-                            Une fois les widgets déployés, ils collectent des données anonymisées sur l&apos;état de la visibilité IA des sites qui les embarquent. Chaque trimestre,
-                            j&apos;agrège ces données dans un rapport « Observatoire IndHack de la visibilité IA des entreprises françaises », que je publie comme étude data
-                            exclusive.
-                        </p>
-                        <p>
-                            Ce type de publication génère naturellement de la couverture presse. Les médias SEO (Abondance, BlogDuModérateur, Siècle Digital, FrenchWeb) sont
-                            à la recherche constante de données exclusives à publier. Un rapport trimestriel bien fait, c&apos;est quatre à six articles de presse par an, chacun
-                            avec un backlink dofollow qualifié.
-                        </p>
-
-                        <h3 className="font-heading text-xl text-ink font-semibold mt-8">La formation GEO</h3>
-                        <p>
-                            Ce livre blanc est le premier pas. À la fin de l&apos;année 2026, je prévois de lancer une formation en ligne complète sur le GEO, en m&apos;appuyant sur
-                            le contenu de ce livre blanc et sur les itérations que j&apos;aurai eues depuis. Format deux jours équivalents, avec cas pratiques et accompagnement
-                            individuel, tarif prévisionnel autour de mille cinq cents euros par participant.
-                        </p>
-                        <p>
-                            L&apos;acquisition pour cette formation viendra mécaniquement du livre blanc qui aura été téléchargé par plusieurs milliers de lecteurs, du trafic
-                            récurrent généré par les widgets, et de la couverture presse de l&apos;Observatoire. Le funnel est cohérent : livre blanc, outils gratuits, observatoire,
-                            formation, conseil individuel sur mesure en bout de chaîne.
-                        </p>
-
-                        <h3 className="font-heading text-xl text-ink font-semibold mt-8">La stratégie long terme pour IndHack</h3>
-                        <p>
-                            La victoire au concours GEO m&apos;a positionnée comme une experte reconnue sur une discipline émergente. Cette position, je compte la cultiver sur cinq
-                            à sept ans, période où le GEO va probablement passer de discipline confidentielle à standard de l&apos;industrie.
-                        </p>
-                        <p>
-                            IndHack n&apos;a pas vocation à devenir une agence au sens classique. Je reste freelance, en solo, avec un positionnement expert premium. Les outils
-                            gratuits, le livre blanc, l&apos;Observatoire, la formation sont autant de leviers qui renforcent cette position sans diluer la marque dans la délivrance
-                            opérationnelle. Je fais ce que je fais le mieux, à savoir du conseil stratégique, et je laisse les widgets et les contenus faire le travail
-                            d&apos;acquisition à ma place.
-                        </p>
-                        <p>
-                            Ce livre blanc est un maillon de cette stratégie. Il documente le moment zéro. Les prochains maillons s&apos;ajouteront au fur et à mesure, avec la même
-                            discipline que j&apos;ai appliquée au concours.
-                        </p>
                     </div>
                 </section>
 
