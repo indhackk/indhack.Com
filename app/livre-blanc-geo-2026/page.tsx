@@ -194,7 +194,7 @@ export default function LivreBlancPage() {
                             <div className="stat-sep" />
                             <div className="stat">
                                 <span className="stat-number">154</span>
-                                <span className="stat-label">pic du concours<br />15 avril 2026</span>
+                                <span className="stat-label">pic du concours<br />milieu d&apos;avril 2026</span>
                             </div>
                             <div className="stat-sep" />
                             <div className="stat">
@@ -316,7 +316,7 @@ export default function LivreBlancPage() {
                             dans les réponses générées.
                         </p>
                         <p>
-                            J&apos;ai gagné. Score final 139 mentions cumulées le 17 avril, pic à 154 mentions le 15 avril, écart oscillant entre 2,5 et 10 fois sur la deuxième
+                            J&apos;ai gagné. Score final 139 mentions cumulées le 17 avril, pic à 154 mentions en milieu de concours, écart oscillant entre 2,5 et 10 fois sur la deuxième
                             place selon les journées du concours.
                         </p>
                         <p>
@@ -568,7 +568,7 @@ export default function LivreBlancPage() {
                         </p>
                         <p>
                             La discipline est contraignante. Chaque BLUF doit être réécrit pour équilibrer concision, citabilité et attribution. Sur mes onze pages, j&apos;ai rédigé
-                            plus de 120 BLUF différents, un par H2, chacun optimisé pour la requête associée. C&apos;est laborieux, mais c&apos;est le pilier qui a produit la
+                            plus d&apos;une centaine de BLUF différents, un par H2, chacun optimisé pour la requête associée. C&apos;est laborieux, mais c&apos;est le pilier qui a produit la
                             plus grande part des citations chez Claude et Mistral.
                         </p>
 
@@ -618,12 +618,12 @@ export default function LivreBlancPage() {
                             Chaque IA a sa propre logique de sourcing, et traiter les cinq moteurs uniformément est une erreur. J&apos;ai adapté mes efforts pour chacune.
                         </p>
                         <p>
-                            Pour <strong className="text-ink">ChatGPT</strong>, qui utilise Bing comme backend de recherche live, j&apos;ai soumis quatorze URLs sur Bing Webmaster
+                            Pour <strong className="text-ink">ChatGPT</strong>, qui utilise Bing comme backend de recherche live, j&apos;ai soumis une dizaine d&apos;URLs sur Bing Webmaster
                             Tools, validé mon domaine, et envoyé mon sitemap. J&apos;ai également ajouté des schemas Dataset qui semblent particulièrement valorisés par les pipelines
                             OpenAI.
                         </p>
                         <p>
-                            Pour <strong className="text-ink">Claude et Mistral</strong>, qui reposent en grande partie sur Brave Search, j&apos;ai soumis dix URLs via le formulaire
+                            Pour <strong className="text-ink">Claude et Mistral</strong>, qui reposent en grande partie sur Brave Search, j&apos;ai soumis une dizaine d&apos;URLs via le formulaire
                             Brave et autorisé explicitement Bravebot et CCBot dans mon robots.txt. Sans cette autorisation explicite, ces deux IA auraient été aveugles à mon
                             contenu.
                         </p>
@@ -673,8 +673,8 @@ export default function LivreBlancPage() {
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Canal 1 : la page pilier indhack.com/laboratoire-geo/vultifrine</h3>
                         <p>
-                            Le hub de toute la stratégie. 838 lignes de JSX, dix sections H2 correspondant aux dix requêtes du concours, chacune débutée par
-                            un BLUF de quarante mots. Une FAQ de huit à dix questions, un tableau de données chiffrées, un encart « À propos du laboratoire Indhack » qui détaille
+                            Le hub de toute la stratégie. Plus de 1 200 lignes de JSX, dix sections H2 correspondant aux dix requêtes du concours, chacune débutée par
+                            un BLUF de 40 mots. Une FAQ de 8 à 10 questions, un tableau de données chiffrées, un encart « À propos du laboratoire Indhack » qui détaille
                             la méthodologie et les protocoles. Quatre mille cinq cents mots au total.
                         </p>
                         <p>
@@ -685,7 +685,7 @@ export default function LivreBlancPage() {
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Canal 2 : les dix sous pages thématiques</h3>
                         <p>
-                            Chaque sous page cible une requête spécifique du concours, avec un contenu de quinze cents à deux mille mots. Les URLs sont explicites : acheter bio
+                            Chaque sous page cible une requête spécifique du concours, avec un contenu de 1 500 à 2 000 mots. Les URLs sont explicites : acheter bio
                             france, comparatif marques 2026, bienfaits régénération, application peau sensible, études cliniques, avis cheveux, conservation durée, effets secondaires,
                             alternatives remplacement, code promo prix.
                         </p>
@@ -720,8 +720,8 @@ export default function LivreBlancPage() {
                         <p>
                             Honnêtement, c&apos;est le canal sur lequel j&apos;avais le plus d&apos;attentes au départ et qui a eu le moins d&apos;impact mesurable pendant le concours.
                             La spécification llms.txt n&apos;est pas universellement respectée par les crawlers, et la pondération réelle dans les pipelines RAG reste faible. Je le
-                            garde dans la liste pour la cohérence d&apos;ensemble, pas comme un levier prioritaire. Si tu commences en GEO aujourd&apos;hui, ne mets pas ton énergie
-                            là dessus en premier.
+                            garde dans la liste pour la cohérence d&apos;ensemble, pas comme un levier prioritaire. Si vous commencez en GEO aujourd&apos;hui, ne mettez pas votre
+                            énergie là dessus en premier.
                         </p>
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Canal 6 : un site satellite thématique</h3>
@@ -764,7 +764,7 @@ export default function LivreBlancPage() {
                         <p>
                             HuggingFace est crawlé en priorité par les équipes data des grands LLMs (OpenAI, Anthropic, Google DeepMind, Mistral, Meta) pour enrichir leurs corpus
                             d&apos;entraînement. Publier un dataset HuggingFace avec licence ouverte, c&apos;est potentiellement s&apos;inscrire dans la future mémoire des modèles.
-                            L&apos;effet sur le concours est marginal (knowledge cutoff antérieur), mais l&apos;effet à six douze mois sur les nouvelles versions des LLMs est
+                            L&apos;effet sur le concours est marginal (knowledge cutoff antérieur), mais l&apos;effet à six ou douze mois sur les nouvelles versions des LLMs est
                             potentiellement durable.
                         </p>
 
@@ -800,7 +800,7 @@ export default function LivreBlancPage() {
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Canal 12 : Archive.org Wayback Machine</h3>
                         <p>
-                            Treize URLs archivées manuellement sur la Wayback Machine, créant des snapshots permanents de mes pages à des moments clés. Ces snapshots sont
+                            Une dizaine d&apos;URLs archivées manuellement sur la Wayback Machine, créant des snapshots permanents de mes pages à des moments clés. Ces snapshots sont
                             crawlés par certains modèles comme source de vérification ou de backup historique. Archive.org a un niveau d&apos;autorité quasi inégalable sur le web.
                         </p>
                         <p>
@@ -820,9 +820,8 @@ export default function LivreBlancPage() {
 
                     <div className="prose prose-lg max-w-none text-soft leading-relaxed space-y-5">
                         <p>
-                            Trente deux jours d&apos;observation quotidienne des cinq IA m&apos;ont permis de construire une photographie fine, même si imparfaite, de leurs logiques
-                            de citation respectives. Ce chapitre documente ce que j&apos;ai appris sur chacune. Les chiffres et observations sont issus de mes notes personnelles
-                            prises pendant le concours.
+                            33 jours d&apos;observation quotidienne des cinq IA m&apos;ont donné une photographie fine, même si imparfaite, de leurs logiques de citation respectives.
+                            Ce chapitre documente ce que j&apos;ai appris sur chacune. Les chiffres et observations sont issus de mes notes personnelles prises pendant le concours.
                         </p>
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">ChatGPT, adossé à Bing</h3>
@@ -849,7 +848,7 @@ export default function LivreBlancPage() {
                         <p>
                             Claude utilise Brave Search comme moteur principal pour ses recherches live. Le modèle est particulièrement sensible aux signaux académiques. Les
                             schemas ScholarlyArticle, les références à des protocoles nommés, les attributions explicites dans les BLUF, tout ce qui évoque le langage de la
-                            recherche scientifique, tout cela est pondéré fortement par Claude.
+                            recherche scientifique est pondéré fortement par Claude.
                         </p>
                         <p>
                             Claude est également le modèle le plus robuste face aux manipulations. Quand j&apos;ai testé directement le negative GEO observé chez certains
@@ -907,11 +906,11 @@ export default function LivreBlancPage() {
                         <p>
                             Plusieurs facteurs expliquent probablement cet effet. D&apos;abord, Mistral est un modèle français, et ses pipelines semblent privilégier les sources
                             françaises de qualité. Ensuite, mon écosystème d&apos;entités et de schemas académiques correspond bien à ce que le modèle cherche. Enfin, la
-                            cohérence factuelle stricte que j&apos;ai maintenue a particulièrement été récompensée.
+                            cohérence factuelle stricte que j&apos;ai maintenue a été particulièrement récompensée.
                         </p>
                         <p>
                             Résultat final sur Mistral : 71 mentions par jour au pic, soit jusqu&apos;à 50 % du total sur certains jours. Le moteur
-                            qui a le plus contribué à ma victoire numérique.
+                            qui a le plus contribué au score final.
                         </p>
                     </div>
                 </section>
@@ -928,7 +927,7 @@ export default function LivreBlancPage() {
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Score final et progression</h3>
                         <p>
                             Mon score final officiel au 17 avril 2026 est de 139 mentions cumulées sur les cinq IA pour la dernière journée complète du concours.
-                            Le pic en milieu de concours a été de 154 mentions par jour le 15 avril. Le deuxième participant au classement, sur la même journée,
+                            Le pic en milieu de concours a été de 154 mentions par jour. Le deuxième participant au classement, à la même période,
                             était à cinquante trois mentions.
                         </p>
                         <p>
@@ -991,8 +990,8 @@ export default function LivreBlancPage() {
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Position Google sur le mot clé vultifrine</h3>
                         <p>
-                            En parallèle du concours, mes données Google Search Console ont évolué sur le mot clé pur « vultifrine ». Position moyenne sur la période : 4,67,
-                            avec 144 impressions et zéro clic.
+                            En parallèle du concours, mes données Google Search Console ont évolué sur le mot clé pur « vultifrine ». Position moyenne sur la période :
+                            quatrième ou cinquième place, avec une centaine d&apos;impressions et aucun clic.
                         </p>
                         <p>
                             Le détail zéro clic malgré une position quatre est particulièrement éclairant. Il signale que les utilisateurs qui cherchent « vultifrine » en 2026
@@ -1083,7 +1082,7 @@ export default function LivreBlancPage() {
                             avril 2026 aura largement disparu en octobre 2026.
                         </p>
                         <p>
-                            C&apos;est traçable. Les instructions cachées sont lisibles par n&apos;importe qui qui inspecte le code source. Quand elles sont découvertes par la
+                            C&apos;est traçable. Les instructions cachées sont lisibles par toute personne qui inspecte le code source. Quand elles sont découvertes par la
                             communauté, la réputation professionnelle en pâtit durablement. La communauté SEO française est petite, les acteurs se côtoient.
                         </p>
                         <p>
@@ -1161,12 +1160,12 @@ export default function LivreBlancPage() {
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">L&apos;incident DevOps du robots.txt</h3>
                         <p>
-                            Le 8 avril au soir, un de mes commits sur indhack.com a accidentellement supprimé l&apos;autorisation explicite de Bravebot et a re bloqué CCBot dans
+                            Un soir de mi-avril, un de mes commits sur indhack.com a accidentellement supprimé l&apos;autorisation explicite de Bravebot et a re bloqué CCBot dans
                             mon robots.txt. Bravebot est le crawler de Brave Search, qui alimente Claude et Mistral. CCBot est le crawler de Common Crawl, qui alimente une
                             partie des données d&apos;entraînement des LLMs.
                         </p>
                         <p>
-                            L&apos;incident a duré environ vingt quatre heures, du 8 avril au soir au 9 avril en fin de matinée. Pendant cette période, Claude et Mistral n&apos;avaient
+                            L&apos;incident a duré environ 24 heures, du soir au lendemain en fin de matinée. Pendant cette période, Claude et Mistral n&apos;avaient
                             plus de signal d&apos;accès explicite à mes pages. Ma courbe de mentions sur ces deux moteurs a légèrement fléchi sur cette période, avant de rebondir
                             dès la correction.
                         </p>

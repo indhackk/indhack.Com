@@ -250,7 +250,8 @@
       "Bash(sips -g all /Users/indiana/Desktop/indhack.Com/public/images/blog/concours-geo-greenred-2026-premiere-place.webp)",
       "Bash(node /Users/indiana/Desktop/indhack.Com/scripts/generate-blog-hero.mjs)",
       "Bash(sips -g all /Users/indiana/Desktop/indhack.Com/public/images/blog/concours-geo-greenred-2026-premiere-place.jpg)",
-      "Bash(xargs -r kill -9 echo \"Server stopped\" ls -lh /Users/indiana/Desktop/Livre-blanc-GEO-2026-indhack.pdf)"
+      "Bash(xargs -r kill -9 echo \"Server stopped\" ls -lh /Users/indiana/Desktop/Livre-blanc-GEO-2026-indhack.pdf)",
+      "Bash(xargs -r kill -9 echo \"Done\")"
     ]
   }
 }

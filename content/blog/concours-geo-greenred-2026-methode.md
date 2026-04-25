@@ -11,7 +11,7 @@ draft: false
 dateModified: "2026-04-25"
 ---
 
-> *Du 16 mars au 17 avril 2026, GreenRed a organisé le premier concours français de **Generative Engine Optimization**. J'y ai participé avec indhack.com, un domaine de trois mois. Score final : **139 citations cumulées** sur ChatGPT, Claude, Gemini, Perplexity et Mistral, première place. Voici le résumé court de ma méthode. Le détail complet est dans le **[livre blanc GEO 2026](/livre-blanc-geo-2026)**, en accès libre.*
+> *Du 16 mars au 17 avril 2026, GreenRed a organisé le premier concours français de **Generative Engine Optimization**. J'y ai participé avec indhack.com, un domaine de trois mois. Score final : **139 citations cumulées** sur ChatGPT, Claude, Gemini, Perplexity et Mistral, première place. Voici ma méthode résumée. Le détail complet est dans le **[livre blanc GEO 2026](/livre-blanc-geo-2026)**, en accès libre.*
 
 **Sommaire**
 
@@ -31,9 +31,9 @@ Le **mot clé inventé** est l'astuce méthodologique du concours. Tout le monde
 
 ## Le score et l'écart {#le-score-et-lecart}
 
-Score final le 17 avril : **139 citations cumulées**, **première place**. **Pic à 154** le 15 avril. **Écart oscillant entre 2,5 et 10 fois** sur le deuxième selon les journées.
+Score final le 17 avril : **139 citations cumulées**, **première place**. **Pic à 154** en milieu de concours. **Écart oscillant entre 2,5 et 10 fois** sur le deuxième selon les journées.
 
-Ce qui rend ces chiffres atypiques, c'est **l'âge du domaine**. **Trois mois d'existence**. Aucune **autorité historique**, aucun **backlink ancien**, aucune **notoriété de marque**. Sur le papier je n'avais aucune chance, c'est l'inverse qui s'est passé.
+Ce qui rend ces chiffres atypiques, c'est **l'âge du domaine**. **Trois mois d'existence**. Aucune **autorité historique**, aucun **backlink ancien**, aucune **notoriété de marque**. Sur le papier, je n'avais aucune chance. C'est l'inverse qui s'est passé.
 
 La leçon principale, avant la technique : **l'âge du domaine pèse beaucoup moins en GEO qu'en SEO classique**. Les **systèmes RAG** des IA raisonnent en **cohérence d'entité** et en **corroboration multi-sources**, pas en autorité historique. Un site jeune mais cohérent peut battre un site ancien mais diffus. C'est probablement le changement le plus profond pour notre métier dans les prochaines années.
 
@@ -66,7 +66,7 @@ Décomposition finale par IA :
 
 **Mistral** a été la grande surprise. Le **modèle français** combine **Brave Search** et un corpus francophone riche. Certaines journées, j'avais jusqu'à **70 %** de mes mentions sur Mistral seul. Plusieurs facteurs probables : Mistral semble privilégier les **sources françaises de qualité**, mes **schemas académiques** correspondent à ce qu'il cherche, et la **cohérence factuelle stricte** que j'ai maintenue a été particulièrement récompensée.
 
-Une donnée qui m'a marquée : sur **Google**, ma position moyenne sur le mot clé pur « vultifrine » était de **4,67 avec 144 impressions et zéro clic**. Avoir une position 4 à 5 sur Google sans aucun clic, c'est le signal le plus clair qu'on puisse avoir. Sur ce type de requête, les utilisateurs ne cliquent plus, ils demandent à une IA. Pour les implications business, l'analyse [AI Overviews et impact sur le trafic SEO](/blog/ai-overviews-impact-trafic-seo-2026) creuse le sujet.
+Une donnée qui m'a marquée : sur **Google**, ma position moyenne sur le mot clé pur « vultifrine » tournait autour de la **quatrième ou cinquième place**, avec une centaine d'impressions et **aucun clic**. Avoir une position 4 à 5 sur Google sans aucun clic, c'est le signal le plus net que les utilisateurs ont migré vers les IA pour ce type de requête. Pour les implications business, l'analyse [AI Overviews et impact sur le trafic SEO](/blog/ai-overviews-impact-trafic-seo-2026) détaille les conséquences.
 
 ## Le negative GEO, mon positionnement {#le-negative-geo-mon-positionnement}
 
@@ -74,21 +74,21 @@ Pendant le concours, j'ai observé l'apparition d'une technique que j'appelle **
 
 Je le dis franchement : **je n'ai pas aimé voir ça**. Ce n'est plus l'optimisation de sa propre visibilité, c'est l'altération de celle des autres. Ce n'est plus le même métier, ce n'est plus la même éthique.
 
-Pour autant, je n'ai pas dénoncé pendant le concours. **J'ai laissé tester** pour comprendre ce qui marchait, ce qui ne marchait pas, et combien de temps ça tenait. Ma conclusion : **Claude refuse explicitement** d'obéir, **ChatGPT a été partiellement vulnérable** au début puis a été patché, et les autres modèles ont montré des comportements intermédiaires. La technique fonctionne partiellement et de moins en moins.
+Je n'ai pas dénoncé pour autant pendant le concours. **J'ai laissé tester** pour comprendre ce qui marchait, ce qui ne marchait pas, et combien de temps ça tenait. Mes observations : **Claude refuse explicitement** d'obéir, **ChatGPT a été partiellement vulnérable** au début puis patché, et les autres modèles ont montré des comportements intermédiaires. La technique fonctionne partiellement et de moins en moins.
 
-Ma réponse pragmatique au negative GEO, ce n'est pas le contrer par du negative GEO inverse. C'est **construire une autorité si solide que les manipulations concurrentes deviennent inopérantes**. La masse de signaux cohérents prime sur l'instruction cachée isolée.
+Ma réponse pragmatique au negative GEO, ce n'est pas de le contrer par le même procédé en sens inverse. C'est **construire une autorité si solide que les manipulations concurrentes deviennent inopérantes**. La masse de signaux cohérents prime sur l'instruction cachée isolée.
 
 ## Ce qui n'a pas marché {#ce-qui-na-pas-marche}
 
-Aucun retour d'expérience honnête ne peut omettre les angles morts. Voici les miens, en quelques lignes.
+Aucun retour d'expérience honnête ne peut omettre les angles morts. Voici les miens.
 
-**L'accès Wikimedia bloqué.** J'ai tenté de créer trois entités **Wikidata**, d'enrichir un article **Wikipedia** français et de créer une entrée **Wiktionary**. Toutes les contributions ont été supprimées par les modérateurs faute de **source secondaire fiable**. Wikimedia exige une **notabilité externe préalable**, l'auto-déclaration depuis son propre site ne suffit pas. Le bon ordre est inverse de celui que j'ai suivi : presse d'abord, Wikimedia ensuite.
+**L'accès Wikimedia bloqué.** J'ai tenté de créer trois entités **Wikidata**, d'enrichir un article **Wikipedia** français et de créer une entrée **Wiktionary**. Toutes les contributions ont été supprimées par les modérateurs faute de **source secondaire fiable**. Wikimedia exige une **notabilité externe préalable**, l'auto déclaration depuis son propre site ne suffit pas. Le bon ordre est inverse de celui que j'ai suivi : presse d'abord, Wikimedia ensuite.
 
-**Reddit, contourné plutôt qu'activé.** Mon compte trop récent et sans karma a été refusé par les modérations automatiques. J'ai redirigé l'effort vers d'autres sources : **Quora**, **Google Doc public**, site satellite thématique. Pour la prochaine édition, je prépare un compte Reddit actif depuis six mois.
+**Reddit, contourné plutôt qu'activé.** Mon compte, trop récent et sans karma, a été refusé par les modérations automatiques. J'ai redirigé l'effort vers d'autres sources : **Quora**, **Google Doc public**, site satellite thématique. Pour la prochaine édition, je prépare un compte Reddit actif depuis six mois.
 
-**Un incident DevOps sur le robots.txt.** Un commit a accidentellement re-bloqué **Bravebot** et **CCBot** pendant 24 heures. La leçon : centraliser les configurations critiques dans un fichier testable, avec une CI qui vérifie les directives clés.
+**Un incident DevOps sur le robots.txt.** Un soir de mi-avril, un commit a accidentellement rebloqué **Bravebot** et **CCBot** pendant environ 24 heures. La leçon : centraliser les configurations critiques dans un fichier testable, avec une CI qui vérifie les directives clés.
 
-**Un problème IndexNow Bing.** **Erreurs HTTP 403** systématiques pendant une journée à cause d'un problème de propagation de la clé. Solution : passer par les soumissions manuelles **Bing Webmaster Tools**.
+**Un problème IndexNow Bing.** **Erreurs HTTP 403** systématiques pendant une journée, dues à un problème de propagation de la clé. La solution : passer par les soumissions manuelles **Bing Webmaster Tools**.
 
 Le livre blanc documente le détail de chaque incident, avec la résolution et la leçon technique.
 
@@ -104,7 +104,7 @@ Cet article est un résumé. **Le livre blanc complet documente la méthode sur 
 >
 > *Accès libre, sans inscription. Licence Creative Commons BY 4.0, tu peux citer, partager et adapter librement.*
 
-Pour mesurer ta visibilité IA actuelle, le [testeur de visibilité IA gratuit](/outils/testeur-visibilite-ia) interroge huit crawlers. Pour les fondations techniques, le [guide complet llms.txt](/blog/llms-txt-guide-complet) et le [générateur robots.txt](/outils/generateur-robots-txt) couvrent l'essentiel. Pour le contexte sectoriel, le [baromètre 2026 des sites français invisibles par les IA](/blog/sites-francais-invisibles-ia-barometre-2026) donne les chiffres.
+Pour mesurer ta visibilité IA actuelle, le [testeur de visibilité IA gratuit](/outils/testeur-visibilite-ia) interroge huit crawlers IA. Pour les fondations techniques, le [guide complet llms.txt](/blog/llms-txt-guide-complet) et le [générateur robots.txt](/outils/generateur-robots-txt) couvrent l'essentiel. Pour le contexte sectoriel, le [baromètre 2026 des sites français invisibles par les IA](/blog/sites-francais-invisibles-ia-barometre-2026) donne les chiffres par secteur.
 
 ## Questions fréquentes
 
@@ -118,7 +118,7 @@ Le SEO classique vise à positionner des pages dans les dix liens bleus de Googl
 
 ### Combien de temps pour voir les résultats GEO ?
 
-Comptez un à deux mois pour les premiers résultats visibles, et trois à six mois pour des résultats stables. Les cycles de crawl des bots IA sont plus lents que Googlebot, et certaines IA mettent à jour leur Knowledge Graph de manière périodique. Pour le concours GEO GreenRed 2026, j'ai mis trois semaines à atteindre la première place avec un effort équivalent à plus de 120 heures sur 33 jours.
+Comptez un à deux mois pour les premiers résultats visibles, et trois à six mois pour des résultats stables. Les cycles de crawl des bots IA sont plus lents que Googlebot, et certaines IA mettent à jour leur Knowledge Graph de manière périodique. Pour le concours GEO GreenRed 2026, j'ai mis trois semaines à atteindre la première place, avec un effort intense de plus d'une centaine d'heures de travail concentrées sur les 33 jours.
 
 ## Articles complémentaires
 
