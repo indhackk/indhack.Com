@@ -255,6 +255,106 @@ export default function SeoLocalPage() {
                 </div>
             </section>
 
+            {/* Villes couvertes : maillage interne vers les 19 pages villes */}
+            <section className="py-16 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="text-center mb-10">
+                            <p className="text-sauge font-bold text-xs uppercase tracking-wider mb-3">Couverture nationale</p>
+                            <h2 className="text-3xl md:text-4xl font-heading font-bold text-ink mb-4">
+                                Consultant SEO dans <span className="text-sauge">19 grandes villes françaises</span>
+                            </h2>
+                            <p className="text-soft text-lg max-w-3xl mx-auto">
+                                Accompagnement SEO local sur mesure dans les principales métropoles de France et la Côte d&apos;Azur. Cliquez sur votre ville pour découvrir le contexte de marché et mes prestations adaptées.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-8">
+                            <Link href="/consultant-seo-nice" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Nice</p>
+                                <p className="text-xs text-soft mt-1">Côte d&apos;Azur</p>
+                            </Link>
+                            <Link href="/consultant-seo-cannes" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Cannes</p>
+                                <p className="text-xs text-soft mt-1">Côte d&apos;Azur</p>
+                            </Link>
+                            <Link href="/consultant-seo-antibes" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Antibes</p>
+                                <p className="text-xs text-soft mt-1">Côte d&apos;Azur</p>
+                            </Link>
+                            <Link href="/consultant-seo-monaco" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Monaco</p>
+                                <p className="text-xs text-soft mt-1">Principauté</p>
+                            </Link>
+                            <Link href="/consultant-seo-sophia-antipolis" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Sophia Antipolis</p>
+                                <p className="text-xs text-soft mt-1">Tech</p>
+                            </Link>
+                            <Link href="/consultant-seo-juan-les-pins" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Juan les Pins</p>
+                                <p className="text-xs text-soft mt-1">Côte d&apos;Azur</p>
+                            </Link>
+                            <Link href="/consultant-seo-marseille" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Marseille</p>
+                                <p className="text-xs text-soft mt-1">PACA</p>
+                            </Link>
+                            <Link href="/consultant-seo-aix-en-provence" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Aix-en-Provence</p>
+                                <p className="text-xs text-soft mt-1">PACA</p>
+                            </Link>
+                            <Link href="/consultant-seo-paris" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Paris</p>
+                                <p className="text-xs text-soft mt-1">Île-de-France</p>
+                            </Link>
+                            <Link href="/consultant-seo-boulogne-billancourt" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Boulogne-Billancourt</p>
+                                <p className="text-xs text-soft mt-1">Île-de-France</p>
+                            </Link>
+                            <Link href="/consultant-seo-lyon" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Lyon</p>
+                                <p className="text-xs text-soft mt-1">Auvergne-Rhône-Alpes</p>
+                            </Link>
+                            <Link href="/consultant-seo-grenoble" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Grenoble</p>
+                                <p className="text-xs text-soft mt-1">Auvergne-Rhône-Alpes</p>
+                            </Link>
+                            <Link href="/consultant-seo-toulouse" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Toulouse</p>
+                                <p className="text-xs text-soft mt-1">Occitanie</p>
+                            </Link>
+                            <Link href="/consultant-seo-montpellier" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Montpellier</p>
+                                <p className="text-xs text-soft mt-1">Occitanie</p>
+                            </Link>
+                            <Link href="/consultant-seo-bordeaux" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Bordeaux</p>
+                                <p className="text-xs text-soft mt-1">Nouvelle-Aquitaine</p>
+                            </Link>
+                            <Link href="/consultant-seo-nantes" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Nantes</p>
+                                <p className="text-xs text-soft mt-1">Pays de la Loire</p>
+                            </Link>
+                            <Link href="/consultant-seo-rennes" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Rennes</p>
+                                <p className="text-xs text-soft mt-1">Bretagne</p>
+                            </Link>
+                            <Link href="/consultant-seo-lille" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Lille</p>
+                                <p className="text-xs text-soft mt-1">Hauts-de-France</p>
+                            </Link>
+                            <Link href="/consultant-seo-strasbourg" className="group bg-fond-clair border border-line rounded-xl p-4 hover:border-sauge hover:bg-white hover:shadow-md transition-all">
+                                <p className="font-heading font-bold text-ink group-hover:text-sauge transition-colors">Strasbourg</p>
+                                <p className="text-xs text-soft mt-1">Grand Est</p>
+                            </Link>
+                        </div>
+
+                        <p className="text-center text-soft text-sm">
+                            Vous êtes ailleurs en France ? <Link href="/contact" className="text-sauge font-semibold hover:underline">Contactez-moi</Link>, je travaille à distance avec des clients dans toute la France.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
             {/* Avantages */}
             <section className="py-16 bg-ink text-white">
                 <div className="container mx-auto px-4">

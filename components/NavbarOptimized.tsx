@@ -17,6 +17,7 @@ const SERVICES = [
     { title: "Consultant IA", href: "/consultant-ia", desc: "Intégration IA et automatisation entreprise.", category: "ia" },
     { title: "Création de Site Web", href: "/creation-site-web", desc: "Sites haute performance optimisés SEO.", category: "web" },
     { title: "Refonte de Site", href: "/refonte-site-web", desc: "Migrez sans perdre votre visibilité.", category: "web" },
+    { title: "Boutique e-commerce", href: "/creation-boutique-en-ligne", desc: "Vendez en ligne avec un site optimisé.", category: "web" },
 ];
 
 const TOOLS = [

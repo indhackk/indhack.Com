@@ -39,6 +39,8 @@ const nextConfig = {
             { source: '/diagnostic/:metier*', destination: '/audit-seo', permanent: true },
             // Fusion importance-audit-seo → audit-seo-approfondi-guide-complet
             { source: '/blog/importance-audit-seo', destination: '/blog/audit-seo-approfondi-guide-complet', permanent: true },
+            // Page service supprimée → consultant-seo (page mère)
+            { source: '/community-manager', destination: '/consultant-seo', permanent: true },
             // ══════════════════════════════════════════════════════════════
             // P3: Kill audit-technique cannibalisation
             // ══════════════════════════════════════════════════════════════
@@ -343,6 +345,39 @@ const nextConfig = {
     // Headers de sécurité
     async headers() {
         return [
+            // ══════════════════════════════════════════════════════════════
+            // CACHE LONG TERME pour les assets Next.js statiques (1 an)
+            // Critique pour le crawl budget Google et le LCP
+            // ══════════════════════════════════════════════════════════════
+            {
+                source: "/_next/static/:path*",
+                headers: [
+                    {
+                        key: "Cache-Control",
+                        value: "public, max-age=31536000, immutable",
+                    },
+                ],
+            },
+            // Cache pour les images statiques /public/images/
+            {
+                source: "/images/:path*",
+                headers: [
+                    {
+                        key: "Cache-Control",
+                        value: "public, max-age=31536000, immutable",
+                    },
+                ],
+            },
+            // Cache pour les downloads (PDF livre blanc, etc.)
+            {
+                source: "/downloads/:path*",
+                headers: [
+                    {
+                        key: "Cache-Control",
+                        value: "public, max-age=86400, stale-while-revalidate=604800",
+                    },
+                ],
+            },
             // ══════════════════════════════════════════════════════════════
             // WIDGET EMBEDDABLE — Headers permissifs pour iframe externe
             // Permet aux partenaires d'intégrer le widget sur leur site

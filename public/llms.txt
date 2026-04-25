@@ -34,7 +34,6 @@ Site web : https://indhack.com
 - /consultant-geo — Consultant GEO (Generative Engine Optimization)
 - /consultant-ia — Consultant IA pour entreprises
 - /audit-ia — Audit de visibilité dans les moteurs IA
-- /community-manager — Gestion réseaux sociaux
 - /creation-boutique-en-ligne — Création de boutiques e-commerce
 - /consultant-seo-freelance — Guide pour choisir un consultant SEO freelance (tarifs, comparatif, critères)
 

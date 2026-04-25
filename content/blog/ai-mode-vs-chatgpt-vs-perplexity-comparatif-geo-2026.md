@@ -1,6 +1,6 @@
 ---
 title: "AI Mode vs ChatGPT vs Perplexity : le comparatif GEO 2026"
-description: "Comparatif complet des 3 moteurs IA qui dominent 2026 : critères de citation, fraîcheur exigée, ROI par secteur. Quel moteur prioriser pour votre stratégie GEO."
+description: "Comparatif des 3 moteurs IA qui dominent 2026 : critères de citation, fraîcheur, ROI par secteur. Quel moteur prioriser pour votre stratégie GEO."
 date: "2026-04-22"
 dateModified: "2026-04-22"
 category: "IA & SEO"

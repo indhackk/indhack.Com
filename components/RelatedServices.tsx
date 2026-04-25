@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Search, FileSearch, Globe, RefreshCw, Users, MapPin, User, ShoppingCart } from "lucide-react";
+import { ArrowRight, Search, FileSearch, Globe, RefreshCw, MapPin, User, ShoppingCart } from "lucide-react";
 
 interface Service {
     title: string;
@@ -39,12 +39,6 @@ const ALL_SERVICES: Record<string, Service> = {
         description: "Migration SEO sécurisée",
         icon: <RefreshCw className="w-5 h-5" />
     },
-    "community-manager": {
-        title: "Gestion réseaux sociaux",
-        href: "/community-manager",
-        description: "Animation communautaire",
-        icon: <Users className="w-5 h-5" />
-    },
     "seo-local": {
         title: "Référencement Google Maps",
         href: "/seo-local",
@@ -67,7 +61,6 @@ const RELATED_MAPPING: Record<string, string[]> = {
     "referencement-naturel": ["consultant-seo", "audit-seo", "seo-local"],
     "creation-site-web": ["creation-boutique-en-ligne", "refonte-site-web", "referencement-naturel"],
     "refonte-site-web": ["creation-site-web", "creation-boutique-en-ligne", "audit-seo"],
-    "community-manager": ["consultant-seo", "creation-site-web", "seo-local"],
     "seo-local": ["consultant-seo", "audit-seo", "referencement-naturel"],
     "creation-boutique-en-ligne": ["creation-site-web", "refonte-site-web", "referencement-naturel"],
     "consultant-seo-freelance": ["audit-seo", "referencement-naturel", "seo-local"]

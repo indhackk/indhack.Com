@@ -124,7 +124,6 @@ function getAllSiteUrls(): string[] {
         '/consultant-geo',
         '/consultant-ia',
         '/audit-seo',
-        '/community-manager',
         '/creation-boutique-en-ligne',
         // 19 pages villes
         '/consultant-seo-nice',

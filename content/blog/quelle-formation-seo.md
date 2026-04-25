@@ -1,8 +1,8 @@
 ---
-title: "Quelle formation SEO choisir en 2026 ?"
+title: "Quelle formation SEO choisir en 2026 ? Le comparatif complet"
 description: "Formation SEO en ligne, bootcamp, autodidacte ou alternance ? Comparatif complet des parcours pour apprendre le référencement naturel en 2026."
 date: "2026-01-30"
-dateModified: "2026-04-16"
+dateModified: "2026-04-25"
 category: "Formation"
 image: "/images/blog/formation-seo.webp"
 imageAlt: "Formations SEO 2026 : comparatif bootcamp, en ligne, autodidacte et alternance"

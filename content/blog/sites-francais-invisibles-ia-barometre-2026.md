@@ -1,6 +1,6 @@
 ---
 title: "46 % des sites français invisibles par les IA : chiffres 2026"
-description: "Les études 2026 révèlent que 46 % des sites français bloquent les crawlers IA (GPTBot, Perplexity, Claude). Secteurs les plus touchés, CMS à risque et plan d'action."
+description: "46 % des sites français bloquent les crawlers IA (GPTBot, Perplexity, Claude) en 2026. Secteurs touchés, CMS à risque et plan d'action."
 date: "2026-04-22"
 dateModified: "2026-04-22"
 category: "IA & SEO"

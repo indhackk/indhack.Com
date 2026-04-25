@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Search, TrendingUp, Sparkles, RefreshCw, ArrowRight, User, MapPin } from "lucide-react";
+import { Search, TrendingUp, Sparkles, RefreshCw, ArrowRight, User, MapPin, Bot, Cpu, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 
 const SERVICES = [
@@ -30,6 +30,18 @@ const SERVICES = [
         href: "/seo-local"
     },
     {
+        title: "Consultant GEO",
+        desc: "Faites citer votre site par ChatGPT, Claude, Gemini, Perplexity et Mistral. La discipline du moment pour rester visible.",
+        icon: <Bot className="w-8 h-8" />,
+        href: "/consultant-geo"
+    },
+    {
+        title: "Consultant IA",
+        desc: "Intégration de l'intelligence artificielle dans vos process. Automatisation, productivité et veille technologique.",
+        icon: <Cpu className="w-8 h-8" />,
+        href: "/consultant-ia"
+    },
+    {
         title: "Création de Site Web",
         desc: "Sites rapides, élégants et pensés pour la conversion. Optimisés pour le référencement dès la première ligne de code.",
         icon: <Sparkles className="w-8 h-8" />,
@@ -40,6 +52,12 @@ const SERVICES = [
         desc: "Modernisez votre site sans perdre une once de trafic. Sécurisation totale de votre référencement existant.",
         icon: <RefreshCw className="w-8 h-8" />,
         href: "/refonte-site-web"
+    },
+    {
+        title: "Boutique e-commerce",
+        desc: "Sites e-commerce optimisés conversion et SEO. Vendez en ligne avec une plateforme rapide, sécurisée et bien référencée.",
+        icon: <ShoppingCart className="w-8 h-8" />,
+        href: "/creation-boutique-en-ligne"
     }
 ];
 

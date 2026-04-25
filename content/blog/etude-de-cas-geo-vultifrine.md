@@ -1,6 +1,6 @@
 ---
 title: "Étude de cas GEO : se faire citer par les IA sur un mot inventé"
-description: "Concours GEO GreenRed 2026 : stratégie pour être cité par ChatGPT, Claude, Gemini et Perplexity sur la vultifrine."
+description: "Étude de cas du Concours GEO GreenRed 2026 : la stratégie complète qui m'a permis de devenir première sur la vultifrine, citée par ChatGPT, Claude, Gemini, Perplexity et Mistral."
 date: "2026-03-20"
 category: "IA & SEO"
 image: "/images/blog/etude-cas-geo-vultifrine.webp"

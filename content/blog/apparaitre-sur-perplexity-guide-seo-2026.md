@@ -1,13 +1,13 @@
 ---
-title: "Apparaître sur Perplexity : le guide SEO / GEO 2026"
-description: "Comment optimiser votre site web pour remonter dans les sources du moteur de recherche IA Perplexity AI ? Guide complet Generative Engine Optimization."
+title: "Apparaître sur Perplexity en 2026 : le guide complet (sources)"
+description: "Comment être cité par Perplexity AI en 2026 : exploiter le biais Reddit et Quora, structurer ses sources, soumettre les bonnes URLs. Guide actionnable."
 date: "2026-01-22"
-dateModified: "2026-04-21"
+dateModified: "2026-04-25"
 category: "IA & SEO"
 image: "/images/blog/perplexity-seo.webp"
-imageAlt: "Comment apparaître sur Perplexity SEO et GEO en 2026"
+imageAlt: "Apparaître sur Perplexity en 2026, méthode et exemples de sources"
 author: "Indiana Aflalo"
-keywords: ["apparaitre perplexity", "seo perplexity", "référencement perplexity", "Perplexity AI SEO", "GEO", "Generative Engine Optimization", "consultant geo", "perplexity sources"]
+keywords: ["apparaître sur Perplexity", "Perplexity SEO", "référencement Perplexity", "PerplexityBot", "Perplexity sources", "Perplexity AI"]
 ---
 
 Si ChatGPT est le leader de l'IA conversationnelle, **Perplexity AI** s'est imposé comme le "Google Killer". En 2026, Perplexity n'est plus un simple chatbot : c'est un moteur de recherche IA de nouvelle génération (un *Answer Engine*) qui génère ses propres réponses, mais en se basant **strictement sur des sources du web trouvées en temps réel**, qu'il cite explicitement via des notes de bas de page.

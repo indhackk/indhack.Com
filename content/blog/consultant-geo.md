@@ -1,13 +1,13 @@
 ---
-title: "Consultant GEO : missions, outils et études de cas [2026]"
-description: "Découvrez le métier de consultant GEO : missions, outils, études de cas et résultats chiffrés. Le guide complet de cette expertise émergente en 2026."
+title: "Métier de consultant GEO : missions, parcours, salaire 2026"
+description: "Le métier de consultant GEO en 2026 : missions concrètes, parcours pour devenir expert, salaires observés et études de cas. Comprendre cette discipline émergente."
 date: "2026-01-08"
-dateModified: "2026-04-16"
+dateModified: "2026-04-25"
 category: "IA & SEO"
 image: "/images/blog/consultant-geo-expert.webp"
-imageAlt: "Consultant GEO expert en optimisation pour les moteurs génératifs"
+imageAlt: "Métier de consultant GEO en 2026, parcours et missions"
 author: "Indiana Aflalo"
-keywords: ["métier consultant geo", "missions consultant geo", "devenir consultant geo", "études de cas GEO", "outils consultant geo", "résultats GEO"]
+keywords: ["métier consultant GEO", "devenir consultant GEO", "parcours consultant GEO", "salaire consultant GEO", "missions consultant GEO", "expertise GEO 2026"]
 ---
 
 Le SEO traditionnel s'essouffle. La baisse du CTR organique sur Google (parfois de l'ordre de 60% avec l'arrivée de l'AI Overviews) a provoqué un séisme dans le milieu du webmarketing. 

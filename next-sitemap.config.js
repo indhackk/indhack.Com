@@ -63,7 +63,6 @@ const staticPageDates = {
     '/consultant-geo': '2026-04-25',
     '/consultant-ia': '2026-04-25',
     // '/audit-ia' retiré — page inexistante (404)
-    '/community-manager': '2026-02-15',
     '/creation-boutique-en-ligne': '2026-01-20',
     '/laboratoire-geo/vultifrine': '2026-04-12',
     '/livre-blanc-geo-2026': '2026-04-24',
@@ -236,7 +235,7 @@ module.exports = {
         } else if (path.startsWith('/blog')) {
             priority = 0.7;
             changefreq = 'weekly';
-        } else if (['/consultant-geo', '/consultant-ia', '/community-manager', '/creation-boutique-en-ligne'].includes(path)) {
+        } else if (['/consultant-geo', '/consultant-ia', '/creation-boutique-en-ligne'].includes(path)) {
             priority = 0.75;
             changefreq = 'weekly';
         } else if (path === '/glossaire-seo' || path === '/etudes-de-cas' || path === '/partenaires' || path === '/checklist-geo') {

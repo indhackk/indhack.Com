@@ -17,7 +17,6 @@ const SERVICES = [
     { title: "Création de Site Web", href: "/creation-site-web" },
     { title: "Refonte de Site Web", href: "/refonte-site-web" },
     { title: "Création boutique e-commerce", href: "/creation-boutique-en-ligne" },
-    { title: "Community Manager", href: "/community-manager" },
 ];
 
 // ══════════════════════════════════════════════════════════════
