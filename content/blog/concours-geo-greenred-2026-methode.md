@@ -11,7 +11,7 @@ draft: false
 dateModified: "2026-04-25"
 ---
 
-> *Du 16 mars au 17 avril 2026, GreenRed a organisé le premier concours français de **Generative Engine Optimization**. J'y ai participé avec indhack.com, un domaine de trois mois. Score final : **139 citations cumulées** sur ChatGPT, Claude, Gemini, Perplexity et Mistral, première place. Voici ma méthode résumée. Le détail complet est dans le **[livre blanc GEO 2026](/livre-blanc-geo-2026)**, en accès libre.*
+> *Du 16 mars au 17 avril 2026, GreenRed a organisé le premier concours français de **Generative Engine Optimization**. J'y ai participé avec indhack.com, un site jeune sortant de phase de pré-référencement. Score final : **139 citations cumulées** sur ChatGPT, Claude, Gemini, Perplexity et Mistral, première place. Voici ma méthode résumée. Le détail complet est dans le **[livre blanc GEO 2026](/livre-blanc-geo-2026)**, en accès libre.*
 
 **Sommaire**
 
@@ -25,7 +25,7 @@ dateModified: "2026-04-25"
 
 ## Le concours en deux lignes {#le-concours-en-deux-lignes}
 
-**GreenRed** a posé une règle simple. Chaque jour pendant **33 jours**, dix requêtes envoyées aux **cinq grandes IA génératives**, et on compte les fois où ton **nom de domaine** apparaît dans les réponses. Le mot clé : **vultifrine**, un actif cosmétique fictif. **3 315 citations comptabilisées** au total.
+**GreenRed** a posé une règle simple. Chaque jour pendant **33 jours calendaires** (dont 26 jours de mesure officielle), dix requêtes envoyées aux **cinq grandes IA génératives**, et on compte les fois où ton **nom de domaine** apparaît dans les réponses. Le mot clé : **vultifrine**, un actif cosmétique fictif. **3 315 citations comptabilisées** au total.
 
 Le **mot clé inventé** est l'astuce méthodologique du concours. Tout le monde démarrait à zéro côté contenu existant. Ce qui se mesurait, c'était le **travail stratégique pur**, pas le poids des dix dernières années de **backlinks**.
 
@@ -33,7 +33,7 @@ Le **mot clé inventé** est l'astuce méthodologique du concours. Tout le monde
 
 Score final le 17 avril : **139 citations cumulées**, **première place**. **Pic à 154** en milieu de concours. **Écart oscillant entre 2,5 et 10 fois** sur le deuxième selon les journées.
 
-Ce qui rend ces chiffres atypiques, c'est **l'âge du domaine**. **Trois mois d'existence**. Aucune **autorité historique**, aucun **backlink ancien**, aucune **notoriété de marque**. Sur le papier, je n'avais aucune chance. C'est l'inverse qui s'est passé.
+Ce qui rend ces chiffres atypiques, c'est **l'âge SEO du domaine**. Premières données Google Search Console le 15 janvier 2026, sandbox encore actif au démarrage du concours. Aucune **autorité historique**, aucun **backlink ancien**, aucune **notoriété de marque**. Sur le papier, je n'avais aucune chance. C'est l'inverse qui s'est passé.
 
 La leçon principale, avant la technique : **l'âge du domaine pèse beaucoup moins en GEO qu'en SEO classique**. Les **systèmes RAG** des IA raisonnent en **cohérence d'entité** et en **corroboration multi-sources**, pas en autorité historique. Un site jeune mais cohérent peut battre un site ancien mais diffus. C'est probablement le changement le plus profond pour notre métier dans les prochaines années.
 

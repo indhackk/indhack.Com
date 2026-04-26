@@ -274,7 +274,10 @@
       "Bash(awk -F'|' '$8 < 7 {print $1 \" \\(\" $8 \" links\\)\"}' /tmp/blog_audit.txt)",
       "Bash(find /Users/indiana/Desktop/indhack.Com/app -name \"*.tsx\" -exec grep -l '@type.*Article\\\\|@type.*Person\\\\|@type.*Organization' {} \\\\;)",
       "Bash(awk '{print $5, $9}')",
-      "Bash(xargs -r kill -9 npm run build)"
+      "Bash(xargs -r kill -9 npm run build)",
+      "WebFetch(domain:goai.ai)",
+      "Bash(node scripts/_check_goai.mjs)",
+      "Bash(node scripts/_test_goai.mjs)"
     ]
   }
 }

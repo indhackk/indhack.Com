@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Livre blanc GEO 2026 : comment j'ai gagné le premier Concours GEO de France avec un domaine de trois mois",
+    headline: "Livre blanc GEO 2026 : comment j'ai gagné le premier Concours GEO de France avec un site en phase initiale",
     description:
         "Livre blanc complet par Indiana Aflalo, gagnante du Concours GEO GreenRed 2026. Méthode en 7 piliers, 12 canaux externes, sans black hat.",
     datePublished: "2026-04-24",
@@ -176,7 +176,7 @@ export default function LivreBlancPage() {
                             <h1 className="cover-title">
                                 Première
                                 <span className="cover-title-em">au premier concours GEO</span>
-                                <span className="cover-title-sub">avec un domaine de trois mois.</span>
+                                <span className="cover-title-sub">avec un site jeune et un seul domaine.</span>
                             </h1>
 
                             <p className="cover-subtitle">
@@ -203,8 +203,8 @@ export default function LivreBlancPage() {
                             </div>
                             <div className="stat-sep" />
                             <div className="stat">
-                                <span className="stat-number">3 mois</span>
-                                <span className="stat-label">âge du domaine<br />indhack.com</span>
+                                <span className="stat-number">1 site</span>
+                                <span className="stat-label">indhack.com seul<br />vs écosystèmes multi-domaines</span>
                             </div>
                         </div>
 
@@ -239,13 +239,13 @@ export default function LivreBlancPage() {
                     </div>
 
                     <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-ink font-bold mb-8 leading-tight">
-                        Comment j&apos;ai gagné le premier Concours GEO de France avec un domaine de trois mois
+                        Comment j&apos;ai gagné le premier Concours GEO de France avec un site en phase initiale
                     </h1>
 
                     <p className="text-soft text-xl leading-relaxed max-w-3xl mb-8">
                         Ce livre blanc documente la méthode complète qui m&apos;a permis de remporter le premier Concours GEO organisé par GreenRed,
                         du 16 mars au 17 avril 2026. Plus de 150 citations quotidiennes cumulées par ChatGPT, Claude, Gemini, Perplexity et Mistral,
-                        avec un écart confortable sur le reste du classement. Le tout en partant d&apos;un domaine de trois mois d&apos;existence, sans techniques black hat.
+                        avec un écart confortable sur le reste du classement. Le tout en partant d&apos;un site jeune, sans autorité historique établie, sans techniques black hat.
                     </p>
 
                     <div className="bg-gradient-to-br from-sauge/5 to-fond-clair border border-line rounded-2xl p-8 mb-10">
@@ -320,9 +320,9 @@ export default function LivreBlancPage() {
                             place selon les journées du concours.
                         </p>
                         <p>
-                            Je suis Indiana Aflalo, consultante SEO et GEO indépendante à Nice, sous la marque IndHack. Au moment de l&apos;inscription, mon site indhack.com avait
-                            trois mois d&apos;existence. Les premières données Google Search Console datent du 15 janvier 2026. Sandbox encore actif, autorité naissante, dizaine
-                            de requêtes indexées au compteur. Sur le papier, je n&apos;étais pas la favorite.
+                            Je suis Indiana Aflalo, consultante SEO et GEO indépendante à Nice, sous la marque IndHack. Au moment de l&apos;inscription, mon site indhack.com sortait
+                            tout juste de phase de pré-référencement. Les premières données Google Search Console datent du 15 janvier 2026. Sandbox encore actif, autorité naissante,
+                            dizaine de requêtes indexées au compteur. Sur le papier, je n&apos;étais pas la favorite.
                         </p>
                         <p>
                             Ce document n&apos;est pas un manuel théorique. C&apos;est le retour d&apos;expérience technique de la méthode qui m&apos;a placée première&nbsp;:
@@ -820,7 +820,7 @@ export default function LivreBlancPage() {
 
                     <div className="prose prose-lg max-w-none text-soft leading-relaxed space-y-5">
                         <p>
-                            33 jours d&apos;observation quotidienne des cinq IA m&apos;ont donné une photographie fine, même si imparfaite, de leurs logiques de citation respectives.
+                            Le concours s&apos;est étalé sur 33 jours calendaires, avec 26 jours de mesure officielle par GreenRed. Cette observation quotidienne des cinq IA m&apos;a donné une photographie fine, même si imparfaite, de leurs logiques de citation respectives.
                             Ce chapitre documente ce que j&apos;ai appris sur chacune. Les chiffres et observations sont issus de mes notes personnelles prises pendant le concours.
                         </p>
 
@@ -986,6 +986,9 @@ export default function LivreBlancPage() {
                                     </tr>
                                 </tbody>
                             </table>
+                            <p className="text-sm text-soft italic mt-3">
+                                Note&nbsp;: le pic global de 154 mentions correspond à la journée la plus forte du concours, où le total cumulé sur les 5 IA a atteint son maximum. Les pics par moteur listés ci-dessus n&apos;ont pas tous été atteints le même jour, leur somme arithmétique (168) est donc supérieure au pic global synchronisé (154).
+                            </p>
                         </div>
 
                         <h3 className="font-heading text-xl text-ink font-semibold mt-8">Position Google sur le mot clé vultifrine</h3>
