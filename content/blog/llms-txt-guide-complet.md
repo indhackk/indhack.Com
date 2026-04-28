@@ -176,9 +176,12 @@ Si vous souhaitez aller plus loin dans votre stratégie de visibilité IA, comme
 ---
 
 **À lire aussi :**
+- [Étude de cas GEO sur la vultifrine](/blog/etude-de-cas-geo-vultifrine) — exemple d'application concrète, llms.txt comme l'un des 7 piliers
+- [Méthode du concours GEO GreenRed 2026](/blog/concours-geo-greenred-2026-methode) — comment j'ai utilisé llms.txt pour gagner
 - [GEO 2026 : être visible sur ChatGPT, Perplexity et les IA](/blog/geo-comment-apparaitre-chatgpt-2026)
 - [Top 7 outils GEO gratuits pour tester sa visibilité IA](/blog/meilleurs-outils-geo-gratuits-2026)
 - [Apparaître sur Perplexity : le guide SEO / GEO 2026](/blog/apparaitre-sur-perplexity-guide-seo-2026)
+- [Sites français invisibles dans les IA — baromètre 2026](/blog/sites-francais-invisibles-ia-barometre-2026)
 
 **Outils gratuits :**
 - [Testeur Visibilité IA](/outils/testeur-visibilite-ia)

@@ -307,12 +307,14 @@ Non, il s'y ajoute. Gartner prévoit **-25 % de volume de recherche classique d'
 
 ## Articles complémentaires
 
+- [Étude de cas GEO sur la vultifrine](/blog/etude-de-cas-geo-vultifrine) — comment j'ai dominé 5 IA en 27 jours sur un mot-clé fictif
+- [Méthode du concours GEO GreenRed 2026](/blog/concours-geo-greenred-2026-methode) — les 7 piliers techniques que j'ai exécutés
 - [Comment apparaître sur ChatGPT ? Guide GEO 2026](/blog/geo-comment-apparaitre-chatgpt-2026) — les 4 piliers du GEO
 - [Apparaître sur Perplexity : le guide SEO/GEO 2026](/blog/apparaitre-sur-perplexity-guide-seo-2026) — plan d'action spécifique
 - [Google AI Mode : 93 % de zero-click, quel impact SEO ?](/blog/google-ai-mode-fin-10-liens-bleus-2026) — analyse complète AI Mode
+- [Sites français invisibles dans les IA — baromètre 2026](/blog/sites-francais-invisibles-ia-barometre-2026) — quelle proportion des sites FR cités par ChatGPT, Claude et Perplexity
 - [Mesurer l'exposition de votre marque dans Google AI Mode](/blog/mesurer-exposition-marque-ai-mode-google) — protocole 20 requêtes
 - [Top 12 outils GEO pour tester sa visibilité IA [2026]](/blog/meilleurs-outils-geo-gratuits-2026) — comparatif outils
-- [Baromètre visibilité IA France 2026](/etude/barometre-visibilite-ia-2026) — synthèse des études 2025-2026 (Originresearch, Cloudflare, Tollbit, BrightEdge)
 - [llms.txt : guide complet pour configurer votre fichier](/blog/llms-txt-guide-complet) — le standard émergent
 
 **Besoin d'un audit GEO multi-moteurs personnalisé ?** [Contactez-moi](/contact) pour un diagnostic complet de votre exposition sur AI Mode, ChatGPT et Perplexity + plan d'action priorisé sur 90 jours.

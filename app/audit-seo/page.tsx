@@ -4,8 +4,8 @@ import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Audit SEO complet | +150 points analysés en 48h – IndHack",
-    description: "Audit SEO complet en 48h : +150 points analysés, diagnostic technique et sémantique, plan d'action priorisé par ROI. Rapport PDF offert avec chaque audit.",
+    title: "Audit SEO complet : +150 points sous 5 jours – IndHack",
+    description: "Audit SEO complet : +150 points analysés, diagnostic technique et sémantique, plan d'action priorisé par ROI. Rapport PDF livré sous 5 jours ouvrés.",
     alternates: {
         canonical: "https://indhack.com/audit-seo"
     },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Audit SEO Complet",
-        description: "Identifiez les freins SEO de votre site en 48h. +150 points analysés.",
+        description: "Identifiez les freins SEO de votre site. +150 points analysés, livré sous 5 jours.",
         images: ["https://indhack.com/api/og?title=Audit%20SEO%20Complet&subtitle=%2B150%20points%20analys%C3%A9s"],
     },
 };
@@ -36,7 +36,7 @@ export default function AuditSeoPage() {
         <>
             <ServiceSchema
                 name="Audit SEO Complet"
-                description="Identifiez les freins SEO de votre site en 48h. Rapport détaillé + roadmap priorisée par ROI. +150 points analysés."
+                description="Identifiez les freins SEO de votre site. Rapport détaillé + roadmap priorisée par ROI. +150 points analysés. Livraison sous 5 jours ouvrés."
                 url="https://indhack.com/audit-seo"
                 serviceType="Audit SEO"
             />

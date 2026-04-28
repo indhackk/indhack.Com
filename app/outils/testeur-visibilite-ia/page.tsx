@@ -419,8 +419,11 @@ export default function TesteurVisibiliteIAPage() {
                                 <h3 className="font-bold text-white mb-4">Articles SEO & GEO</h3>
                                 <ul className="space-y-2">
                                     {[
+                                        { href: "/blog/etude-de-cas-geo-vultifrine", text: "Étude de cas vultifrine : 168 citations IA en 27 jours" },
+                                        { href: "/blog/concours-geo-greenred-2026-methode", text: "Méthode du concours GEO GreenRed 2026" },
+                                        { href: "/blog/sites-francais-invisibles-ia-barometre-2026", text: "Sites français invisibles dans les IA — baromètre" },
                                         { href: "/blog/geo-comment-apparaitre-chatgpt-2026", text: "GEO : Comment apparaître dans ChatGPT en 2026" },
-                                        { href: "/blog/pourquoi-consultant-seo", text: "Pourquoi faire appel à un consultant SEO ?" },
+                                        { href: "/widget/testeur-ia", text: "Widget testeur IA embeddable (iframe gratuite)" },
                                         { href: "/blog/audit-seo-approfondi-guide-complet", text: "L'audit SEO : point de départ de votre croissance" },
                                     ].map((link) => (
                                         <li key={link.href}>
@@ -481,6 +484,28 @@ export default function TesteurVisibiliteIAPage() {
                                     </details>
                                 ))}
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Widget embed */}
+                <section className="py-16 bg-fond-sombre/50 border-t border-white/5">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="max-w-3xl mx-auto bg-white/5 rounded-2xl border border-white/10 p-8">
+                            <h2 className="text-2xl font-heading font-bold text-white mb-3">
+                                Intégrer le testeur sur votre site
+                            </h2>
+                            <p className="text-soft-light mb-5 text-sm leading-relaxed">
+                                Vous êtes consultant SEO, agence ou éditeur de site ? Embarquez le testeur de visibilité IA en iframe sur votre propre site, gratuitement.
+                                Idéal pour offrir un outil d&apos;audit GEO à vos lecteurs ou prospects.
+                            </p>
+                            <Link
+                                href="/widget/testeur-ia"
+                                className="inline-flex items-center gap-2 bg-sauge-light text-ink px-6 py-3 rounded-full font-semibold hover:bg-white transition-all"
+                            >
+                                Voir le widget embeddable
+                                <ArrowRight className="w-4 h-4" />
+                            </Link>
                         </div>
                     </div>
                 </section>

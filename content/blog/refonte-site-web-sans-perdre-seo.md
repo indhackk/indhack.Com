@@ -29,7 +29,7 @@ En tant que consultante SEO spécialiste en [refonte de site web](/refonte-site-
 
 ---
 
-## Pourquoi les refontes SEO échouent ?
+## Pourquoi les refontes SEO échouent ? {#pourquoi-les-refontes-seo-echouent}
 
 Une refonte mal préparée peut faire perdre 50 à 80 % du trafic organique en quelques jours (source : études de cas SEMrush). La plupart des agences web se concentrent sur le design et les fonctionnalités. Le SEO est traité **après coup**, quand le site est déjà en ligne. Résultat :
 
@@ -47,7 +47,7 @@ Avant de refondre, il faut évaluer les coûts réels associés. Consultez mon a
 
 ---
 
-## Phase 1 : Avant la refonte — audit et préparation
+## Phase 1 : Avant la refonte — audit et préparation {#phase-1--avant-la-refonte--audit-et-preparation}
 
 ### Inventorier l'existant
 
@@ -131,7 +131,7 @@ Créez un **tableau de correspondance** entre anciennes et nouvelles URLs. C'est
 
 ---
 
-## Phase 2 : Pendant la refonte — développement
+## Phase 2 : Pendant la refonte — développement {#phase-2--pendant-la-refonte--developpement}
 
 ### Conserver la structure d'URL si possible
 
@@ -231,7 +231,7 @@ Technologies performantes :
 
 ---
 
-## Phase 3 : Le jour J — mise en ligne
+## Phase 3 : Le jour J — mise en ligne {#phase-3--le-jour-j--mise-en-ligne}
 
 ### Checklist de lancement
 
@@ -257,7 +257,7 @@ Dans les 24h suivant la mise en ligne :
 
 ---
 
-## Phase 4 : Après la refonte — surveillance
+## Phase 4 : Après la refonte — surveillance {#phase-4--apres-la-refonte--surveillance}
 
 ### Semaine 1-2 : surveillance intensive
 
@@ -297,7 +297,7 @@ Une refonte réussie se traduit par :
 
 ---
 
-## Les 5 erreurs fatales qui détruisent le SEO d'une refonte
+## Les 5 erreurs fatales qui détruisent le SEO d'une refonte {#les-5-erreurs-fatales-qui-detruisent-le-seo-dune-refonte}
 
 ### Erreur #1 : Lancer sans redirections
 
@@ -341,7 +341,7 @@ Une refonte réussie se traduit par :
 
 ---
 
-## Outils recommandés pour une migration SEO-safe
+## Outils recommandés pour une migration SEO-safe {#outils-recommandes-pour-une-migration-seo-safe}
 
 ### Avant la refonte
 
@@ -371,7 +371,7 @@ Une refonte réussie se traduit par :
 
 ---
 
-## Planning type d'une refonte SEO-safe
+## Planning type d'une refonte SEO-safe {#planning-type-dune-refonte-seo-safe}
 
 | Phase | Durée indicative | Actions clés |
 |-------|------------------|--------------|
@@ -384,7 +384,7 @@ Une refonte réussie se traduit par :
 
 ---
 
-## Ce qu'il faut retenir
+## Ce qu'il faut retenir {#ce-quil-faut-retenir}
 
 Une refonte réussie côté SEO repose sur :
 
@@ -423,6 +423,7 @@ Absolument. Si votre ancien site était lent, mal structuré ou avec un contenu 
 
 ## Pour aller plus loin
 
+- [Checklist SEO refonte de site — 45 points à valider](/blog/checklist-seo-refonte-site) — version condensée téléchargeable
 - [Combien coûte un site web en 2026 ?](/blog/prix-creation-site-internet-2026) — Budget pour votre refonte
 - [Comment créer un site visible sur Google](/blog/comment-creer-site-visible-google) — Les fondamentaux si vous repartez de zéro
 - [Création de boutique en ligne optimisée](/creation-boutique-en-ligne) — Spécificités e-commerce pour votre refonte

@@ -290,8 +290,11 @@ Les 4 piliers à retenir :
 ---
 
 **À lire aussi :**
+- [Étude de cas GEO sur la vultifrine](/blog/etude-de-cas-geo-vultifrine) — méthode appliquée sur un mot-clé fictif, citée 168 fois en 27 jours
+- [Méthode du concours GEO GreenRed 2026](/blog/concours-geo-greenred-2026-methode) — les 7 piliers techniques expliqués
 - [Comment analyser la visibilité de votre marque sur ChatGPT](/blog/analyser-visibilite-marque-chatgpt-ia)
 - [AI Overviews : les chiffres qui changent tout pour le SEO en 2026](/blog/ai-overviews-impact-trafic-seo-2026)
+- [Sites français invisibles dans les IA — baromètre 2026](/blog/sites-francais-invisibles-ia-barometre-2026)
 - [Google AI Mode : 93 % de zero-click, la fin des 10 liens bleus](/blog/google-ai-mode-fin-10-liens-bleus-2026)
 - [Checklist SEO 2026 — Les 30 points essentiels](/blog/checklist-seo-2026)
 - [L'importance d'un audit SEO pour votre croissance](/blog/audit-seo-approfondi-guide-complet)

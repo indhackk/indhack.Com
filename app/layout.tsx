@@ -99,7 +99,6 @@ const organizationSchema = {
     },
     "sameAs": [
         "https://www.linkedin.com/in/indianaaflalo",
-        "https://www.wikidata.org/wiki/Q139232810",
         "https://www.youtube.com/watch?v=waf8t-9rNhg",
         "https://www.malt.fr/profile/indianaaflalo",
         "https://github.com/indhack",
@@ -213,13 +212,11 @@ const localBusinessSchema = {
         "name": "Indiana Aflalo",
         "jobTitle": "Consultante SEO & Experte GEO",
         "sameAs": [
-            "https://www.linkedin.com/in/indianaaflalo",
-            "https://www.wikidata.org/wiki/Q139232810"
+            "https://www.linkedin.com/in/indianaaflalo"
         ]
     },
     "sameAs": [
         "https://www.linkedin.com/in/indianaaflalo",
-        "https://www.wikidata.org/wiki/Q139232810",
         "https://www.youtube.com/watch?v=waf8t-9rNhg",
         "https://www.data.gouv.fr/organizations/indhack"
     ]
@@ -284,7 +281,6 @@ export default function RootLayout({
                         "worksFor": { "@id": "https://indhack.com/#organization" },
                         "sameAs": [
                             "https://www.linkedin.com/in/indianaaflalo",
-                            "https://www.wikidata.org/wiki/Q139232810",
                             "https://www.youtube.com/watch?v=waf8t-9rNhg",
                             "https://www.malt.fr/profile/indianaaflalo",
                             "https://github.com/indhack",

@@ -17,20 +17,19 @@ readingTime: "14 min"
 
 ## Sommaire
 
-- [1. Votre marque existe déjà dans l'IA](#votre-marque-existe-déjà)
-- [2. Comment les modèles d'IA se forment une opinion sur vos concurrents](#comment-IA-se-forment-opinion)
-- [3. L'écart de sentiment : pourquoi ChatGPT et Perplexity ne disent pas la même chose](#écart-sentiment)
-- [4. Les vrais risques : quand l'IA raconte des mensonges sur votre business](#vrais-risques)
-- [5. Auditer votre réputation IA : le diagnostic détaillé](#auditer-réputation-IA)
-- [6. La stratégie GEO pour protéger votre marque](#stratégie-GEO-marque)
-- [7. Pourquoi les PME et commerces locaux français sont les plus exposés](#PME-commerces-exposés)
+- [1. Votre marque existe déjà dans l'IA](#marque-existe-deja-ia)
+- [2. Comment les modèles d'IA se forment une opinion sur votre marque](#ia-se-forment-opinion)
+- [3. L'écart de sentiment : pourquoi ChatGPT et Perplexity divergent](#ecart-sentiment-chatgpt-perplexity)
+- [4. Les vrais risques : quand l'IA raconte des mensonges sur votre business](#vrais-risques-mensonges-ia)
+- [5. Auditer votre réputation IA : le diagnostic détaillé](#auditer-reputation-ia)
+- [6. La stratégie GEO pour protéger votre marque](#strategie-geo-proteger-marque)
+- [7. Pourquoi les PME et commerces locaux français sont les plus exposés](#pme-commerces-exposes)
 - [FAQ : les questions que vous vous posez](#faq)
-- [Articles complémentaires](#articles-complémentaires)
+- [Articles complémentaires](#articles-complementaires)
 
 ---
 
-## 1. Votre marque existe déjà dans l'IA
-{#votre-marque-existe-déjà}
+## 1. Votre marque existe déjà dans l'IA {#marque-existe-deja-ia}
 
 Je travaille depuis trois ans sur la visibilité SEO dans les moteurs de recherche, mais en 2026, il faut accepter une réalité : **Google n'est plus le seul endroit où vos clients cherchent des réponses**.
 
@@ -44,7 +43,7 @@ Mais voici le problème : **très peu de marketeurs français y prêtent attenti
 
 ---
 
-## 2. Comment les modèles d'IA se forment une opinion sur votre marque
+## 2. Comment les modèles d'IA se forment une opinion sur votre marque {#ia-se-forment-opinion}
 {#comment-IA-se-forment-opinion}
 
 Pour protéger votre réputation dans l'IA, il faut d'abord comprendre comment ces systèmes fonctionnent.
@@ -68,7 +67,7 @@ C'est ici que [le schéma JSON-LD entre en jeu](/outils/generateur-schema-json-l
 
 ---
 
-## 3. L'écart de sentiment : pourquoi ChatGPT et Perplexity ne disent pas la même chose
+## 3. L'écart de sentiment : pourquoi ChatGPT et Perplexity ne disent pas la même chose {#ecart-sentiment-chatgpt-perplexity}
 {#écart-sentiment}
 
 C'est la donnée la plus surprenante que j'ai découverte en 2026 : **les IA n'ont pas la même opinion sur votre marque**.
@@ -90,7 +89,7 @@ Cela signifie que votre stratégie GEO doit être **multi-plateforme** : optimis
 
 ---
 
-## 4. Les vrais risques : quand l'IA raconte des mensonges sur votre business
+## 4. Les vrais risques : quand l'IA raconte des mensonges sur votre business {#vrais-risques-mensonges-ia}
 {#vrais-risques}
 
 Voici trois scénarios réels que j'ai rencontrés cette année :
@@ -108,7 +107,7 @@ Le pire scénario : ne pas exister du tout. Un consultant en stratégie numériq
 
 ---
 
-## 5. Auditer votre réputation IA : le diagnostic détaillé
+## 5. Auditer votre réputation IA : le diagnostic détaillé {#auditer-reputation-ia}
 {#auditer-réputation-IA}
 
 Vous ne pouvez pas protéger ce que vous ne mesurez pas. Voici comment auditer votre présence dans les IA.
@@ -145,7 +144,7 @@ C'est crucial. Demandez à l'IA les mêmes questions à propos de vos concurrent
 
 ---
 
-## 6. La stratégie GEO pour protéger votre marque
+## 6. La stratégie GEO pour protéger votre marque {#strategie-geo-proteger-marque}
 {#stratégie-GEO-marque}
 
 Maintenant, le plan d'action.
@@ -201,7 +200,7 @@ Les IA reconnaissent l'expertise spécialisée mieux que la généralité.
 
 ---
 
-## 7. Pourquoi les PME et commerces locaux français sont les plus exposés
+## 7. Pourquoi les PME et commerces locaux français sont les plus exposés {#pme-commerces-exposes}
 {#PME-commerces-exposés}
 
 Je vais être direct : **les petites entreprises françaises sont les premières victimes de cette révolution IA**.
@@ -238,7 +237,7 @@ Je recommande de commencer par l'audit gratuit avec notre [outil de test de visi
 
 ---
 
-## Questions fréquentes
+## Questions fréquentes {#faq}
 
 **Dois-je écrire du contenu spécifiquement pour les IA ?**
 Non, pas exactement. Vous devez écrire pour les humains d'abord, mais en gardant à l'esprit que les IA le liront aussi. Cela signifie : réponses claires, premier paragraphe concis, données sourcées, mises à jour régulières. Si c'est bon pour un humain, ce sera bon pour l'IA.
@@ -257,7 +256,7 @@ Non. Le GEO complète le SEO. Les deux vont coexister. Google continue à envoye
 
 ---
 
-## 10. Articles complémentaires
+## 10. Articles complémentaires {#articles-complementaires}
 
 Pour approfondir votre compréhension du GEO et de la visibilité IA :
 

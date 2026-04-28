@@ -277,7 +277,10 @@
       "Bash(xargs -r kill -9 npm run build)",
       "WebFetch(domain:goai.ai)",
       "Bash(node scripts/_check_goai.mjs)",
-      "Bash(node scripts/_test_goai.mjs)"
+      "Bash(node scripts/_test_goai.mjs)",
+      "Read(//private/tmp/**)",
+      "Bash(cat)",
+      "Bash(git checkout *)"
     ]
   }
 }

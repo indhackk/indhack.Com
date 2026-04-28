@@ -148,7 +148,6 @@ export default function BlogPostPage({ params }: PageProps) {
                                     },
                                     "sameAs": [
                                         "https://www.linkedin.com/in/indianaaflalo",
-                                        "https://www.wikidata.org/wiki/Q139232810",
                                         "https://www.youtube.com/watch?v=waf8t-9rNhg"
                                     ]
                                 },

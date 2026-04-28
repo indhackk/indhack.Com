@@ -232,6 +232,9 @@ Non. Le GEO s'appuie sur les fondations SEO (autorité, maillage interne, conten
 
 ## Articles complémentaires
 
+- [Étude de cas GEO sur la vultifrine](/blog/etude-de-cas-geo-vultifrine) — protocole détaillé d'optimisation avec mesure quotidienne sur 5 IA
+- [Méthode du concours GEO GreenRed 2026](/blog/concours-geo-greenred-2026-methode) — retour terrain sur ce qui marche et ce qui ne marche pas
+- [Sites français invisibles dans les IA — baromètre 2026](/blog/sites-francais-invisibles-ia-barometre-2026) — état des lieux du marché français
 - [Visibilité ChatGPT et Perplexity : mesurer sa marque en 2026](/blog/analyser-visibilite-marque-chatgpt-ia) — méthodes manuelles et automatisées
 - [Comment apparaître sur ChatGPT ? Guide GEO 2026](/blog/geo-comment-apparaitre-chatgpt-2026) — les 4 piliers du GEO
 - [AI Overviews : impact sur le trafic SEO](/blog/ai-overviews-impact-trafic-seo-2026) — -61 % de CTR quand AIO présent

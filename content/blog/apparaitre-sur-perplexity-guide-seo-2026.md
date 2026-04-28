@@ -263,7 +263,10 @@ Oui, fortement recommandé. Le fichier llms.txt à la racine de votre site (exem
 
 ## Articles complémentaires
 
+- [Étude de cas GEO sur la vultifrine](/blog/etude-de-cas-geo-vultifrine) — résultats concrets sur Perplexity, ChatGPT et Claude après 27 jours d'optimisation
+- [Méthode du concours GEO GreenRed 2026](/blog/concours-geo-greenred-2026-methode) — comment j'ai gagné le concours en battant 153 participants
 - [GEO 2026 : apparaître dans ChatGPT, Gemini et Claude](/blog/geo-comment-apparaitre-chatgpt-2026) — Comprendre les bases du Generative Engine Optimization pour tous les moteurs IA
+- [Sites français invisibles dans les IA — baromètre 2026](/blog/sites-francais-invisibles-ia-barometre-2026) — quelle proportion des sites FR cités par Perplexity, ChatGPT et Claude
 - [Consultant GEO : dominez les IA génératives en 2026](/blog/consultant-geo) — Découvrir le rôle stratégique du consultant GEO et les cas d'usage concrets
 - [Fichier llms.txt : guide complet et configuration](/blog/llms-txt-guide-complet) — Comment créer et configurer votre fichier llms.txt pour les IA génératives
 - [Consultant IA en 2026 : le guide définitif](/blog/consultant-ia-expert) — Les compétences techniques et business du consultant IA moderne

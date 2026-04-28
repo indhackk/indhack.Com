@@ -40,21 +40,34 @@ export default function ChecklistGEOPage() {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "HowTo",
-                        "name": "Checklist GEO : 50 points pour optimiser votre visibilité dans les IA",
-                        "description": "Guide étape par étape pour rendre votre site visible dans ChatGPT, Perplexity, Claude et Gemini",
-                        "totalTime": "PT4H",
-                        "tool": [
-                            { "@type": "HowToTool", "name": "Testeur Visibilité IA IndHack" },
-                            { "@type": "HowToTool", "name": "Google Search Console" }
-                        ],
-                        "step": [
-                            { "@type": "HowToStep", "name": "Accessibilité IA", "text": "Vérifier que les crawlers IA peuvent accéder à votre site" },
-                            { "@type": "HowToStep", "name": "Contenu optimisé", "text": "Structurer le contenu pour être cité par les IA" },
-                            { "@type": "HowToStep", "name": "Données structurées", "text": "Ajouter les schémas Schema.org pertinents" },
-                            { "@type": "HowToStep", "name": "E-E-A-T et autorité", "text": "Renforcer les signaux de confiance pour les IA" },
-                            { "@type": "HowToStep", "name": "Distribution", "text": "Maximiser la visibilité du contenu auprès des IA" }
-                        ]
+                        "@type": "Article",
+                        "headline": "Checklist GEO 2026 : 50 points pour optimiser votre visibilité dans les IA",
+                        "description": "Guide actionnable pour rendre votre site visible dans ChatGPT, Perplexity, Claude et Gemini en 2026.",
+                        "author": {
+                            "@type": "Person",
+                            "name": "Indiana Aflalo",
+                            "url": "https://indhack.com/a-propos"
+                        },
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "IndHack",
+                            "url": "https://indhack.com",
+                            "logo": { "@type": "ImageObject", "url": "https://indhack.com/images/logo-indhack.webp" }
+                        },
+                        "datePublished": "2026-03-12",
+                        "dateModified": "2026-04-28",
+                        "mainEntityOfPage": "https://indhack.com/checklist-geo",
+                        "about": {
+                            "@type": "ItemList",
+                            "name": "5 piliers de la checklist GEO",
+                            "itemListElement": [
+                                { "@type": "ListItem", "position": 1, "name": "Accessibilité IA", "description": "Vérifier que les crawlers IA peuvent accéder à votre site" },
+                                { "@type": "ListItem", "position": 2, "name": "Contenu optimisé", "description": "Structurer le contenu pour être cité par les IA" },
+                                { "@type": "ListItem", "position": 3, "name": "Données structurées", "description": "Ajouter les schémas Schema.org pertinents" },
+                                { "@type": "ListItem", "position": 4, "name": "E-E-A-T et autorité", "description": "Renforcer les signaux de confiance pour les IA" },
+                                { "@type": "ListItem", "position": 5, "name": "Distribution", "description": "Maximiser la visibilité du contenu auprès des IA" }
+                            ]
+                        }
                     })
                 }}
             />

@@ -94,8 +94,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             "jobTitle": "Consultante SEO & Experte GEO",
             "url": "https://indhack.com/a-propos",
             "sameAs": [
-                "https://www.linkedin.com/in/indianaaflalo",
-                "https://www.wikidata.org/wiki/Q139232810"
+                "https://www.linkedin.com/in/indianaaflalo"
             ]
         },
         "aggregateRating": {

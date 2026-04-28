@@ -314,6 +314,10 @@ function StrasbourgCustomContent() {
                                     <ArrowRight className="w-4 h-4 text-sauge" />
                                     Voler les clients de vos concurrents sur Google Maps
                                 </Link>
+                                <Link href="/blog/seo-strasbourg-guide-pme-alsaciennes-2026" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
+                                    <ArrowRight className="w-4 h-4 text-sauge" />
+                                    Guide SEO complet pour les PME alsaciennes 2026
+                                </Link>
                                 <Link href="/contact" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
                                     Demander un audit SEO gratuit à Strasbourg
