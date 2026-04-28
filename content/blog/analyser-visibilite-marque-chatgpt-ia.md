@@ -1,6 +1,6 @@
 ---
-title: "Visibilité ChatGPT et Perplexity : mesurer sa marque en 2026"
-description: "Votre marque est-elle citée par ChatGPT quand un prospect cherche votre métier ? Méthodes de test manuel, outil gratuit et 4 métriques GEO clés."
+title: "Vérifier si ma marque est citée par ChatGPT et Perplexity (2026)"
+description: "Votre marque est-elle citée par ChatGPT, Claude et Perplexity quand un prospect cherche votre métier ? 5 méthodes de test, outil gratuit et 4 métriques GEO clés à suivre."
 date: "2026-03-20"
 dateModified: "2026-04-21"
 category: "IA & SEO"

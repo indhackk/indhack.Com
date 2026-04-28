@@ -1,6 +1,6 @@
 ---
-title: "Rapport d'audit SEO 2026 : modèle PDF + exemple commenté"
-description: "Modèle de rapport audit SEO à télécharger gratuitement (PDF). 7 sections indispensables, exemple commenté e-commerce, grille d'évaluation et budget 2026."
+title: "Modèle rapport audit SEO 2026 : PDF gratuit + exemple commenté"
+description: "Téléchargez le modèle de rapport audit SEO en PDF (gratuit) : 7 sections indispensables, exemple e-commerce commenté pas-à-pas, grille d'évaluation et budget 2026."
 date: "2026-03-13"
 dateModified: "2026-04-22"
 category: "Audit"
@@ -46,7 +46,7 @@ Dans ce guide exhaustif mis à jour pour 2026, je vous dévoile les **7 sections
 
 ---
 
-## Qu'est-ce qu'un rapport d'audit SEO (et à quoi sert-il concrètement) ?
+## Qu'est-ce qu'un rapport d'audit SEO (et à quoi sert-il concrètement) ? {#quest-ce-quun-rapport-daudit-seo-et-a-quoi-sert-il-concretement-}
 
 Un rapport d'audit SEO est un **document stratégique** qui analyse l'ensemble des facteurs influençant le positionnement d'un site web dans les moteurs de recherche. Il ne s'agit pas d'un simple relevé d'erreurs techniques : c'est une radiographie complète de votre présence en ligne, assortie d'un plan d'action priorisé par retour sur investissement.
 

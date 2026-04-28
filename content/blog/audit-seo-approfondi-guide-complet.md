@@ -1,6 +1,6 @@
 ---
-title: "Audit SEO approfondi 2026 : méthode 12 étapes + checklist PDF"
-description: "Ma méthode d'audit SEO approfondi testée sur 40 sites par an : 12 étapes, outils pro, cas client chiffré et checklist téléchargeable gratuite."
+title: "Audit SEO approfondi 2026 : les 12 étapes que les agences sautent"
+description: "Ce que les outils gratuits ne voient jamais : ma méthode d'audit SEO en 12 étapes, testée sur 40 sites par an. Outils pro, cas client réel chiffré, checklist PDF gratuite."
 date: "2026-04-02"
 dateModified: "2026-04-21"
 category: "Audit"

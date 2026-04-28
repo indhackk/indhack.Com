@@ -80,7 +80,7 @@ const AUDIT_FAQ = [
     },
     {
         question: "Combien de temps dure un audit SEO complet ?",
-        answer: "Comptez **5 à 10 jours ouvrés** selon la complexité. Je préfère prendre le temps d'une analyse approfondie plutôt que de livrer un rapport automatisé superficiel. Le rapport arrive en PDF + session de restitution 1h (visio) pour parcourir ensemble les recommandations et prioriser."
+        answer: "**Livraison sous 48h ouvrées** pour la majorité des sites (vitrine, blog, services). Pour les e-commerces ou sites complexes (>1000 pages), comptez jusqu'à 5 jours ouvrés. Le rapport arrive en PDF + session de restitution 1h (visio) pour parcourir ensemble les recommandations et prioriser."
     },
     {
         question: "Quelle différence entre audit gratuit et audit complet ?",
@@ -248,7 +248,7 @@ export default function AuditSeoClient() {
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-4 px-4 font-medium">Délai de livraison</td>
-                                        <td className="py-4 px-4">5-10 jours</td>
+                                        <td className="py-4 px-4">48h ouvrées</td>
                                         <td className="py-4 px-4">2-4 semaines</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">

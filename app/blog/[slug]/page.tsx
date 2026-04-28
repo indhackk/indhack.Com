@@ -274,9 +274,16 @@ export default function BlogPostPage({ params }: PageProps) {
                                             // Extract {#custom-id} if present
                                             const anchorMatch = rawTitle.match(/\{#([a-z0-9-]+)\}\s*$/);
                                             const displayTitle = rawTitle.replace(/\s*\{#[a-z0-9-]+\}\s*$/, '');
+                                            // Auto-slug : strip accents + apostrophes + ponctuation, sans collapse (matche TOC markdown)
                                             const slug = anchorMatch
                                                 ? anchorMatch[1]
-                                                : displayTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+                                                : displayTitle
+                                                    .toLowerCase()
+                                                    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+                                                    .replace(/['']/g, '')
+                                                    .replace(/[:;,.!?()«»"]/g, '')
+                                                    .replace(/[^a-z0-9]/g, '-')
+                                                    .replace(/^-+|-+$/g, '');
                                             const isH3 = line.startsWith('###');
 
                                             return (
@@ -352,29 +359,54 @@ export default function BlogPostPage({ params }: PageProps) {
                                     return '';
                                 };
 
-                                // Extract {#custom-id} from heading text, or auto-generate slug
-                                const extractIdAndClean = (text: React.ReactNode): { id: string; cleanChildren: React.ReactNode } => {
+                                // Extract {#custom-id} from heading text, or auto-generate slug (avec ancre alternative pour matcher tous les styles de TOC)
+                                const extractIdAndClean = (text: React.ReactNode): { id: string; altId: string | null; cleanChildren: React.ReactNode } => {
                                     const rawText = extractTextFromNode(text);
                                     const anchorMatch = rawText.match(/\{#([a-z0-9-]+)\}\s*$/);
                                     if (anchorMatch) {
-                                        // Use custom anchor, strip {#id} from displayed text
                                         const cleanText = rawText.replace(/\s*\{#[a-z0-9-]+\}\s*$/, '');
-                                        return { id: anchorMatch[1], cleanChildren: cleanText };
+                                        return { id: anchorMatch[1], altId: null, cleanChildren: cleanText };
                                     }
-                                    // Fallback: auto-generate slug from text
-                                    const id = rawText.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-                                    return { id, cleanChildren: text };
+                                    // Base normalisée : strip accents + apostrophes
+                                    const base = rawText
+                                        .toLowerCase()
+                                        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+                                        .replace(/['\u2019]/g, '');
+                                    // Version "collapse" (TOC standard, [^a-z0-9]+ → un seul tiret)
+                                    const idCollapse = base
+                                        .replace(/[^a-z0-9]+/g, '-')
+                                        .replace(/^-+|-+$/g, '');
+                                    // Version "no-collapse" (TOC qui strip ponctuation puis chaque char non-alphanum devient un tiret)
+                                    const idNoCollapse = base
+                                        .replace(/[:;,.!?()«»"]/g, '')
+                                        .replace(/[^a-z0-9]/g, '-')
+                                        .replace(/^-+|-+$/g, '');
+                                    return {
+                                        id: idCollapse,
+                                        altId: idCollapse !== idNoCollapse ? idNoCollapse : null,
+                                        cleanChildren: text
+                                    };
                                 };
 
-                                // Custom components to add IDs to headings (node prop filtered to avoid DOM warning)
+                                // Custom components — H2/H3 avec id principal + ancre alternative invisible (matche TOC variées)
                                 const markdownComponents = {
                                     h2: ({ node: _node, children, ...props }: { node?: unknown; children?: React.ReactNode } & React.HTMLAttributes<HTMLHeadingElement>) => {
-                                        const { id, cleanChildren } = extractIdAndClean(children);
-                                        return <h2 id={id} {...props}>{cleanChildren}</h2>;
+                                        const { id, altId, cleanChildren } = extractIdAndClean(children);
+                                        return (
+                                            <>
+                                                {altId && <span id={altId} className="block" style={{ height: 0, scrollMarginTop: '8rem' }} aria-hidden="true" />}
+                                                <h2 id={id} {...props}>{cleanChildren}</h2>
+                                            </>
+                                        );
                                     },
                                     h3: ({ node: _node, children, ...props }: { node?: unknown; children?: React.ReactNode } & React.HTMLAttributes<HTMLHeadingElement>) => {
-                                        const { id, cleanChildren } = extractIdAndClean(children);
-                                        return <h3 id={id} {...props}>{cleanChildren}</h3>;
+                                        const { id, altId, cleanChildren } = extractIdAndClean(children);
+                                        return (
+                                            <>
+                                                {altId && <span id={altId} className="block" style={{ height: 0, scrollMarginTop: '8rem' }} aria-hidden="true" />}
+                                                <h3 id={id} {...props}>{cleanChildren}</h3>
+                                            </>
+                                        );
                                     }
                                 };
 
