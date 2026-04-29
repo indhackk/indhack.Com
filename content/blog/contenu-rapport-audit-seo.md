@@ -29,6 +29,11 @@ Dans ce guide exhaustif mis à jour pour 2026, je vous dévoile les **7 sections
 >
 > **[Obtenir la grille d'évaluation gratuite →](/contact)**
 
+> **Cet article est un modèle / exemple téléchargeable de rapport d'audit SEO.**
+> - Vous voulez plutôt **comprendre la méthode pour l'exécuter vous-même** ? Voir [Audit SEO approfondi : les 12 étapes](/blog/audit-seo-approfondi-guide-complet).
+> - Vous préférez **un audit personnalisé sur votre site** (livré sous 48h) ? Voir [ma prestation d'audit SEO complet](/audit-seo).
+> - Vous voulez juste **tester votre site en 30 secondes** ? Voir [l'outil d'audit gratuit](/outils/audit-seo-gratuit).
+
 **Sommaire :**
 1. [Qu'est-ce qu'un rapport d'audit SEO (et à quoi sert-il concrètement) ?](#quest-ce-quun-rapport-daudit-seo-et-a-quoi-sert-il-concretement-)
 2. [Section 1 : Le résumé exécutif (l'état des lieux pour la direction)](#section-1--le-resume-executif-letat-des-lieux-pour-la-direction)

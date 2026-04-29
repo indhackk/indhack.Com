@@ -3,43 +3,47 @@
  * Utilisé par le composant NearbyLinks
  */
 
+// Voisinages : on garde les villes géographiquement proches même si elles n'existent
+// pas comme pages IndHack (le filter dans NearbyLinks les ignore), puis on ajoute en
+// queue des villes IndHack stratégiques pour garantir un maillage minimal de 3 liens
+// vers des pages existantes — y compris pour les villes "isolées" (Lille, Strasbourg).
 export const CITY_NEIGHBORS: Record<string, string[]> = {
-    // Côte d'Azur
-    "nice": ["cannes", "antibes", "monaco", "sophia-antipolis", "menton", "grasse"],
-    "cannes": ["nice", "antibes", "grasse", "sophia-antipolis", "frejus", "mandelieu"],
-    "antibes": ["nice", "cannes", "sophia-antipolis", "juan-les-pins", "biot"],
-    "monaco": ["nice", "menton", "cap-d-ail", "beausoleil"],
-    "sophia-antipolis": ["nice", "antibes", "cannes", "grasse", "valbonne"],
+    // Côte d'Azur — toutes voisines entre elles, maillage dense
+    "nice": ["cannes", "antibes", "monaco", "sophia-antipolis", "juan-les-pins", "menton", "grasse"],
+    "cannes": ["nice", "antibes", "sophia-antipolis", "juan-les-pins", "monaco", "grasse", "frejus"],
+    "antibes": ["nice", "cannes", "sophia-antipolis", "juan-les-pins", "monaco", "biot"],
+    "monaco": ["nice", "antibes", "cannes", "sophia-antipolis", "menton", "cap-d-ail"],
+    "sophia-antipolis": ["nice", "antibes", "cannes", "juan-les-pins", "monaco", "grasse", "valbonne"],
+    "juan-les-pins": ["antibes", "nice", "cannes", "sophia-antipolis", "monaco"],
 
-    // PACA
-    "marseille": ["aix-en-provence", "toulon", "aubagne", "salon-de-provence", "martigues"],
-    "aix-en-provence": ["marseille", "toulon", "salon-de-provence", "manosque"],
-    "toulon": ["marseille", "aix-en-provence", "hyeres", "la-seyne-sur-mer"],
+    // PACA — Aix/Marseille connectées avec Côte d'Azur
+    "marseille": ["aix-en-provence", "monaco", "nice", "cannes", "toulon", "aubagne"],
+    "aix-en-provence": ["marseille", "monaco", "nice", "cannes", "toulon", "salon-de-provence"],
 
     // Île-de-France
-    "paris": ["boulogne-billancourt", "neuilly-sur-seine", "levallois-perret", "issy-les-moulineaux", "saint-denis"],
-    "boulogne-billancourt": ["paris", "neuilly-sur-seine", "issy-les-moulineaux", "sevres"],
+    "paris": ["boulogne-billancourt", "lille", "rennes", "nantes", "neuilly-sur-seine", "levallois-perret"],
+    "boulogne-billancourt": ["paris", "lille", "rennes", "nantes", "neuilly-sur-seine"],
 
     // Auvergne-Rhône-Alpes
-    "lyon": ["villeurbanne", "grenoble", "saint-etienne", "annecy", "chambery"],
-    "grenoble": ["lyon", "chambery", "valence", "annecy", "voiron"],
+    "lyon": ["grenoble", "marseille", "aix-en-provence", "strasbourg", "villeurbanne"],
+    "grenoble": ["lyon", "marseille", "aix-en-provence", "strasbourg", "chambery"],
 
     // Occitanie
-    "toulouse": ["bordeaux", "montpellier", "pau", "albi", "carcassonne"],
-    "montpellier": ["toulouse", "nimes", "perpignan", "beziers", "sete"],
+    "toulouse": ["bordeaux", "montpellier", "marseille", "pau", "albi"],
+    "montpellier": ["toulouse", "marseille", "aix-en-provence", "nimes", "perpignan"],
 
     // Nouvelle-Aquitaine
-    "bordeaux": ["toulouse", "la-rochelle", "bayonne", "arcachon", "libourne"],
+    "bordeaux": ["toulouse", "nantes", "rennes", "montpellier", "la-rochelle"],
 
     // Pays de la Loire & Bretagne
-    "nantes": ["rennes", "saint-nazaire", "angers", "la-roche-sur-yon"],
-    "rennes": ["nantes", "brest", "saint-malo", "vannes", "lorient"],
+    "nantes": ["rennes", "bordeaux", "paris", "boulogne-billancourt", "saint-nazaire"],
+    "rennes": ["nantes", "paris", "boulogne-billancourt", "bordeaux", "brest"],
 
-    // Hauts-de-France
-    "lille": ["roubaix", "dunkerque", "amiens", "valenciennes", "lens"],
+    // Hauts-de-France — fallback Paris/Boulogne (villes IndHack les plus proches géographiquement)
+    "lille": ["paris", "boulogne-billancourt", "rennes", "nantes", "roubaix", "dunkerque"],
 
-    // Grand Est
-    "strasbourg": ["metz", "nancy", "mulhouse", "colmar", "haguenau"],
+    // Grand Est — fallback Paris/Lyon/Grenoble
+    "strasbourg": ["paris", "lyon", "grenoble", "boulogne-billancourt", "metz", "nancy", "mulhouse"],
 };
 
 /**

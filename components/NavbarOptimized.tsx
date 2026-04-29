@@ -29,6 +29,18 @@ const TOOLS = [
     { title: "Simulateur Local", href: "/outils/simulateur-visibilite-locale", desc: "Qui domine votre ville ?", icon: MapPin, status: "live" },
 ];
 
+// Top villes par performance GSC réelle (impressions) — distribuent le jus depuis chaque page
+const TOP_CITIES = [
+    { name: "Nice", href: "/consultant-seo-nice" },
+    { name: "Cannes", href: "/consultant-seo-cannes" },
+    { name: "Sophia-Antipolis", href: "/consultant-seo-sophia-antipolis" },
+    { name: "Monaco", href: "/consultant-seo-monaco" },
+    { name: "Paris", href: "/consultant-seo-paris" },
+    { name: "Strasbourg", href: "/consultant-seo-strasbourg" },
+    { name: "Grenoble", href: "/consultant-seo-grenoble" },
+    { name: "Lyon", href: "/consultant-seo-lyon" },
+];
+
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -111,19 +123,41 @@ export function Navbar() {
                                 </button>
 
                                 <div
-                                    className={`absolute top-full left-1/2 -translate-x-1/2 w-[min(90vw,850px)] bg-white rounded-2xl shadow-2xl border border-line p-4 lg:p-6 grid grid-cols-2 xl:grid-cols-3 gap-3 transition-all duration-200 ${isServicesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
+                                    className={`absolute top-full left-1/2 -translate-x-1/2 w-[min(90vw,850px)] bg-white rounded-2xl shadow-2xl border border-line p-4 lg:p-6 transition-all duration-200 ${isServicesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
                                         }`}
                                 >
-                                    {SERVICES.map((service) => (
-                                        <Link
-                                            key={service.href}
-                                            href={service.href}
-                                            className="p-4 rounded-xl hover:bg-gray-50 transition-all group/item"
-                                        >
-                                            <div className="font-bold text-ink group-hover/item:text-sauge transition-colors text-sm">{service.title}</div>
-                                            <div className="text-xs text-soft leading-relaxed mt-1">{service.desc}</div>
-                                        </Link>
-                                    ))}
+                                    <div className="grid grid-cols-2 xl:grid-cols-3 gap-3">
+                                        {SERVICES.map((service) => (
+                                            <Link
+                                                key={service.href}
+                                                href={service.href}
+                                                className="p-4 rounded-xl hover:bg-gray-50 transition-all group/item"
+                                            >
+                                                <div className="font-bold text-ink group-hover/item:text-sauge transition-colors text-sm">{service.title}</div>
+                                                <div className="text-xs text-soft leading-relaxed mt-1">{service.desc}</div>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                    <div className="mt-4 pt-4 border-t border-line">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <span className="text-xs font-bold text-soft tracking-widest uppercase">SEO local par ville</span>
+                                            <Link href="/seo-local" className="text-xs text-sauge font-medium hover:underline">
+                                                Toutes les villes &rarr;
+                                            </Link>
+                                        </div>
+                                        <div className="flex flex-wrap gap-2">
+                                            {TOP_CITIES.map((city) => (
+                                                <Link
+                                                    key={city.href}
+                                                    href={city.href}
+                                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-50 hover:bg-sauge/10 text-xs font-semibold text-ink hover:text-sauge transition-colors"
+                                                >
+                                                    <MapPin className="w-3 h-3 text-sauge" />
+                                                    {city.name}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -266,6 +300,30 @@ export function Navbar() {
                                 className="block text-lg text-sauge font-medium"
                             >
                                 Voir tous les outils &rarr;
+                            </Link>
+                        </div>
+
+                        <div className="space-y-3">
+                            <p className="text-xs font-bold text-soft tracking-widest uppercase">SEO Local par ville</p>
+                            <div className="flex flex-wrap gap-2">
+                                {TOP_CITIES.map((city) => (
+                                    <Link
+                                        key={city.href}
+                                        href={city.href}
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-50 text-sm font-semibold text-ink"
+                                    >
+                                        <MapPin className="w-3 h-3 text-sauge" />
+                                        {city.name}
+                                    </Link>
+                                ))}
+                            </div>
+                            <Link
+                                href="/seo-local"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="block text-sm text-sauge font-medium"
+                            >
+                                Toutes les villes &rarr;
                             </Link>
                         </div>
 

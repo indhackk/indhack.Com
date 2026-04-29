@@ -145,6 +145,19 @@ export default function AuditSeoClient() {
                 </div>
             </section>
 
+            {/* Bloc différenciation cluster audit — démantèle la cannibalisation interne */}
+            <section className="py-8 bg-white border-b border-gray-100">
+                <div className="container mx-auto px-4 max-w-3xl">
+                    <p className="text-sm text-soft leading-relaxed">
+                        <strong className="text-ink">Cette page présente ma prestation d'audit SEO professionnel</strong> (livré sous 48h).
+                        Vous cherchez plutôt une autre ressource ?
+                        <br />→ <Link href="/blog/audit-seo-approfondi-guide-complet" className="text-sauge hover:underline">Le guide méthodologique en 12 étapes pour faire l&apos;audit en interne</Link>
+                        <br />→ <Link href="/blog/contenu-rapport-audit-seo" className="text-sauge hover:underline">Un modèle PDF gratuit de rapport d&apos;audit (avec exemple commenté)</Link>
+                        <br />→ <Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">L&apos;outil d&apos;audit gratuit en 30 secondes (score /100)</Link>
+                    </p>
+                </div>
+            </section>
+
             <section className="py-16 md:py-20 bg-white relative overflow-hidden">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center mb-20 space-y-6">

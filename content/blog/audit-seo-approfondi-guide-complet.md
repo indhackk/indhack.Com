@@ -16,6 +16,11 @@ En tant que [consultante SEO](/consultant-seo) spécialisée dans les diagnostic
 
 Dans ce guide, je partage ma méthodologie complète en 12 étapes, les outils que j'utilise réellement, et une étude de cas concrète avec chiffres avant/après. L'objectif : vous donner les clés pour comprendre ce qu'un vrai audit SEO approfondi doit couvrir, que vous le réalisiez vous-même ou que vous l'achetiez à un prestataire.
 
+> **Cet article est un guide méthodologique pour comprendre et exécuter un audit en interne.**
+> - Vous cherchez plutôt un **modèle de rapport à télécharger** ? Voir [Modèle rapport audit SEO PDF gratuit](/blog/contenu-rapport-audit-seo).
+> - Vous préférez **confier l'audit à une experte** (livré sous 48h) ? Voir [ma prestation d'audit SEO complet](/audit-seo).
+> - Vous voulez juste **tester votre site rapidement** ? Voir [l'outil d'audit gratuit en 30 secondes](/outils/audit-seo-gratuit).
+
 **Sommaire :**
 
 1. [Qu'est-ce qu'un audit SEO approfondi vs un audit standard ?](#quest-ce-quun-audit-seo-approfondi-vs-un-audit-standard-)

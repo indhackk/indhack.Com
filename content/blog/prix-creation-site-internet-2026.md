@@ -23,14 +23,14 @@ Que voulez-vous vraiment quand vous tapez **combien coûte un site internet** ? 
 Dans ce guide transparent de 2026, analysons sans langue de bois des grilles tarifaires réelles, et comment décoder les dizaines de variables cachées affectant un **création site internet prix**. Plus jamais un devis web ne vous paraîtra abstrait.
 
 **Sommaire :**
-1. [Quel est le prix moyen d'un site internet en 2026 ?](#quel-est-le-prix-moyen-dun-site-internet-en-2026-)
-2. [Pourquoi les devis varient-ils autant d'un prestataire à l'autre ?](#pourquoi-les-devis-varient-ils-autant-dun-prestataire-a-lautre-)
-3. [Site à 500€ vs site à 10 000€ : quelles différences concrètes ?](#site-a-500-vs-site-a-10-000--quelles-differences-concretes-)
-4. [Pourquoi ne faut-il surtout pas négliger le SEO à la création ?](#pourquoi-ne-faut-il-surtout-pas-negliger-le-seo-a-la-creation-)
-5. [Wix, WordPress ou Next.js : quel CMS choisir selon votre budget ?](#wix-wordpress-ou-nextjs--quel-cms-choisir-selon-votre-budget-)
-6. [Freelance ou agence web : à qui confier votre site ?](#freelance-ou-agence-web--a-qui-confier-votre-site-)
-7. [Comment réduire le coût de votre site sans sacrifier la qualité ?](#comment-reduire-le-cout-de-votre-site-sans-sacrifier-la-qualite-)
-8. [FAQ : Questions fréquentes sur le prix d'un site internet](#faq--questions-frequentes-sur-le-prix-dun-site-internet)
+1. [Quel est le prix moyen d'un site internet en 2026 ?](#quel-est-le-prix-moyen-dun-site-internet-en-2026)
+2. [Pourquoi les devis varient-ils autant d'un prestataire à l'autre ?](#pourquoi-les-devis-varient-ils-autant-dun-prestataire-a-lautre)
+3. [Site à 500€ vs site à 10 000€ : quelles différences concrètes ?](#site-a-500-vs-site-a-10-000-quelles-differences-concretes)
+4. [Pourquoi ne faut-il surtout pas négliger le SEO à la création ?](#pourquoi-ne-faut-il-surtout-pas-negliger-le-seo-a-la-creation)
+5. [Wix, WordPress ou Next.js : quel CMS choisir selon votre budget ?](#wix-wordpress-ou-next-js-quel-cms-choisir-selon-votre-budget)
+6. [Freelance ou agence web : à qui confier votre site ?](#freelance-ou-agence-web-a-qui-confier-votre-site)
+7. [Comment réduire le coût de votre site sans sacrifier la qualité ?](#comment-reduire-le-cout-de-votre-site-sans-sacrifier-la-qualite)
+8. [FAQ : Questions fréquentes sur le prix d'un site internet](#faq-questions-frequentes-sur-le-prix-dun-site-internet)
 
 ---
 

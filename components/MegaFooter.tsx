@@ -22,17 +22,19 @@ const SERVICES = [
 // ══════════════════════════════════════════════════════════════
 // COLONNE 2 — SEO Local France (top 20 villes)
 // ══════════════════════════════════════════════════════════════
-// Top 10 villes par volume de recherche — les 9 autres sont liées via /seo-local et /consultant-seo
+// Sélection alignée GSC : top performers réels en impressions + bureau Côte d'Azur
 const CITIES = [
     { name: "Nice", href: "/consultant-seo-nice" },
-    { name: "Paris", href: "/consultant-seo-paris" },
-    { name: "Lyon", href: "/consultant-seo-lyon" },
-    { name: "Marseille", href: "/consultant-seo-marseille" },
-    { name: "Toulouse", href: "/consultant-seo-toulouse" },
-    { name: "Bordeaux", href: "/consultant-seo-bordeaux" },
-    { name: "Lille", href: "/consultant-seo-lille" },
-    { name: "Montpellier", href: "/consultant-seo-montpellier" },
     { name: "Cannes", href: "/consultant-seo-cannes" },
+    { name: "Sophia-Antipolis", href: "/consultant-seo-sophia-antipolis" },
+    { name: "Monaco", href: "/consultant-seo-monaco" },
+    { name: "Antibes", href: "/consultant-seo-antibes" },
+    { name: "Paris", href: "/consultant-seo-paris" },
+    { name: "Strasbourg", href: "/consultant-seo-strasbourg" },
+    { name: "Grenoble", href: "/consultant-seo-grenoble" },
+    { name: "Lyon", href: "/consultant-seo-lyon" },
+    { name: "Bordeaux", href: "/consultant-seo-bordeaux" },
+    { name: "Marseille", href: "/consultant-seo-marseille" },
     { name: "Toutes les villes →", href: "/seo-local" },
 ];
 
@@ -42,13 +44,13 @@ const CITIES = [
 const RESOURCES = [
     { title: "Outils SEO Gratuits", href: "/outils" },
     { title: "Blog SEO", href: "/blog" },
-    { title: "Livre blanc GEO 2026", href: "/livre-blanc-geo-2026" },
     { title: "Glossaire SEO & GEO", href: "/glossaire-seo" },
     { title: "Checklist GEO", href: "/checklist-geo" },
     { title: "Études de cas", href: "/etudes-de-cas" },
     { title: "FAQ", href: "/faq" },
     { title: "À propos", href: "/a-propos" },
-    { title: "Widget Agence Gratuit", href: "/partenaires" },
+    { title: "Widget testeur IA (à embarquer)", href: "/widget/testeur-ia" },
+    { title: "Livre blanc GEO 2026", href: "/livre-blanc-geo-2026" },
 ];
 
 // ══════════════════════════════════════════════════════════════

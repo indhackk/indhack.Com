@@ -133,31 +133,43 @@ export default function Home() {
                                                 <ArrowRight className="w-3 h-3" />
                                             </Link>
                                         </li>
+                                        <li>
+                                            <Link href="/outils/extracteur-mots-cles" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Extracteur de mots-clés
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
                                     </ul>
                                 </div>
 
-                                {/* Articles */}
+                                {/* Articles SEO & GEO (non-concours) */}
                                 <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
                                     <div className="w-12 h-12 bg-sauge/10 rounded-xl flex items-center justify-center mb-4">
                                         <BookOpen className="w-6 h-6 text-sauge" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-ink mb-4">Articles SEO</h3>
+                                    <h3 className="text-xl font-bold text-ink mb-4">Articles SEO &amp; GEO</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/blog/refonte-site-web-sans-perdre-seo" className="text-sauge hover:underline inline-flex items-center gap-1">
-                                                Notre guide complet de refonte SEO
-                                                <ArrowRight className="w-3 h-3" />
-                                            </Link>
-                                        </li>
-                                        <li>
                                             <Link href="/blog/audit-seo-approfondi-guide-complet" className="text-sauge hover:underline inline-flex items-center gap-1">
-                                                L'importance de l'audit SEO
+                                                Audit SEO approfondi : 12 étapes
                                                 <ArrowRight className="w-3 h-3" />
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/blog/seo-local-nice" className="text-sauge hover:underline inline-flex items-center gap-1">
-                                                Guide du SEO local à Nice
+                                            <Link href="/blog/refonte-site-web-sans-perdre-seo" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Refonte de site sans perdre son SEO
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog/geo-comment-apparaitre-chatgpt-2026" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Apparaître dans ChatGPT &amp; Perplexity
+                                                <ArrowRight className="w-3 h-3" />
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/blog/llms-txt-guide-complet" className="text-sauge hover:underline inline-flex items-center gap-1">
+                                                Guide complet du fichier llms.txt
                                                 <ArrowRight className="w-3 h-3" />
                                             </Link>
                                         </li>

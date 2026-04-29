@@ -53,6 +53,8 @@ Le lieu de travail impacte significativement la **rémunération** :
 
 Un consultant senior à Paris peut gagner **20% de plus** qu'à Lyon ou Bordeaux, mais le coût de la vie suit la même logique. En remote, la localisation compte moins que les compétences.
 
+> **Vous cherchez un consultant SEO dans votre ville (et non un guide salaire) ?** Direction les pages dédiées : [consultant SEO Paris](/consultant-seo-paris), [consultant SEO Cannes](/consultant-seo-cannes), [consultant SEO Monaco](/consultant-seo-monaco), [consultant SEO Antibes](/consultant-seo-antibes), [consultant SEO Sophia-Antipolis](/consultant-seo-sophia-antipolis), [consultant SEO Nice](/consultant-seo-nice), [consultant SEO Lyon](/consultant-seo-lyon), [consultant SEO Marseille](/consultant-seo-marseille), [consultant SEO Bordeaux](/consultant-seo-bordeaux) ou la page mère [SEO local en France](/seo-local).
+
 ### Salaire selon le type d'employeur
 
 | Structure | Écart vs moyenne |

@@ -22,12 +22,12 @@ Dans cet article, je vous montre avec des données réelles pourquoi la technolo
 
 **Sommaire :**
 1. [Ce que Google mesure (et que votre agence ne vous dit pas)](#1-ce-que-google-mesure-et-que-votre-agence-ne-vous-dit-pas)
-2. [Le test : mon site vs un concurrent — Les chiffres parlent](#2-le-test--mon-site-vs-un-concurrent--les-chiffres-parlent)
+2. [Le test : mon site vs un concurrent — Les chiffres parlent](#2-le-test-mon-site-vs-un-concurrent-les-chiffres-parlent)
 3. [Pourquoi la plupart des sites sont lents (et ce n'est pas de votre faute)](#3-pourquoi-la-plupart-des-sites-sont-lents-et-ce-nest-pas-de-votre-faute)
 4. [Ce que je fais différemment](#4-ce-que-je-fais-differemment)
 5. [L'impact sur votre business (en euros)](#5-limpact-sur-votre-business-en-euros)
 6. [Comment tester votre site maintenant](#6-comment-tester-votre-site-maintenant)
-7. [Questions fréquentes](#7-questions-frequentes)
+7. [Questions fréquentes](#questions-frequentes)
 
 ---
 
