@@ -64,8 +64,8 @@ export default function SeoLocalPage() {
                             Référencement géolocalisé
                         </div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                            Consultant <span className="text-sauge">SEO Local</span>
-                            <br />partout en France
+                            Consultant <span className="text-sauge">SEO Local</span>{' '}
+                            <span className="block">partout en France</span>
                         </h1>
                         <p className="text-xl text-soft-light mb-10 max-w-2xl mx-auto">
                             Dominez les résultats Google dans votre ville. Expertise locale, stratégie sur-mesure et résultats mesurables pour votre entreprise.

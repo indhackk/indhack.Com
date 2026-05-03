@@ -41,8 +41,8 @@ export function Hero() {
                     <h1
                         className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-white"
                     >
-                        Dominez Google.<br />
-                        <span className="text-sauge-light">Devenez le N°1.</span>
+                        Dominez Google.{' '}
+                        <span className="block text-sauge-light">Devenez le N°1.</span>
                     </h1>
 
                     <p

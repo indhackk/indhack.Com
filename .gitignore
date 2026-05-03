@@ -38,6 +38,9 @@ scripts/google-credentials.json
 .claude/commands/
 .claude/worktrees/
 
+# Codex CLI skills (copie locale des skills Claude pour Codex)
+.agents/
+
 # Données sensibles (leads, prospection)
 leads_whatsapp.json
 prospection/
