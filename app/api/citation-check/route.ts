@@ -324,6 +324,22 @@ function analyzePromptResult(
 }
 
 // ═══════════════════════════════════════════════════════════
+// GET — diagnostic léger (présence des clés API, sans révéler les valeurs)
+// ═══════════════════════════════════════════════════════════
+export async function GET() {
+    return NextResponse.json({
+        env: process.env.VERCEL_ENV || "local",
+        keys: {
+            tavily: !!process.env.TAVILY_API_KEY,
+            perplexity: !!process.env.PERPLEXITY_API_KEY,
+            serper: !!process.env.SERPER_API_KEY,
+        },
+        priorityChain: ["tavily", "perplexity", "serper"],
+        note: "Au moins une clé doit être configurée pour que le citation-check fonctionne.",
+    });
+}
+
+// ═══════════════════════════════════════════════════════════
 // ROUTE HANDLER
 // ═══════════════════════════════════════════════════════════
 export async function POST(request: NextRequest) {
@@ -380,13 +396,28 @@ export async function POST(request: NextRequest) {
                 );
             } catch (err) {
                 console.error(`Error querying for prompt "${searchPrompts[i]}":`, err);
+                const errMsg = err instanceof Error ? err.message : "Unknown error";
+                // Détection de causes probables pour aider le diagnostic
+                const isMissingKey = /not configured/i.test(errMsg);
+                const isAuth = /401|403|unauthorized|forbidden/i.test(errMsg);
+                const isQuota = /429|quota|rate.?limit/i.test(errMsg);
+                let userMessage: string;
+                if (isMissingKey) {
+                    userMessage = "Service de vérification non configuré (clé API absente côté serveur). Contactez l'administrateur.";
+                } else if (isAuth) {
+                    userMessage = "Clé API invalide ou expirée. Contactez l'administrateur.";
+                } else if (isQuota) {
+                    userMessage = "Quota mensuel atteint sur l'API IA. Réessayez le mois prochain ou contactez l'administrateur.";
+                } else {
+                    userMessage = `Erreur lors de la vérification : ${errMsg.slice(0, 120)}`;
+                }
                 results.push({
                     prompt: searchPrompts[i],
                     isCited: false,
                     citationPosition: null,
                     totalSources: 0,
                     competitors: [],
-                    snippet: "Erreur lors de la vérification. Réessayez.",
+                    snippet: userMessage,
                     sources: [],
                     aiEngine: "N/A",
                 });
