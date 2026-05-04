@@ -14,6 +14,7 @@ import { BlogServiceCTA } from "@/components/BlogServiceCTA";
 import { InArticleCTA } from "@/components/blog/InArticleCTA";
 import { AgencyWidgetCTA } from "@/components/blog/AgencyWidgetCTA";
 import { PrintButton } from "@/components/blog/PrintButton";
+import { AuthorBio } from "@/components/blog/AuthorBio";
 import type { Metadata } from "next";
 
 interface PageProps {
@@ -453,6 +454,9 @@ export default function BlogPostPage({ params }: PageProps) {
                             {['checklist-seo-2026', 'refonte-site-web-sans-perdre-seo', 'audit-seo-erreurs-qui-coutent-cher', 'programmatic-seo-50-pages-locales', 'comment-creer-site-visible-google', 'definition-seo-guide-complet', 'geo-comment-apparaitre-chatgpt-2026'].includes(post.slug) && (
                                 <AgencyWidgetCTA />
                             )}
+
+                            {/* Bio auteure — signal E-E-A-T sur les 41 articles dynamiques */}
+                            <AuthorBio />
                         </article>
 
                     </div>
