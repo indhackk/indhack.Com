@@ -24,22 +24,44 @@ function isRateLimited(ip: string): boolean {
     return record.count > MAX_REQUESTS;
 }
 
-// Génère le token attendu (doit matcher celui de l'API)
-function generateExpectedToken(password: string): string {
-    // Simple hash pour Edge Runtime (pas de crypto.createHmac)
-    // Le vrai hash est généré côté API, ici on vérifie juste le format
+/**
+ * Génère le token attendu pour le cookie admin via Web Crypto API.
+ * Doit produire EXACTEMENT le même hash que l'API /api/admin-auth :
+ *   HMAC-SHA256(key=ADMIN_PASSWORD, message=ADMIN_PASSWORD + 'indhack-admin-session')
+ */
+async function generateExpectedToken(password: string): Promise<string> {
     const encoder = new TextEncoder();
-    const data = encoder.encode(password + 'indhack-admin-session');
-    let hash = 0;
-    for (let i = 0; i < data.length; i++) {
-        const char = data[i];
-        hash = ((hash << 5) - hash) + char;
-        hash = hash & hash;
+    const keyData = encoder.encode(password);
+    const messageData = encoder.encode(password + 'indhack-admin-session');
+
+    const key = await crypto.subtle.importKey(
+        'raw',
+        keyData,
+        { name: 'HMAC', hash: 'SHA-256' },
+        false,
+        ['sign']
+    );
+
+    const signature = await crypto.subtle.sign('HMAC', key, messageData);
+    const bytes = new Uint8Array(signature);
+    let hex = '';
+    for (let i = 0; i < bytes.length; i++) {
+        hex += bytes[i].toString(16).padStart(2, '0');
     }
-    return Math.abs(hash).toString(16).padStart(16, '0');
+    return hex;
 }
 
-export function middleware(request: NextRequest) {
+/** Comparaison à temps constant pour éviter les timing attacks. */
+function safeCompare(a: string, b: string): boolean {
+    if (a.length !== b.length) return false;
+    let result = 0;
+    for (let i = 0; i < a.length; i++) {
+        result |= a.charCodeAt(i) ^ b.charCodeAt(i);
+    }
+    return result === 0;
+}
+
+export async function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
     // Rate limiting pour les APIs
@@ -60,13 +82,29 @@ export function middleware(request: NextRequest) {
     if (pathname.startsWith('/keystatic') || pathname.startsWith('/dashboard')) {
         const authCookie = request.cookies.get('admin_auth');
 
-        // Vérifie si le cookie existe et a un format valide (hash hex de 64 chars)
-        if (authCookie?.value && /^[a-f0-9]{64}$/.test(authCookie.value)) {
-            return NextResponse.next();
+        // 1) Cookie absent ou format invalide → login.
+        if (!authCookie?.value || !/^[a-f0-9]{64}$/.test(authCookie.value)) {
+            return NextResponse.redirect(new URL('/admin-login', request.url));
         }
 
-        // Pas de cookie valide → redirection vers login
-        return NextResponse.redirect(new URL('/admin-login', request.url));
+        // 2) Le mot de passe doit être configuré côté serveur. Sinon, on refuse.
+        const adminPassword = process.env.ADMIN_PASSWORD;
+        if (!adminPassword) {
+            return NextResponse.redirect(new URL('/admin-login', request.url));
+        }
+
+        // 3) Comparaison effective contre le vrai token attendu, pas seulement le format.
+        try {
+            const expected = await generateExpectedToken(adminPassword);
+            if (!safeCompare(authCookie.value, expected)) {
+                return NextResponse.redirect(new URL('/admin-login', request.url));
+            }
+        } catch {
+            // En cas d'erreur cryptographique, on bloque.
+            return NextResponse.redirect(new URL('/admin-login', request.url));
+        }
+
+        return NextResponse.next();
     }
 
     return NextResponse.next();
