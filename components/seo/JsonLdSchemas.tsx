@@ -529,15 +529,20 @@ export function SoftwareApplicationSchema({
 
 // ══════════════════════════════════════════════════════════════
 // COMPOSANT COMBINÉ POUR LA HOMEPAGE
+//
+// Volontairement vide aujourd'hui : les entités globales Organization,
+// LocalBusiness, WebSite et Person sont déjà injectées une seule fois
+// par app/layout.tsx (avec leurs @id stables https://indhack.com/#organization,
+// #localbusiness, #website, #indiana-aflalo). Réinjecter ces blocs depuis
+// la homepage créait des doublons aux mêmes @id mais aux propriétés
+// légèrement différentes, ce qui peut faire fusionner Google sur des
+// versions contradictoires.
+//
+// Si la homepage a un jour besoin d'un schema spécifique non couvert par
+// le layout (par exemple Course, Event, FAQPage page-spécifique), c'est
+// ici qu'on l'ajoutera, pas en réinjectant les entités globales.
 // ══════════════════════════════════════════════════════════════
 
 export function HomepageSchemas() {
-    return (
-        <>
-            <OrganizationSchema />
-            <LocalBusinessSchema />
-            <WebSiteSchema />
-            <PersonSchema />
-        </>
-    );
+    return null;
 }
