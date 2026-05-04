@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { allPromptsFailed, buildUnavailableResponse } from "@/lib/citation-check-response";
 
 // ═══════════════════════════════════════════════════════════
 // CITATION CHECK API — Vérifie si un site est cité par les IA
@@ -427,6 +428,16 @@ export async function POST(request: NextRequest) {
             if (i < searchPrompts.length - 1) {
                 await new Promise((resolve) => setTimeout(resolve, 500));
             }
+        }
+
+        // Si TOUS les prompts ont échoué (cascade Tavily → Perplexity → Serper
+        // qui retombe partout sur N/A + 0 source), on ne ment pas à l'utilisateur
+        // avec un faux 200 "vous n'êtes cité nulle part". On renvoie 503.
+        if (allPromptsFailed(results)) {
+            return NextResponse.json(
+                buildUnavailableResponse(),
+                { status: 503 }
+            );
         }
 
         // Score global

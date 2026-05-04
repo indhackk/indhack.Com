@@ -4,14 +4,14 @@ import { TesteurVisibiliteIA } from "./TesteurVisibiliteIA";
 import { ArrowRight, Bot, Shield, Code2, FileCode, Search, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Tester ma visibilité sur les IA — audit GEO gratuit en 30s",
-    description: "Votre site est-il cité par ChatGPT, Perplexity, Claude et Google AI Mode ? Obtenez votre score GEO sur 100 en 30 secondes. Gratuit, sans inscription.",
+    title: "Tester ma visibilité GEO — site prêt à être cité par les IA",
+    description: "Votre site est-il accessible aux crawlers IA et prêt à être cité par ChatGPT, Perplexity, Claude et Google AI Mode ? Score GEO sur 100, diagnostic complet, gratuit, sans inscription.",
     alternates: {
         canonical: "https://indhack.com/outils/testeur-visibilite-ia"
     },
     openGraph: {
-        title: "Tester ma visibilité sur les IA — audit GEO gratuit en 30s",
-        description: "Testez votre visibilité dans ChatGPT, Perplexity, Claude et Google AI Mode. Score GEO sur 100 + diagnostic complet. Sans inscription.",
+        title: "Tester ma visibilité GEO — site prêt à être cité par les IA",
+        description: "Audit GEO en 30 secondes : robots.txt, llms.txt, schemas, signaux E-E-A-T, format citable. Score sur 100 + diagnostic actionnable. Sans inscription.",
         url: "https://indhack.com/outils/testeur-visibilite-ia",
         type: "website",
     }
@@ -49,7 +49,7 @@ const FAQ_ITEMS = [
     },
     {
         question: "Quels crawlers IA sont analysés ?",
-        answer: "Cet outil vérifie 8 crawlers IA : GPTBot et ChatGPT-User (OpenAI), OAI-SearchBot (OpenAI Search), Claude-Web (Anthropic), PerplexityBot (Perplexity), Google-Extended (Gemini), Bytespider (ByteDance/TikTok), et CCBot (Common Crawl). Chacun a un rôle différent dans l'écosystème IA."
+        answer: "Cet outil vérifie 9 crawlers IA : MistralBot (Mistral), GPTBot et ChatGPT-User (OpenAI), OAI-SearchBot (OpenAI Search), Claude-Web (Anthropic), PerplexityBot (Perplexity), Google-Extended (Gemini), Bytespider (ByteDance/TikTok), et CCBot (Common Crawl). Chacun a un rôle différent dans l'écosystème IA."
     },
     {
         question: "Comment améliorer mon score de visibilité IA ?",

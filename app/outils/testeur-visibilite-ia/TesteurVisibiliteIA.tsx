@@ -387,7 +387,7 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                         )}
 
                         <p className="text-center text-sm text-soft-light mt-4">
-                            Gratuit • Sans inscription • 8 crawlers IA analysés
+                            Gratuit • Sans inscription • 9 crawlers IA analysés
                         </p>
                     </form>
 
