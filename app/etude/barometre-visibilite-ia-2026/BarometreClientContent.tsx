@@ -631,9 +631,8 @@ export default function BarometreClientContent() {
                             <span className="relative inline-block">
                                 <span className="relative z-10 text-sauge">Visibilité IA</span>
                                 <span className="absolute bottom-1 left-0 right-0 h-3 bg-emerald-100/60 -z-0 rounded" />
-                            </span>
-                            <br />
-                            des Sites Français
+                            </span>{' '}
+                            <span className="block">des Sites Français</span>
                         </motion.h1>
 
                         {/* Subtitle */}

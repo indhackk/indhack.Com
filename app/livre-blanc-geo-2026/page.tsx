@@ -174,8 +174,8 @@ export default function LivreBlancPage() {
                             </div>
 
                             <h1 className="cover-title">
-                                Première
-                                <span className="cover-title-em">au premier concours GEO</span>
+                                Première{' '}
+                                <span className="cover-title-em">au premier concours GEO</span>{' '}
                                 <span className="cover-title-sub">avec un site jeune et un seul domaine.</span>
                             </h1>
 

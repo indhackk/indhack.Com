@@ -47,8 +47,8 @@ export function AboutContent() {
                         >
                             <p className="text-sauge-light font-bold tracking-[0.2em] uppercase mb-6 text-sm">À propos</p>
                             <h1 className="text-4xl md:text-5xl font-heading font-bold text-white leading-[1.1] tracking-tight mb-8">
-                                Votre visibilité Google,<br />
-                                <span className="text-sauge-light">ma spécialité</span>
+                                Votre visibilité Google,{' '}
+                                <span className="block text-sauge-light">ma spécialité</span>
                             </h1>
                             <p className="text-xl text-soft-light leading-relaxed max-w-xl mb-10">
                                 Consultante SEO indépendante, j'aide les entreprises ambitieuses à <strong className="text-white">transformer leur présence digitale</strong> en machine à générer des clients qualifiés.
