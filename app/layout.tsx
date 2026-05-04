@@ -319,10 +319,13 @@ export default function RootLayout({
             </head>
             <body className={`${spaceGrotesk.variable} ${inter.variable} font-body antialiased text-ink bg-white`}>
 
-                {/* Google Analytics GA4 — Consent Mode v2 avec modélisation */}
-                {/* analytics_storage reste denied par défaut (RGPD conforme) */}
-                {/* url_passthrough + ads_data_redaction activent les pings cookieless */}
-                {/* GA4 modélise alors ~70% du trafic sans cookies ni données perso */}
+                {/* Google Analytics GA4 — Consent Mode v2 RGPD strict */}
+                {/* Tous les storages restent denied par défaut. */}
+                {/* Le consentement granted est appliqué via lib/cookies.ts → updateAnalyticsConsent() */}
+                {/* uniquement après acceptation explicite dans le bandeau CookieConsent. */}
+                {/* url_passthrough + ads_data_redaction activent le ping cookieless qui */}
+                {/* permet à GA4 de modéliser le trafic sans poser de cookies tant que */}
+                {/* l'utilisateur n'a pas consenti. */}
                 <Script
                     src="https://www.googletagmanager.com/gtag/js?id=G-SXXS2G2753"
                     strategy="lazyOnload"
@@ -333,10 +336,11 @@ export default function RootLayout({
                         function gtag(){dataLayer.push(arguments);}
 
                         gtag('consent', 'default', {
-                            'analytics_storage': 'granted',
+                            'analytics_storage': 'denied',
                             'ad_storage': 'denied',
                             'ad_user_data': 'denied',
-                            'ad_personalization': 'denied'
+                            'ad_personalization': 'denied',
+                            'wait_for_update': 500
                         });
 
                         gtag('set', 'url_passthrough', true);
