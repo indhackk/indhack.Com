@@ -48,31 +48,24 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
     // cityData.slug = "consultant-seo-nice" → baseCitySlug = "nice"
     const baseCitySlug = cityData.slug.replace('consultant-seo-', '');
 
-    // JSON-LD LocalBusiness
+    // JSON-LD ProfessionalService — IndHack est basée à Nice et sert la zone "city"
+    // sans présence physique. On évite donc address + geo de la ville ciblée
+    // (signal trompeur côté Google QRG « Misleading information »). On reste sur
+    // un service avec areaServed, et on laisse le LocalBusiness Nice global au layout.
     const localBusinessSchema = {
         "@context": "https://schema.org",
-        "@type": ["LocalBusiness", "ProfessionalService"],
-        "@id": `https://indhack.com/${cityData.slug}#business`,
-        "name": `IndHack - Consultant SEO ${city}`,
-        "alternateName": "Indiana Aflalo - Experte SEO",
-        "description": `Consultante SEO experte à ${city}. Référencement naturel, audit technique et stratégie de visibilité Google pour PME et entrepreneurs de ${city} et sa région.`,
+        "@type": "ProfessionalService",
+        "@id": `https://indhack.com/${cityData.slug}#service`,
+        "name": `IndHack - Consultante SEO pour ${city}`,
+        "alternateName": "Indiana Aflalo - Consultante SEO et GEO",
+        "description": `Accompagnement SEO et GEO à distance pour les entreprises de ${city} et de ${cityData.department}. Référencement naturel, audit technique, stratégie de visibilité Google et IA.`,
         "url": `https://indhack.com/${cityData.slug}`,
         "telephone": "+33661139748",
         "email": "contact@indhack.com",
         "image": "https://indhack.com/images/logo-indhack.webp",
         "priceRange": "€€",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": city,
-            "postalCode": zipCode,
-            "addressRegion": cityData.region,
-            "addressCountry": city === "Monaco" ? "MC" : "FR"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": cityData.lat,
-            "longitude": cityData.lng
-        },
+        // Zone servie : la ville ciblée + son département + ses zones limitrophes.
+        // Pas d'address / geo de cette ville : IndHack est basée à Nice, pas sur place.
         "areaServed": [
             { "@type": "City", "name": city },
             { "@type": "AdministrativeArea", "name": cityData.department },
@@ -86,6 +79,19 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             "Création de Site Web",
             "GEO - Generative Engine Optimization"
         ],
+        // Provider et lieu réel de l'entité business : Nice, France.
+        "provider": {
+            "@type": "Organization",
+            "@id": "https://indhack.com/#organization",
+            "name": "IndHack",
+            "url": "https://indhack.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Nice",
+                "addressRegion": "Provence-Alpes-Côte d'Azur",
+                "addressCountry": "FR"
+            }
+        },
         "dateModified": new Date().toISOString().split('T')[0],
         "founder": {
             "@type": "Person",
