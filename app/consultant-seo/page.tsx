@@ -4,31 +4,40 @@ import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO freelance — référencement & visibilité IA",
-    description: "Consultante SEO freelance expérimentée. Audit technique, stratégie de contenu, SEO local et visibilité IA (GEO). Résultats mesurables. Devis gratuit.",
-    keywords: ["consultante SEO", "consultant SEO", "consultante SEO local", "expert référencement naturel", "consultant référencement", "consultante SEO France", "expert SEO indépendant", "consultante SEO Nice"],
+    title: "Consultante SEO : audit et stratégie Google | IndHack",
+    description: "Indiana Aflalo accompagne les PME et sites de services en SEO : audit technique, contenu, maillage, autorité et visibilité durable sur Google.",
+    keywords: [
+        "consultante SEO",
+        "consultant SEO",
+        "audit SEO",
+        "stratégie SEO",
+        "référencement naturel",
+        "maillage interne",
+        "Search Console",
+        "consultant référencement"
+    ],
     alternates: {
         canonical: "https://indhack.com/consultant-seo"
     },
     openGraph: {
-        title: "Consultante SEO freelance — référencement & visibilité IA",
-        description: "Consultante SEO freelance expérimentée. Audit technique, SEO local et visibilité IA (GEO) pour booster votre présence sur Google et dans les IA.",
+        title: "Consultante SEO : audit et stratégie Google | IndHack",
+        description: "Une approche SEO technique et éditoriale pour transformer votre visibilité Google en demandes qualifiées.",
         url: "https://indhack.com/consultant-seo",
         type: "website",
         locale: "fr_FR",
         siteName: "IndHack",
         images: [{
-            url: "https://indhack.com/api/og?title=Consultante%20SEO%20Freelance&subtitle=Audit%2C%20strat%C3%A9gie%20et%20optimisation%20pour%20booster%20votre%20visibilit%C3%A9%20Google",
+            url: "https://indhack.com/api/og?title=Consultante%20SEO&subtitle=Audit%2C%20strat%C3%A9gie%20et%20visibilit%C3%A9%20Google%20durable",
             width: 1200,
             height: 630,
-            alt: "Consultante SEO Freelance - IndHack"
+            alt: "Consultante SEO — IndHack"
         }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Consultant SEO Freelance | IndHack",
-        description: "Consultante SEO freelance expérimentée. Résultats mesurables et ROI garanti.",
-        images: ["https://indhack.com/api/og?title=Consultante%20SEO%20Freelance&subtitle=R%C3%A9sultats%20mesurables%20et%20ROI%20garanti"],
+        title: "Consultante SEO : audit et stratégie Google | IndHack",
+        description: "Audit technique, contenu, maillage et suivi Search Console pour transformer la visibilité Google en demandes qualifiées.",
+        images: ["https://indhack.com/api/og?title=Consultante%20SEO&subtitle=Audit%2C%20strat%C3%A9gie%20et%20visibilit%C3%A9%20Google%20durable"],
     },
     robots: {
         index: true,
@@ -40,12 +49,12 @@ export default function ConsultantSEOPage() {
     return (
         <>
             <ServiceSchema
-                name="Consultante SEO Freelance"
-                description="Consultante SEO freelance expérimentée. Audit technique, stratégie de contenu, netlinking. Résultats mesurables et ROI garanti."
+                name="Consultante SEO"
+                description="Audit technique, stratégie de contenu, maillage interne, autorité et suivi Search Console pour les PME et sites de services."
                 url="https://indhack.com/consultant-seo"
                 serviceType="Consultant SEO"
             />
-            <Breadcrumb items={getServiceBreadcrumb("Consultante SEO Freelance", "/consultant-seo")} />
+            <Breadcrumb items={getServiceBreadcrumb("Consultante SEO", "/consultant-seo")} />
             <ConsultantSEOClient />
         </>
     );
