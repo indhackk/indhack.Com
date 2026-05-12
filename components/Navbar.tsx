@@ -13,7 +13,7 @@ const SERVICES = [
     // IA & Automatisation
     { title: "Consultant IA", href: "/consultant-ia", desc: "Automatisez vos process métiers avec l'IA.", category: "ia" },
     // SEO & Référencement
-    { title: "Consultant SEO", href: "/consultant-seo", desc: "Expertise SEO freelance pour votre croissance.", category: "seo" },
+    { title: "Consultant SEO", href: "/consultant-seo", desc: "Accompagnement SEO pour développer votre visibilité.", category: "seo" },
     { title: "Audit SEO", href: "/audit-seo", desc: "Analyse technique et sémantique profonde.", category: "seo" },
     { title: "Référencement Naturel", href: "/referencement-naturel", desc: "Stratégie d'acquisition durable sur Google.", category: "seo" },
     { title: "SEO Local", href: "/consultant-seo", desc: "Dominez Google Maps et le Pack Local.", category: "seo" },

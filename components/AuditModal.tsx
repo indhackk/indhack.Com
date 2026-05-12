@@ -84,7 +84,7 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                     >
                         <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden pointer-events-auto border border-line">
                             <div className="flex items-center justify-between p-6 border-b border-line bg-fond-clair">
-                                <h2 className="text-xl font-heading font-bold text-ink">Demander un Audit Gratuit</h2>
+                                <h2 className="text-xl font-heading font-bold text-ink">Demander un audit SEO</h2>
                                 <button
                                     onClick={onClose}
                                     className="p-2 text-soft hover:text-ink rounded-full hover:bg-gray-100 transition-colors"

@@ -9,7 +9,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const SERVICES = [
-    { title: "Consultant SEO", href: "/consultant-seo", desc: "Expertise SEO freelance pour votre croissance.", category: "seo" },
+    { title: "Consultant SEO", href: "/consultant-seo", desc: "Accompagnement SEO pour développer votre visibilité.", category: "seo" },
     { title: "Audit SEO", href: "/audit-seo", desc: "Analyse technique et sémantique profonde.", category: "seo" },
     { title: "Référencement Naturel", href: "/referencement-naturel", desc: "Stratégie d'acquisition durable sur Google.", category: "seo" },
     { title: "SEO Local", href: "/seo-local", desc: "Dominez Google Maps et le Pack Local.", category: "seo" },
