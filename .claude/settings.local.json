@@ -295,7 +295,8 @@
       "Bash(git fetch *)",
       "Bash(git pull *)",
       "mcp__6ed50d7f-adf4-49b5-b1c3-8825a235c59d__list_deployments",
-      "Bash(node --test tests/external-form-submit.test.cjs)"
+      "Bash(node --test tests/external-form-submit.test.cjs)",
+      "Bash('~/.local/bin/gh' pr *)"
     ]
   }
 }
