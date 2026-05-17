@@ -45,10 +45,31 @@ export async function POST(request: NextRequest) {
 
         const { name, email, phone, company, website, budget, message } = validation.data;
 
-        // Cascade Web3Forms → FormSubmit, isolée des exceptions et avec timeout.
+        const subject = `Nouveau contact IndHack - ${name}${company ? ` (${company})` : ''}`;
+        const plainTextBody = [
+            `Nouveau contact via le formulaire IndHack.`,
+            ``,
+            `Nom : ${name}`,
+            `Email : ${email}`,
+            `Téléphone : ${phone || 'Non renseigné'}`,
+            `Entreprise : ${company || 'Non renseigné'}`,
+            `Site web : ${website || 'Non renseigné'}`,
+            `Budget : ${budget || 'Non renseigné'}`,
+            ``,
+            `--- Message ---`,
+            message,
+        ].join('\n');
+
+        // Cascade Resend → Web3Forms → FormSubmit, isolée des exceptions et avec timeout.
         const result = await deliverFormSubmission({
+            resendPayload: {
+                to: FALLBACK_EMAIL,
+                subject,
+                text: plainTextBody,
+                replyTo: email,
+            },
             web3Payload: {
-                subject: `Nouveau contact IndHack - ${name}${company ? ` (${company})` : ''}`,
+                subject,
                 from_name: name,
                 replyto: email,
                 Nom: name,
@@ -68,7 +89,7 @@ export async function POST(request: NextRequest) {
                 website: website || 'Non renseigné',
                 budget: budget || 'Non renseigné',
                 message,
-                _subject: `Nouveau contact IndHack - ${name}${company ? ` (${company})` : ''}`,
+                _subject: subject,
             },
         });
 

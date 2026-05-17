@@ -16,8 +16,16 @@
  *     (juste le service, le status code et la raison technique).
  */
 
+const RESEND_TIMEOUT_MS = 8000;
 const WEB3FORMS_TIMEOUT_MS = 5000;
 const FORMSUBMIT_TIMEOUT_MS = 8000;
+
+// Adresse expéditeur Resend par défaut. Tant que le domaine indhack.com
+// n'est pas vérifié dans Resend, l'envoi doit partir depuis
+// "onboarding@resend.dev" (compte test). Une fois le domaine vérifié,
+// surcharger via la variable d'environnement RESEND_FROM (par exemple
+// `IndHack <noreply@indhack.com>`).
+const DEFAULT_RESEND_FROM = "IndHack <onboarding@resend.dev>";
 
 /**
  * Lit le body d'une Response de façon défensive : récupère le texte, tente un
@@ -73,9 +81,88 @@ async function fetchWithTimeout(
 
 export type SubmitOutcome = {
     delivered: boolean;
-    service: "web3forms" | "formsubmit" | "none";
+    service: "resend" | "web3forms" | "formsubmit" | "none";
     reason?: string;
 };
+
+export type ResendPayload = {
+    /** Adresse destinataire (toujours fournie côté caller). */
+    to: string;
+    /** Sujet de l'email. */
+    subject: string;
+    /** Corps texte brut. Resend accepte aussi `html` mais on garde simple. */
+    text: string;
+    /** Reply-to optionnel (l'email du visiteur typiquement). */
+    replyTo?: string;
+    /** From optionnel. Sinon utilise RESEND_FROM env var ou le défaut. */
+    from?: string;
+};
+
+/**
+ * Tente Resend. Renvoie toujours un SubmitOutcome, ne throw jamais.
+ *
+ * Resend renvoie HTTP 200 + `{ id: "re_xxx" }` sur succès, ou un payload
+ * `{ name, message, statusCode }` sur erreur. Tant que le domaine n'est
+ * pas vérifié, Resend impose `from: "onboarding@resend.dev"` et `to:
+ * <email du compte Resend>` uniquement.
+ */
+async function tryResend(
+    apiKey: string,
+    payload: ResendPayload,
+): Promise<SubmitOutcome> {
+    try {
+        const body: Record<string, unknown> = {
+            from: payload.from || process.env.RESEND_FROM || DEFAULT_RESEND_FROM,
+            to: payload.to,
+            subject: payload.subject,
+            text: payload.text,
+        };
+        if (payload.replyTo) {
+            body.reply_to = payload.replyTo;
+        }
+
+        const response = await fetchWithTimeout(
+            "https://api.resend.com/emails",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${apiKey}`,
+                },
+                body: JSON.stringify(body),
+            },
+            RESEND_TIMEOUT_MS,
+        );
+
+        const result = await safeReadResponse(response);
+
+        // Resend renvoie { id: "re_xxx" } sur succès en HTTP 200.
+        if (result.ok && result.json && typeof result.json.id === "string") {
+            return { delivered: true, service: "resend" };
+        }
+
+        // Erreur typique : { name: "validation_error", message: "...", statusCode: 422 }
+        const reason =
+            (result.json && typeof result.json.message === "string"
+                ? result.json.message
+                : null) ||
+            (result.json && typeof result.json.name === "string"
+                ? result.json.name
+                : null) ||
+            (result.text ? result.text.slice(0, 120) : null) ||
+            `status ${result.status}`;
+
+        return { delivered: false, service: "resend", reason };
+    } catch (error: unknown) {
+        const reason =
+            error instanceof Error
+                ? error.name === "AbortError"
+                    ? "timeout"
+                    : error.message.slice(0, 120)
+                : "unknown";
+        return { delivered: false, service: "resend", reason };
+    }
+}
 
 /**
  * Tente Web3Forms. Renvoie toujours un SubmitOutcome, ne throw jamais.
@@ -192,15 +279,20 @@ async function tryFormSubmit(
 }
 
 /**
- * Cascade Web3Forms → FormSubmit. Essaie Web3Forms si une clé est définie,
- * sinon ou en cas d'échec, bascule sur FormSubmit.
+ * Cascade Resend → Web3Forms → FormSubmit.
  *
- * @param web3Payload  Payload pour Web3Forms (sans `access_key`, ajouté ici)
+ * Resend est le canal préféré (clé `RESEND_API_KEY`). Si Resend n'est pas
+ * configuré ou échoue, on tente Web3Forms (clé `WEB3FORMS_ACCESS_KEY` ou
+ * `WEBFORM`) puis FormSubmit (toujours, sert de dernier filet).
+ *
+ * @param resendPayload  Payload Resend (subject + text + reply-to + to)
+ * @param web3Payload  Payload Web3Forms (sans `access_key`, ajouté ici)
  * @param formSubmitEmail  Adresse destinataire FormSubmit
- * @param formSubmitPayload  Payload pour FormSubmit
+ * @param formSubmitPayload  Payload FormSubmit
  * @returns Liste des tentatives + verdict final
  */
 export async function deliverFormSubmission(input: {
+    resendPayload?: ResendPayload;
     web3Payload: Record<string, unknown>;
     formSubmitEmail: string;
     formSubmitPayload: Record<string, unknown>;
@@ -210,6 +302,17 @@ export async function deliverFormSubmission(input: {
 }> {
     const attempts: SubmitOutcome[] = [];
 
+    // Étape 1 : Resend (priorité 1, le service le plus fiable)
+    const resendKey = process.env.RESEND_API_KEY;
+    if (resendKey && input.resendPayload) {
+        const resendOutcome = await tryResend(resendKey, input.resendPayload);
+        attempts.push(resendOutcome);
+        if (resendOutcome.delivered) {
+            return { delivered: true, attempts };
+        }
+    }
+
+    // Étape 2 : Web3Forms (fallback historique)
     const web3Key = process.env.WEB3FORMS_ACCESS_KEY || process.env.WEBFORM;
     if (web3Key) {
         const web3Outcome = await tryWeb3Forms(web3Key, input.web3Payload);
@@ -219,6 +322,7 @@ export async function deliverFormSubmission(input: {
         }
     }
 
+    // Étape 3 : FormSubmit (dernier filet)
     const formSubmitOutcome = await tryFormSubmit(
         input.formSubmitEmail,
         input.formSubmitPayload
