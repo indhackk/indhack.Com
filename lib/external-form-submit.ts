@@ -159,7 +159,16 @@ async function tryFormSubmit(
 
         const result = await safeReadResponse(response);
 
-        if (result.ok && result.json && result.json.success !== false) {
+        // FormSubmit /ajax renvoie typiquement {"success":"true","message":...}
+        // (string) ou parfois {"success":true} (boolean) selon la version.
+        // On exige EXPLICITEMENT un success affirmé, pas seulement l'absence
+        // de success=false : sinon un payload {"message":"..."} sans champ
+        // success serait pris pour un envoi réussi alors qu'il ne l'est pas.
+        const successFlag = result.json ? result.json.success : undefined;
+        const isJsonSuccess =
+            successFlag === true || successFlag === "true";
+
+        if (result.ok && isJsonSuccess) {
             return { delivered: true, service: "formsubmit" };
         }
 
