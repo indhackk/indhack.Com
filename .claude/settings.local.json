@@ -280,7 +280,22 @@
       "Bash(node scripts/_test_goai.mjs)",
       "Read(//private/tmp/**)",
       "Bash(cat)",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "mcp__6ed50d7f-adf4-49b5-b1c3-8825a235c59d__get_runtime_logs",
+      "mcp__6ed50d7f-adf4-49b5-b1c3-8825a235c59d__get_project",
+      "Bash(npx tsc *)",
+      "Bash(set -e)",
+      "Bash(rm -rf /tmp/gh-extract)",
+      "Bash(mkdir -p /tmp/gh-extract)",
+      "Bash(unzip -q /tmp/gh.zip -d /tmp/gh-extract/)",
+      "Bash(mkdir -p ~/.local/bin)",
+      "Bash(~/.local/bin/gh auth *)",
+      "Bash('~/.local/bin/gh' pr create --base main --head hotfix/contact-form-500-2026-05-17 --title 'hotfix: stabiliser /api/send-contact et /api/send-audit \\(500 prod\\)' --body ' *)",
+      "Bash(~/.local/bin/gh pr *)",
+      "Bash(git fetch *)",
+      "Bash(git pull *)",
+      "mcp__6ed50d7f-adf4-49b5-b1c3-8825a235c59d__list_deployments",
+      "Bash(node --test tests/external-form-submit.test.cjs)"
     ]
   }
 }
