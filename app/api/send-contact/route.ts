@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { validateContactForm } from '@/lib/validation';
+import { deliverFormSubmission, summarizeAttempts } from '@/lib/external-form-submit';
 
 // Headers de sécurité pour les réponses API
 const securityHeaders = {
@@ -7,6 +8,9 @@ const securityHeaders = {
     'X-Frame-Options': 'DENY',
     'Content-Type': 'application/json',
 };
+
+const FALLBACK_EMAIL = 'contact@indhack.com';
+const FALLBACK_PHONE = '06 61 13 97 48';
 
 export async function POST(request: NextRequest) {
     try {
@@ -41,46 +45,22 @@ export async function POST(request: NextRequest) {
 
         const { name, email, phone, company, website, budget, message } = validation.data;
 
-        // PRIORITÉ: Web3Forms (clé API via variable d'environnement uniquement)
-        const WEB3FORMS_KEY = process.env.WEB3FORMS_ACCESS_KEY || process.env.WEBFORM;
-        if (WEB3FORMS_KEY) {
-            const web3Response = await fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    access_key: WEB3FORMS_KEY,
-                    subject: `🚀 Nouveau contact - ${name}${company ? ` (${company})` : ''}`,
-                    from_name: name,
-                    replyto: email,
-                    Nom: name,
-                    Email: email,
-                    Telephone: phone || 'Non renseigné',
-                    Entreprise: company || 'Non renseigné',
-                    Site_Web: website || 'Non renseigné',
-                    Budget: budget || 'Non renseigné',
-                    Message: message,
-                })
-            });
-
-            const web3Result = await web3Response.json();
-            if (web3Result.success) {
-                return NextResponse.json(
-                    { success: true, message: 'Message envoyé avec succès !' },
-                    { status: 200, headers: securityHeaders }
-                );
-            }
-            console.error('Web3Forms error:', web3Result);
-        }
-
-        // FALLBACK: FormSubmit
-        const FORMSUBMIT_EMAIL = 'contact@indhack.com';
-        const response = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_EMAIL}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
+        // Cascade Web3Forms → FormSubmit, isolée des exceptions et avec timeout.
+        const result = await deliverFormSubmission({
+            web3Payload: {
+                subject: `Nouveau contact IndHack - ${name}${company ? ` (${company})` : ''}`,
+                from_name: name,
+                replyto: email,
+                Nom: name,
+                Email: email,
+                Telephone: phone || 'Non renseigné',
+                Entreprise: company || 'Non renseigné',
+                Site_Web: website || 'Non renseigné',
+                Budget: budget || 'Non renseigné',
+                Message: message,
             },
-            body: JSON.stringify({
+            formSubmitEmail: FALLBACK_EMAIL,
+            formSubmitPayload: {
                 name,
                 email,
                 phone: phone || 'Non renseigné',
@@ -88,31 +68,47 @@ export async function POST(request: NextRequest) {
                 website: website || 'Non renseigné',
                 budget: budget || 'Non renseigné',
                 message,
-                _subject: `Nouveau contact - ${name}${company ? ` (${company})` : ''}`,
-                _template: 'table',
-                _captcha: 'false'
-            })
+                _subject: `Nouveau contact IndHack - ${name}${company ? ` (${company})` : ''}`,
+            },
         });
 
-        const isJson = response.headers.get("content-type")?.includes("application/json");
-        const result = isJson ? await response.json() : null;
+        // Log court côté Vercel sans clé API ni données du visiteur.
+        console.log(summarizeAttempts('contact', result.attempts));
 
-        if (response.ok && result?.success) {
+        if (result.delivered) {
             return NextResponse.json(
-                { success: true, message: 'Message envoyé avec succès !' },
+                { success: true, message: 'Message envoyé avec succès.' },
                 { status: 200, headers: securityHeaders }
             );
         }
 
+        // Tous les services externes ont échoué : 503 (service indisponible)
+        // avec instructions claires pour le visiteur (mail + tel).
         return NextResponse.json(
-            { success: false, error: `Erreur d'envoi. Appelez-nous au 06 61 13 97 48.` },
-            { status: 500, headers: securityHeaders }
+            {
+                success: false,
+                error: `Envoi temporairement indisponible. Écrivez-moi à ${FALLBACK_EMAIL} ou appelez le ${FALLBACK_PHONE}.`,
+                fallback: {
+                    email: FALLBACK_EMAIL,
+                    phone: FALLBACK_PHONE,
+                },
+            },
+            { status: 503, headers: securityHeaders }
         );
 
     } catch (error) {
-        console.error('Contact form error:', error);
+        // Filet ultime : on ne devrait jamais arriver ici grâce au helper,
+        // mais on garde un 500 propre au cas où.
+        console.error('Contact form unexpected error:', error instanceof Error ? error.message : 'unknown');
         return NextResponse.json(
-            { success: false, error: 'Erreur serveur. Veuillez réessayer.' },
+            {
+                success: false,
+                error: `Erreur serveur. Écrivez-moi à ${FALLBACK_EMAIL} ou appelez le ${FALLBACK_PHONE}.`,
+                fallback: {
+                    email: FALLBACK_EMAIL,
+                    phone: FALLBACK_PHONE,
+                },
+            },
             { status: 500, headers: securityHeaders }
         );
     }

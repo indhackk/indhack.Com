@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { validateAuditForm } from '@/lib/validation';
+import { deliverFormSubmission, summarizeAttempts } from '@/lib/external-form-submit';
 
 // Headers de sécurité pour les réponses API
 const securityHeaders = {
@@ -7,6 +8,9 @@ const securityHeaders = {
     'X-Frame-Options': 'DENY',
     'Content-Type': 'application/json',
 };
+
+const FALLBACK_EMAIL = 'contact@indhack.com';
+const FALLBACK_PHONE = '06 61 13 97 48';
 
 export async function POST(request: NextRequest) {
     try {
@@ -40,75 +44,68 @@ export async function POST(request: NextRequest) {
         }
 
         const { name, email, phone, website, message } = validation.data;
+        const finalMessage = message || "Demande d'audit SEO gratuit";
 
-        // PRIORITÉ: Web3Forms (clé API via variable d'environnement uniquement)
-        const WEB3FORMS_KEY = process.env.WEB3FORMS_ACCESS_KEY || process.env.WEBFORM;
-        if (WEB3FORMS_KEY) {
-            const web3Response = await fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    access_key: WEB3FORMS_KEY,
-                    subject: `🎯 Demande d'Audit SEO - ${name}`,
-                    from_name: name,
-                    replyto: email,
-                    Nom: name,
-                    Email: email,
-                    Telephone: phone || 'Non renseigné',
-                    Site_Web: website || 'Non renseigné',
-                    Message: message || 'Demande d\'audit SEO gratuit',
-                })
-            });
-
-            const web3Result = await web3Response.json();
-            if (web3Result.success) {
-                return NextResponse.json(
-                    { success: true, message: 'Demande d\'audit envoyée avec succès !' },
-                    { status: 200, headers: securityHeaders }
-                );
-            }
-            console.error('Web3Forms error:', web3Result);
-        }
-
-        // FALLBACK: FormSubmit
-        const FORMSUBMIT_EMAIL = 'contact@indhack.com';
-        const response = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_EMAIL}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
+        // Cascade Web3Forms → FormSubmit, isolée des exceptions et avec timeout.
+        const result = await deliverFormSubmission({
+            web3Payload: {
+                subject: `Demande d'audit SEO IndHack - ${name}`,
+                from_name: name,
+                replyto: email,
+                Nom: name,
+                Email: email,
+                Telephone: phone || 'Non renseigné',
+                Site_Web: website || 'Non renseigné',
+                Message: finalMessage,
             },
-            body: JSON.stringify({
+            formSubmitEmail: FALLBACK_EMAIL,
+            formSubmitPayload: {
                 name,
                 email,
                 phone: phone || 'Non renseigné',
                 website: website || 'Non renseigné',
-                message: message || 'Demande d\'audit SEO gratuit',
-                _subject: `Demande d'Audit SEO - ${name}`,
-                _template: 'table',
-                _captcha: 'false'
-            })
+                message: finalMessage,
+                _subject: `Demande d'audit SEO IndHack - ${name}`,
+            },
         });
 
-        const isJson = response.headers.get("content-type")?.includes("application/json");
-        const result = isJson ? await response.json() : null;
+        // Log court côté Vercel sans clé API ni données du visiteur.
+        console.log(summarizeAttempts('audit', result.attempts));
 
-        if (response.ok && result?.success) {
+        if (result.delivered) {
             return NextResponse.json(
-                { success: true, message: 'Demande d\'audit envoyée avec succès !' },
+                { success: true, message: "Demande d'audit envoyée avec succès." },
                 { status: 200, headers: securityHeaders }
             );
         }
 
+        // Tous les services externes ont échoué : 503 (service indisponible)
+        // avec instructions claires pour le visiteur (mail + tel).
         return NextResponse.json(
-            { success: false, error: 'Erreur lors de l\'envoi. Appelez-nous au 06 61 13 97 48.' },
-            { status: 500, headers: securityHeaders }
+            {
+                success: false,
+                error: `Envoi temporairement indisponible. Écrivez-moi à ${FALLBACK_EMAIL} ou appelez le ${FALLBACK_PHONE}.`,
+                fallback: {
+                    email: FALLBACK_EMAIL,
+                    phone: FALLBACK_PHONE,
+                },
+            },
+            { status: 503, headers: securityHeaders }
         );
 
     } catch (error: unknown) {
-        console.error('Erreur API audit:', error);
+        // Filet ultime : on ne devrait jamais arriver ici grâce au helper,
+        // mais on garde un 500 propre au cas où.
+        console.error('Audit form unexpected error:', error instanceof Error ? error.message : 'unknown');
         return NextResponse.json(
-            { success: false, error: 'Erreur serveur. Veuillez réessayer.' },
+            {
+                success: false,
+                error: `Erreur serveur. Écrivez-moi à ${FALLBACK_EMAIL} ou appelez le ${FALLBACK_PHONE}.`,
+                fallback: {
+                    email: FALLBACK_EMAIL,
+                    phone: FALLBACK_PHONE,
+                },
+            },
             { status: 500, headers: securityHeaders }
         );
     }
