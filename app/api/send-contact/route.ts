@@ -105,6 +105,10 @@ export async function POST(request: NextRequest) {
 
         // Tous les services externes ont échoué : 503 (service indisponible)
         // avec instructions claires pour le visiteur (mail + tel).
+        // DEBUG TEMPORAIRE 2026-05-12 : on inclut `attempts` dans la réponse
+        // pour diagnostiquer pourquoi Resend décroche en prod. Aucune donnée
+        // visiteur exposée, uniquement les codes d'erreur des services. À
+        // retirer une fois le bug Resend identifié.
         return NextResponse.json(
             {
                 success: false,
@@ -112,6 +116,12 @@ export async function POST(request: NextRequest) {
                 fallback: {
                     email: FALLBACK_EMAIL,
                     phone: FALLBACK_PHONE,
+                },
+                attempts: result.attempts,
+                debug: {
+                    resendKeyPresent: Boolean(process.env.RESEND_API_KEY),
+                    resendFromConfigured: Boolean(process.env.RESEND_FROM),
+                    web3KeyPresent: Boolean(process.env.WEB3FORMS_ACCESS_KEY || process.env.WEBFORM),
                 },
             },
             { status: 503, headers: securityHeaders }
