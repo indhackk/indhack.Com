@@ -46,10 +46,29 @@ export async function POST(request: NextRequest) {
         const { name, email, phone, website, message } = validation.data;
         const finalMessage = message || "Demande d'audit SEO gratuit";
 
-        // Cascade Web3Forms → FormSubmit, isolée des exceptions et avec timeout.
+        const subject = `Demande d'audit SEO IndHack - ${name}`;
+        const plainTextBody = [
+            `Nouvelle demande d'audit SEO via le formulaire IndHack.`,
+            ``,
+            `Nom : ${name}`,
+            `Email : ${email}`,
+            `Téléphone : ${phone || 'Non renseigné'}`,
+            `Site web : ${website || 'Non renseigné'}`,
+            ``,
+            `--- Message ---`,
+            finalMessage,
+        ].join('\n');
+
+        // Cascade Resend → Web3Forms → FormSubmit, isolée des exceptions et avec timeout.
         const result = await deliverFormSubmission({
+            resendPayload: {
+                to: FALLBACK_EMAIL,
+                subject,
+                text: plainTextBody,
+                replyTo: email,
+            },
             web3Payload: {
-                subject: `Demande d'audit SEO IndHack - ${name}`,
+                subject,
                 from_name: name,
                 replyto: email,
                 Nom: name,
@@ -65,7 +84,7 @@ export async function POST(request: NextRequest) {
                 phone: phone || 'Non renseigné',
                 website: website || 'Non renseigné',
                 message: finalMessage,
-                _subject: `Demande d'audit SEO IndHack - ${name}`,
+                _subject: subject,
             },
         });
 
