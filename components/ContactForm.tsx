@@ -6,6 +6,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, Send, Linkedin, CheckCircle2, Clock, Shield, Map } from "lucide-react";
 import Link from "next/link";
+import { safeJsonResponse, buildFallbackMailto } from "@/lib/safe-json-response";
+
+const FALLBACK_EMAIL = "contact@indhack.com";
+const FALLBACK_PHONE = "06 61 13 97 48";
 
 export function ContactForm() {
     const [formData, setFormData] = useState({
@@ -20,11 +24,26 @@ export function ContactForm() {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState("");
+    const [mailtoFallback, setMailtoFallback] = useState("");
+
+    const buildCurrentMailto = (): string =>
+        buildFallbackMailto({
+            to: FALLBACK_EMAIL,
+            subject: `Demande de contact IndHack — ${formData.name || "sans nom"}`,
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            company: formData.company,
+            website: formData.website,
+            budget: formData.budget,
+            message: formData.message,
+        });
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsLoading(true);
         setError("");
+        setMailtoFallback("");
 
         const payload = {
             name: formData.name,
@@ -43,16 +62,23 @@ export function ContactForm() {
                 body: JSON.stringify(payload)
             });
 
-            const result = await response.json();
+            const result = await safeJsonResponse<{ success?: boolean; error?: string }>(response);
 
-            if (result.success) {
+            if (response.ok && result?.success) {
                 setIsSubmitted(true);
                 setFormData({ name: "", email: "", phone: "", company: "", website: "", message: "", budget: "" });
             } else {
-                setError(result.error || "Une erreur est survenue. Réessayez ou appelez-moi au 06 61 13 97 48.");
+                setError(
+                    result?.error ||
+                    `Envoi indisponible pour le moment. Écrivez-moi à ${FALLBACK_EMAIL} ou appelez le ${FALLBACK_PHONE}.`
+                );
+                setMailtoFallback(buildCurrentMailto());
             }
         } catch {
-            setError("Erreur de connexion. Appelez-moi au 06 61 13 97 48.");
+            setError(
+                `Connexion impossible. Écrivez-moi à ${FALLBACK_EMAIL} ou appelez le ${FALLBACK_PHONE}.`
+            );
+            setMailtoFallback(buildCurrentMailto());
         } finally {
             setIsLoading(false);
         }
@@ -308,8 +334,26 @@ export function ContactForm() {
                                     </div>
 
                                     {error && (
-                                        <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
-                                            {error}
+                                        <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm space-y-3">
+                                            <p>{error}</p>
+                                            {mailtoFallback && (
+                                                <div className="flex flex-wrap gap-3 pt-1">
+                                                    <a
+                                                        href={mailtoFallback}
+                                                        className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-red-300 hover:bg-red-100 rounded-lg text-red-800 font-medium transition-colors"
+                                                    >
+                                                        <Mail className="w-4 h-4" />
+                                                        Envoyer par email à la place
+                                                    </a>
+                                                    <a
+                                                        href={`tel:+33${FALLBACK_PHONE.replace(/\s/g, '').slice(1)}`}
+                                                        className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-red-300 hover:bg-red-100 rounded-lg text-red-800 font-medium transition-colors"
+                                                    >
+                                                        <Phone className="w-4 h-4" />
+                                                        {FALLBACK_PHONE}
+                                                    </a>
+                                                </div>
+                                            )}
                                         </div>
                                     )}
 

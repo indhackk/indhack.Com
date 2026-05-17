@@ -2,15 +2,18 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Send, Loader2, CheckCircle, AlertCircle } from "lucide-react";
+import { X, Send, Loader2, CheckCircle, AlertCircle, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { safeJsonResponse, buildFallbackMailto } from "@/lib/safe-json-response";
 
 interface AuditModalProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
+const FALLBACK_EMAIL = "contact@indhack.com";
+const FALLBACK_PHONE = "06 61 13 97 48";
 
 export function AuditModal({ isOpen, onClose }: AuditModalProps) {
     const [formData, setFormData] = useState({
@@ -22,11 +25,24 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [mailtoFallback, setMailtoFallback] = useState("");
+
+    const buildCurrentMailto = (): string =>
+        buildFallbackMailto({
+            to: FALLBACK_EMAIL,
+            subject: `Demande d'audit SEO IndHack — ${formData.name || "sans nom"}`,
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            website: formData.website,
+            message: formData.message || "Demande d'audit SEO depuis indhack.com",
+        });
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
         setSubmitStatus('idle');
+        setMailtoFallback("");
 
         try {
             const response = await fetch('/api/send-audit', {
@@ -41,9 +57,9 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                 })
             });
 
-            const result = await response.json();
+            const result = await safeJsonResponse<{ success?: boolean; error?: string }>(response);
 
-            if (result.success) {
+            if (response.ok && result?.success) {
                 setSubmitStatus('success');
                 setTimeout(() => {
                     setFormData({ name: "", email: "", phone: "", website: "", message: "" });
@@ -51,12 +67,12 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                     onClose();
                 }, 2500);
             } else {
-                console.error('Web3Forms error:', result);
                 setSubmitStatus('error');
+                setMailtoFallback(buildCurrentMailto());
             }
-        } catch (err) {
-            console.error('Fetch error:', err);
+        } catch {
             setSubmitStatus('error');
+            setMailtoFallback(buildCurrentMailto());
         } finally {
             setIsSubmitting(false);
         }
@@ -163,9 +179,29 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                                         </div>
                                     )}
                                     {submitStatus === 'error' && (
-                                        <div className="flex items-center gap-2 p-3 bg-red-50 text-red-700 rounded-lg text-sm">
-                                            <AlertCircle className="w-5 h-5" />
-                                            <span>Erreur d'envoi. Appelez-nous au 06 61 13 97 48</span>
+                                        <div className="p-3 bg-red-50 text-red-700 rounded-lg text-sm space-y-3">
+                                            <div className="flex items-start gap-2">
+                                                <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                                                <span>Envoi indisponible pour le moment. Écrivez-moi directement ou appelez-moi, votre demande reste prioritaire.</span>
+                                            </div>
+                                            <div className="flex flex-wrap gap-2 pl-7">
+                                                {mailtoFallback && (
+                                                    <a
+                                                        href={mailtoFallback}
+                                                        className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-red-300 hover:bg-red-100 rounded-md font-medium text-red-800 transition-colors"
+                                                    >
+                                                        <Mail className="w-4 h-4" />
+                                                        Envoyer par email
+                                                    </a>
+                                                )}
+                                                <a
+                                                    href={`tel:+33${FALLBACK_PHONE.replace(/\s/g, '').slice(1)}`}
+                                                    className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-red-300 hover:bg-red-100 rounded-md font-medium text-red-800 transition-colors"
+                                                >
+                                                    <Phone className="w-4 h-4" />
+                                                    {FALLBACK_PHONE}
+                                                </a>
+                                            </div>
                                         </div>
                                     )}
                                     <Button
