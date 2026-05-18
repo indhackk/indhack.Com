@@ -238,32 +238,33 @@ export default function ConsultantSeoFreelanceClient() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link
-                                    href="/outils/audit-seo-gratuit"
+                                    href="#comparatif"
                                     className="inline-flex items-center justify-center gap-2 bg-sauge hover:bg-sauge/90 text-white px-8 py-4 rounded-xl font-bold transition-all text-lg"
                                 >
-                                    Audit SEO gratuit
+                                    Comparer les options
                                     <ArrowRight className="w-5 h-5" />
                                 </Link>
-                                <a
-                                    href="tel:0661139748"
+                                <Link
+                                    href="/consultant-seo"
                                     className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-xl font-bold transition-all"
                                 >
-                                    <Phone className="w-5 h-5" />
-                                    06 61 13 97 48
-                                </a>
+                                    Voir mon accompagnement SEO
+                                </Link>
                             </div>
+                            {/* Indicateurs informationnels orientés guide,
+                               pas réassurance landing page (cf. brief phase 2). */}
                             <div className="flex flex-wrap gap-6 mt-6 text-sm text-soft-light">
                                 <span className="flex items-center gap-2">
                                     <CheckCircle2 className="w-4 h-4 text-sauge-light" />
-                                    Réponse sous 24h
+                                    Tarifs marché 2026 vérifiés
                                 </span>
                                 <span className="flex items-center gap-2">
                                     <CheckCircle2 className="w-4 h-4 text-sauge-light" />
-                                    Devis gratuit
+                                    7 critères de sélection
                                 </span>
                                 <span className="flex items-center gap-2">
                                     <CheckCircle2 className="w-4 h-4 text-sauge-light" />
-                                    Sans engagement
+                                    Comparatif freelance vs agence
                                 </span>
                             </div>
                         </motion.div>
@@ -355,7 +356,7 @@ export default function ConsultantSeoFreelanceClient() {
             {/* ══════════════════════════════════════════════════════════════ */}
             {/* FREELANCE VS AGENCE — COMPARATIF */}
             {/* ══════════════════════════════════════════════════════════════ */}
-            <section className="py-16 md:py-20 bg-gray-50">
+            <section id="comparatif" className="py-16 md:py-20 bg-gray-50 scroll-mt-24">
                 <div className="container mx-auto px-4">
                     <motion.div {...fadeInUp} className="text-center mb-12">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-4">
