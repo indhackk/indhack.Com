@@ -12,8 +12,6 @@ imageAlt: "Grille de prix création site internet 2026 : de 500€ à 50 000€ 
 readingTime: "10 min"
 ---
 
-# Combien coûte réellement la création d'un site internet en 2026 ?
-
 Le devis le plus bas que j'ai vu l'année dernière ? 300€. Le plus haut pour un projet équivalent en apparence ? 85 000€. L'écart n'est pas irrationnel. C'est simplement le fossé gigantesque entre un "produit bas de gamme bricolé" et une machine digitale ultra-performante sur mesure. 
 
 De nombreuses agences dissimulent soigneusement leur **prix site web**. En tant que consultante, je refuse cette opacité. Mon objectif ? Vous fournir une vision limpide pour structurer exactement votre budget dès la phase d'idée, et ne plus se faire escroquer avec de belles promesses.

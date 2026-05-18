@@ -511,6 +511,50 @@ function countWords(text: string): number {
     return text.split(/\s+/).filter(word => word.length > 0).length;
 }
 
+/**
+ * Valide qu'une string représente une URL http/https atteignable de l'extérieur.
+ * Renvoie l'URL normalisée (avec https:// préfixé si besoin) ou null si invalide.
+ *
+ * Doit être appelée AVANT toute analyse pour éviter qu'une URL bidon
+ * ("not-a-url", "javascript:alert", "ftp://...") ne fasse planter la route
+ * en 500. À la place : 400 propre côté caller.
+ */
+function validatePublicUrl(input: unknown): string | null {
+    if (typeof input !== "string") return null;
+    const trimmed = input.trim();
+    if (!trimmed) return null;
+
+    // Préfixe https si l'utilisateur n'a tapé que le domaine
+    const candidate = /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
+
+    let parsed: URL;
+    try {
+        parsed = new URL(candidate);
+    } catch {
+        return null;
+    }
+
+    // Seulement http/https — pas de javascript:, data:, ftp:, etc.
+    if (parsed.protocol !== "http:" && parsed.protocol !== "https:") return null;
+
+    // Hostname obligatoire et au moins un point (refuse "localhost", "abc")
+    const host = parsed.hostname.toLowerCase();
+    if (!host || !host.includes(".")) return null;
+
+    // Pas d'IPs privées ni de TLDs locaux
+    if (host === "localhost" || host.endsWith(".local") || host.endsWith(".internal")) return null;
+    if (host.startsWith("10.") || host.startsWith("192.168.") || host.startsWith("169.254.")) return null;
+    if (host === "127.0.0.1" || host === "0.0.0.0") return null;
+    // Plage privée 172.16.0.0 — 172.31.255.255
+    const ip172 = host.match(/^172\.(\d+)\./);
+    if (ip172) {
+        const second = parseInt(ip172[1], 10);
+        if (second >= 16 && second <= 31) return null;
+    }
+
+    return parsed.toString();
+}
+
 async function analyzeVisibility(url: string): Promise<VisibilityResult> {
     // Normalize URL
     let normalizedUrl = url.trim();
@@ -1269,16 +1313,20 @@ export async function POST(request: NextRequest) {
         const body = await request.json();
         const { url } = body;
 
-        if (!url || typeof url !== "string") {
-            return NextResponse.json({ error: "URL requise" }, { status: 400 });
+        const validatedUrl = validatePublicUrl(url);
+        if (!validatedUrl) {
+            return NextResponse.json(
+                { error: "URL invalide. Indiquez un domaine ou une URL http(s) publique, par exemple https://votresite.com." },
+                { status: 400 }
+            );
         }
 
-        const cached = getCachedResult(url);
+        const cached = getCachedResult(validatedUrl);
         if (cached) {
             return NextResponse.json(cached);
         }
 
-        const result = await analyzeVisibility(url);
+        const result = await analyzeVisibility(validatedUrl);
         setCachedResult(url, result);
 
         // Sauvegarder le rapport public

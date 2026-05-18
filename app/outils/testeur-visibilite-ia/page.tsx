@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Suspense } from "react";
 import Link from "next/link";
 import { TesteurVisibiliteIA } from "./TesteurVisibiliteIA";
 import { ArrowRight, Bot, Shield, Code2, FileCode, Search, MapPin } from "lucide-react";
@@ -186,7 +187,11 @@ export default function TesteurVisibiliteIAPage() {
                         </div>
 
                         {/* Tool */}
-                        <TesteurVisibiliteIA />
+                        {/* Suspense obligatoire pour le useSearchParams interne
+                           (pré-remplissage du champ via ?domain=... ou ?url=...). */}
+                        <Suspense fallback={<div className="text-soft-light text-sm text-center py-10">Chargement de l&apos;outil…</div>}>
+                            <TesteurVisibiliteIA />
+                        </Suspense>
                     </div>
                 </section>
 

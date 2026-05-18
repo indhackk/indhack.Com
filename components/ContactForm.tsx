@@ -251,8 +251,11 @@ export function ContactForm() {
 
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         <div>
-                                            <label className="block text-sm font-medium text-ink mb-1.5">Nom complet *</label>
+                                            <label htmlFor="contact-name" className="block text-sm font-medium text-ink mb-1.5">Nom complet *</label>
                                             <Input
+                                                id="contact-name"
+                                                name="name"
+                                                autoComplete="name"
                                                 required
                                                 placeholder="Votre nom"
                                                 value={formData.name}
@@ -261,9 +264,13 @@ export function ContactForm() {
                                             />
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-medium text-ink mb-1.5">Email *</label>
+                                            <label htmlFor="contact-email" className="block text-sm font-medium text-ink mb-1.5">Email *</label>
                                             <Input
+                                                id="contact-email"
+                                                name="email"
                                                 type="email"
+                                                autoComplete="email"
+                                                inputMode="email"
                                                 required
                                                 placeholder="votre@email.com"
                                                 value={formData.email}
@@ -275,9 +282,13 @@ export function ContactForm() {
 
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         <div>
-                                            <label className="block text-sm font-medium text-ink mb-1.5">Téléphone</label>
+                                            <label htmlFor="contact-phone" className="block text-sm font-medium text-ink mb-1.5">Téléphone</label>
                                             <Input
+                                                id="contact-phone"
+                                                name="phone"
                                                 type="tel"
+                                                autoComplete="tel"
+                                                inputMode="tel"
                                                 placeholder="06 XX XX XX XX"
                                                 value={formData.phone}
                                                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -285,8 +296,11 @@ export function ContactForm() {
                                             />
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-medium text-ink mb-1.5">Entreprise</label>
+                                            <label htmlFor="contact-company" className="block text-sm font-medium text-ink mb-1.5">Entreprise</label>
                                             <Input
+                                                id="contact-company"
+                                                name="company"
+                                                autoComplete="organization"
                                                 placeholder="Nom de votre entreprise"
                                                 value={formData.company}
                                                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
@@ -296,8 +310,13 @@ export function ContactForm() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-ink mb-1.5">Site web actuel</label>
+                                        <label htmlFor="contact-website" className="block text-sm font-medium text-ink mb-1.5">Site web actuel</label>
                                         <Input
+                                            id="contact-website"
+                                            name="website"
+                                            type="url"
+                                            autoComplete="url"
+                                            inputMode="url"
                                             placeholder="https://..."
                                             value={formData.website}
                                             onChange={(e) => setFormData({ ...formData, website: e.target.value })}
@@ -306,8 +325,10 @@ export function ContactForm() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-ink mb-1.5">Budget envisagé</label>
+                                        <label htmlFor="contact-budget" className="block text-sm font-medium text-ink mb-1.5">Budget envisagé</label>
                                         <select
+                                            id="contact-budget"
+                                            name="budget"
                                             value={formData.budget}
                                             onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                                             className="w-full py-3 px-4 rounded-lg border border-gray-200 focus:border-sauge focus:outline-none bg-white text-ink"
@@ -322,8 +343,11 @@ export function ContactForm() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-ink mb-1.5">Décrivez votre projet *</label>
+                                        <label htmlFor="contact-message" className="block text-sm font-medium text-ink mb-1.5">Décrivez votre projet *</label>
                                         <textarea
+                                            id="contact-message"
+                                            name="message"
+                                            autoComplete="off"
                                             required
                                             rows={4}
                                             placeholder="Vos objectifs, vos défis actuels..."

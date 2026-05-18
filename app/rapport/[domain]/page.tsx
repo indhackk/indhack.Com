@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { getRapport, sanitizeDomain, type RapportData } from "@/lib/rapports";
+import { redirect } from "next/navigation";
+import { sanitizeDomain, type RapportData } from "@/lib/rapports";
 import RapportClient from "./RapportClient";
 
 interface Props {
@@ -50,14 +50,16 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
     const { data: encodedData } = await searchParams;
     const cleanDomain = sanitizeDomain(decodeURIComponent(domain));
 
-    // Essayer d'abord le stockage, puis les données encodées
-    let rapport = getRapport(cleanDomain);
-    if (!rapport && encodedData) {
-        rapport = decodeRapportData(encodedData, cleanDomain);
-    }
+    // Le rapport public ne fonctionne qu'avec les données encodées dans
+    // l'URL (`?data=...`). Le stockage en mémoire / /tmp n'est pas fiable
+    // sur Vercel serverless, donc on n'expose pas de rapport sans data.
+    const rapport = encodedData ? decodeRapportData(encodedData, cleanDomain) : null;
 
     if (!rapport) {
-        return { title: "Rapport introuvable – IndHack" };
+        return {
+            title: "Rapport introuvable – IndHack",
+            robots: { index: false, follow: false },
+        };
     }
 
     const title = `GEO Score de ${cleanDomain} : ${rapport.score}/100 – Rapport IndHack`;
@@ -99,14 +101,19 @@ export default async function RapportPage({ params, searchParams }: Props) {
     const { data: encodedData } = await searchParams;
     const cleanDomain = sanitizeDomain(decodeURIComponent(domain));
 
-    // Essayer d'abord le stockage, puis les données encodées
-    let rapport = getRapport(cleanDomain);
-    if (!rapport && encodedData) {
-        rapport = decodeRapportData(encodedData, cleanDomain);
+    // Sans données encodées dans l'URL, on ne peut pas reconstruire de
+    // rapport fiable (le cache mémoire / /tmp ne survit pas en serverless).
+    // On redirige vers le testeur, domaine pré-rempli, pour que le visiteur
+    // relance un test plutôt que de tomber sur un 404.
+    if (!encodedData) {
+        redirect(`/outils/testeur-visibilite-ia?domain=${encodeURIComponent(cleanDomain)}`);
     }
 
+    const rapport = decodeRapportData(encodedData, cleanDomain);
+
     if (!rapport) {
-        notFound();
+        // Données présentes mais corrompues (encodage cassé) : même fallback
+        redirect(`/outils/testeur-visibilite-ia?domain=${encodeURIComponent(cleanDomain)}`);
     }
 
     return <RapportClient rapport={rapport} />;
