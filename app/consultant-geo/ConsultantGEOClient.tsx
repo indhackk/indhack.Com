@@ -172,10 +172,10 @@ export default function ConsultantGEOClient() {
                                 Consultant GEO &middot; Generative Engine Optimization
                             </p>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
-                                Soyez <span className="text-sauge">cité par ChatGPT</span> et les IA génératives
+                                Soyez <span className="text-sauge-light">cité par ChatGPT</span> et les IA génératives
                             </h1>
-                            <p className="text-xl text-white/80 mb-8 leading-relaxed">
-                                En tant que consultante GEO, j'optimise votre site pour qu'il devienne la <strong>source privilégiée</strong> des intelligences artificielles. Pas juste ranker sur Google — être <strong>cité par ChatGPT, Perplexity et Gemini</strong>.
+                            <p className="text-xl text-white/85 mb-8 leading-relaxed">
+                                En tant que consultante GEO, j&apos;optimise votre site pour devenir <strong className="text-white">une source plus claire, plus fiable et plus facile à citer</strong> par les moteurs de réponse. Pas juste ranker sur Google : être <strong className="text-white">cité par ChatGPT, Perplexity et Gemini</strong>.
                             </p>
 
                             <div className="flex flex-wrap gap-4 mb-8">

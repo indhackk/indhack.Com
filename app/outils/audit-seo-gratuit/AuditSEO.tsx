@@ -325,13 +325,13 @@ export function AuditSEO() {
                             ) : (
                                 <>
                                     <Search className="w-5 h-5" />
-                                    Analyser mon site
+                                    Analyser mon site gratuitement
                                 </>
                             )}
                         </button>
 
                         <p className="text-center text-sm text-soft-light">
-                            Gratuit • Sans inscription • 15 critères analysés dont la compatibilité IA
+                            Gratuit, sans inscription. 15 critères vérifiés dont la compatibilité IA.
                         </p>
                     </form>
 
@@ -429,24 +429,41 @@ export function AuditSEO() {
                         </div>
                     </div>
 
-                    {/* CTA */}
-                    {result.score < 80 && (
-                        <div className="bg-gradient-to-br from-sauge/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl border border-sauge/20 p-8 text-center">
-                            <h3 className="text-2xl font-bold text-white mb-3">
-                                Votre score est de {result.score}/100
-                            </h3>
-                            <p className="text-soft-light mb-6 max-w-xl mx-auto">
-                                Je peux améliorer votre score et booster votre visibilité sur Google et les IA.
-                            </p>
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-colors"
-                            >
-                                Demander un devis gratuit
-                                <ArrowRight className="w-5 h-5" />
-                            </Link>
-                        </div>
-                    )}
+                    {/* CTA contextualisé selon le score (phase 3.4 masterplan) :
+                       - score < 80 : focus correction des blocages
+                       - score >= 80 : focus opportunités au-delà du basique */}
+                    <div className="bg-gradient-to-br from-sauge/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl border border-sauge/20 p-8 text-center">
+                        <h3 className="text-2xl font-bold text-white mb-3">
+                            Votre score est de {result.score}/100
+                        </h3>
+                        {result.score < 80 ? (
+                            <>
+                                <p className="text-soft-light mb-6 max-w-xl mx-auto">
+                                    Plusieurs blocages techniques et éditoriaux limitent votre visibilité. Je peux les diagnostiquer précisément et vous remettre une roadmap priorisée par impact business.
+                                </p>
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-colors"
+                                >
+                                    Corriger les blocages prioritaires
+                                    <ArrowRight className="w-5 h-5" />
+                                </Link>
+                            </>
+                        ) : (
+                            <>
+                                <p className="text-soft-light mb-6 max-w-xl mx-auto">
+                                    Bonne base technique. Au-delà du basique, l&apos;enjeu devient l&apos;analyse des opportunités SEO restantes : intentions de recherche non couvertes, pages à fort potentiel, autorité face aux concurrents.
+                                </p>
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center gap-2 bg-white text-ink px-8 py-4 rounded-full font-bold hover:bg-sauge hover:text-white transition-colors"
+                                >
+                                    Recevoir une analyse des opportunités SEO
+                                    <ArrowRight className="w-5 h-5" />
+                                </Link>
+                            </>
+                        )}
+                    </div>
 
                     {/* Related Tools */}
                     <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 md:p-8">
