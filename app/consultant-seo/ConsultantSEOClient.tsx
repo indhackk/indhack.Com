@@ -266,11 +266,10 @@ export default function ConsultantSEOClient() {
                                 <div className="absolute inset-0 bg-white/10 rounded-3xl transform -rotate-3"></div>
                                 <Image
                                     src="/images/indiana-aflalo-consultante-seo.webp"
-                                    alt="Indiana Aflalo, consultante SEO, basée à Nice"
+                                    alt="Indiana Aflalo, consultante SEO chez IndHack"
                                     fill
                                     sizes="(max-width: 1024px) 0vw, 28rem"
                                     className="object-cover rounded-3xl relative z-10"
-                                    priority
                                 />
                             </div>
                         </motion.div>

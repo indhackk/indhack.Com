@@ -99,8 +99,8 @@ export function ContactForm() {
                             Parlons de votre projet
                         </h1>
                         <p className="text-xl text-white/70 max-w-2xl mx-auto">
-                            Vous cherchez à <strong>dominer Google</strong> dans votre secteur ?
-                            Discutons de votre stratégie de visibilité.
+                            Discutons de votre visibilité : audit, accompagnement mensuel ou conseil ponctuel,
+                            je vous réponds avec une première piste claire.
                         </p>
                     </motion.div>
                 </div>
@@ -109,7 +109,7 @@ export function ContactForm() {
             {/* Contact Section */}
             <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <div className="grid md:grid-cols-5 gap-8 lg:gap-12">
+                    <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
 
                         {/* Contact Info */}
                         <motion.div

@@ -50,6 +50,8 @@ export function Navbar() {
     const pathname = usePathname();
     const servicesTimeoutRef = useRef<NodeJS.Timeout>();
     const toolsTimeoutRef = useRef<NodeJS.Timeout>();
+    const burgerButtonRef = useRef<HTMLButtonElement | null>(null);
+    const closeMenuButtonRef = useRef<HTMLButtonElement | null>(null);
 
     const isLightPage = pathname?.startsWith('/blog');
     const useDarkMenu = isScrolled || isLightPage;
@@ -61,6 +63,45 @@ export function Navbar() {
         window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    // Accessibilité du menu mobile : Escape ferme, focus piégé dedans, lock
+    // scroll body, restauration du focus sur le bouton burger à la fermeture.
+    useEffect(() => {
+        if (!isMobileMenuOpen) return;
+
+        // Snapshot des refs pour la phase cleanup (eslint react-hooks/exhaustive-deps).
+        const burgerButton = burgerButtonRef.current;
+        const closeButton = closeMenuButtonRef.current;
+
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+
+        const focusTimer = window.setTimeout(() => {
+            closeButton?.focus();
+        }, 50);
+
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                event.preventDefault();
+                setIsMobileMenuOpen(false);
+            }
+        };
+        document.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            document.removeEventListener("keydown", handleKeyDown);
+            document.body.style.overflow = previousOverflow;
+            window.clearTimeout(focusTimer);
+            // Restaure le focus sur le bouton burger qui a déclenché l'ouverture.
+            burgerButton?.focus();
+        };
+    }, [isMobileMenuOpen]);
+
+    // Ferme le menu mobile au changement de route. Évite que le menu reste
+    // ouvert quand on clique un lien et que la navigation se fait.
+    useEffect(() => {
+        setIsMobileMenuOpen(false);
+    }, [pathname]);
 
     const handleServicesEnter = () => {
         if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
@@ -243,12 +284,15 @@ export function Navbar() {
 
                         {/* Mobile Menu Button */}
                         <button
+                            ref={burgerButtonRef}
+                            type="button"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             className={`lg:hidden p-3 min-w-[48px] min-h-[48px] flex items-center justify-center rounded-xl transition-colors ${useDarkMenu ? 'text-ink hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}
-                            aria-label="Ouvrir le menu"
+                            aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
                             aria-expanded={isMobileMenuOpen}
+                            aria-controls="mobile-menu"
                         >
-                            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                            {isMobileMenuOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
                         </button>
                     </div>
                 </div>
@@ -256,14 +300,26 @@ export function Navbar() {
 
             {/* Mobile Menu - Extrait de la nav pour éviter le bug de stacking context (transform) */}
             <div
-                className={`lg:hidden fixed inset-0 z-[60] bg-white transition-transform duration-300 ease-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                id="mobile-menu"
+                role="dialog"
+                aria-modal="true"
+                aria-label="Menu de navigation"
+                aria-hidden={!isMobileMenuOpen}
+                {...({ inert: !isMobileMenuOpen ? "" : undefined } as Record<string, string | undefined>)}
+                className={`lg:hidden fixed inset-0 z-[60] bg-white transition-transform duration-300 ease-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full pointer-events-none'
                     }`}
             >
                 <div className="flex flex-col h-full">
                     <div className="flex items-center justify-between p-6 border-b border-line">
                         <span className="font-heading font-bold text-2xl tracking-tighter text-ink">IndHack</span>
-                        <button onClick={() => setIsMobileMenuOpen(false)} className="p-3 min-w-[48px] min-h-[48px] flex items-center justify-center text-ink" aria-label="Fermer le menu">
-                            <X size={28} />
+                        <button
+                            ref={closeMenuButtonRef}
+                            type="button"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="p-3 min-w-[48px] min-h-[48px] flex items-center justify-center text-ink"
+                            aria-label="Fermer le menu"
+                        >
+                            <X size={28} aria-hidden="true" />
                         </button>
                     </div>
 
