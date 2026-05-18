@@ -16,8 +16,9 @@ export function Hero() {
     const [isAnimated, setIsAnimated] = useState(false);
 
     useEffect(() => {
-        // 🚀 PERFORMANCE: Only load 3D on desktop to save mobile data & performance
-        if (window.matchMedia("(min-width: 768px)").matches) {
+        // Only load 3D on real desktop (lg+) pour ne pas dégrader la tablette
+        // où le visuel n'est plus affiché depuis le breakpoint lg:.
+        if (window.matchMedia("(min-width: 1024px)").matches) {
             setShowBrain(true);
         }
         // Trigger animations after initial paint for better LCP
@@ -32,7 +33,7 @@ export function Hero() {
                 <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-sauge/10 rounded-full blur-[150px] mix-blend-screen" />
             </div>
 
-            <div className="container mx-auto px-4 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center py-24">
+            <div className="container mx-auto px-4 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center py-24">
                 {/* Value Proposition - NO animation delay on LCP content */}
                 <div
                     className={`text-center lg:text-left space-y-8 transition-all duration-700 ease-out ${isAnimated ? 'opacity-100 translate-x-0' : 'opacity-100'}`}
@@ -41,14 +42,14 @@ export function Hero() {
                     <h1
                         className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-white"
                     >
-                        Dominez Google.{' '}
-                        <span className="block text-sauge-light">Devenez le N°1.</span>
+                        Gagnez des demandes qualifiées{' '}
+                        <span className="block text-sauge-light">grâce au SEO.</span>
                     </h1>
 
                     <p
                         className={`font-body text-lg lg:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto lg:mx-0 transition-opacity duration-500 ${isAnimated ? 'opacity-100' : 'opacity-90'}`}
                     >
-                        Chaque jour, vos clients cherchent vos services sur Google. Ne les laissez plus à vos concurrents. Je transforme votre site en une <strong className="text-white">Machine d'Acquisition</strong> qui capture vos prospects au moment où ils en ont besoin.
+                        J&apos;aide les PME, indépendants et sites de services à corriger ce qui bloque leur visibilité : technique, contenu, maillage interne, autorité et signaux de confiance.
                     </p>
 
                     <div
@@ -58,7 +59,7 @@ export function Hero() {
                             onClick={openAuditModal}
                             className="bg-white text-black hover:bg-sauge hover:text-white hover:scale-105 shadow-2xl shadow-white/20 rounded-full h-16 px-10 text-base font-bold transition-all duration-300 hover:-translate-y-0.5"
                         >
-                            Audit Gratuit
+                            Demander un audit SEO
                             <ArrowRight className="ml-2 w-5 h-5" />
                         </Button>
 
@@ -68,7 +69,7 @@ export function Hero() {
                             className="flex items-center justify-center gap-3 h-16 px-10 rounded-full border-2 border-white/30 text-white hover:border-sauge hover:bg-white/5 transition-all duration-300 group min-h-[48px]"
                         >
                             <Phone className="w-5 h-5 group-hover:text-sauge-light transition-colors" />
-                            <span className="font-bold text-base">06 61 13 97 48</span>
+                            <span className="font-bold text-base whitespace-nowrap">06 61 13 97 48</span>
                         </a>
                     </div>
 
@@ -76,7 +77,7 @@ export function Hero() {
 
                 {/* 3D Visual - lazy loaded after LCP */}
                 <div
-                    className="hidden md:block md:h-[400px] lg:h-[650px] w-full relative group cursor-grab active:cursor-grabbing"
+                    className="hidden lg:block lg:h-[650px] w-full relative group cursor-grab active:cursor-grabbing"
                 >
                     {showBrain && <BrainCanvas />}
 

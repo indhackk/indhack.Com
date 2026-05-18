@@ -140,8 +140,16 @@ export default function CitationChecker({ domain }: { domain: string }) {
                         {prompts.map((prompt, i) => (
                             <div key={i} className="relative">
                                 <div className="flex items-center gap-2">
-                                    <span className="text-xs text-soft-light w-4 flex-shrink-0">{i + 1}.</span>
+                                    <label
+                                        htmlFor={`citation-prompt-${i}`}
+                                        className="text-xs text-soft-light w-4 flex-shrink-0"
+                                    >
+                                        <span aria-hidden="true">{i + 1}.</span>
+                                        <span className="sr-only">Requête de test {i + 1}</span>
+                                    </label>
                                     <input
+                                        id={`citation-prompt-${i}`}
+                                        name={`prompt-${i + 1}`}
                                         type="text"
                                         value={prompt}
                                         onChange={(e) => updatePrompt(i, e.target.value)}

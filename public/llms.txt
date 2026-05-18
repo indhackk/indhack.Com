@@ -99,6 +99,7 @@ Site web : https://indhack.com
 - /blog/ai-mode-vs-chatgpt-vs-perplexity-comparatif-geo-2026 — Comparatif AI Mode, ChatGPT et Perplexity GEO 2026
 
 - /blog/audit-seo-approfondi-guide-complet — Audit SEO approfondi 2026 : les 12 étapes que les agences sautent
+- /blog/concours-geo-greenred-2026-methode — Méthode du concours GEO GreenRed 2026
 
 ### Audit & Technique SEO
 - /blog/contenu-rapport-audit-seo — Rapport audit SEO : contenu, modèle et exemple 2026
@@ -108,13 +109,14 @@ Site web : https://indhack.com
 
 ### Stratégie SEO
 - /blog/definition-seo-guide-complet — SEO : définition, fonctionnement et guide complet 2026
-- /blog/audit-seo-approfondi-guide-complet — Audit SEO : le point de départ de votre croissance
 - /blog/seo-vs-sea-que-choisir — SEO vs SEA : que choisir pour votre entreprise ?
 - /blog/pourquoi-consultant-seo — Pourquoi faire appel à un consultant SEO en 2026 ?
 
 ### SEO Local
 - /blog/seo-local-nice — SEO local à Nice : dominer le marché azuréen en 2026
+- /blog/seo-strasbourg-guide-pme-alsaciennes-2026 — SEO local à Strasbourg pour PME alsaciennes
 - /blog/google-business-profile-guide-complet — Google Business Profile : le guide complet 2026
+- /blog/optimiser-fiche-gmb-2026 — Optimiser sa fiche GMB en 2026
 - /blog/google-maps-voler-clients-concurrents — Voler les clients de vos concurrents sur Google Maps
 - /blog/etude-restaurants-cote-azur-2026-resume — Étude : 30 % des meilleurs restaurants Google de la Côte d'Azur n'ont pas de site web
 
@@ -122,6 +124,7 @@ Site web : https://indhack.com
 - /blog/comment-creer-site-visible-google — Comment créer un site Internet visible sur Google en 2026 ?
 - /blog/prix-creation-site-internet-2026 — Prix création site internet 2026 : combien ça coûte vraiment ?
 - /blog/refonte-site-web-sans-perdre-seo — Checklist SEO refonte site : 45 points à vérifier [2026]
+- /blog/checklist-seo-refonte-site — Checklist SEO refonte site complète
 - /blog/programmatic-seo-50-pages-locales — Programmatic SEO : créer 50 pages locales en 10 minutes
 
 ### Métier & Formation

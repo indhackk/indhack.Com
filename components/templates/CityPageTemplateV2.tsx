@@ -696,10 +696,10 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                 <div className="container mx-auto px-4 max-w-3xl">
                     <div className="bg-ink p-10 rounded-2xl text-white text-center">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
-                            Prêt à dominer Google à <span className="text-sauge-light">{city}</span> ?
+                            Vous voulez obtenir plus de demandes locales à <span className="text-sauge-light">{city}</span> ?
                         </h2>
                         <p className="text-soft-light mb-8 max-w-lg mx-auto text-sm">
-                            Audit SEO local offert. Découvrez votre potentiel de croissance en 15 minutes.
+                            Premier diagnostic SEO local gratuit. Échangeons sur votre marché à {city} et les leviers prioritaires.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
                             <Button

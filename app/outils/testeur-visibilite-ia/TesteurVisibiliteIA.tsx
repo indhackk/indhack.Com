@@ -356,8 +356,15 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                     <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 md:p-8">
                         <div className="flex flex-col md:flex-row gap-4">
                             <div className="flex-1 relative">
+                                <label htmlFor="visibility-url" className="sr-only">
+                                    URL du site à tester
+                                </label>
                                 <input
-                                    type="text"
+                                    id="visibility-url"
+                                    name="url"
+                                    type="url"
+                                    inputMode="url"
+                                    autoComplete="url"
                                     value={url}
                                     onChange={(e) => setUrl(e.target.value)}
                                     className="w-full px-5 py-4 text-lg text-center bg-white/5 border border-white/20 rounded-xl focus:border-sauge focus:ring-2 focus:ring-sauge/20 transition-all text-white placeholder-white/40"
@@ -530,14 +537,22 @@ Testez votre site → https://indhack.com/outils/testeur-visibilite-ia`;
                                             </Link>
                                             <div className="flex items-center gap-3">
                                                 <span className="text-xs text-soft-light/50">Badge embarquable :</span>
-                                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                                <img
-                                                    src={`/api/badge/${domain}`}
-                                                    alt={`GEO Score ${result.score}/100`}
-                                                    width={160}
-                                                    height={32}
-                                                    className="rounded"
-                                                />
+                                                {/* Le badge SVG est délibérément neutre (pas de score),
+                                                    parce qu'un score passé en query serait falsifiable.
+                                                    Le clic mène au testeur, qui recalcule le score en temps réel. */}
+                                                <Link
+                                                    href={`/outils/testeur-visibilite-ia?url=${encodeURIComponent(domain)}`}
+                                                    aria-label={`Tester la visibilité IA de ${domain}`}
+                                                >
+                                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                    <img
+                                                        src={`/api/badge/${domain}`}
+                                                        alt={`Badge audit visibilité IA IndHack pour ${domain}`}
+                                                        width={240}
+                                                        height={48}
+                                                        className="rounded"
+                                                    />
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>

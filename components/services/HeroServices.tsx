@@ -37,7 +37,7 @@ export function HeroServices({ title, subtitle, category, image, customVisual }:
                             <span className="text-sauge font-black text-xs uppercase tracking-[0.2em]">{category}</span>
                         </div>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white leading-[0.9] uppercase tracking-tighter mb-8">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white leading-[1.05] tracking-tight mb-8">
                             {title}
                         </h1>
 
@@ -48,9 +48,9 @@ export function HeroServices({ title, subtitle, category, image, customVisual }:
                         <div className="flex flex-col sm:flex-row gap-5">
                             <Button
                                 onClick={openAuditModal}
-                                className="bg-sauge text-white hover:bg-white hover:text-ink rounded-full px-10 py-8 font-black tracking-wider shadow-2xl shadow-sauge/20 transition-all group"
+                                className="bg-sauge text-white hover:bg-white hover:text-ink rounded-full px-10 py-8 font-bold tracking-wide shadow-2xl shadow-sauge/20 transition-all group"
                             >
-                                DEMANDER UN AUDIT PRO
+                                Demander un audit SEO
                                 <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Button>
                         </div>

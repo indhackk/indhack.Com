@@ -245,11 +245,49 @@ export default function BlogPostPage({ params }: PageProps) {
                             <ReactMarkdown>{post.description}</ReactMarkdown>
                         </div>
 
+                        {/* CTA PDF spécial pour l'article "modèle de rapport d'audit SEO".
+                           L'intention de recherche est claire (téléchargement), on met le
+                           lien direct avant l'image hero pour ne pas faire scroller. */}
+                        {params.slug === "contenu-rapport-audit-seo" && (
+                            <div className="mb-10 bg-sauge/5 border border-sauge/20 rounded-2xl p-5 sm:p-6">
+                                <p className="text-xs font-bold text-sauge uppercase tracking-wider mb-3">
+                                    Téléchargement direct
+                                </p>
+                                <ul className="space-y-2 text-soft">
+                                    <li>
+                                        <a
+                                            href="/downloads/modele-rapport-audit-seo-2026.pdf"
+                                            className="inline-flex items-center gap-2 font-medium text-ink hover:text-sauge underline underline-offset-4"
+                                        >
+                                            Télécharger le modèle de rapport d&apos;audit SEO (PDF)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="/downloads/grille-evaluation-rapport-seo-2026.pdf"
+                                            className="inline-flex items-center gap-2 font-medium text-ink hover:text-sauge underline underline-offset-4"
+                                        >
+                                            Télécharger la grille d&apos;évaluation (PDF)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            href="/audit-seo"
+                                            className="inline-flex items-center gap-2 font-medium text-ink hover:text-sauge underline underline-offset-4"
+                                        >
+                                            Voir la prestation d&apos;audit SEO professionnel
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
+
                         <div className="relative h-[300px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
                             <Image
                                 src={post.image}
                                 alt={post.imageAlt || post.title}
                                 fill
+                                sizes="(max-width: 1024px) 100vw, 896px"
                                 className="object-cover"
                                 priority
                             />
@@ -325,6 +363,7 @@ export default function BlogPostPage({ params }: PageProps) {
                                                 src="/images/indiana-aflalo.jpg"
                                                 alt="Indiana Aflalo"
                                                 fill
+                                                sizes="40px"
                                                 className="object-cover"
                                             />
                                         </div>
