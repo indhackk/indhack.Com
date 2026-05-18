@@ -173,11 +173,15 @@ export default function LivreBlancPage() {
                                 <span className="cover-meta-category">Generative Engine Optimization</span>
                             </div>
 
-                            <h1 className="cover-title">
+                            {/* Ce bloc est utilisé pour la cover print (PDF).
+                               Il est masqué côté web via .print-only-cover { display: none }
+                               sauf en @media print. On utilise <p> et non <h1> pour ne pas
+                               créer un second H1 dans le DOM HTML (le vrai H1 web est plus bas). */}
+                            <p className="cover-title">
                                 Première
                                 <span className="cover-title-em">au premier concours GEO</span>
                                 <span className="cover-title-sub">avec un site jeune et un seul domaine.</span>
-                            </h1>
+                            </p>
 
                             <p className="cover-subtitle">
                                 La méthode complète qui m&apos;a placée première au concours GreenRed 2026, devant des participants installés

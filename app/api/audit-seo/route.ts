@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import * as cheerio from "cheerio";
+import { getCrawlerStatus, isSiteFullyBlocked } from "@/lib/robots-parser";
 
 // Simple in-memory rate limiting and cache
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -369,6 +370,8 @@ async function analyzeURL(url: string): Promise<AuditResult> {
     });
 
     // 11. Robots.txt
+    // Parser robots.txt par groupe user-agent pour ne pas matcher
+    // `Disallow: /api/*` comme un blocage global, bug initial du tool.
     let robotsTxt = "";
     let hasRobotsTxt = false;
     let blocksAll = false;
@@ -377,8 +380,7 @@ async function analyzeURL(url: string): Promise<AuditResult> {
         if (robotsResponse.ok) {
             robotsTxt = await robotsResponse.text();
             hasRobotsTxt = true;
-            blocksAll = robotsTxt.toLowerCase().includes("disallow: /") &&
-                robotsTxt.toLowerCase().includes("user-agent: *");
+            blocksAll = isSiteFullyBlocked(robotsTxt);
         }
     } catch {
         hasRobotsTxt = false;
@@ -461,17 +463,18 @@ async function analyzeURL(url: string): Promise<AuditResult> {
             : undefined,
     });
 
-    // 15. AI Crawlers (check robots.txt)
+    // 15. AI Crawlers (check robots.txt via parser propre)
+    // On considère un crawler "autorisé" si son statut est "allowed" ou
+    // "not_mentioned" (le robots.txt ne le bloque pas spécifiquement).
     let aiCrawlersAllowed = 0;
     const aiCrawlerResults: string[] = [];
     for (const crawler of AI_CRAWLERS) {
-        const isBlocked = robotsTxt.toLowerCase().includes(`user-agent: ${crawler.agent.toLowerCase()}`) &&
-            robotsTxt.toLowerCase().includes("disallow: /");
-        if (!isBlocked) {
+        const status = getCrawlerStatus(robotsTxt, crawler.agent);
+        if (status === "blocked") {
+            aiCrawlerResults.push(`${crawler.name}: ✗`);
+        } else {
             aiCrawlersAllowed++;
             aiCrawlerResults.push(`${crawler.name}: ✓`);
-        } else {
-            aiCrawlerResults.push(`${crawler.name}: ✗`);
         }
     }
     criteria.push({

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Bot,
@@ -255,6 +256,14 @@ export function TesteurVisibiliteIA() {
     const [error, setError] = useState<string | null>(null);
     const [copiedLink, setCopiedLink] = useState(false);
     const [copiedResult, setCopiedResult] = useState(false);
+
+    // Pré-remplit le champ avec ?domain=... ou ?url=... (utilisé notamment
+    // quand /rapport/[domain] sans data redirige ici).
+    const searchParams = useSearchParams();
+    useEffect(() => {
+        const fromQuery = searchParams.get("domain") || searchParams.get("url");
+        if (fromQuery) setUrl(fromQuery);
+    }, [searchParams]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();

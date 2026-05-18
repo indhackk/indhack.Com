@@ -24,23 +24,43 @@ function isRateLimited(ip: string): boolean {
     return record.count > MAX_REQUESTS;
 }
 
-// Génère le token attendu (doit matcher celui de l'API)
-function generateExpectedToken(password: string): string {
-    // Simple hash pour Edge Runtime (pas de crypto.createHmac)
-    // Le vrai hash est généré côté API, ici on vérifie juste le format
-    const encoder = new TextEncoder();
-    const data = encoder.encode(password + 'indhack-admin-session');
-    let hash = 0;
-    for (let i = 0; i < data.length; i++) {
-        const char = data[i];
-        hash = ((hash << 5) - hash) + char;
-        hash = hash & hash;
-    }
-    return Math.abs(hash).toString(16).padStart(16, '0');
+// Routes admin neutralisées par défaut en production. Indiana n'utilise pas
+// le back-office Keystatic en production, donc on bloque proprement plutôt
+// que de maintenir une auth fragile. Si besoin de réactiver un jour, mettre
+// la variable d'environnement ADMIN_ENABLED=true sur Vercel.
+const ADMIN_ENABLED = process.env.ADMIN_ENABLED === 'true';
+
+function isAdminPath(pathname: string): boolean {
+    return (
+        pathname.startsWith('/keystatic') ||
+        pathname.startsWith('/dashboard') ||
+        pathname === '/admin-login' ||
+        pathname.startsWith('/api/admin-auth')
+    );
+}
+
+function blockAdminResponse(): NextResponse {
+    // 404 propre, non indexable. On préfère 404 à 403 pour ne pas révéler
+    // qu'une zone admin existe.
+    return new NextResponse('Not Found', {
+        status: 404,
+        headers: {
+            'X-Robots-Tag': 'noindex, nofollow',
+            'Content-Type': 'text/plain; charset=utf-8',
+            'Cache-Control': 'no-store',
+        },
+    });
 }
 
 export function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl;
+
+    // Si l'admin est désactivé (cas par défaut en prod), on 404 toutes les
+    // routes admin avant même de regarder les cookies. Plus rien à indexer,
+    // plus rien à brute-forcer.
+    if (!ADMIN_ENABLED && isAdminPath(pathname)) {
+        return blockAdminResponse();
+    }
 
     // Rate limiting pour les APIs
     if (pathname.startsWith('/api/')) {
@@ -56,7 +76,7 @@ export function middleware(request: NextRequest) {
         }
     }
 
-    // Protection des routes admin
+    // Protection des routes admin (uniquement si ADMIN_ENABLED=true)
     if (pathname.startsWith('/keystatic') || pathname.startsWith('/dashboard')) {
         const authCookie = request.cookies.get('admin_auth');
 
@@ -76,6 +96,7 @@ export const config = {
     matcher: [
         '/keystatic/:path*',
         '/dashboard/:path*',
+        '/admin-login',
         '/api/:path*',
     ],
 };
