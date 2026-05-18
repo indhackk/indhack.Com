@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { AuditSEO } from "./AuditSEO";
 import { ArrowRight, Search, Bot, Code2, FileCode, Gauge, TrendingUp, Zap, Target, MapPin } from "lucide-react";
+import { AuditClusterDisambiguation } from "@/components/seo/AuditClusterDisambiguation";
 
 export const metadata: Metadata = {
     title: "Audit SEO gratuit : calculez votre score en 3 secondes",
@@ -475,6 +476,15 @@ export default function AuditSEOPage() {
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                </section>
+
+                {/* Bloc désambiguïsation cluster audit SEO (phase 2 masterplan).
+                   Cette page est l'outil gratuit, on propose les 3 autres
+                   entrées du cluster (prestation pro, méthode, modèle PDF). */}
+                <section className="py-16 bg-ink border-t border-white/5">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                        <AuditClusterDisambiguation exclude="outil" variant="dark" />
                     </div>
                 </section>
 

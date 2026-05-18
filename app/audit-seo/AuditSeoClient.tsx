@@ -11,6 +11,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
+import { AuditClusterDisambiguation } from "@/components/seo/AuditClusterDisambiguation";
 import { FRENCH_CITIES } from "@/lib/cities-data";
 
 // Toutes les villes actives (19) — priorité SEO local par département
@@ -610,6 +611,15 @@ export default function AuditSeoClient() {
                             <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
                     </div>
+                </div>
+            </section>
+
+            {/* Bloc désambiguïsation cluster audit SEO (phase 2 masterplan).
+               Cette page est la prestation pro, on propose les 3 autres
+               entrées du cluster aux visiteurs qui cherchaient autre chose. */}
+            <section className="py-12 bg-white">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <AuditClusterDisambiguation exclude="prestation" />
                 </div>
             </section>
 
