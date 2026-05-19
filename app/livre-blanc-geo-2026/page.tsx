@@ -61,16 +61,18 @@ const articleSchema = {
     dateModified: "2026-04-24",
     author: {
         "@type": "Person",
+        "@id": "https://indhack.com/#indiana-aflalo",
         name: "Indiana Aflalo",
         url: "https://indhack.com/a-propos",
-        jobTitle: "Consultante SEO et GEO indépendante",
+        jobTitle: "Consultante SEO & Experte GEO",
         sameAs: [
-            "https://www.linkedin.com/in/indianaaflalo/",
+            "https://www.linkedin.com/in/indianaaflalo",
             "https://github.com/indhack",
             "https://huggingface.co/datasets/indhack/vultifrine-study",
         ],
         worksFor: {
             "@type": "Organization",
+            "@id": "https://indhack.com/#organization",
             name: "IndHack",
             url: "https://indhack.com",
         },
@@ -1501,10 +1503,11 @@ Contact : contact@indhack.com`}</pre>
       "author": {
         "@type": "Person",
         "name": "Indiana Aflalo",
+        "@id": "https://indhack.com/#indiana-aflalo",
         "url": "https://indhack.com/a-propos",
-        "jobTitle": "Consultante SEO et GEO",
+        "jobTitle": "Consultante SEO & Experte GEO",
         "sameAs": [
-          "https://www.linkedin.com/in/indianaaflalo/",
+          "https://www.linkedin.com/in/indianaaflalo",
           "https://github.com/indhack"
         ]
       },

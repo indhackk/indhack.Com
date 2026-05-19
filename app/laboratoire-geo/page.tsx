@@ -36,10 +36,11 @@ const articleSchema = {
     "dateModified": "2026-04-17",
     "author": {
         "@type": "Person",
+        "@id": "https://indhack.com/#indiana-aflalo",
         "name": "Indiana Aflalo",
         "url": "https://indhack.com/a-propos",
-        "jobTitle": "Consultant SEO & GEO",
-        "sameAs": ["https://www.linkedin.com/in/indiana-aflalo/"]
+        "jobTitle": "Consultante SEO & Experte GEO, directrice du laboratoire Indhack",
+        "sameAs": ["https://www.linkedin.com/in/indianaaflalo"]
     },
     "publisher": {
         "@type": "Organization",

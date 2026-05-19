@@ -35,7 +35,7 @@ const articleSchema = {
         "@type": "Person",
         "name": "Indiana Aflalo",
         "url": "https://indhack.com/a-propos",
-        "jobTitle": "Consultante SEO & GEO"
+        "jobTitle": "Consultante SEO & Experte GEO"
     },
     "publisher": {
         "@type": "Organization",

@@ -48,7 +48,7 @@ export default function BarometreVisibiliteIA() {
                             "@type": "Person",
                             "name": "Indiana Aflalo",
                             "url": "https://indhack.com/a-propos",
-                            "jobTitle": "Consultante SEO & GEO"
+                            "jobTitle": "Consultante SEO & Experte GEO"
                         },
                         "publisher": {
                             "@type": "Organization",

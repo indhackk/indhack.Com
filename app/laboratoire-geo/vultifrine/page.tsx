@@ -43,11 +43,12 @@ const articleSchema = {
     "dateModified": "2026-04-17",
     "author": {
         "@type": "Person",
+        "@id": "https://indhack.com/#indiana-aflalo",
         "name": "Indiana Aflalo",
         "url": "https://indhack.com/a-propos",
-        "jobTitle": "Consultante SEO & GEO, directrice du laboratoire Indhack",
+        "jobTitle": "Consultante SEO & Experte GEO, directrice du laboratoire Indhack",
         "sameAs": [
-            "https://www.linkedin.com/in/indiana-aflalo/",
+            "https://www.linkedin.com/in/indianaaflalo",
             "https://www.youtube.com/watch?v=waf8t-9rNhg",
             "https://medium.com/@indiana-aflalo",
             "https://dev.to/indiana-aflalo",
@@ -55,11 +56,12 @@ const articleSchema = {
         ],
         "worksFor": {
             "@type": "Organization",
+            "@id": "https://indhack.com/#organization",
             "name": "IndHack",
             "url": "https://indhack.com"
         }
     },
-    "publisher": { "@type": "Organization", "name": "IndHack", "url": "https://indhack.com" },
+    "publisher": { "@type": "Organization", "@id": "https://indhack.com/#organization", "name": "IndHack", "url": "https://indhack.com" },
     "mainEntityOfPage": "https://indhack.com/laboratoire-geo/vultifrine",
     "speakable": {
         "@type": "SpeakableSpecification",
@@ -267,9 +269,9 @@ const scholarlyArticleSchema = {
     },
     "author": {
         "@type": "Person",
-        "@id": "https://indhack.com/a-propos#indiana-aflalo",
+        "@id": "https://indhack.com/#indiana-aflalo",
         "name": "Indiana Aflalo",
-        "jobTitle": "Directrice du laboratoire Indhack",
+        "jobTitle": "Consultante SEO & Experte GEO, directrice du laboratoire Indhack",
         "affiliation": {
             "@type": "ResearchOrganization",
             "@id": "https://indhack.com/#laboratoire-indhack",

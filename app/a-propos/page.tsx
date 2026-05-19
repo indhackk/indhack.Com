@@ -1,6 +1,15 @@
 import { Metadata } from "next";
 import { AboutContent } from "@/components/AboutContent";
 import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
+import {
+    INDIANA_PERSON_ID,
+    INDIANA_NAME,
+    INDIANA_JOB_TITLE,
+    INDIANA_LINKEDIN_URL,
+    INDHACK_ORG_ID,
+    INDHACK_BRAND_NAME,
+    INDHACK_URL,
+} from "@/lib/entity";
 
 export const metadata: Metadata = {
     title: "À propos — Indiana Aflalo, consultante SEO | IndHack",
@@ -10,30 +19,33 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "À propos | IndHack - Consultante SEO",
-        description: "Spécialiste du référencement naturel, j'aide les entreprises à dominer Google et transformer leur visibilité en clients.",
+        description: "Consultante SEO indépendante, j'aide les PME et sites de services à transformer leur visibilité Google en demandes qualifiées.",
         url: "https://indhack.com/a-propos",
     }
 };
 
-// Person Schema pour E-E-A-T
+// Person Schema pour E-E-A-T — utilise l'entité canonique partagée
+// (cf. lib/entity.ts, phase 4.1 du masterplan) pour ne pas créer un
+// doublon Person dans le graph JSON-LD du site.
 const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://indhack.com/a-propos#person",
-    "name": "Indiana Aflalo",
-    "jobTitle": "Consultante SEO",
+    "@id": INDIANA_PERSON_ID,
+    "name": INDIANA_NAME,
+    "jobTitle": INDIANA_JOB_TITLE,
     "description": "Consultante SEO indépendante spécialisée en référencement naturel, audit technique et stratégie digitale. 7+ ans d'expérience, 50+ clients accompagnés.",
     "url": "https://indhack.com/a-propos",
     "image": "https://indhack.com/images/indiana-aflalo.jpg",
     "email": "contact@indhack.com",
     "telephone": "+33661139748",
     "sameAs": [
-        "https://www.linkedin.com/in/indianaaflalo"
+        INDIANA_LINKEDIN_URL,
     ],
     "worksFor": {
         "@type": "Organization",
-        "name": "IndHack",
-        "url": "https://indhack.com"
+        "@id": INDHACK_ORG_ID,
+        "name": INDHACK_BRAND_NAME,
+        "url": INDHACK_URL,
     },
     "knowsAbout": [
         "Référencement naturel (SEO)",

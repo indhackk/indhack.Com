@@ -21,9 +21,9 @@ const orgSchema = {
     "foundingDate": "2024",
     "founder": {
         "@type": "Person",
-        "@id": "https://indhack.com/a-propos#indiana-aflalo",
+        "@id": "https://indhack.com/#indiana-aflalo",
         "name": "Indiana Aflalo",
-        "jobTitle": "Directrice du laboratoire Indhack, consultante SEO & GEO",
+        "jobTitle": "Consultante SEO & Experte GEO, directrice du laboratoire Indhack",
         "url": "https://indhack.com/a-propos"
     },
     "address": {
@@ -43,22 +43,23 @@ const orgSchema = {
     "publishingPrinciples": "https://indhack.com/laboratoire-geo",
     "sameAs": [
         "https://indhack.com",
-        "https://www.linkedin.com/in/indiana-aflalo"
+        "https://www.linkedin.com/in/indianaaflalo"
     ]
 };
 
 const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://indhack.com/a-propos#indiana-aflalo",
+    "@id": "https://indhack.com/#indiana-aflalo",
     "name": "Indiana Aflalo",
-    "jobTitle": "Directrice du laboratoire Indhack",
+    "jobTitle": "Consultante SEO & Experte GEO, directrice du laboratoire Indhack",
     "worksFor": {
         "@type": "ResearchOrganization",
         "@id": "https://indhack.com/#laboratoire-indhack",
         "name": "Laboratoire Indhack"
     },
     "url": "https://indhack.com/a-propos",
+    "sameAs": ["https://www.linkedin.com/in/indianaaflalo"],
     "knowsAbout": ["Vultifrine", "GEO", "SEO", "Actifs cosmétiques"]
 };
 

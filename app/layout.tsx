@@ -94,8 +94,9 @@ const organizationSchema = {
     "description": "Consultante SEO et experte en acquisition digitale. Accompagnement personnalisé pour PME et startups : audit SEO, référencement naturel, création de sites web optimisés.",
     "founder": {
         "@type": "Person",
+        "@id": "https://indhack.com/#indiana-aflalo",
         "name": "Indiana Aflalo",
-        "jobTitle": "Consultante SEO & Experte Acquisition Digitale"
+        "jobTitle": "Consultante SEO & Experte GEO"
     },
     "sameAs": [
         "https://www.linkedin.com/in/indianaaflalo",
@@ -209,6 +210,7 @@ const localBusinessSchema = {
     },
     "founder": {
         "@type": "Person",
+        "@id": "https://indhack.com/#indiana-aflalo",
         "name": "Indiana Aflalo",
         "jobTitle": "Consultante SEO & Experte GEO",
         "sameAs": [
