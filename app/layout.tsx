@@ -102,7 +102,7 @@ const organizationSchema = {
         "https://www.linkedin.com/in/indianaaflalo",
         "https://www.youtube.com/watch?v=waf8t-9rNhg",
         "https://www.malt.fr/profile/indianaaflalo",
-        "https://github.com/indhack",
+        "https://github.com/indhackk",
         "https://www.data.gouv.fr/organizations/indhack"
     ],
     "aggregateRating": {
@@ -285,7 +285,7 @@ export default function RootLayout({
                             "https://www.linkedin.com/in/indianaaflalo",
                             "https://www.youtube.com/watch?v=waf8t-9rNhg",
                             "https://www.malt.fr/profile/indianaaflalo",
-                            "https://github.com/indhack",
+                            "https://github.com/indhackk",
                             "https://www.data.gouv.fr/organizations/indhack"
                         ],
                         "knowsAbout": [

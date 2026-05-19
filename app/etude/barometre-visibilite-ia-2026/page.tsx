@@ -46,12 +46,14 @@ export default function BarometreVisibiliteIA() {
                         "dateModified": "2026-03-10",
                         "author": {
                             "@type": "Person",
+                            "@id": "https://indhack.com/#indiana-aflalo",
                             "name": "Indiana Aflalo",
                             "url": "https://indhack.com/a-propos",
                             "jobTitle": "Consultante SEO & Experte GEO"
                         },
                         "publisher": {
                             "@type": "Organization",
+                            "@id": "https://indhack.com/#organization",
                             "name": "IndHack",
                             "url": "https://indhack.com",
                             "logo": {
@@ -79,6 +81,7 @@ export default function BarometreVisibiliteIA() {
                         "url": "https://indhack.com/etude/barometre-visibilite-ia-2026",
                         "creator": {
                             "@type": "Person",
+                            "@id": "https://indhack.com/#indiana-aflalo",
                             "name": "Indiana Aflalo",
                             "url": "https://indhack.com/a-propos"
                         },

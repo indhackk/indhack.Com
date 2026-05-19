@@ -39,7 +39,7 @@ const articleSchema = {
         "@id": "https://indhack.com/#indiana-aflalo",
         "name": "Indiana Aflalo",
         "url": "https://indhack.com/a-propos",
-        "jobTitle": "Consultante SEO & Experte GEO, directrice du laboratoire Indhack",
+        "jobTitle": "Consultante SEO & Experte GEO, directrice du laboratoire IndHack",
         "sameAs": ["https://www.linkedin.com/in/indianaaflalo"]
     },
     "publisher": {

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description:
         "Livre blanc complet par Indiana Aflalo, gagnante du Concours GEO GreenRed 2026. 12 chapitres, méthode reproductible, schemas JSON LD, check list 30 actions. Sans black hat.",
     alternates: { canonical: "https://indhack.com/livre-blanc-geo-2026" },
-    authors: [{ name: "Indiana Aflalo, laboratoire Indhack", url: "https://indhack.com/a-propos" }],
+    authors: [{ name: "Indiana Aflalo, laboratoire IndHack", url: "https://indhack.com/a-propos" }],
     openGraph: {
         title: "Livre blanc GEO 2026 par Indiana Aflalo, gagnante du Concours GEO GreenRed",
         description:
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         "article:published_time": "2026-04-24",
         "article:modified_time": "2026-04-24",
         "article:section": "Generative Engine Optimization",
-        "article:tag": "GEO, livre blanc, concours GreenRed, vultifrine, laboratoire Indhack",
+        "article:tag": "GEO, livre blanc, concours GreenRed, vultifrine, laboratoire IndHack",
     },
     robots: { index: true, follow: true },
 };
@@ -67,7 +67,7 @@ const articleSchema = {
         jobTitle: "Consultante SEO & Experte GEO",
         sameAs: [
             "https://www.linkedin.com/in/indianaaflalo",
-            "https://github.com/indhack",
+            "https://github.com/indhackk",
             "https://huggingface.co/datasets/indhack/vultifrine-study",
         ],
         worksFor: {
@@ -79,7 +79,7 @@ const articleSchema = {
     },
     publisher: {
         "@type": "Organization",
-        name: "Laboratoire Indhack",
+        name: "Laboratoire IndHack",
         url: "https://indhack.com",
         logo: {
             "@type": "ImageObject",
@@ -98,11 +98,11 @@ const articleSchema = {
         "ScholarlyArticle schema",
         "Wikidata GEO",
         "BLUF format",
-        "laboratoire Indhack",
+        "laboratoire IndHack",
     ],
     citation: {
         "@type": "CreativeWork",
-        name: "Étude de cas vultifrine, laboratoire Indhack",
+        name: "Étude de cas vultifrine, laboratoire IndHack",
         url: "https://indhack.com/laboratoire-geo/vultifrine",
     },
     isBasedOn: "https://indhack.com/laboratoire-geo/vultifrine",
