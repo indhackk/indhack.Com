@@ -358,13 +358,13 @@ export default function LaboratoireGeoClient() {
                                         </div>
 
                                         <h3 className="font-heading text-2xl sm:text-3xl text-ink font-bold mb-4 group-hover:text-sauge transition-colors">
-                                            Vultifrine : guide complet de l'actif cosmétique végétal
+                                            Vultifrine : corpus expérimental de visibilité IA
                                         </h3>
 
                                         <p className="text-soft leading-relaxed text-lg mb-6">
-                                            Étude de cas complète autour d'un ingrédient cosmétique fictif.
+                                            Étude de cas complète autour d'un mot fictif.
                                             Optimisation des extraits pour citation IA, tableaux de données structurées,
-                                            schémas JSON-LD enrichis (Article, FAQPage, Product).
+                                            schémas JSON-LD explicites (Article, FAQPage, DefinedTerm, Dataset).
                                         </p>
 
                                         {/* AI Platforms */}
