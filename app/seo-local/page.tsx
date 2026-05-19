@@ -9,30 +9,30 @@ import { Breadcrumb, getServiceBreadcrumb } from "@/components/Breadcrumb";
 import { ServiceSchema } from "@/components/seo/JsonLdSchemas";
 
 export const metadata: Metadata = {
-    title: "SEO Local | Dominez Google Maps & le Pack Local – IndHack",
-    description: "Consultante SEO locale experte sur toutes les grandes villes françaises. Référencement géolocalisé pour PME. Audit gratuit.",
+    title: "SEO local : stratégie Google Maps et visibilité locale | IndHack",
+    description: "Consultante SEO locale sur toutes les grandes villes françaises. Stratégie Google Maps, Google Business Profile et requêtes géolocalisées pour PME.",
     alternates: {
         canonical: "https://indhack.com/seo-local"
     },
     openGraph: {
-        title: "SEO Local France | IndHack",
-        description: "Expertise en référencement local sur toute la France. Boostez votre visibilité Google dans votre ville.",
+        title: "SEO local : stratégie Google Maps et visibilité locale | IndHack",
+        description: "Stratégie de référencement local sur toute la France : Google Maps, Pack Local, fiche Google Business Profile et requêtes géolocalisées.",
         url: "https://indhack.com/seo-local",
         type: "website",
         locale: "fr_FR",
         siteName: "IndHack",
         images: [{
-            url: "https://indhack.com/api/og?title=SEO%20Local%20France&subtitle=Dominez%20Google%20Maps%20dans%20votre%20ville",
+            url: "https://indhack.com/api/og?title=SEO%20local&subtitle=Strat%C3%A9gie%20Google%20Maps%20et%20visibilit%C3%A9%20locale",
             width: 1200,
             height: 630,
-            alt: "SEO Local France"
+            alt: "SEO local — IndHack"
         }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "SEO Local France",
-        description: "Dominez les résultats Google dans votre ville. 18+ villes couvertes.",
-        images: ["https://indhack.com/api/og?title=SEO%20Local%20France&subtitle=18%2B%20villes%20couvertes"],
+        title: "SEO local : stratégie Google Maps | IndHack",
+        description: "Stratégie SEO local sur toute la France. 19 villes couvertes, focus Côte d'Azur.",
+        images: ["https://indhack.com/api/og?title=SEO%20local&subtitle=19%20villes%20couvertes"],
     },
 };
 
@@ -68,12 +68,12 @@ export default function SeoLocalPage() {
                             <span className="block">partout en France</span>
                         </h1>
                         <p className="text-xl text-soft-light mb-10 max-w-2xl mx-auto">
-                            Dominez les résultats Google dans votre ville. Expertise locale, stratégie sur-mesure et résultats mesurables pour votre entreprise.
+                            Gagnez des demandes locales sur Google et Google Maps : stratégie sur-mesure, fiche Google Business Profile optimisée et contenu géolocalisé pour votre zone de chalandise.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
                             <Link href="/contact">
                                 <Button className="bg-sauge text-white hover:bg-white hover:text-ink rounded-full px-8 py-6 font-bold">
-                                    Demander un Audit
+                                    Demander un audit SEO local
                                     <ArrowRight className="ml-2 w-4 h-4" />
                                 </Button>
                             </Link>
@@ -120,7 +120,7 @@ export default function SeoLocalPage() {
                             Les <span className="text-sauge">3 piliers</span> du SEO Local
                         </h2>
                         <p className="text-soft max-w-2xl mx-auto">
-                            Une méthodologie éprouvée pour dominer les recherches géolocalisées et attirer des clients de votre zone de chalandise.
+                            Une méthodologie éprouvée pour ressortir sur les recherches géolocalisées et attirer des clients de votre zone de chalandise.
                         </p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -494,15 +494,15 @@ export default function SeoLocalPage() {
             <section className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4 max-w-3xl text-center">
                     <h2 className="text-3xl font-heading font-bold text-ink mb-4">
-                        Prêt à <span className="text-sauge">dominer</span> votre marché local ?
+                        Vous voulez gagner plus de demandes locales&nbsp;?
                     </h2>
                     <p className="text-soft mb-8">
-                        Audit SEO local offert. Découvrez votre potentiel de croissance en 15 minutes.
+                        Premier diagnostic SEO local gratuit. Échangeons sur votre marché et les leviers prioritaires en 15 minutes.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link href="/contact">
                             <Button className="bg-sauge text-white hover:bg-ink rounded-full px-10 py-6 font-bold">
-                                Demander un Audit Gratuit
+                                Demander un audit SEO local
                                 <ArrowRight className="ml-2 w-4 h-4" />
                             </Button>
                         </Link>

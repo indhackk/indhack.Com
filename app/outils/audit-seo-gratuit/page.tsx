@@ -5,15 +5,15 @@ import { ArrowRight, Search, Bot, Code2, FileCode, Gauge, TrendingUp, Zap, Targe
 import { AuditClusterDisambiguation } from "@/components/seo/AuditClusterDisambiguation";
 
 export const metadata: Metadata = {
-    title: "Audit SEO gratuit : calculez votre score en 3 secondes",
-    description: "Analysez votre site avec notre outil d'audit SEO gratuit. Score /100, 15 critères vérifiés dont compatibilité IA. Analyse seo gratuite sans inscription.",
+    title: "Audit SEO gratuit en ligne : score + erreurs à corriger",
+    description: "Collez une URL : l'outil vérifie title, meta, H1, sitemap, robots.txt, images alt et crawlers IA. Score sur 100 et erreurs à corriger, sans inscription.",
     keywords: ["audit seo gratuit", "analyse seo gratuit", "audit site gratuit", "analyseur seo", "test seo gratuit", "outil audit seo"],
     alternates: {
         canonical: "https://indhack.com/outils/audit-seo-gratuit"
     },
     openGraph: {
-        title: "Audit SEO gratuit — analyse de site en 30 secondes",
-        description: "Outil d'analyse SEO gratuit : 15 critères vérifiés, score /100, compatibilité IA. Sans inscription. L'analyseur SEO français de référence.",
+        title: "Audit SEO gratuit en ligne : score + erreurs à corriger",
+        description: "15 critères vérifiés (technique, contenu, accessibilité, crawlers IA), score sur 100 et liste d'erreurs à corriger. Gratuit, sans inscription.",
         url: "https://indhack.com/outils/audit-seo-gratuit",
         type: "website",
     }
@@ -43,7 +43,7 @@ const RELATED_TOOLS = [
 const FAQ_ITEMS = [
     {
         question: "Qu'est-ce qu'un audit SEO ?",
-        answer: "Un audit SEO est une analyse complète de votre site web pour identifier les problèmes techniques, de contenu et de référencement qui peuvent affecter votre visibilité sur Google et les moteurs de recherche. Cet outil analyse 15 critères essentiels en quelques secondes."
+        answer: "Un audit SEO est une analyse complète de votre site web pour identifier les problèmes techniques, de contenu et de référencement qui peuvent affecter votre visibilité sur Google et les moteurs de recherche. Cet outil analyse 15 critères essentiels et vous renvoie un score sur 100 ainsi que la liste des erreurs à corriger."
     },
     {
         question: "Combien de critères sont analysés ?",
@@ -160,13 +160,13 @@ export default function AuditSEOPage() {
                         <div className="max-w-3xl mx-auto text-center mb-10">
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-sauge/20 border border-sauge/30 rounded-full text-sauge text-sm font-bold mb-4">
                                 <Gauge className="w-4 h-4" />
-                                <span className="uppercase tracking-wider text-xs">Score /100 en 30 secondes</span>
+                                <span className="uppercase tracking-wider text-xs">Score sur 100 · sans inscription</span>
                             </div>
                             <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
-                                Audit SEO <span className="text-sauge">Gratuit</span>
+                                Audit SEO gratuit <span className="text-sauge-light">de votre page</span>
                             </h1>
                             <p className="text-soft-light text-lg">
-                                Analysez votre site en 1 clic. 15 critères vérifiés dont la compatibilité avec les crawlers IA.
+                                Collez une URL. L&apos;outil vérifie title, meta, H1, sitemap, robots.txt, images alt et crawlers IA. Résultat gratuit, sans inscription.
                             </p>
                         </div>
 

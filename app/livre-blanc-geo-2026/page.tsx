@@ -252,6 +252,28 @@ export default function LivreBlancPage() {
                         avec un écart confortable sur le reste du classement. Le tout en partant d&apos;un site jeune, sans autorité historique établie, sans techniques black hat.
                     </p>
 
+                    {/* CTAs above the fold (phase 3.12 masterplan) :
+                       le livre blanc se lit en 2h30 et est gratuit, on doit
+                       proposer dès le hero le téléchargement PDF et le test
+                       de visibilité IA — sinon les deux actions étaient
+                       reléguées à la ligne 1574, au milieu de la conclusion. */}
+                    <div className="flex flex-col sm:flex-row gap-3 mb-10">
+                        <a
+                            href="/downloads/livre-blanc-geo-2026-indhack.pdf"
+                            className="inline-flex items-center justify-center gap-2 bg-sauge hover:bg-ink text-white px-6 py-3.5 rounded-xl font-bold transition-all"
+                        >
+                            <Download className="w-5 h-5" aria-hidden="true" />
+                            Télécharger le PDF
+                        </a>
+                        <Link
+                            href="/outils/testeur-visibilite-ia"
+                            className="inline-flex items-center justify-center gap-2 bg-white border-2 border-line hover:border-sauge text-ink px-6 py-3.5 rounded-xl font-semibold transition-all"
+                        >
+                            Tester ma visibilité IA
+                            <ArrowRight className="w-5 h-5" aria-hidden="true" />
+                        </Link>
+                    </div>
+
                     <div className="bg-gradient-to-br from-sauge/5 to-fond-clair border border-line rounded-2xl p-8 mb-10">
                         <p className="text-ink text-lg leading-relaxed italic font-heading mb-4">
                             <Quote className="inline w-6 h-6 text-sauge mr-2 align-top" />
