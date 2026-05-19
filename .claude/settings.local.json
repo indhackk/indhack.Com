@@ -299,18 +299,7 @@
       "Bash('~/.local/bin/gh' pr *)",
       "Bash(node --test tests/robots-parser.test.cjs)",
       "Bash(sed -n '34,38p;66,70p' lib/blog.ts)",
-      "Bash(sed -n '44,46p' components/Hero.tsx)",
-      "Bash(git branch *)",
-      "Bash(sed -n '12p' app/seo-local/page.tsx)",
-      "Bash(sed -n '8p' app/outils/audit-seo-gratuit/page.tsx)",
-      "Bash(sed -n '49,53p' app/etude/barometre-visibilite-ia-2026/page.tsx)",
-      "Bash(sed -n '1503,1508p' app/livre-blanc-geo-2026/page.tsx)",
-      "Bash(sed -n '877,884p' app/consultant-geo/ConsultantGEOClient.tsx)",
-      "Bash(sed -n '49,53p' app/etudes/restaurants-cote-azur-google-2026/page.tsx)",
-      "Bash(sed -n '38,45p' app/laboratoire-geo/page.tsx)",
-      "Bash(sed -n '22,35p' components/laboratoire-geo/AboutIndhackLab.tsx)",
-      "Bash(sed -n '52,60p' components/laboratoire-geo/AboutIndhackLab.tsx)",
-      "Bash(gh pr create --title 'Phase 4.1 — entité unifiée Indiana / IndHack \\(JSON-LD\\)' --body ' *)"
+      "Bash(sed -n '44,46p' components/Hero.tsx)"
     ]
   }
 }
