@@ -24,7 +24,7 @@ const ORGANIZATION_DATA = {
     sameAs: [
         "https://www.linkedin.com/in/indianaaflalo",
         "https://www.malt.fr/profile/indianaaflalo",
-        "https://github.com/indhack"
+        "https://github.com/indhackk"
     ],
     knowsAbout: [
         "Search Engine Optimization",

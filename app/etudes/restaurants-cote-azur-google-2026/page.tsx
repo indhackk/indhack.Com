@@ -47,8 +47,9 @@ export default function EtudeRestaurantsCoteAzur() {
                         "author": {
                             "@type": "Person",
                             "name": "Indiana Aflalo",
+                            "@id": "https://indhack.com/#indiana-aflalo",
                             "url": "https://indhack.com/a-propos",
-                            "jobTitle": "Consultante SEO"
+                            "jobTitle": "Consultante SEO & Experte GEO"
                         },
                         "publisher": {
                             "@type": "Organization",

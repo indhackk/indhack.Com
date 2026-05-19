@@ -875,9 +875,10 @@ export default function ConsultantGEOClient() {
                         "serviceType": "Consultant GEO - Generative Engine Optimization",
                         "provider": {
                             "@type": "Person",
+                            "@id": "https://indhack.com/#indiana-aflalo",
                             "name": "Indiana Aflalo",
-                            "jobTitle": "Consultante GEO & SEO",
-                            "url": "https://indhack.com",
+                            "jobTitle": "Consultante SEO & Experte GEO",
+                            "url": "https://indhack.com/a-propos",
                             "sameAs": [
                                 "https://www.linkedin.com/in/indianaaflalo"
                             ]

@@ -94,14 +94,15 @@ const organizationSchema = {
     "description": "Consultante SEO et experte en acquisition digitale. Accompagnement personnalisé pour PME et startups : audit SEO, référencement naturel, création de sites web optimisés.",
     "founder": {
         "@type": "Person",
+        "@id": "https://indhack.com/#indiana-aflalo",
         "name": "Indiana Aflalo",
-        "jobTitle": "Consultante SEO & Experte Acquisition Digitale"
+        "jobTitle": "Consultante SEO & Experte GEO"
     },
     "sameAs": [
         "https://www.linkedin.com/in/indianaaflalo",
         "https://www.youtube.com/watch?v=waf8t-9rNhg",
         "https://www.malt.fr/profile/indianaaflalo",
-        "https://github.com/indhack",
+        "https://github.com/indhackk",
         "https://www.data.gouv.fr/organizations/indhack"
     ],
     "aggregateRating": {
@@ -209,6 +210,7 @@ const localBusinessSchema = {
     },
     "founder": {
         "@type": "Person",
+        "@id": "https://indhack.com/#indiana-aflalo",
         "name": "Indiana Aflalo",
         "jobTitle": "Consultante SEO & Experte GEO",
         "sameAs": [
@@ -283,7 +285,7 @@ export default function RootLayout({
                             "https://www.linkedin.com/in/indianaaflalo",
                             "https://www.youtube.com/watch?v=waf8t-9rNhg",
                             "https://www.malt.fr/profile/indianaaflalo",
-                            "https://github.com/indhack",
+                            "https://github.com/indhackk",
                             "https://www.data.gouv.fr/organizations/indhack"
                         ],
                         "knowsAbout": [
