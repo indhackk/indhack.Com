@@ -12,13 +12,15 @@ readingTime: "10 min"
 draft: false
 ---
 
-Une [étude publiée sur arXiv le 13 mai 2026](https://arxiv.org/abs/2605.14021) vient confirmer ce que beaucoup de SEO observent déjà sur le terrain : **être bien classé dans Google ne garantit pas d’être cité dans AI Overviews**. Les chercheurs ont analysé 55 393 requêtes tendance sur 40 jours, entre le 13 mars et le 21 avril 2026. Leur conclusion la plus utile pour les professionnels du search : près de **30 % des domaines cités par AI Overviews n’apparaissent pas dans les résultats de première page affichés à côté**.
+Une étude publiée le 13 mai 2026 vient confirmer ce que beaucoup de SEO observent déjà sur le terrain : **être bien classé dans Google ne garantit pas d’être cité dans AI Overviews**. Les chercheurs ont analysé 55 393 requêtes tendance sur 40 jours, entre le 13 mars et le 21 avril 2026. Leur conclusion la plus utile pour les professionnels du search : près de **30 % des sources AI Overviews** ne viennent pas des résultats de première page affichés à côté.
 
 Ce chiffre change la manière de travailler. Pendant des années, le réflexe était simple : viser le top 3, puis capter le clic. Avec **AI Overviews**, Google produit une réponse synthétique et sélectionne ses sources selon une logique qui ne se limite plus au classement organique classique.
 
 Pour un site jeune ou une marque en construction, c’est une information importante. La visibilité ne dépend plus uniquement de l’autorité globale du domaine. Une page très claire, bien sourcée et bien reliée au reste du site peut gagner une place dans la synthèse.
 
-> **À retenir :** le top 10 Google reste important, mais il n’est plus suffisant. Pour apparaître dans **AI Overviews**, une page doit aussi être claire, récente, vérifiable, facile à citer et cohérente avec d’autres sources. Si vous voulez mesurer votre exposition IA, commencez par le [testeur de visibilité IA](/outils/testeur-visibilite-ia), puis complétez avec une vraie stratégie de [GEO](/consultant-geo).
+Pour [IndHack](/), l’enjeu est clair : le [**référencement naturel**](/referencement-naturel) reste la base, mais les marques doivent aussi apprendre à devenir des sources fiables pour les réponses générées. C’est exactement le lien entre une stratégie de [**consultante SEO**](/consultant-seo) et une vraie démarche de [**consultante GEO**](/consultant-geo).
+
+> **À retenir :** le top 10 Google reste important, mais il n’est plus suffisant. Pour apparaître dans **AI Overviews**, une page doit aussi être claire, récente, vérifiable, facile à citer et cohérente avec d’autres sources. Si vous voulez mesurer votre exposition IA, commencez par le [testeur de visibilité IA](/outils/testeur-visibilite-ia).
 
 ## Sommaire
 
@@ -32,7 +34,7 @@ Pour un site jeune ou une marque en construction, c’est une information import
 
 ## Ce que dit l’étude de mai 2026 {#ce-que-dit-letude}
 
-L’article scientifique “Measuring Google AI Overviews: Activation, Source Quality, Claim Fidelity, and Publisher Impact” a été soumis sur arXiv le 13 mai 2026. Les auteurs ont lancé **55 393 requêtes** dans 19 catégories et ont observé les réponses AI Overviews sur une fenêtre de 40 jours.
+L’article scientifique [“Measuring Google AI Overviews: Activation, Source Quality, Claim Fidelity, and Publisher Impact”](https://arxiv.org/abs/2605.14021) a été soumis sur arXiv le 13 mai 2026. Les auteurs ont lancé **55 393 requêtes** dans 19 catégories et ont observé les réponses AI Overviews sur une fenêtre de 40 jours.
 
 Trois chiffres ressortent :
 
@@ -110,7 +112,7 @@ Deux sources fiables valent mieux que dix liens posés en vrac. Sur un sujet sen
 
 ### 5. Vérifier l’accessibilité IA
 
-Avant d’optimiser le contenu, vérifiez que les crawlers peuvent accéder à vos pages. Un contenu parfait mais inaccessible reste invisible. C’est exactement le rôle du [testeur de visibilité IA](/outils/testeur-visibilite-ia).
+Avant d’optimiser le contenu, vérifiez que les crawlers peuvent accéder à vos pages. Un contenu parfait mais inaccessible reste invisible. Commencez par contrôler le robots.txt, puis utilisez un [générateur de robots.txt](/outils/generateur-robots-txt) si vous devez clarifier les accès autorisés.
 
 ### 6. Créer une preuve courte sur les pages business
 
@@ -118,7 +120,7 @@ Sur une page commerciale, ajoutez un mini-bloc factuel : résultat client, donn�
 
 ## Comment éviter la cannibalisation SEO/GEO {#eviter-la-cannibalisation}
 
-Le piège serait de créer dix articles “comment apparaître dans AI Overviews” qui se marchent dessus. Pour éviter ça, chaque page doit avoir un rôle.
+Le piège serait de créer dix articles “comment apparaître dans AI Overviews” qui se marchent dessus. Pour éviter ça, chaque page doit avoir un rôle. Ici, l’intention ciblée est volontairement étroite : **AI Overviews hors top 10** et sélection des sources, pas un guide général sur la visibilité IA.
 
 Une page pilier peut viser l’intention large : comment être visible dans les IA. Un article d’actualité comme celui-ci doit viser une intention plus précise : **sources AI Overviews hors top 10**.
 
@@ -129,7 +131,7 @@ Le maillage doit refléter cette hiérarchie :
 - l’outil permet de tester ;
 - la page service transforme le besoin en accompagnement.
 
-Concrètement, cet article ne doit pas remplacer une page de [consultante GEO](/consultant-geo). Il doit nourrir la preuve et orienter vers la bonne suite.
+Concrètement, cet article ne doit pas remplacer la page **consultante GEO**. Il doit nourrir la preuve, renforcer la crédibilité de l’expertise et orienter vers la bonne suite sans créer une deuxième page business concurrente.
 
 ## Ce qu’il faut mesurer dans Search Console {#search-console}
 

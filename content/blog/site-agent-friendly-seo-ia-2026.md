@@ -12,11 +12,13 @@ readingTime: "10 min"
 draft: false
 ---
 
-Les moteurs de recherche ne sont plus les seuls à parcourir votre site. En 2026, les **agents IA** commencent à naviguer, cliquer, comparer, remplir des formulaires et récupérer des informations comme le ferait un utilisateur. Google a publié sur web.dev un guide consacré aux [sites “agent-friendly”](https://web.dev/articles/ai-agent-site-ux), c’est-à-dire aux sites suffisamment clairs, accessibles et prévisibles pour être utilisés par des agents automatisés.
+Les moteurs de recherche ne sont plus les seuls à parcourir votre site. En 2026, les **agents IA** commencent à naviguer, cliquer, comparer, remplir des formulaires et récupérer des informations comme le ferait un utilisateur. Google a publié sur web.dev un guide consacré aux sites “agent-friendly”, c’est-à-dire aux sites suffisamment clairs, accessibles et prévisibles pour être utilisés par des agents automatisés.
 
 Pour le SEO, c’est un signal faible aujourd’hui, mais probablement un signal fort demain. Un site difficile à comprendre pour un humain pressé est souvent difficile à exploiter pour une IA. Et un site difficile à exploiter par une IA a moins de chances d’être cité, recommandé ou utilisé dans un parcours de recherche génératif.
 
-> **À retenir :** un site **agent-friendly** n’est pas un site “optimisé pour les robots” au détriment des humains. C’est un site lisible, accessible, rapide, sémantique et prévisible. Si vous voulez vérifier vos bases, commencez par un [audit SEO gratuit](/outils/audit-seo-gratuit), puis testez votre exposition avec le [testeur de visibilité IA](/outils/testeur-visibilite-ia).
+Sur [IndHack](/), je le vois comme un vrai sujet de **SEO IA** : une page doit être lisible par Google, utile pour l’humain, et suffisamment structurée pour les agents. C’est aussi un point à intégrer dans une stratégie de [**consultante SEO**](/consultant-seo), surtout avant une refonte ou une création de site.
+
+> **À retenir :** un **site agent-friendly** n’est pas un site “optimisé pour les robots” au détriment des humains. C’est un site lisible, accessible, rapide, sémantique et prévisible. Si vous voulez vérifier vos bases, commencez par un [audit SEO gratuit](/outils/audit-seo-gratuit), puis testez votre exposition avec le [testeur de visibilité IA](/outils/testeur-visibilite-ia).
 
 ## Sommaire
 
@@ -30,7 +32,7 @@ Pour le SEO, c’est un signal faible aujourd’hui, mais probablement un signal
 
 ## Qu’est-ce qu’un site agent-friendly ? {#quest-ce-quun-site-agent-friendly}
 
-Un site **agent-friendly** est un site qu’un agent IA peut comprendre et parcourir sans se perdre. Cela concerne la structure HTML, l’accessibilité, les formulaires, les liens, les contenus, les messages d’erreur et la stabilité de l’interface.
+Un site **agent-friendly** est un site qu’un agent IA peut comprendre et parcourir sans se perdre. Cela concerne la structure HTML, l’accessibilité, les formulaires, les liens, les contenus, les messages d’erreur et la stabilité de l’interface. La recommandation web.dev sur les [sites “agent-friendly”](https://web.dev/articles/ai-agent-site-ux) va dans ce sens : rendre les parcours plus prévisibles, plus lisibles et moins fragiles.
 
 Un agent IA ne “voit” pas votre site comme vous le voyez. Il interprète des signaux : titres, boutons, labels, liens, zones de formulaire, ordre du DOM, textes alternatifs, états d’erreur, contenu visible et parfois rendu navigateur.
 
@@ -61,7 +63,7 @@ Pour un site de service, c’est critique. Si demain un agent IA compare plusieu
 
 Un site “joli” mais flou perdra contre un site plus simple, plus clair et mieux structuré.
 
-Si vous êtes en train de créer ou refondre un site, c’est le bon moment pour intégrer ces exigences. Une [création de site web](/creation-site-web) pensée SEO/IA dès le départ coûte toujours moins cher qu’une correction après coup. Même logique pour une [refonte de site web](/refonte-site-web) : l’agent-friendly doit être traité avant la mise en ligne, pas après la perte de trafic.
+Si vous êtes en train de créer ou refondre un site, c’est le bon moment pour intégrer ces exigences. Une [**création de site web**](/creation-site-web) pensée **SEO IA** dès le départ coûte toujours moins cher qu’une correction après coup. Même logique pour une [**refonte de site web**](/refonte-site-web) : l’agent-friendly doit être traité avant la mise en ligne, pas après la perte de trafic.
 
 ## Les quick wins techniques {#quick-wins-techniques}
 
@@ -165,7 +167,7 @@ Voici la logique que je recommande :
 - les outils permettent de tester ;
 - les pages GEO approfondissent la visibilité dans les réponses IA.
 
-Cet article ne remplace donc pas une page de [consultante GEO](/consultant-geo). Il sert de passerelle entre SEO technique, UX et IA. Pour un diagnostic complet, il faut croiser les signaux : accessibilité, crawl, données structurées, performance, maillage et contenu.
+Cet article ne remplace donc pas une page de [consultante GEO](/consultant-geo). Il sert de passerelle entre **SEO technique**, UX et IA. Pour un diagnostic complet, il faut croiser les signaux : accessibilité, crawl, données structurées, performance, maillage et contenu.
 
 Le bon maillage est simple :
 
