@@ -153,12 +153,12 @@ function LyonCustomContent() {
                 </div>
             </section>
 
-            {/* Section Pourquoi freelance vs agence */}
+            {/* Section Pourquoi consultante indépendante vs agence */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO freelance</span> plutôt qu'une agence lyonnaise ?
+                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence lyonnaise ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -168,7 +168,7 @@ function LyonCustomContent() {
                                         Lyon compte des dizaines d'agences web et SEO. Elles facturent entre <strong>1 500€ et 6 000€/mois</strong> avec souvent un junior qui découvre votre dossier et une rotation d'interlocuteurs qui vous fait répéter vos objectifs.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO freelance</Link> avec une expertise technique poussée (mon site tourne sur Next.js avec un score PageSpeed de 95+/100) et une spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>.
+                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise technique poussée (mon site tourne sur Next.js avec un score PageSpeed de 95+/100) et une spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>.
                                     </p>
                                     <p>
                                         Je connais l'écosystème lyonnais : je sais que les restaurateurs du Vieux Lyon n'ont pas les mêmes besoins qu'une startup biotech de Gerland. Je ne sous-traite pas, je n'applique pas de grille générique, et je vous accompagne personnellement du diagnostic à la croissance.
@@ -340,6 +340,7 @@ export default function SeoLyonPage() {
             <CityPageTemplateV2
                 cityData={cityData}
                 customContent={<LyonCustomContent />}
+                visualVariant="premium"
             />
         </>
     );

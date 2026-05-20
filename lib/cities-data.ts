@@ -59,7 +59,7 @@ export const FRENCH_CITIES: CityData[] = [
         nearbyAreas: ["Villefranche-sur-Mer", "Saint-Laurent-du-Var", "Cagnes-sur-Mer", "Beaulieu-sur-Mer"],
         landmarks: ["Promenade des Anglais", "Vieux-Nice", "Port de Nice", "Place Masséna"],
         images: {
-            hero: { src: "/images/cities/nice-promenade-anglais.jpg", alt: "Consultante SEO Nice Promenade des Anglais", title: "Audit SEO Nice Côte d'Azur", keywords: ["SEO Nice", "référencement Nice", "consultant SEO Nice 06"] },
+            hero: { src: "/images/local-heroes/seo-local-nice-promenade-des-anglais.webp", alt: "Vue de la Promenade des Anglais à Nice pour illustrer une stratégie SEO local", title: "SEO local Nice - Promenade des Anglais", keywords: ["SEO Nice", "référencement Nice", "consultant SEO Nice 06"] },
             workspace: { src: "/images/cities/nice-vieux-nice.jpg", alt: "Expert SEO Nice Vieux-Nice", title: "Référencement naturel Nice", keywords: ["audit SEO Nice", "agence SEO Nice"] },
             landmark: { src: "/images/cities/nice-place-massena.jpg", alt: "SEO local Nice Place Masséna", title: "SEO local Nice 06", keywords: ["SEO local Nice", "Google My Business Nice"] }
         },
@@ -87,7 +87,7 @@ export const FRENCH_CITIES: CityData[] = [
         nearbyAreas: ["Le Cannet", "Mougins", "Mandelieu-la-Napoule", "Théoule-sur-Mer"],
         landmarks: ["La Croisette", "Palais des Festivals", "Vieux Port", "Le Suquet"],
         images: {
-            hero: { src: "/images/cities/cannes-croisette.jpg", alt: "Consultante SEO Cannes La Croisette", title: "Audit SEO Cannes 06", keywords: ["SEO Cannes", "référencement Cannes", "consultant SEO Cannes"] },
+            hero: { src: "/images/local-heroes/consultant-seo-cannes-croisette-palais.webp", alt: "Vue de Cannes et de la Croisette pour illustrer une stratégie SEO local", title: "SEO local Cannes - Croisette et Palais des Festivals", keywords: ["SEO Cannes", "référencement Cannes", "consultant SEO Cannes"] },
             workspace: { src: "/images/cities/cannes-palais-festivals.jpg", alt: "Expert SEO Cannes Palais des Festivals", title: "Référencement naturel Cannes", keywords: ["audit SEO Cannes", "SEO luxe Cannes"] },
             landmark: { src: "/images/cities/cannes-vieux-port.jpg", alt: "SEO local Cannes Vieux Port", title: "SEO local Cannes 06", keywords: ["SEO local Cannes", "Le Suquet"] }
         },
@@ -115,7 +115,7 @@ export const FRENCH_CITIES: CityData[] = [
         nearbyAreas: ["Juan-les-Pins", "Vallauris", "Biot", "Villeneuve-Loubet"],
         landmarks: ["Port Vauban", "Vieille Ville", "Cap d'Antibes", "Marché Provençal"],
         images: {
-            hero: { src: "/images/cities/antibes-port-vauban.jpg", alt: "Consultante SEO Antibes Port Vauban", title: "Audit SEO Antibes 06", keywords: ["SEO Antibes", "référencement Antibes"] },
+            hero: { src: "/images/local-heroes/consultant-seo-antibes-port-vauban.webp", alt: "Vue du Port Vauban et du vieil Antibes pour illustrer une stratégie SEO local", title: "SEO local Antibes - Port Vauban", keywords: ["SEO Antibes", "référencement Antibes"] },
             workspace: { src: "/images/cities/antibes-vieille-ville.jpg", alt: "Expert SEO Antibes Vieille Ville", title: "Référencement naturel Antibes", keywords: ["audit SEO Antibes", "Juan-les-Pins"] },
             landmark: { src: "/images/cities/antibes-cap.jpg", alt: "SEO local Antibes Cap d'Antibes", title: "SEO local Antibes 06", keywords: ["SEO local Antibes", "yachting Antibes"] }
         },
@@ -171,7 +171,7 @@ export const FRENCH_CITIES: CityData[] = [
         nearbyAreas: ["Monte-Carlo", "La Condamine", "Fontvieille", "Beausoleil"],
         landmarks: ["Place du Casino", "Port Hercule", "Carré d'Or", "Rocher"],
         images: {
-            hero: { src: "/images/cities/monaco-casino.jpg", alt: "Consultante SEO Monaco Casino Monte-Carlo", title: "Audit SEO Monaco 98", keywords: ["SEO Monaco", "référencement Monaco"] },
+            hero: { src: "/images/local-heroes/consultant-seo-monaco-port-hercule.webp", alt: "Vue de Monaco et du Port Hercule pour illustrer une stratégie SEO local premium", title: "SEO local Monaco - Port Hercule", keywords: ["SEO Monaco", "référencement Monaco"] },
             workspace: { src: "/images/cities/monaco-port-hercule.jpg", alt: "Expert SEO Monaco Port Hercule", title: "Référencement naturel Monaco", keywords: ["audit SEO Monaco", "SEO luxe Monaco"] },
             landmark: { src: "/images/cities/monaco-rocher.jpg", alt: "SEO local Monaco Rocher", title: "SEO local Monaco 98", keywords: ["SEO local Monaco", "Palais Princier"] }
         },
@@ -199,7 +199,7 @@ export const FRENCH_CITIES: CityData[] = [
         nearbyAreas: ["Valbonne", "Mougins", "Biot", "Antibes"],
         landmarks: ["Place Sophie Laffitte", "SKEMA", "Amadeus", "INRIA"],
         images: {
-            hero: { src: "/images/cities/sophia-antipolis-technopole.jpg", alt: "Consultante SEO Sophia Antipolis Technopole", title: "Audit SEO Sophia Antipolis", keywords: ["SEO Sophia Antipolis", "référencement technopole"] },
+            hero: { src: "/images/local-heroes/consultant-seo-sophia-antipolis-technopole.webp", alt: "Campus technopole de Sophia-Antipolis pour illustrer une stratégie SEO B2B", title: "SEO Sophia-Antipolis - technopole", keywords: ["SEO Sophia Antipolis", "référencement technopole"] },
             workspace: { src: "/images/cities/sophia-antipolis-bureaux.jpg", alt: "Expert SEO B2B Sophia Antipolis", title: "Référencement SaaS Sophia", keywords: ["audit SEO B2B", "SEO startup"] },
             landmark: { src: "/images/cities/sophia-antipolis-campus.jpg", alt: "SEO local Sophia Antipolis Campus", title: "SEO local tech 06", keywords: ["SEO local tech", "SKEMA"] }
         },
@@ -284,7 +284,7 @@ export const FRENCH_CITIES: CityData[] = [
         nearbyAreas: ["Villeurbanne", "Vénissieux", "Bron", "Caluire-et-Cuire"],
         landmarks: ["Place Bellecour", "Fourvière", "Confluence", "Part-Dieu"],
         images: {
-            hero: { src: "/images/cities/lyon-bellecour.jpg", alt: "Consultante SEO Lyon Place Bellecour", title: "Audit SEO Lyon 69", keywords: ["SEO Lyon", "référencement Lyon"] },
+            hero: { src: "/images/local-heroes/consultant-seo-lyon-fourviere-confluence.webp", alt: "Vue de Lyon et de Fourvière pour illustrer une stratégie SEO local", title: "SEO local Lyon - Fourvière et Confluence", keywords: ["SEO Lyon", "référencement Lyon"] },
             workspace: { src: "/images/cities/lyon-fourviere.jpg", alt: "Expert SEO Lyon Fourvière", title: "Référencement naturel Lyon", keywords: ["audit SEO Lyon", "SEO Rhône"] },
             landmark: { src: "/images/cities/lyon-confluence.jpg", alt: "SEO local Lyon Confluence", title: "SEO local Lyon 69", keywords: ["SEO local Lyon", "Confluence"] }
         },
@@ -537,7 +537,7 @@ export const FRENCH_CITIES: CityData[] = [
         nearbyAreas: ["Boulogne-Billancourt", "Neuilly-sur-Seine", "Levallois-Perret", "Montreuil"],
         landmarks: ["Tour Eiffel", "Champs-Élysées", "Montmartre", "Le Marais"],
         images: {
-            hero: { src: "/images/cities/paris-tour-eiffel.jpg", alt: "Consultante SEO Paris Tour Eiffel", title: "Audit SEO Paris 75", keywords: ["SEO Paris", "référencement Paris"] },
+            hero: { src: "/images/local-heroes/consultant-seo-paris-strategie-google.webp", alt: "Vue urbaine de Paris pour illustrer une stratégie SEO orientée entreprises de services", title: "SEO Paris - stratégie Google", keywords: ["SEO Paris", "référencement Paris"] },
             workspace: { src: "/images/cities/paris-sacre-coeur.jpg", alt: "Expert SEO Paris Montmartre", title: "Référencement naturel Paris", keywords: ["audit SEO Paris", "Île-de-France"] },
             landmark: { src: "/images/cities/paris-marais.jpg", alt: "SEO local Paris Le Marais", title: "SEO local Paris 75", keywords: ["SEO local Paris", "capitale"] }
         },

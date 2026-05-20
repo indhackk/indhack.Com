@@ -37,16 +37,23 @@ function getDepartmentPreposition(department: string): string {
 interface CityPageProps {
     cityData: CityData;
     customContent?: React.ReactNode;
+    visualVariant?: "default" | "premium";
 }
 
-export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
+export function CityPageTemplateV2({ cityData, customContent, visualVariant = "default" }: CityPageProps) {
     const { openAuditModal } = useModal();
     const city = cityData.name;
     const zipCode = cityData.zipCode;
+    const isPremiumVariant = visualVariant === "premium";
 
     // Slug de base (sans le préfixe) pour NearbyLinks
     // cityData.slug = "consultant-seo-nice" → baseCitySlug = "nice"
     const baseCitySlug = cityData.slug.replace('consultant-seo-', '');
+    const hasGeneratedLocalHero = cityData.images.hero.src.startsWith("/images/local-heroes/");
+    const heroImage = hasGeneratedLocalHero ? cityData.images.hero.src : "seo-dashboard";
+    const schemaImage = hasGeneratedLocalHero
+        ? `https://indhack.com${cityData.images.hero.src}`
+        : "https://indhack.com/images/logo-indhack.webp";
 
     // JSON-LD LocalBusiness
     const localBusinessSchema = {
@@ -59,7 +66,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
         "url": `https://indhack.com/${cityData.slug}`,
         "telephone": "+33661139748",
         "email": "contact@indhack.com",
-        "image": "https://indhack.com/images/logo-indhack.webp",
+        "image": schemaImage,
         "priceRange": "€€",
         "address": {
             "@type": "PostalAddress",
@@ -258,8 +265,11 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             {/* Hero */}
             <HeroServices
                 title={`Consultant SEO ${city} (${zipCode})`}
-                subtitle={`Dominez Google à ${city}. Attirez des clients qualifiés ${getDepartmentPreposition(cityData.department)} grâce à une stratégie de référencement local sur-mesure.`}
-                image="seo-dashboard"
+                subtitle={isPremiumVariant
+                    ? `Développez vos demandes qualifiées à ${city}, de ${cityData.landmarks.slice(0, 2).join(" à ")}, avec une stratégie SEO locale claire, technique et mesurable.`
+                    : `Dominez Google à ${city}. Attirez des clients qualifiés ${getDepartmentPreposition(cityData.department)} grâce à une stratégie de référencement local sur-mesure.`}
+                image={heroImage}
+                imageAlt={hasGeneratedLocalHero ? cityData.images.hero.alt : undefined}
                 category="Référencement Local"
             />
 
@@ -428,6 +438,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                 marketType={cityData.context.marketType}
                 cityName={city}
                 targetClients={cityData.context.targetClients}
+                variant={isPremiumVariant ? "indhack" : "default"}
             />
 
             {/* Outil SEO Interactif */}
