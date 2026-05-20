@@ -9,13 +9,74 @@ interface MarketInsightBlockProps {
     marketType: CityContext["marketType"];
     cityName: string;
     targetClients: string;
+    variant?: "default" | "indhack";
 }
 
 /**
  * Composant de différenciation structurelle pour les pages villes (anti-Doorway Pages)
  * Génère des structures DOM distinctes selon le type de marché → patterns HTML uniques
  */
-export function MarketInsightBlock({ marketType, cityName, targetClients }: MarketInsightBlockProps) {
+export function MarketInsightBlock({ marketType, cityName, targetClients, variant = "default" }: MarketInsightBlockProps) {
+    if (variant === "indhack") {
+        return (
+            <motion.section
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                className="py-12 bg-fond-clair"
+            >
+                <div className="container mx-auto px-4">
+                    <div className="max-w-5xl mx-auto rounded-[1.5rem] border border-line bg-white p-6 md:p-8 shadow-sm">
+                        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+                            <div>
+                                <div className="inline-flex items-center gap-2 rounded-full bg-sauge/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-sauge">
+                                    <Building2 className="h-3.5 w-3.5" />
+                                    Marché local exigeant
+                                </div>
+                                <h3 className="mt-4 font-heading text-2xl font-bold text-ink md:text-3xl">
+                                    À {cityName}, le SEO local se joue quartier par quartier
+                                </h3>
+                                <p className="mt-4 text-sm leading-relaxed text-soft md:text-base">
+                                    Pour {targetClients}, la visibilité ne dépend pas seulement d'un mot-clé générique.
+                                    Elle se construit avec une lecture précise des zones de demande, des intentions de recherche
+                                    et des pages capables de répondre clairement à chaque besoin local.
+                                </p>
+                            </div>
+
+                            <div className="grid gap-3 sm:grid-cols-3">
+                                {[
+                                    {
+                                        title: "Prioriser",
+                                        desc: "Les quartiers, services et intentions qui peuvent générer des demandes qualifiées.",
+                                        icon: <Compass className="h-5 w-5" />,
+                                    },
+                                    {
+                                        title: "Structurer",
+                                        desc: "Des pages lisibles par Google, utiles pour l'utilisateur et reliées au bon cocon SEO.",
+                                        icon: <Sparkles className="h-5 w-5" />,
+                                    },
+                                    {
+                                        title: "Mesurer",
+                                        desc: "Les impressions, positions, appels et formulaires pour corriger ce qui bloque vraiment.",
+                                        icon: <TrendingUp className="h-5 w-5" />,
+                                    },
+                                ].map((item) => (
+                                    <div key={item.title} className="rounded-2xl border border-line bg-fond-clair p-5">
+                                        <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-sauge/10 text-sauge">
+                                            {item.icon}
+                                        </div>
+                                        <p className="font-bold text-ink">{item.title}</p>
+                                        <p className="mt-2 text-xs leading-relaxed text-soft">{item.desc}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </motion.section>
+        );
+    }
+
     // LUXURY : Structure prestige avec badge doré et citation design
     if (marketType === "luxury") {
         return (

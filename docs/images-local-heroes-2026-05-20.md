@@ -1,6 +1,6 @@
 # Images locales IndHack - 2026-05-20
 
-Lot initial de visuels éditoriaux générés pour remplacer les images génériques des pages locales prioritaires.
+Lot initial de visuels éditoriaux générés pour remplacer les images génériques des pages locales prioritaires. Lyon sert aussi de page test pour la refonte visuelle premium du template local.
 
 Principes appliqués :
 
@@ -20,5 +20,6 @@ Principes appliqués :
 | Monaco | `/images/local-heroes/consultant-seo-monaco-port-hercule.webp` | 179 Ko |
 | Paris | `/images/local-heroes/consultant-seo-paris-strategie-google.webp` | 95 Ko |
 | Sophia-Antipolis | `/images/local-heroes/consultant-seo-sophia-antipolis-technopole.webp` | 112 Ko |
+| Lyon | `/images/local-heroes/consultant-seo-lyon-fourviere-confluence.webp` | 108 Ko |
 
 Les autres villes gardent temporairement le visuel générique `seo-dashboard.webp`, afin d'éviter d'afficher les anciens fichiers `public/images/cities/*` dont plusieurs noms de lieux ne correspondent pas au contenu réel de l'image.

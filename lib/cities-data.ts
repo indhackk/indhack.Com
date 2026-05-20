@@ -284,7 +284,7 @@ export const FRENCH_CITIES: CityData[] = [
         nearbyAreas: ["Villeurbanne", "Vénissieux", "Bron", "Caluire-et-Cuire"],
         landmarks: ["Place Bellecour", "Fourvière", "Confluence", "Part-Dieu"],
         images: {
-            hero: { src: "/images/cities/lyon-bellecour.jpg", alt: "Consultante SEO Lyon Place Bellecour", title: "Audit SEO Lyon 69", keywords: ["SEO Lyon", "référencement Lyon"] },
+            hero: { src: "/images/local-heroes/consultant-seo-lyon-fourviere-confluence.webp", alt: "Vue de Lyon et de Fourvière pour illustrer une stratégie SEO local", title: "SEO local Lyon - Fourvière et Confluence", keywords: ["SEO Lyon", "référencement Lyon"] },
             workspace: { src: "/images/cities/lyon-fourviere.jpg", alt: "Expert SEO Lyon Fourvière", title: "Référencement naturel Lyon", keywords: ["audit SEO Lyon", "SEO Rhône"] },
             landmark: { src: "/images/cities/lyon-confluence.jpg", alt: "SEO local Lyon Confluence", title: "SEO local Lyon 69", keywords: ["SEO local Lyon", "Confluence"] }
         },

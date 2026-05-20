@@ -37,12 +37,14 @@ function getDepartmentPreposition(department: string): string {
 interface CityPageProps {
     cityData: CityData;
     customContent?: React.ReactNode;
+    visualVariant?: "default" | "premium";
 }
 
-export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
+export function CityPageTemplateV2({ cityData, customContent, visualVariant = "default" }: CityPageProps) {
     const { openAuditModal } = useModal();
     const city = cityData.name;
     const zipCode = cityData.zipCode;
+    const isPremiumVariant = visualVariant === "premium";
 
     // Slug de base (sans le préfixe) pour NearbyLinks
     // cityData.slug = "consultant-seo-nice" → baseCitySlug = "nice"
@@ -263,7 +265,9 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             {/* Hero */}
             <HeroServices
                 title={`Consultant SEO ${city} (${zipCode})`}
-                subtitle={`Dominez Google à ${city}. Attirez des clients qualifiés ${getDepartmentPreposition(cityData.department)} grâce à une stratégie de référencement local sur-mesure.`}
+                subtitle={isPremiumVariant
+                    ? `Développez vos demandes qualifiées à ${city}, de ${cityData.landmarks.slice(0, 2).join(" à ")}, avec une stratégie SEO locale claire, technique et mesurable.`
+                    : `Dominez Google à ${city}. Attirez des clients qualifiés ${getDepartmentPreposition(cityData.department)} grâce à une stratégie de référencement local sur-mesure.`}
                 image={heroImage}
                 imageAlt={hasGeneratedLocalHero ? cityData.images.hero.alt : undefined}
                 category="Référencement Local"
@@ -434,6 +438,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
                 marketType={cityData.context.marketType}
                 cityName={city}
                 targetClients={cityData.context.targetClients}
+                variant={isPremiumVariant ? "indhack" : "default"}
             />
 
             {/* Outil SEO Interactif */}
