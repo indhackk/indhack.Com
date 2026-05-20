@@ -10,7 +10,7 @@ import { ArrowLeft, Home, Sparkles } from "lucide-react";
 // Ancres = variations sémantiques (pas exact match, mais liées au champ lexical)
 const ANCHOR_VARIATIONS = [
     { text: "Votre experte SEO indépendante", icon: <Sparkles className="w-4 h-4" /> },
-    { text: "Consultante référencement freelance", icon: <Home className="w-4 h-4" /> },
+    { text: "Consultante SEO indépendante", icon: <Home className="w-4 h-4" /> },
     { text: "Spécialiste SEO & acquisition", icon: <Sparkles className="w-4 h-4" /> },
     { text: "Experte en référencement Google", icon: <Sparkles className="w-4 h-4" /> },
     { text: "Accompagnement SEO personnalisé", icon: <Home className="w-4 h-4" /> },
@@ -63,18 +63,20 @@ export function HomepageBacklink({ variant = "default", className = "", forceInd
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                className={`bg-gradient-to-br from-sauge/5 to-sauge/10 border border-sauge/20 rounded-2xl p-6 ${className}`}
+                className={`rounded-2xl border border-line bg-white p-5 shadow-sm ${className}`}
             >
-                <div className="flex items-center gap-3 mb-3">
-                    {anchor.icon}
-                    <span className="text-sm font-bold text-sauge uppercase tracking-wider">IndHack</span>
+                <div className="flex items-center gap-3 mb-2">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-sauge/10 text-sauge">
+                        {anchor.icon}
+                    </span>
+                    <span className="text-sm font-bold text-ink">IndHack</span>
                 </div>
-                <p className="text-soft text-sm mb-4">
-                    Découvrez toutes mes expertises SEO et stratégies de croissance digitale.
+                <p className="text-soft text-sm leading-relaxed mb-4">
+                    Revenir à la page mère pour situer l'accompagnement SEO, le contenu et la visibilité IA dans une stratégie complète.
                 </p>
                 <Link
                     href="/"
-                    className="inline-flex items-center gap-2 text-ink font-bold hover:text-sauge transition-colors"
+                    className="inline-flex items-center gap-2 text-sauge font-bold hover:text-ink transition-colors"
                 >
                     {anchor.text}
                     <ArrowLeft className="w-4 h-4 rotate-180" />
@@ -108,4 +110,3 @@ export function HomepageBacklink({ variant = "default", className = "", forceInd
         </motion.div>
     );
 }
-
