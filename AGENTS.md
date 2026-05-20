@@ -288,6 +288,14 @@ HOMEPAGE (/)
 ✅ "guide complet Google Business Profile"
 ```
 
+Variation obligatoire des ancres :
+
+- Ne pas répéter la même ancre exact match vers une page cible dans un lot d'articles publié ensemble.
+- Mélanger ancres marque (`IndHack`), exact match ponctuel, ancres partielles, ancres d'intention et ancres contextuelles.
+- Exemple vers `/consultant-seo` : `consultante SEO` une seule fois si pertinent, puis `accompagnement SEO`, `stratégie SEO`, `méthode SEO`, `expertise SEO indépendante`.
+- Exemple vers `/consultant-geo` : varier entre `consultante GEO`, `visibilité dans les IA`, `stratégie GEO`, `réponses générées par les IA`.
+- L'ancre doit être naturelle dans la phrase. Ne pas forcer un mot-clé exact si l'intention de la phrase appelle une ancre plus descriptive.
+
 ### INTERDIT
 
 - Liens vers pages qui N'EXISTENT PAS (vérifier les slugs)

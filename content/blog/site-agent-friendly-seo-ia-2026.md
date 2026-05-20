@@ -16,9 +16,9 @@ Les moteurs de recherche ne sont plus les seuls à parcourir votre site. En 2026
 
 Pour le SEO, c’est un signal faible aujourd’hui, mais probablement un signal fort demain. Un site difficile à comprendre pour un humain pressé est souvent difficile à exploiter pour une IA. Et un site difficile à exploiter par une IA a moins de chances d’être cité, recommandé ou utilisé dans un parcours de recherche génératif.
 
-Sur [IndHack](/), je le vois comme un vrai sujet de **SEO IA** : une page doit être lisible par Google, utile pour l’humain, et suffisamment structurée pour les agents. C’est aussi un point à intégrer dans une stratégie de [**consultante SEO**](/consultant-seo), surtout avant une refonte ou une création de site.
+Dans [la méthode IndHack](/), je le vois comme un vrai sujet de **SEO IA** : une page doit être lisible par Google, utile pour l’humain, et suffisamment structurée pour les agents. C’est aussi un point à intégrer dans une stratégie de [**consultante SEO**](/consultant-seo), surtout avant une refonte ou une création de site.
 
-> **À retenir :** un **site agent-friendly** n’est pas un site “optimisé pour les robots” au détriment des humains. C’est un site lisible, accessible, rapide, sémantique et prévisible. Si vous voulez vérifier vos bases, commencez par un [audit SEO gratuit](/outils/audit-seo-gratuit), puis testez votre exposition avec le [testeur de visibilité IA](/outils/testeur-visibilite-ia).
+> **À retenir :** un **site agent-friendly** n’est pas un site “optimisé pour les robots” au détriment des humains. C’est un site lisible, accessible, rapide, sémantique et prévisible. Si vous voulez vérifier vos bases, commencez par un [audit SEO gratuit](/outils/audit-seo-gratuit), puis [contrôlez l’exposition IA de votre site](/outils/testeur-visibilite-ia).
 
 ## Sommaire
 
@@ -167,7 +167,7 @@ Voici la logique que je recommande :
 - les outils permettent de tester ;
 - les pages GEO approfondissent la visibilité dans les réponses IA.
 
-Cet article ne remplace donc pas une page de [consultante GEO](/consultant-geo). Il sert de passerelle entre **SEO technique**, UX et IA. Pour un diagnostic complet, il faut croiser les signaux : accessibilité, crawl, données structurées, performance, maillage et contenu.
+Cet article ne remplace donc pas une page de [visibilité dans les réponses IA](/consultant-geo). Il sert de passerelle entre **SEO technique**, UX et IA. Pour un diagnostic complet, il faut croiser les signaux : accessibilité, crawl, données structurées, performance, maillage et contenu.
 
 Le bon maillage est simple :
 
