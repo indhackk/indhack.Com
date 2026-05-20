@@ -18,9 +18,9 @@ Ce chiffre change la manière de travailler. Pendant des années, le réflexe é
 
 Pour un site jeune ou une marque en construction, c’est une information importante. La visibilité ne dépend plus uniquement de l’autorité globale du domaine. Une page très claire, bien sourcée et bien reliée au reste du site peut gagner une place dans la synthèse.
 
-Pour [IndHack](/), l’enjeu est clair : le [**référencement naturel**](/referencement-naturel) reste la base, mais les marques doivent aussi apprendre à devenir des sources fiables pour les réponses générées. C’est exactement le lien entre une stratégie de [**consultante SEO**](/consultant-seo) et une vraie démarche de [**consultante GEO**](/consultant-geo).
+Pour [l’écosystème IndHack](/), l’enjeu est clair : le [socle SEO](/referencement-naturel) reste la base, mais les marques doivent aussi apprendre à devenir des sources fiables pour les réponses générées. Pour une **consultante SEO**, c’est exactement le lien entre [un accompagnement SEO](/consultant-seo) et une vraie démarche de [visibilité dans les IA](/consultant-geo).
 
-> **À retenir :** le top 10 Google reste important, mais il n’est plus suffisant. Pour apparaître dans **AI Overviews**, une page doit aussi être claire, récente, vérifiable, facile à citer et cohérente avec d’autres sources. Si vous voulez mesurer votre exposition IA, commencez par le [testeur de visibilité IA](/outils/testeur-visibilite-ia).
+> **À retenir :** le top 10 Google reste important, mais il n’est plus suffisant. Pour apparaître dans **AI Overviews**, une page doit aussi être claire, récente, vérifiable, facile à citer et cohérente avec d’autres sources. Si vous voulez mesurer votre exposition IA, commencez par [mesurer votre visibilité IA](/outils/testeur-visibilite-ia).
 
 ## Sommaire
 
