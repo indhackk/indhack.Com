@@ -271,116 +271,210 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                 image={heroImage}
                 imageAlt={hasGeneratedLocalHero ? cityData.images.hero.alt : undefined}
                 category="Référencement Local"
+                density={isPremiumVariant ? "compact" : "default"}
             />
 
-            {/* Bloc AIO-ready : passage citable par ChatGPT / Perplexity / AI Mode Google */}
-            <section className="py-10 bg-gradient-to-b from-gray-50 to-white">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="bg-white border-l-4 border-sauge rounded-r-2xl p-6 md:p-8 shadow-sm">
-                            <div className="flex items-center gap-2 mb-3">
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-sauge/10 text-sauge rounded-full text-xs font-bold uppercase tracking-wider">
-                                    <CheckCircle2 className="w-3.5 h-3.5" />
-                                    L'essentiel en 30 secondes
-                                </span>
-                            </div>
-                            <p className="text-base md:text-lg text-ink leading-relaxed">
-                                <strong className="font-bold">Un consultant SEO à {city} ({zipCode})</strong> accompagne les entreprises des <strong>{cityData.department}</strong> et de la région <strong>{cityData.region}</strong> pour gagner en visibilité sur Google et Google Maps.
-                                Le marché local {city} compte <strong>{cityData.population} habitants</strong> avec une concurrence {cityData.context.competitionLevel === 'extreme' ? 'féroce' : cityData.context.competitionLevel === 'high' ? 'élevée' : cityData.context.competitionLevel === 'medium' ? 'modérée' : 'gérable'} dans les secteurs {cityData.context.businessTypes.slice(0, 3).join(', ').toLowerCase()}.
-                                Mission type : audit technique + SEO local ({cityData.landmarks.slice(0, 2).join(', ')} et alentours : {cityData.nearbyAreas.slice(0, 3).join(', ')}) + optimisation Google Business Profile + stratégie contenu géolocalisé.
-                                <span className="text-soft"> Tarif sur devis selon périmètre. Premier audit gratuit en 30 secondes via notre <Link href="/outils/audit-seo-gratuit" className="text-sauge font-semibold hover:underline">outil d'audit SEO gratuit</Link>.</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Introduction Compacte + Stats - Enrichie avec Context */}
-            <section className="py-12 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-6xl mx-auto">
-                        <div className="grid lg:grid-cols-2 gap-10 items-start">
-                            {/* Texte enrichi */}
-                            <div>
-                                <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-4">
-                                    Être visible à <span className="text-sauge">{city}</span> : un enjeu stratégique
-                                </h2>
-                                <div className="prose prose-sm text-soft space-y-3">
-                                    <p>{cityData.description}</p>
-
-                                    <div className="bg-gray-50 border-l-4 border-sauge p-4 my-4 rounded-r-lg">
-                                        <h4 className="font-bold text-ink text-sm mb-1">Le saviez-vous ?</h4>
-                                        <p className="text-xs italic text-ink/80">
-                                            "{cityData.context.localInsight}"
+            {isPremiumVariant ? (
+                <section className="bg-white py-12 md:py-16">
+                    <div className="container mx-auto px-4">
+                        <div className="mx-auto max-w-6xl">
+                            <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-stretch">
+                                <article className="rounded-[1.5rem] border border-line bg-fond-clair p-6 md:p-8">
+                                    <span className="inline-flex items-center gap-2 rounded-full bg-sauge/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-sauge">
+                                        <CheckCircle2 className="h-3.5 w-3.5" />
+                                        L'essentiel
+                                    </span>
+                                    <h2 className="mt-4 font-heading text-2xl font-bold leading-tight text-ink md:text-3xl">
+                                        SEO local à {city} : l'objectif n'est pas d'être partout, mais d'être visible sur les bonnes demandes.
+                                    </h2>
+                                    <div className="mt-5 space-y-4 text-[0.98rem] leading-7 text-soft">
+                                        <p>
+                                            Un <strong className="text-ink">consultant SEO à {city}</strong> aide les entreprises du <strong className="text-ink">{cityData.department}</strong> à gagner en visibilité sur Google et Google Maps, avec une stratégie qui relie technique, contenu, maillage et intention locale.
+                                        </p>
+                                        <p>
+                                            À {city}, le sujet est moins de publier beaucoup que de construire des pages claires, rapides et crédibles pour les recherches qui peuvent vraiment générer des demandes qualifiées.
                                         </p>
                                     </div>
-
-                                    <p>
-                                        À {city}, la compétition est {cityData.context.competitionLevel === 'extreme' ? 'féroce' : 'forte'}.
-                                        Vos futurs clients sont des {cityData.context.targetClients}.
-                                        <strong className="text-ink"> 46% des recherches Google ont une intention locale.</strong> Si votre entreprise n'apparaît pas quand ils cherchent vos services, vous laissez ces clients à vos concurrents.
-                                    </p>
-
-                                    <p>
-                                        En tant que <Link href="/consultant-seo" className="text-sauge hover:underline font-semibold">consultante SEO spécialisée</Link> sur le marché {cityData.region}, je vous accompagne pour conquérir les premières positions Google et Google Maps. Une approche personnalisée pour répondre aux défis de {city} :
-                                        <ul className="mt-2 space-y-1 list-disc list-inside">
-                                            {cityData.context.specificChallenges.map((challenge, i) => (
-                                                <li key={i} className="text-xs">{challenge}</li>
-                                            ))}
-                                        </ul>
-                                    </p>
-                                </div>
-
-                                {/* Points clés de la ville */}
-                                <div className="mt-6 flex flex-wrap gap-2">
-                                    {cityData.keyPoints.map((point, i) => (
-                                        <span key={i} className="inline-flex items-center gap-1.5 bg-sauge/10 text-sauge px-3 py-1.5 rounded-full text-xs font-bold">
-                                            <CheckCircle2 className="w-3.5 h-3.5" />
-                                            {point}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Stats locales */}
-                            <div className="bg-ink text-white p-8 rounded-2xl">
-                                <h3 className="font-bold text-lg mb-6 flex items-center gap-2">
-                                    <BarChart3 className="w-5 h-5 text-sauge" />
-                                    Le SEO local en chiffres
-                                </h3>
-                                <div className="grid grid-cols-2 gap-4">
-                                    <div className="text-center p-4 bg-white/5 rounded-xl">
-                                        <p className="text-3xl font-bold text-sauge">46%</p>
-                                        <p className="text-xs text-soft-light mt-1">Recherches locales</p>
+                                    <div className="mt-6 flex flex-wrap gap-2">
+                                        {cityData.keyPoints.map((point) => (
+                                            <span key={point} className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-sauge ring-1 ring-line">
+                                                <CheckCircle2 className="h-3.5 w-3.5" />
+                                                {point}
+                                            </span>
+                                        ))}
                                     </div>
-                                    <div className="text-center p-4 bg-white/5 rounded-xl">
-                                        <p className="text-3xl font-bold text-sauge">78%</p>
-                                        <p className="text-xs text-soft-light mt-1">Achat sous 24h</p>
+                                </article>
+
+                                <aside className="grid gap-4">
+                                    <div className="grid gap-4 sm:grid-cols-3">
+                                        {[
+                                            { value: cityData.population, label: "habitants à Lyon" },
+                                            { value: "46 %", label: "des recherches Google ont une intention locale" },
+                                            { value: cityData.nearbyAreas.slice(0, 2).join(" + "), label: "zones proches à intégrer au maillage" },
+                                        ].map((item) => (
+                                            <div key={item.label} className="rounded-2xl border border-line bg-white p-5 shadow-sm">
+                                                <p className="font-heading text-2xl font-bold text-ink">{item.value}</p>
+                                                <p className="mt-2 text-xs leading-relaxed text-soft">{item.label}</p>
+                                            </div>
+                                        ))}
                                     </div>
-                                    <div className="text-center p-4 bg-white/5 rounded-xl">
-                                        <p className="text-3xl font-bold text-sauge">88%</p>
-                                        <p className="text-xs text-soft-light mt-1">Font confiance aux avis</p>
+
+                                    <div className="rounded-[1.5rem] border border-sauge/20 bg-white p-6 shadow-sm">
+                                        <div className="flex items-start gap-4">
+                                            <span className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-sauge/10 text-sauge">
+                                                <MapPin className="h-5 w-5" />
+                                            </span>
+                                            <div>
+                                                <h3 className="font-heading text-xl font-bold text-ink">
+                                                    Lecture du marché lyonnais
+                                                </h3>
+                                                <p className="mt-3 text-sm leading-7 text-soft">
+                                                    {cityData.context.localInsight}
+                                                </p>
+                                                <ul className="mt-4 grid gap-2 text-sm text-soft sm:grid-cols-3">
+                                                    {cityData.context.specificChallenges.map((challenge) => (
+                                                        <li key={challenge} className="flex gap-2 rounded-xl bg-fond-clair px-3 py-2">
+                                                            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-sauge" />
+                                                            <span>{challenge}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="text-center p-4 bg-white/5 rounded-xl">
-                                        <p className="text-3xl font-bold text-sauge">x5</p>
-                                        <p className="text-xs text-soft-light mt-1">ROI moyen SEO</p>
+
+                                    <div className="flex flex-col gap-3 rounded-[1.5rem] bg-ink p-5 text-white sm:flex-row sm:items-center sm:justify-between">
+                                        <div>
+                                            <p className="text-sm font-bold">Vous voulez vérifier votre base SEO ?</p>
+                                            <p className="mt-1 text-xs leading-relaxed text-soft-light">
+                                                Analyse technique, contenu et premiers blocages en quelques secondes.
+                                            </p>
+                                        </div>
+                                        <Button
+                                            onClick={openAuditModal}
+                                            className="shrink-0 rounded-full bg-sauge px-6 py-5 font-bold text-white hover:bg-white hover:text-ink"
+                                        >
+                                            Analyser mon site
+                                            <ArrowRight className="ml-2 h-4 w-4" />
+                                        </Button>
                                     </div>
-                                </div>
-                                <div className="mt-6 pt-6 border-t border-white/10">
-                                    <p className="text-sm text-soft-light mb-4">Population {city} : <strong className="text-white">{cityData.population} hab.</strong></p>
-                                    <Button
-                                        onClick={openAuditModal}
-                                        className="w-full bg-sauge text-white hover:bg-white hover:text-ink rounded-xl py-6 font-bold"
-                                    >
-                                        Audit Gratuit {city}
-                                        <ArrowRight className="ml-2 w-4 h-4" />
-                                    </Button>
-                                </div>
+                                </aside>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            ) : (
+                <>
+                    {/* Bloc AIO-ready : passage citable par ChatGPT / Perplexity / AI Mode Google */}
+                    <section className="py-10 bg-gradient-to-b from-gray-50 to-white">
+                        <div className="container mx-auto px-4">
+                            <div className="max-w-4xl mx-auto">
+                                <div className="bg-white border-l-4 border-sauge rounded-r-2xl p-6 md:p-8 shadow-sm">
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-sauge/10 text-sauge rounded-full text-xs font-bold uppercase tracking-wider">
+                                            <CheckCircle2 className="w-3.5 h-3.5" />
+                                            L'essentiel en 30 secondes
+                                        </span>
+                                    </div>
+                                    <p className="text-base md:text-lg text-ink leading-relaxed">
+                                        <strong className="font-bold">Un consultant SEO à {city} ({zipCode})</strong> accompagne les entreprises des <strong>{cityData.department}</strong> et de la région <strong>{cityData.region}</strong> pour gagner en visibilité sur Google et Google Maps.
+                                        Le marché local {city} compte <strong>{cityData.population} habitants</strong> avec une concurrence {cityData.context.competitionLevel === 'extreme' ? 'féroce' : cityData.context.competitionLevel === 'high' ? 'élevée' : cityData.context.competitionLevel === 'medium' ? 'modérée' : 'gérable'} dans les secteurs {cityData.context.businessTypes.slice(0, 3).join(', ').toLowerCase()}.
+                                        Mission type : audit technique + SEO local ({cityData.landmarks.slice(0, 2).join(', ')} et alentours : {cityData.nearbyAreas.slice(0, 3).join(', ')}) + optimisation Google Business Profile + stratégie contenu géolocalisé.
+                                        <span className="text-soft"> Tarif sur devis selon périmètre. Premier audit gratuit en 30 secondes via notre <Link href="/outils/audit-seo-gratuit" className="text-sauge font-semibold hover:underline">outil d'audit SEO gratuit</Link>.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Introduction Compacte + Stats - Enrichie avec Context */}
+                    <section className="py-12 bg-white">
+                        <div className="container mx-auto px-4">
+                            <div className="max-w-6xl mx-auto">
+                                <div className="grid lg:grid-cols-2 gap-10 items-start">
+                                    {/* Texte enrichi */}
+                                    <div>
+                                        <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-4">
+                                            Être visible à <span className="text-sauge">{city}</span> : un enjeu stratégique
+                                        </h2>
+                                        <div className="prose prose-sm text-soft space-y-3">
+                                            <p>{cityData.description}</p>
+
+                                            <div className="bg-gray-50 border-l-4 border-sauge p-4 my-4 rounded-r-lg">
+                                                <h4 className="font-bold text-ink text-sm mb-1">Le saviez-vous ?</h4>
+                                                <p className="text-xs italic text-ink/80">
+                                                    "{cityData.context.localInsight}"
+                                                </p>
+                                            </div>
+
+                                            <p>
+                                                À {city}, la compétition est {cityData.context.competitionLevel === 'extreme' ? 'féroce' : 'forte'}.
+                                                Vos futurs clients sont des {cityData.context.targetClients}.
+                                                <strong className="text-ink"> 46% des recherches Google ont une intention locale.</strong> Si votre entreprise n'apparaît pas quand ils cherchent vos services, vous laissez ces clients à vos concurrents.
+                                            </p>
+
+                                            <p>
+                                                En tant que <Link href="/consultant-seo" className="text-sauge hover:underline font-semibold">consultante SEO spécialisée</Link> sur le marché {cityData.region}, je vous accompagne pour conquérir les premières positions Google et Google Maps. Une approche personnalisée pour répondre aux défis de {city} :
+                                            </p>
+                                            <ul className="mt-2 space-y-1 list-disc list-inside">
+                                                {cityData.context.specificChallenges.map((challenge, i) => (
+                                                    <li key={i} className="text-xs">{challenge}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+
+                                        {/* Points clés de la ville */}
+                                        <div className="mt-6 flex flex-wrap gap-2">
+                                            {cityData.keyPoints.map((point, i) => (
+                                                <span key={i} className="inline-flex items-center gap-1.5 bg-sauge/10 text-sauge px-3 py-1.5 rounded-full text-xs font-bold">
+                                                    <CheckCircle2 className="w-3.5 h-3.5" />
+                                                    {point}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Stats locales */}
+                                    <div className="bg-ink text-white p-8 rounded-2xl">
+                                        <h3 className="font-bold text-lg mb-6 flex items-center gap-2">
+                                            <BarChart3 className="w-5 h-5 text-sauge" />
+                                            Le SEO local en chiffres
+                                        </h3>
+                                        <div className="grid grid-cols-2 gap-4">
+                                            <div className="text-center p-4 bg-white/5 rounded-xl">
+                                                <p className="text-3xl font-bold text-sauge">46%</p>
+                                                <p className="text-xs text-soft-light mt-1">Recherches locales</p>
+                                            </div>
+                                            <div className="text-center p-4 bg-white/5 rounded-xl">
+                                                <p className="text-3xl font-bold text-sauge">78%</p>
+                                                <p className="text-xs text-soft-light mt-1">Achat sous 24h</p>
+                                            </div>
+                                            <div className="text-center p-4 bg-white/5 rounded-xl">
+                                                <p className="text-3xl font-bold text-sauge">88%</p>
+                                                <p className="text-xs text-soft-light mt-1">Font confiance aux avis</p>
+                                            </div>
+                                            <div className="text-center p-4 bg-white/5 rounded-xl">
+                                                <p className="text-3xl font-bold text-sauge">x5</p>
+                                                <p className="text-xs text-soft-light mt-1">ROI moyen SEO</p>
+                                            </div>
+                                        </div>
+                                        <div className="mt-6 pt-6 border-t border-white/10">
+                                            <p className="text-sm text-soft-light mb-4">Population {city} : <strong className="text-white">{cityData.population} hab.</strong></p>
+                                            <Button
+                                                onClick={openAuditModal}
+                                                className="w-full bg-sauge text-white hover:bg-white hover:text-ink rounded-xl py-6 font-bold"
+                                            >
+                                                Audit Gratuit {city}
+                                                <ArrowRight className="ml-2 w-4 h-4" />
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </>
+            )}
 
             {/* 3 Piliers SEO Local - Compact */}
             <section className="py-12 bg-gray-50">
@@ -441,77 +535,81 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                 variant={isPremiumVariant ? "indhack" : "default"}
             />
 
-            {/* Outil SEO Interactif */}
-            <SEOScoreChecker />
+            {/* Outil SEO interactif : conservé sur les pages standard, remplacé par un CTA compact sur Lyon premium. */}
+            {!isPremiumVariant && <SEOScoreChecker />}
 
-            {/* Méthodologie en timeline compacte */}
-            <section className="py-12 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-8">
-                        <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink">
-                            Mon accompagnement SEO à <span className="text-sauge">{city}</span>
-                        </h2>
-                    </div>
-                    <div className="max-w-4xl mx-auto grid md:grid-cols-4 gap-4">
-                        {METHODOLOGY.map((item, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 15 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-100px" }}
-                                transition={{ delay: i * 0.1 }}
-                                className="relative bg-gray-50 p-5 rounded-xl border border-gray-100 group hover:bg-sauge hover:text-white transition-all"
-                            >
-                                <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-sauge font-bold text-sm shadow-sm mb-3 group-hover:bg-ink group-hover:text-white transition-all">
-                                    {item.step}
-                                </div>
-                                <h3 className="font-bold text-sm mb-1">{item.title}</h3>
-                                <p className="text-xs text-soft group-hover:text-white/80 transition-colors">{item.desc}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Avantages - Bande */}
-            <section className="py-10 bg-ink text-white">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                        {ADVANTAGES.map((item, i) => (
-                            <div key={i} className="text-center">
-                                <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-white/10 flex items-center justify-center text-sauge-light">
-                                    {item.icon}
-                                </div>
-                                <h4 className="font-bold text-sm mb-1">{item.title}</h4>
-                                <p className="text-xs text-soft-light">{item.desc}</p>
+            {!isPremiumVariant && (
+                <>
+                    {/* Méthodologie en timeline compacte */}
+                    <section className="py-12 bg-white">
+                        <div className="container mx-auto px-4">
+                            <div className="text-center mb-8">
+                                <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink">
+                                    Mon accompagnement SEO à <span className="text-sauge">{city}</span>
+                                </h2>
                             </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Zones d'intervention - Quartiers */}
-            <section className="py-10 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto">
-                        <h2 className="text-xl font-bold text-ink mb-4 text-center">
-                            Zones d'intervention à {city} et alentours
-                        </h2>
-                        <div className="flex flex-wrap justify-center gap-2 mb-6">
-                            {cityData.landmarks.map((landmark, i) => (
-                                <span key={i} className="bg-white px-3 py-1.5 rounded-full text-xs font-medium text-ink border border-gray-200">
-                                    {landmark}
-                                </span>
-                            ))}
-                            {cityData.nearbyAreas.map((area, i) => (
-                                <span key={i} className="bg-sauge/10 px-3 py-1.5 rounded-full text-xs font-medium text-ink border border-sauge/20">
-                                    {area}
-                                </span>
-                            ))}
+                            <div className="max-w-4xl mx-auto grid md:grid-cols-4 gap-4">
+                                {METHODOLOGY.map((item, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial={{ opacity: 0, y: 15 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true, margin: "-100px" }}
+                                        transition={{ delay: i * 0.1 }}
+                                        className="relative bg-gray-50 p-5 rounded-xl border border-gray-100 group hover:bg-sauge hover:text-white transition-all"
+                                    >
+                                        <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-sauge font-bold text-sm shadow-sm mb-3 group-hover:bg-ink group-hover:text-white transition-all">
+                                            {item.step}
+                                        </div>
+                                        <h3 className="font-bold text-sm mb-1">{item.title}</h3>
+                                        <p className="text-xs text-soft group-hover:text-white/80 transition-colors">{item.desc}</p>
+                                    </motion.div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
+
+                    {/* Avantages - Bande */}
+                    <section className="py-10 bg-ink text-white">
+                        <div className="container mx-auto px-4">
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                                {ADVANTAGES.map((item, i) => (
+                                    <div key={i} className="text-center">
+                                        <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-white/10 flex items-center justify-center text-sauge-light">
+                                            {item.icon}
+                                        </div>
+                                        <h4 className="font-bold text-sm mb-1">{item.title}</h4>
+                                        <p className="text-xs text-soft-light">{item.desc}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Zones d'intervention - Quartiers */}
+                    <section className="py-10 bg-gray-50">
+                        <div className="container mx-auto px-4">
+                            <div className="max-w-4xl mx-auto">
+                                <h2 className="text-xl font-bold text-ink mb-4 text-center">
+                                    Zones d'intervention à {city} et alentours
+                                </h2>
+                                <div className="flex flex-wrap justify-center gap-2 mb-6">
+                                    {cityData.landmarks.map((landmark, i) => (
+                                        <span key={i} className="bg-white px-3 py-1.5 rounded-full text-xs font-medium text-ink border border-gray-200">
+                                            {landmark}
+                                        </span>
+                                    ))}
+                                    {cityData.nearbyAreas.map((area, i) => (
+                                        <span key={i} className="bg-sauge/10 px-3 py-1.5 rounded-full text-xs font-medium text-ink border border-sauge/20">
+                                            {area}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </>
+            )}
 
             {/* Services liés - Maillage */}
             <section className="py-12 bg-white">
@@ -550,7 +648,7 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                     <div className="text-center mt-8">
                         <Link href="/consultant-seo" className="inline-flex items-center gap-2 text-sauge font-semibold hover:underline">
                             <Users className="w-4 h-4" />
-                            Découvrir mon offre de consultante SEO freelance
+                            Découvrir mon accompagnement SEO
                         </Link>
                     </div>
                 </div>
@@ -596,10 +694,18 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
             </section>
 
             {/* Lien vers la page d'accueil - Maillage interne SEO */}
-            <HomepageBacklink variant="card" className="max-w-md mx-auto my-12" />
+            {isPremiumVariant ? (
+                <section className="bg-white px-4 py-8">
+                    <div className="mx-auto max-w-3xl rounded-2xl border border-line bg-fond-clair px-5 py-4 text-center">
+                        <HomepageBacklink variant="minimal" className="justify-center text-sm" />
+                    </div>
+                </section>
+            ) : (
+                <HomepageBacklink variant="card" className="max-w-md mx-auto my-12" />
+            )}
 
             {/* FAQ */}
-            <FAQ items={FAQ_ITEMS} title={`Questions Fréquentes - SEO ${city}`} />
+            <FAQ items={FAQ_ITEMS} title={`Questions fréquentes - SEO ${city}`} />
 
             {/* Maillage interne enrichi */}
             <section className="py-12 bg-white border-t border-gray-100">

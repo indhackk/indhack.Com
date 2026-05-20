@@ -12,18 +12,23 @@ interface HeroServicesProps {
     category: string;
     image: string;
     imageAlt?: string;
+    density?: "default" | "compact";
     customVisual?: React.ReactNode;
 }
 
-export function HeroServices({ title, subtitle, category, image, imageAlt, customVisual }: HeroServicesProps) {
+export function HeroServices({ title, subtitle, category, image, imageAlt, density = "default", customVisual }: HeroServicesProps) {
     const { openAuditModal } = useModal();
     const imageSrc = image.startsWith('/') ? image : `/images/${image}.webp`;
     const preserveImageMetadata = imageSrc.startsWith('/images/local-heroes/');
     const imageWidth = preserveImageMetadata ? 1600 : 800;
     const imageHeight = preserveImageMetadata ? 900 : 600;
+    const isCompact = density === "compact";
 
     return (
-        <section className="relative pt-40 pb-24 bg-ink overflow-hidden min-h-[80vh] flex items-center">
+        <section className={`relative bg-ink overflow-hidden flex items-center ${isCompact
+            ? "pt-28 pb-14 md:pt-[7.5rem] md:pb-16 min-h-[560px] lg:min-h-[620px]"
+            : "pt-40 pb-24 min-h-[80vh]"
+            }`}>
             {/* Background Decor */}
             <div className="absolute inset-0 opacity-20 pointer-events-none">
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-sauge/20 rounded-full blur-[150px]" />
@@ -31,30 +36,37 @@ export function HeroServices({ title, subtitle, category, image, imageAlt, custo
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
-                <div className="grid lg:grid-cols-2 gap-16 items-center min-w-0">
+                <div className={`grid lg:grid-cols-2 items-center min-w-0 ${isCompact ? "gap-10 lg:gap-12" : "gap-16"}`}>
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         className="min-w-0"
                     >
-                        <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 mb-8">
+                        <div className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 ${isCompact ? "mb-6" : "mb-8"}`}>
                             <span className="w-2 h-2 rounded-full bg-sauge animate-pulse" />
                             <span className="text-sauge font-black text-xs uppercase tracking-[0.2em]">{category}</span>
                         </div>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white leading-[1.05] tracking-tight mb-8">
+                        <h1 className={`font-heading font-black text-white leading-[1.05] tracking-tight ${isCompact
+                            ? "text-4xl md:text-5xl lg:text-[3.35rem] mb-6"
+                            : "text-4xl md:text-5xl lg:text-6xl mb-8"
+                            }`}>
                             {title}
                         </h1>
 
-                        <p className="text-xl lg:text-2xl text-soft-light leading-relaxed max-w-xl mb-12 break-words">
+                        <p className={`text-soft-light leading-relaxed break-words ${isCompact
+                            ? "text-lg lg:text-xl max-w-2xl mb-8"
+                            : "text-xl lg:text-2xl max-w-xl mb-12"
+                            }`}>
                             {subtitle}
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-5">
                             <Button
                                 onClick={openAuditModal}
-                                className="bg-sauge text-white hover:bg-white hover:text-ink rounded-full px-10 py-8 font-bold tracking-wide shadow-2xl shadow-sauge/20 transition-all group"
+                                className={`bg-sauge text-white hover:bg-white hover:text-ink rounded-full font-bold tracking-wide shadow-2xl shadow-sauge/20 transition-all group ${isCompact ? "px-8 py-6" : "px-10 py-8"
+                                    }`}
                             >
                                 Demander un audit SEO
                                 <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -71,7 +83,10 @@ export function HeroServices({ title, subtitle, category, image, imageAlt, custo
                         {customVisual ? (
                             customVisual
                         ) : (
-                            <div className="relative max-w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 group">
+                            <div className={`relative max-w-full overflow-hidden shadow-2xl border border-white/10 group ${isCompact
+                                ? "rounded-[1.5rem] md:rounded-[2rem] lg:max-w-[560px] lg:ml-auto"
+                                : "rounded-[2rem] md:rounded-[3rem]"
+                                }`}>
                                 <Image
                                     src={imageSrc}
                                     alt={imageAlt || title}
@@ -80,7 +95,7 @@ export function HeroServices({ title, subtitle, category, image, imageAlt, custo
                                     unoptimized={preserveImageMetadata}
                                     priority
                                     fetchPriority="high"
-                                    className="w-full h-auto object-cover transition-all duration-1000"
+                                    className={`w-full object-cover transition-all duration-1000 ${isCompact ? "aspect-[16/10]" : "h-auto"}`}
                                 />
                                 <div className="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors duration-700" />
                             </div>
