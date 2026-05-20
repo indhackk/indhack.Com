@@ -16,19 +16,10 @@ Les moteurs de recherche ne sont plus les seuls à parcourir votre site. En 2026
 
 Pour le SEO, c’est un signal faible aujourd’hui, mais probablement un signal fort demain. Un site difficile à comprendre pour un humain pressé est souvent difficile à exploiter pour une IA. Et un site difficile à exploiter par une IA a moins de chances d’être cité, recommandé ou utilisé dans un parcours de recherche génératif.
 
-Dans [la méthode IndHack](/), je le vois comme un vrai sujet de **SEO IA** : une page doit être lisible par Google, utile pour l’humain, et suffisamment structurée pour les agents. C’est aussi un point à intégrer dans une stratégie de [**consultante SEO**](/consultant-seo), surtout avant une refonte ou une création de site.
+Chez [IndHack](/), je le vois comme un vrai sujet de **SEO IA** : une page doit être lisible par Google, utile pour l’humain, et suffisamment structurée pour les agents. C’est aussi un point à intégrer dans [une stratégie SEO](/consultant-seo), surtout avant une refonte ou une création de site.
 
-> **À retenir :** un **site agent-friendly** n’est pas un site “optimisé pour les robots” au détriment des humains. C’est un site lisible, accessible, rapide, sémantique et prévisible. Si vous voulez vérifier vos bases, commencez par un [audit SEO gratuit](/outils/audit-seo-gratuit), puis [contrôlez l’exposition IA de votre site](/outils/testeur-visibilite-ia).
+> **À retenir :** un **site agent-friendly** n’est pas un site “optimisé pour les robots” au détriment des humains. C’est un site lisible, accessible, rapide, sémantique et prévisible. Si vous voulez vérifier vos bases, commencez par un [audit SEO gratuit](/outils/audit-seo-gratuit), puis par [un contrôle de visibilité IA](/outils/testeur-visibilite-ia).
 
-## Sommaire
-
-- [Qu’est-ce qu’un site agent-friendly ?](#quest-ce-quun-site-agent-friendly)
-- [Pourquoi c’est un sujet SEO](#pourquoi-cest-un-sujet-seo)
-- [Les quick wins techniques](#quick-wins-techniques)
-- [Les quick wins UX](#quick-wins-ux)
-- [Les erreurs qui bloquent les agents IA](#erreurs-qui-bloquent)
-- [Comment l’intégrer sans cannibaliser votre SEO](#cannibalisation)
-- [FAQ](#faq)
 
 ## Qu’est-ce qu’un site agent-friendly ? {#quest-ce-quun-site-agent-friendly}
 

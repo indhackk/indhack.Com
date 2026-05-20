@@ -476,15 +476,6 @@ export default function BlogPostPage({ params }: PageProps) {
                                 );
                             })()}
 
-                            {/* Tags */}
-                            <div className="mt-12 pt-8 border-t border-gray-100 flex flex-wrap gap-2">
-                                {post.keywords.map((kw, i) => (
-                                    <span key={i} className="text-xs font-medium text-soft bg-gray-50 px-3 py-1 rounded-full">
-                                        #{kw}
-                                    </span>
-                                ))}
-                            </div>
-
                             {/* Service CTA contextuel */}
                             <BlogServiceCTA category={post.category} />
 

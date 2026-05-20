@@ -16,19 +16,10 @@ Google a confirmé une évolution importante : depuis le **7 mai 2026**, les **F
 
 La réaction la plus fréquente consiste à dire : “Le schema FAQ ne sert plus à rien, on le supprime.” C’est trop rapide. En **SEO technique**, une donnée structurée peut perdre son intérêt visuel dans les SERP tout en garder une utilité de clarification pour les moteurs, les IA et les outils d’audit. Le vrai sujet n’est donc pas “faut-il garder ou supprimer ?”, mais “où le garder, pourquoi, et comment éviter le balisage inutile ?”
 
-Sur [le site IndHack](/), je traiterais ce changement comme un sujet de [**référencement naturel**](/referencement-naturel) classique : nettoyer les signaux faibles, garder ce qui aide vraiment l’utilisateur, et relier le balisage à [un accompagnement SEO structuré](/consultant-seo), pas à une recette automatique.
+Chez [IndHack](/), je traiterais ce changement comme un sujet de [**référencement naturel**](/referencement-naturel) classique : nettoyer les signaux faibles, garder ce qui aide vraiment l’utilisateur, et relier le balisage à [une stratégie SEO structurée](/consultant-seo), pas à une recette automatique.
 
 > **À retenir :** les **FAQ rich results** disparaissent de Google Search, mais le format **FAQPage** peut rester utile si vos réponses sont réelles, visibles dans la page, non dupliquées et alignées avec l’intention de recherche. Pour générer un balisage propre sans surcharger vos pages, vous pouvez utiliser le [générateur de schema JSON-LD](/outils/generateur-schema-json-ld). Pour auditer une page complète, commencez par [un diagnostic SEO rapide](/outils/audit-seo-gratuit).
 
-## Sommaire
-
-- [Ce que Google a réellement annoncé](#ce-que-google-a-annonce)
-- [Ce qui change pour le SEO](#ce-qui-change-pour-le-seo)
-- [Faut-il supprimer le schema FAQPage ?](#faut-il-supprimer-le-schema-faqpage)
-- [Les quick wins à appliquer maintenant](#quick-wins)
-- [Les erreurs à éviter](#erreurs-a-eviter)
-- [Impact sur le GEO et les réponses IA](#impact-geo)
-- [FAQ](#faq)
 
 ## Ce que Google a réellement annoncé {#ce-que-google-a-annonce}
 

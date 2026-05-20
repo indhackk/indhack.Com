@@ -18,19 +18,10 @@ Ce chiffre change la manière de travailler. Pendant des années, le réflexe é
 
 Pour un site jeune ou une marque en construction, c’est une information importante. La visibilité ne dépend plus uniquement de l’autorité globale du domaine. Une page très claire, bien sourcée et bien reliée au reste du site peut gagner une place dans la synthèse.
 
-Pour [l’écosystème IndHack](/), l’enjeu est clair : le [socle SEO](/referencement-naturel) reste la base, mais les marques doivent aussi apprendre à devenir des sources fiables pour les réponses générées. Pour une **consultante SEO**, c’est exactement le lien entre [un accompagnement SEO](/consultant-seo) et une vraie démarche de [visibilité dans les IA](/consultant-geo).
+Chez [IndHack](/), je vois surtout un point de bascule : les [fondamentaux du référencement naturel](/referencement-naturel) restent indispensables, mais les marques doivent aussi apprendre à devenir des sources fiables pour les réponses générées. C’est là que [l’accompagnement SEO](/consultant-seo) rejoint une vraie [stratégie de visibilité dans les IA](/consultant-geo).
 
-> **À retenir :** le top 10 Google reste important, mais il n’est plus suffisant. Pour apparaître dans **AI Overviews**, une page doit aussi être claire, récente, vérifiable, facile à citer et cohérente avec d’autres sources. Si vous voulez mesurer votre exposition IA, commencez par [mesurer votre visibilité IA](/outils/testeur-visibilite-ia).
+> **À retenir :** le top 10 Google reste important, mais il n’est plus suffisant. Pour apparaître dans **AI Overviews**, une page doit aussi être claire, récente, vérifiable, facile à citer et cohérente avec d’autres sources. Si vous voulez mesurer votre exposition IA, commencez par [tester la visibilité IA de votre site](/outils/testeur-visibilite-ia).
 
-## Sommaire
-
-- [Ce que dit l’étude de mai 2026](#ce-que-dit-letude)
-- [Pourquoi le top 10 ne suffit plus](#pourquoi-le-top-10-ne-suffit-plus)
-- [Ce que Google semble chercher dans une source](#ce-que-google-cherche)
-- [Les quick wins pour être plus citable](#quick-wins)
-- [Comment éviter la cannibalisation SEO/GEO](#eviter-la-cannibalisation)
-- [Ce qu’il faut mesurer dans Search Console](#search-console)
-- [FAQ](#faq)
 
 ## Ce que dit l’étude de mai 2026 {#ce-que-dit-letude}
 
