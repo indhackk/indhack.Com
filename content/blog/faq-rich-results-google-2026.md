@@ -12,9 +12,11 @@ readingTime: "9 min"
 draft: false
 ---
 
-Google a confirmé une évolution importante : depuis le **7 mai 2026**, les **FAQ rich results** n’apparaissent plus dans Google Search. Le rapport FAQ dans Search Console et le test d’enrichissement associé doivent aussi disparaître progressivement en juin, avec une fin du support API prévue en août 2026 selon la [documentation officielle Google](https://developers.google.com/search/docs/appearance/structured-data/faqpage).
+Google a confirmé une évolution importante : depuis le **7 mai 2026**, les **FAQ rich results supprimés** ne sont plus un simple bruit de fond SEO. Les résultats enrichis FAQ n’apparaissent plus dans Google Search, et le rapport FAQ dans Search Console doit disparaître progressivement.
 
 La réaction la plus fréquente consiste à dire : “Le schema FAQ ne sert plus à rien, on le supprime.” C’est trop rapide. En **SEO technique**, une donnée structurée peut perdre son intérêt visuel dans les SERP tout en garder une utilité de clarification pour les moteurs, les IA et les outils d’audit. Le vrai sujet n’est donc pas “faut-il garder ou supprimer ?”, mais “où le garder, pourquoi, et comment éviter le balisage inutile ?”
+
+Sur [IndHack](/), je traiterais ce changement comme un sujet de [**référencement naturel**](/referencement-naturel) classique : nettoyer les signaux faibles, garder ce qui aide vraiment l’utilisateur, et relier le balisage à une stratégie de [**consultante SEO**](/consultant-seo), pas à une recette automatique.
 
 > **À retenir :** les **FAQ rich results** disparaissent de Google Search, mais le format **FAQPage** peut rester utile si vos réponses sont réelles, visibles dans la page, non dupliquées et alignées avec l’intention de recherche. Pour générer un balisage propre sans surcharger vos pages, vous pouvez utiliser le [générateur de schema JSON-LD](/outils/generateur-schema-json-ld). Pour auditer une page complète, commencez par un [audit SEO gratuit](/outils/audit-seo-gratuit).
 
@@ -31,6 +33,8 @@ La réaction la plus fréquente consiste à dire : “Le schema FAQ ne sert plus
 ## Ce que Google a réellement annoncé {#ce-que-google-a-annonce}
 
 Google ne dit pas que les FAQ sont mauvaises. Google dit que les **résultats enrichis FAQ** ne seront plus affichés comme une apparence spécifique dans les résultats de recherche classiques. C’est une nuance importante.
+
+La [documentation officielle Google](https://developers.google.com/search/docs/appearance/structured-data/faqpage) précise aussi que le rapport Search Console, le test d’enrichissement et le support API associés doivent être retirés progressivement. Autrement dit, l’ancien indicateur “FAQ valide dans Google” ne doit plus piloter vos décisions.
 
 Concrètement, cela signifie trois choses :
 
@@ -58,7 +62,7 @@ En revanche, les questions-réponses peuvent encore jouer plusieurs rôles :
 
 Le changement impose donc une vraie discipline. Une FAQ ne doit plus être un appendice SEO automatique. Elle doit devenir une section éditoriale utile, courte, visible et reliée au contenu principal.
 
-Sur une page commerciale comme une prestation d’[audit SEO professionnel](/audit-seo), une FAQ reste très pertinente si elle répond à des questions de décision : prix, délai, livrable, différence entre outil gratuit et audit humain. Sur un article informationnel, elle doit éviter de répéter exactement les H2.
+Sur une page commerciale comme une prestation d’[**audit SEO professionnel**](/audit-seo), une FAQ reste très pertinente si elle répond à des questions de décision : prix, délai, livrable, différence entre outil gratuit et audit humain. Sur un article informationnel, elle doit éviter de répéter exactement les H2. Le bon critère n’est plus “est-ce que Google affiche un rich result ?”, mais “est-ce que cette FAQ aide vraiment la page à convertir, à être comprise et à renforcer son **SEO technique** ?”
 
 ## Faut-il supprimer le schema FAQPage ? {#faut-il-supprimer-le-schema-faqpage}
 
