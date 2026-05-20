@@ -11,11 +11,16 @@ interface HeroServicesProps {
     subtitle: string;
     category: string;
     image: string;
+    imageAlt?: string;
     customVisual?: React.ReactNode;
 }
 
-export function HeroServices({ title, subtitle, category, image, customVisual }: HeroServicesProps) {
+export function HeroServices({ title, subtitle, category, image, imageAlt, customVisual }: HeroServicesProps) {
     const { openAuditModal } = useModal();
+    const imageSrc = image.startsWith('/') ? image : `/images/${image}.webp`;
+    const preserveImageMetadata = imageSrc.startsWith('/images/local-heroes/');
+    const imageWidth = preserveImageMetadata ? 1600 : 800;
+    const imageHeight = preserveImageMetadata ? 900 : 600;
 
     return (
         <section className="relative pt-40 pb-24 bg-ink overflow-hidden min-h-[80vh] flex items-center">
@@ -26,11 +31,12 @@ export function HeroServices({ title, subtitle, category, image, customVisual }:
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-16 items-center min-w-0">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                        className="min-w-0"
                     >
                         <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-sauge/10 border border-sauge/20 mb-8">
                             <span className="w-2 h-2 rounded-full bg-sauge animate-pulse" />
@@ -41,7 +47,7 @@ export function HeroServices({ title, subtitle, category, image, customVisual }:
                             {title}
                         </h1>
 
-                        <p className="text-xl lg:text-2xl text-soft-light leading-relaxed max-w-xl mb-12">
+                        <p className="text-xl lg:text-2xl text-soft-light leading-relaxed max-w-xl mb-12 break-words">
                             {subtitle}
                         </p>
 
@@ -60,17 +66,18 @@ export function HeroServices({ title, subtitle, category, image, customVisual }:
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, delay: 0.2 }}
-                        className="relative"
+                        className="relative min-w-0 max-w-full"
                     >
                         {customVisual ? (
                             customVisual
                         ) : (
-                            <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 group">
+                            <div className="relative max-w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 group">
                                 <Image
-                                    src={image.startsWith('/') ? image : `/images/${image}.webp`}
-                                    alt={title}
-                                    width={800}
-                                    height={600}
+                                    src={imageSrc}
+                                    alt={imageAlt || title}
+                                    width={imageWidth}
+                                    height={imageHeight}
+                                    unoptimized={preserveImageMetadata}
                                     priority
                                     fetchPriority="high"
                                     className="w-full h-auto object-cover transition-all duration-1000"

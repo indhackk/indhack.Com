@@ -47,6 +47,11 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
     // Slug de base (sans le préfixe) pour NearbyLinks
     // cityData.slug = "consultant-seo-nice" → baseCitySlug = "nice"
     const baseCitySlug = cityData.slug.replace('consultant-seo-', '');
+    const hasGeneratedLocalHero = cityData.images.hero.src.startsWith("/images/local-heroes/");
+    const heroImage = hasGeneratedLocalHero ? cityData.images.hero.src : "seo-dashboard";
+    const schemaImage = hasGeneratedLocalHero
+        ? `https://indhack.com${cityData.images.hero.src}`
+        : "https://indhack.com/images/logo-indhack.webp";
 
     // JSON-LD LocalBusiness
     const localBusinessSchema = {
@@ -59,7 +64,7 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
         "url": `https://indhack.com/${cityData.slug}`,
         "telephone": "+33661139748",
         "email": "contact@indhack.com",
-        "image": "https://indhack.com/images/logo-indhack.webp",
+        "image": schemaImage,
         "priceRange": "€€",
         "address": {
             "@type": "PostalAddress",
@@ -259,7 +264,8 @@ export function CityPageTemplateV2({ cityData, customContent }: CityPageProps) {
             <HeroServices
                 title={`Consultant SEO ${city} (${zipCode})`}
                 subtitle={`Dominez Google à ${city}. Attirez des clients qualifiés ${getDepartmentPreposition(cityData.department)} grâce à une stratégie de référencement local sur-mesure.`}
-                image="seo-dashboard"
+                image={heroImage}
+                imageAlt={hasGeneratedLocalHero ? cityData.images.hero.alt : undefined}
                 category="Référencement Local"
             />
 
