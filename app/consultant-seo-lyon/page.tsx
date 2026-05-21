@@ -48,7 +48,7 @@ const RESOURCES = [
     { href: "/outils/audit-seo-gratuit", label: "Tester la base technique de votre site" },
     { href: "/outils/simulateur-visibilite-locale", label: "Simuler votre visibilité locale" },
     { href: "/blog/google-business-profile-guide-complet", label: "Optimiser une fiche Google Business Profile" },
-    { href: "/blog/google-maps-voler-clients-concurrents", label: "Lire les stratégies Google Maps avancées" },
+    { href: "/blog/google-maps-voler-clients-concurrents", label: "Approfondir les leviers Google Maps" },
     { href: "/contact", label: "Demander un diagnostic SEO à Lyon" },
 ];
 
@@ -79,10 +79,10 @@ function LyonCustomContent() {
 
                             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                                 {[
-                                    { value: "520 000", label: "habitants" },
-                                    { value: "1,4 M", label: "métropole" },
-                                    { value: "155 000", label: "entreprises" },
-                                    { value: "7 M", label: "touristes/an" },
+                                    { value: "520 000+", label: "habitants à Lyon" },
+                                    { value: "1,4 M", label: "habitants dans la métropole" },
+                                    { value: "140 000+", label: "entreprises implantées" },
+                                    { value: "9,56 M", label: "nuitées touristiques 2024" },
                                 ].map((stat) => (
                                     <div key={stat.label} className="rounded-2xl border border-line bg-fond-clair p-5">
                                         <p className="font-heading text-2xl font-bold text-ink">{stat.value}</p>
@@ -91,6 +91,11 @@ function LyonCustomContent() {
                                 ))}
                             </div>
                         </div>
+                        <p className="mt-5 text-xs leading-6 text-soft">
+                            Sources : <a href="https://www.insee.fr/fr/statistiques/2011101?geo=EPCI-200046977" target="_blank" rel="noopener noreferrer" className="font-semibold text-sauge hover:underline">INSEE</a>,{" "}
+                            <a href="https://www.grandlyon.com/actualite/transition-ecologique-les-entreprises-relevent-le-defi" target="_blank" rel="noopener noreferrer" className="font-semibold text-sauge hover:underline">Métropole de Lyon</a> et{" "}
+                            <a href="https://presse.lyon-france.com/boite-a-outils/bilans-et-etudes" target="_blank" rel="noopener noreferrer" className="font-semibold text-sauge hover:underline">ONLYLYON Tourisme</a>.
+                        </p>
                     </div>
                 </div>
             </section>

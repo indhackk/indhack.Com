@@ -8,7 +8,7 @@ import Image from "next/image";
 // COLONNE 1 — Expertises SEO (7 services)
 // ══════════════════════════════════════════════════════════════
 const SERVICES = [
-    { title: "Consultante SEO Freelance", href: "/consultant-seo" },
+    { title: "Consultante SEO indépendante", href: "/consultant-seo" },
     { title: "Audit SEO Complet", href: "/audit-seo" },
     { title: "Référencement Naturel", href: "/referencement-naturel" },
     { title: "SEO Local", href: "/seo-local" },

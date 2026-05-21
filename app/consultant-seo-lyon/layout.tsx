@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Lyon (69000) | Experte référencement Rhône",
+    title: "Consultant SEO Lyon (69000) - IndHack",
     description: "Consultante SEO à Lyon. Audit, stratégie locale et référencement naturel pour PME, startups et entreprises de services du Rhône.",
     keywords: ["consultant SEO Lyon", "référencement Lyon", "SEO Rhône", "audit SEO Lyon", "experte SEO 69", "agence SEO Lyon", "référencement naturel Lyon"],
     alternates: {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         follow: true,
     },
     openGraph: {
-        title: "Consultante SEO Lyon — Référencement Local Rhône-Alpes",
+        title: "Consultant SEO Lyon (69000) - IndHack",
         description: "Renforcez votre visibilité à Lyon avec une stratégie SEO locale claire, technique et mesurable. Part-Dieu, Confluence, Gerland.",
         url: "https://indhack.com/consultant-seo-lyon",
         type: "website",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Consultante SEO Lyon — Référencement Local Rhône-Alpes",
+        title: "Consultant SEO Lyon (69000) - IndHack",
         description: "Consultante SEO à Lyon. Référencement local pour PME, startups et entreprises de services du Rhône."
     }
 };

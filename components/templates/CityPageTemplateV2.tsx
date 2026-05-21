@@ -55,36 +55,35 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
         ? `https://indhack.com${cityData.images.hero.src}`
         : "https://indhack.com/images/logo-indhack.webp";
 
-    // JSON-LD LocalBusiness
-    const localBusinessSchema = {
+    // JSON-LD Service : les pages villes décrivent une zone desservie, pas une adresse physique locale.
+    const localServiceSchema = {
         "@context": "https://schema.org",
-        "@type": ["LocalBusiness", "ProfessionalService"],
-        "@id": `https://indhack.com/${cityData.slug}#business`,
-        "name": `IndHack - Consultant SEO ${city}`,
+        "@type": "Service",
+        "@id": `https://indhack.com/${cityData.slug}#service`,
+        "name": `Consultant SEO ${city}`,
         "alternateName": "Indiana Aflalo - Experte SEO",
         "description": `Consultante SEO experte à ${city}. Référencement naturel, audit technique et stratégie de visibilité Google pour PME et entrepreneurs de ${city} et sa région.`,
         "url": `https://indhack.com/${cityData.slug}`,
-        "telephone": "+33661139748",
-        "email": "contact@indhack.com",
         "image": schemaImage,
-        "priceRange": "€€",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": city,
-            "postalCode": zipCode,
-            "addressRegion": cityData.region,
-            "addressCountry": city === "Monaco" ? "MC" : "FR"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": cityData.lat,
-            "longitude": cityData.lng
-        },
         "areaServed": [
             { "@type": "City", "name": city },
             { "@type": "AdministrativeArea", "name": cityData.department },
             ...cityData.nearbyAreas.map(area => ({ "@type": "Place", "name": area }))
         ],
+        "provider": {
+            "@type": "ProfessionalService",
+            "@id": "https://indhack.com/#localbusiness",
+            "name": "IndHack - Consultante SEO",
+            "url": "https://indhack.com",
+            "telephone": "+33661139748",
+            "email": "contact@indhack.com"
+        },
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "EUR",
+            "url": `https://indhack.com/${cityData.slug}`
+        },
         "serviceType": [
             "Référencement Naturel SEO",
             "Audit SEO",
@@ -93,7 +92,6 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
             "Création de Site Web",
             "GEO - Generative Engine Optimization"
         ],
-        "dateModified": new Date().toISOString().split('T')[0],
         "founder": {
             "@type": "Person",
             "@id": "https://indhack.com/#indiana-aflalo",
@@ -103,12 +101,6 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
             "sameAs": [
                 "https://www.linkedin.com/in/indianaaflalo"
             ]
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "bestRating": "5",
-            "ratingCount": "47"
         }
     };
 
@@ -116,16 +108,16 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
     const getContextualFAQ = () => {
         const baseFAQ = [
             {
-                question: `Pourquoi choisir une consultante SEO à ${city} plutôt qu'une agence parisienne ?`,
-                answer: `Une experte locale connaît les spécificités du marché ${city} : comportements de recherche, concurrents directs, partenaires locaux pour le netlinking. Je peux vous rencontrer physiquement, visiter votre établissement et adapter ma stratégie à votre réalité terrain. Cette proximité génère des résultats plus rapides et pertinents.`
+                question: `Pourquoi choisir une consultante SEO pour ${city} plutôt qu'une agence généraliste ?`,
+                answer: `Une consultante SEO dédiée peut analyser précisément les intentions de recherche à ${city}, vos concurrents directs, les quartiers à prioriser et les pages qui doivent générer des demandes qualifiées. L'intérêt n'est pas seulement la proximité géographique, mais la capacité à relier technique, contenu, maillage interne et visibilité locale.`
             },
             {
-                question: `Quels résultats SEO attendre sur ${city} et les ${cityData.department} ?`,
-                answer: `Sur des requêtes locales type "votre métier + ${city}", les premiers résultats apparaissent en 1 à 3 mois. Pour les secteurs très concurrentiels (immobilier, restauration, avocats), comptez 4 à 6 mois. L'objectif : apparaître dans le Pack Local Google Maps et générer un flux régulier de prospects qualifiés.`
+                question: `Quels résultats SEO attendre à ${city} et dans le ${cityData.department} ?`,
+                answer: `Sur des requêtes locales de type "métier + ${city}", les premiers signaux peuvent apparaître en quelques semaines si la base technique, la fiche Google Business Profile et les contenus sont propres. Les marchés concurrentiels demandent plus de temps : l'objectif est de progresser sur les bonnes requêtes, puis de transformer cette visibilité en demandes qualifiées.`
             },
             {
                 question: `Intervenez-vous sur ${cityData.nearbyAreas.slice(0, 3).join(", ")} et alentours ?`,
-                answer: `Oui, j'interviens sur toute la zone ${cityData.department} : ${cityData.nearbyAreas.join(", ")}. La proximité géographique est un atout pour le SEO local, mais les outils modernes permettent aussi un accompagnement à distance très efficace.`
+                answer: `Oui, l'accompagnement peut intégrer ${cityData.nearbyAreas.join(", ")} et les zones proches qui ont un intérêt business réel. Le but n'est pas de multiplier les pages locales artificielles, mais de construire un maillage cohérent entre ${city}, les secteurs prioritaires et les services recherchés.`
             }
         ];
 
@@ -154,11 +146,11 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
             volume: [
                 {
                     question: `Comment se démarquer dans un marché très concurrentiel comme ${city} ?`,
-                    answer: `Avec ${cityData.population} habitants, la concurrence est féroce. Ma stratégie : identifier des niches sous-exploitées (quartiers spécifiques, services complémentaires), créer du contenu hyper-localisé et accumuler des avis Google plus vite que vos concurrents. Le volume se gagne par l'exhaustivité.`
+                    answer: `Dans une grande métropole comme ${city}, la différence se fait rarement avec une seule page. Il faut identifier les intentions prioritaires, travailler les pages business, renforcer les preuves locales, clarifier Google Business Profile et éviter de créer des contenus qui se cannibalisent entre eux.`
                 },
                 {
                     question: `Le SEO peut-il remplacer Google Ads à ${city} ?`,
-                    answer: `Le SEO et Google Ads sont complémentaires. Sur une grande métropole comme ${city}, le SEO offre un meilleur ROI long terme (x5 en moyenne) tandis que Ads génère du trafic immédiat. Je recommande souvent de commencer par les deux puis de réduire Ads progressivement quand le SEO prend le relais.`
+                    answer: `Le SEO et Google Ads ne répondent pas au même besoin. Google Ads peut apporter de la visibilité immédiate, tandis que le SEO construit un actif durable : pages, contenus, autorité locale et trafic organique. Le bon arbitrage dépend de votre budget, de vos marges et de la pression concurrentielle.`
                 }
             ],
             premium: [
@@ -254,7 +246,7 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
             {/* JSON-LD Schema */}
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(localServiceSchema) }}
             />
 
             {/* Breadcrumb sr-only (JSON-LD est géré par le composant Breadcrumb dans page.tsx) */}
@@ -264,7 +256,9 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
 
             {/* Hero */}
             <HeroServices
-                title={`Consultant SEO ${city} (${zipCode})`}
+                title={isPremiumVariant
+                    ? `Consultante SEO à ${city} : stratégie locale et demandes qualifiées`
+                    : `Consultant SEO ${city} (${zipCode})`}
                 subtitle={isPremiumVariant
                     ? `Développez vos demandes qualifiées à ${city}, de ${cityData.landmarks.slice(0, 2).join(" à ")}, avec une stratégie SEO locale claire, technique et mesurable.`
                     : `Dominez Google à ${city}. Attirez des clients qualifiés ${getDepartmentPreposition(cityData.department)} grâce à une stratégie de référencement local sur-mesure.`}
@@ -308,8 +302,8 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                                 <aside className="grid gap-4">
                                     <div className="grid gap-4 sm:grid-cols-3">
                                         {[
-                                            { value: cityData.population, label: "habitants à Lyon" },
-                                            { value: "46 %", label: "des recherches Google ont une intention locale" },
+                                            { value: cityData.population, label: "habitants dans la commune" },
+                                            { value: "1,4 M", label: "habitants dans la métropole" },
                                             { value: cityData.nearbyAreas.slice(0, 2).join(" + "), label: "zones proches à intégrer au maillage" },
                                         ].map((item) => (
                                             <div key={item.label} className="rounded-2xl border border-line bg-white p-5 shadow-sm">
@@ -330,6 +324,11 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                                                 </h3>
                                                 <p className="mt-3 text-sm leading-7 text-soft">
                                                     {cityData.context.localInsight}
+                                                </p>
+                                                <p className="mt-3 text-xs leading-6 text-soft">
+                                                    Sources : <a href="https://www.insee.fr/fr/statistiques/2011101?geo=EPCI-200046977" target="_blank" rel="noopener noreferrer" className="font-semibold text-sauge hover:underline">INSEE</a>,{" "}
+                                                    <a href="https://www.grandlyon.com/actualite/transition-ecologique-les-entreprises-relevent-le-defi" target="_blank" rel="noopener noreferrer" className="font-semibold text-sauge hover:underline">Métropole de Lyon</a>,{" "}
+                                                    <a href="https://presse.lyon-france.com/boite-a-outils/bilans-et-etudes" target="_blank" rel="noopener noreferrer" className="font-semibold text-sauge hover:underline">ONLYLYON Tourisme</a>.
                                                 </p>
                                                 <ul className="mt-4 grid gap-2 text-sm text-soft sm:grid-cols-3">
                                                     {cityData.context.specificChallenges.map((challenge) => (
