@@ -476,64 +476,70 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                 </>
             )}
 
-            {/* 3 Piliers SEO Local - Compact */}
-            <section className="py-12 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-8">
-                        <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink">
-                            Les <span className="text-sauge">3 piliers</span> du SEO local à {city}
-                        </h2>
-                    </div>
-                    <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
-                        <motion.div
-                            initial={{ opacity: 0, y: 15 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group"
-                        >
-                            <MapPin className="w-8 h-8 text-sauge mb-4 group-hover:scale-110 transition-transform" />
-                            <h3 className="text-lg font-bold mb-2">Google Business Profile</h3>
-                            <p className="text-soft text-sm">
-                                Optimisation complète de votre fiche : catégories, photos, posts, avis pour apparaître dans le <strong>Pack Local</strong>.
-                            </p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 15 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ delay: 0.1 }}
-                            className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group"
-                        >
-                            <Search className="w-8 h-8 text-sauge mb-4 group-hover:scale-110 transition-transform" />
-                            <h3 className="text-lg font-bold mb-2">Mots-clés géolocalisés</h3>
-                            <p className="text-soft text-sm">
-                                Ciblage des requêtes "métier + {city}" qui convertissent <strong>3x plus</strong>. Focus quartiers : {cityData.landmarks.slice(0, 2).join(", ")}.
-                            </p>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 15 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ delay: 0.2 }}
-                            className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group"
-                        >
-                            <Users className="w-8 h-8 text-sauge mb-4 group-hover:scale-110 transition-transform" />
-                            <h3 className="text-lg font-bold mb-2">Autorité locale</h3>
-                            <p className="text-soft text-sm">
-                                Liens depuis partenaires locaux, annuaires pros et presse {cityData.region} pour <strong>asseoir votre crédibilité</strong>.
-                            </p>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
+            {!isPremiumVariant && (
+                <>
+                    {/* 3 Piliers SEO Local - Compact */}
+                    <section className="py-12 bg-gray-50">
+                        <div className="container mx-auto px-4">
+                            <div className="text-center mb-8">
+                                <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink">
+                                    Les <span className="text-sauge">3 piliers</span> du SEO local à {city}
+                                </h2>
+                            </div>
+                            <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 15 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-100px" }}
+                                    className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group"
+                                >
+                                    <MapPin className="w-8 h-8 text-sauge mb-4 group-hover:scale-110 transition-transform" />
+                                    <h3 className="text-lg font-bold mb-2">Google Business Profile</h3>
+                                    <p className="text-soft text-sm">
+                                        Optimisation complète de votre fiche : catégories, photos, posts, avis pour apparaître dans le <strong>Pack Local</strong>.
+                                    </p>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 15 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-100px" }}
+                                    transition={{ delay: 0.1 }}
+                                    className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group"
+                                >
+                                    <Search className="w-8 h-8 text-sauge mb-4 group-hover:scale-110 transition-transform" />
+                                    <h3 className="text-lg font-bold mb-2">Mots-clés géolocalisés</h3>
+                                    <p className="text-soft text-sm">
+                                        Ciblage des requêtes "métier + {city}" qui convertissent <strong>3x plus</strong>. Focus quartiers : {cityData.landmarks.slice(0, 2).join(", ")}.
+                                    </p>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 15 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-100px" }}
+                                    transition={{ delay: 0.2 }}
+                                    className="bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group"
+                                >
+                                    <Users className="w-8 h-8 text-sauge mb-4 group-hover:scale-110 transition-transform" />
+                                    <h3 className="text-lg font-bold mb-2">Autorité locale</h3>
+                                    <p className="text-soft text-sm">
+                                        Liens depuis partenaires locaux, annuaires pros et presse {cityData.region} pour <strong>asseoir votre crédibilité</strong>.
+                                    </p>
+                                </motion.div>
+                            </div>
+                        </div>
+                    </section>
 
-            {/* Bloc différenciant selon le type de marché (anti-Doorway Pages) */}
-            <MarketInsightBlock
-                marketType={cityData.context.marketType}
-                cityName={city}
-                targetClients={cityData.context.targetClients}
-                variant={isPremiumVariant ? "indhack" : "default"}
-            />
+                    {/* Bloc différenciant selon le type de marché (anti-Doorway Pages) */}
+                    <MarketInsightBlock
+                        marketType={cityData.context.marketType}
+                        cityName={city}
+                        targetClients={cityData.context.targetClients}
+                        variant="default"
+                    />
+                </>
+            )}
+
+            {isPremiumVariant && customContent}
 
             {/* Outil SEO interactif : conservé sur les pages standard, remplacé par un CTA compact sur Lyon premium. */}
             {!isPremiumVariant && <SEOScoreChecker />}
@@ -623,10 +629,10 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                         {RELATED_SERVICES.map((service, i) => (
                             <Link key={i} href={service.href}>
                                 <motion.div
-                                    initial={{ opacity: 0, y: 15 }}
+                                    initial={isPremiumVariant ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, margin: "-100px" }}
-                                    transition={{ delay: i * 0.05 }}
+                                    transition={{ delay: isPremiumVariant ? 0 : i * 0.05 }}
                                     className={`p-5 rounded-xl border transition-all group h-full ${(service as any).isPrimary
                                         ? 'bg-sauge text-white border-sauge hover:bg-ink'
                                         : 'bg-gray-50 border-gray-100 hover:shadow-lg hover:border-sauge/30'
@@ -654,7 +660,7 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                 </div>
             </section>
 
-            {customContent}
+            {!isPremiumVariant && customContent}
 
             {/* Section Blog - Maillage vers Petite-fille */}
             <section className="py-12 bg-gray-50">
@@ -669,10 +675,10 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                         {RELATED_BLOG_POSTS.map((post, i) => (
                             <Link key={i} href={post.href}>
                                 <motion.div
-                                    initial={{ opacity: 0, y: 15 }}
+                                    initial={isPremiumVariant ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, margin: "-100px" }}
-                                    transition={{ delay: i * 0.05 }}
+                                    transition={{ delay: isPremiumVariant ? 0 : i * 0.05 }}
                                     className="p-5 bg-white rounded-xl border border-gray-100 hover:shadow-lg hover:border-sauge/30 transition-all group h-full"
                                 >
                                     <h3 className="font-bold text-sm text-ink group-hover:text-sauge transition-colors mb-2">{post.title}</h3>
