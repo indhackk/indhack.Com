@@ -19,13 +19,13 @@ const SERVICES = [
     },
     {
         title: "Référencement Naturel",
-        desc: "Stratégie sur-mesure pour conquérir les premières positions sur Google et générer un trafic qualifié durable.",
+        desc: "Stratégie sur mesure pour améliorer vos positions Google et générer un trafic qualifié durable.",
         icon: <TrendingUp className="w-8 h-8" />,
         href: "/referencement-naturel"
     },
     {
         title: "SEO Local",
-        desc: "Dominez Google Maps et le Pack Local. Attirez des clients qualifiés de votre zone géographique.",
+        desc: "Renforcez votre présence sur Google Maps et le Pack Local. Attirez des clients qualifiés de votre zone géographique.",
         icon: <MapPin className="w-8 h-8" />,
         href: "/seo-local"
     },

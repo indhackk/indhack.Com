@@ -153,12 +153,12 @@ function NiceCustomContent() {
                 </div>
             </section>
 
-            {/* Section Pourquoi freelance vs agence */}
+            {/* Section Pourquoi indépendante vs agence */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO freelance</span> plutôt qu'une agence niçoise ?
+                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence niçoise ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -168,7 +168,7 @@ function NiceCustomContent() {
                                         Nice compte des dizaines d'agences SEO et web. Elles facturent entre <strong>2 000€ et 7 000€/mois</strong>, souvent avec un junior affecté à votre dossier et un turn-over d'interlocuteurs qui vous oblige à répéter vos objectifs à chaque réunion.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO freelance</Link> avec une expertise technique poussée (site Next.js, score PageSpeed 95+/100) et une spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> qui positionne vos contenus sur ChatGPT et Perplexity.
+                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise technique poussée (site Next.js, score PageSpeed 95+/100) et une spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> qui positionne vos contenus sur ChatGPT et Perplexity.
                                     </p>
                                     <p>
                                         Je connais l'écosystème azuréen dans ses nuances : la saisonnalité touristique estivale, le multilinguisme indispensable sur la Côte, les cycles de décision courts en hôtellerie et les dynamiques B2B propres à la French Tech niçoise. Je ne sous-traite pas, je n'applique pas de grille générique.
@@ -257,7 +257,7 @@ function NiceCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Hôtel Promenade des Anglais</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">+40 % de réservations directes (vs Booking)</td>
+                                        <td className="py-3 px-4">Réservations directes hors OTA</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Agence immobilière</td>
@@ -267,7 +267,7 @@ function NiceCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Startup Éco-Vallée</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">+200 % de leads qualifiés</td>
+                                        <td className="py-3 px-4">Leads qualifiés via contenu ciblé</td>
                                     </tr>
                                     <tr>
                                         <td className="py-3 px-4">Cabinet médical Cimiez</td>
@@ -279,7 +279,7 @@ function NiceCustomContent() {
                         </div>
 
                         <p className="text-xs text-soft mt-4 italic">
-                            * Ces résultats sont basés sur des projets réels. Chaque situation est unique — l'<Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
+                            * Ces objectifs dépendent de la concurrence, de l’état technique du site et de la vitesse d’exécution. Chaque situation est unique — l'<Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
                         </p>
                     </div>
                 </div>
@@ -310,7 +310,7 @@ function NiceCustomContent() {
                                 </Link>
                                 <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps
+                                    SEO local : renforcer sa présence sur Google Maps
                                 </Link>
                                 <Link href="/blog/checklist-seo-2026" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />

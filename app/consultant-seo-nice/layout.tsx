@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Nice (06000) | Experte référencement Côte d'Azur",
-    description: "Consultante SEO freelance à Nice. Audit technique, stratégie de visibilité Google et SEO local pour PME niçoises. +200 % de trafic organique en 6 mois.",
+    title: "Consultant SEO Nice (06000) - IndHack",
+    description: "Consultante SEO à Nice. Audit technique, stratégie de visibilité Google et SEO local pour PME niçoises. Stratégie SEO locale claire et mesurable.",
     alternates: {
         canonical: "https://indhack.com/consultant-seo-nice"
     },
     openGraph: {
-        title: "Consultante SEO Nice (06000) | Experte référencement",
-        description: "Experte SEO à Nice, Côte d'Azur. Audit gratuit, accompagnement personnalisé pour dominer Google dans les Alpes-Maritimes.",
+        title: "Consultant SEO Nice (06000) - IndHack",
+        description: "Experte SEO à Nice, Côte d'Azur. Audit gratuit, accompagnement personnalisé pour renforcer votre visibilité dans les Alpes-Maritimes.",
         url: "https://indhack.com/consultant-seo-nice",
         type: "website",
     }

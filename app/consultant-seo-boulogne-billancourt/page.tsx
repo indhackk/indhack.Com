@@ -135,12 +135,12 @@ function BoulogneBillancourtCustomContent() {
                 </div>
             </section>
 
-            {/* Section Pourquoi freelance vs agence */}
+            {/* Section Pourquoi indépendante vs agence */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO freelance</span> pour votre activité à Boulogne ?
+                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> pour votre activité à Boulogne ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -150,7 +150,7 @@ function BoulogneBillancourtCustomContent() {
                                         Boulogne-Billancourt est un marché B2B médias très spécifique. Les agences parisiennes ne comprennent pas ce micro-marché : elles appliquent des stratégies génériques sur des requêtes trop larges. "Production vidéo Boulogne" est ultra-qualifié — c'est exactement le type de requête que je cible en priorité, parce qu'elle convertit.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO freelance</Link> spécialisée en SEO B2B et content marketing pour les secteurs créatifs et médias. Je maîtrise également la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> — crucial pour les agences de communication qui veulent être citées par ChatGPT ou Perplexity dans leur domaine.
+                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> spécialisée en SEO B2B et content marketing pour les secteurs créatifs et médias. Je maîtrise également la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> — crucial pour les agences de communication qui veulent être citées par ChatGPT ou Perplexity dans leur domaine.
                                     </p>
                                     <p>
                                         Je ne sous-traite pas, je n'applique pas de grille générique, et je vous accompagne personnellement du diagnostic à la croissance organique.
@@ -249,7 +249,7 @@ function BoulogneBillancourtCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Cabinet de conseil</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">+150% leads B2B qualifiés</td>
+                                        <td className="py-3 px-4">Leads B2B qualifiés</td>
                                     </tr>
                                     <tr>
                                         <td className="py-3 px-4">Commerce Marcel Sembat</td>
@@ -261,7 +261,7 @@ function BoulogneBillancourtCustomContent() {
                         </div>
 
                         <p className="text-xs text-soft mt-4 italic">
-                            * Ces résultats sont basés sur des projets réels. Chaque situation est unique — l'<Link href="/audit-seo" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
+                            * Ces objectifs dépendent de la concurrence, de l’état technique du site et de la vitesse d’exécution. Chaque situation est unique — l'<Link href="/audit-seo" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
                         </p>
                     </div>
                 </div>
@@ -276,7 +276,7 @@ function BoulogneBillancourtCustomContent() {
                             <div className="grid md:grid-cols-2 gap-4">
                                 <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps en 2026
+                                    SEO local : renforcer sa présence sur Google Maps
                                 </Link>
                                 <Link href="/outils/audit-seo-gratuit" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />

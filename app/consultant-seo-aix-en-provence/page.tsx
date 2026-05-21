@@ -147,12 +147,12 @@ function AixCustomContent() {
                 </div>
             </section>
 
-            {/* Section Pourquoi freelance vs agence */}
+            {/* Section Pourquoi indépendante vs agence */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO freelance</span> plutôt qu'une agence aixoise ?
+                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence aixoise ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -162,7 +162,7 @@ function AixCustomContent() {
                                         Aix-en-Provence compte plusieurs agences web et SEO, souvent positionnées sur le marché premium de la ville. Leurs tarifs, entre <strong>1 500€ et 5 000€/mois</strong>, reflètent leur localisation en centre-ville autant que leur expertise réelle. Le résultat : vous payez leur loyer cours Mirabeau autant que votre stratégie digitale.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO freelance</Link> avec une expertise technique poussée (site Next.js, score PageSpeed 95+/100) et une spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> qui positionne vos contenus sur ChatGPT et Perplexity.
+                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise technique poussée (site Next.js, score PageSpeed 95+/100) et une spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> qui positionne vos contenus sur ChatGPT et Perplexity.
                                     </p>
                                     <p>
                                         Je connais l'écosystème aixois dans ses nuances : la clientèle premium du centre historique, les dynamiques B2B du pôle des Milles, la concurrence intense en restauration gastronomique et les spécificités SEO des professions libérales du quartier Mazarin. Je ne sous-traite pas, je n'applique pas de grille générique.
@@ -256,7 +256,7 @@ function AixCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Startup / ESN Les Milles</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">+200 % de leads qualifiés via contenu B2B</td>
+                                        <td className="py-3 px-4">Leads qualifiés via contenu B2B</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Commerce premium centre</td>
@@ -273,7 +273,7 @@ function AixCustomContent() {
                         </div>
 
                         <p className="text-xs text-soft mt-4 italic">
-                            * Ces résultats sont basés sur des projets réels. Chaque situation est unique — l'<Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
+                            * Ces objectifs dépendent de la concurrence, de l’état technique du site et de la vitesse d’exécution. Chaque situation est unique — l'<Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
                         </p>
                     </div>
                 </div>
@@ -300,7 +300,7 @@ function AixCustomContent() {
                                 </Link>
                                 <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps
+                                    SEO local : renforcer sa présence sur Google Maps
                                 </Link>
                                 <Link href="/blog/checklist-seo-2026" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />

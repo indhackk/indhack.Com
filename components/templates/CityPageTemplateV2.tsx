@@ -13,27 +13,6 @@ import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 import { MarketInsightBlock } from "@/components/seo/MarketInsightBlock";
 import { NearbyLinks } from "@/components/NearbyLinks";
 
-const DEPARTMENT_PREPOSITIONS: Record<string, string> = {
-    "Alpes-Maritimes": "des Alpes-Maritimes",
-    "Bas-Rhin": "du Bas-Rhin",
-    "Bouches-du-Rhône": "des Bouches-du-Rhône",
-    "Gironde": "de Gironde",
-    "Haute-Garonne": "de Haute-Garonne",
-    "Hauts-de-Seine": "des Hauts-de-Seine",
-    "Hérault": "de l'Hérault",
-    "Ille-et-Vilaine": "d'Ille-et-Vilaine",
-    "Isère": "d'Isère",
-    "Loire-Atlantique": "de Loire-Atlantique",
-    "Monaco": "de Monaco",
-    "Nord": "du Nord",
-    "Paris": "de Paris",
-    "Rhône": "du Rhône",
-};
-
-function getDepartmentPreposition(department: string): string {
-    return DEPARTMENT_PREPOSITIONS[department] || `de ${department}`;
-}
-
 interface CityPageProps {
     cityData: CityData;
     customContent?: React.ReactNode;
@@ -202,7 +181,7 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
     const getRelatedBlogPosts = () => {
         const blogByMarket: Record<string, { title: string; href: string; desc: string }[]> = {
             luxury: [
-                { title: "Comment dominer Google Maps face aux concurrents", href: "/blog/google-maps-voler-clients-concurrents", desc: "Stratégies SEO local avancées" },
+                { title: "Approfondir les leviers Google Maps", href: "/blog/google-maps-voler-clients-concurrents", desc: "Stratégies SEO local avancées" },
                 { title: "L'importance d'un audit SEO", href: "/blog/audit-seo-approfondi-guide-complet", desc: "Diagnostic complet" },
                 { title: "Google Business Profile : Guide complet", href: "/blog/google-business-profile-guide-complet", desc: "Optimisation fiche Google" }
             ],
@@ -217,9 +196,9 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                 { title: "L'importance d'un audit SEO", href: "/blog/audit-seo-approfondi-guide-complet", desc: "Diagnostic complet" }
             ],
             premium: [
-                { title: "SEO Local Nice : dominer le marché azuréen", href: "/blog/seo-local-nice", desc: "Guide régional Côte d'Azur" },
+                { title: "SEO local à Nice : comprendre le marché azuréen", href: "/blog/seo-local-nice", desc: "Guide régional Côte d'Azur" },
                 { title: "Google Business Profile : Guide complet", href: "/blog/google-business-profile-guide-complet", desc: "Optimisation fiche Google" },
-                { title: "Comment dominer Google Maps", href: "/blog/google-maps-voler-clients-concurrents", desc: "Stratégies avancées" }
+                { title: "Approfondir les leviers Google Maps", href: "/blog/google-maps-voler-clients-concurrents", desc: "Stratégies avancées" }
             ],
             local: [
                 { title: "Pourquoi faire appel à un consultant SEO ?", href: "/blog/pourquoi-consultant-seo", desc: "Les avantages d'un expert SEO" },
@@ -236,9 +215,9 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
     // Avantages différenciants
     const ADVANTAGES = [
         { icon: <Shield />, title: "Expertise technique", desc: "Next.js, Core Web Vitals, IA" },
-        { icon: <BarChart3 />, title: "Approche ROI", desc: "KPIs business, pas juste des positions" },
-        { icon: <MapPin />, title: "Proximité locale", desc: `Basée région ${cityData.department}` },
-        { icon: <Award />, title: "Sans engagement long", desc: "3 mois minimum, puis liberté" }
+        { icon: <BarChart3 />, title: "Priorisation business", desc: "Actions classées par impact et effort" },
+        { icon: <MapPin />, title: "Lecture locale", desc: `Marché ${cityData.department} et zones proches` },
+        { icon: <Award />, title: "Cadre clair", desc: "Périmètre, livrables et suivi définis" }
     ];
 
     return (
@@ -256,15 +235,13 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
 
             {/* Hero */}
             <HeroServices
-                title={isPremiumVariant
-                    ? `Consultante SEO à ${city} : stratégie locale et demandes qualifiées`
-                    : `Consultant SEO ${city} (${zipCode})`}
+                title={`Consultante SEO à ${city} : stratégie locale et demandes qualifiées`}
                 subtitle={isPremiumVariant
                     ? `Développez vos demandes qualifiées à ${city}, de ${cityData.landmarks.slice(0, 2).join(" à ")}, avec une stratégie SEO locale claire, technique et mesurable.`
-                    : `Dominez Google à ${city}. Attirez des clients qualifiés ${getDepartmentPreposition(cityData.department)} grâce à une stratégie de référencement local sur-mesure.`}
+                    : `Développez vos demandes qualifiées à ${city} grâce à une stratégie SEO locale claire, technique et mesurable.`}
                 image={heroImage}
                 imageAlt={hasGeneratedLocalHero ? cityData.images.hero.alt : undefined}
-                category="Référencement Local"
+                category="SEO local"
                 density={isPremiumVariant ? "compact" : "default"}
             />
 
@@ -409,11 +386,11 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                                             <p>
                                                 À {city}, la compétition est {cityData.context.competitionLevel === 'extreme' ? 'féroce' : 'forte'}.
                                                 Vos futurs clients sont des {cityData.context.targetClients}.
-                                                <strong className="text-ink"> 46% des recherches Google ont une intention locale.</strong> Si votre entreprise n'apparaît pas quand ils cherchent vos services, vous laissez ces clients à vos concurrents.
+                                                <strong className="text-ink"> Les recherches locales demandent des pages claires, une fiche Google cohérente et des signaux de confiance visibles.</strong> Si votre entreprise n'apparaît pas quand ils cherchent vos services, vous laissez ces demandes à vos concurrents.
                                             </p>
 
                                             <p>
-                                                En tant que <Link href="/consultant-seo" className="text-sauge hover:underline font-semibold">consultante SEO spécialisée</Link> sur le marché {cityData.region}, je vous accompagne pour conquérir les premières positions Google et Google Maps. Une approche personnalisée pour répondre aux défis de {city} :
+                                                En tant que <Link href="/consultant-seo" className="text-sauge hover:underline font-semibold">consultante SEO spécialisée</Link> sur le marché {cityData.region}, je vous aide à structurer les priorités qui peuvent renforcer votre visibilité sur Google et Google Maps. Une approche personnalisée pour répondre aux défis de {city} :
                                             </p>
                                             <ul className="mt-2 space-y-1 list-disc list-inside">
                                                 {cityData.context.specificChallenges.map((challenge, i) => (
@@ -440,22 +417,17 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                                             Le SEO local en chiffres
                                         </h3>
                                         <div className="grid grid-cols-2 gap-4">
-                                            <div className="text-center p-4 bg-white/5 rounded-xl">
-                                                <p className="text-3xl font-bold text-sauge">46%</p>
-                                                <p className="text-xs text-soft-light mt-1">Recherches locales</p>
-                                            </div>
-                                            <div className="text-center p-4 bg-white/5 rounded-xl">
-                                                <p className="text-3xl font-bold text-sauge">78%</p>
-                                                <p className="text-xs text-soft-light mt-1">Achat sous 24h</p>
-                                            </div>
-                                            <div className="text-center p-4 bg-white/5 rounded-xl">
-                                                <p className="text-3xl font-bold text-sauge">88%</p>
-                                                <p className="text-xs text-soft-light mt-1">Font confiance aux avis</p>
-                                            </div>
-                                            <div className="text-center p-4 bg-white/5 rounded-xl">
-                                                <p className="text-3xl font-bold text-sauge">x5</p>
-                                                <p className="text-xs text-soft-light mt-1">ROI moyen SEO</p>
-                                            </div>
+                                            {[
+                                                { value: "SEO", label: "pages et intentions locales" },
+                                                { value: "GBP", label: "fiche Google Business Profile" },
+                                                { value: "Avis", label: "preuves et réassurance" },
+                                                { value: "Maillage", label: "quartiers, services et zones proches" },
+                                            ].map((item) => (
+                                                <div key={item.label} className="text-center p-4 bg-white/5 rounded-xl">
+                                                    <p className="text-2xl font-bold text-sauge">{item.value}</p>
+                                                    <p className="text-xs text-soft-light mt-1">{item.label}</p>
+                                                </div>
+                                            ))}
                                         </div>
                                         <div className="mt-6 pt-6 border-t border-white/10">
                                             <p className="text-sm text-soft-light mb-4">Population {city} : <strong className="text-white">{cityData.population} hab.</strong></p>
@@ -463,7 +435,7 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                                                 onClick={openAuditModal}
                                                 className="w-full bg-sauge text-white hover:bg-white hover:text-ink rounded-xl py-6 font-bold"
                                             >
-                                                Audit Gratuit {city}
+                                                Demander un audit SEO
                                                 <ArrowRight className="ml-2 w-4 h-4" />
                                             </Button>
                                         </div>
@@ -508,7 +480,7 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                                     <Search className="w-8 h-8 text-sauge mb-4 group-hover:scale-110 transition-transform" />
                                     <h3 className="text-lg font-bold mb-2">Mots-clés géolocalisés</h3>
                                     <p className="text-soft text-sm">
-                                        Ciblage des requêtes "métier + {city}" qui convertissent <strong>3x plus</strong>. Focus quartiers : {cityData.landmarks.slice(0, 2).join(", ")}.
+                                        Ciblage des requêtes "métier + {city}" avec une intention claire. Focus quartiers : {cityData.landmarks.slice(0, 2).join(", ")}.
                                     </p>
                                 </motion.div>
                                 <motion.div

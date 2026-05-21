@@ -8,7 +8,7 @@ export async function GET(request: NextRequest) {
 
     // Paramètres dynamiques
     const title = searchParams.get('title') || 'Consultante SEO & Experte Référencement';
-    const subtitle = searchParams.get('subtitle') || 'Dominez Google avec IndHack';
+    const subtitle = searchParams.get('subtitle') || 'Stratégie SEO mesurable avec IndHack';
 
     return new ImageResponse(
         (

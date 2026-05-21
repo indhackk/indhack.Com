@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Rennes (35000) | Experte référencement Bretagne",
+    title: "Consultant SEO Rennes (35000) - IndHack",
     description: "Consultante SEO à Rennes. Stratégie de visibilité pour ESN, startups cybersécurité et entreprises tech de la French Tech Rennes.",
     robots: { index: true, follow: true },
     keywords: ["consultante SEO Rennes", "référencement Rennes", "SEO Bretagne", "audit SEO Rennes", "experte SEO 35"],
@@ -9,8 +9,8 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/consultant-seo-rennes"
     },
     openGraph: {
-        title: "Consultante SEO Rennes (35000) | SEO tech & cybersécurité",
-        description: "Experte SEO à Rennes. ESN, cybersécurité, recrutement tech : générez des leads dans l'écosystème breton.",
+        title: "Consultant SEO Rennes (35000) - IndHack",
+        description: "Experte SEO à Rennes. ESN, cybersécurité, recrutement tech : développez des demandes qualifiées dans l'écosystème breton.",
         url: "https://indhack.com/consultant-seo-rennes",
         type: "website",
         locale: "fr_FR",

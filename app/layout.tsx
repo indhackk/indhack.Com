@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         template: "%s",
         default: "Consultante SEO & Experte Référencement",
     },
-    description: "Boostez votre visibilité Google avec une experte SEO. Audit gratuit, +200% de trafic organique en 6 mois. Résultats garantis.",
+    description: "Renforcez votre visibilité Google avec une consultante SEO indépendante : audit, stratégie de contenu, SEO local et visibilité IA.",
     authors: [{ name: "Indiana Aflalo" }],
     creator: "Indiana Aflalo",
     icons: {
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
         url: "https://indhack.com",
         siteName: "IndHack",
         title: "Consultante SEO & GEO — référencement & visibilité IA | IndHack",
-        description: "Boostez votre visibilité Google avec une experte SEO. Audit gratuit, +200% de trafic organique en 6 mois. Résultats garantis.",
+        description: "Renforcez votre visibilité Google avec une consultante SEO indépendante : audit, stratégie de contenu, SEO local et visibilité IA.",
         images: [{
-            url: "https://indhack.com/api/og?title=Consultante%20SEO%20%26%20Experte%20R%C3%A9f%C3%A9rencement&subtitle=Dominez%20Google%20avec%20IndHack",
+            url: "https://indhack.com/api/og?title=Consultante%20SEO%20%26%20Experte%20R%C3%A9f%C3%A9rencement&subtitle=Strat%C3%A9gie%20SEO%20mesurable%20avec%20IndHack",
             width: 1200,
             height: 630,
             alt: "IndHack - Consultante SEO & Experte Référencement"
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Consultante SEO & GEO — référencement & visibilité IA | IndHack",
-        description: "Boostez votre visibilité Google avec une experte SEO. Audit gratuit, +200% de trafic organique en 6 mois. Résultats garantis.",
-        images: ["https://indhack.com/api/og?title=Consultante%20SEO%20%26%20Experte%20R%C3%A9f%C3%A9rencement&subtitle=Dominez%20Google%20avec%20IndHack"],
+        description: "Renforcez votre visibilité Google avec une consultante SEO indépendante : audit, stratégie de contenu, SEO local et visibilité IA.",
+        images: ["https://indhack.com/api/og?title=Consultante%20SEO%20%26%20Experte%20R%C3%A9f%C3%A9rencement&subtitle=Strat%C3%A9gie%20SEO%20mesurable%20avec%20IndHack"],
         creator: "@indhack",
     },
     alternates: {
@@ -141,7 +141,7 @@ const localBusinessSchema = {
     "@id": "https://indhack.com/#localbusiness",
     "name": "IndHack - Consultante SEO",
     "alternateName": "Indiana Aflalo SEO",
-    "description": "Consultante SEO freelance spécialisée en référencement naturel, SEO local et optimisation pour les moteurs IA (GEO). Accompagnement personnalisé pour PME et startups sur toute la France.",
+    "description": "Consultante SEO indépendante spécialisée en référencement naturel, SEO local et optimisation pour les moteurs IA (GEO). Accompagnement personnalisé pour PME et startups sur toute la France.",
     "url": "https://indhack.com",
     "telephone": "+33661139748",
     "email": "contact@indhack.com",
@@ -275,7 +275,7 @@ export default function RootLayout({
                         "name": "Indiana Aflalo",
                         "alternateName": "Indiana Aflalo SEO",
                         "jobTitle": "Consultante SEO & Experte GEO",
-                        "description": "Consultante SEO freelance et experte en Generative Engine Optimization (GEO), basée à Nice, France. Créatrice des premiers outils français de test de visibilité IA. Plus de 50 clients accompagnés, spécialisée en référencement naturel, SEO local et optimisation pour les moteurs de réponse IA (ChatGPT, Perplexity, Claude, Gemini).",
+                        "description": "Consultante SEO indépendante et experte en Generative Engine Optimization (GEO), basée à Nice, France. Créatrice des premiers outils français de test de visibilité IA. Plus de 50 clients accompagnés, spécialisée en référencement naturel, SEO local et optimisation pour les moteurs de réponse IA (ChatGPT, Perplexity, Claude, Gemini).",
                         "url": "https://indhack.com/a-propos",
                         "image": "https://indhack.com/images/indiana-aflalo-consultante-seo.webp",
                         "email": "contact@indhack.com",

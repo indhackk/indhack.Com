@@ -16,7 +16,7 @@ const SERVICES = [
     { title: "Consultant SEO", href: "/consultant-seo", desc: "Accompagnement SEO pour développer votre visibilité.", category: "seo" },
     { title: "Audit SEO", href: "/audit-seo", desc: "Analyse technique et sémantique profonde.", category: "seo" },
     { title: "Référencement Naturel", href: "/referencement-naturel", desc: "Stratégie d'acquisition durable sur Google.", category: "seo" },
-    { title: "SEO Local", href: "/consultant-seo", desc: "Dominez Google Maps et le Pack Local.", category: "seo" },
+    { title: "SEO Local", href: "/consultant-seo", desc: "Renforcez votre présence sur Google Maps et le Pack Local.", category: "seo" },
     // Création & Refonte Web
     { title: "Création de Site Web", href: "/creation-site-web", desc: "Sites haute performance optimisés SEO.", category: "web" },
     { title: "Refonte de Site", href: "/refonte-site-web", desc: "Migrez sans perdre votre visibilité.", category: "web" },

@@ -135,12 +135,12 @@ function SophiaAntipolisCustomContent() {
                 </div>
             </section>
 
-            {/* Section Pourquoi freelance vs agence */}
+            {/* Section Pourquoi indépendante vs agence */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO freelance</span> plutôt qu'une agence généraliste ?
+                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence généraliste ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -150,7 +150,7 @@ function SophiaAntipolisCustomContent() {
                                         Les agences généralistes ne comprennent pas les spécificités de Sophia. Elles appliquent des grilles SEO conçues pour des commerces locaux à des entreprises B2B tech aux cycles de vente de 12 mois. Le résultat : des contenus trop superficiels qui ne capturent jamais les décideurs techniques.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO freelance</Link> avec une compréhension fine des marchés SaaS et tech. Je produis des contenus qui parlent à des DSI et des CTO, pas à des consommateurs. J'optimise aussi la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> — de plus en plus décisive quand vos prospects s'informent via ChatGPT ou Perplexity.
+                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une compréhension fine des marchés SaaS et tech. Je produis des contenus qui parlent à des DSI et des CTO, pas à des consommateurs. J'optimise aussi la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> — de plus en plus décisive quand vos prospects s'informent via ChatGPT ou Perplexity.
                                     </p>
                                     <p>
                                         Je ne sous-traite pas, je n'applique pas de template générique, et je vous accompagne personnellement du diagnostic à la croissance organique.
@@ -234,7 +234,7 @@ function SophiaAntipolisCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Startup SaaS</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">+200 % leads qualifiés via contenu</td>
+                                        <td className="py-3 px-4">Leads qualifiés via contenu ciblé</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">ESN / société de conseil IT</td>
@@ -261,7 +261,7 @@ function SophiaAntipolisCustomContent() {
                         </div>
 
                         <p className="text-xs text-soft mt-4 italic">
-                            * Ces résultats sont basés sur des projets réels. Chaque situation est unique — l'<Link href="/audit-seo" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
+                            * Ces objectifs dépendent de la concurrence, de l’état technique du site et de la vitesse d’exécution. Chaque situation est unique — l'<Link href="/audit-seo" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
                         </p>
                     </div>
                 </div>

@@ -128,7 +128,7 @@ export function AntibesContent() {
                             <div>
                                 <h4 className="font-bold text-amber-400 mb-2">Haute saison (mai-septembre)</h4>
                                 <p className="text-sm text-white/70">
-                                    +400% de recherches. Votre positionnement doit être acquis AVANT.
+                                    hausse nette des recherches. Votre positionnement doit être préparé en amont.
                                     Je prépare votre visibilité 3 mois en amont pour capter le pic.
                                 </p>
                             </div>

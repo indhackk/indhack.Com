@@ -47,7 +47,7 @@ export function SophiaAntipolisContent() {
                         <p className="text-soft">
                             Le SEO B2B à Sophia Antipolis exige une <strong>compréhension fine du marché tech</strong>,
                             des cycles de vente longs (6-18 mois), et une stratégie de contenu qui éduque avant de convertir.
-                            C'est exactement mon expertise en tant que <Link href="/consultant-seo" className="text-sauge hover:underline font-medium">consultante SEO freelance</Link>,
+                            C'est exactement mon expertise en tant que <Link href="/consultant-seo" className="text-sauge hover:underline font-medium">consultante SEO indépendante</Link>,
                             spécialiste du <Link href="/seo-local" className="text-sauge hover:underline font-medium">référencement local</Link> sur la Côte d'Azur.
                         </p>
                     </motion.div>

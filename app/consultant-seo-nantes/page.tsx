@@ -147,22 +147,22 @@ function NantesCustomContent() {
                 </div>
             </section>
 
-            {/* Section Pourquoi freelance vs agence */}
+            {/* Section Pourquoi indépendante vs agence */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO freelance</span> dans un milieu digital très actif comme Nantes ?
+                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> dans un milieu digital très actif comme Nantes ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Nantes compte une densité remarquable d'agences digitales, de freelances et de studios créatifs. Ce dynamisme est une force pour l'écosystème — mais il rend la concurrence SEO particulièrement intense. Les agences nantaises facturent entre <strong>1 500€ et 5 000€/mois</strong>, souvent avec des offres packagées qui ne tiennent pas compte de vos spécificités.
+                                        Nantes compte une densité remarquable d'agences digitales, d'indépendants et de studios créatifs. Ce dynamisme est une force pour l'écosystème — mais il rend la concurrence SEO particulièrement intense. Les agences nantaises facturent entre <strong>1 500€ et 5 000€/mois</strong>, souvent avec des offres packagées qui ne tiennent pas compte de vos spécificités.
                                     </p>
                                     <p>
-                                        En tant que <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO freelance</Link>, je travaille différemment : expertise technique poussée, suivi personnalisé et spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> — un enjeu clé pour les entreprises nantaises qui veulent exister dans les réponses de ChatGPT et Perplexity.
+                                        En tant que <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link>, je travaille différemment : expertise technique poussée, suivi personnalisé et spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> — un enjeu clé pour les entreprises nantaises qui veulent exister dans les réponses de ChatGPT et Perplexity.
                                     </p>
                                     <p>
                                         Je comprends les nuances du marché nantais : une agence créative de l'Île de Nantes n'a pas les mêmes besoins SEO qu'un commerce de Bouffay ou qu'une PME industrielle de Saint-Herblain. Je construis une stratégie sur mesure, pas un template.
@@ -251,12 +251,12 @@ function NantesCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Agence digitale / studio créatif</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">+150% leads entrants via contenu</td>
+                                        <td className="py-3 px-4">Leads entrants via contenu</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Startup SaaS / tech</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">+200% leads qualifiés via SEO B2B</td>
+                                        <td className="py-3 px-4">Leads qualifiés via contenu ciblé via SEO B2B</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Profession libérale (avocat, kiné)</td>
@@ -266,14 +266,14 @@ function NantesCustomContent() {
                                     <tr>
                                         <td className="py-3 px-4">E-commerce (agroalimentaire, mode)</td>
                                         <td className="py-3 px-4">3-5 mois</td>
-                                        <td className="py-3 px-4">+100% trafic organique produits</td>
+                                        <td className="py-3 px-4">Trafic organique sur les pages produits</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
                         <p className="text-xs text-soft mt-4 italic">
-                            * Ces résultats sont basés sur des projets réels. Chaque situation est unique — l'<Link href="/audit-seo" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
+                            * Ces objectifs dépendent de la concurrence, de l’état technique du site et de la vitesse d’exécution. Chaque situation est unique — l'<Link href="/audit-seo" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
                         </p>
                     </div>
                 </div>
@@ -288,7 +288,7 @@ function NantesCustomContent() {
                             <div className="grid md:grid-cols-2 gap-4">
                                 <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps en 2026
+                                    SEO local : renforcer sa présence sur Google Maps
                                 </Link>
                                 <Link href="/outils/audit-seo-gratuit" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />

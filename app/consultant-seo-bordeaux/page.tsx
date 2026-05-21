@@ -153,12 +153,12 @@ function BordeauxCustomContent() {
                 </div>
             </section>
 
-            {/* Section Pourquoi freelance vs agence */}
+            {/* Section Pourquoi indépendante vs agence */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO freelance</span> plutôt qu'une agence bordelaise ?
+                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence bordelaise ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -168,7 +168,7 @@ function BordeauxCustomContent() {
                                         Bordeaux a ses agences web et SEO. Elles facturent entre <strong>1 500€ et 6 000€/mois</strong> avec souvent un junior sur votre dossier et des interlocuteurs qui changent d'un trimestre à l'autre. Et surtout, très peu maîtrisent à la fois le SEO viticole (e-commerce, marchés internationaux EN/ZH) et le SEO tech B2B.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO freelance</Link> avec une expertise technique poussée et une spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>, essentielle à mesure que ChatGPT et Perplexity captent du trafic.
+                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise technique poussée et une spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>, essentielle à mesure que ChatGPT et Perplexity captent du trafic.
                                     </p>
                                     <p>
                                         Je connais l'écosystème bordelais dans ses deux dimensions : un château de Saint-Émilion qui veut vendre en direct à des clients chinois n'a pas les mêmes besoins qu'une startup Darwin qui cherche des leads B2B. Je ne sous-traite pas, je n'applique pas de grille générique.
@@ -262,7 +262,7 @@ function BordeauxCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Startup Darwin (B2B)</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">+200% leads qualifiés via contenu</td>
+                                        <td className="py-3 px-4">Leads qualifiés via contenu ciblé</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Agence immobilière</td>
@@ -279,7 +279,7 @@ function BordeauxCustomContent() {
                         </div>
 
                         <p className="text-xs text-soft mt-4 italic">
-                            * Ces résultats sont basés sur des projets réels. Chaque situation est unique — l'<Link href="/audit-seo" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
+                            * Ces objectifs dépendent de la concurrence, de l’état technique du site et de la vitesse d’exécution. Chaque situation est unique — l'<Link href="/audit-seo" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
                         </p>
                     </div>
                 </div>
@@ -294,7 +294,7 @@ function BordeauxCustomContent() {
                             <div className="grid md:grid-cols-2 gap-4">
                                 <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps en 2026
+                                    SEO local : renforcer sa présence sur Google Maps
                                 </Link>
                                 <Link href="/outils/audit-seo-gratuit" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
