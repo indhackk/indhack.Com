@@ -153,12 +153,12 @@ function ToulouseCustomContent() {
                 </div>
             </section>
 
-            {/* Section Pourquoi freelance vs agence */}
+            {/* Section Pourquoi indépendante vs agence */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO freelance</span> plutôt qu'une agence toulousaine ?
+                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence toulousaine ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -168,7 +168,7 @@ function ToulouseCustomContent() {
                                         Toulouse présente un double marché unique : le <strong>B2B aéronautique</strong>, avec ses cycles de décision longs, ses RFP complexes et son contenu ultra-technique, et le <strong>B2C local</strong>, avec ses restaurants étudiants, ses bars de Saint-Cyprien et ses commerces du Capitole. Les agences généralistes ne comprennent ni l'un ni l'autre.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO freelance</Link> avec une expertise en SEO B2B industriel et en <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link>. Je produis du contenu qui parle aux acheteurs d'Airbus autant qu'aux Toulousains qui cherchent où dîner ce soir.
+                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise en SEO B2B industriel et en <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link>. Je produis du contenu qui parle aux acheteurs d'Airbus autant qu'aux Toulousains qui cherchent où dîner ce soir.
                                     </p>
                                     <p>
                                         Je ne sous-traite pas, je n'applique pas de grille générique, et je vous accompagne personnellement du diagnostic à la croissance — avec une connaissance fine des spécificités de l'écosystème toulousain.
@@ -262,7 +262,7 @@ function ToulouseCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">ESN Labège (recrutement)</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">+200% leads recrutement qualifiés</td>
+                                        <td className="py-3 px-4">Leads recrutement qualifiés</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Startup IA / French Tech</td>
@@ -279,7 +279,7 @@ function ToulouseCustomContent() {
                         </div>
 
                         <p className="text-xs text-soft mt-4 italic">
-                            * Ces résultats sont basés sur des projets réels. Chaque situation est unique — l'<Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
+                            * Ces objectifs dépendent de la concurrence, de l’état technique du site et de la vitesse d’exécution. Chaque situation est unique — l'<Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
                         </p>
                     </div>
                 </div>
@@ -294,7 +294,7 @@ function ToulouseCustomContent() {
                             <div className="grid md:grid-cols-2 gap-4">
                                 <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps en 2026
+                                    SEO local : renforcer sa présence sur Google Maps
                                 </Link>
                                 <Link href="/outils/audit-seo-gratuit" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />

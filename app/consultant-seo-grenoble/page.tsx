@@ -158,7 +158,7 @@ function GrenobleCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO freelance</span> plutôt qu'une agence à Grenoble ?
+                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence à Grenoble ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -168,7 +168,7 @@ function GrenobleCustomContent() {
                                         Les <strong>agences SEO classiques à Grenoble</strong> facturent entre 1 500€ et 5 000€/mois pour des prestations standardisées. Elles appliquent les mêmes grilles d'audit à un restaurant du centre-ville et à une startup de Minatec — deux business aux besoins radicalement différents.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO freelance</Link>, spécialisée dans la <strong>performance web</strong> (mon site tourne sur Next.js avec un score PageSpeed de 95+/100) et la <strong>visibilité IA</strong> (<Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">GEO - Generative Engine Optimization</Link>).
+                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link>, spécialisée dans la <strong>performance web</strong> (mon site tourne sur Next.js avec un score PageSpeed de 95+/100) et la <strong>visibilité IA</strong> (<Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">GEO - Generative Engine Optimization</Link>).
                                     </p>
                                     <p>
                                         Je ne sous-traite pas, je ne facture pas de frais d'agence, et je connais personnellement l'écosystème <strong>Auvergne-Rhône-Alpes</strong>. Résultat : des tarifs 30 à 50% inférieurs aux agences pour une expertise plus pointue.
@@ -252,12 +252,12 @@ function GrenobleCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Commerce local (restaurant, artisan)</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Top 3 Pack Local + 50% trafic</td>
+                                        <td className="py-3 px-4">Visibilité Pack Local et trafic qualifié</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Startup tech B2B</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">+200% leads qualifiés</td>
+                                        <td className="py-3 px-4">Leads qualifiés via contenu ciblé</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Hébergeur station ski</td>
@@ -272,14 +272,14 @@ function GrenobleCustomContent() {
                                     <tr>
                                         <td className="py-3 px-4">E-commerce outdoor</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">+100% trafic organique</td>
+                                        <td className="py-3 px-4">Trafic organique qualifié</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
                         <p className="text-xs text-soft mt-4 italic">
-                            * Ces résultats sont basés sur des projets réels accompagnés en région Auvergne-Rhône-Alpes. Chaque situation est unique — l'<Link href="/audit-seo" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
+                            * Ces objectifs dépendent de la concurrence, de l’état technique du site et de la vitesse d’exécution. Chaque situation est unique — l'<Link href="/audit-seo" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
                         </p>
                     </div>
                 </div>
@@ -294,7 +294,7 @@ function GrenobleCustomContent() {
                             <div className="grid md:grid-cols-2 gap-4">
                                 <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps en 2026
+                                    SEO local : renforcer sa présence sur Google Maps
                                 </Link>
                                 <Link href="/outils/audit-seo-gratuit" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />

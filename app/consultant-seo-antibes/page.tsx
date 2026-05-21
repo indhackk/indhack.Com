@@ -153,12 +153,12 @@ function AntibesCustomContent() {
                 </div>
             </section>
 
-            {/* Section Pourquoi freelance vs agence */}
+            {/* Section Pourquoi indépendante vs agence */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO freelance</span> plutôt qu'une agence locale ?
+                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence locale ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -168,7 +168,7 @@ function AntibesCustomContent() {
                                         Les agences SEO de la Côte d'Azur facturent entre <strong>1 500 € et 6 000 €/mois</strong>. Souvent, un junior hérite de votre dossier et change tous les six mois. Vous finissez par répéter vos objectifs à chaque nouvelle tête — sans jamais voir vos positions progresser vraiment.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO freelance</Link> avec une expertise technique solide et une spécialisation en <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link> adaptée aux marchés saisonniers de la Riviera. Je connais la dualité antiboise : les besoins du yachting ne ressemblent en rien à ceux d'un artisan du Safranier.
+                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise technique solide et une spécialisation en <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link> adaptée aux marchés saisonniers de la Riviera. Je connais la dualité antiboise : les besoins du yachting ne ressemblent en rien à ceux d'un artisan du Safranier.
                                     </p>
                                     <p>
                                         Je ne sous-traite pas, je n'applique pas de grille générique, et je vous accompagne personnellement du diagnostic à la croissance. Mon site tourne sur Next.js avec un score PageSpeed de 95+/100 — preuve que je maîtrise la technique autant que la stratégie.
@@ -267,7 +267,7 @@ function AntibesCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">SaaS / ESN (Sophia proximité)</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">+200 % leads qualifiés via contenu B2B</td>
+                                        <td className="py-3 px-4">Leads qualifiés via contenu B2B</td>
                                     </tr>
                                     <tr>
                                         <td className="py-3 px-4">Hôtel / Beach club saisonnier</td>
@@ -314,7 +314,7 @@ function AntibesCustomContent() {
                                 </Link>
                                 <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps
+                                    SEO local : renforcer sa présence sur Google Maps
                                 </Link>
                             </div>
                         </div>

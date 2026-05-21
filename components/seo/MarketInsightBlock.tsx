@@ -374,7 +374,7 @@ export function MarketInsightBlock({ marketType, cityName, targetClients, varian
                                             <ul className="space-y-1.5">
                                                 <li className="text-xs text-soft flex items-center gap-2">
                                                     <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-                                                    Niches identifiées et dominées
+                                                    Niches identifiées et priorisées
                                                 </li>
                                                 <li className="text-xs text-soft flex items-center gap-2">
                                                     <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
@@ -382,7 +382,7 @@ export function MarketInsightBlock({ marketType, cityName, targetClients, varian
                                                 </li>
                                                 <li className="text-xs text-soft flex items-center gap-2">
                                                     <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-                                                    ROI x5 vs publicité
+                                                    Budget mieux priorisé
                                                 </li>
                                             </ul>
                                         </div>

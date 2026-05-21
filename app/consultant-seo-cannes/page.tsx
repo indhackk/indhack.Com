@@ -153,12 +153,12 @@ function CannesCustomContent() {
                 </div>
             </section>
 
-            {/* Section Pourquoi freelance vs agence */}
+            {/* Section Pourquoi indépendante vs agence */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO freelance</span> plutôt qu'une agence cannoise ?
+                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence cannoise ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -171,7 +171,7 @@ function CannesCustomContent() {
                                         Mon expertise est différente : je maîtrise le <strong>SEO multilingue (FR/EN/RU)</strong>, essentiel pour les secteurs yachting, immobilier prestige et hôtellerie de luxe à Cannes. Je connais le calendrier événementiel et je construis des stratégies SEO <strong>anticipant les pics de trafic</strong> — car en SEO, arriver en retard c'est ne pas arriver.
                                     </p>
                                     <p>
-                                        Je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO freelance</Link> spécialisée en <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link> et en visibilité sur les marchés premium. Je ne sous-traite pas, je ne reproduis pas de templates génériques, et je m'implique personnellement dans chaque dossier.
+                                        Je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> spécialisée en <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link> et en visibilité sur les marchés premium. Je ne sous-traite pas, je ne reproduis pas de templates génériques, et je m'implique personnellement dans chaque dossier.
                                     </p>
                                 </div>
                             </div>
@@ -257,7 +257,7 @@ function CannesCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Yacht broker</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">+150 % leads internationaux qualifiés</td>
+                                        <td className="py-3 px-4">Leads internationaux qualifiés</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Restaurant La Croisette</td>
@@ -267,7 +267,7 @@ function CannesCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Hôtel 5 étoiles</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">+30 % réservations directes vs Booking</td>
+                                        <td className="py-3 px-4">Réservations directes hors OTA</td>
                                     </tr>
                                     <tr>
                                         <td className="py-3 px-4">Prestataire événementiel</td>
@@ -279,7 +279,7 @@ function CannesCustomContent() {
                         </div>
 
                         <p className="text-xs text-soft mt-4 italic">
-                            * Ces résultats sont basés sur des projets réels. Chaque situation est unique — l'<Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
+                            * Ces objectifs dépendent de la concurrence, de l’état technique du site et de la vitesse d’exécution. Chaque situation est unique — l'<Link href="/outils/audit-seo-gratuit" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
                         </p>
                     </div>
                 </div>
@@ -310,7 +310,7 @@ function CannesCustomContent() {
                                 </Link>
                                 <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps
+                                    SEO local : renforcer sa présence sur Google Maps
                                 </Link>
                                 <Link href="/blog/seo-local-nice" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />

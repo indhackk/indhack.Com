@@ -159,12 +159,12 @@ function ParisCustomContent() {
                 </div>
             </section>
 
-            {/* Section Pourquoi freelance vs agence */}
+            {/* Section Pourquoi indépendante vs agence */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO freelance</span> plutôt qu'une agence parisienne ?
+                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence parisienne ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -174,7 +174,7 @@ function ParisCustomContent() {
                                         Paris est le marché le plus dur de France. Les agences facturent entre <strong>3 000€ et 15 000€/mois</strong> avec souvent des juniors qui gèrent votre dossier et une rotation d'interlocuteurs. Leur loyer parisien, leurs charges et leur structure gonflent les tarifs sans améliorer les résultats.
                                     </p>
                                     <p>
-                                        Mon avantage est structurel : pas de loyer parisien, pas de surcharge administrative, <strong>expertise technique pure</strong>. Je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO freelance</Link> avec une maîtrise avancée du SEO technique et de la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> pour ChatGPT, Perplexity et les moteurs génératifs.
+                                        Mon avantage est structurel : pas de loyer parisien, pas de surcharge administrative, <strong>expertise technique pure</strong>. Je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une maîtrise avancée du SEO technique et de la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> pour ChatGPT, Perplexity et les moteurs génératifs.
                                     </p>
                                     <p>
                                         Je ne promets pas la 1ère place sur "avocat Paris" — je trouve les niches rentables par arrondissement et micro-segment qui génèrent de vrais clients, pas du trafic vanity.
@@ -263,7 +263,7 @@ function ParisCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Startup Station F</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">+200% leads qualifiés via contenu</td>
+                                        <td className="py-3 px-4">Leads qualifiés via contenu ciblé</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Cabinet médical 15ème</td>
@@ -273,7 +273,7 @@ function ParisCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">E-commerce mode</td>
                                         <td className="py-3 px-4">4-6 mois</td>
-                                        <td className="py-3 px-4">+150% trafic organique</td>
+                                        <td className="py-3 px-4">Trafic organique qualifié</td>
                                     </tr>
                                     <tr>
                                         <td className="py-3 px-4">Professions libérales</td>
@@ -285,7 +285,7 @@ function ParisCustomContent() {
                         </div>
 
                         <p className="text-xs text-soft mt-4 italic">
-                            * Ces résultats sont basés sur des projets réels. Chaque situation est unique — l'<Link href="/audit-seo" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
+                            * Ces objectifs dépendent de la concurrence, de l’état technique du site et de la vitesse d’exécution. Chaque situation est unique — l'<Link href="/audit-seo" className="text-sauge hover:underline">audit SEO gratuit</Link> permet d'évaluer votre potentiel spécifique.
                         </p>
                     </div>
                 </div>
@@ -316,7 +316,7 @@ function ParisCustomContent() {
                                 </Link>
                                 <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps
+                                    SEO local : renforcer sa présence sur Google Maps
                                 </Link>
                                 <Link href="/blog/seo-vs-sea-que-choisir" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />

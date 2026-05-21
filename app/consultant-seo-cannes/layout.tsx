@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Cannes (06400) | Experte référencement luxe",
-    description: "Consultante SEO à Cannes. Stratégie de visibilité Google pour immobilier prestige, yachting et événementiel. Dominez la Croisette sur Google.",
+    title: "Consultant SEO Cannes (06400) - IndHack",
+    description: "Consultante SEO à Cannes. Stratégie de visibilité Google pour immobilier prestige, yachting et événementiel. Renforcez votre visibilité sur la Croisette et les recherches premium.",
     alternates: {
         canonical: "https://indhack.com/consultant-seo-cannes"
     },
     openGraph: {
-        title: "Consultante SEO Cannes (06400) | Référencement premium",
+        title: "Consultant SEO Cannes (06400) - IndHack",
         description: "Experte SEO à Cannes pour marchés luxe. Immobilier, yachting, événementiel : positionnement Google premium.",
         url: "https://indhack.com/consultant-seo-cannes",
         type: "website",

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Consultante SEO Boulogne-Billancourt (92100) | Experte référencement médias",
+    title: "Consultant SEO Boulogne-Billancourt (92100) - IndHack",
     description: "Consultante SEO à Boulogne-Billancourt. Stratégie de visibilité pour agences de production, sociétés de médias et prestataires audiovisuels du 92.",
     robots: { index: true, follow: true },
     keywords: ["consultante SEO Boulogne-Billancourt", "référencement Boulogne", "SEO Hauts-de-Seine", "audit SEO 92", "experte SEO médias"],
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
         canonical: "https://indhack.com/consultant-seo-boulogne-billancourt"
     },
     openGraph: {
-        title: "Consultante SEO Boulogne-Billancourt (92100) | SEO médias & production",
+        title: "Consultant SEO Boulogne-Billancourt (92100) - IndHack",
         description: "Experte SEO à Boulogne-Billancourt. Médias, production audiovisuelle, communication : visibilité Google pour l'écosystème média du 92.",
         url: "https://indhack.com/consultant-seo-boulogne-billancourt",
         type: "website",

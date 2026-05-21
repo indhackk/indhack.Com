@@ -239,7 +239,7 @@ function JuanLesPinsCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Hôtel saisonnier</td>
                                         <td className="py-3 px-4">Novembre-décembre</td>
-                                        <td className="py-3 px-4">+40 % réservations directes (vs OTA)</td>
+                                        <td className="py-3 px-4">Réservations directes hors OTA</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Club de nuit / bar événementiel</td>
@@ -292,7 +292,7 @@ function JuanLesPinsCustomContent() {
                                 </Link>
                                 <Link href="/seo-local" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
-                                    SEO local : dominer Google Maps
+                                    SEO local : renforcer sa présence sur Google Maps
                                 </Link>
                                 <Link href="/outils/simulateur-visibilite-locale" className="flex items-center gap-2 text-soft hover:text-sauge transition-colors text-sm">
                                     <ArrowRight className="w-4 h-4 text-sauge" />
