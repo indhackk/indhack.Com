@@ -292,7 +292,7 @@ export const FRENCH_CITIES: CityData[] = [
             marketType: "volume",
             competitionLevel: "extreme",
             targetClients: "PME industrielles, restaurateurs étoilés, laboratoires pharmaceutiques, startups tech et commerces des pentes",
-            localInsight: "Le secteur gastronomie représente 15% des recherches locales — les bouchons lyonnais se battent sur Google",
+            localInsight: "La gastronomie, la santé, le SaaS et les services professionnels concentrent des intentions locales très différentes à Lyon",
             specificChallenges: ["Marché ultra-concurrentiel", "Diversité sectorielle complexe", "Exigence qualité lyonnaise"],
             businessTypes: ["Industrie", "Gastronomie", "Pharma/Santé", "Tech"]
         }
