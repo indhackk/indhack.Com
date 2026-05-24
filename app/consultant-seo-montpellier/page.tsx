@@ -246,12 +246,12 @@ function MontpellierCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Cabinet médical / spécialiste</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">Page 1 + autorité YMYL renforcée</td>
+                                        <td className="py-3 px-4">Progression organique + autorité YMYL renforcée</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Restaurant Écusson / centre-ville</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Top 3 Pack Local + réservations directes</td>
+                                        <td className="py-3 px-4">Visibilité Google Maps + réservations directes</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Promoteur immobilier</td>

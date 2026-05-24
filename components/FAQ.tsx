@@ -32,7 +32,7 @@ const defaultFaqs = [
     {
         icon: <Clock className="w-5 h-5" />,
         question: "Quand verrai-je les premiers résultats ?",
-        answer: "Le référencement naturel est un actif digital. Les premiers effets sur le crawl et l'indexation se voient en quelques semaines, mais les résultats significatifs sur le trafic arrivent entre 3 et 6 mois. C'est un investissement à ROI exponentiel."
+        answer: "Le référencement naturel est un actif digital. Les premiers effets sur le crawl et l'indexation se voient en quelques semaines, mais les résultats significatifs sur le trafic arrivent généralement entre 3 et 6 mois. L'intérêt est de construire une source durable de demandes qualifiées."
     },
     {
         icon: <Target className="w-5 h-5" />,
@@ -41,8 +41,9 @@ const defaultFaqs = [
     }
 ];
 
-export function FAQ({ items = defaultFaqs, title = "Questions Fréquentes" }: FAQProps) {
+export function FAQ({ items = defaultFaqs, title = "Questions fréquentes" }: FAQProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
+    const [titleMain, titleContext] = title.split(" - ");
 
     return (
         <section className="py-14 bg-white" id="faq">
@@ -51,10 +52,13 @@ export function FAQ({ items = defaultFaqs, title = "Questions Fréquentes" }: FA
             <div className="container mx-auto px-4 max-w-4xl">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 px-4">
                     <div className="max-w-xl">
-
-                        <h2 className="text-4xl md:text-5xl font-heading font-bold text-ink uppercase tracking-tighter leading-none">
-                            Besoin de <br />
-                            <span className="text-sauge">Réponses</span> ?
+                        <h2 className="font-heading text-3xl md:text-4xl font-bold text-ink tracking-tight leading-tight">
+                            {titleMain}
+                            {titleContext && (
+                                <span className="mt-2 block text-xl md:text-2xl text-sauge">
+                                    {titleContext}
+                                </span>
+                            )}
                         </h2>
                     </div>
                 </div>

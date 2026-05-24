@@ -171,7 +171,7 @@ function MarseilleCustomContent() {
                                         Mon avantage est simple : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise technique pure (site Next.js, score PageSpeed 95+/100) et une spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>. Je ne vends pas une méthode packagée : je priorise des actions mesurables, adaptées à votre marché.
                                     </p>
                                     <p>
-                                        Je connais le marché PACA dans ses nuances : la saisonnalité du tourisme marseillais, la compétition féroce en restauration autour du Vieux-Port, les cycles B2B propres au secteur maritime et les dynamiques de la French Tech Aix-Marseille. Je ne sous-traite pas, je n'applique pas de grille générique.
+                                        Je connais le marché PACA dans ses nuances : la saisonnalité du tourisme marseillais, la compétition très forte en restauration autour du Vieux-Port, les cycles B2B propres au secteur maritime et les dynamiques de la French Tech Aix-Marseille. Je ne sous-traite pas, je n'applique pas de grille générique.
                                     </p>
                                 </div>
                             </div>
@@ -252,12 +252,12 @@ function MarseilleCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Restaurant Vieux-Port</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Top 3 Pack Local + réservations directes</td>
+                                        <td className="py-3 px-4">Visibilité Google Maps + réservations directes</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Cabinet médical</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">Page 1 sur requêtes spécialité + quartier</td>
+                                        <td className="py-3 px-4">Progression sur requêtes spécialité + quartier</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">E-commerce</td>

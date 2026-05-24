@@ -33,7 +33,7 @@ function CannesCustomContent() {
                             <div className="bg-gradient-to-r from-sauge/5 to-transparent border-l-4 border-sauge p-6 my-6 rounded-r-xl">
                                 <h4 className="font-bold text-ink text-lg mb-2">Pourquoi Cannes exige une expertise SEO spécifique</h4>
                                 <p className="text-sm mb-0">
-                                    Le calendrier événementiel de Cannes est une <strong>arme SEO permanente</strong> : MIPIM, MAPIC, Cannes Lions, Festival du Film… Chaque événement crée une fenêtre de trafic massif qu'il faut anticiper des mois à l'avance. Sans une stratégie SEO alignée sur ce calendrier, vos concurrents captent ces pics pendant que votre site reste invisible.
+                                    Le calendrier événementiel de Cannes est un <strong>levier SEO permanent</strong> : MIPIM, MAPIC, Cannes Lions, Festival du Film… Chaque événement crée une fenêtre de trafic massif qu'il faut anticiper des mois à l'avance. Sans une stratégie SEO alignée sur ce calendrier, vos concurrents captent ces pics pendant que votre site reste invisible.
                                 </p>
                             </div>
 
@@ -252,7 +252,7 @@ function CannesCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Agence immobilière prestige</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">Page 1 sur « villa Cannes » et variantes</td>
+                                        <td className="py-3 px-4">Progression sur « villa Cannes » et variantes</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Yacht broker</td>
@@ -262,7 +262,7 @@ function CannesCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Restaurant La Croisette</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Top 3 Pack Local + réservations directes</td>
+                                        <td className="py-3 px-4">Visibilité Google Maps + réservations directes</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Hôtel 5 étoiles</td>

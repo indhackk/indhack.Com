@@ -234,7 +234,7 @@ function BoulogneBillancourtCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Société de production vidéo</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">Page 1 "production vidéo Boulogne"</td>
+                                        <td className="py-3 px-4">Progression sur "production vidéo Boulogne"</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Agence de communication</td>
@@ -244,7 +244,7 @@ function BoulogneBillancourtCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Restaurant centre-ville</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Top 3 Pack Local + avis</td>
+                                        <td className="py-3 px-4">Visibilité Google Maps + avis</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Cabinet de conseil</td>

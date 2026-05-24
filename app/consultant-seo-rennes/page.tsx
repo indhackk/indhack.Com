@@ -256,12 +256,12 @@ function RennesCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Restaurant centre-ville</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Top 3 Pack Local + réservations directes</td>
+                                        <td className="py-3 px-4">Visibilité Google Maps + réservations directes</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Cabinet recrutement IT</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">Page 1 « recrutement tech Rennes »</td>
+                                        <td className="py-3 px-4">Progression sur « recrutement tech Rennes »</td>
                                     </tr>
                                     <tr>
                                         <td className="py-3 px-4">Entreprise agroalimentaire</td>

@@ -166,7 +166,7 @@ export const FRENCH_CITIES: CityData[] = [
         department: "Monaco",
         deptCode: "98",
         population: "39 000",
-        description: "Monaco : 2km², 39 000 habitants, mais un PIB par habitant record mondial. Ici, l'approximatif n'existe pas. Family offices, banques privées, services de conciergerie ultra-premium : vos clients potentiels recherchent l'excellence. IndHack positionne votre expertise là où l'argent circule : en page 1.",
+        description: "Monaco : 2 km², 39 000 habitants, mais un PIB par habitant record mondial. Ici, l'approximatif n'existe pas. Family offices, banques privées, services de conciergerie ultra-premium : vos clients potentiels recherchent l'excellence. IndHack structure votre visibilité sur les requêtes à forte valeur.",
         keyPoints: ["Clientèle UHNWI", "Exigence absolue", "Multilinguisme obligatoire"],
         nearbyAreas: ["Monte-Carlo", "La Condamine", "Fontvieille", "Beausoleil"],
         landmarks: ["Place du Casino", "Port Hercule", "Carré d'Or", "Rocher"],
@@ -461,7 +461,7 @@ export const FRENCH_CITIES: CityData[] = [
             marketType: "tech",
             competitionLevel: "medium",
             targetClients: "ESN, startups cybersécurité, éditeurs de logiciels et professionnels du recrutement tech",
-            localInsight: "La guerre des talents tech fait rage — le SEO marque employeur est stratégique pour les ESN",
+            localInsight: "Le marché des talents tech est très concurrentiel — le SEO marque employeur est stratégique pour les ESN",
             specificChallenges: ["Concurrence recrutement tech", "Écosystème soudé", "Marque employeur critique"],
             businessTypes: ["ESN", "Cybersécurité", "Recrutement", "Agrotech"]
         }
@@ -532,7 +532,7 @@ export const FRENCH_CITIES: CityData[] = [
         department: "Paris",
         deptCode: "75",
         population: "2 100 000",
-        description: "Paris, 2,1 millions d'habitants et la concurrence SEO la plus féroce de France. Dans le Sentier (2e arrondissement), les startups French Tech se battent pour les mêmes requêtes SaaS. Rue de Rivoli et dans le Marais, les commerces affrontent les géants e-commerce sur chaque clic. À Station F (13e), les scale-ups lèvent des millions mais oublient le SEO organique. Et côté professions libérales, un avocat du 8e paie jusqu'à 50 €/clic en Google Ads. La stratégie gagnante à Paris : micro-cibler par arrondissement et conquérir les requêtes longue-traîne que les gros budgets ignorent.",
+        description: "Paris, 2,1 millions d'habitants et la concurrence SEO la plus forte de France. Dans le Sentier, les startups French Tech se battent pour les mêmes requêtes SaaS. Rue de Rivoli et dans le Marais, les commerces affrontent les géants e-commerce sur chaque clic. À Station F, les scale-ups lèvent des millions mais sous-investissent parfois le SEO organique. Et côté professions libérales, certaines requêtes Google Ads dépassent plusieurs dizaines d'euros par clic. La stratégie utile à Paris : micro-cibler par arrondissement et capter les requêtes longue-traîne que les gros budgets couvrent mal.",
         keyPoints: ["CPC moyen 5-50 €/clic selon secteur (le plus élevé de France)", "Stratégie par arrondissement = la seule viable en local", "French Tech (Sentier, Station F) : concurrence SaaS mondiale"],
         nearbyAreas: ["Boulogne-Billancourt", "Neuilly-sur-Seine", "Levallois-Perret", "Montreuil"],
         landmarks: ["Tour Eiffel", "Champs-Élysées", "Montmartre", "Le Marais"],
@@ -707,9 +707,9 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
 
                 errorsContent = `Après avoir réalisé des <strong>audits SEO techniques</strong> pour des dizaines de sites tech à ${city.name}, ${city.nearbyAreas[0]} et dans tout le ${city.department}, j'ai identifié les <strong>erreurs d'indexation</strong> récurrentes`;
             } else if (isVolume) {
-                approachContent = `Mon <strong>audit technique SEO à ${city.name}</strong> est optimisé pour un marché hyper-concurrentiel où chaque détail compte.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Avec ${city.population} habitants et une concurrence féroce, les <strong>erreurs d'indexation</strong> sont fatales. Pendant que votre <strong>sitemap</strong> est mal configuré, vos concurrents captent vos clients potentiels.<br/><br/>Mon <strong>diagnostic technique</strong> identifie rapidement les quick wins : <strong>Core Web Vitals</strong> à corriger, pages bloquées par le <strong>robots.txt</strong>, <strong>redirections 301</strong> manquantes, <strong>vitesse de chargement</strong> à optimiser via PageSpeed.`;
+                approachContent = `Mon <strong>audit technique SEO à ${city.name}</strong> est optimisé pour un marché hyper-concurrentiel où chaque détail compte.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Avec ${city.population} habitants et une concurrence très forte, les <strong>erreurs d'indexation</strong> sont fatales. Pendant que votre <strong>sitemap</strong> est mal configuré, vos concurrents captent vos clients potentiels.<br/><br/>Mon <strong>diagnostic technique</strong> identifie rapidement les quick wins : <strong>Core Web Vitals</strong> à corriger, pages bloquées par le <strong>robots.txt</strong>, <strong>redirections 301</strong> manquantes, <strong>vitesse de chargement</strong> à optimiser via PageSpeed.`;
 
-                challengesContent = `${city.name} est un champ de bataille digital. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon <strong>audit de référencement</strong> intègre la réalité du terrain : analyse du <strong>crawl</strong> avec Screaming Frog, vérification de l'<strong>indexation Google</strong> via Search Console, optimisation des <strong>balises meta</strong> et title. Focus sur le Pack Local qui capte 40% des clics. Pas de théorie, des <strong>corrections techniques concrètes</strong>.`;
+                challengesContent = `${city.name} concentre une concurrence digitale très forte. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon <strong>audit de référencement</strong> intègre la réalité du terrain : analyse du <strong>crawl</strong> avec Screaming Frog, vérification de l'<strong>indexation Google</strong> via Search Console, optimisation des <strong>balises meta</strong> et title. Focus sur le Pack Local qui capte 40% des clics. Pas de théorie, des <strong>corrections techniques concrètes</strong>.`;
 
                 whyMeContent = `À ${city.name}, les agences facturent cher pour des audits génériques. Entre <strong>2 000€ et 6 000€</strong> pour des PDF de 100 pages que personne ne lit.<br/><br/>Je propose un <strong>diagnostic SEO technique sur devis</strong> focalisé sur vos enjeux réels : analyse des <strong>erreurs 404</strong>, vérification du <strong>maillage interne</strong>, test <strong>mobile-first</strong>. L'objectif : corriger les blocages d'<strong>indexation</strong> rapidement.`;
 
@@ -804,7 +804,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
                     },
                     {
                         question: `L'audit technique suffit-il pour être visible à ${city.name} ?`,
-                        answer: `L'audit technique est la <strong>fondation indispensable</strong>. Sans elle, vos efforts SEO sont construits sur du sable. Mais le référencement repose sur 3 piliers : technique, contenu et popularité. Pour dominer les recherches à ${city.name}, il faudra ensuite travailler votre contenu et vos backlinks.`
+                        answer: `L'audit technique est la <strong>fondation indispensable</strong>. Sans elle, vos efforts SEO sont construits sur du sable. Mais le référencement repose sur 3 piliers : technique, contenu et popularité. Pour progresser sur les recherches à ${city.name}, il faudra ensuite travailler votre contenu et vos backlinks.`
                     },
                     {
                         question: `Travaillez-vous à distance ou sur site à ${city.name} ?`,
@@ -840,7 +840,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
             let whyMeContent = "";
 
             if (isLuxury) {
-                mainContent = `En tant que ${links.motherLink} et ${links.homeLink}, je crée des sites web à la hauteur des exigences de votre clientèle à ${city.name}.<br/><br/>Sur un marché où ${city.context.localInsight.toLowerCase()}, votre site est votre première impression. Il doit transpirer le <strong>professionnalisme et l'exclusivité</strong> que vos clients attendent. Pas de template générique : un site sur-mesure, pensé SEO dès la première ligne de code.<br/><br/>Ma différence ? Je ne crée pas de "beaux sites". Je crée des <strong>machines à générer des contacts qualifiés</strong> qui apparaissent en première page Google quand vos prospects recherchent vos services.`;
+                mainContent = `En tant que ${links.motherLink} et ${links.homeLink}, je crée des sites web à la hauteur des exigences de votre clientèle à ${city.name}.<br/><br/>Sur un marché où ${city.context.localInsight.toLowerCase()}, votre site est votre première impression. Il doit transpirer le <strong>professionnalisme et l'exclusivité</strong> que vos clients attendent. Pas de template générique : un site sur-mesure, pensé SEO dès la première ligne de code.<br/><br/>Ma différence ? Je ne crée pas de "beaux sites". Je crée des <strong>systèmes de génération de contacts qualifiés</strong> qui peuvent être compris, indexés et positionnés sur les recherches qui comptent.`;
 
                 techContent = `Pour les ${city.context.targetClients}, j'utilise des technologies premium qui garantissent performances et image de marque. Next.js pour la vitesse et le SEO natif, design sur-mesure sans template, hébergement haute disponibilité. Votre site sera aussi irréprochable que le service que vous proposez.`;
 
@@ -976,13 +976,13 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
             if (isLuxury) {
                 strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je déploie des stratégies SEO calibrées pour les marchés premium.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Votre référencement doit refléter cette réalité : ciblage de mots-clés à fort potentiel commercial, contenu d'expertise qui positionne votre autorité, présence sur les requêtes multilingues de votre clientèle internationale.<br/><br/>Mon approche SEO pour le luxe est différente : moins de volume, plus de <strong>qualité et de conversion</strong>. Un lead sur une requête premium vaut cent clics génériques.`;
 
-                localSeoContent = `Le SEO local à ${city.name} pour une clientèle premium a ses codes. Il ne s'agit pas simplement d'apparaître sur "restaurant ${city.name}" mais de dominer les requêtes à forte intention d'achat : "meilleur restaurant gastronomique ${city.name}", "villa prestige ${city.landmarks[0]}"...<br/><br/>J'optimise votre présence Google Business Profile avec des photos professionnelles, des avis gérés, et une cohérence parfaite avec votre site. Le Pack Local est souvent le premier point de contact avec vos futurs clients.`;
+                localSeoContent = `Le SEO local à ${city.name} pour une clientèle premium a ses codes. Il ne s'agit pas simplement d'apparaître sur "restaurant ${city.name}" mais de capter les requêtes à forte intention d'achat : "meilleur restaurant gastronomique ${city.name}", "villa prestige ${city.landmarks[0]}"...<br/><br/>J'optimise votre présence Google Business Profile avec des photos professionnelles, des avis gérés, et une cohérence parfaite avec votre site. Le Pack Local est souvent le premier point de contact avec vos futurs clients.`;
 
                 resultsContent = `Sur un marché premium comme ${city.name}, le SEO est un investissement à moyen terme. ${city.context.specificChallenges[0]} implique une stratégie de différenciation plutôt que de volume.`;
 
                 whyMeContent = `Les agences SEO parisiennes facturent entre <strong>2 000€ et 5 000€/mois</strong> pour des accompagnements premium, souvent sans comprendre les subtilités de votre marché local.<br/><br/>Je propose un accompagnement sur-mesure avec un <strong>investissement adapté (sur devis)</strong> à vos enjeux réels. Premier audit de positionnement gratuit.`;
             } else if (isTech) {
-                strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je conçois des stratégies SEO adaptées aux enjeux B2B tech.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Le SEO B2B est différent du B2C : cycles de décision longs, contenus éducatifs, ciblage de personas techniques. Mon approche intègre ces spécificités pour générer des leads qualifiés, pas du trafic vide.<br/><br/>Content marketing technique, thought leadership, landing pages produit optimisées — je construis une <strong>machine d'acquisition organique</strong> qui travaille pour vous 24/7.`;
+                strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je conçois des stratégies SEO adaptées aux enjeux B2B tech.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Le SEO B2B est différent du B2C : cycles de décision longs, contenus éducatifs, ciblage de personas techniques. Mon approche intègre ces spécificités pour générer des leads qualifiés, pas du trafic vide.<br/><br/>Content marketing technique, thought leadership, landing pages produit optimisées — je construis une <strong>source d'acquisition organique</strong> qui travaille pour vous 24/7.`;
 
                 localSeoContent = `Le SEO local B2B à ${city.name} cible des requêtes spécifiques : "ESN ${city.name}", "développeur ${city.deptCode}", "startup ${city.landmarks[0]}"... Ces recherches ont un volume faible mais une intention business forte.<br/><br/>J'optimise également votre présence sur les plateformes B2B (LinkedIn, Malt, etc.) et je travaille votre SEO marque employeur pour attirer les talents dans un marché tendu.`;
 
@@ -990,15 +990,15 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
 
                 whyMeContent = `Les agences SEO généralistes ne comprennent pas les enjeux tech. Les agences spécialisées B2B facturent entre <strong>3 000€ et 8 000€/mois</strong>.<br/><br/>Je propose un accompagnement pragmatique avec un <strong>budget rationnel (sur devis)</strong> et des KPIs qui comptent : leads générés, pas vanity metrics.`;
             } else if (isVolume) {
-                strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je déploie des stratégies SEO de conquête pour les marchés concurrentiels.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Avec ${city.population} habitants et une concurrence féroce, le SEO est une guerre de positions. Chaque place gagnée sur Google se traduit en parts de marché. Ma stratégie est offensive : audit compétitif, identification des failles adverses, contenu de conquête.<br/><br/>Pas de SEO "doucement on verra" — des <strong>actions concrètes pour prendre des positions</strong>.`;
+                strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je déploie des stratégies SEO de croissance pour les marchés concurrentiels.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Avec ${city.population} habitants et une concurrence très forte, le SEO se joue sur des arbitrages précis. Chaque place gagnée sur Google se traduit en parts de marché. Ma stratégie est offensive : audit compétitif, identification des angles sous-exploités chez les concurrents, contenu différenciant.<br/><br/>Pas de SEO "doucement on verra" — des <strong>actions concrètes pour gagner des positions utiles</strong>.`;
 
-                localSeoContent = `À ${city.name}, le SEO local fait la différence entre les entreprises qui survivent et celles qui prospèrent. Le Pack Local capte 40% des clics sur les requêtes locales. Si vous n'y êtes pas, vous êtes invisible pour les ${city.population} habitants qui cherchent vos services.<br/><br/>J'optimise votre Google Business Profile, je travaille vos avis clients, et je construis votre présence locale sur les annuaires qui comptent. Objectif : dominer le Pack Local sur vos requêtes stratégiques.`;
+                localSeoContent = `À ${city.name}, le SEO local fait la différence entre les entreprises qui survivent et celles qui prospèrent. Le Pack Local capte 40% des clics sur les requêtes locales. Si vous n'y êtes pas, vous êtes invisible pour les ${city.population} habitants qui cherchent vos services.<br/><br/>J'optimise votre Google Business Profile, je travaille vos avis clients, et je construis votre présence locale sur les annuaires qui comptent. Objectif : renforcer votre présence dans Google Maps sur vos requêtes stratégiques.`;
 
                 resultsContent = `Sur un marché aussi concurrentiel que ${city.name}, attendez-vous à des résultats progressifs mais durables. Les premiers effets sont visibles en 2-3 mois, les résultats significatifs en 6 mois.`;
 
                 whyMeContent = `Les agences SEO de ${city.region} facturent entre <strong>1 000€ et 3 000€/mois</strong> pour des accompagnements souvent standardisés.<br/><br/>Je propose une stratégie offensive avec un <strong>investissement adapté (sur devis)</strong> à votre capacité et vos objectifs. On définit ensemble les KPIs et on mesure les résultats.`;
             } else {
-                strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je construis des stratégies SEO adaptées aux entreprises locales.<br/><br/>Les ${city.population} habitants de ${city.name} et des environs recherchent vos services sur Google. Ma mission : vous rendre visible quand ils tapent "${city.name} + votre métier". Une stratégie simple, efficace, centrée sur les <strong>résultats business</strong>.<br/><br/>Pas de jargon SEO inutile ni de promesses irréalistes. Un plan d'action clair pour prendre des positions sur vos requêtes stratégiques.`;
+                strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je construis des stratégies SEO adaptées aux entreprises locales.<br/><br/>Les ${city.population} habitants de ${city.name} et des environs recherchent vos services sur Google. Ma mission : vous rendre visible quand ils tapent "${city.name} + votre métier". Une stratégie simple, efficace, centrée sur les <strong>résultats business</strong>.<br/><br/>Pas de jargon SEO inutile ni de promesses irréalistes. Un plan d'action clair pour gagner des positions utiles sur vos requêtes stratégiques.`;
 
                 localSeoContent = `Le SEO local à ${city.name} repose sur 3 piliers : un site optimisé pour les requêtes locales, une fiche Google Business Profile impeccable, et des avis clients qui rassurent. Je travaille ces 3 axes en parallèle pour maximiser votre visibilité dans le Pack Local.<br/><br/>J'optimise également votre présence sur les villes proches (${city.nearbyAreas.slice(0, 2).join(", ")}) pour élargir votre zone de chalandise sans diluer vos efforts.`;
 
@@ -1021,7 +1021,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
                         ]
                     },
                     {
-                        title: `SEO local : dominez Google à ${city.name}`,
+                        title: `SEO local : améliorez votre visibilité Google à ${city.name}`,
                         content: localSeoContent,
                         bullets: [
                             `<strong>Google Business Profile</strong> : optimisation complète de votre fiche pour le Pack Local`,

@@ -257,7 +257,7 @@ function BordeauxCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Restaurant Saint-Pierre / centre</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Top 3 Pack Local + réservations directes</td>
+                                        <td className="py-3 px-4">Visibilité Google Maps + réservations directes</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Startup Darwin (B2B)</td>
@@ -267,7 +267,7 @@ function BordeauxCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Agence immobilière</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">Page 1 « appartement Bordeaux centre »</td>
+                                        <td className="py-3 px-4">Progression sur « appartement Bordeaux centre »</td>
                                     </tr>
                                     <tr>
                                         <td className="py-3 px-4">Cave / caviste</td>

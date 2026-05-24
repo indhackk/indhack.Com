@@ -19,9 +19,9 @@ interface HeroServicesProps {
 export function HeroServices({ title, subtitle, category, image, imageAlt, density = "default", customVisual }: HeroServicesProps) {
     const { openAuditModal } = useModal();
     const imageSrc = image.startsWith('/') ? image : `/images/${image}.webp`;
-    const preserveImageMetadata = imageSrc.startsWith('/images/local-heroes/');
-    const imageWidth = preserveImageMetadata ? 1600 : 800;
-    const imageHeight = preserveImageMetadata ? 900 : 600;
+    const preserveImageMetadata = imageSrc.startsWith('/images/local-heroes/') || imageSrc.startsWith('/images/cities/');
+    const imageWidth = imageSrc.startsWith('/images/cities/') ? 1200 : preserveImageMetadata ? 1600 : 800;
+    const imageHeight = imageSrc.startsWith('/images/cities/') ? 800 : preserveImageMetadata ? 900 : 600;
     const isCompact = density === "compact";
 
     return (

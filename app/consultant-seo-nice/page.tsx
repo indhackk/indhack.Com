@@ -252,7 +252,7 @@ function NiceCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Restaurant Vieux-Nice</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Top 3 Pack Local + réservations directes</td>
+                                        <td className="py-3 px-4">Visibilité Google Maps + réservations directes</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Hôtel Promenade des Anglais</td>
@@ -262,7 +262,7 @@ function NiceCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Agence immobilière</td>
                                         <td className="py-3 px-4">3-4 mois</td>
-                                        <td className="py-3 px-4">Page 1 sur requêtes par quartier</td>
+                                        <td className="py-3 px-4">Progression sur requêtes par quartier</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Startup Éco-Vallée</td>

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Consultant SEO Cannes (06400) - IndHack",
-    description: "Consultante SEO à Cannes. Stratégie de visibilité Google pour immobilier prestige, yachting et événementiel. Renforcez votre visibilité sur la Croisette et les recherches premium.",
+    description: "Consultante SEO à Cannes. Stratégie Google pour immobilier prestige, yachting, événementiel et recherches locales premium.",
     alternates: {
         canonical: "https://indhack.com/consultant-seo-cannes"
     },
