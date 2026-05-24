@@ -49,7 +49,6 @@ const RESOURCES = [
     { title: "Études de cas", href: "/etudes-de-cas" },
     { title: "FAQ", href: "/faq" },
     { title: "À propos", href: "/a-propos" },
-    { title: "Widget testeur IA (à embarquer)", href: "/widget/testeur-ia" },
     { title: "Livre blanc GEO 2026", href: "/livre-blanc-geo-2026" },
 ];
 

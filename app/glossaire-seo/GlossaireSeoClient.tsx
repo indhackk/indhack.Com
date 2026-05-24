@@ -38,7 +38,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         definition:
             "Réponses générées par l'IA de Google affichées en haut des résultats de recherche. Les AI Overviews synthétisent le contenu de plusieurs sources pour répondre directement aux requêtes. Être cité dans une AIO nécessite un contenu E-E-A-T fort et des données structurées.",
         links: [
-            { label: "SEO vs GEO", href: "/blog/seo-vs-geo-differences" },
+            { label: "Sources AI Overviews", href: "/blog/ai-overviews-sources-hors-top-10-2026" },
             { label: "Visibilité IA", href: "/outils/testeur-visibilite-ia" },
         ],
         category: "geo-ia",
@@ -130,7 +130,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
             "Contenu formaté pour être facilement cité par les moteurs IA : statistiques sourcées, définitions claires, listes structurées, études originales. La recherche Princeton GEO (2024) montre que le contenu citable augmente la visibilité IA de 30 à 40%.",
         links: [
             { label: "Guide GEO", href: "/blog/geo-comment-apparaitre-chatgpt-2026" },
-            { label: "SEO vs GEO", href: "/blog/seo-vs-geo-differences" },
+            { label: "Site agent-friendly", href: "/blog/site-agent-friendly-seo-ia-2026" },
         ],
         category: "geo-ia",
     },
@@ -237,7 +237,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
             "Discipline émergente visant à optimiser la visibilité d'un site dans les moteurs de réponse IA (ChatGPT, Perplexity, Claude, Gemini). Le GEO combine des techniques SEO classiques avec des optimisations spécifiques : fichier llms.txt, données structurées, contenu citable, autorité thématique.",
         links: [
             { label: "Guide GEO complet", href: "/blog/geo-comment-apparaitre-chatgpt-2026" },
-            { label: "SEO vs GEO", href: "/blog/seo-vs-geo-differences" },
+            { label: "Comparatif moteurs IA", href: "/blog/ai-mode-vs-chatgpt-vs-perplexity-comparatif-geo-2026" },
             { label: "Tester sa visibilité IA", href: "/outils/testeur-visibilite-ia" },
             { label: "Consultant GEO", href: "/consultant-geo" },
         ],
@@ -387,7 +387,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         definition:
             "Moteur de recherche IA qui synthétise des réponses à partir de sources web avec des citations. Perplexity a plus de 45 millions d'utilisateurs. Être cité par Perplexity est un objectif clé du GEO.",
         links: [
-            { label: "Apparaître sur Perplexity", href: "/blog/apparaitre-sur-perplexity" },
+            { label: "Apparaître sur Perplexity", href: "/blog/apparaitre-sur-perplexity-guide-seo-2026" },
             { label: "Tester sa visibilité IA", href: "/outils/testeur-visibilite-ia" },
         ],
         category: "geo-ia",
@@ -398,7 +398,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         definition:
             "Robot de crawl de Perplexity AI qui parcourt le web pour alimenter les réponses de son moteur de recherche IA. Autoriser PerplexityBot dans le robots.txt est essentiel pour apparaître dans les citations de Perplexity.",
         links: [
-            { label: "Apparaître sur Perplexity", href: "/blog/apparaitre-sur-perplexity" },
+            { label: "Apparaître sur Perplexity", href: "/blog/apparaitre-sur-perplexity-guide-seo-2026" },
             { label: "Générateur robots.txt", href: "/outils/generateur-robots-txt" },
         ],
         category: "geo-ia",
@@ -595,7 +595,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
         definition:
             "Recherche Google où l'utilisateur obtient sa réponse directement dans la SERP (featured snippet, Knowledge Panel, Local Pack) sans cliquer sur aucun résultat. Le GEO et les featured snippets sont des stratégies de réponse à ce phénomène.",
         links: [
-            { label: "SEO vs GEO", href: "/blog/seo-vs-geo-differences" },
+            { label: "Impact AI Overviews", href: "/blog/ai-overviews-impact-trafic-seo-2026" },
             { label: "Guide GEO", href: "/blog/geo-comment-apparaitre-chatgpt-2026" },
         ],
         category: "geo-ia",
