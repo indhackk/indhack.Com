@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Consultant SEO Strasbourg (67000) - IndHack",
-    description: "Consultante SEO à Strasbourg : audit, référencement Google et stratégie bilingue FR/DE pour PME alsaciennes. Audit SEO gratuit.",
+    description: "Consultante SEO à Strasbourg : audit, référencement Google et stratégie bilingue FR/DE pour PME alsaciennes. Diagnostic SEO local.",
     robots: { index: true, follow: true },
     keywords: ["consultant SEO Strasbourg", "référencement Strasbourg", "SEO Alsace", "audit SEO Strasbourg", "consultant SEO 67", "consultante SEO Strasbourg"],
     alternates: {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "Consultant SEO Strasbourg (67000) - IndHack",
-        description: "Expertise SEO à Strasbourg. Carrefour européen, SEO bilingue FR/DE, institutions : positionnement Google adapté au marché alsacien.",
+        description: "Consultante SEO à Strasbourg. Carrefour européen, SEO bilingue FR/DE, institutions : positionnement Google adapté au marché alsacien.",
         url: "https://indhack.com/consultant-seo-strasbourg",
         type: "website",
         locale: "fr_FR",

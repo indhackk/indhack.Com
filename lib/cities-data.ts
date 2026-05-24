@@ -54,7 +54,7 @@ export const FRENCH_CITIES: CityData[] = [
         department: "Alpes-Maritimes",
         deptCode: "06",
         population: "340 000",
-        description: "À Nice, la bataille digitale se joue quartier par quartier. Sur le Vieux-Nice, les restaurants de la rue Pairolière affrontent Booking et TheFork pour capter le touriste. Du côté de Cimiez, les cliniques et cabinets médicaux se disputent les requêtes santé. À l'Arénas, le pôle d'affaires Nice Méridia fait monter les enchères sur le B2B. Et avec 14 millions de touristes par an (OCA 2025), chaque position perdue sur Google coûte des milliers d'euros de chiffre d'affaires. IndHack connaît ces micro-marchés niçois.",
+        description: "À Nice, la visibilité locale se joue quartier par quartier. Sur le Vieux-Nice, les restaurants de la rue Pairolière doivent composer avec Booking et TheFork. Du côté de Cimiez, les cliniques et cabinets médicaux se disputent les requêtes santé. À l'Arénas, le pôle d'affaires Nice Méridia renforce la concurrence B2B. Avec 14 millions de touristes par an (OCA 2025), une stratégie SEO claire aide à capter davantage de demandes directes.",
         keyPoints: ["14 millions de touristes/an (70 % de recherches mobiles en EN/IT)", "Micro-marchés : Vieux-Nice, Cimiez, Libération, Arénas", "Booking/TheFork captent 80 % des clics tourisme"],
         nearbyAreas: ["Villefranche-sur-Mer", "Saint-Laurent-du-Var", "Cagnes-sur-Mer", "Beaulieu-sur-Mer"],
         landmarks: ["Promenade des Anglais", "Vieux-Nice", "Port de Nice", "Place Masséna"],
@@ -95,7 +95,7 @@ export const FRENCH_CITIES: CityData[] = [
             marketType: "luxury",
             competitionLevel: "extreme",
             targetClients: "agences immobilières de la Croisette (John Taylor, Michaël Zingraf), yachtbrokers du Port Canto, hôtels 5 étoiles (Carlton, Martinez) et prestataires MIPIM/MAPIC",
-            localInsight: "Le calendrier SEO cannois est dicté par les salons : MIPIM (mars), Festival (mai), MAPIC (novembre). Chaque événement génère un pic de requêtes spécifique — 'immobilier Cannes' explose en mars, 'restaurant étoilé Cannes' en mai. La stratégie doit anticiper ces pics 2-3 mois avant",
+            localInsight: "Le calendrier SEO cannois est dicté par les salons : MIPIM (mars), Festival (mai), MAPIC (novembre). Chaque événement génère un pic de requêtes spécifique — 'immobilier Cannes' explose en mars, 'restaurant étoilé Cannes' en mai. La stratégie doit anticiper ces pics deux à trois mois avant",
             specificChallenges: ["CPC immobilier à 15 €+, le plus élevé de PACA", "Requêtes yachting 100 % anglophone", "Les OTA captent le trafic hôtelier (Booking, Expedia)"],
             businessTypes: ["Immobilier prestige", "Yachting", "Événementiel B2B", "Restauration gastronomique"]
         }
@@ -208,7 +208,7 @@ export const FRENCH_CITIES: CityData[] = [
             competitionLevel: "high",
             targetClients: "startups SaaS de la French Tech Côte d'Azur, ESN (Atos, Capgemini, Sopra Steria), éditeurs de logiciels, scale-ups health-tech (Galderma) et laboratoires INRIA/CNRS",
             localInsight: "Le contenu B2B à Sophia doit être ultra-technique : les décideurs sont des CTO et VP Engineering. Un article de blog générique ne convertit pas — il faut des case studies, des benchmarks et du content marketing éducatif type product-led growth. Le cycle de conversion moyen est de 6-12 mois",
-            specificChallenges: ["Contenu technique de niveau CTO requis (pas de vulgarisation)", "Budgets marketing des scale-ups US (HubSpot, Datadog) écrasent les SERP", "Lead gen B2B long cycle nécessite nurturing SEO"],
+            specificChallenges: ["Contenu technique de niveau CTO requis (pas de vulgarisation)", "Budgets marketing élevés des scale-ups SaaS sur les SERP", "Lead gen B2B long cycle nécessite nurturing SEO"],
             businessTypes: ["SaaS", "Health-tech", "Semiconducteurs", "Recherche (INRIA, ETSI)"]
         }
     },
@@ -251,7 +251,7 @@ export const FRENCH_CITIES: CityData[] = [
         department: "Bouches-du-Rhône",
         deptCode: "13",
         population: "145 000",
-        description: "Aix-en-Provence : ville d'art, d'eau et... de startups. Le pôle d'activités attire les entreprises tech tandis que le centre historique reste le royaume des commerces de charme. IndHack navigue entre ces deux mondes pour positionner votre entreprise sur le Cours Mirabeau du digital.",
+        description: "Aix-en-Provence combine patrimoine, commerces premium, professions libérales, étudiants et entreprises tech du pôle d'activités. IndHack relie ces univers pour construire une visibilité utile sur Google.",
         keyPoints: ["Mix tech et patrimoine", "Clientèle étudiante", "Tourisme culturel"],
         nearbyAreas: ["Les Milles", "Venelles", "Meyreuil", "Gardanne"],
         landmarks: ["Cours Mirabeau", "Fontaine de la Rotonde", "Montagne Sainte-Victoire", "Atelier Cézanne"],
@@ -545,7 +545,7 @@ export const FRENCH_CITIES: CityData[] = [
             marketType: "volume",
             competitionLevel: "extreme",
             targetClients: "startups French Tech du Sentier et de Station F, PME du Marais et de République, avocats et notaires du 8e, commerces de Rivoli et des Halles, cabinets médicaux du 16e",
-            localInsight: "Le SEO parisien par arrondissement est la seule stratégie rentable : 'avocat divorce 8e' convertit 10x mieux que 'avocat divorce Paris'. Les professionnels libéraux du 8e et 16e paient 30-50 €/clic en Ads — le SEO organique est leur seule issue. Côté e-commerce, la concurrence Amazon/Fnac rend le SEO product impossible sans une stratégie de contenu éducatif",
+            localInsight: "Le SEO parisien par arrondissement permet de réduire la dilution : 'avocat divorce 8e' peut être plus exploitable que 'avocat divorce Paris'. Pour les professions libérales, les requêtes locales à forte intention sont souvent plus pertinentes que les mots-clés génériques. Côté e-commerce, la concurrence des grandes plateformes impose une stratégie de contenu éducatif et de preuve.",
             specificChallenges: ["CPC parmi les plus élevés d'Europe (50 €/clic en juridique)", "Amazon, Fnac, Doctolib captent les SERP génériques", "SEO par arrondissement + longue-traîne = seule stratégie viable"],
             businessTypes: ["French Tech / SaaS", "Professions libérales (avocats, notaires)", "Commerce haut de gamme", "Santé / Médical"]
         }
@@ -574,7 +574,7 @@ export const FRENCH_CITIES: CityData[] = [
             competitionLevel: "high",
             targetClients: "agences de production, sociétés de médias, agences de communication et prestataires audiovisuels",
             localInsight: "L'écosystème médias génère des recherches B2B spécifiques — 'production vidéo Boulogne' est ultra-qualifié",
-            specificChallenges: ["Marché B2B médias spécifique", "Concurrence agences parisiennes", "Clients exigeants"],
+            specificChallenges: ["Marché B2B médias spécifique", "Concurrence proche de Paris", "Clients exigeants"],
             businessTypes: ["Médias", "Production audiovisuelle", "Communication", "Agences"]
         }
     }
@@ -695,7 +695,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
 
                 challengesContent = `Le marché ${city.name} a ses exigences propres. ${city.context.specificChallenges.join(". ")}. Mon <strong>audit de référencement</strong> intègre ces spécificités :<br/><br/>J'analyse votre site sous l'angle de votre clientèle ${city.context.targetClients.split(",")[0]} : <strong>vitesse de chargement</strong> perçue, qualité d'affichage via Lighthouse, <strong>mobile-first indexing</strong>. Chaque recommandation est priorisée par <strong>impact business</strong> autant que sur votre positionnement Google.`;
 
-                whyMeContent = `Les agences facturent des audits standards entre <strong>3 000€ et 8 000€</strong> sans comprendre les subtilités d'un marché premium comme ${city.name}. Elles appliquent des grilles génériques inadaptées à votre clientèle.<br/><br/>Je propose un <strong>diagnostic SEO sur-mesure (sur devis)</strong> avec un tarif ajusté à la taille de votre site (à partir de 150€). Premier <strong>audit technique gratuit</strong> pour évaluer vos erreurs d'indexation et vos <strong>redirections 301/404</strong>.`;
+                whyMeContent = `Sur un marché premium comme ${city.name}, un audit standard ne suffit pas. Le diagnostic doit tenir compte de la clientèle, des langues, des pages à forte valeur et de l'expérience mobile.<br/><br/>Je propose un <strong>diagnostic SEO sur-mesure (sur devis)</strong>, ajusté à la taille du site et aux priorités réelles : indexation, <strong>redirections 301/404</strong>, vitesse, maillage et données structurées.`;
 
                 errorsContent = `Après des dizaines d'<strong>audits techniques SEO</strong> pour des entreprises de ${city.name} et ${city.nearbyAreas.slice(0, 2).join(", ")}, j'ai identifié les <strong>erreurs de crawl</strong> récurrentes sur ce marché premium`;
             } else if (isTech) {
@@ -703,7 +703,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
 
                 challengesContent = `L'écosystème tech de ${city.name} a ses spécificités. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon <strong>audit de référencement</strong> intègre ces réalités : analyse du <strong>maillage interne</strong> pour les cycles de vente longs, vérification de l'<strong>indexation</strong> du contenu éducatif, <strong>données structurées schema.org</strong> (TechArticle, FAQ, SoftwareApplication). Je livre un diagnostic technique aligné avec vos enjeux B2B.`;
 
-                whyMeContent = `Les agences généralistes ne comprennent pas vos enjeux. Elles confondent site vitrine et application SaaS, e-commerce B2C et génération de leads B2B.<br/><br/>Les grandes agences tech facturent entre <strong>5 000€ et 15 000€</strong> des audits parfois surdimensionnés. Je propose un <strong>diagnostic technique sur devis</strong> avec analyse <strong>PageSpeed/Lighthouse</strong>, vérification des <strong>erreurs 404</strong> et optimisation du <strong>robots.txt</strong>.`;
+                whyMeContent = `Les sites tech demandent une lecture différente : une application SaaS, un e-commerce B2C et une plateforme de génération de leads B2B n'ont pas les mêmes contraintes de crawl, de contenu et de conversion.<br/><br/>Je propose un <strong>diagnostic technique sur devis</strong> avec analyse <strong>PageSpeed/Lighthouse</strong>, vérification des <strong>erreurs 404</strong>, indexation JavaScript, maillage et optimisation du <strong>robots.txt</strong>.`;
 
                 errorsContent = `Après avoir réalisé des <strong>audits SEO techniques</strong> pour des dizaines de sites tech à ${city.name}, ${city.nearbyAreas[0]} et dans tout le ${city.department}, j'ai identifié les <strong>erreurs d'indexation</strong> récurrentes`;
             } else if (isVolume) {
@@ -711,7 +711,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
 
                 challengesContent = `${city.name} concentre une concurrence digitale très forte. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon <strong>audit de référencement</strong> intègre la réalité du terrain : analyse du <strong>crawl</strong> avec Screaming Frog, vérification de l'<strong>indexation Google</strong> via Search Console, optimisation des <strong>balises meta</strong> et title. Focus sur le Pack Local qui capte 40% des clics. Pas de théorie, des <strong>corrections techniques concrètes</strong>.`;
 
-                whyMeContent = `À ${city.name}, les agences facturent cher pour des audits génériques. Entre <strong>2 000€ et 6 000€</strong> pour des PDF de 100 pages que personne ne lit.<br/><br/>Je propose un <strong>diagnostic SEO technique sur devis</strong> focalisé sur vos enjeux réels : analyse des <strong>erreurs 404</strong>, vérification du <strong>maillage interne</strong>, test <strong>mobile-first</strong>. L'objectif : corriger les blocages d'<strong>indexation</strong> rapidement.`;
+                whyMeContent = `À ${city.name}, un audit utile doit rester priorisé. Le volume du rapport importe moins que la clarté des corrections, leur impact et leur ordre d'exécution.<br/><br/>Je propose un <strong>diagnostic SEO technique sur devis</strong> focalisé sur vos enjeux réels : analyse des <strong>erreurs 404</strong>, vérification du <strong>maillage interne</strong>, test <strong>mobile-first</strong> et correction des blocages d'<strong>indexation</strong>.`;
 
                 errorsContent = `Sur un marché aussi concurrentiel que ${city.name}, j'ai identifié les <strong>erreurs techniques</strong> qui coûtent le plus cher aux entreprises locales`;
             } else {
@@ -720,7 +720,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
 
                 challengesContent = `Le marché ${city.name} a ses particularités. ${city.context.specificChallenges.join(". ")}.<br/><br/>Mon <strong>diagnostic SEO</strong> prend en compte ces spécificités : vérification de l'<strong>indexation Google</strong> via Search Console, analyse des <strong>données structurées</strong> LocalBusiness, optimisation des <strong>balises title</strong> pour "${city.name} + votre activité", audit du <strong>maillage interne</strong> vers ${city.nearbyAreas.slice(0, 2).join(" et ")}.`;
 
-                whyMeContent = `Les agences digitales de ${city.region} facturent leurs audits entre <strong>1 500€ et 4 000€</strong>, souvent pour des rapports standardisés sans véritable <strong>analyse technique</strong>.<br/><br/>Je propose un <strong>diagnostic SEO personnalisé (sur devis)</strong> : crawl complet avec Screaming Frog, mesure <strong>PageSpeed/Lighthouse</strong>, vérification des <strong>erreurs 404</strong> et <strong>redirections</strong>. Premier audit technique gratuit pour identifier vos priorités.`;
+                whyMeContent = `Le diagnostic doit être adapté au marché de ${city.region}, pas seulement généré par un outil. Les priorités diffèrent selon la taille du site, la concurrence locale et les pages qui portent vraiment la demande.<br/><br/>Je propose un <strong>diagnostic SEO personnalisé (sur devis)</strong> : crawl complet, mesure <strong>PageSpeed/Lighthouse</strong>, vérification des <strong>erreurs 404</strong>, <strong>redirections</strong>, maillage et priorisation des corrections.`;
 
                 errorsContent = `Au fil de mes <strong>audits SEO techniques</strong> auprès d'entreprises de ${city.name} et ${city.nearbyAreas.slice(0, 2).join(", ")}, j'ai identifié les <strong>erreurs de crawl</strong> les plus fréquentes`;
             }
@@ -788,7 +788,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
                     }
                 ],
                 methodology: [
-                    { step: "01", title: "Diagnostic initial", desc: `Analyse de votre situation actuelle à ${city.name} : positionnement, concurrence locale, état technique. Gratuit et sans engagement.` },
+                    { step: "01", title: "Diagnostic initial", desc: `Analyse de votre situation actuelle à ${city.name} : positionnement, concurrence locale et état technique. Le cadrage sert à prioriser avant d'engager les corrections.` },
                     { step: "02", title: "Crawl & analyse", desc: `Crawl complet de votre site, analyse Search Console, mesure des Core Web Vitals. Focus sur les enjeux de ${city.name}.` },
                     { step: "03", title: "Rapport priorisé", desc: `Livrable actionnable avec recommandations classées par impact business. Pas de PDF de 100 pages, des actions concrètes.` },
                     { step: "04", title: "Accompagnement", desc: `Je reste disponible pour accompagner la mise en œuvre et valider les corrections. Suivi des résultats inclus.` }
@@ -800,7 +800,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
                     },
                     {
                         question: `Quel investissement pour un audit SEO à ${city.name} ?`,
-                        answer: `Les agences de ${city.region} facturent généralement entre <strong>2 000€ et 6 000€</strong> pour des audits standardisés. Je propose un diagnostic personnalisé <strong>sur devis</strong> ajusté à la taille de votre site et à vos enjeux réels. Premier échange gratuit pour évaluer vos besoins.`
+                        answer: `Le budget dépend de la taille du site, du niveau de concurrence et de la profondeur d'analyse nécessaire. Je propose un diagnostic personnalisé <strong>sur devis</strong>, ajusté à vos enjeux réels et aux actions qui auront le plus d'impact.`
                     },
                     {
                         question: `L'audit technique suffit-il pour être visible à ${city.name} ?`,
@@ -846,7 +846,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
 
                 typesContent = `Que vous soyez ${city.context.businessTypes[0].toLowerCase()} ou ${city.context.businessTypes[1].toLowerCase()} à ${city.name}, je conçois le site adapté à votre activité premium`;
 
-                whyMeContent = `Les agences web de ${city.region} facturent entre <strong>5 000€ et 20 000€</strong> pour des sites premium, parfois plus pour du sur-mesure. Mais combien génèrent réellement des clients ?<br/><br/>Je propose une approche différente : un <strong>investissement maîtrisé (sur devis)</strong> dans un site conçu pour performer sur Google. Pas de budget faramineux pour un site vitrine invisible. Chaque euro investi doit revenir multiplié.`;
+                whyMeContent = `Un site premium doit être pensé comme un actif d'acquisition, pas seulement comme une vitrine. La qualité visuelle, la performance, les contenus et l'architecture SEO doivent avancer ensemble.<br/><br/>Je propose une approche sur devis, centrée sur un site rapide, clair, mesurable et capable de soutenir votre visibilité sur Google.`;
             } else if (isTech) {
                 mainContent = `En tant que ${links.motherLink} et ${links.homeLink}, je crée des sites web pensés pour la génération de leads B2B à ${city.name}.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Votre site ne doit pas juste être "joli" — il doit convertir des visiteurs en leads qualifiés sur un cycle de vente de 6 à 12 mois. Architecture de contenu éducatif, landing pages produit optimisées, intégration CRM native.<br/><br/>Je parle le même langage que vos équipes dev. Pas de WordPress bricolé : des stacks modernes (Next.js, Headless CMS) qui scalent et se maintiennent facilement.`;
 
@@ -854,15 +854,15 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
 
                 typesContent = `Startups SaaS, ESN, éditeurs de logiciels à ${city.name} — je conçois des sites adaptés à vos enjeux B2B`;
 
-                whyMeContent = `Les agences tech facturent entre <strong>10 000€ et 50 000€</strong> des sites parfois surdimensionnés pour vos besoins réels.<br/><br/>Je propose une approche pragmatique : un site qui fait le job, évolutif, avec un <strong>budget rationnel (sur devis)</strong>. On commence lean, on itère sur les résultats. Pas de feature creep ni de dette technique.`;
+                whyMeContent = `Les sites tech doivent rester évolutifs sans créer une dette technique inutile.<br/><br/>Je propose une approche pragmatique : un site rapide, maintenable, mesurable et ajusté à vos besoins réels. On commence par les pages qui comptent, puis on itère sur les résultats.`;
             } else {
-                mainContent = `En tant que ${links.motherLink} et ${links.homeLink}, je crée des sites web qui génèrent des clients pour les entreprises de ${city.name}.<br/><br/>Vos ${city.population} clients potentiels vous cherchent sur Google. Mon approche est simple : créer un site qui apparaît quand ils recherchent "${city.name} + votre activité". Pas un site qui prend la poussière, mais un <strong>outil commercial actif 24/7</strong>.<br/><br/>Je suis d'abord SEO, ensuite développeuse. Chaque page est conçue pour ranker et convertir. C'est ça, la différence avec les agences web classiques.`;
+                mainContent = `En tant que ${links.motherLink} et ${links.homeLink}, je crée des sites web qui génèrent des clients pour les entreprises de ${city.name}.<br/><br/>Vos ${city.population} clients potentiels vous cherchent sur Google. Mon approche est simple : créer un site qui apparaît quand ils recherchent "${city.name} + votre activité". Pas un site qui prend la poussière, mais un <strong>outil commercial actif 24/7</strong>.<br/><br/>Je suis d'abord SEO, ensuite développeuse. Chaque page est conçue pour ranker et convertir. C'est ce qui évite de livrer un site joli mais difficile à trouver.`;
 
                 techContent = `Je privilégie des technologies modernes et performantes : Next.js pour la vitesse et le SEO, design responsive natif, hébergement optimisé. Pas de WordPress surchargé de plugins qui rame. Un site rapide, sécurisé, facile à gérer depuis ${city.name}.`;
 
                 typesContent = `Que vous soyez ${city.context.businessTypes[0].toLowerCase()} ou ${city.context.businessTypes[1].toLowerCase()} à ${city.name}, je conçois le site adapté à votre activité`;
 
-                whyMeContent = `Les agences de ${city.region} facturent entre <strong>2 000€ et 8 000€</strong> des sites vitrines classiques, parfois plus pour de l'e-commerce.<br/><br/>Mais combien de ces sites génèrent vraiment des clients ? Je propose un <strong>investissement sur-mesure (sur devis)</strong> avec une garantie de résultat : un site visible sur Google dans votre zone. Premier échange gratuit pour définir vos besoins.`;
+                whyMeContent = `Un site vitrine local doit surtout générer des demandes qualifiées, pas seulement présenter l'entreprise.<br/><br/>Je propose un <strong>investissement sur-mesure (sur devis)</strong> avec une architecture pensée pour Google, les utilisateurs et votre zone de chalandise. Le premier échange sert à définir le périmètre utile.`;
             }
 
             const typesBullets = isLuxury ? [
@@ -917,7 +917,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
                             `<strong>SEO intégré</strong> : pas de site invisible, votre site ranke dès sa mise en ligne`,
                             `<strong>Tarif transparent</strong> : devis détaillé, pas de mauvaise surprise`,
                             `<strong>Formation incluse</strong> : vous êtes autonome pour gérer votre site`,
-                            `<strong>Suivi 3 mois offert</strong> : je monitore vos positions sur "${city.name} + votre activité"`
+                            `<strong>Suivi initial inclus</strong> : je monitore vos positions sur "${city.name} + votre activité"`
                         ]
                     }
                 ],
@@ -930,7 +930,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
                 faq: [
                     {
                         question: `Quel budget pour un site web à ${city.name} ?`,
-                        answer: `Les agences de ${city.region} facturent entre <strong>2 000€ et 10 000€</strong> selon la complexité. Je propose un <strong>tarif sur devis</strong> adapté à vos besoins réels. Un site vitrine efficace ne nécessite pas forcément un gros budget. Premier échange gratuit pour définir votre projet.`
+                        answer: `Le budget dépend du nombre de pages, des contenus à produire, du niveau de design et des besoins techniques. Je propose un <strong>tarif sur devis</strong> adapté à vos besoins réels, avec un périmètre clair avant lancement.`
                     },
                     {
                         question: `Combien de temps pour créer un site à ${city.name} ?`,
@@ -980,7 +980,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
 
                 resultsContent = `Sur un marché premium comme ${city.name}, le SEO est un investissement à moyen terme. ${city.context.specificChallenges[0]} implique une stratégie de différenciation plutôt que de volume.`;
 
-                whyMeContent = `Les agences SEO parisiennes facturent entre <strong>2 000€ et 5 000€/mois</strong> pour des accompagnements premium, souvent sans comprendre les subtilités de votre marché local.<br/><br/>Je propose un accompagnement sur-mesure avec un <strong>investissement adapté (sur devis)</strong> à vos enjeux réels. Premier audit de positionnement gratuit.`;
+                whyMeContent = `Un accompagnement premium doit tenir compte des subtilités locales : langue, saisonnalité, réputation, pages à forte valeur et intention réelle des prospects.<br/><br/>Je propose un accompagnement sur-mesure avec un <strong>investissement adapté (sur devis)</strong> à vos enjeux réels et à la complexité de votre marché.`;
             } else if (isTech) {
                 strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je conçois des stratégies SEO adaptées aux enjeux B2B tech.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Le SEO B2B est différent du B2C : cycles de décision longs, contenus éducatifs, ciblage de personas techniques. Mon approche intègre ces spécificités pour générer des leads qualifiés, pas du trafic vide.<br/><br/>Content marketing technique, thought leadership, landing pages produit optimisées — je construis une <strong>source d'acquisition organique</strong> qui travaille pour vous 24/7.`;
 
@@ -988,7 +988,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
 
                 resultsContent = `En SEO B2B, les résultats se mesurent en leads qualifiés plus qu'en volume de trafic. Sur un marché tech comme ${city.name}, visez <strong>10-20 leads qualifiés par mois</strong> plutôt que 10 000 visiteurs qui ne convertissent pas.`;
 
-                whyMeContent = `Les agences SEO généralistes ne comprennent pas les enjeux tech. Les agences spécialisées B2B facturent entre <strong>3 000€ et 8 000€/mois</strong>.<br/><br/>Je propose un accompagnement pragmatique avec un <strong>budget rationnel (sur devis)</strong> et des KPIs qui comptent : leads générés, pas vanity metrics.`;
+                whyMeContent = `Les enjeux tech demandent un accompagnement qui comprend les cycles B2B, les pages produit, la documentation, les contenus éducatifs et les contraintes techniques.<br/><br/>Je propose un accompagnement pragmatique avec un <strong>budget rationnel (sur devis)</strong> et des KPIs utiles : leads qualifiés, demandes, progression des pages prioritaires.`;
             } else if (isVolume) {
                 strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je déploie des stratégies SEO de croissance pour les marchés concurrentiels.<br/><br/>À ${city.name}, ${city.context.localInsight.toLowerCase()}. Avec ${city.population} habitants et une concurrence très forte, le SEO se joue sur des arbitrages précis. Chaque place gagnée sur Google se traduit en parts de marché. Ma stratégie est offensive : audit compétitif, identification des angles sous-exploités chez les concurrents, contenu différenciant.<br/><br/>Pas de SEO "doucement on verra" — des <strong>actions concrètes pour gagner des positions utiles</strong>.`;
 
@@ -996,7 +996,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
 
                 resultsContent = `Sur un marché aussi concurrentiel que ${city.name}, attendez-vous à des résultats progressifs mais durables. Les premiers effets sont visibles en 2-3 mois, les résultats significatifs en 6 mois.`;
 
-                whyMeContent = `Les agences SEO de ${city.region} facturent entre <strong>1 000€ et 3 000€/mois</strong> pour des accompagnements souvent standardisés.<br/><br/>Je propose une stratégie offensive avec un <strong>investissement adapté (sur devis)</strong> à votre capacité et vos objectifs. On définit ensemble les KPIs et on mesure les résultats.`;
+                whyMeContent = `Un accompagnement SEO local doit éviter les actions standardisées qui ne tiennent pas compte de votre marché.<br/><br/>Je propose une stratégie priorisée avec un <strong>investissement adapté (sur devis)</strong> à votre capacité et vos objectifs. On définit ensemble les KPIs et on mesure les résultats.`;
             } else {
                 strategyContent = `En tant que ${links.motherLink} et ${links.homeLink}, je construis des stratégies SEO adaptées aux entreprises locales.<br/><br/>Les ${city.population} habitants de ${city.name} et des environs recherchent vos services sur Google. Ma mission : vous rendre visible quand ils tapent "${city.name} + votre métier". Une stratégie simple, efficace, centrée sur les <strong>résultats business</strong>.<br/><br/>Pas de jargon SEO inutile ni de promesses irréalistes. Un plan d'action clair pour gagner des positions utiles sur vos requêtes stratégiques.`;
 
@@ -1004,7 +1004,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
 
                 resultsContent = `Le SEO est un investissement moyen terme. Premiers effets visibles en 2-3 mois, résultats significatifs en 4-6 mois. Mais contrairement au SEA, ces résultats sont durables.`;
 
-                whyMeContent = `Les agences de ${city.region} facturent entre <strong>500€ et 2 000€/mois</strong> pour des accompagnements SEO, parfois sans résultats tangibles.<br/><br/>Je propose un accompagnement transparent <strong>sur devis</strong> avec des <strong>objectifs mesurables</strong>. On définit ensemble vos KPIs et je vous montre les résultats mois après mois.`;
+                whyMeContent = `Un accompagnement SEO local doit être lisible : objectifs, pages prioritaires, indicateurs et actions réalisées.<br/><br/>Je propose un accompagnement transparent <strong>sur devis</strong> avec des <strong>objectifs mesurables</strong>. On définit ensemble vos KPIs et on suit les résultats mois après mois.`;
             }
 
             return {
@@ -1065,7 +1065,7 @@ export const CITY_SERVICES: Record<string, CityServiceData> = {
                     },
                     {
                         question: `Quel budget SEO pour une entreprise à ${city.name} ?`,
-                        answer: `Les agences de ${city.region} facturent généralement entre <strong>500€ et 3 000€/mois</strong>. Je propose un accompagnement <strong>sur devis</strong> avec un <strong>investissement adapté</strong> à votre situation et vos objectifs. Premier échange gratuit pour définir vos besoins.`
+                        answer: `Le budget dépend de vos objectifs, de votre marché, de l'état du site et du rythme d'exécution. Je propose un accompagnement <strong>sur devis</strong>, avec un <strong>investissement adapté</strong> à votre situation et à vos priorités.`
                     },
                     {
                         question: `Le SEO fonctionne-t-il pour tous les secteurs à ${city.name} ?`,

@@ -21,7 +21,7 @@ function MarseilleCustomContent() {
                                 <Building2 className="w-6 h-6 text-sauge" />
                             </div>
                             <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink">
-                                Marseille : 870 000 habitants, jungle digitale et <span className="text-sauge">opportunités massives</span>
+                                Marseille : 870 000 habitants, marché digital très concurrentiel et <span className="text-sauge">opportunités réelles</span>
                             </h2>
                         </div>
 
@@ -158,20 +158,20 @@ function MarseilleCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence marseillaise ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Marseille ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Marseille est une <strong>jungle SEO</strong>. Des dizaines d'agences web et SEO se disputent votre budget, avec des forfaits entre <strong>1 500€ et 6 000€/mois</strong> qui incluent souvent le loyer de leurs bureaux au Vieux-Port, un junior affecté à votre dossier et une rotation d'interlocuteurs qui vous oblige à répéter vos objectifs à chaque réunion.
+                                        Marseille est un <strong>marché SEO très concurrentiel</strong>. Agences web, indépendants, plateformes et consultants se positionnent sur les mêmes requêtes. Le vrai enjeu est de prioriser les pages, les preuves locales et les actions techniques qui peuvent générer des demandes qualifiées.
                                     </p>
                                     <p>
-                                        Mon avantage est simple : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise technique pure (site Next.js, score PageSpeed 95+/100) et une spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>. Je ne vends pas une méthode packagée : je priorise des actions mesurables, adaptées à votre marché.
+                                        Mon approche est directe : une <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO</Link> qui relie technique, contenu, maillage et <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>. Je ne vends pas une méthode packagée : je priorise des actions mesurables, adaptées au marché marseillais.
                                     </p>
                                     <p>
-                                        Je connais le marché PACA dans ses nuances : la saisonnalité du tourisme marseillais, la compétition très forte en restauration autour du Vieux-Port, les cycles B2B propres au secteur maritime et les dynamiques de la French Tech Aix-Marseille. Je ne sous-traite pas, je n'applique pas de grille générique.
+                                        Je connais le marché PACA dans ses nuances : la saisonnalité du tourisme marseillais, la compétition très forte en restauration autour du Vieux-Port, les cycles B2B propres au secteur maritime et les dynamiques de la French Tech Aix-Marseille. Le cadrage reste personnalisé.
                                     </p>
                                 </div>
                             </div>
@@ -180,14 +180,14 @@ function MarseilleCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500€)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Stratégie personnalisée au marché marseillais",
                                         "Connaissance terrain de l'écosystème PACA",
                                         "Reporting mensuel clair avec KPIs business",
                                         "Accompagnement GEO (visibilité ChatGPT, Perplexity)",
-                                        "Tarifs 30-50% inférieurs aux agences locales",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Périmètre clair, sans couche agence inutile",
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />

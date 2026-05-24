@@ -33,7 +33,7 @@ function SophiaAntipolisCustomContent() {
                             <div className="bg-gradient-to-r from-sauge/5 to-transparent border-l-4 border-sauge p-6 my-6 rounded-r-xl">
                                 <h4 className="font-bold text-ink text-lg mb-2">Pourquoi Sophia demande un SEO B2B tech pur</h4>
                                 <p className="text-sm mb-0">
-                                    Sophia-Antipolis est unique : il n'existe pas de "centre-ville" à référencer. Pas de SEO local classique ici — uniquement du <strong>SEO B2B pur</strong>. Les agences généralistes ne comprennent ni les cycles de vente longs (6–18 mois), ni le vocabulaire technique exigé par des prospects DSI ou CTO. Mon expertise couvre les contenus techniques B2B, le SEO SaaS, et la génération de leads en longue traîne sur des niches pointues.
+                                    Sophia-Antipolis est unique : il n'existe pas de "centre-ville" à référencer. Le sujet est surtout le <strong>SEO B2B tech</strong> : cycles de vente longs, vocabulaire précis, décideurs DSI ou CTO, contenus de preuve et requêtes longue traîne sur des niches pointues.
                                 </p>
                             </div>
 
@@ -140,20 +140,20 @@ function SophiaAntipolisCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence généraliste ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Sophia-Antipolis ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Les agences généralistes ne comprennent pas les spécificités de Sophia. Elles appliquent des grilles SEO conçues pour des commerces locaux à des entreprises B2B tech aux cycles de vente de 12 mois. Le résultat : des contenus trop superficiels qui ne capturent jamais les décideurs techniques.
+                                        Les entreprises de Sophia ne peuvent pas être traitées comme des commerces locaux classiques. Les cycles B2B tech demandent des contenus plus profonds, des pages produit lisibles et une vraie compréhension des décideurs techniques.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une compréhension fine des marchés SaaS et tech. Je produis des contenus qui parlent à des DSI et des CTO, pas à des consommateurs. J'optimise aussi la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> — de plus en plus décisive quand vos prospects s'informent via ChatGPT ou Perplexity.
+                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO</Link> avec une compréhension fine des marchés SaaS et tech. Je produis des contenus qui parlent à des DSI et des CTO, pas à des consommateurs. J'optimise aussi la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> — de plus en plus décisive quand vos prospects s'informent via ChatGPT ou Perplexity.
                                     </p>
                                     <p>
-                                        Je ne sous-traite pas, je n'applique pas de template générique, et je vous accompagne personnellement du diagnostic à la croissance organique.
+                                        Le cadrage reste personnalisé, avec une lecture directe de votre marché du diagnostic à la croissance organique.
                                     </p>
                                 </div>
                             </div>
@@ -162,14 +162,14 @@ function SophiaAntipolisCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Contenus techniques B2B validés par des experts",
                                         "SEO SaaS : pages features, comparatifs, cas clients",
                                         "Stratégie de lead generation longue traîne",
                                         "Accompagnement GEO (visibilité ChatGPT, Perplexity)",
-                                        "Tarifs 30-50 % inférieurs aux agences",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Périmètre clair, sans couche agence inutile",
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />

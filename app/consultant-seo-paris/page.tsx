@@ -31,9 +31,9 @@ function ParisCustomContent() {
                             </p>
 
                             <div className="bg-gradient-to-r from-sauge/5 to-transparent border-l-4 border-sauge p-6 my-6 rounded-r-xl">
-                                <h4 className="font-bold text-ink text-lg mb-2">La stratégie gagnante à Paris : le SEO par arrondissement</h4>
+                                <h4 className="font-bold text-ink text-lg mb-2">La stratégie adaptée à Paris : le SEO par arrondissement</h4>
                                 <p className="text-sm mb-0">
-                                    Les agences parisiennes font du SEO générique sur "avocat Paris" ou "restaurant Paris". Ces requêtes sont inaccessibles pour 99% des PME. La vraie stratégie : <strong>cibler par arrondissement et par micro-niche</strong>. "Avocat droit social 11ème", "restaurant gastronomique Marais", "coach sportif Montparnasse" — ces requêtes sont rentables et atteignables. Je construis cette architecture dès le départ.
+                                    Les requêtes génériques comme "avocat Paris" ou "restaurant Paris" sont souvent trop larges pour une PME. La vraie stratégie consiste à <strong>cibler par arrondissement et par micro-niche</strong>. "Avocat droit social 11ème", "restaurant gastronomique Marais", "coach sportif Montparnasse" : ces requêtes sont plus précises, plus exploitables et plus proches d’une demande réelle.
                                 </p>
                             </div>
 
@@ -164,20 +164,20 @@ function ParisCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence parisienne ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Paris ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Paris est le marché le plus dur de France. Les agences facturent entre <strong>3 000€ et 15 000€/mois</strong> avec souvent des juniors qui gèrent votre dossier et une rotation d'interlocuteurs. Leur loyer parisien, leurs charges et leur structure gonflent les tarifs sans améliorer les résultats.
+                                        Paris est l’un des marchés SEO les plus concurrentiels de France. Le vrai enjeu n’est pas de viser toutes les requêtes parisiennes, mais d’identifier les arrondissements, services et micro-intentions qui peuvent générer des demandes qualifiées.
                                     </p>
                                     <p>
-                                        Mon avantage est structurel : pas de loyer parisien, pas de surcharge administrative, <strong>expertise technique pure</strong>. Je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une maîtrise avancée du SEO technique et de la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> pour ChatGPT, Perplexity et les moteurs génératifs.
+                                        Mon approche est plus directe : cadrage clair, <strong>expertise technique solide</strong> et priorisation par impact. Je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO</Link>, avec une maîtrise du SEO technique et de la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> pour ChatGPT, Perplexity et les moteurs génératifs.
                                     </p>
                                     <p>
-                                        Je ne promets pas la 1ère place sur "avocat Paris" — je trouve les niches rentables par arrondissement et micro-segment qui génèrent de vrais clients, pas du trafic vanity.
+                                        Je ne promets pas une position magique sur "avocat Paris". Je cherche les niches rentables par arrondissement et micro-segment, celles qui génèrent de vrais clients plutôt que du trafic vanity.
                                     </p>
                                 </div>
                             </div>
@@ -186,14 +186,14 @@ function ParisCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500€)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Stratégie par arrondissement et micro-niche",
                                         "Reporting mensuel clair avec KPIs business",
                                         "Expertise SEO multilingue (tourisme international)",
                                         "Accompagnement GEO (visibilité ChatGPT, Perplexity)",
-                                        "Tarifs 30-50% inférieurs aux agences parisiennes",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Périmètre clair, sans couche agence inutile",
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />
@@ -278,7 +278,7 @@ function ParisCustomContent() {
                                     <tr>
                                         <td className="py-3 px-4">Professions libérales</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">Visibilité dominante arrondissement</td>
+                                        <td className="py-3 px-4">Visibilité renforcée par arrondissement</td>
                                     </tr>
                                 </tbody>
                             </table>

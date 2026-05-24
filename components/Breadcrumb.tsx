@@ -14,8 +14,8 @@ interface BreadcrumbProps {
  * Composant Breadcrumb réutilisable avec Schema JSON-LD
  *
  * Exemples d'utilisation:
- * - /consultant-seo → [{ label: "Consultante SEO Freelance", href: "/consultant-seo" }]
- * - /consultant-seo-nice → [{ label: "SEO Local", href: "/seo-local" }, { label: "Consultante SEO Nice", href: "/consultant-seo-nice" }]
+ * - /consultant-seo → [{ label: "Consultante SEO", href: "/consultant-seo" }]
+ * - /consultant-seo-nice → [{ label: "SEO local", href: "/seo-local" }, { label: "Consultante SEO Nice", href: "/consultant-seo-nice" }]
  * - /blog/mon-article → [{ label: "Blog", href: "/blog" }, { label: "Titre article", href: "/blog/mon-article" }]
  */
 export function Breadcrumb({ items }: BreadcrumbProps) {
@@ -106,7 +106,7 @@ export function getServiceBreadcrumb(title: string, href: string): BreadcrumbIte
  */
 export function getCityBreadcrumb(cityName: string, citySlug: string): BreadcrumbItem[] {
     return [
-        { label: "SEO Local", href: "/seo-local" },
+        { label: "SEO local", href: "/seo-local" },
         { label: `Consultante SEO ${cityName}`, href: `/${citySlug}` }
     ];
 }
@@ -121,7 +121,7 @@ export function getCityServiceBreadcrumb(
     serviceSlug: string
 ): BreadcrumbItem[] {
     return [
-        { label: "SEO Local", href: "/seo-local" },
+        { label: "SEO local", href: "/seo-local" },
         { label: `Consultante SEO ${cityName}`, href: `/${citySlug}` },
         { label: serviceTitle, href: `/${citySlug}/${serviceSlug}` }
     ];

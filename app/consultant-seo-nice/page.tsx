@@ -158,20 +158,20 @@ function NiceCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence niçoise ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Nice ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Nice compte des dizaines d'agences SEO et web. Elles facturent entre <strong>2 000€ et 7 000€/mois</strong>, souvent avec un junior affecté à votre dossier et un turn-over d'interlocuteurs qui vous oblige à répéter vos objectifs à chaque réunion.
+                                        Nice est un marché local exigeant : tourisme international, santé, immobilier, restauration, B2B azuréen. Le vrai sujet n’est pas de multiplier les actions SEO, mais de distinguer les intentions qui peuvent réellement générer des demandes qualifiées.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise technique poussée (site Next.js, score PageSpeed 95+/100) et une spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> qui positionne vos contenus sur ChatGPT et Perplexity.
+                                        Mon approche relie <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">accompagnement SEO</Link>, technique, contenus locaux et <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>. L’objectif : rendre les pages plus lisibles par Google, par les utilisateurs et par les moteurs génératifs.
                                     </p>
                                     <p>
-                                        Je connais l'écosystème azuréen dans ses nuances : la saisonnalité touristique estivale, le multilinguisme indispensable sur la Côte, les cycles de décision courts en hôtellerie et les dynamiques B2B propres à la French Tech niçoise. Je ne sous-traite pas, je n'applique pas de grille générique.
+                                        Je connais l'écosystème azuréen dans ses nuances : la saisonnalité touristique estivale, le multilinguisme indispensable sur la Côte, les cycles de décision courts en hôtellerie et les dynamiques B2B propres à la French Tech niçoise. Le cadrage reste personnalisé.
                                     </p>
                                 </div>
                             </div>
@@ -180,14 +180,14 @@ function NiceCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500€)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Stratégie personnalisée au marché niçois",
                                         "Expertise multilingue FR/EN/IT pour les marchés touristiques",
                                         "Reporting mensuel clair avec KPIs business",
                                         "Accompagnement GEO (visibilité ChatGPT, Perplexity)",
-                                        "Tarifs 30-50% inférieurs aux agences locales",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Périmètre clair, sans couche agence inutile",
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />
@@ -272,7 +272,7 @@ function NiceCustomContent() {
                                     <tr>
                                         <td className="py-3 px-4">Cabinet médical Cimiez</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">Top 3 local + prise de RDV en ligne</td>
+                                        <td className="py-3 px-4">Présence locale renforcée + prise de RDV en ligne</td>
                                     </tr>
                                 </tbody>
                             </table>

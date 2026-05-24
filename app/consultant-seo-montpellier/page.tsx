@@ -152,20 +152,20 @@ function MontpellierCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence montpelliéraine ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Montpellier ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Montpellier compte de nombreuses agences web, souvent généralistes. Elles facturent entre <strong>1 500€ et 5 000€/mois</strong> avec fréquemment un junior affecté à votre dossier et des interlocuteurs qui changent. Résultat : une stratégie copiée-collée qui ignore la dualité montpelliéraine — ville étudiante et pôle médical de rang mondial d'un côté, destination balnéaire de l'autre.
+                                        Montpellier demande une stratégie qui tient compte de sa double logique : ville étudiante et pôle médical d’un côté, destination littorale et services locaux de l’autre. Le risque est de traiter toutes ces intentions avec le même contenu.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise en <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link> et en contenu médical YMYL. Je sais qu'un cabinet médical sur le quartier des hôpitaux n'a pas les mêmes enjeux qu'une startup AgriTech ou qu'un restaurant de l'Écusson.
+                                        Mon approche relie <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link>, contenu médical YMYL et priorisation business. Un cabinet médical près des hôpitaux n'a pas les mêmes enjeux qu'une startup AgriTech ou qu'un restaurant de l'Écusson.
                                     </p>
                                     <p>
-                                        Je ne sous-traite pas, je n'applique pas de grille générique, et je vous accompagne personnellement — avec une lecture précise des spécificités montpelliéraines et de sa croissance accélérée.
+                                        Le cadrage reste personnalisé, avec une lecture directe de votre marché — avec une lecture précise des spécificités montpelliéraines et de sa croissance accélérée.
                                     </p>
                                 </div>
                             </div>
@@ -174,14 +174,14 @@ function MontpellierCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500€)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Stratégie personnalisée à votre marché montpelliérain",
                                         "Expertise contenu médical & YMYL (santé, droit)",
                                         "Reporting mensuel clair avec KPIs business",
                                         "Expertise Core Web Vitals et SEO technique",
-                                        "Tarifs 30-50% inférieurs aux agences",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Périmètre clair, sans couche agence inutile",
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />

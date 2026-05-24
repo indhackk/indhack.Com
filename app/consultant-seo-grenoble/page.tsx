@@ -158,20 +158,20 @@ function GrenobleCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence à Grenoble ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Grenoble ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Les <strong>agences SEO classiques à Grenoble</strong> facturent entre 1 500€ et 5 000€/mois pour des prestations standardisées. Elles appliquent les mêmes grilles d'audit à un restaurant du centre-ville et à une startup de Minatec — deux business aux besoins radicalement différents.
+                                        À Grenoble, un restaurant du centre-ville, une startup de Minatec et un acteur industriel n'ont pas les mêmes intentions de recherche. La stratégie doit distinguer acquisition locale, contenus techniques et demandes B2B à cycle long.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link>, spécialisée dans la <strong>performance web</strong> (mon site tourne sur Next.js avec un score PageSpeed de 95+/100) et la <strong>visibilité IA</strong> (<Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">GEO - Generative Engine Optimization</Link>).
+                                        Mon approche associe <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">accompagnement SEO</Link>, <strong>performance web</strong> et <strong>visibilité IA</strong> (<Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">GEO - Generative Engine Optimization</Link>). Le but est de rendre les pages utiles, rapides, extractibles et reliées aux bonnes intentions.
                                     </p>
                                     <p>
-                                        Je ne sous-traite pas, je ne facture pas de frais d'agence, et je connais personnellement l'écosystème <strong>Auvergne-Rhône-Alpes</strong>. Résultat : des tarifs 30 à 50% inférieurs aux agences pour une expertise plus pointue.
+                                        Je construis le cadrage autour de l’écosystème <strong>Auvergne-Rhône-Alpes</strong> : industries, recherche, restauration locale, services B2B. Le résultat attendu doit se lire dans les impressions utiles, les demandes qualifiées et la progression des pages prioritaires.
                                     </p>
                                 </div>
                             </div>
@@ -180,14 +180,14 @@ function GrenobleCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Stratégie deeptech adaptée à Giant, Minatec et CEA Grenoble",
                                         "SEO B2B pour startups hardware, medtech et cleantech iséroises",
                                         "Expertise SEO montagne et tourisme hivernal (stations, résidences)",
                                         "SEO local pour les commerces et professions libérales du centre",
                                         "Contenu technique pour cycles de décision longs en R&D et innovation",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />

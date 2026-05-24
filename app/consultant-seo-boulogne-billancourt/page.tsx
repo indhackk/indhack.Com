@@ -33,7 +33,7 @@ function BoulogneBillancourtCustomContent() {
                             <div className="bg-gradient-to-r from-sauge/5 to-transparent border-l-4 border-sauge p-6 my-6 rounded-r-xl">
                                 <h4 className="font-bold text-ink text-lg mb-2">Pourquoi Boulogne a besoin d'une consultante SEO spécialisée médias</h4>
                                 <p className="text-sm mb-0">
-                                    "Production vidéo Boulogne" est une requête ultra-qualifiée : celui qui la tape a un budget, un projet concret et cherche un prestataire local de confiance. Les agences parisiennes ne comprennent pas ce <strong>micro-marché B2B audiovisuel</strong>. Mon expertise : SEO B2B médias, content marketing audiovisuel, positionnement sur des requêtes à fort taux de conversion.
+                                    "Production vidéo Boulogne" est une requête très qualifiée : celui qui la tape a souvent un projet concret et cherche un prestataire local de confiance. L'enjeu consiste à structurer un <strong>micro-marché B2B audiovisuel</strong> avec des pages, des preuves et un contenu éditorial capable de convertir.
                                 </p>
                             </div>
 
@@ -135,25 +135,25 @@ function BoulogneBillancourtCustomContent() {
                 </div>
             </section>
 
-            {/* Section Pourquoi indépendante vs agence */}
+            {/* Section approche */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> pour votre activité à Boulogne ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Boulogne ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Boulogne-Billancourt est un marché B2B médias très spécifique. Les agences parisiennes ne comprennent pas ce micro-marché : elles appliquent des stratégies génériques sur des requêtes trop larges. "Production vidéo Boulogne" est ultra-qualifié — c'est exactement le type de requête que je cible en priorité, parce qu'elle convertit.
+                                        Boulogne-Billancourt est un marché B2B médias très spécifique. Les requêtes larges sont vite diluées ; les requêtes plus précises comme "production vidéo Boulogne" ou "agence communication Boulogne" ont souvent une intention beaucoup plus exploitable.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> spécialisée en SEO B2B et content marketing pour les secteurs créatifs et médias. Je maîtrise également la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> — crucial pour les agences de communication qui veulent être citées par ChatGPT ou Perplexity dans leur domaine.
+                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO</Link> spécialisée en SEO B2B et content marketing pour les secteurs créatifs et médias. Je maîtrise également la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> — crucial pour les agences de communication qui veulent être citées par ChatGPT ou Perplexity dans leur domaine.
                                     </p>
                                     <p>
-                                        Je ne sous-traite pas, je n'applique pas de grille générique, et je vous accompagne personnellement du diagnostic à la croissance organique.
+                                        Le cadrage reste personnalisé, avec une lecture directe de votre marché du diagnostic à la croissance organique.
                                     </p>
                                 </div>
                             </div>
@@ -162,14 +162,14 @@ function BoulogneBillancourtCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Stratégie SEO médias et production audiovisuelle (TF1, Canal+, M6)",
                                         "Expertise agences de communication et prestataires créatifs du 92",
                                         "SEO B2B pour les sièges sociaux de l'île Seguin et du Trapèze",
-                                        "Proximité Paris sans les tarifs parisiens (30 à 50 % moins cher)",
+                                        "Proximité Paris avec un cadrage SEO adapté aux PME locales",
                                         "Accompagnement GEO pour les sociétés de production et post-prod",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />

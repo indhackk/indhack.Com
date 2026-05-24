@@ -9,13 +9,13 @@ import { ArrowLeft, Home, Sparkles } from "lucide-react";
 // Mots-clés cibles homepage : consultant SEO, experte SEO, SEO Nice, référencement
 // Ancres = variations sémantiques (pas exact match, mais liées au champ lexical)
 const ANCHOR_VARIATIONS = [
-    { text: "Votre experte SEO indépendante", icon: <Sparkles className="w-4 h-4" /> },
-    { text: "Consultante SEO indépendante", icon: <Home className="w-4 h-4" /> },
-    { text: "Spécialiste SEO & acquisition", icon: <Sparkles className="w-4 h-4" /> },
+    { text: "Votre consultante SEO", icon: <Sparkles className="w-4 h-4" /> },
+    { text: "Indiana Aflalo, consultante SEO", icon: <Home className="w-4 h-4" /> },
+    { text: "Spécialiste SEO et acquisition", icon: <Sparkles className="w-4 h-4" /> },
     { text: "Experte en référencement Google", icon: <Sparkles className="w-4 h-4" /> },
     { text: "Accompagnement SEO personnalisé", icon: <Home className="w-4 h-4" /> },
     { text: "Votre consultante SEO dédiée", icon: <Sparkles className="w-4 h-4" /> },
-    { text: "Expert SEO Côte d'Azur", icon: <Home className="w-4 h-4" /> },
+    { text: "Expertise SEO Côte d'Azur", icon: <Home className="w-4 h-4" /> },
     { text: "Stratégie SEO sur-mesure", icon: <Sparkles className="w-4 h-4" /> },
 ];
 
@@ -72,7 +72,7 @@ export function HomepageBacklink({ variant = "default", className = "", forceInd
                     <span className="text-sm font-bold text-ink">IndHack</span>
                 </div>
                 <p className="text-soft text-sm leading-relaxed mb-4">
-                    Revenir à la page mère pour situer l'accompagnement SEO, le contenu et la visibilité IA dans une stratégie complète.
+                    Revenir à IndHack pour situer l'accompagnement SEO, le contenu et la visibilité IA dans une stratégie complète.
                 </p>
                 <Link
                     href="/"

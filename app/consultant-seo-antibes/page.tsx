@@ -158,20 +158,20 @@ function AntibesCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence locale ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Antibes ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Les agences SEO de la Côte d'Azur facturent entre <strong>1 500 € et 6 000 €/mois</strong>. Souvent, un junior hérite de votre dossier et change tous les six mois. Vous finissez par répéter vos objectifs à chaque nouvelle tête — sans jamais voir vos positions progresser vraiment.
+                                        Antibes demande une lecture fine : yachting à Port Vauban, commerces du Vieil Antibes, tourisme saisonnier et services locaux. Le vrai sujet n’est pas la taille du prestataire, mais la capacité à lire votre marché, prioriser les actions et garder une continuité d’exécution.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise technique solide et une spécialisation en <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link> adaptée aux marchés saisonniers de la Riviera. Je connais la dualité antiboise : les besoins du yachting ne ressemblent en rien à ceux d'un artisan du Safranier.
+                                        Mon approche relie expertise technique et <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link> adapté aux marchés saisonniers de la Riviera. La dualité antiboise est centrale : les besoins du yachting ne ressemblent pas à ceux d'un artisan du Safranier.
                                     </p>
                                     <p>
-                                        Je ne sous-traite pas, je n'applique pas de grille générique, et je vous accompagne personnellement du diagnostic à la croissance. Mon site tourne sur Next.js avec un score PageSpeed de 95+/100 — preuve que je maîtrise la technique autant que la stratégie.
+                                        Le cadrage reste personnalisé, avec une lecture directe de votre marché du diagnostic à la croissance. Mon site tourne sur Next.js avec un score PageSpeed de 95+/100 — preuve que je maîtrise la technique autant que la stratégie.
                                     </p>
                                 </div>
                             </div>
@@ -180,14 +180,14 @@ function AntibesCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Stratégie adaptée au double marché d'Antibes",
                                         "SEO bilingue si besoin (yachting en anglais)",
                                         "Reporting mensuel clair avec KPIs business",
                                         "Expertise Core Web Vitals et SEO technique",
-                                        "Tarifs 30-50 % inférieurs aux agences",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Périmètre clair, sans couche agence inutile",
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />

@@ -158,20 +158,20 @@ function ToulouseCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence toulousaine ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Toulouse ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Toulouse présente un double marché unique : le <strong>B2B aéronautique</strong>, avec ses cycles de décision longs, ses RFP complexes et son contenu ultra-technique, et le <strong>B2C local</strong>, avec ses restaurants étudiants, ses bars de Saint-Cyprien et ses commerces du Capitole. Les agences généralistes ne comprennent ni l'un ni l'autre.
+                                        Toulouse présente un double marché : le <strong>B2B aéronautique</strong>, avec ses cycles de décision longs, ses RFP complexes et son contenu technique, et le <strong>B2C local</strong>, avec ses restaurants étudiants, ses bars de Saint-Cyprien et ses commerces du Capitole.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise en SEO B2B industriel et en <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link>. Je produis du contenu qui parle aux acheteurs d'Airbus autant qu'aux Toulousains qui cherchent où dîner ce soir.
+                                        Mon approche relie SEO B2B industriel et <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link>. Les contenus doivent parler aux acheteurs aéronautiques autant qu’aux Toulousains qui cherchent un service, un restaurant ou un commerce dans leur quartier.
                                     </p>
                                     <p>
-                                        Je ne sous-traite pas, je n'applique pas de grille générique, et je vous accompagne personnellement du diagnostic à la croissance — avec une connaissance fine des spécificités de l'écosystème toulousain.
+                                        Le cadrage reste personnalisé, avec une lecture directe de votre marché du diagnostic à la croissance — avec une connaissance fine des spécificités de l'écosystème toulousain.
                                     </p>
                                 </div>
                             </div>
@@ -180,14 +180,14 @@ function ToulouseCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Stratégie SEO B2B adaptée aux sous-traitants aéronautiques et ESN",
                                         "Contenu technique pour cycles de décision longs (Airbus, Thales, Safran)",
                                         "SEO local pour les commerces du Capitole et de la Ville Rose",
                                         "Expertise SEO campus et recrutement (130 000 étudiants à capter)",
                                         "Accompagnement GEO pour être cité par ChatGPT sur les requêtes aéro",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />

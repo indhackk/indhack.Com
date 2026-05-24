@@ -152,20 +152,20 @@ function AixCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence aixoise ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Aix-en-Provence ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Aix-en-Provence compte plusieurs agences web et SEO, souvent positionnées sur le marché premium de la ville. Leurs tarifs, entre <strong>1 500€ et 5 000€/mois</strong>, reflètent leur localisation en centre-ville autant que leur expertise réelle. Le résultat : vous payez leur loyer cours Mirabeau autant que votre stratégie digitale.
+                                        Aix-en-Provence combine un centre premium, un bassin étudiant, des professions libérales et un pôle B2B aux Milles. Le plus important est de vérifier ce qui est réellement priorisé : audit, contenus, technique, maillage local et suivi des demandes.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise technique poussée (site Next.js, score PageSpeed 95+/100) et une spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> qui positionne vos contenus sur ChatGPT et Perplexity.
+                                        Mon approche relie <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">stratégie SEO</Link>, technique, contenus locaux et <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>. L’objectif est de rendre vos pages plus compréhensibles pour Google, les utilisateurs et les moteurs génératifs.
                                     </p>
                                     <p>
-                                        Je connais l'écosystème aixois dans ses nuances : la clientèle premium du centre historique, les dynamiques B2B du pôle des Milles, la concurrence intense en restauration gastronomique et les spécificités SEO des professions libérales du quartier Mazarin. Je ne sous-traite pas, je n'applique pas de grille générique.
+                                        Je connais l'écosystème aixois dans ses nuances : la clientèle premium du centre historique, les dynamiques B2B du pôle des Milles, la concurrence intense en restauration gastronomique et les spécificités SEO des professions libérales du quartier Mazarin. Le cadrage reste personnalisé.
                                     </p>
                                 </div>
                             </div>
@@ -174,14 +174,14 @@ function AixCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500€)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Stratégie personnalisée au marché aixois",
                                         "Expertise des marchés B2B tech (Les Milles) et premium (centre)",
                                         "Reporting mensuel clair avec KPIs business",
                                         "Accompagnement GEO (visibilité ChatGPT, Perplexity)",
-                                        "Tarifs 30-50% inférieurs aux agences locales",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Périmètre clair, sans couche agence inutile",
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />
@@ -266,7 +266,7 @@ function AixCustomContent() {
                                     <tr>
                                         <td className="py-3 px-4">Praticien santé</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">Top 3 local + prise de RDV en ligne</td>
+                                        <td className="py-3 px-4">Présence locale renforcée + prise de RDV en ligne</td>
                                     </tr>
                                 </tbody>
                             </table>

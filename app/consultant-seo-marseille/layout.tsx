@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Consultant SEO Marseille (13000) - IndHack",
-    description: "Consultante SEO à Marseille. Référencement local pour PME et entrepreneurs des Bouches-du-Rhône. Audit SEO gratuit.",
+    description: "Consultante SEO à Marseille. Référencement local pour PME et entrepreneurs des Bouches-du-Rhône. Diagnostic SEO local.",
     keywords: ["consultant SEO Marseille", "référencement Marseille", "SEO Bouches-du-Rhône", "audit SEO Marseille", "experte SEO 13", "agence SEO Marseille", "référencement naturel Marseille"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo-marseille"

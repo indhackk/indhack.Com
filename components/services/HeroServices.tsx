@@ -26,7 +26,7 @@ export function HeroServices({ title, subtitle, category, image, imageAlt, densi
 
     return (
         <section className={`relative bg-ink overflow-hidden flex items-center ${isCompact
-            ? "pt-28 pb-14 md:pt-[7.5rem] md:pb-16 min-h-[560px] lg:min-h-[620px]"
+            ? "pt-24 pb-10 md:pt-[7.5rem] md:pb-16 md:min-h-[560px] lg:min-h-[620px]"
             : "pt-40 pb-24 min-h-[80vh]"
             }`}>
             {/* Background Decor */}
@@ -36,7 +36,7 @@ export function HeroServices({ title, subtitle, category, image, imageAlt, densi
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
-                <div className={`grid lg:grid-cols-2 items-center min-w-0 ${isCompact ? "gap-10 lg:gap-12" : "gap-16"}`}>
+                <div className={`grid lg:grid-cols-2 items-center min-w-0 ${isCompact ? "gap-8 lg:gap-12" : "gap-16"}`}>
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -49,14 +49,14 @@ export function HeroServices({ title, subtitle, category, image, imageAlt, densi
                         </div>
 
                         <h1 className={`font-heading font-black text-white leading-[1.05] tracking-tight ${isCompact
-                            ? "text-4xl md:text-5xl lg:text-[3.35rem] mb-6"
+                            ? "text-[2.35rem] sm:text-5xl lg:text-[3.35rem] mb-5"
                             : "text-4xl md:text-5xl lg:text-6xl mb-8"
                             }`}>
                             {title}
                         </h1>
 
                         <p className={`text-soft-light leading-relaxed break-words ${isCompact
-                            ? "text-lg lg:text-xl max-w-2xl mb-8"
+                            ? "text-base sm:text-lg lg:text-xl max-w-2xl mb-7"
                             : "text-xl lg:text-2xl max-w-xl mb-12"
                             }`}>
                             {subtitle}
@@ -84,7 +84,7 @@ export function HeroServices({ title, subtitle, category, image, imageAlt, densi
                             customVisual
                         ) : (
                             <div className={`relative max-w-full overflow-hidden shadow-2xl border border-white/10 group ${isCompact
-                                ? "rounded-[1.5rem] md:rounded-[2rem] lg:max-w-[560px] lg:ml-auto"
+                                ? "rounded-[1.35rem] md:rounded-[2rem] max-h-[235px] md:max-h-none lg:max-w-[560px] lg:ml-auto"
                                 : "rounded-[2rem] md:rounded-[3rem]"
                                 }`}>
                                 <Image
@@ -95,7 +95,7 @@ export function HeroServices({ title, subtitle, category, image, imageAlt, densi
                                     unoptimized={preserveImageMetadata}
                                     priority
                                     fetchPriority="high"
-                                    className={`w-full object-cover transition-all duration-1000 ${isCompact ? "aspect-[16/10]" : "h-auto"}`}
+                                    className={`w-full object-cover transition-all duration-1000 ${isCompact ? "aspect-[16/9] md:aspect-[16/10]" : "h-auto"}`}
                                 />
                                 <div className="absolute inset-0 bg-ink/10 group-hover:bg-transparent transition-colors duration-700" />
                             </div>

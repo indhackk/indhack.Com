@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "Consultant SEO Paris (75000) - IndHack",
-        description: "Experte SEO à Paris. Stratégie chirurgicale pour émerger dans la capitale. Tous secteurs, tous arrondissements.",
+        description: "Experte SEO à Paris. Stratégie SEO par arrondissement pour développer des demandes qualifiées dans la capitale.",
         url: "https://indhack.com/consultant-seo-paris",
         type: "website",
         locale: "fr_FR",
