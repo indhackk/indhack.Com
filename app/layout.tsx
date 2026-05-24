@@ -105,13 +105,6 @@ const organizationSchema = {
         "https://github.com/indhackk",
         "https://www.data.gouv.fr/organizations/indhack"
     ],
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "ratingCount": "47",
-        "reviewCount": "47"
-    },
     "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+33661139748",
@@ -202,12 +195,6 @@ const localBusinessSchema = {
         "Core Web Vitals",
         "AI Search Optimization"
     ],
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "ratingCount": "47"
-    },
     "founder": {
         "@type": "Person",
         "@id": "https://indhack.com/#indiana-aflalo",
