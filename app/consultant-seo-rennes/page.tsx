@@ -152,20 +152,20 @@ function RennesCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence rennaise ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Rennes ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Rennes est un écosystème soudé où les recommandations comptent autant que le SEO. Les agences locales facturent entre <strong>1 500€ et 5 000€/mois</strong> avec souvent un interlocuteur junior et une approche générique qui ne comprend pas les nuances du marché breton.
+                                        Rennes est un écosystème soudé où les recommandations comptent autant que le SEO. Le sujet critique reste la compréhension des nuances du marché breton, la continuité d’exécution et la capacité à relier visibilité locale et demandes qualifiées.
                                     </p>
                                     <p>
-                                        Mon avantage concret : j'ai une <strong>expertise tech poussée</strong> et je parle le même langage que les ESN et startups cyber de Cesson-Sévigné. Je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> spécialisée en SEO technique et en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>.
+                                        Mon approche repose sur une <strong>expertise tech solide</strong> et une compréhension des ESN, startups cyber et acteurs B2B de Cesson-Sévigné. Je relie SEO technique, contenus locaux et <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>.
                                     </p>
                                     <p>
-                                        Je sais qu'une ESN de Cesson-Sévigné qui recrute des développeurs n'a pas les mêmes besoins qu'un restaurant du centre ou qu'une startup du pôle cyber. Je ne sous-traite pas, je ne déroule pas de template générique, et je vous accompagne personnellement du diagnostic à la croissance.
+                                        Je sais qu'une ESN de Cesson-Sévigné qui recrute des développeurs n'a pas les mêmes besoins qu'un restaurant du centre ou qu'une startup du pôle cyber. Le cadrage reste personnalisé, avec une lecture directe de votre marché du diagnostic à la croissance.
                                     </p>
                                 </div>
                             </div>
@@ -174,14 +174,14 @@ function RennesCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Stratégie SEO cybersécurité et ESN (pôle cyber #1 de France)",
                                         "Contenu B2B technique pour Orange, Sopra Steria et éditeurs bretons",
                                         "SEO local agroalimentaire (Lactalis, groupes coopératifs)",
                                         "Expertise campus et recrutement tech (70 000 étudiants)",
                                         "SEO pour les commerces de la rue Le Bastard et du centre",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />

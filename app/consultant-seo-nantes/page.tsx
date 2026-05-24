@@ -152,17 +152,17 @@ function NantesCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> dans un milieu digital très actif comme Nantes ?
+                            Pourquoi choisir une <span className="text-sauge">consultante SEO</span> dans un milieu digital très actif comme Nantes ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Nantes compte une densité remarquable d'agences digitales, d'indépendants et de studios créatifs. Ce dynamisme est une force pour l'écosystème — mais il rend la concurrence SEO particulièrement intense. Les agences nantaises facturent entre <strong>1 500€ et 5 000€/mois</strong>, souvent avec des offres packagées qui ne tiennent pas compte de vos spécificités.
+                                        Nantes compte une densité remarquable d'agences digitales, d'indépendants et de studios créatifs. Ce dynamisme est une force pour l'écosystème, mais il rend la concurrence SEO intense sur les requêtes B2B, e-commerce et services locaux.
                                     </p>
                                     <p>
-                                        En tant que <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link>, je travaille différemment : expertise technique poussée, suivi personnalisé et spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> — un enjeu clé pour les entreprises nantaises qui veulent exister dans les réponses de ChatGPT et Perplexity.
+                                        Mon approche associe expertise technique, suivi personnalisé et <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>, un enjeu clé pour les entreprises nantaises qui veulent aussi exister dans les réponses de ChatGPT et Perplexity.
                                     </p>
                                     <p>
                                         Je comprends les nuances du marché nantais : une agence créative de l'Île de Nantes n'a pas les mêmes besoins SEO qu'un commerce de Bouffay ou qu'une PME industrielle de Saint-Herblain. Je construis une stratégie sur mesure, pas un template.
@@ -174,14 +174,14 @@ function NantesCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Stratégie créative adaptée à l'écosystème nantais (Web2Day, startups)",
                                         "SEO tourisme et événementiel (Machines de l'île, Voyage à Nantes)",
                                         "Expertise agences digitales et ESN de l'île de Nantes",
                                         "SEO local pour les commerces du Passage Pommeraye et Bouffay",
                                         "Accompagnement GEO pour les acteurs de la French Tech Nantes",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />

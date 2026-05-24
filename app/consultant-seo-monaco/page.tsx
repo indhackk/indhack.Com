@@ -33,7 +33,7 @@ function MonacoCustomContent() {
                             <div className="bg-gradient-to-r from-sauge/5 to-transparent border-l-4 border-sauge p-6 my-6 rounded-r-xl">
                                 <h4 className="font-bold text-ink text-lg mb-2">Pourquoi Monaco exige un SEO multilingue spécialisé</h4>
                                 <p className="text-sm mb-0">
-                                    60 % des recherches à Monaco se font en anglais, 20 % en français, 10 % en russe ou en italien. Une stratégie SEO franco-française laisse de côté les trois quarts du marché. Je déploie des stratégies <strong>multilingues FR/EN/RU/IT</strong>, avec une compréhension fine du marché UHNWI, de la discrétion attendue et de la réputation en ligne — critique dans ce milieu. Les agences monégasques facturent 5 000–15 000 €/mois pour ce type de prestation ; mon expertise apporte les mêmes résultats à un coût structurellement inférieur.
+                                    60 % des recherches à Monaco se font en anglais, 20 % en français, 10 % en russe ou en italien. Une stratégie SEO franco-française laisse de côté une partie importante du marché. Je travaille les stratégies <strong>multilingues FR/EN/RU/IT</strong>, avec une compréhension du marché UHNWI, de la discrétion attendue et de la réputation en ligne.
                                 </p>
                             </div>
 
@@ -140,17 +140,17 @@ function MonacoCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence monégasque ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Monaco ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Monaco compte des agences web et SEO qui facturent entre <strong>5 000 € et 15 000 €/mois</strong>, souvent avec un positionnement "luxe" qui gonfle les prix sans nécessairement gonfler les résultats. La discrétion — valeur cardinale dans cet écosystème — est rarement au rendez-vous dans des structures à dix consultants.
+                                        Monaco demande un cadrage précis : multilingue, réputation, confidentialité, pages premium et preuves de confiance. Le sujet n’est pas d'ajouter du volume, mais de sélectionner les bonnes intentions et de protéger la qualité perçue de la marque.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> spécialisée dans les marchés premium. Je maîtrise le SEO multilingue, les stratégies de réputation en ligne pour les profils UHNWI, et la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> — cruciale quand vos clients cherchent via ChatGPT ou Perplexity.
+                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO</Link> spécialisée dans les marchés premium. Je maîtrise le SEO multilingue, les stratégies de réputation en ligne pour les profils UHNWI, et la <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> — cruciale quand vos clients cherchent via ChatGPT ou Perplexity.
                                     </p>
                                     <p>
                                         Je comprends que dans le marché monégasque, un lead vaut dix fois plus qu'ailleurs. Ma stratégie n'optimise pas le volume — elle optimise la <strong>qualité et la discrétion</strong> des signaux envoyés aux profils les plus exigeants.
@@ -162,13 +162,13 @@ function MonacoCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "SEO multilingue FR/EN/RU/IT natif",
                                         "Stratégie adaptée au marché UHNWI",
                                         "Réputation en ligne et e-réputation premium",
                                         "Accompagnement GEO (visibilité ChatGPT, Perplexity)",
-                                        "Tarifs 40-60 % inférieurs aux agences locales",
+                                        "Périmètre clair, sans couche agence inutile",
                                         "Discrétion totale — NDA disponible sur demande"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
@@ -249,7 +249,7 @@ function MonacoCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Restaurant Monte-Carlo</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Top 3 local + visibilité touristes</td>
+                                        <td className="py-3 px-4">Présence locale renforcée + visibilité touristes</td>
                                     </tr>
                                     <tr>
                                         <td className="py-3 px-4">Yacht broker</td>

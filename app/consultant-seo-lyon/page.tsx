@@ -134,7 +134,7 @@ function LyonCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="mx-auto max-w-6xl">
                         <h2 className="max-w-3xl font-heading text-2xl font-bold leading-tight text-ink md:text-3xl">
-                            Une consultante SEO indépendante, utile quand il faut prioriser vite et parler concret.
+                            Une consultante SEO utile quand il faut prioriser vite et parler concret.
                         </h2>
 
                         <div className="mt-8 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
@@ -143,7 +143,7 @@ function LyonCustomContent() {
                                     Une agence peut être pertinente sur des projets très larges. Mais pour une PME, un cabinet, un restaurant ou une startup, le besoin est souvent plus simple : comprendre ce qui bloque, prioriser les actions et avancer sans couche de validation inutile.
                                 </p>
                                 <p>
-                                    Mon rôle de <Link href="/consultant-seo" className="font-semibold text-sauge hover:underline">consultante SEO indépendante</Link> est d'apporter cette lecture directe : technique, contenu, maillage interne, Search Console et visibilité IA quand elle a un intérêt réel pour votre marché.
+                                    Mon rôle de <Link href="/consultant-seo" className="font-semibold text-sauge hover:underline">consultante SEO</Link> est d'apporter cette lecture directe : technique, contenu, maillage interne, Search Console et visibilité IA quand elle a un intérêt réel pour votre marché.
                                 </p>
                                 <p>
                                     L'objectif n'est pas de promettre des positions. C'est de construire une base plus claire, plus mesurable, et plus facile à faire progresser.

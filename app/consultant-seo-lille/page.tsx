@@ -33,7 +33,7 @@ function LilleCustomContent() {
                             <div className="bg-gradient-to-r from-sauge/5 to-transparent border-l-4 border-sauge p-6 my-6 rounded-r-xl">
                                 <h4 className="font-bold text-ink text-lg mb-2">Pourquoi Lille a besoin d'une consultante SEO locale</h4>
                                 <p className="text-sm mb-0">
-                                    Lille est à <strong>1 heure de Paris, Londres ET Bruxelles</strong> en train. Cette position unique crée des opportunités SEO transfrontalières que les agences nationales ne comprennent pas : cibler des clients belges et britanniques depuis Lille demande une stratégie multilingue et géolocalisée spécifique. Je connais cet écosystème et j'adapte ma stratégie aux comportements de recherche locaux et transfrontaliers.
+                                    Lille est à <strong>1 heure de Paris, Londres et Bruxelles</strong> en train. Cette position crée des opportunités SEO transfrontalières : cibler des clients belges et britanniques depuis Lille demande une stratégie multilingue, géolocalisée et cohérente avec les comportements de recherche locaux.
                                 </p>
                             </div>
 
@@ -152,20 +152,20 @@ function LilleCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence lilloise ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Lille ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Lille est la capitale française du e-commerce, mais les agences locales connaissent le commerce mieux que le <strong>SEO technique pointu</strong>. Optimiser des fiches produit à l'échelle, gérer le crawl budget d'un catalogue de 50 000 références, cibler simultanément des clients en France et en Belgique — ce sont des compétences rares.
+                                        Lille est un marché fort pour l'e-commerce, le retail et les requêtes transfrontalières. Optimiser des fiches produit à l'échelle, gérer le crawl budget d'un catalogue de 50 000 références, cibler simultanément des clients en France et en Belgique : la stratégie doit mêler SEO technique, contenu et logique commerciale.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> spécialisée en SEO e-commerce, avec une expertise en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> et en SEO international FR/BE/UK. Je connais les spécificités du marché lillois : requêtes transfrontalières, saisonnalité autour de la Braderie, comportements de recherche spécifiques à la MEL.
+                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO</Link> spécialisée en SEO e-commerce, avec une expertise en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link> et en SEO international FR/BE/UK. Je connais les spécificités du marché lillois : requêtes transfrontalières, saisonnalité autour de la Braderie, comportements de recherche spécifiques à la MEL.
                                     </p>
                                     <p>
-                                        Je ne sous-traite pas, je n'applique pas de grille générique, et je vous accompagne personnellement du diagnostic à la croissance organique.
+                                        Le cadrage reste personnalisé, avec une lecture directe de votre marché du diagnostic à la croissance organique.
                                     </p>
                                 </div>
                             </div>
@@ -174,14 +174,14 @@ function LilleCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Expertise SEO e-commerce (OVH, Decathlon, La Redoute sont nés ici)",
                                         "SEO transfrontalier FR/BE/NL pour capter le marché Benelux",
                                         "Stratégie retail et grande distribution adaptée au Nord",
                                         "SEO local pour les commerces du Vieux-Lille et de la Grand'Place",
                                         "Optimisation logistique et supply chain (Rungis du Nord)",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />

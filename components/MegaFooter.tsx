@@ -8,19 +8,19 @@ import Image from "next/image";
 // COLONNE 1 — Expertises SEO (7 services)
 // ══════════════════════════════════════════════════════════════
 const SERVICES = [
-    { title: "Consultante SEO indépendante", href: "/consultant-seo" },
-    { title: "Audit SEO Complet", href: "/audit-seo" },
-    { title: "Référencement Naturel", href: "/referencement-naturel" },
-    { title: "SEO Local", href: "/seo-local" },
+    { title: "Consultante SEO", href: "/consultant-seo" },
+    { title: "Audit SEO", href: "/audit-seo" },
+    { title: "Référencement naturel", href: "/referencement-naturel" },
+    { title: "SEO local", href: "/seo-local" },
     { title: "Consultant GEO", href: "/consultant-geo" },
-    { title: "Consultant IA & Automatisation", href: "/consultant-ia" },
-    { title: "Création de Site Web", href: "/creation-site-web" },
-    { title: "Refonte de Site Web", href: "/refonte-site-web" },
+    { title: "Consultant IA et automatisation", href: "/consultant-ia" },
+    { title: "Création de site web", href: "/creation-site-web" },
+    { title: "Refonte de site web", href: "/refonte-site-web" },
     { title: "Création boutique e-commerce", href: "/creation-boutique-en-ligne" },
 ];
 
 // ══════════════════════════════════════════════════════════════
-// COLONNE 2 — SEO Local France (top 20 villes)
+// COLONNE 2 — SEO local France (top 20 villes)
 // ══════════════════════════════════════════════════════════════
 // Sélection alignée GSC : top performers réels en impressions + bureau Côte d'Azur
 const CITIES = [
@@ -42,7 +42,7 @@ const CITIES = [
 // COLONNE 3 — Ressources
 // ══════════════════════════════════════════════════════════════
 const RESOURCES = [
-    { title: "Outils SEO Gratuits", href: "/outils" },
+    { title: "Outils SEO gratuits", href: "/outils" },
     { title: "Blog SEO", href: "/blog" },
     { title: "Glossaire SEO & GEO", href: "/glossaire-seo" },
     { title: "Checklist GEO", href: "/checklist-geo" },
@@ -91,12 +91,12 @@ export function MegaFooter() {
                     </div>
 
                     {/* ══════════════════════════════════════════════════════════════
-                        COLONNE 2 — SEO Local France (20 villes en 2 sous-colonnes)
+                        COLONNE 2 — SEO local France (20 villes en 2 sous-colonnes)
                     ══════════════════════════════════════════════════════════════ */}
                     <div>
                         <p className="font-bold text-sm uppercase tracking-wider text-sauge-light mb-6 flex items-center gap-2">
                             <MapPin className="w-4 h-4" />
-                            SEO Local France
+                            SEO local France
                         </p>
                         <div className="grid grid-cols-2 gap-x-4 gap-y-2">
                             {CITIES.map(city => (

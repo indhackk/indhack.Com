@@ -158,20 +158,20 @@ function CannesCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence cannoise ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Cannes ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Les agences locales sur un marché aussi premium que Cannes facturent entre <strong>3 000 € et 10 000 €/mois</strong>. Derrière ces tarifs élevés se cachent souvent des profils juniors qui ne comprennent ni le marché du luxe, ni les enjeux du SEO multilingue indispensable pour toucher une clientèle internationale.
+                                        Cannes impose une lecture fine du luxe, du multilingue, de la saisonnalité événementielle et des intentions à forte valeur. Une page générique ne suffit pas : il faut relier contenu, réputation, calendrier et conversion.
                                     </p>
                                     <p>
-                                        Mon expertise est différente : je maîtrise le <strong>SEO multilingue (FR/EN/RU)</strong>, essentiel pour les secteurs yachting, immobilier prestige et hôtellerie de luxe à Cannes. Je connais le calendrier événementiel et je construis des stratégies SEO <strong>anticipant les pics de trafic</strong> — car en SEO, arriver en retard c'est ne pas arriver.
+                                        Mon expertise couvre le <strong>SEO multilingue (FR/EN/RU)</strong>, utile pour le yachting, l’immobilier prestige et l’hôtellerie de luxe à Cannes. Le calendrier événementiel compte aussi : Festival, MIPIM et MAPIC doivent être anticipés plusieurs semaines avant le pic de recherche.
                                     </p>
                                     <p>
-                                        Je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> spécialisée en <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link> et en visibilité sur les marchés premium. Je ne sous-traite pas, je ne reproduis pas de templates génériques, et je m'implique personnellement dans chaque dossier.
+                                        Je travaille comme <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO</Link> spécialisée en <Link href="/seo-local" className="text-sauge hover:underline">SEO local</Link> et en visibilité sur les marchés premium. Le cadrage reste personnalisé : intentions, pages, preuves, langue et saisonnalité.
                                     </p>
                                 </div>
                             </div>
@@ -181,13 +181,13 @@ function CannesCustomContent() {
                                 <ul className="space-y-3">
                                     {[
                                         "Un interlocuteur unique expert marché luxe",
-                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Stratégie multilingue FR/EN/RU selon votre cible",
                                         "SEO calendrier événementiel (Festival, MIPIM…)",
                                         "Expertise Core Web Vitals et SEO technique",
                                         "Accompagnement GEO (visibilité ChatGPT, Perplexity)",
-                                        "Tarifs 30-50 % inférieurs aux agences locales",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Périmètre clair, sans couche agence inutile",
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />

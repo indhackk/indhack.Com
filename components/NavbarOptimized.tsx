@@ -11,22 +11,22 @@ import { usePathname } from "next/navigation";
 const SERVICES = [
     { title: "Consultant SEO", href: "/consultant-seo", desc: "Accompagnement SEO pour développer votre visibilité.", category: "seo" },
     { title: "Audit SEO", href: "/audit-seo", desc: "Analyse technique et sémantique profonde.", category: "seo" },
-    { title: "Référencement Naturel", href: "/referencement-naturel", desc: "Stratégie d'acquisition durable sur Google.", category: "seo" },
-    { title: "SEO Local", href: "/seo-local", desc: "Renforcez votre présence sur Google Maps et le Pack Local.", category: "seo" },
+    { title: "Référencement naturel", href: "/referencement-naturel", desc: "Stratégie d'acquisition durable sur Google.", category: "seo" },
+    { title: "SEO local", href: "/seo-local", desc: "Renforcez votre présence sur Google Maps et le Pack Local.", category: "seo" },
     { title: "Consultant GEO", href: "/consultant-geo", desc: "Visibilité sur ChatGPT, Perplexity et les IA.", category: "ia" },
     { title: "Consultant IA", href: "/consultant-ia", desc: "Intégration IA et automatisation entreprise.", category: "ia" },
-    { title: "Création de Site Web", href: "/creation-site-web", desc: "Sites haute performance optimisés SEO.", category: "web" },
-    { title: "Refonte de Site", href: "/refonte-site-web", desc: "Migrez sans perdre votre visibilité.", category: "web" },
+    { title: "Création de site web", href: "/creation-site-web", desc: "Sites haute performance optimisés SEO.", category: "web" },
+    { title: "Refonte de site", href: "/refonte-site-web", desc: "Migrez sans perdre votre visibilité.", category: "web" },
     { title: "Boutique e-commerce", href: "/creation-boutique-en-ligne", desc: "Vendez en ligne avec un site optimisé.", category: "web" },
 ];
 
 const TOOLS = [
     { title: "Testeur de visibilité IA", href: "/outils/testeur-visibilite-ia", desc: "ChatGPT vous trouve-t-il ?", icon: Bot, status: "live" },
-    { title: "Audit SEO Gratuit", href: "/outils/audit-seo-gratuit", desc: "Score /100 en 30 secondes", icon: Search, status: "live" },
-    { title: "Extracteur Mots-clés", href: "/outils/extracteur-mots-cles", desc: "Analysez densité et n-grammes", icon: Type, status: "live" },
+    { title: "Audit SEO gratuit", href: "/outils/audit-seo-gratuit", desc: "Score /100 en 30 secondes", icon: Search, status: "live" },
+    { title: "Extracteur de mots-clés", href: "/outils/extracteur-mots-cles", desc: "Analysez densité et n-grammes", icon: Type, status: "live" },
     { title: "Générateur robots.txt", href: "/outils/generateur-robots-txt", desc: "Crawlers IA 2026 inclus", icon: FileCode, status: "live" },
     { title: "Générateur Schema", href: "/outils/generateur-schema-json-ld", desc: "Données structurées en 1 clic", icon: Code2, status: "live" },
-    { title: "Simulateur Local", href: "/outils/simulateur-visibilite-locale", desc: "Qui domine votre ville ?", icon: MapPin, status: "live" },
+    { title: "Simulateur local", href: "/outils/simulateur-visibilite-locale", desc: "Qui domine votre ville ?", icon: MapPin, status: "live" },
 ];
 
 // Top villes par performance GSC réelle (impressions) — distribuent le jus depuis chaque page
@@ -221,7 +221,7 @@ export function Navbar() {
                                         }`}
                                 >
                                     <div className="flex items-center justify-between mb-4 pb-3 border-b border-line">
-                                        <span className="text-xs font-bold text-soft tracking-widest uppercase">Outils SEO Gratuits</span>
+                                        <span className="text-xs font-bold text-soft tracking-widest uppercase">Outils SEO gratuits</span>
                                         <Link href="/outils" className="text-xs text-sauge font-medium hover:underline">
                                             Voir tous les outils &rarr;
                                         </Link>
@@ -360,7 +360,7 @@ export function Navbar() {
                         </div>
 
                         <div className="space-y-3">
-                            <p className="text-xs font-bold text-soft tracking-widest uppercase">SEO Local par ville</p>
+                            <p className="text-xs font-bold text-soft tracking-widest uppercase">SEO local par ville</p>
                             <div className="flex flex-wrap gap-2">
                                 {TOP_CITIES.map((city) => (
                                     <Link

@@ -33,7 +33,7 @@ function StrasbourgCustomContent() {
                             <div className="bg-gradient-to-r from-sauge/5 to-transparent border-l-4 border-sauge p-6 my-6 rounded-r-xl">
                                 <h4 className="font-bold text-ink text-lg mb-2">Pourquoi Strasbourg exige une expertise SEO spécifique</h4>
                                 <p className="text-sm mb-0">
-                                    Les agences parisiennes ne comprennent pas la dimension franco-allemande du marché strasbourgeois. Kehl est à 5 minutes en tram : les commerçants de la Grande Île ont autant de clients allemands que français. Je maîtrise le <strong>SEO multilingue FR/DE</strong>, la saisonnalité du marché de Noël (2 millions de visiteurs) et les spécificités du marché institutionnel européen. C'est mon avantage concret sur toute agence généraliste.
+                                    La dimension franco-allemande change la stratégie SEO à Strasbourg. Kehl est à 5 minutes en tram : les commerçants de la Grande Île touchent des clients allemands et français. Le travail doit intégrer le <strong>SEO multilingue FR/DE</strong>, la saisonnalité du marché de Noël (2 millions de visiteurs) et les spécificités du marché institutionnel européen.
                                 </p>
                             </div>
 
@@ -152,20 +152,20 @@ function StrasbourgCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence strasbourgeoise ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Strasbourg ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Strasbourg est le seul marché français où le SEO bilingue FR/DE est vital. Les agences génériques — parisiennes ou locales — ne comprennent pas cette dimension. Elles ne gèrent pas la saisonnalité du marché de Noël, ne ciblent pas les requêtes allemandes et ignorent les spécificités institutionnelles de Wacken.
+                                        Strasbourg est un marché où le SEO bilingue FR/DE peut devenir décisif. La saisonnalité du marché de Noël, les requêtes allemandes et les spécificités institutionnelles de Wacken demandent une approche plus fine qu'une page locale générique.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise en SEO multilingue et en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>. Je comprends le marché franco-allemand, je gère le timing Noël et je parle le langage de vos clients, qu'ils viennent de Strasbourg ou de Kehl.
+                                        Mon approche associe SEO multilingue et <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>. Le travail consiste à relier les pages françaises, les intentions transfrontalières et le calendrier réel des recherches, de Strasbourg à Kehl.
                                     </p>
                                     <p>
-                                        Je ne sous-traite pas, je ne déroule pas de template générique, et je vous accompagne personnellement — du diagnostic initial jusqu'à la croissance durable de votre visibilité.
+                                        Le cadrage reste personnalisé, avec une lecture directe de votre marché — du diagnostic initial jusqu'à la croissance durable de votre visibilité.
                                     </p>
                                 </div>
                             </div>
@@ -174,14 +174,14 @@ function StrasbourgCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "SEO bilingue FR/DE pour capter le marché transfrontalier allemand",
                                         "Stratégie européenne adaptée aux institutions (Parlement, Conseil)",
                                         "SEO tourisme pour le marché de Noël (2 millions de visiteurs/an)",
                                         "Expertise Grande Île et Petite France : commerces, winstubs, hôtels",
                                         "SEO B2B pour les groupes industriels alsaciens et transfrontaliers",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />
@@ -251,7 +251,7 @@ function StrasbourgCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Winstub / Restaurant</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Top 3 local FR + DE</td>
+                                        <td className="py-3 px-4">Présence locale renforcée FR + DE</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Cabinet droit européen</td>

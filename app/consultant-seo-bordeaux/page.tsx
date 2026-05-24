@@ -33,7 +33,7 @@ function BordeauxCustomContent() {
                             <div className="bg-gradient-to-r from-sauge/5 to-transparent border-l-4 border-sauge p-6 my-6 rounded-r-xl">
                                 <h4 className="font-bold text-ink text-lg mb-2">Un marché SEO dual : vin et tech</h4>
                                 <p className="text-sm mb-0">
-                                    Bordeaux est un cas unique en France : la région concentre <strong>7 000 châteaux viticoles</strong> avec des besoins en SEO e-commerce et international (EN/ZH), et en parallèle un écosystème tech dynamique — French Tech, aérospatial, fintech — qui exige du <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">SEO B2B</Link> et du content marketing. Les agences locales comprennent rarement les deux. Je m'y suis spécialisée.
+                                    Bordeaux est un cas particulier : la région concentre <strong>7 000 châteaux viticoles</strong> avec des besoins en SEO e-commerce et international (EN/ZH), et en parallèle un écosystème tech dynamique — French Tech, aérospatial, fintech — qui exige du <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">SEO B2B</Link> et du content marketing. La stratégie doit relier ces deux logiques sans les mélanger.
                                 </p>
                             </div>
 
@@ -158,20 +158,20 @@ function BordeauxCustomContent() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-6">
-                            Pourquoi choisir une <span className="text-sauge">consultante SEO indépendante</span> plutôt qu'une agence bordelaise ?
+                            Pourquoi travailler avec une <span className="text-sauge">consultante SEO</span> sur le marché de Bordeaux ?
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
                                 <div className="prose prose-sm text-soft">
                                     <p>
-                                        Bordeaux a ses agences web et SEO. Elles facturent entre <strong>1 500€ et 6 000€/mois</strong> avec souvent un junior sur votre dossier et des interlocuteurs qui changent d'un trimestre à l'autre. Et surtout, très peu maîtrisent à la fois le SEO viticole (e-commerce, marchés internationaux EN/ZH) et le SEO tech B2B.
+                                        Bordeaux combine SEO viticole, e-commerce international, tourisme urbain et B2B local. Le point critique est de relier ces intentions sans approche générique : chaque secteur a ses preuves, ses contenus et ses cycles de décision.
                                     </p>
                                     <p>
-                                        Mon approche est différente : je suis <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">consultante SEO indépendante</Link> avec une expertise technique poussée et une spécialisation en <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>, essentielle à mesure que ChatGPT et Perplexity captent du trafic.
+                                        Mon approche relie <Link href="/consultant-seo" className="text-sauge font-semibold hover:underline">stratégie SEO</Link>, technique, contenus locaux et <Link href="/outils/testeur-visibilite-ia" className="text-sauge hover:underline">visibilité IA (GEO)</Link>, utile à mesure que ChatGPT et Perplexity deviennent des points d’entrée dans la recherche.
                                     </p>
                                     <p>
-                                        Je connais l'écosystème bordelais dans ses deux dimensions : un château de Saint-Émilion qui veut vendre en direct à des clients chinois n'a pas les mêmes besoins qu'une startup Darwin qui cherche des leads B2B. Je ne sous-traite pas, je n'applique pas de grille générique.
+                                        Je connais l'écosystème bordelais dans ses deux dimensions : un château de Saint-Émilion qui veut vendre en direct à des clients chinois n'a pas les mêmes besoins qu'une startup Darwin qui cherche des leads B2B. Le cadrage reste personnalisé.
                                     </p>
                                 </div>
                             </div>
@@ -180,14 +180,14 @@ function BordeauxCustomContent() {
                                 <h3 className="font-bold text-ink mb-4">Ce que vous obtenez avec moi</h3>
                                 <ul className="space-y-3">
                                     {[
-                                        "Un interlocuteur unique expert (pas de junior)",
-                                        "Audit technique SEO offert (valeur 500 €)",
+                                        "Un interlocuteur unique, avec une lecture senior du SEO",
+                                        "Diagnostic technique intégré au cadrage",
                                         "Stratégie adaptée à l'oenotourisme, aux domaines viticoles et au négoce bordelais",
                                         "SEO multilingue FR/EN pour capter le tourisme international (Saint-Émilion, Médoc)",
                                         "Optimisation Google Business Profile pour les commerces du centre historique",
                                         "Expertise SEO e-commerce pour les caves et producteurs en vente directe",
                                         "Connaissance de l'écosystème startup Euratlantique et Darwin",
-                                        "Sans engagement long terme (3 mois puis liberté)"
+                                        "Cadre d’accompagnement précis, ajustable selon les besoins"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-start gap-2 text-sm">
                                             <CheckCircle2 className="w-4 h-4 text-sauge shrink-0 mt-0.5" />

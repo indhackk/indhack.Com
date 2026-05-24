@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "Consultant SEO Nice (06000) - IndHack",
-        description: "Experte SEO à Nice, Côte d'Azur. Audit gratuit, accompagnement personnalisé pour renforcer votre visibilité dans les Alpes-Maritimes.",
+        description: "Consultante SEO à Nice, Côte d'Azur. Diagnostic SEO, accompagnement personnalisé pour renforcer votre visibilité dans les Alpes-Maritimes.",
         url: "https://indhack.com/consultant-seo-nice",
         type: "website",
     }
