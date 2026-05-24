@@ -252,7 +252,7 @@ function AntibesCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Restaurant / Artisan Vieil Antibes</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Top 3 Pack Local + fréquentation directe</td>
+                                        <td className="py-3 px-4">Visibilité Google Maps + fréquentation directe</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Service yachting (broker, maintenance)</td>

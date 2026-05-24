@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Consultant SEO Grenoble (38000) - IndHack",
-    description: "Consultante SEO à Grenoble : audit technique, référencement local et stratégie SEO pour PME et startups de l'Isère. Premier audit gratuit. Priorités claires et suivi mesurable.",
+    description: "Consultante SEO à Grenoble : audit technique, référencement local et stratégie SEO pour PME, startups et entreprises de l'Isère.",
     keywords: ["consultant SEO Grenoble", "référencement Grenoble", "SEO Isère", "audit SEO Grenoble", "experte SEO 38", "agence SEO Grenoble", "référencement naturel Grenoble"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo-grenoble"

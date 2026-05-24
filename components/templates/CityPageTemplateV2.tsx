@@ -28,10 +28,11 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
     // Slug de base (sans le préfixe) pour NearbyLinks
     // cityData.slug = "consultant-seo-nice" → baseCitySlug = "nice"
     const baseCitySlug = cityData.slug.replace('consultant-seo-', '');
-    const hasGeneratedLocalHero = cityData.images.hero.src.startsWith("/images/local-heroes/");
-    const heroImage = hasGeneratedLocalHero ? cityData.images.hero.src : "seo-dashboard";
-    const schemaImage = hasGeneratedLocalHero
-        ? `https://indhack.com${cityData.images.hero.src}`
+    const localHeroSource = cityData.images.hero.src.replace(/\.jpg$/, ".webp");
+    const hasLocalHeroImage = localHeroSource.startsWith("/images/local-heroes/") || localHeroSource.startsWith("/images/cities/");
+    const heroImage = hasLocalHeroImage ? localHeroSource : "seo-dashboard";
+    const schemaImage = hasLocalHeroImage
+        ? `https://indhack.com${localHeroSource}`
         : "https://indhack.com/images/logo-indhack.webp";
 
     // JSON-LD Service : les pages villes décrivent une zone desservie, pas une adresse physique locale.
@@ -149,7 +150,7 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                 },
                 {
                     question: `Comment fonctionne le référencement local sur Google à ${city} ?`,
-                    answer: `Le SEO local repose sur 3 piliers : votre fiche Google Business Profile, les citations locales (annuaires, Pages Jaunes, Yelp...) et les avis clients. Mon travail consiste à optimiser ces éléments pour vous faire apparaître dans le Pack Local de 3 résultats affichés en haut des recherches géolocalisées.`
+                    answer: `Le SEO local repose sur 3 piliers : votre fiche Google Business Profile, les citations locales pertinentes et les avis clients. Mon travail consiste à optimiser ces éléments pour renforcer vos chances d'apparaître dans Google Maps sur les recherches géolocalisées.`
                 }
             ]
         };
@@ -240,7 +241,7 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                     ? `Développez vos demandes qualifiées à ${city}, de ${cityData.landmarks.slice(0, 2).join(" à ")}, avec une stratégie SEO locale claire, technique et mesurable.`
                     : `Développez vos demandes qualifiées à ${city} grâce à une stratégie SEO locale claire, technique et mesurable.`}
                 image={heroImage}
-                imageAlt={hasGeneratedLocalHero ? cityData.images.hero.alt : undefined}
+                imageAlt={hasLocalHeroImage ? cityData.images.hero.alt : undefined}
                 category="SEO local"
                 density={isPremiumVariant ? "compact" : "default"}
             />
@@ -354,9 +355,9 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                                     </div>
                                     <p className="text-base md:text-lg text-ink leading-relaxed">
                                         <strong className="font-bold">Un consultant SEO à {city} ({zipCode})</strong> accompagne les entreprises des <strong>{cityData.department}</strong> et de la région <strong>{cityData.region}</strong> pour gagner en visibilité sur Google et Google Maps.
-                                        Le marché local {city} compte <strong>{cityData.population} habitants</strong> avec une concurrence {cityData.context.competitionLevel === 'extreme' ? 'féroce' : cityData.context.competitionLevel === 'high' ? 'élevée' : cityData.context.competitionLevel === 'medium' ? 'modérée' : 'gérable'} dans les secteurs {cityData.context.businessTypes.slice(0, 3).join(', ').toLowerCase()}.
+                                        Le marché local {city} compte <strong>{cityData.population} habitants</strong> avec une concurrence {cityData.context.competitionLevel === 'extreme' ? 'très soutenue' : cityData.context.competitionLevel === 'high' ? 'élevée' : cityData.context.competitionLevel === 'medium' ? 'modérée' : 'gérable'} dans les secteurs {cityData.context.businessTypes.slice(0, 3).join(', ').toLowerCase()}.
                                         Mission type : audit technique + SEO local ({cityData.landmarks.slice(0, 2).join(', ')} et alentours : {cityData.nearbyAreas.slice(0, 3).join(', ')}) + optimisation Google Business Profile + stratégie contenu géolocalisé.
-                                        <span className="text-soft"> Tarif sur devis selon périmètre. Premier audit gratuit en 30 secondes via notre <Link href="/outils/audit-seo-gratuit" className="text-sauge font-semibold hover:underline">outil d'audit SEO gratuit</Link>.</span>
+                                        <span className="text-soft"> Tarif sur devis selon périmètre. Premier diagnostic rapide via notre <Link href="/outils/audit-seo-gratuit" className="text-sauge font-semibold hover:underline">outil d'audit SEO gratuit</Link>.</span>
                                     </p>
                                 </div>
                             </div>
@@ -371,20 +372,20 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                                     {/* Texte enrichi */}
                                     <div>
                                         <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink mb-4">
-                                            Être visible à <span className="text-sauge">{city}</span> : un enjeu stratégique
+                                            Priorités SEO à <span className="text-sauge">{city}</span> : capter les bonnes demandes locales
                                         </h2>
                                         <div className="prose prose-sm text-soft space-y-3">
                                             <p>{cityData.description}</p>
 
                                             <div className="bg-gray-50 border-l-4 border-sauge p-4 my-4 rounded-r-lg">
-                                                <h4 className="font-bold text-ink text-sm mb-1">Le saviez-vous ?</h4>
+                                                <h4 className="font-bold text-ink text-sm mb-1">Signal de marché</h4>
                                                 <p className="text-xs italic text-ink/80">
                                                     "{cityData.context.localInsight}"
                                                 </p>
                                             </div>
 
                                             <p>
-                                                À {city}, la compétition est {cityData.context.competitionLevel === 'extreme' ? 'féroce' : 'forte'}.
+                                                À {city}, la compétition est {cityData.context.competitionLevel === 'extreme' ? 'très soutenue' : 'forte'}.
                                                 Vos futurs clients sont des {cityData.context.targetClients}.
                                                 <strong className="text-ink"> Les recherches locales demandent des pages claires, une fiche Google cohérente et des signaux de confiance visibles.</strong> Si votre entreprise n'apparaît pas quand ils cherchent vos services, vous laissez ces demandes à vos concurrents.
                                             </p>
@@ -414,7 +415,7 @@ export function CityPageTemplateV2({ cityData, customContent, visualVariant = "d
                                     <div className="bg-ink text-white p-8 rounded-2xl">
                                         <h3 className="font-bold text-lg mb-6 flex items-center gap-2">
                                             <BarChart3 className="w-5 h-5 text-sauge" />
-                                            Le SEO local en chiffres
+                                            Les leviers à prioriser
                                         </h3>
                                         <div className="grid grid-cols-2 gap-4">
                                             {[

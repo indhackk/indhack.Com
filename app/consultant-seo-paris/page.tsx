@@ -21,13 +21,13 @@ function ParisCustomContent() {
                                 <Globe className="w-6 h-6 text-sauge" />
                             </div>
                             <h2 className="text-2xl md:text-3xl font-heading font-bold text-ink">
-                                Paris : 2 millions d'habitants, la <span className="text-sauge">concurrence SEO la plus féroce</span> de France
+                                Paris : 2 millions d'habitants, la <span className="text-sauge">concurrence SEO la plus forte</span> de France
                             </h2>
                         </div>
 
                         <div className="prose prose-lg text-soft max-w-none">
                             <p>
-                                Paris n'est pas un marché SEO — c'est <strong>vingt marchés en un</strong>. "Plombier 15ème" et "plombier Paris" ne sont pas les mêmes requêtes : la première est accessible, la seconde est un champ de bataille. Avec 2,1 millions d'habitants en ville et 12 millions en Île-de-France, tous les secteurs, tous les budgets et toutes les concurrences coexistent dans un périmètre de 105 km².
+                                Paris n'est pas un marché SEO — c'est <strong>vingt marchés en un</strong>. "Plombier 15ème" et "plombier Paris" ne sont pas les mêmes requêtes : la première est accessible, la seconde concentre une concurrence beaucoup plus forte. Avec 2,1 millions d'habitants en ville et 12 millions en Île-de-France, tous les secteurs, tous les budgets et toutes les concurrences coexistent dans un périmètre de 105 km².
                             </p>
 
                             <div className="bg-gradient-to-r from-sauge/5 to-transparent border-l-4 border-sauge p-6 my-6 rounded-r-xl">
@@ -258,7 +258,7 @@ function ParisCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Restaurant Le Marais</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Top 3 Pack Local quartier + réservations</td>
+                                        <td className="py-3 px-4">Visibilité Google Maps par quartier + réservations</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Startup Station F</td>
@@ -268,7 +268,7 @@ function ParisCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Cabinet médical 15ème</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">Page 1 "spécialité + arrondissement"</td>
+                                        <td className="py-3 px-4">Progression sur "spécialité + arrondissement"</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">E-commerce mode</td>

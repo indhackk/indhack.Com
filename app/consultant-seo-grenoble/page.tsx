@@ -252,7 +252,7 @@ function GrenobleCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Commerce local (restaurant, artisan)</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Visibilité Pack Local et trafic qualifié</td>
+                                        <td className="py-3 px-4">Visibilité Google Maps et trafic qualifié</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Startup tech B2B</td>
@@ -262,7 +262,7 @@ function GrenobleCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Hébergeur station ski</td>
                                         <td className="py-3 px-4">2-3 mois (avant saison)</td>
-                                        <td className="py-3 px-4">Page 1 sur requêtes station</td>
+                                        <td className="py-3 px-4">Progression sur requêtes station</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Cabinet conseil / ESN</td>

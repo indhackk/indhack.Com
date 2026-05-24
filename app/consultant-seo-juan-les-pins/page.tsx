@@ -38,7 +38,7 @@ function JuanLesPinsCustomContent() {
                             </div>
 
                             <p>
-                                Juan-les-Pins est la <strong>deuxième destination clubbing de la Côte d'Azur</strong> après Saint-Tropez. Le festival <strong>Jazz à Juan</strong> — historique depuis 1960 — attire 70 000 visiteurs chaque juillet et génère une exposition médiatique nationale. Les plages privées emblématiques (Belles Rives, Bijou Plage) sont des marques à part entière. Cette réputation se traduit en volume de recherche élevé, mais aussi en concurrence SEO féroce entre établissements.
+                                Juan-les-Pins est la <strong>deuxième destination clubbing de la Côte d'Azur</strong> après Saint-Tropez. Le festival <strong>Jazz à Juan</strong> — historique depuis 1960 — attire 70 000 visiteurs chaque juillet et génère une exposition médiatique nationale. Les plages privées emblématiques (Belles Rives, Bijou Plage) sont des marques à part entière. Cette réputation se traduit en volume de recherche élevé, mais aussi en concurrence SEO très forte entre établissements.
                             </p>
                         </div>
 
@@ -234,7 +234,7 @@ function JuanLesPinsCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Beach club / restaurant de plage</td>
                                         <td className="py-3 px-4">Janvier-février</td>
-                                        <td className="py-3 px-4">Top 3 Pack Local avant juin</td>
+                                        <td className="py-3 px-4">Visibilité Google Maps avant la saison</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Hôtel saisonnier</td>

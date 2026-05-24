@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Consultant SEO Paris (75000) - IndHack",
-    description: "Consultante SEO à Paris. Stratégie de visibilité pour startups, PME et commerces parisiens. Renforcez votre visibilité dans le marché le plus concurrentiel de France.",
+    description: "Consultante SEO à Paris. Audit, contenu, maillage et stratégie locale pour startups, PME et entreprises de services.",
     keywords: ["consultante SEO Paris", "référencement Paris", "SEO Île-de-France", "audit SEO Paris", "experte SEO 75"],
     alternates: {
         canonical: "https://indhack.com/consultant-seo-paris"

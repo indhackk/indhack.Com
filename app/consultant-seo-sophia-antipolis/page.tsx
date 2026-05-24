@@ -249,7 +249,7 @@ function SophiaAntipolisCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Cabinet de recrutement IT</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">Page 1 recrutement tech PACA</td>
+                                        <td className="py-3 px-4">Progression sur recrutement tech PACA</td>
                                     </tr>
                                     <tr>
                                         <td className="py-3 px-4">Startup deeptech</td>

@@ -244,7 +244,7 @@ function MonacoCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Agent immobilier prestige</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">Page 1 sur "appartement Monaco"</td>
+                                        <td className="py-3 px-4">Progression sur "appartement Monaco"</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Restaurant Monte-Carlo</td>

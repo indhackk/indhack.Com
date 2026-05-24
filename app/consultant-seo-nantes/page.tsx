@@ -246,7 +246,7 @@ function NantesCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Restaurant / commerce Bouffay</td>
                                         <td className="py-3 px-4">1-2 mois</td>
-                                        <td className="py-3 px-4">Top 3 Pack Local + réservations directes</td>
+                                        <td className="py-3 px-4">Visibilité Google Maps + réservations directes</td>
                                     </tr>
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Agence digitale / studio créatif</td>
@@ -261,7 +261,7 @@ function NantesCustomContent() {
                                     <tr className="border-b border-gray-100">
                                         <td className="py-3 px-4">Profession libérale (avocat, kiné)</td>
                                         <td className="py-3 px-4">2-3 mois</td>
-                                        <td className="py-3 px-4">Page 1 sur requêtes locales Nantes</td>
+                                        <td className="py-3 px-4">Progression sur requêtes locales Nantes</td>
                                     </tr>
                                     <tr>
                                         <td className="py-3 px-4">E-commerce (agroalimentaire, mode)</td>
