@@ -328,13 +328,7 @@ export function CityProfessionalServiceSchema({
             "jobTitle": "Consultante SEO & Experte GEO",
             "url": "https://indhack.com/a-propos"
         },
-        "dateModified": new Date().toISOString().split('T')[0],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "bestRating": "5",
-            "ratingCount": "47"
-        }
+        "dateModified": new Date().toISOString().split('T')[0]
     };
 
     // Ajouter les coordonnées géographiques si disponibles
