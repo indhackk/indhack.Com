@@ -11,13 +11,16 @@ import { Button } from "@/components/ui/button";
 import { useModal } from "@/components/providers/ModalProvider";
 import { HomepageBacklink } from "@/components/seo/HomepageBacklink";
 import { MapPin } from "lucide-react";
-import { FRENCH_CITIES } from "@/lib/cities-data";
 
-// Toutes les villes actives (19) — maillage cocon sémantique complet
-const FEATURED_CITIES = FRENCH_CITIES.map((c) => ({
-    name: c.name,
-    slug: c.slug,
-}));
+// Maillage local ciblé depuis les pages services : le hub /seo-local porte la liste complète.
+const FEATURED_CITIES = [
+    { name: "Nice", slug: "consultant-seo-nice" },
+    { name: "Cannes", slug: "consultant-seo-cannes" },
+    { name: "Sophia-Antipolis", slug: "consultant-seo-sophia-antipolis" },
+    { name: "Marseille", slug: "consultant-seo-marseille" },
+    { name: "Paris", slug: "consultant-seo-paris" },
+    { name: "Lyon", slug: "consultant-seo-lyon" },
+];
 
 const CREATION_FEATURES = [
     {
